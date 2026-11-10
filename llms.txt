@@ -1,0 +1,80 @@
+# Coaster Map
+
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 59 coasters at 7 parks as of 10 Nov 2026.
+
+Not affiliated with any park. Ride rules change; confirm with the park.
+
+## Tools
+- [Ride height checker](https://coastermap.com/height-checker/)
+- [Coaster map](https://coastermap.com/map/)
+- [Which coaster should you ride? quiz](https://coastermap.com/quiz/)
+- [All coasters](https://coastermap.com/coasters/)
+- [Sources and methods](https://coastermap.com/methodology/)
+
+## Parks
+- [Cedar Point](https://coastermap.com/parks/cedar-point/): 18 coasters
+  - [Raptor](https://coastermap.com/parks/cedar-point/raptor/): min height 54 in
+  - [Rougarou](https://coastermap.com/parks/cedar-point/rougarou/): min height 54 in
+  - [Magnum XL-200](https://coastermap.com/parks/cedar-point/magnum-xl-200/): min height 48 in
+  - [Blue Streak](https://coastermap.com/parks/cedar-point/blue-streak/): min height 48 in
+  - [Corkscrew](https://coastermap.com/parks/cedar-point/corkscrew/): min height 48 in
+  - [Gemini](https://coastermap.com/parks/cedar-point/gemini/): min height 48 in
+  - [Wilderness Run](https://coastermap.com/parks/cedar-point/wilderness-run/): min height 36 in
+  - [Woodstock Express](https://coastermap.com/parks/cedar-point/woodstock-express/): min height 48 in
+  - [Millennium Force](https://coastermap.com/parks/cedar-point/millennium-force/): min height 48 in
+  - [Iron Dragon](https://coastermap.com/parks/cedar-point/iron-dragon/): min height 42 in
+  - [Cedar Creek Mine Ride](https://coastermap.com/parks/cedar-point/cedar-creek-mine-ride/): min height 48 in
+  - [Maverick](https://coastermap.com/parks/cedar-point/maverick/): min height 52 in
+  - [GateKeeper](https://coastermap.com/parks/cedar-point/gatekeeper/): min height 52 in
+  - [Valravn](https://coastermap.com/parks/cedar-point/valravn/): min height 52 in
+  - [Steel Vengeance](https://coastermap.com/parks/cedar-point/steel-vengeance/): min height 52 in
+  - [Top Thrill 2](https://coastermap.com/parks/cedar-point/top-thrill-2/): min height 52 in
+  - [Wild Mouse](https://coastermap.com/parks/cedar-point/wild-mouse/): min height 48 in
+  - [Siren’s Curse](https://coastermap.com/parks/cedar-point/sirens-curse/): min height 48 in
+- [Six Flags Magic Mountain](https://coastermap.com/parks/six-flags-magic-mountain/): 16 coasters
+  - [Ninja](https://coastermap.com/parks/six-flags-magic-mountain/ninja/): min height 42 in
+  - [Great American Revolution](https://coastermap.com/parks/six-flags-magic-mountain/great-american-revolution/)
+  - [Batman The Ride](https://coastermap.com/parks/six-flags-magic-mountain/batman-the-ride/): min height 54 in
+  - [Viper](https://coastermap.com/parks/six-flags-magic-mountain/viper/): min height 54 in
+  - [Gold Rusher](https://coastermap.com/parks/six-flags-magic-mountain/gold-rusher/): min height 48 in
+  - [Riddler's Revenge](https://coastermap.com/parks/six-flags-magic-mountain/riddlers-revenge/): min height 54 in
+  - [Canyon Cruiser](https://coastermap.com/parks/six-flags-magic-mountain/canyon-cruiser/)
+  - [Goliath](https://coastermap.com/parks/six-flags-magic-mountain/goliath/): min height 48 in
+  - [Scream!](https://coastermap.com/parks/six-flags-magic-mountain/scream/): min height 54 in
+  - [Tatsu](https://coastermap.com/parks/six-flags-magic-mountain/tatsu/): min height 54 in
+  - [Apocalypse the Ride](https://coastermap.com/parks/six-flags-magic-mountain/apocalypse-the-ride/): min height 48 in
+  - [Road Runner Express](https://coastermap.com/parks/six-flags-magic-mountain/road-runner-express/): min height 36 in
+  - [Full Throttle](https://coastermap.com/parks/six-flags-magic-mountain/full-throttle/): min height 54 in
+  - [Twisted Colossus](https://coastermap.com/parks/six-flags-magic-mountain/twisted-colossus/): min height 48 in
+  - [West Coast Racers](https://coastermap.com/parks/six-flags-magic-mountain/west-coast-racers/): min height 54 in
+  - [Wonder Woman Flight of Courage](https://coastermap.com/parks/six-flags-magic-mountain/wonder-woman-flight-of-courage/): min height 48 in
+- [Magic Kingdom](https://coastermap.com/parks/magic-kingdom/): 5 coasters
+  - [Space Mountain](https://coastermap.com/parks/magic-kingdom/space-mountain/): min height 44 in
+  - [Big Thunder Mountain Railroad](https://coastermap.com/parks/magic-kingdom/big-thunder-mountain-railroad/): min height 38 in
+  - [The Barnstormer](https://coastermap.com/parks/magic-kingdom/the-barnstormer/): min height 35 in
+  - [Seven Dwarfs Mine Train](https://coastermap.com/parks/magic-kingdom/seven-dwarfs-mine-train/): min height 38 in
+  - [TRON Lightcycle / Run](https://coastermap.com/parks/magic-kingdom/tron-lightcycle-run/): min height 48 in
+- [Universal Epic Universe](https://coastermap.com/parks/epic-universe/): 4 coasters
+  - [Stardust Racers](https://coastermap.com/parks/epic-universe/stardust-racers/): min height 48 in
+  - [Hiccup's Wing Gliders](https://coastermap.com/parks/epic-universe/hiccups-wing-gliders/): min height 40 in
+  - [Curse of the Werewolf](https://coastermap.com/parks/epic-universe/curse-of-the-werewolf/): min height 40 in
+  - [Mine-Cart Madness](https://coastermap.com/parks/epic-universe/mine-cart-madness/): min height 40 in
+- [Universal Islands of Adventure](https://coastermap.com/parks/islands-of-adventure/): 5 coasters
+  - [Pteranodon Flyers](https://coastermap.com/parks/islands-of-adventure/pteranodon-flyers/)
+  - [Flight of the Hippogriff](https://coastermap.com/parks/islands-of-adventure/flight-of-the-hippogriff/): min height 36 in
+  - [Jurassic World VelociCoaster](https://coastermap.com/parks/islands-of-adventure/jurassic-world-velocicoaster/): min height 51 in
+  - [Hagrid's Magical Creatures Motorbike Adventure](https://coastermap.com/parks/islands-of-adventure/hagrids-magical-creatures-motorbike-adventure/): min height 48 in
+  - [The Incredible Hulk Coaster](https://coastermap.com/parks/islands-of-adventure/the-incredible-hulk-coaster/): min height 54 in
+- [Universal Studios Florida](https://coastermap.com/parks/universal-studios-florida/): 3 coasters
+  - [Harry Potter and the Escape from Gringotts](https://coastermap.com/parks/universal-studios-florida/harry-potter-and-the-escape-from-gringotts/): min height 42 in
+  - [Trolls Trollercoaster](https://coastermap.com/parks/universal-studios-florida/trolls-trollercoaster/): min height 36 in
+  - [Revenge of the Mummy](https://coastermap.com/parks/universal-studios-florida/revenge-of-the-mummy/): min height 48 in
+- [Busch Gardens Tampa Bay](https://coastermap.com/parks/busch-gardens-tampa-bay/): 8 coasters
+  - [Montu](https://coastermap.com/parks/busch-gardens-tampa-bay/montu/): min height 54 in
+  - [SheiKra](https://coastermap.com/parks/busch-gardens-tampa-bay/sheikra/): min height 54 in
+  - [Air Grover](https://coastermap.com/parks/busch-gardens-tampa-bay/air-grover/): min height 38 in
+  - [Cheetah Hunt](https://coastermap.com/parks/busch-gardens-tampa-bay/cheetah-hunt/): min height 48 in
+  - [Cobra's Curse](https://coastermap.com/parks/busch-gardens-tampa-bay/cobras-curse/): min height 48 in
+  - [Tigris](https://coastermap.com/parks/busch-gardens-tampa-bay/tigris/): min height 54 in
+  - [Iron Gwazi](https://coastermap.com/parks/busch-gardens-tampa-bay/iron-gwazi/): min height 48 in
+  - [Phoenix Rising](https://coastermap.com/parks/busch-gardens-tampa-bay/phoenix-rising/): min height 42 in

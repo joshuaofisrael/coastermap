@@ -1,0 +1,292 @@
+{
+ "Raptor": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/raptor",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1994"
+ },
+ "Rougarou": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/rougarou",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "2015"
+ },
+ "Magnum XL-200": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/magnum-xl-200",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1989"
+ },
+ "Blue Streak": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/blue-streak",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1964"
+ },
+ "Corkscrew": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/corkscrew",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1976"
+ },
+ "Gemini": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/gemini",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1978"
+ },
+ "Wilderness Run": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/wilderness-run",
+  "min": "36",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "54",
+  "thrill": "2",
+  "introduced": "1979"
+ },
+ "Woodstock Express": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/woodstock-express",
+  "min": "48",
+  "acc_min": "36",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "4",
+  "introduced": "1999"
+ },
+ "Millennium Force": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/millennium-force",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "2000"
+ },
+ "Iron Dragon": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/iron-dragon",
+  "min": "42",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1987"
+ },
+ "Cedar Creek Mine Ride": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/cedar-creek-mine-ride",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1969"
+ },
+ "Maverick": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/maverick",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "2007"
+ },
+ "GateKeeper": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/gatekeeper",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "2013"
+ },
+ "Valravn": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/valravn",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2016"
+ },
+ "Steel Vengeance": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/steel-vengeance",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2018"
+ },
+ "Top Thrill 2": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/top-thrill-2",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2024"
+ },
+ "Wild Mouse": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/wild-mouse",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "4",
+  "introduced": "2023"
+ },
+ "Siren\u2019s Curse": {
+  "url": "https://www.sixflags.com/cedarpoint/attractions/sirens-curse",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "80",
+  "thrill": "5",
+  "introduced": "2025"
+ },
+ "Ninja": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/ninja",
+  "min": "42",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "2",
+  "introduced": "1988"
+ },
+ "Great American Revolution": null,
+ "Batman The Ride": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/batman-the-ride",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1994"
+ },
+ "Viper": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/viper",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1990"
+ },
+ "Gold Rusher": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/gold-rusher",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "2",
+  "introduced": "1971"
+ },
+ "Riddler's Revenge": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/riddlers-revenge",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1998"
+ },
+ "Canyon Cruiser": null,
+ "Goliath": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/goliath",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "2000"
+ },
+ "Scream!": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/scream",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "2003"
+ },
+ "Tatsu": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/tatsu",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null
+ },
+ "Apocalypse the Ride": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/apocalypse",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "3",
+  "introduced": "2009"
+ },
+ "Road Runner Express": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/road-runner-express",
+  "min": "36",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "1",
+  "introduced": null
+ },
+ "Full Throttle": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/full-throttle",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null
+ },
+ "Twisted Colossus": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/twisted-colossus",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null
+ },
+ "West Coast Racers": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/west-coast-racers",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null
+ },
+ "Wonder Woman Flight of Courage": {
+  "url": "https://www.sixflags.com/magicmountain/attractions/wonder-woman-flight-of-courage",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "2022"
+ }
+}
