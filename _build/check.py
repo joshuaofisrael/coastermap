@@ -12,7 +12,7 @@ for f in files:
     if top not in LEGAL|{'credits'} and re.search(r'Joshua|Israel Ventures|©(?! <a href="https://www.openstreetmap)',re.sub(r'<script.*?</script>','',h,flags=re.S)): print('LLC/©',rel); bad+=1
     if top in LEGAL and 'is a trade name of Joshua Israel Ventures LLC' not in h: print('nolegalline',rel); bad+=1
     if 'static.cloudflareinsights.com/beacon.min.js' not in h: print('nobeacon',rel); bad+=1
-    if 'noindex' in h and rel!='404.html': print('noindex',rel); bad+=1
+    if 'noindex' in h and rel not in ('404.html','newsletter/thanks/index.html'): print('noindex',rel); bad+=1
     if '—' in h or '–' in h: print('dash',rel)
     t=re.search(r'<title>(.*?)</title>',h).group(1); titles.setdefault(t,[]).append(rel)
     for l in re.findall(r'href="(/[^"#?]*)',h):

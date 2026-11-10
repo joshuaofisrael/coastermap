@@ -25,7 +25,7 @@ def write(path, content):
     os.makedirs(os.path.dirname(fp), exist_ok=True)
     open(fp, "w").write(content)
 
-NAV = [("/", "Home"), ("/parks/", "Parks"), ("/map/", "Coaster map"), ("/height-checker/", "Height checker"), ("/quiz/", "Coaster quiz"), ("/coasters/", "All coasters")]
+NAV = [("/", "Home"), ("/parks/", "Parks"), ("/map/", "Coaster map"), ("/height-checker/", "Height checker"), ("/guides/", "Guides"), ("/quiz/", "Coaster quiz"), ("/coasters/", "All coasters")]
 LOGO = '<svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#fca311"/><path d="M6 46 C14 10, 22 10, 28 34 S40 58, 46 22 S56 18, 58 30" fill="none" stroke="#14213d" stroke-width="5" stroke-linecap="round"/><circle cx="46" cy="22" r="4" fill="#b3001b"/></svg>'
 
 def signup_box():
@@ -39,7 +39,7 @@ def signup_box():
 
 def page(path, title, desc, body, jsonld=None, crumbs=None, extra_head="", modified=TODAY, noindex=False, legal=False):
     canon = url(path)
-    PAGES.append((path, modified))
+    if not noindex: PAGES.append((path, modified))
     ld = [{"@context": "https://schema.org", "@type": "WebSite", "name": BRAND, "url": BASE_URL,
            "publisher": {"@type": "Organization", "name": BRAND, "url": BASE_URL, "logo": url("/logo.png")}}] if path == "/" else []
     if crumbs:
@@ -59,10 +59,10 @@ def page(path, title, desc, body, jsonld=None, crumbs=None, extra_head="", modif
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{canon}">
 <meta name="robots" content="{"noindex" if noindex else "index, follow, max-image-preview:large"}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="{BRAND}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{url('/og.png')}"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css?v=1">{gsc}{extra_head}{ldhtml}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css?v=2">{gsc}{extra_head}{ldhtml}
 </head><body><a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="wrap"><a class="brand" href="/">{LOGO}<span>{BRAND}</span></a><nav class="main" aria-label="Main">{nav}</nav></div></header>
-<main id="main" class="wrap">{bc}{body}{signup_box()}</main>
+<main id="main" class="wrap">{bc}{body}<!-- ad-slot: below-content (reserved for future use; no ad code) -->{signup_box()}</main>
 <footer class="site"><div class="wrap"><p class="fbrand"><strong>{BRAND}</strong>: roller coasters at the big theme parks, mapped and explained with height requirements and stats from official park pages and the Roller Coaster DataBase. Not affiliated with any park. Ride rules change, so always check with the park.</p>
 <section class="contact-us" aria-labelledby="contact-us"><h2 id="contact-us">Contact us</h2><p>Corrections, questions or a park you want next? Use our <a href="/contact/">contact form</a>.</p></section>
 <p class="flinks"><a href="/about/">About</a> | <a href="/methodology/">Sources and methods</a> | <a href="/terms/">Terms of use</a> | <a href="/privacy/">Privacy</a> | <a href="/disclaimer/">Disclaimer</a> | <a href="/ad-disclosure/">Advertising disclosure</a> | <a href="/copyright/">Copyright and DMCA</a> | <a href="/credits/">Credits</a> | <a href="/contact/">Contact</a></p>
@@ -248,6 +248,23 @@ def map_block(points, height=380, id="map"):
 LEAFLET_HEAD = '<link rel="stylesheet" href="/assets/leaflet.css"><script src="/assets/leaflet.js" defer></script>'
 
 # ---------- coaster pages ----------
+def related_html(c=None, p=None):
+    gp = {u for u, *_ in GUIDES}
+    links = []
+    park = p or park_of(c)
+    if c:
+        links += type_links(c)
+        h = c["hr"]
+        if h:
+            for H in HEIGHTS:
+                if hin(h) <= H + 1e-9: links.append((f"/guides/roller-coasters-for-{H}-inch-kids/", f"Coasters for {H}-inch kids")); break
+    for u, t, b, g in GUIDES:
+        if g == "By place" and park["slug"] in REGION_PARKS.get(u, ()): links.append((u, t))
+    if p: links += [("/guides/best-first-roller-coasters/", "Best first roller coasters"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids"), ("/guides/tallest-roller-coasters/", "Tallest roller coasters")]
+    links = [(u, t) for u, t in dict.fromkeys(links) if u in gp]
+    if not links: return ""
+    return '<section aria-labelledby="rg-h"><h2 id="rg-h">Related guides</h2><ul class="cols">' + "".join(f'<li><a href="{u}">{E(t)}</a></li>' for u, t in links) + "</ul></section>"
+
 def coaster_page(c):
     p = park_of(c)
     path = coaster_path(c)
@@ -269,7 +286,7 @@ def coaster_page(c):
     if c["opened"] and h and h.get("introduced") and h["introduced"] != c["opened"][:4]:
         srcs.append(f'<li>Note: the park\'s ride page lists {h["introduced"]} as the year this ride was introduced; RCDB dates the opening of this coaster to {date_h(c["opened"])}.</li>')
     mp = map_block([c], 300, "map") if c["lat"] else ""
-    body = f'''<article class="coaster"><h1>{E(c["name"])}</h1><p class="sub">{E(p["name"])} · {E(p["loc"])}</p>
+    body = f'''<article class="coaster"><h1>{E(c["name"])}</h1><p class="sub">{E(p["name"])} · {E(p["loc"])}</p>{byline()}
 <p class="answer">{"; ".join(answer)}.</p>
 <p>{describe(c)}</p>
 <div class="grid2"><section aria-labelledby="stats-h"><h2 id="stats-h">{E(c["name"])} stats</h2><table class="stats"><tbody>{rows}</tbody></table>
@@ -286,7 +303,7 @@ def coaster_page(c):
 <p>Planning for a child? Try the <a href="/height-checker/">ride height checker</a> to see every coaster they can ride at {E(p["short"])}.</p></section>
 {faq_html(faqs)}
 <section aria-labelledby="more-h"><h2 id="more-h">More coasters at {E(p["name"]) if siblings else E(p["group"])}</h2>{f'<ul class="cols">{sib}</ul>' if siblings else '<ul class="cols">' + "".join(f'<li><a href="{coaster_path(x)}">{E(x["name"])}</a> <span class="muted">({E(x["park_name"])}{", " + hshort(x["hr"]) if x["hr"] else ""})</span></li>' for x in ALL if park_of(x)["group"] == p["group"] and x is not c) + '</ul>'}<p><a href="/parks/{p["slug"]}/">See the full {E(p["name"])} coaster guide and map</a></p></section>
-<section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ul>{srcs and "".join(srcs)}</ul><p class="note">Last checked {CHECKED}. Found an error? <a href="/contact/">Tell us</a>.</p></section></article>'''
+{related_html(c=c)}<section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ul>{srcs and "".join(srcs)}</ul><p class="note">Last checked {CHECKED}. Found an error? <a href="/contact/">Tell us</a>.</p></section></article>'''
     dparts = [x for x in [h and f'height requirement {hshort(h)}', mph(c["speed"]) and "top speed " + mph(c["speed"]), ft(c["height"]) and ft(c["height"]) + " tall"] if x]
     desc = f'{c["name"]} at {p["name"]}' + (": " + ", ".join(dparts) if dparts else "") + ". How intense it is, best seat and who it suits."
     if sum(1 for x in ALL if x["name"] == c["name"]) > 1:  # same ride name at more than one park
@@ -347,13 +364,13 @@ def park_page(p):
         if ok: faqs.append((f'Which {p["name"]} coasters can a {th}-inch child ride?', f'Based on official minimum heights checked {CHECKED}: ' + ", ".join(ok) + '. Some rides also need a companion below a certain height; confirm at the ride.'))
     if noinv: faqs.append((f'Which coasters at {p["name"]} do not go upside down?', ", ".join(c["name"] for c in noinv) + " have no inversions, per RCDB."))
     srcset = sorted({c["hr"]["src"] for c in cs if c["hr"]})
-    body = f'''<h1>{E(p["name"])} roller coasters</h1><p class="sub">{("Formerly " + E(p["former"]) + " · ") if p.get("former") else ""}{E(p["loc"])} · {n} coaster{"s" if n != 1 else ""}</p>
+    body = f'''<h1>{E(p["name"])} roller coasters</h1><p class="sub">{("Formerly " + E(p["former"]) + " · ") if p.get("former") else ""}{E(p["loc"])} · {n} coaster{"s" if n != 1 else ""}</p>{byline()}
 <p class="answer">{lead}</p>
 {map_block(cs, 440)}
 <h2>Every coaster at {E(p["name"])}</h2>{coaster_table(sorted(cs, key=lambda c: -(c["height"] or 0)))}
 <section aria-labelledby="hb-h"><h2 id="hb-h">{E(p["name"])} coasters by height requirement</h2>{band_html}<p>Want a personal list? Use the <a href="/height-checker/">ride height checker</a>.</p></section>
 {faq_html(faqs)}
-<section class="sources"><h2>Sources</h2><ul><li><a href="{p["rcdb_url"]}" rel="nofollow noopener" target="_blank">RCDB: {E(p["name"])}</a>: operating coaster list, stats and map positions.</li>{"".join(f"<li>{src_link(s)}: height requirements (checked {CHECKED}).</li>" for s in srcset if not (s[1].startswith("https://www.sixflags.com") or ".enchantedparks.com/rides-and-experiences/" in s[1]))}{"<li>" + E(p["name"]) + " official ride pages on " + ("sixflags.com" if p["official"].startswith("https://www.sixflags.com") else p["official"].split("/")[2]) + ": height requirements and thrill ratings (linked on each coaster page, checked " + CHECKED + ").</li>" if any(c["hr"] and (c["hr"]["src"][1].startswith("https://www.sixflags.com") or ".enchantedparks.com/rides-and-experiences/" in c["hr"]["src"][1]) for c in cs) else ""}<li><a href="{p["official"]}" rel="nofollow noopener" target="_blank">{E(p["name"])} official site</a></li></ul></section>'''
+{related_html(p=p)}<section class="sources"><h2>Sources</h2><ul><li><a href="{p["rcdb_url"]}" rel="nofollow noopener" target="_blank">RCDB: {E(p["name"])}</a>: operating coaster list, stats and map positions.</li>{"".join(f"<li>{src_link(s)}: height requirements (checked {CHECKED}).</li>" for s in srcset if not (s[1].startswith("https://www.sixflags.com") or ".enchantedparks.com/rides-and-experiences/" in s[1]))}{"<li>" + E(p["name"]) + " official ride pages on " + ("sixflags.com" if p["official"].startswith("https://www.sixflags.com") else p["official"].split("/")[2]) + ": height requirements and thrill ratings (linked on each coaster page, checked " + CHECKED + ").</li>" if any(c["hr"] and (c["hr"]["src"][1].startswith("https://www.sixflags.com") or ".enchantedparks.com/rides-and-experiences/" in c["hr"]["src"][1]) for c in cs) else ""}<li><a href="{p["official"]}" rel="nofollow noopener" target="_blank">{E(p["name"])} official site</a></li></ul></section>'''
     ld = [{"@context": "https://schema.org", "@type": "AmusementPark", "name": p["name"], "url": p["official"], **({"alternateName": p["former"]} if p.get("former") else {}), "address": {"@type": "PostalAddress", "addressLocality": p["loc"].split(", ")[-2], "addressRegion": p["state"], "addressCountry": p["country"]}},
           {"@context": "https://schema.org", "@type": "ItemList", "name": f'Roller coasters at {p["name"]}', "numberOfItems": n,
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": url(coaster_path(c)), "name": c["name"]} for i, c in enumerate(cs)]}, faq_ld(faqs)]
@@ -393,7 +410,9 @@ def height_checker():
 <h2>How height requirements work</h2><p>Each coaster has a minimum height set by the park and the ride maker. Some family coasters let shorter children ride with a companion (an adult or older rider), and a few kiddie coasters also have a maximum height. Our checker uses only those official numbers.</p>
 <script type="application/json" id="coaster-data">{tool_data()}</script>'''
     faqs = [("Where is height checked?", "At the ride entrance, by the park's ride team. Rules on footwear and re-measuring vary by park, so ask the ride team if your child is close to the line."),
-            ("Where do these height requirements come from?", f"From each park's official ride pages (for Hersheypark, its official 2026 roller coaster guide; for Universal Studios Hollywood, its official rider safety guide), and for Universal Orlando parks from Visit Orlando's coaster guide (updated 1 Jun 2026), all checked {CHECKED}. Each coaster page links its source.")]
+            ("Where do these height requirements come from?", f"From each park's official ride pages, ride guides or FAQs (for Universal Orlando parks, Visit Orlando's official coaster guide), all checked {CHECKED}. Each coaster page links its exact source, and our sources and methods page lists them all."),
+            ("Does the checker work in centimetres?", "Yes. Choose cm or inches. Parks in Europe and Asia publish rules in centimetres, and the checker compares your child's height against that official centimetre figure, so a rider exactly at the line is shown as able to ride in either unit."),
+            ("What does ride with a companion mean?", "Some family coasters let a shorter child ride if an adult or older rider sits with them. The checker lists these separately, with the companion height range the park gives. Who counts as a companion (age or height) is set by each park.")]
     body += faq_html(faqs)
     write("/height-checker/", page("/height-checker/", f"Ride Height Checker: Coasters Your Child Can Ride | {BRAND}", "Enter your child's height in inches or cm and see which roller coasters they can ride at Disney, Universal, Six Flags, Cedar Point, Kings Island, SeaWorld, Busch Gardens, Hersheypark, Dollywood, Knott's and more.", body, [faq_ld(faqs), {"@context": "https://schema.org", "@type": "WebApplication", "name": "Coaster Map ride height checker", "applicationCategory": "TravelApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": url("/height-checker/")}], [("/", "Home"), ("/height-checker/", "Height checker")]))
 
@@ -413,8 +432,16 @@ def quiz():
 <h2 id="tg-h">Coaster trivia: which is taller?</h2>
 <p>Two coasters, one question. Pick the taller one. Heights are from RCDB.</p>
 <div id="tg" class="tool" aria-labelledby="tg-h"><p id="tg-q"></p><div id="tg-btns" class="btnrow"></div><p id="tg-msg" aria-live="polite"></p><p>Score: <span id="tg-s">0</span> · Best streak: <span id="tg-b">0</span></p></div>
-<script type="application/json" id="coaster-data">{tool_data()}</script>'''
-    write("/quiz/", page("/quiz/", f"Which Roller Coaster Should You Ride? Quiz | {BRAND}", "A quick quiz that matches you with theme park roller coasters by height, thrill level and inversions, plus a coaster height trivia game.", body, None, [("/", "Home"), ("/quiz/", "Coaster quiz")]))
+<script type="application/json" id="coaster-data">{tool_data()}</script>
+<section><h2>How the quiz picks your coasters</h2>
+<p>The quiz works through the same verified data as the rest of Coaster Map. First it removes every coaster your height does not meet, using each park's official minimum (and any maximum). Then it matches your answer on bravery to our intensity labels, which are worked out from each ride's RCDB height, speed, inversions and type, the same way for every park. If you say no to going upside down, any coaster with an inversion is dropped.</p>
+<p>The results are a starting point, not a promise. Two rides with the same numbers can feel very different, so read the "How intense is it?" and "Who is it for?" notes on each coaster page before you queue.</p>
+<p>New to coasters? Our <a href="/guides/best-first-roller-coasters/">best first roller coasters</a> guide explains how to build up from a family coaster, and the <a href="/guides/roller-coaster-types/">roller coaster types</a> guide explains launches, inverts, wooden coasters and more. For the trivia game, the <a href="/guides/tallest-roller-coasters/">tallest roller coasters</a> list is a good cheat sheet.</p></section>'''
+    qf = [("Is the quiz based on real ride rules?", "Yes. It only uses height rules from official park sources and stats from RCDB. Coasters without a verified height rule are left out of the matches."),
+          ("Why didn't my favourite coaster come up?", "It may be outside the thrill level you chose, have an inversion when you said no to going upside down, or have no verified height rule on Coaster Map yet."),
+          ("Where do the trivia heights come from?", "From RCDB, the Roller Coaster DataBase. Height is the coaster's highest point above the ground.")]
+    body += faq_html(qf)
+    write("/quiz/", page("/quiz/", f"Which Roller Coaster Should You Ride? Quiz | {BRAND}", "A quick quiz that matches you with theme park roller coasters by height, thrill level and inversions, plus a coaster height trivia game.", body, [faq_ld(qf)], [("/", "Home"), ("/quiz/", "Coaster quiz")]))
 
 def home():
     tallest = sorted([c for c in ALL if c["height"]], key=lambda c: -c["height"])[:5]
@@ -429,6 +456,7 @@ def home():
 <div class="grid3"><section><h2>Tallest coasters</h2><ol>{li(tallest, lambda c: ft(c["height"]))}</ol></section>
 <section><h2>Fastest coasters</h2><ol>{li(fastest, lambda c: mph(c["speed"]))}</ol></section>
 <section><h2>Lowest height requirements</h2><ol>{li(kid, lambda c: hshort(c["hr"]))}</ol></section></div>
+<section><h2>Popular guides</h2><ul class="cols"><li><a href="/guides/roller-coasters-for-42-inch-kids/">Coasters for 42-inch kids</a></li><li><a href="/guides/roller-coasters-for-48-inch-kids/">Coasters for 48-inch kids</a></li><li><a href="/guides/best-first-roller-coasters/">Best first roller coasters</a></li><li><a href="/guides/tallest-roller-coasters/">Tallest roller coasters</a></li><li><a href="/guides/fastest-roller-coasters/">Fastest roller coasters</a></li><li><a href="/guides/most-intense-roller-coasters/">Most intense roller coasters</a></li><li><a href="/guides/roller-coaster-types/">Roller coaster types explained</a></li><li><a href="/guides/">All guides</a></li></ul></section>
 <section><h2>How we check facts</h2><p>Every height requirement links to the park page it came from, and every stat links to its RCDB entry. If we can't verify a number, we leave it out rather than guess. Read our <a href="/methodology/">sources and methods</a>.</p></section>'''
     write("/", page("/", f"{BRAND}: Roller Coaster Height Requirements, Stats & Maps", f"Height requirements, stats, intensity and best seats for {len(ALL)} roller coasters at Disney, Universal, Six Flags, Cedar Point, Kings Island, SeaWorld, Busch Gardens, Hersheypark, Dollywood, Knott's and more, with interactive park maps.", body))
 
@@ -439,7 +467,7 @@ def simple(path, title, desc, h1, inner, crumbs_name=None, legal=False, noindex=
 def about_legal():
     simple("/about/", f"About {BRAND}", "What Coaster Map is, how we pick and check coaster facts, and what is coming next.", "About Coaster Map", f'''
 <p>Coaster Map is an independent guide to the roller coasters at the world's big theme parks. Our goal is simple: one clear page for every coaster, answering the questions families and thrill seekers actually ask, such as the height requirement, how intense the ride is, and where to sit, plus a map of where each coaster sits in its park.</p>
-<h2>What we cover</h2><p>We now cover {len(PARKS)} parks and {len(ALL)} coasters: {", ".join(p["name"] for p in PARKS[:-1])} and {PARKS[-1]["name"]}. Next come more Six Flags and other major United States parks, then major parks in Europe and Asia.</p>
+<h2>What we cover</h2><p>We now cover {len(PARKS)} parks and {len(ALL)} coasters: {", ".join(p["name"] for p in PARKS[:-1])} and {PARKS[-1]["name"]}. We add parks when we can verify their height rules on official park sources, and we leave out any rule we cannot verify.</p>
 <h2>How we work</h2><p>Height requirements come from official park pages. Ride statistics, opening dates, manufacturers and map positions come from the Roller Coaster DataBase (RCDB). We write every description ourselves. If a fact can't be verified, we leave it out. See <a href="/methodology/">sources and methods</a>.</p>
 <h2>Independence</h2><p>Coaster Map is not affiliated with, endorsed by or sponsored by any park, operator or ride manufacturer. Park and ride names are used only to identify the rides we describe.</p>
 <p>Spotted something out of date? <a href="/contact/">Let us know</a> and we'll check it.</p>''')
@@ -453,8 +481,14 @@ def about_legal():
 <ul><li>Maps: <a href="https://leafletjs.com/">Leaflet</a> 1.9.4 (BSD 2-Clause licence, © Volodymyr Agafonkin and CloudMade), served from this site.</li>
 <li>Map tiles and data: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, available under the Open Database Licence.</li>
 <li>Ride statistics and coordinates: facts compiled from the <a href="https://rcdb.com/" rel="nofollow noopener">Roller Coaster DataBase</a>, linked on every coaster page.</li>
-<li>Logo and graphics: original artwork made for Coaster Map. The site uses no ride photos at launch.</li></ul>''')
+<li>Logo and graphics: original artwork made for Coaster Map. The site uses no ride photos and no park or ride logos.</li>
+<li>Height requirements: each park's official ride pages, guides or FAQs, credited and linked on every coaster page and listed on our <a href="/methodology/">sources and methods</a> page.</li>
+<li>Writing: every description, explainer and guide is written by the Coaster Map editorial team. We do not copy park marketing text; short factual rules (such as a minimum height) are reported in our own words with a link to the source.</li></ul>
+<h2>Park and ride names</h2><p>Park, ride and company names are trademarks of their owners and are used only to identify the rides we describe. Coaster Map is not affiliated with any of them.</p>
+<h2>Corrections</h2><p>If you own or operate a park and see an out-of-date rule, please use our <a href="/contact/">contact form</a> and we will re-check the official source.</p>''')
     contact_inner = f'''<p>Questions, corrections or a park you'd like us to cover next? Send us a message and we'll reply by email. We read every correction and fix verified errors quickly.</p>
+<h2>Reporting a correction</h2><p>The fastest way to get a fix is to include the page address, what looks wrong and a link to the official park page that shows the correct rule. We only change a height requirement when we can confirm it on an official park source, and we update the "last verified" date on the page when we do.</p>
+<h2>Press, partnerships and parks</h2><p>Parks, operators and media can use the same form. Coaster Map does not accept payment for coverage or for changes to descriptions.</p>
 <p class="form-status" id="contact-status" role="status" hidden></p>
 <form class="contact" id="contact-form" action="{FORM_ENDPOINT}" method="POST">
 <input type="hidden" name="_subject" value="Coaster Map contact"><input type="hidden" name="_template" value="table">
@@ -467,7 +501,7 @@ def about_legal():
 <button class="btn" type="submit">Send message</button></form>
 <p class="note">Messages are delivered by FormSubmit (formsubmit.co), a form-to-email service. See our <a href="/privacy/">privacy policy</a>.</p>'''
     simple("/contact/", f"Contact {BRAND}", "Contact Coaster Map with questions, corrections or park requests.", "Contact us", contact_inner, "Contact")
-    simple("/newsletter/thanks/", f"Thanks for signing up | {BRAND}", "Coaster Map sign-up confirmation.", "Thanks for signing up", '<p id="nl-msg">You are on the list for new-coaster alerts. You can unsubscribe at any time.</p><p><a href="/">Back to Coaster Map</a></p>', "Sign-up", noindex=False)
+    simple("/newsletter/thanks/", f"Thanks for signing up | {BRAND}", "Coaster Map sign-up confirmation.", "Thanks for signing up", '<p id="nl-msg">You are on the list for new-coaster alerts. You can unsubscribe at any time.</p><p><a href="/">Back to Coaster Map</a></p>', "Sign-up", noindex=True)
     L = lambda: f'<p class="legal-line">{LEGAL_LINE}</p>'
     legal = {
     "/terms/": ("Terms of Use", f'''<p>Last updated {date_h(TODAY)}. These terms govern your use of coastermap.com ("Coaster Map", "we", "us"). Coaster Map is a trade name of Joshua Israel Ventures LLC, a Florida limited liability company. By using the site you agree to these terms.</p>
@@ -486,7 +520,9 @@ def about_legal():
 <h2>Email sign-up</h2><p>If you sign up for new-coaster alerts, we store your email address, the date and your consent in a database run on Cloudflare Workers. We use it only to send Coaster Map updates, never sell it, and delete it when you unsubscribe or ask us to. Every email will include a way to unsubscribe.</p>
 <h2>Maps</h2><p>Interactive maps load tiles from OpenStreetMap's servers, which receive your IP address and browser details as part of the request. See the <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation privacy policy</a>.</p>
 <h2>Games and tools</h2><p>The height checker and quiz run in your browser. Your answers are not sent to us. The trivia game may save your best streak in your browser's local storage.</p>
-<h2>Advertising</h2><p>The site does not show ads yet. If we add advertising (for example Google AdSense), we will update this policy first, including how ad partners use cookies and how to manage consent where the law requires it.</p>
+<h2>Advertising</h2><p>To keep Coaster Map free, we show or may show ads served by Google (including Google AdSense) and other third-party advertising partners. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the Internet.</p>
+<p>You can opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" rel="nofollow noopener" target="_blank">Google Ads Settings</a>, and you can opt out of some third-party vendors' use of cookies for personalised advertising at <a href="https://www.aboutads.info/choices/" rel="nofollow noopener" target="_blank">aboutads.info/choices</a> or, in Europe, <a href="https://www.youronlinechoices.eu/" rel="nofollow noopener" target="_blank">youronlinechoices.eu</a>. Learn more in <a href="https://policies.google.com/technologies/ads" rel="nofollow noopener" target="_blank">how Google uses cookies in advertising</a>. Where the law requires it (for example in the European Economic Area, the United Kingdom and Switzerland), we will ask for your consent through a certified consent management platform before any advertising cookies are set, and you can change your choice at any time.</p>
+<h2>Cookies and similar technologies</h2><p>Cookies are small text files a website stores in your browser. Coaster Map itself sets no cookies for analytics. Advertising partners, if ads are shown, may set cookies or use similar identifiers as described above. The trivia game may store your best score in your browser's local storage, which never leaves your device. You can block or delete cookies in your browser settings; the site works without them.</p>
 <h2>Hosting</h2><p>The site is hosted on GitHub Pages, which may log IP addresses for security and operations.</p>
 <h2>Your rights</h2><p>You can ask us to access, correct or delete personal information we hold about you via the <a href="/contact/">contact form</a>. Residents of some US states and other countries may have additional rights, which we will honour.</p>
 <h2>Children</h2><p>The site is for a general audience and is not directed to children under 13. We do not knowingly collect personal information from children. The height checker does not collect or store a child's height.</p>
@@ -503,6 +539,8 @@ def about_legal():
 <h2>Repeat infringers</h2><p>We will act against repeat infringement where appropriate.</p>'''),
     "/ad-disclosure/": ("Advertising and Affiliate Disclosure", f'''<p>Last updated {date_h(TODAY)}. Coaster Map is free to use. To pay for running it, we plan to show advertising, for example through Google AdSense or a managed ad network. At the moment the site shows no ads and contains no affiliate links.</p>
 <p>When ads appear they will be clearly separate from our content and labelled as advertising. Advertisers will have no influence over our coaster descriptions, ratings or recommendations. If we ever add affiliate links (for example to tickets or hotels), we may earn a commission at no extra cost to you, and we will label those links.</p>
+<h2>How ads would be chosen</h2><p>Ads from networks such as Google AdSense are picked automatically by the network, sometimes based on cookies, as explained in our <a href="/privacy/">privacy policy</a>. We do not choose individual advertisers, and an ad appearing on a page is not an endorsement by Coaster Map. Ads will never be placed inside height tables or made to look like ride information.</p>
+<h2>Editorial independence</h2><p>Stats come from RCDB and height rules from official park sources, as described on our <a href="/methodology/">sources and methods</a> page. Intensity labels, seat tips and "who it suits" notes are our own editorial guidance, written the same way for every coaster whatever its park.</p>
 <p>No park, operator or ride manufacturer pays for coverage on Coaster Map. Questions: use our <a href="/contact/">contact form</a>.</p>'''),
     }
     for pth, (t, inner) in legal.items():
@@ -527,11 +565,14 @@ def extras():
     for p in PARKS:
         llms.append(f"- [{p['name']}]({url('/parks/' + p['slug'] + '/')}): {len(p['coasters'])} coasters")
         for c in p["coasters"]:
-            llms.append(f"  - [{c['name']}]({url(coaster_path(c))})" + (f": min height {c['hr']['min']} in" if c["hr"] else ""))
+            llms.append(f"  - [{c['name']}]({url(coaster_path(c))})" + (f": min height {hshort(c['hr'])}" if c["hr"] else ""))
     open(os.path.join(ROOT, "llms.txt"), "w").write("\n".join(llms) + "\n")
     open(os.path.join(ROOT, "favicon.svg"), "w").write(LOGO.replace('width="34" height="34" ', 'xmlns="http://www.w3.org/2000/svg" ').replace(' aria-hidden="true" focusable="false"', ""))
 
+exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "guides.py")).read(), "guides.py", "exec"))
+
 if __name__ == "__main__":
+    build_guides()
     for p in PARKS:
         for c in p["coasters"]: coaster_page(c)
         park_page(p)

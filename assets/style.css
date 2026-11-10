@@ -34,3 +34,4 @@ footer.site{background:var(--navy);color:#f1f1f6;padding:1.5rem 0;margin-top:2re
 .prose{max-width:780px}
 .leaflet-popup-content a{color:var(--red)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+.byline{font-size:.9rem;color:#555;margin:.25rem 0 1rem}
