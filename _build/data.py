@@ -17,6 +17,7 @@ def swp(city, label): return (f"SeaWorld {label}, Rides and Roller Coasters page
 def kw(slug): return ("Kennywood, official attraction page", f"https://www.kennywood.com/discover-the-park/attractions/{slug}/")
 def hw(slug): return ("Holiday World, official ride page", f"https://holidayworld.com/rides/{slug}/")
 USH = ("Universal Studios Hollywood, Guide for Rider Safety and Accessibility (Height Requirements Quick Reference Guide)", "https://www.universalstudioshollywood.com/contentdata/ush/en/us/files/documents/universal_riders_guide.pdf")
+def lc(slug): return ("Lake Compounce, official attraction page", f"https://www.lakecompounce.com/discover-the-park/attractions/{slug}/")
 def dw(slug): return ("Dollywood, official ride page", f"https://www.dollywood.com/themepark/rides/{slug}/")
 PARKS = [
  dict(slug="cedar-point", name="Cedar Point", short="Cedar Point", loc="Sandusky, Ohio", state="OH", country="US", official="https://www.sixflags.com/cedarpoint", group="Six Flags (formerly Cedar Fair)"),
@@ -61,6 +62,11 @@ PARKS = [
  dict(slug="kennywood", name="Kennywood", short="Kennywood", loc="West Mifflin, Pennsylvania", state="PA", country="US", official="https://www.kennywood.com/", group="Palace Entertainment"),
  dict(slug="holiday-world", name="Holiday World", short="Holiday World", loc="Santa Claus, Indiana", state="IN", country="US", official="https://holidayworld.com/", group="Holiday World & Splashin' Safari"),
  dict(slug="universal-studios-hollywood", name="Universal Studios Hollywood", short="Universal Studios Hollywood", loc="Universal City, California", state="CA", country="US", official="https://www.universalstudioshollywood.com/", group="Universal Studios Hollywood"),
+ # Added 10 Nov 2026 (expansion batch 4)
+ dict(slug="six-flags-darien-lake", name="Six Flags Darien Lake", short="Six Flags Darien Lake", loc="Darien Center, New York", state="NY", country="US", official="https://www.sixflags.com/darienlake", group="Six Flags"),
+ dict(slug="frontier-city", name="Frontier City", short="Frontier City", loc="Oklahoma City, Oklahoma", state="OK", country="US", official="https://www.sixflags.com/frontiercity", group="Six Flags"),
+ dict(slug="mid-america-adventure", name="Mid America Adventure", short="Mid America Adventure", loc="Eureka, Missouri", state="MO", country="US", official="https://midamericaadventure.enchantedparks.com/", group="Enchanted Parks"),
+ dict(slug="lake-compounce", name="Lake Compounce", short="Lake Compounce", loc="Bristol, Connecticut", state="CT", country="US", official="https://www.lakecompounce.com/", group="Palace Entertainment"),
 ]
 ORIGINAL = {"cedar-point", "six-flags-magic-mountain", "magic-kingdom", "epic-universe", "islands-of-adventure", "universal-studios-florida", "busch-gardens-tampa-bay"}
 DISPLAY = {"Barnstormer": "The Barnstormer", "Incredible Hulk": "The Incredible Hulk Coaster", "VelociCoaster": "Jurassic World VelociCoaster",
@@ -72,7 +78,7 @@ DISPLAY = {"Barnstormer": "The Barnstormer", "Incredible Hulk": "The Incredible 
  "Batman - The Dark Knight": "Batman: The Dark Knight", "Revenge of the Mummy the Ride": "Revenge of the Mummy: The Ride",
  "Raven": "The Raven", "Legend": "The Legend", "Voyage": "The Voyage", "Howler": "The Howler"}
 # Park specific display names, where the park's own name differs from the global rename above.
-DISPLAY_PARK = {("kennywood", "Racer"): "Racer"}
+DISPLAY_PARK = {("kennywood", "Racer"): "Racer", ("mid-america-adventure", "Boss"): "The Boss"}
 # Height requirements (inches) for non Six Flags parks, as read on the cited page on CHECKED.
 H = {
  "Space Mountain": dict(min=44, src=dz("space-mountain")),
@@ -93,6 +99,9 @@ H = {
 # Height requirements for parks added in the expansion, keyed by (park slug, RCDB name), as read on the cited page on CHECKED.
 # Six Flags (ex Cedar Fair) parks Kings Island, Knott's and Great Adventure come from sf_heights_new.json (sixflags.com ride pages).
 HP2 = {
+ # batch 4
+ ("lake-compounce", "Boulder Dash"): dict(min=48, src=lc("boulder-dash")), ("lake-compounce", "Wildcat"): dict(min=48, src=lc("wildcat")),
+ ("lake-compounce", "Zoomerang"): dict(min=48, src=lc("zoomerang")), ("lake-compounce", "Phobia Phear Coaster"): dict(min=54, acc_min=52, acc_max=54, src=lc("phobia-phear-coaster")),
  # batch 3
  ("seaworld-san-diego", "Arctic Rescue"): dict(min=48, src=swp("san-diego", "San Diego")), ("seaworld-san-diego", "Emperor"): dict(min=52, src=swp("san-diego", "San Diego")),
  ("seaworld-san-diego", "Manta"): dict(min=48, src=swp("san-diego", "San Diego")), ("seaworld-san-diego", "Electric Eel"): dict(min=54, src=swp("san-diego", "San Diego")),

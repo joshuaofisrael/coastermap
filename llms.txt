@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 345 coasters at 39 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 373 coasters at 43 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -396,3 +396,35 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Revenge of the Mummy: The Ride](https://coastermap.com/parks/universal-studios-hollywood/revenge-of-the-mummy-the-ride/): min height 48 in
   - [Flight of the Hippogriff](https://coastermap.com/parks/universal-studios-hollywood/flight-of-the-hippogriff/): min height 48 in
   - [Fast & Furious: Hollywood Drift](https://coastermap.com/parks/universal-studios-hollywood/fast-furious-hollywood-drift/): min height 51 in
+- [Six Flags Darien Lake](https://coastermap.com/parks/six-flags-darien-lake/): 8 coasters
+  - [Predator](https://coastermap.com/parks/six-flags-darien-lake/predator/): min height 48 in
+  - [Viper](https://coastermap.com/parks/six-flags-darien-lake/viper/): min height 48 in
+  - [Mind Eraser](https://coastermap.com/parks/six-flags-darien-lake/mind-eraser/): min height 52 in
+  - [Boomerang](https://coastermap.com/parks/six-flags-darien-lake/boomerang/): min height 48 in
+  - [Ride of Steel](https://coastermap.com/parks/six-flags-darien-lake/ride-of-steel/): min height 54 in
+  - [Hoot N Holler](https://coastermap.com/parks/six-flags-darien-lake/hoot-n-holler/): min height 36 in
+  - [Moto Coaster](https://coastermap.com/parks/six-flags-darien-lake/moto-coaster/): min height 48 in
+  - [Tantrum](https://coastermap.com/parks/six-flags-darien-lake/tantrum/): min height 48 in
+- [Frontier City](https://coastermap.com/parks/frontier-city/): 5 coasters
+  - [Silver Bullet](https://coastermap.com/parks/frontier-city/silver-bullet/): min height 48 in
+  - [Wildcat](https://coastermap.com/parks/frontier-city/wildcat/): min height 42 in
+  - [Diamondback](https://coastermap.com/parks/frontier-city/diamondback/): min height 48 in
+  - [Steel Lasso](https://coastermap.com/parks/frontier-city/steel-lasso/): min height 38 in
+  - [Frankie's Mine Train](https://coastermap.com/parks/frontier-city/frankies-mine-train/): min height 42 in
+- [Mid America Adventure](https://coastermap.com/parks/mid-america-adventure/): 10 coasters
+  - [Ninja](https://coastermap.com/parks/mid-america-adventure/ninja/): min height 48 in
+  - [River King Mine Train](https://coastermap.com/parks/mid-america-adventure/river-king-mine-train/): min height 48 in
+  - [Mr. Freeze Reverse Blast](https://coastermap.com/parks/mid-america-adventure/mr-freeze-reverse-blast/): min height 54 in
+  - [Batman The Ride](https://coastermap.com/parks/mid-america-adventure/batman-the-ride/): min height 54 in
+  - [Screamin' Eagle](https://coastermap.com/parks/mid-america-adventure/screamin-eagle/): min height 48 in
+  - [The Boss](https://coastermap.com/parks/mid-america-adventure/the-boss/): min height 48 in
+  - [Pandemonium](https://coastermap.com/parks/mid-america-adventure/pandemonium/): min height 47 in
+  - [American Thunder](https://coastermap.com/parks/mid-america-adventure/american-thunder/): min height 48 in
+  - [Boomerang](https://coastermap.com/parks/mid-america-adventure/boomerang/): min height 48 in
+  - [Rookie Racer](https://coastermap.com/parks/mid-america-adventure/rookie-racer/): min height 48 in
+- [Lake Compounce](https://coastermap.com/parks/lake-compounce/): 5 coasters
+  - [Wildcat](https://coastermap.com/parks/lake-compounce/wildcat/): min height 48 in
+  - [Zoomerang](https://coastermap.com/parks/lake-compounce/zoomerang/): min height 48 in
+  - [Boulder Dash](https://coastermap.com/parks/lake-compounce/boulder-dash/): min height 48 in
+  - [Kiddie Coaster](https://coastermap.com/parks/lake-compounce/kiddie-coaster/)
+  - [Phobia Phear Coaster](https://coastermap.com/parks/lake-compounce/phobia-phear-coaster/): min height 54 in

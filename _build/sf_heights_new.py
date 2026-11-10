@@ -8,7 +8,7 @@ extra=json.load(open('sf_extra_slugs.json'))
 try: res=json.load(open('sf_heights_new.json'))
 except: res={}
 PARKS=[('kings-island','kingsisland'),('knotts-berry-farm','knotts'),('six-flags-great-adventure','greatadventure'),('six-flags-great-america','greatamerica'),('carowinds','carowinds'),('canadas-wonderland','canadaswonderland'),('six-flags-over-texas','overtexas'),('six-flags-over-georgia','overgeorgia'),('kings-dominion','kingsdominion'),('six-flags-fiesta-texas','fiestatexas'),('six-flags-new-england','newengland'),('six-flags-discovery-kingdom','discoverykingdom'),('californias-great-america','cagreatamerica'),('dorney-park','dorneypark'),
- ('worlds-of-fun','https://worldsoffun.enchantedparks.com/rides-and-experiences/attractions/'),('valleyfair','https://valleyfair.enchantedparks.com/rides-and-experiences/attractions/'),('michigans-adventure','https://miadventure.enchantedparks.com/rides-and-experiences/attractions/')]
+ ('worlds-of-fun','https://worldsoffun.enchantedparks.com/rides-and-experiences/attractions/'),('valleyfair','https://valleyfair.enchantedparks.com/rides-and-experiences/attractions/'),('michigans-adventure','https://miadventure.enchantedparks.com/rides-and-experiences/attractions/'),('six-flags-darien-lake','darienlake'),('la-ronde','laronde'),('frontier-city','frontiercity'),('mid-america-adventure','https://midamericaadventure.enchantedparks.com/rides-and-experiences/attractions/')]
 only=sys.argv[1:]
 for park,pk in PARKS:
     if only and park not in only: continue

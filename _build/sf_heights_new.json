@@ -1949,5 +1949,243 @@
   "thrill": "3",
   "introduced": null,
   "ctx": "Min Height 42” Min Height Accompanied 36” Thrill Level 3 Location Michigans Adventure Accessibility Attraction Accessibility Information Woodstock Express Say hello to lovable Woodstock, Snoopy's best"
+ },
+ "six-flags-darien-lake|Predator": {
+  "url": "https://www.sixflags.com/darienlake/attractions/predator",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1990",
+  "ctx": "Min Height 48” Thrill Level 5 Location Theme Park Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1990 Special Features Steel ‘Titan Track’ sections for a "
+ },
+ "six-flags-darien-lake|Viper": {
+  "url": "https://www.sixflags.com/darienlake/attractions/viper",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1982",
+  "ctx": "Min Height 48” Thrill Level 5 Location Theme Park Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1982 Special Features 5 inversions, including a “batwing”"
+ },
+ "six-flags-darien-lake|Mind Eraser": {
+  "url": "https://www.sixflags.com/darienlake/attractions/mind-eraser",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "1997",
+  "ctx": "Min Height 52” Max Height 78” Thrill Level 5 Location Theme Park Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1997 Manufacturer Vekoma Top Speed 0 Mph L"
+ },
+ "six-flags-darien-lake|Boomerang": {
+  "url": "https://www.sixflags.com/darienlake/attractions/boomerang",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1998",
+  "ctx": "Min Height 48” Thrill Level 5 Location Theme Park Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1998 Manufacturer Vekoma Top Speed 0 Mph Elevation 0 Ft R"
+ },
+ "six-flags-darien-lake|Ride of Steel": {
+  "url": "https://www.sixflags.com/darienlake/attractions/ride-of-steel",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "76",
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Max Height 76” Thrill Level 5 Location Theme Park Accessibility Exclusive access for people with disabilities and reduced mobility. Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Durat"
+ },
+ "six-flags-darien-lake|Hoot N Holler": {
+  "url": "https://www.sixflags.com/darienlake/attractions/hoot-n-holler",
+  "min": "36",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "54",
+  "thrill": "2",
+  "introduced": null,
+  "ctx": "Min Height 36” Max Height 54” Thrill Level 2 Location Rowdy's Ridge Accessibility Exclusive access for people with disabilities and reduced mobility. Related Rides Woody's Whirlers 36 ” MIN. Height Re"
+ },
+ "six-flags-darien-lake|Moto Coaster": {
+  "url": "https://www.sixflags.com/darienlake/attractions/motocoaster",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2008",
+  "ctx": "Min Height 48” Thrill Level 5 Location Theme Park Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 2008 Special Features Motorbike Seating, Launch Manufactu"
+ },
+ "six-flags-darien-lake|Tantrum": {
+  "url": "https://www.sixflags.com/darienlake/attractions/tantrum",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "76",
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Max Height 76” Thrill Level 5 Location Theme Park Accessibility Exclusive access for people with disabilities and reduced mobility. Special Features Beyond vertical 97-degree drop! Manu"
+ },
+ "la-ronde|Monstre": null,
+ "la-ronde|Boomerang": null,
+ "la-ronde|Dragon": null,
+ "la-ronde|Marche du Mille-pattes": null,
+ "la-ronde|Vampire": null,
+ "la-ronde|Toboggan Nordique": null,
+ "la-ronde|Goliath": null,
+ "la-ronde|Ednör - L'Attaque": null,
+ "frontier-city|Silver Bullet": {
+  "url": "https://www.sixflags.com/frontiercity/attractions/silver-bullet",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1986",
+  "ctx": "Min Height 48” Thrill Level 4 Location Theme Park Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1986 Manufacturer Schwarzkopf Industries Top Speed 0 Mph "
+ },
+ "frontier-city|Wildcat": {
+  "url": "https://www.sixflags.com/frontiercity/attractions/wildcat",
+  "min": "42",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1991",
+  "ctx": "Min Height 42” Thrill Level 4 Location Theme Park Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1991 Manufacturer National Amusement Devices Top Speed 0 "
+ },
+ "frontier-city|Diamondback": {
+  "url": "https://www.sixflags.com/frontiercity/attractions/diamondback",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1994",
+  "ctx": "Min Height 48” Thrill Level 4 Location Theme Park Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1994 Manufacturer Arrow Dynamics Top Speed 0 Mph Length 0"
+ },
+ "frontier-city|Steel Lasso": {
+  "url": "https://www.sixflags.com/frontiercity/attractions/steel-lasso",
+  "min": "38",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "80",
+  "thrill": "3",
+  "introduced": "2008",
+  "ctx": "Min Height 38” Max Height 80” Thrill Level 3 Location Family Park Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 2008 Manufacturer Vekoma Top Speed 0 Mph "
+ },
+ "frontier-city|Frankie's Mine Train": {
+  "url": "https://www.sixflags.com/frontiercity/attractions/frankies-mine-train",
+  "min": "42",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "2",
+  "introduced": "2019",
+  "ctx": "Min Height 42” Thrill Level 2 Location Theme Park Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 2019 Manufacturer Zamperla Top Speed 0 Mph Length 0 Ft Pr"
+ },
+ "mid-america-adventure|Ninja": {
+  "url": "https://midamericaadventure.enchantedparks.com/rides-and-experiences/attractions/ninja/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1989",
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 50 MPH Length 2430 Ft Elevation 110 Ft Duration 120 Sec Location Studio Backlot Introduced 1989 Manufacturer Vekoma Inc. The Black Belt of Roller Coasters Maste"
+ },
+ "mid-america-adventure|River King Mine Train": {
+  "url": "https://midamericaadventure.enchantedparks.com/rides-and-experiences/attractions/river-king-mine-train/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1971",
+  "ctx": "Min Height 48” Thrill Level 4 Top Speed 37 MPH Length 2349Ft Location Gateway to the West Introduced 1971 Manufacturer Arrow Development All Aboard the Runaway Mine Train! Speed through twists, tunnel"
+ },
+ "mid-america-adventure|Mr. Freeze Reverse Blast": {
+  "url": "https://midamericaadventure.enchantedparks.com/rides-and-experiences/attractions/mr-freeze-reverse-blast/",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1998",
+  "ctx": "Min Height 54” Thrill Level 5 Top Speed 70 MPH Length 1382 Ft Elevation 218 Ft Location DC Comics Plaza Introduced 1998 Manufacturer Premier Rides Experience the Thrill of Zero to Hero Get launched in"
+ },
+ "mid-america-adventure|Batman The Ride": {
+  "url": "https://midamericaadventure.enchantedparks.com/rides-and-experiences/attractions/batman-the-ride/",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1995",
+  "ctx": "Min Height 54” Thrill Level 5 Top Speed 55 MPH Length 2900 Ft Elevation 110 Ft Duration 120 Sec Location Studio Backlot Introduced 1995 Manufacturer Bolliger and Mabillard Hang on-Literally! Dangle be"
+ },
+ "mid-america-adventure|Screamin' Eagle": {
+  "url": "https://midamericaadventure.enchantedparks.com/rides-and-experiences/attractions/screamin-eagle/",
+  "min": "48",
+  "acc_min": "46",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 46” Thrill Level 5 Top Speed 62 MPH Length 3872 Ft Elevation 110 Ft Location Illinois Manufacturer John Allen- Philadelphia Toboggan Company Celebrating 50 Years "
+ },
+ "mid-america-adventure|Boss": {
+  "url": "https://midamericaadventure.enchantedparks.com/rides-and-experiences/attractions/the-boss/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2000",
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 66 MPH Length 4631 Ft Elevation 122 Ft Duration 180 Location Brittania Introduced 2000 Manufacturer Custom Coasters International Inc. A Large and In Charge, Wo"
+ },
+ "mid-america-adventure|Pandemonium": {
+  "url": "https://midamericaadventure.enchantedparks.com/rides-and-experiences/attractions/pandemonium/",
+  "min": "47",
+  "acc_min": "42",
+  "acc_max": "47",
+  "max": null,
+  "thrill": "4",
+  "introduced": "2007",
+  "ctx": "Min Height 47” Min Height Accompanied 42” Thrill Level 4 Top Speed 40 MPH Length 1351 Ft Elevation 55 Ft Duration 111 Sec Location Brittania Introduced 2007 Manufacturer Gerstlauer Total chaos, every "
+ },
+ "mid-america-adventure|American Thunder": {
+  "url": "https://midamericaadventure.enchantedparks.com/rides-and-experiences/attractions/american-thunder/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2008",
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 50 MPH Length 2700 Ft Elevation 80 Ft Location 1904 Worlds Fair Introduced 2008 Manufacturer Great Coasters International Inc. Experience a Classic Wooden Rolle"
+ },
+ "mid-america-adventure|Boomerang": {
+  "url": "https://midamericaadventure.enchantedparks.com/rides-and-experiences/attractions/boomerang/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2013",
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 55 MPH Length 1650 Ft Elevation 125 Ft Location Illinois Introduced 2013 Manufacturer Vekoma One ride. Two runs. This 1,650-foot steel coaster launches you thro"
+ },
+ "mid-america-adventure|Rookie Racer": {
+  "url": "https://midamericaadventure.enchantedparks.com/rides-and-experiences/attractions/rookie-racer/",
+  "min": "48",
+  "acc_min": "36",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "3",
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 36” Thrill Level 3 Top Speed 27 MPH Length 843 Ft Location Brittania Start Your Engines! Jump in the driver’s seat and race side-by-side through twists, turns, an"
  }
 }
