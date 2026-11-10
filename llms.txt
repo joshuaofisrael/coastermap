@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 373 coasters at 43 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 458 coasters at 56 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -428,3 +428,101 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Boulder Dash](https://coastermap.com/parks/lake-compounce/boulder-dash/): min height 48 in
   - [Kiddie Coaster](https://coastermap.com/parks/lake-compounce/kiddie-coaster/)
   - [Phobia Phear Coaster](https://coastermap.com/parks/lake-compounce/phobia-phear-coaster/): min height 54 in
+- [Europa-Park](https://coastermap.com/parks/europa-park/): 14 coasters
+  - [Matterhorn Blitz](https://coastermap.com/parks/europa-park/matterhorn-blitz/): min height 130 in
+  - [Euro Mir](https://coastermap.com/parks/europa-park/euro-mir/): min height 130 in
+  - [Eurosat CanCan Coaster](https://coastermap.com/parks/europa-park/eurosat-cancan-coaster/): min height 130 in
+  - [Swiss Bob Run](https://coastermap.com/parks/europa-park/swiss-bob-run/): min height 130 in
+  - [Silver Star](https://coastermap.com/parks/europa-park/silver-star/): min height 140 in
+  - [Poseidon](https://coastermap.com/parks/europa-park/poseidon/): min height 130 in
+  - [Atlantica SuperSplash](https://coastermap.com/parks/europa-park/atlantica-supersplash/): min height 130 in
+  - [Pegasus](https://coastermap.com/parks/europa-park/pegasus/): min height 130 in
+  - [Blue Fire Megacoaster](https://coastermap.com/parks/europa-park/blue-fire-megacoaster/): min height 130 in
+  - [Voltron Nevera](https://coastermap.com/parks/europa-park/voltron-nevera/): min height 130 in
+  - [Wodan Timburcoaster](https://coastermap.com/parks/europa-park/wodan-timburcoaster/): min height 130 in
+  - [Arthur](https://coastermap.com/parks/europa-park/arthur/): min height 120 in
+  - [Ba-a-a-Express](https://coastermap.com/parks/europa-park/ba-a-a-express/): min height 120 in
+  - [Alpine Express Enzian](https://coastermap.com/parks/europa-park/alpine-express-enzian/): min height 130 in
+- [Phantasialand](https://coastermap.com/parks/phantasialand/): 7 coasters
+  - [Colorado Adventure](https://coastermap.com/parks/phantasialand/colorado-adventure/): min height 120 in
+  - [Crazy Bats](https://coastermap.com/parks/phantasialand/crazy-bats/): min height 120 in
+  - [Winja's Fear & Force](https://coastermap.com/parks/phantasialand/winjas-fear-force/): min height 140 in
+  - [Black Mamba](https://coastermap.com/parks/phantasialand/black-mamba/): min height 140 in
+  - [Taron](https://coastermap.com/parks/phantasialand/taron/): min height 140 in
+  - [Raik](https://coastermap.com/parks/phantasialand/raik/): min height 120 in
+  - [F.L.Y.](https://coastermap.com/parks/phantasialand/f-l-y/): min height 140 in
+- [Alton Towers](https://coastermap.com/parks/alton-towers/): 11 coasters
+  - [Nemesis Reborn](https://coastermap.com/parks/alton-towers/nemesis-reborn/): min height 140 in
+  - [Oblivion](https://coastermap.com/parks/alton-towers/oblivion/): min height 140 in
+  - [Runaway Mine Train](https://coastermap.com/parks/alton-towers/runaway-mine-train/): min height 130 in
+  - [Spinball Whizzer](https://coastermap.com/parks/alton-towers/spinball-whizzer/): min height 120 in
+  - [Rita](https://coastermap.com/parks/alton-towers/rita/): min height 140 in
+  - [TH13TEEN](https://coastermap.com/parks/alton-towers/th13teen/): min height 120 in
+  - [The Smiler](https://coastermap.com/parks/alton-towers/the-smiler/): min height 140 in
+  - [Octonauts Rollercoaster Adventure](https://coastermap.com/parks/alton-towers/octonauts-rollercoaster-adventure/): min height 110 in
+  - [Wicker Man](https://coastermap.com/parks/alton-towers/wicker-man/): min height 120 in
+  - [Bluey the Ride: Here Come the Grannies!](https://coastermap.com/parks/alton-towers/bluey-the-ride-here-come-the-grannies/): min height 110 in
+  - [Galactica](https://coastermap.com/parks/alton-towers/galactica/): min height 140 in
+- [Thorpe Park](https://coastermap.com/parks/thorpe-park/): 8 coasters
+  - [The Walking Dead: The Ride](https://coastermap.com/parks/thorpe-park/the-walking-dead-the-ride/): min height 140 in
+  - [Flying Fish](https://coastermap.com/parks/thorpe-park/flying-fish/): min height 110 in
+  - [Colossus](https://coastermap.com/parks/thorpe-park/colossus/): min height 140 in
+  - [Nemesis Inferno](https://coastermap.com/parks/thorpe-park/nemesis-inferno/): min height 140 in
+  - [Stealth](https://coastermap.com/parks/thorpe-park/stealth/): min height 140 in
+  - [SAW: The Ride](https://coastermap.com/parks/thorpe-park/saw-the-ride/): min height 140 in
+  - [The Swarm](https://coastermap.com/parks/thorpe-park/the-swarm/): min height 140 in
+  - [Hyperia](https://coastermap.com/parks/thorpe-park/hyperia/): min height 130 in
+- [Blackpool Pleasure Beach](https://coastermap.com/parks/blackpool-pleasure-beach/): 9 coasters
+  - [The Big One](https://coastermap.com/parks/blackpool-pleasure-beach/the-big-one/): min height 132 in
+  - [Revolution](https://coastermap.com/parks/blackpool-pleasure-beach/revolution/): min height 127 in
+  - [Avalanche](https://coastermap.com/parks/blackpool-pleasure-beach/avalanche/): min height 132 in
+  - [Grand National](https://coastermap.com/parks/blackpool-pleasure-beach/grand-national/): min height 140 in
+  - [Nickelodeon Streak](https://coastermap.com/parks/blackpool-pleasure-beach/nickelodeon-streak/): min height 117 in
+  - [Steeplechase](https://coastermap.com/parks/blackpool-pleasure-beach/steeplechase/): min height 127 in
+  - [Blue Flyer](https://coastermap.com/parks/blackpool-pleasure-beach/blue-flyer/)
+  - [Infusion](https://coastermap.com/parks/blackpool-pleasure-beach/infusion/): min height 132 in
+  - [ICON](https://coastermap.com/parks/blackpool-pleasure-beach/icon/): min height 130 in
+- [PortAventura Park](https://coastermap.com/parks/portaventura-park/): 8 coasters
+  - [Stampida](https://coastermap.com/parks/portaventura-park/stampida/): min height 120 in
+  - [Dragon Khan](https://coastermap.com/parks/portaventura-park/dragon-khan/): min height 140 in
+  - [Tomahawk](https://coastermap.com/parks/portaventura-park/tomahawk/): min height 105 in
+  - [El Diablo: Tren de la Mina](https://coastermap.com/parks/portaventura-park/el-diablo-tren-de-la-mina/): min height 140 in
+  - [Tami-Tami](https://coastermap.com/parks/portaventura-park/tami-tami/): min height 130 in
+  - [Furius Baco](https://coastermap.com/parks/portaventura-park/furius-baco/): min height 140 in
+  - [Shambhala](https://coastermap.com/parks/portaventura-park/shambhala/): min height 140 in
+  - [Uncharted: The Enigma of Penitence](https://coastermap.com/parks/portaventura-park/uncharted-the-enigma-of-penitence/)
+- [Ferrari Land](https://coastermap.com/parks/ferrari-land/): 2 coasters
+  - [Red Force](https://coastermap.com/parks/ferrari-land/red-force/): min height 140 in
+  - [Junior Red Force](https://coastermap.com/parks/ferrari-land/junior-red-force/): min height 120 in
+- [Efteling](https://coastermap.com/parks/efteling/): 6 coasters
+  - [Python](https://coastermap.com/parks/efteling/python/): min height 120 in
+  - [Vogel Rok](https://coastermap.com/parks/efteling/vogel-rok/): min height 120 in
+  - [De Vliegende Hollander](https://coastermap.com/parks/efteling/de-vliegende-hollander/): min height 120 in
+  - [Joris en de Draak](https://coastermap.com/parks/efteling/joris-en-de-draak/): min height 120 in
+  - [Baron 1898](https://coastermap.com/parks/efteling/baron-1898/): min height 132 in
+  - [Max + Moritz](https://coastermap.com/parks/efteling/max-moritz/): min height 130 in
+- [Liseberg](https://coastermap.com/parks/liseberg/): 7 coasters
+  - [Lisebergbanan](https://coastermap.com/parks/liseberg/lisebergbanan/): min height 130 in
+  - [Rabalder](https://coastermap.com/parks/liseberg/rabalder/): min height 110 in
+  - [Stampbanan](https://coastermap.com/parks/liseberg/stampbanan/): min height 110 in
+  - [Helix](https://coastermap.com/parks/liseberg/helix/): min height 130 in
+  - [Valkyria](https://coastermap.com/parks/liseberg/valkyria/): min height 132 in
+  - [Luna](https://coastermap.com/parks/liseberg/luna/): min height 120 in
+  - [Balder](https://coastermap.com/parks/liseberg/balder/): min height 130 in
+- [Fuji-Q Highland](https://coastermap.com/parks/fuji-q-highland/): 6 coasters
+  - [Nia and Animal Coaster](https://coastermap.com/parks/fuji-q-highland/nia-and-animal-coaster/)
+  - [Fujiyama](https://coastermap.com/parks/fuji-q-highland/fujiyama/): min height 130 in
+  - [Gaspard et Lisa: Voyage Dans Le Ciel](https://coastermap.com/parks/fuji-q-highland/gaspard-et-lisa-voyage-dans-le-ciel/): min height 110 in
+  - [Eejanaika](https://coastermap.com/parks/fuji-q-highland/eejanaika/): min height 125 in
+  - [Takabisha](https://coastermap.com/parks/fuji-q-highland/takabisha/): min height 125 in
+  - [Zokkon](https://coastermap.com/parks/fuji-q-highland/zokkon/): min height 120 in
+- [Tokyo Disneyland](https://coastermap.com/parks/tokyo-disneyland/): 2 coasters
+  - [Big Thunder Mountain](https://coastermap.com/parks/tokyo-disneyland/big-thunder-mountain/): min height 102 in
+  - [Gadget's Go Coaster](https://coastermap.com/parks/tokyo-disneyland/gadgets-go-coaster/): min height 90 in
+- [Tokyo DisneySea](https://coastermap.com/parks/tokyo-disneysea/): 2 coasters
+  - [Flounder's Flying Fish Coaster](https://coastermap.com/parks/tokyo-disneysea/flounders-flying-fish-coaster/): min height 90 in
+  - [Raging Spirits](https://coastermap.com/parks/tokyo-disneysea/raging-spirits/): min height 117 in
+- [Shanghai Disneyland](https://coastermap.com/parks/shanghai-disneyland/): 3 coasters
+  - [TRON Lightcycle Power Run](https://coastermap.com/parks/shanghai-disneyland/tron-lightcycle-power-run/): min height 122 in
+  - [Seven Dwarfs Mine Train](https://coastermap.com/parks/shanghai-disneyland/seven-dwarfs-mine-train/): min height 97 in
+  - [Rex's RC Racer](https://coastermap.com/parks/shanghai-disneyland/rexs-rc-racer/): min height 120 in

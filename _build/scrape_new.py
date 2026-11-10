@@ -10,7 +10,8 @@ def tx(s): return H.unescape(re.sub('<[^>]+>','',s)).strip()
 NEW={'epcot':15503,'hollywood-studios':4735,'animal-kingdom':5109,'seaworld-orlando':4746,'kings-island':4540,'busch-gardens-williamsburg':4548,'hersheypark':4545,'knotts-berry-farm':4546,'dollywood':4593,'six-flags-great-adventure':4534,
  'six-flags-great-america':4530,'carowinds':4542,'canadas-wonderland':4539,'six-flags-over-texas':4531,'six-flags-over-georgia':4535,'kings-dominion':4544,'disneyland':4571,'disney-california-adventure':4783,'silver-dollar-city':4579,
  'six-flags-fiesta-texas':4538,'six-flags-new-england':4565,'six-flags-discovery-kingdom':4711,'californias-great-america':4541,'worlds-of-fun':4533,'valleyfair':4552,'dorney-park':4588,'michigans-adventure':4578,'seaworld-san-diego':5320,'seaworld-san-antonio':4601,'kennywood':4553,'holiday-world':4554,'universal-studios-hollywood':5265,
- 'six-flags-darien-lake':4581,'la-ronde':4567,'frontier-city':4559,'mid-america-adventure':4536,'lake-compounce':4683,'knoebels':4557,'lagoon':4570,'silverwood':4564}
+ 'six-flags-darien-lake':4581,'la-ronde':4567,'frontier-city':4559,'mid-america-adventure':4536,'lake-compounce':4683,'knoebels':4557,'lagoon':4570,'silverwood':4564,
+ 'europa-park':4870,'phantasialand':4872,'alton-towers':4796,'thorpe-park':4814,'blackpool-pleasure-beach':4795,'portaventura-park':4792,'ferrari-land':12016,'efteling':4839,'liseberg':4909,'fuji-q-highland':4961,'universal-studios-japan':5492,'tokyo-disneyland':4959,'tokyo-disneysea':5073,'disneyland-paris':4864,'disney-adventure-world':5054,'hong-kong-disneyland':5279,'shanghai-disneyland':6556}
 d=json.load(open('rcdb.json'))
 for slug in sys.argv[1:] or NEW:
     pid=NEW[slug]

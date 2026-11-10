@@ -68,6 +68,8 @@ PARKS = [
  dict(slug="mid-america-adventure", name="Mid America Adventure", short="Mid America Adventure", loc="Eureka, Missouri", state="MO", country="US", official="https://midamericaadventure.enchantedparks.com/", group="Enchanted Parks", former="Six Flags St. Louis", former_note="sixflags.com/stlouis now redirects to the park's Enchanted Parks website, and RCDB lists the park as Mid America Adventure"),
  dict(slug="lake-compounce", name="Lake Compounce", short="Lake Compounce", loc="Bristol, Connecticut", state="CT", country="US", official="https://www.lakecompounce.com/", group="Palace Entertainment"),
 ]
+from intl import HP_INTL, INTL_PARKS, DISPLAY_INTL
+PARKS += INTL_PARKS
 ORIGINAL = {"cedar-point", "six-flags-magic-mountain", "magic-kingdom", "epic-universe", "islands-of-adventure", "universal-studios-florida", "busch-gardens-tampa-bay"}
 DISPLAY = {"Barnstormer": "The Barnstormer", "Incredible Hulk": "The Incredible Hulk Coaster", "VelociCoaster": "Jurassic World VelociCoaster",
  "Rock ‘n Roller Coaster Starring The Muppets": "Rock 'n' Roller Coaster Starring The Muppets", "Beast": "The Beast", "Racer": "The Racer", "Bat": "The Bat",
@@ -78,7 +80,7 @@ DISPLAY = {"Barnstormer": "The Barnstormer", "Incredible Hulk": "The Incredible 
  "Batman - The Dark Knight": "Batman: The Dark Knight", "Revenge of the Mummy the Ride": "Revenge of the Mummy: The Ride",
  "Raven": "The Raven", "Legend": "The Legend", "Voyage": "The Voyage", "Howler": "The Howler"}
 # Park specific display names, where the park's own name differs from the global rename above.
-DISPLAY_PARK = {("kennywood", "Racer"): "Racer", ("mid-america-adventure", "Boss"): "The Boss"}
+DISPLAY_PARK = {("kennywood", "Racer"): "Racer", ("mid-america-adventure", "Boss"): "The Boss", **DISPLAY_INTL}
 # Height requirements (inches) for non Six Flags parks, as read on the cited page on CHECKED.
 H = {
  "Space Mountain": dict(min=44, src=dz("space-mountain")),
@@ -156,6 +158,7 @@ HP2 = {
  ("silver-dollar-city", "Grand Exposition Coaster"): dict(min=42, acc_min=36, acc_max=42, src=sdc("grand-exposition-coaster")),
  ("dollywood", "NightFlight Expedition"): dict(min=39, src=("Dollywood, NightFlight Expedition page", "https://www.dollywood.com/themepark/rides/nightflight-expedition/")),
 }
+HP2.update(HP_INTL)
 def slugify(s):
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower().replace("'", "").replace("’", "")
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
