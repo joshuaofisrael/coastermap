@@ -1238,5 +1238,716 @@
   "thrill": "5",
   "introduced": null,
   "ctx": "Min Height 48” Thrill Level 5 Location Kings Dominion Accessibility Attraction Accessibility Information Manufacturer Bolliger & Mabillard Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 se"
+ },
+ "six-flags-fiesta-texas|Iron Rattler": {
+  "url": "https://www.sixflags.com/fiestatexas/attractions/iron-rattler",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2013",
+  "ctx": "Min Height 48” Thrill Level 5 Location Crackaxle Canyon Screampunk District Accessibility Attraction Accessibility Information Introduced 2013 Manufacturer Rocky Mountain Construction (RMC) Top Speed "
+ },
+ "six-flags-fiesta-texas|Batman The Ride": {
+  "url": "https://www.sixflags.com/fiestatexas/attractions/batman-the-ride",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "77",
+  "thrill": "5",
+  "introduced": "2015",
+  "ctx": "Min Height 48” Max Height 77” Thrill Level 5 Location Rockville Accessibility Attraction Accessibility Information Introduced 2015 Manufacturer S&S Worldwide Length 0 Ft Elevation 0 Ft Previous slide "
+ },
+ "six-flags-fiesta-texas|Wonder Woman Golden Lasso Coaster": {
+  "url": "https://www.sixflags.com/fiestatexas/attractions/wonder-woman-golden-lasso-coaster",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2018",
+  "ctx": "Min Height 48” Thrill Level 5 Location Rockville Accessibility Attraction Accessibility Information Introduced 2018 Manufacturer Rocky Mountain Construction (RMC) Top Speed 0 Mph Length 0 Ft Elevation"
+ },
+ "six-flags-fiesta-texas|Dr. Diabolical's Cliffhanger": {
+  "url": "https://www.sixflags.com/fiestatexas/attractions/dr-diabolicals-cliffhanger",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "2022",
+  "ctx": "Min Height 48” Max Height 78” Thrill Level 5 Location Crackaxle Canyon Screampunk District Accessibility Attraction Accessibility Information Introduced 2022 Manufacturer Bolliger & Mabillard Top Spee"
+ },
+ "six-flags-fiesta-texas|Batgirl Coaster Chase": {
+  "url": "https://www.sixflags.com/fiestatexas/attractions/bat-girl-coaster-chase",
+  "min": "36",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "2",
+  "introduced": "1992",
+  "ctx": "Min Height 36” Thrill Level 2 Location DC™ Universe Accessibility Attraction Accessibility Information Introduced 1992 Manufacturer Vekoma Top Speed 0 Mph Length 0 Ft Related Rides GREEN LANTERN™ Emer"
+ },
+ "six-flags-fiesta-texas|Road Runner Express": {
+  "url": "https://www.sixflags.com/fiestatexas/attractions/road-runner-express",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1997",
+  "ctx": "Min Height 48” Thrill Level 4 Location Crackaxle Canyon Screampunk District Accessibility Attraction Accessibility Information Introduced 1997 Manufacturer Arrow Dynamics Top Speed 0 Mph Length 0 Ft E"
+ },
+ "six-flags-fiesta-texas|Poltergeist": {
+  "url": "https://www.sixflags.com/fiestatexas/attractions/poltergeist",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1999",
+  "ctx": "Min Height 54” Thrill Level 5 Location Rockville Accessibility Attraction Accessibility Information Introduced 1999 Manufacturer Premier Rides Length 0 Ft Ride Duration 0 sec Previous slide Next slide"
+ },
+ "six-flags-fiesta-texas|Boomerang Coast to Coaster": {
+  "url": "https://www.sixflags.com/fiestatexas/attractions/boomerang",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "80",
+  "thrill": "5",
+  "introduced": "1999",
+  "ctx": "Min Height 48” Max Height 80” Thrill Level 5 Location Los Festivales Accessibility Attraction Accessibility Information Introduced 1999 Manufacturer Vekoma Ride Duration 0 sec Previous slide Next slid"
+ },
+ "six-flags-fiesta-texas|Superman Krypton Coaster": {
+  "url": "https://www.sixflags.com/fiestatexas/attractions/superman-krypton-coaster",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2000",
+  "ctx": "Min Height 54” Thrill Level 5 Location DC™ Universe Accessibility Attraction Accessibility Information Introduced 2000 Manufacturer Bolliger & Mabillard Length 0 Ft Ride Duration 0 sec Related Rides S"
+ },
+ "six-flags-fiesta-texas|Pandemonium": {
+  "url": "https://www.sixflags.com/fiestatexas/attractions/pandemonium",
+  "min": "47",
+  "acc_min": "42",
+  "acc_max": "47",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 47” Min Height Accompanied 42” Thrill Level 4 Location Fiesta Bay Boardwalk Accessibility Attraction Accessibility Information Manufacturer Gerstlauer of Germany Length 0 Ft Ride Duration 0"
+ },
+ "six-flags-fiesta-texas|Chupacabra": {
+  "url": "https://www.sixflags.com/fiestatexas/attractions/chupacabra",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2008",
+  "ctx": "Min Height 54” Thrill Level 5 Location Los Festivales Accessibility Attraction Accessibility Information Introduced 2008 Manufacturer Bolliger & Mabillard Previous slide Next slide Related Rides Fireb"
+ },
+ "six-flags-new-england|Thunderbolt": {
+  "url": "https://www.sixflags.com/newengland/attractions/thunderbolt",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1941",
+  "ctx": "Min Height 48” Min Height Accompanied 48” Thrill Level 4 Location Main Street Accessibility Attraction Accessibility Information Introduced 1941 Manufacturer Joseph Drambour / Philadelphia Toboggan Co"
+ },
+ "six-flags-new-england|Great Chase": {
+  "url": "https://www.sixflags.com/newengland/attractions/great-chase",
+  "min": "36",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "2",
+  "introduced": null,
+  "ctx": "Min Height 36” Thrill Level 2 Location LOONEY TUNES Movie Town Accessibility Attraction Accessibility Information Related Rides Dino Off Road Adventure 48 ” MIN. Height Requirement 2 Thrill Level Twee"
+ },
+ "six-flags-new-england|Riddler Revenge": {
+  "url": "https://www.sixflags.com/newengland/attractions/riddler-revenge",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "1997",
+  "ctx": "Min Height 52” Min Height Accompanied 52” Max Height 78” Thrill Level 5 Location GOTHAM CITY™ Accessibility Attraction Accessibility Information Introduced 1997 Manufacturer Vekoma Top Speed 0 Mph Len"
+ },
+ "six-flags-new-england|Superman the Ride": {
+  "url": "https://www.sixflags.com/newengland/attractions/superman-ride",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "76",
+  "thrill": "5",
+  "introduced": "2000",
+  "ctx": "Min Height 54” Max Height 76” Thrill Level 5 Location DC UNIVERSE™ Accessibility Attraction Accessibility Information Introduced 2000 Manufacturer Intamin Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ri"
+ },
+ "six-flags-new-england|Flashback": {
+  "url": "https://www.sixflags.com/newengland/attractions/flashback",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2000",
+  "ctx": "Min Height 48” Min Height Accompanied 48” Thrill Level 5 Location North End Accessibility Attraction Accessibility Information Introduced 2000 Manufacturer Vekoma Top Speed 0 Mph Length 0 Ft Elevation"
+ },
+ "six-flags-new-england|Catwoman Whip": {
+  "url": "https://www.sixflags.com/newengland/attractions/catwomans-whip",
+  "min": "48",
+  "acc_min": "41",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "3",
+  "introduced": "2000",
+  "ctx": "Min Height 48” Min Height Accompanied 41” Thrill Level 3 Location DC UNIVERSE™ Accessibility Attraction Accessibility Information Introduced 2000 Manufacturer Zierer Top Speed 0 Mph Length 0 Ft Elevat"
+ },
+ "six-flags-new-england|Pandemonium": {
+  "url": "https://www.sixflags.com/newengland/attractions/pandemonium",
+  "min": "47",
+  "acc_min": "43",
+  "acc_max": "47",
+  "max": null,
+  "thrill": "4",
+  "introduced": "2005",
+  "ctx": "Min Height 47” Min Height Accompanied 43” Thrill Level 4 Location North End Accessibility Attraction Accessibility Information Introduced 2005 Manufacturer Gerstlauer Top Speed 0 Mph Length 0 Ft Eleva"
+ },
+ "six-flags-new-england|Batman - The Dark Knight": {
+  "url": "https://www.sixflags.com/newengland/attractions/batman-dark-knight",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2002",
+  "ctx": "Min Height 54” Min Height Accompanied 54” Thrill Level 5 Location GOTHAM CITY™ Accessibility Attraction Accessibility Information Introduced 2002 Manufacturer Bolliger & Mabillard Top Speed 0 Mph Leng"
+ },
+ "six-flags-new-england|Wicked Cyclone": {
+  "url": "https://www.sixflags.com/newengland/attractions/wicked-cyclone",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2015",
+  "ctx": "Min Height 48” Min Height Accompanied 48” Thrill Level 5 Location North End Accessibility Attraction Accessibility Information Introduced 2015 Manufacturer Rocky Mountain Construction Top Speed 0 Mph "
+ },
+ "six-flags-new-england|Gotham City Gauntlet Escape from Arkham Asylum": {
+  "url": "https://www.sixflags.com/newengland/attractions/gotham-city-gauntlet-escape-arkham-asylum",
+  "min": "54",
+  "acc_min": "46",
+  "acc_max": "54",
+  "max": "75",
+  "thrill": "5",
+  "introduced": "2011",
+  "ctx": "Min Height 54” Min Height Accompanied 46” Max Height 75” Thrill Level 5 Location DC UNIVERSE™ Accessibility Attraction Accessibility Information Introduced 2011 Manufacturer Maurer AG Top Speed 0 Mph "
+ },
+ "six-flags-new-england|Joker": {
+  "url": "https://www.sixflags.com/newengland/attractions/joker-4d-free-fly-coaster",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "77",
+  "thrill": "5",
+  "introduced": "2017",
+  "ctx": "Min Height 48” Max Height 77” Thrill Level 5 Location GOTHAM CITY™ Accessibility Attraction Accessibility Information Introduced 2017 Manufacturer S&S Worldwide Top Speed 0 Mph Length 0 Ft Elevation 0"
+ },
+ "six-flags-new-england|Quantum Accelerator": {
+  "url": "https://www.sixflags.com/newengland/attractions/quantum-accelerator",
+  "min": "52",
+  "acc_min": "48",
+  "acc_max": "52",
+  "max": "77",
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 52” Min Height Accompanied 48” Max Height 77” Location Crackaxle Canyon Accessibility Attraction Accessibility Information Loading... Previous slide Next slide Related Rides Cannonball Fall"
+ },
+ "six-flags-discovery-kingdom|Roadrunner Express": {
+  "url": "https://www.sixflags.com/discoverykingdom/attractions/road-runner-express",
+  "min": "42",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "2",
+  "introduced": "1999",
+  "ctx": "Min Height 42” Min Height Accompanied 42” Thrill Level 2 Location Looney Tunes Seaport Accessibility Attraction Accessibility Information Introduced 1999 Manufacturer Zamperla Length 0 Ft Elevation 0 "
+ },
+ "six-flags-discovery-kingdom|Medusa": {
+  "url": "https://www.sixflags.com/discoverykingdom/attractions/medusa",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "2000",
+  "ctx": "Min Height 54” Thrill Level 4 Location Oasis Plaza Accessibility Attraction Accessibility Information Introduced 2000 Manufacturer Bolliger & Mabillard Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride "
+ },
+ "six-flags-discovery-kingdom|Cobra": {
+  "url": "https://www.sixflags.com/discoverykingdom/attractions/cobra",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "3",
+  "introduced": "2000",
+  "ctx": "Min Height 48” Min Height Accompanied 42” Thrill Level 3 Location Oasis Plaza Accessibility Attraction Accessibility Information Introduced 2000 Manufacturer Zierer Top Speed 0 Mph Length 0 Ft Elevati"
+ },
+ "six-flags-discovery-kingdom|Flash: Vertical Velocity": {
+  "url": "https://www.sixflags.com/discoverykingdom/attractions/vertical-velocity",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "75",
+  "thrill": "4",
+  "introduced": "2001",
+  "ctx": "Min Height 54” Max Height 75” Thrill Level 4 Location DC UNIVERSE Accessibility Attraction Accessibility Information Introduced 2001 Manufacturer Intamin Amusement Rides Top Speed 0 Mph Length 0 Ft El"
+ },
+ "six-flags-discovery-kingdom|Kong": {
+  "url": "https://www.sixflags.com/discoverykingdom/attractions/kong",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "4",
+  "introduced": "1998",
+  "ctx": "Min Height 52” Max Height 78” Thrill Level 4 Location Oasis Plaza Accessibility Attraction Accessibility Information Introduced 1998 Manufacturer Vekoma Rides Manufacturing Top Speed 0 Mph Length 0 Ft"
+ },
+ "six-flags-discovery-kingdom|Boomerang": {
+  "url": "https://www.sixflags.com/discoverykingdom/attractions/boomerang-coast-coaster",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1998",
+  "ctx": "Min Height 48” Thrill Level 4 Location Near Odin's Temple of the Tiger Accessibility Attraction Accessibility Information Introduced 1998 Manufacturer Vekoma Rides Manufacturing Top Speed 0 Mph Length"
+ },
+ "six-flags-discovery-kingdom|Superman Ultimate Flight": {
+  "url": "https://www.sixflags.com/discoverykingdom/attractions/superman-ultimate-flight",
+  "min": "54",
+  "acc_min": "52",
+  "acc_max": "54",
+  "max": null,
+  "thrill": "4",
+  "introduced": "2012",
+  "ctx": "Min Height 54” Min Height Accompanied 52” Thrill Level 4 Location DC UNIVERSE Accessibility Attraction Accessibility Information Introduced 2012 Manufacturer Premier Rides Inc Top Speed 0 Mph Length 0"
+ },
+ "six-flags-discovery-kingdom|Joker": {
+  "url": "https://www.sixflags.com/discoverykingdom/attractions/the-joker-ride",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "2016",
+  "ctx": "Min Height 48” Thrill Level 4 Location DC UNIVERSE Accessibility Attraction Accessibility Information Introduced 2016 Manufacturer Rocky Mountain Construction Top Speed 0 Mph Length 0 Ft Elevation 0 F"
+ },
+ "six-flags-discovery-kingdom|Batman The Ride": {
+  "url": "https://www.sixflags.com/discoverykingdom/attractions/batman-ride",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "77",
+  "thrill": "4",
+  "introduced": "2019",
+  "ctx": "Min Height 48” Max Height 77” Thrill Level 4 Location DC UNIVERSE Accessibility Attraction Accessibility Information Introduced 2019 Manufacturer S&S - Sansei Technologies Top Speed 0 Mph Length 0 Ft "
+ },
+ "six-flags-discovery-kingdom|Sidewinder Safari": {
+  "url": "https://www.sixflags.com/discoverykingdom/attractions/sidewinder-safari",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "4",
+  "introduced": "2022",
+  "ctx": "Min Height 48” Min Height Accompanied 42” Thrill Level 4 Location Next to Odin's Temple of the Tiger Accessibility Attraction Accessibility Information Introduced 2022 Manufacturer Zamperla Top Speed "
+ },
+ "californias-great-america|Demon": {
+  "url": "https://www.sixflags.com/cagreatamerica/attractions/demon",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Location California's Great America Accessibility Attraction Accessibility Information Demon's History Demon debuted in 1976 as Turn of the Century and was an original Gr"
+ },
+ "californias-great-america|Grizzly": {
+  "url": "https://www.sixflags.com/cagreatamerica/attractions/the-grizzly",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 4 Location California's Great America Accessibility Attraction Accessibility Information Top Speed 0 Mph Elevation 0 Ft Related Rides Orbit 54 ” MIN. Height Requirement 4 T"
+ },
+ "californias-great-america|Woodstock Express": {
+  "url": "https://www.sixflags.com/cagreatamerica/attractions/woodstock-express",
+  "min": "46",
+  "acc_min": "40",
+  "acc_max": "46",
+  "max": null,
+  "thrill": "3",
+  "introduced": null,
+  "ctx": "Min Height 46” Min Height Accompanied 40” Thrill Level 3 Location California's Great America Accessibility Attraction Accessibility Information Related Rides Pacific Gliders 48 ” MIN. Height Requireme"
+ },
+ "californias-great-america|Patriot": {
+  "url": "https://www.sixflags.com/cagreatamerica/attractions/patriot",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Max Height 78” Thrill Level 5 Location California's Great America Accessibility Attraction Accessibility Information Top Speed 0 Mph Elevation 0 Ft A Great Addition Patriot takes riders"
+ },
+ "californias-great-america|Flight Deck": {
+  "url": "https://www.sixflags.com/cagreatamerica/attractions/flight-deck",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Max Height 78” Thrill Level 5 Location California's Great America Accessibility Attraction Accessibility Information Top Speed 0 Mph Multiple Inversions When reaching the top of the lif"
+ },
+ "californias-great-america|Lucy's Crabbie Cabbies": {
+  "url": "https://www.sixflags.com/cagreatamerica/attractions/lucys-crabbie-cabbies",
+  "min": "40",
+  "acc_min": "36",
+  "acc_max": "40",
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 40” Min Height Accompanied 36” Location California's Great America Accessibility Attraction Accessibility Information Loading... Related Rides Sally's Love Buggies 44 ” MIN. Height Requirem"
+ },
+ "californias-great-america|Psycho Mouse": {
+  "url": "https://www.sixflags.com/cagreatamerica/attractions/psycho-mouse",
+  "min": "48",
+  "acc_min": "44",
+  "acc_max": "48",
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 44” Location California's Great America Accessibility Attraction Accessibility Information Related Rides Orbit 54 ” MIN. Height Requirement 4 Thrill Level Rue le "
+ },
+ "californias-great-america|Gold Striker": {
+  "url": "https://www.sixflags.com/cagreatamerica/attractions/gold-striker",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 48” Thrill Level 5 Location California's Great America Accessibility Attraction Accessibility Information Top Speed 0 Mph Elevation 0 Ft Expertly Designed Gold St"
+ },
+ "californias-great-america|RailBlazer": {
+  "url": "https://www.sixflags.com/cagreatamerica/attractions/railblazer",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 48” Location California's Great America Accessibility Attraction Accessibility Information A Revolutionary Roller Coaster Concept “RailBlazer is a revolutionary roller coaster concept that "
+ },
+ "dorney-park|Thunderhawk": {
+  "url": "https://www.sixflags.com/dorneypark/attractions/thunderhawk",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1923",
+  "ctx": "Min Height 48” Thrill Level 4 Location Dorney Park Accessibility Attraction Accessibility Information Introduced 1923 Special Features The oldest roller coaster at Dorney Park. Manufacturer Philadelph"
+ },
+ "dorney-park|Steel Force": {
+  "url": "https://www.sixflags.com/dorneypark/attractions/steel-force",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1997",
+  "ctx": "Min Height 48” Thrill Level 5 Location Dorney Park Accessibility Attraction Accessibility Information Introduced 1997 Special Features The first to break the 200-foot barrier on the East Coast. Manufa"
+ },
+ "dorney-park|Wild Mouse": {
+  "url": "https://www.sixflags.com/dorneypark/attractions/wild-mouse",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": "75",
+  "thrill": "4",
+  "introduced": "2000",
+  "ctx": "Min Height 48” Min Height Accompanied 42” Max Height 75” Max Height Accompanied 48” Thrill Level 4 Location Dorney Park Accessibility Attraction Accessibility Information Introduced 2000 Manufacturer "
+ },
+ "dorney-park|Woodstock Express": null,
+ "dorney-park|Talon": {
+  "url": "https://www.sixflags.com/dorneypark/attractions/talon",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2001",
+  "ctx": "Min Height 54” Thrill Level 5 Location Dorney Park Accessibility Attraction Accessibility Information Introduced 2001 Special Features Turns riders upside down a total of four times. Manufacturer Boll"
+ },
+ "dorney-park|Hydra the Revenge": {
+  "url": "https://www.sixflags.com/dorneypark/attractions/hydra",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2005",
+  "ctx": "Min Height 54” Thrill Level 5 Location Dorney Park Accessibility Attraction Accessibility Information Introduced 2005 Special Features The first-ever pre-lift hill inversion - the jojo roll. Manufactu"
+ },
+ "dorney-park|Possessed": {
+  "url": "https://www.sixflags.com/dorneypark/attractions/possessed",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "2008",
+  "ctx": "Min Height 52” Max Height 78” Thrill Level 5 Location Dorney Park Accessibility Attraction Accessibility Information Introduced 2008 Special Features First suspended impulse coaster in the Northeast. "
+ },
+ "dorney-park|Iron Menace": {
+  "url": "https://www.sixflags.com/dorneypark/attractions/iron-menace",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "2024",
+  "ctx": "Min Height 48” Max Height 78” Thrill Level 5 Location Dorney Park Accessibility Attraction Accessibility Information Introduced 2024 Special Features A beyond-vertical, 95-degree drop. Manufacturer Bo"
+ },
+ "worlds-of-fun|Timber Wolf": {
+  "url": "https://worldsoffun.enchantedparks.com/rides-and-experiences/attractions/timber-wolf/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1989",
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 53 MPH Elevation 1000 FT Duration 133 SEC Location Worlds of Fun Introduced 1989 Manufacturer Dinn Corporation Accessibility Attraction Accessibility Informatio"
+ },
+ "worlds-of-fun|Mamba": {
+  "url": "https://worldsoffun.enchantedparks.com/rides-and-experiences/attractions/mamba/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1998",
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 75 MPH Elevation 205 FT Duration 180 SEC Location Worlds of Fun Introduced 1998 Manufacturer D.H. Morgan Manufacturing, Inc. Accessibility Attraction Accessibil"
+ },
+ "worlds-of-fun|Spinning Dragons": {
+  "url": "https://worldsoffun.enchantedparks.com/rides-and-experiences/attractions/spinning-dragons/",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "5",
+  "introduced": "2004",
+  "ctx": "Min Height 48” Min Height Accompanied 42” Thrill Level 5 Top Speed 31 MPH Elevation 54 FT Duration 150 SEC Location Worlds of Fun Introduced 2004 Manufacturer Gerstlauer Amusement Rides Accessibility "
+ },
+ "worlds-of-fun|Patriot": {
+  "url": "https://worldsoffun.enchantedparks.com/rides-and-experiences/attractions/patriot/",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2006",
+  "ctx": "Min Height 54” Thrill Level 5 Top Speed 60 MPH Elevation 149 FT Duration 138 SEC Location Worlds of Fun Introduced 2006 Manufacturer Bolliger & Mabillard Accessibility Attraction Accessibility Informa"
+ },
+ "worlds-of-fun|Prowler": {
+  "url": "https://worldsoffun.enchantedparks.com/rides-and-experiences/attractions/prowler/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "2009",
+  "ctx": "Min Height 48” Thrill Level 4 Top Speed 51 MPH Elevation 102 FT Duration 150 SEC Location Worlds of Fun Introduced 2009 Manufacturer Great Coasters International Accessibility Attraction Accessibility"
+ },
+ "worlds-of-fun|Zambezi Zinger": {
+  "url": "https://worldsoffun.enchantedparks.com/rides-and-experiences/attractions/zambezi-zinger/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2023",
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 45 MPH Elevation 74 FT Duration 120 SEC Location Worlds of Fun Introduced 2023 Manufacturer Great Coasters International Accessibility Attraction Accessibility "
+ },
+ "worlds-of-fun|Boomerang": {
+  "url": "https://worldsoffun.enchantedparks.com/rides-and-experiences/attractions/boomerang/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2000",
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 47 MPH Elevation 117 FT Duration 108 SEC Location Worlds of Fun Introduced 2000 Manufacturer Vekoma Accessibility Attraction Accessibility Information Boomerang"
+ },
+ "valleyfair|High Roller": {
+  "url": "https://valleyfair.enchantedparks.com/rides-and-experiences/attractions/high-roller/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 4 Top Speed 47 MPH Elevation 70 Ft Duration 134 Sec Location Valleyfair Accessibility Attraction Accessibility Information High Roller High Roller is Valleyfair's classic w"
+ },
+ "valleyfair|Corkscrew": {
+  "url": "https://valleyfair.enchantedparks.com/rides-and-experiences/attractions/corkscrew/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 45 MPH Elevation 85 Ft Duration 90 Sec Location Valleyfair Accessibility Attraction Accessibility Information Corkscrew Strap in and brace yourself, because the"
+ },
+ "valleyfair|Excalibur": {
+  "url": "https://valleyfair.enchantedparks.com/rides-and-experiences/attractions/excalibur/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 4 Length 2415 Ft Elevation 100 Ft Duration 105 Sec Location Valleyfair Accessibility Attraction Accessibility Information Excalibur This ride operates Memorial Day weekend "
+ },
+ "valleyfair|Wild Thing": {
+  "url": "https://valleyfair.enchantedparks.com/rides-and-experiences/attractions/wild-thing/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 74 MPH Elevation 207 Ft Duration 168 Sec Location Valleyfair Accessibility Attraction Accessibility Information Wild Thing Arguably Valleyfair’s most famous coa"
+ },
+ "valleyfair|Mad Mouse": {
+  "url": "https://valleyfair.enchantedparks.com/rides-and-experiences/attractions/mad-mouse/",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 42” Thrill Level 4 Length 1257 Ft Location Valleyfair Accessibility Attraction Accessibility Information Mad Mouse Scurry through hairpin twists, turns, and breat"
+ },
+ "valleyfair|Steel Venom": {
+  "url": "https://valleyfair.enchantedparks.com/rides-and-experiences/attractions/steel-venom/",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 52” Thrill Level 5 Top Speed 68 MPH Elevation 185 Ft Duration 60 Sec Location Valleyfair Accessibility Attraction Accessibility Information Steel Venom Hold on to your hats. Actually, scrat"
+ },
+ "valleyfair|Renegade": {
+  "url": "https://valleyfair.enchantedparks.com/rides-and-experiences/attractions/renegade/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 4 Top Speed 55 MPH Elevation 104 Ft Duration 144 Sec Location Valleyfair Accessibility Attraction Accessibility Information Renegade Twists, turns, speed, and the Old West "
+ },
+ "valleyfair|Cosmic Coaster": {
+  "url": "https://valleyfair.enchantedparks.com/rides-and-experiences/attractions/cosmic-coaster/",
+  "min": "42",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "3",
+  "introduced": null,
+  "ctx": "Min Height 42” Thrill Level 3 Top Speed 20 MPH Elevation 14 Ft Location Valleyfair Accessibility Attraction Accessibility Information Cosmic Coaster Cosmic Coaster is a children's roller coaster for t"
+ },
+ "michigans-adventure|Corkscrew": {
+  "url": "https://miadventure.enchantedparks.com/rides-and-experiences/attractions/corkscrew/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Location Michigans Adventure Accessibility Attraction Accessibility Information Corkscrew Have you ever experienced the Corkscrew? No? Do we have a crazy surprise for you"
+ },
+ "michigans-adventure|Wolverine Wildcat": {
+  "url": "https://miadventure.enchantedparks.com/rides-and-experiences/attractions/wolverine-wildcat/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 55 MPH Elevation 85 Ft Location Michigans Adventure Accessibility Attraction Accessibility Information Wolverine Wildcat As the first wooden roller coaster at M"
+ },
+ "michigans-adventure|Zach's Zoomer": {
+  "url": "https://miadventure.enchantedparks.com/rides-and-experiences/attractions/zachs-zoomer/",
+  "min": "46",
+  "acc_min": "40",
+  "acc_max": "46",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 46” Min Height Accompanied 40” Thrill Level 4 Location Michigans Adventure Accessibility Attraction Accessibility Information Zach's Zoomer Whoever said big thrills are reserved only for bi"
+ },
+ "michigans-adventure|Shivering Timbers": {
+  "url": "https://miadventure.enchantedparks.com/rides-and-experiences/attractions/shivering-timbers/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Top Speed 65 MPH Elevation 122 Ft Location Michigans Adventure Accessibility Attraction Accessibility Information Shivering Timbers At a half-mile out and a half-mile bac"
+ },
+ "michigans-adventure|Mad Mouse": {
+  "url": "https://miadventure.enchantedparks.com/rides-and-experiences/attractions/mad-mouse/",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 42” Thrill Level 4 Location Michigans Adventure Accessibility Attraction Accessibility Information Mad Mouse While standing on the ground looking up, you might th"
+ },
+ "michigans-adventure|Thunderhawk": {
+  "url": "https://miadventure.enchantedparks.com/rides-and-experiences/attractions/thunderhawk/",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 52” Thrill Level 5 Top Speed 50 MPH Elevation 120 Ft Location Michigans Adventure Accessibility Attraction Accessibility Information Thunderhawk Have you ever dreamed of soaring through the"
+ },
+ "michigans-adventure|Woodstock Express": {
+  "url": "https://miadventure.enchantedparks.com/rides-and-experiences/attractions/woodstock-express/",
+  "min": "42",
+  "acc_min": "36",
+  "acc_max": "42",
+  "max": null,
+  "thrill": "3",
+  "introduced": null,
+  "ctx": "Min Height 42” Min Height Accompanied 36” Thrill Level 3 Location Michigans Adventure Accessibility Attraction Accessibility Information Woodstock Express Say hello to lovable Woodstock, Snoopy's best"
  }
 }

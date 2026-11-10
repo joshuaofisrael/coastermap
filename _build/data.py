@@ -13,6 +13,10 @@ BGW = ("Busch Gardens Williamsburg, Roller Coasters page", "https://buschgardens
 HP = ("Hershey Entertainment & Resorts, Hersheypark Roller Coaster Guide 2026 (lowest height category that may ride)", "https://stories.hersheypa.com/hersheypark-roller-coaster-guide-2026/")
 def dl(slug): return ("Disneyland Resort, official attraction page", f"https://disneyparks.disney.go.com/au/disneyland/attractions/{slug}/")
 def sdc(slug): return ("Silver Dollar City, official ride page", f"https://www.silverdollarcity.com/theme-park/attractions/rides/{slug}/")
+def swp(city, label): return (f"SeaWorld {label}, Rides and Roller Coasters page", f"https://seaworld.com/{city}/rides/")
+def kw(slug): return ("Kennywood, official attraction page", f"https://www.kennywood.com/discover-the-park/attractions/{slug}/")
+def hw(slug): return ("Holiday World, official ride page", f"https://holidayworld.com/rides/{slug}/")
+USH = ("Universal Studios Hollywood, Guide for Rider Safety and Accessibility (Height Requirements Quick Reference Guide)", "https://www.universalstudioshollywood.com/contentdata/ush/en/us/files/documents/universal_riders_guide.pdf")
 def dw(slug): return ("Dollywood, official ride page", f"https://www.dollywood.com/themepark/rides/{slug}/")
 PARKS = [
  dict(slug="cedar-point", name="Cedar Point", short="Cedar Point", loc="Sandusky, Ohio", state="OH", country="US", official="https://www.sixflags.com/cedarpoint", group="Six Flags (formerly Cedar Fair)"),
@@ -43,6 +47,20 @@ PARKS = [
  dict(slug="disneyland", name="Disneyland Park", short="Disneyland", loc="Anaheim, California", state="CA", country="US", official="https://disneyland.disney.go.com/destinations/disneyland/", group="Disneyland Resort"),
  dict(slug="disney-california-adventure", name="Disney California Adventure Park", short="California Adventure", loc="Anaheim, California", state="CA", country="US", official="https://disneyland.disney.go.com/destinations/disney-california-adventure/", group="Disneyland Resort"),
  dict(slug="silver-dollar-city", name="Silver Dollar City", short="Silver Dollar City", loc="Branson, Missouri", state="MO", country="US", official="https://www.silverdollarcity.com/theme-park/", group="Herschend Family Entertainment"),
+ # Added 10 Nov 2026 (expansion batch 3)
+ dict(slug="six-flags-fiesta-texas", name="Six Flags Fiesta Texas", short="Six Flags Fiesta Texas", loc="San Antonio, Texas", state="TX", country="US", official="https://www.sixflags.com/fiestatexas", group="Six Flags"),
+ dict(slug="six-flags-new-england", name="Six Flags New England", short="Six Flags New England", loc="Agawam, Massachusetts", state="MA", country="US", official="https://www.sixflags.com/newengland", group="Six Flags"),
+ dict(slug="six-flags-discovery-kingdom", name="Six Flags Discovery Kingdom", short="Discovery Kingdom", loc="Vallejo, California", state="CA", country="US", official="https://www.sixflags.com/discoverykingdom", group="Six Flags"),
+ dict(slug="californias-great-america", name="California's Great America", short="California's Great America", loc="Santa Clara, California", state="CA", country="US", official="https://www.sixflags.com/cagreatamerica", group="Six Flags (formerly Cedar Fair)"),
+ dict(slug="dorney-park", name="Dorney Park", short="Dorney Park", loc="Allentown, Pennsylvania", state="PA", country="US", official="https://www.sixflags.com/dorneypark", group="Six Flags (formerly Cedar Fair)"),
+ dict(slug="worlds-of-fun", name="Worlds of Fun", short="Worlds of Fun", loc="Kansas City, Missouri", state="MO", country="US", official="https://worldsoffun.enchantedparks.com/", group="Enchanted Parks"),
+ dict(slug="valleyfair", name="Valleyfair", short="Valleyfair", loc="Shakopee, Minnesota", state="MN", country="US", official="https://valleyfair.enchantedparks.com/", group="Enchanted Parks"),
+ dict(slug="michigans-adventure", name="Michigan's Adventure", short="Michigan's Adventure", loc="Muskegon, Michigan", state="MI", country="US", official="https://miadventure.enchantedparks.com/", group="Enchanted Parks"),
+ dict(slug="seaworld-san-diego", name="SeaWorld San Diego", short="SeaWorld San Diego", loc="San Diego, California", state="CA", country="US", official="https://seaworld.com/san-diego/", group="United Parks & Resorts"),
+ dict(slug="seaworld-san-antonio", name="SeaWorld San Antonio", short="SeaWorld San Antonio", loc="San Antonio, Texas", state="TX", country="US", official="https://seaworld.com/san-antonio/", group="United Parks & Resorts"),
+ dict(slug="kennywood", name="Kennywood", short="Kennywood", loc="West Mifflin, Pennsylvania", state="PA", country="US", official="https://www.kennywood.com/", group="Palace Entertainment"),
+ dict(slug="holiday-world", name="Holiday World", short="Holiday World", loc="Santa Claus, Indiana", state="IN", country="US", official="https://holidayworld.com/", group="Holiday World & Splashin' Safari"),
+ dict(slug="universal-studios-hollywood", name="Universal Studios Hollywood", short="Universal Studios Hollywood", loc="Universal City, California", state="CA", country="US", official="https://www.universalstudioshollywood.com/", group="Universal Studios Hollywood"),
 ]
 ORIGINAL = {"cedar-point", "six-flags-magic-mountain", "magic-kingdom", "epic-universe", "islands-of-adventure", "universal-studios-florida", "busch-gardens-tampa-bay"}
 DISPLAY = {"Barnstormer": "The Barnstormer", "Incredible Hulk": "The Incredible Hulk Coaster", "VelociCoaster": "Jurassic World VelociCoaster",
@@ -50,7 +68,11 @@ DISPLAY = {"Barnstormer": "The Barnstormer", "Incredible Hulk": "The Incredible 
  "Great Pumpkin Coaster": "The Great Pumpkin Coaster", "Big Bad Wolf: The Wolf’s Revenge": "The Big Bad Wolf: The Wolf's Revenge", "Joker": "The Joker",
  "Dark Knight": "The Dark Knight Coaster", "Flash: Vertical Velocity": "The Flash: Vertical Velocity", "Woodstock’s Air Rail": "Woodstock's Air Rail",
  "Snoopy’s Tenderpaw Twister Coaster": "Snoopy's Tenderpaw Twister Coaster", "Snoopy’s Racing Railway": "Snoopy's Racing Railway",
- "Chip & Dale's Gadget Coaster": "Chip 'n' Dale's GADGETcoaster", "Fly": "The Fly", "Riddler Mindbender": "The Riddler Mindbender", "Incredicoaster": "Incredicoaster"}
+ "Chip & Dale's Gadget Coaster": "Chip 'n' Dale's GADGETcoaster", "Fly": "The Fly", "Riddler Mindbender": "The Riddler Mindbender", "Incredicoaster": "Incredicoaster",
+ "Batman - The Dark Knight": "Batman: The Dark Knight", "Revenge of the Mummy the Ride": "Revenge of the Mummy: The Ride",
+ "Raven": "The Raven", "Legend": "The Legend", "Voyage": "The Voyage", "Howler": "The Howler"}
+# Park specific display names, where the park's own name differs from the global rename above.
+DISPLAY_PARK = {("kennywood", "Racer"): "Racer"}
 # Height requirements (inches) for non Six Flags parks, as read on the cited page on CHECKED.
 H = {
  "Space Mountain": dict(min=44, src=dz("space-mountain")),
@@ -71,6 +93,23 @@ H = {
 # Height requirements for parks added in the expansion, keyed by (park slug, RCDB name), as read on the cited page on CHECKED.
 # Six Flags (ex Cedar Fair) parks Kings Island, Knott's and Great Adventure come from sf_heights_new.json (sixflags.com ride pages).
 HP2 = {
+ # batch 3
+ ("seaworld-san-diego", "Arctic Rescue"): dict(min=48, src=swp("san-diego", "San Diego")), ("seaworld-san-diego", "Emperor"): dict(min=52, src=swp("san-diego", "San Diego")),
+ ("seaworld-san-diego", "Manta"): dict(min=48, src=swp("san-diego", "San Diego")), ("seaworld-san-diego", "Electric Eel"): dict(min=54, src=swp("san-diego", "San Diego")),
+ ("seaworld-san-diego", "Journey to Atlantis"): dict(min=42, src=swp("san-diego", "San Diego")),
+ ("seaworld-san-antonio", "Texas Stingray"): dict(min=46, src=swp("san-antonio", "San Antonio")), ("seaworld-san-antonio", "Steel Eel"): dict(min=48, src=swp("san-antonio", "San Antonio")),
+ ("seaworld-san-antonio", "Wave Breaker: The Rescue Coaster"): dict(min=48, src=swp("san-antonio", "San Antonio")), ("seaworld-san-antonio", "Journey to Atlantis"): dict(min=39, src=swp("san-antonio", "San Antonio")),
+ ("seaworld-san-antonio", "Great White"): dict(min=54, src=swp("san-antonio", "San Antonio")), ("seaworld-san-antonio", "Barracuda Strike"): dict(min=42, src=swp("san-antonio", "San Antonio")),
+ ("seaworld-san-antonio", "Beach Rescue Racer"): dict(min=48, acc_min=38, acc_max=48, src=swp("san-antonio", "San Antonio")),
+ ("kennywood", "Steel Curtain"): dict(min=52, max=77, src=kw("the-steel-curtain")), ("kennywood", "Phantom's Revenge"): dict(min=48, src=kw("phantoms-revenge")),
+ ("kennywood", "Jack Rabbit"): dict(min=48, acc_min=42, acc_max=48, src=kw("jack-rabbit")), ("kennywood", "Racer"): dict(min=46, src=kw("racer")),
+ ("kennywood", "Thunderbolt"): dict(min=52, src=kw("thunderbolt")), ("kennywood", "Exterminator"): dict(min=59, acc_min=46, acc_max=59, src=kw("exterminator")),
+ ("kennywood", "Sky Rocket"): dict(min=55, acc_min=52, acc_max=55, src=kw("sky-rocket")),
+ ("holiday-world", "Thunderbird"): dict(min=48, max=78, src=hw("thunderbird")), ("holiday-world", "Voyage"): dict(min=48, src=hw("the-voyage")),
+ ("holiday-world", "Legend"): dict(min=48, src=hw("the-legend")), ("holiday-world", "Raven"): dict(min=48, src=hw("the-raven")),
+ ("holiday-world", "Howler"): dict(min=42, acc_min=36, acc_max=42, src=hw("howler")), ("holiday-world", "Good Gravy!"): dict(min=48, acc_min=38, acc_max=48, src=hw("good-gravy")),
+ ("universal-studios-hollywood", "Fast & Furious: Hollywood Drift"): dict(min=51, src=USH), ("universal-studios-hollywood", "Revenge of the Mummy the Ride"): dict(min=48, src=USH),
+ ("universal-studios-hollywood", "Flight of the Hippogriff"): dict(min=48, acc_min=39, acc_max=48, src=USH),
  ("epcot", "Guardians of the Galaxy: Cosmic Rewind"): dict(min=42, src=dz("guardians-of-the-galaxy-cosmic-rewind", "epcot")),
  ("hollywood-studios", "Rock ‘n Roller Coaster Starring The Muppets"): dict(min=48, src=dz("rock-and-roller-coaster-starring-muppets", "hollywood-studios")),
  ("hollywood-studios", "Slinky Dog Dash"): dict(min=38, src=dz("slinky-dog-dash", "hollywood-studios")),
@@ -143,7 +182,7 @@ def load():
             model = c.get("model")
             if model: model = re.sub(r"^(All Models|Other) / ", "", model)
             co = dict(
-                name=DISPLAY.get(n, n), rcdb_name=n, slug=slugify(DISPLAY.get(n, n)), park=p["slug"], park_name=p["name"],
+                name=DISPLAY_PARK.get((p["slug"], n), DISPLAY.get(n, n)), rcdb_name=n, slug=slugify(DISPLAY_PARK.get((p["slug"], n), DISPLAY.get(n, n))), park=p["slug"], park_name=p["name"],
                 rcdb_url=c["rcdb_url"], opened=c["opened"], make=c["make"], model=model, tags=tags, scale=scale, material=material,
                 design=next((t for t in tags if t in ("Sit Down", "Inverted", "Suspended", "Wing", "Flying", "Stand Up")), None),
                 height=num(st.get("Height")), drop=num(st.get("Drop")), speed=num(st.get("Speed")), length=num(st.get("Length")),

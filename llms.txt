@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 244 coasters at 26 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 345 coasters at 39 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -282,3 +282,117 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Outlaw Run](https://coastermap.com/parks/silver-dollar-city/outlaw-run/): min height 48 in
   - [Time Traveler](https://coastermap.com/parks/silver-dollar-city/time-traveler/): min height 51 in
   - [Fire In The Hole](https://coastermap.com/parks/silver-dollar-city/fire-in-the-hole/): min height 48 in
+- [Six Flags Fiesta Texas](https://coastermap.com/parks/six-flags-fiesta-texas/): 11 coasters
+  - [Iron Rattler](https://coastermap.com/parks/six-flags-fiesta-texas/iron-rattler/): min height 48 in
+  - [Batman The Ride](https://coastermap.com/parks/six-flags-fiesta-texas/batman-the-ride/): min height 48 in
+  - [Wonder Woman Golden Lasso Coaster](https://coastermap.com/parks/six-flags-fiesta-texas/wonder-woman-golden-lasso-coaster/): min height 48 in
+  - [Dr. Diabolical's Cliffhanger](https://coastermap.com/parks/six-flags-fiesta-texas/dr-diabolicals-cliffhanger/): min height 48 in
+  - [Batgirl Coaster Chase](https://coastermap.com/parks/six-flags-fiesta-texas/batgirl-coaster-chase/): min height 36 in
+  - [Road Runner Express](https://coastermap.com/parks/six-flags-fiesta-texas/road-runner-express/): min height 48 in
+  - [Poltergeist](https://coastermap.com/parks/six-flags-fiesta-texas/poltergeist/): min height 54 in
+  - [Boomerang Coast to Coaster](https://coastermap.com/parks/six-flags-fiesta-texas/boomerang-coast-to-coaster/): min height 48 in
+  - [Superman Krypton Coaster](https://coastermap.com/parks/six-flags-fiesta-texas/superman-krypton-coaster/): min height 54 in
+  - [Pandemonium](https://coastermap.com/parks/six-flags-fiesta-texas/pandemonium/): min height 47 in
+  - [Chupacabra](https://coastermap.com/parks/six-flags-fiesta-texas/chupacabra/): min height 54 in
+- [Six Flags New England](https://coastermap.com/parks/six-flags-new-england/): 12 coasters
+  - [Thunderbolt](https://coastermap.com/parks/six-flags-new-england/thunderbolt/): min height 48 in
+  - [Great Chase](https://coastermap.com/parks/six-flags-new-england/great-chase/): min height 36 in
+  - [Riddler Revenge](https://coastermap.com/parks/six-flags-new-england/riddler-revenge/): min height 52 in
+  - [Superman the Ride](https://coastermap.com/parks/six-flags-new-england/superman-the-ride/): min height 54 in
+  - [Flashback](https://coastermap.com/parks/six-flags-new-england/flashback/): min height 48 in
+  - [Catwoman Whip](https://coastermap.com/parks/six-flags-new-england/catwoman-whip/): min height 48 in
+  - [Pandemonium](https://coastermap.com/parks/six-flags-new-england/pandemonium/): min height 47 in
+  - [Batman: The Dark Knight](https://coastermap.com/parks/six-flags-new-england/batman-the-dark-knight/): min height 54 in
+  - [Wicked Cyclone](https://coastermap.com/parks/six-flags-new-england/wicked-cyclone/): min height 48 in
+  - [Gotham City Gauntlet Escape from Arkham Asylum](https://coastermap.com/parks/six-flags-new-england/gotham-city-gauntlet-escape-from-arkham-asylum/): min height 54 in
+  - [The Joker](https://coastermap.com/parks/six-flags-new-england/the-joker/): min height 48 in
+  - [Quantum Accelerator](https://coastermap.com/parks/six-flags-new-england/quantum-accelerator/): min height 52 in
+- [Six Flags Discovery Kingdom](https://coastermap.com/parks/six-flags-discovery-kingdom/): 10 coasters
+  - [Roadrunner Express](https://coastermap.com/parks/six-flags-discovery-kingdom/roadrunner-express/): min height 42 in
+  - [Medusa](https://coastermap.com/parks/six-flags-discovery-kingdom/medusa/): min height 54 in
+  - [Cobra](https://coastermap.com/parks/six-flags-discovery-kingdom/cobra/): min height 48 in
+  - [The Flash: Vertical Velocity](https://coastermap.com/parks/six-flags-discovery-kingdom/the-flash-vertical-velocity/): min height 54 in
+  - [Kong](https://coastermap.com/parks/six-flags-discovery-kingdom/kong/): min height 52 in
+  - [Boomerang](https://coastermap.com/parks/six-flags-discovery-kingdom/boomerang/): min height 48 in
+  - [Superman Ultimate Flight](https://coastermap.com/parks/six-flags-discovery-kingdom/superman-ultimate-flight/): min height 54 in
+  - [The Joker](https://coastermap.com/parks/six-flags-discovery-kingdom/the-joker/): min height 48 in
+  - [Batman The Ride](https://coastermap.com/parks/six-flags-discovery-kingdom/batman-the-ride/): min height 48 in
+  - [Sidewinder Safari](https://coastermap.com/parks/six-flags-discovery-kingdom/sidewinder-safari/): min height 48 in
+- [California's Great America](https://coastermap.com/parks/californias-great-america/): 9 coasters
+  - [Demon](https://coastermap.com/parks/californias-great-america/demon/): min height 48 in
+  - [Grizzly](https://coastermap.com/parks/californias-great-america/grizzly/): min height 48 in
+  - [Woodstock Express](https://coastermap.com/parks/californias-great-america/woodstock-express/): min height 46 in
+  - [Patriot](https://coastermap.com/parks/californias-great-america/patriot/): min height 54 in
+  - [Flight Deck](https://coastermap.com/parks/californias-great-america/flight-deck/): min height 54 in
+  - [Lucy's Crabbie Cabbies](https://coastermap.com/parks/californias-great-america/lucys-crabbie-cabbies/): min height 40 in
+  - [Psycho Mouse](https://coastermap.com/parks/californias-great-america/psycho-mouse/): min height 48 in
+  - [Gold Striker](https://coastermap.com/parks/californias-great-america/gold-striker/): min height 48 in
+  - [RailBlazer](https://coastermap.com/parks/californias-great-america/railblazer/): min height 48 in
+- [Dorney Park](https://coastermap.com/parks/dorney-park/): 8 coasters
+  - [Thunderhawk](https://coastermap.com/parks/dorney-park/thunderhawk/): min height 48 in
+  - [Steel Force](https://coastermap.com/parks/dorney-park/steel-force/): min height 48 in
+  - [Wild Mouse](https://coastermap.com/parks/dorney-park/wild-mouse/): min height 48 in
+  - [Woodstock Express](https://coastermap.com/parks/dorney-park/woodstock-express/)
+  - [Talon](https://coastermap.com/parks/dorney-park/talon/): min height 54 in
+  - [Hydra the Revenge](https://coastermap.com/parks/dorney-park/hydra-the-revenge/): min height 54 in
+  - [Possessed](https://coastermap.com/parks/dorney-park/possessed/): min height 52 in
+  - [Iron Menace](https://coastermap.com/parks/dorney-park/iron-menace/): min height 48 in
+- [Worlds of Fun](https://coastermap.com/parks/worlds-of-fun/): 7 coasters
+  - [Timber Wolf](https://coastermap.com/parks/worlds-of-fun/timber-wolf/): min height 48 in
+  - [Mamba](https://coastermap.com/parks/worlds-of-fun/mamba/): min height 48 in
+  - [Spinning Dragons](https://coastermap.com/parks/worlds-of-fun/spinning-dragons/): min height 48 in
+  - [Patriot](https://coastermap.com/parks/worlds-of-fun/patriot/): min height 54 in
+  - [Prowler](https://coastermap.com/parks/worlds-of-fun/prowler/): min height 48 in
+  - [Zambezi Zinger](https://coastermap.com/parks/worlds-of-fun/zambezi-zinger/): min height 48 in
+  - [Boomerang](https://coastermap.com/parks/worlds-of-fun/boomerang/): min height 48 in
+- [Valleyfair](https://coastermap.com/parks/valleyfair/): 8 coasters
+  - [High Roller](https://coastermap.com/parks/valleyfair/high-roller/): min height 48 in
+  - [Corkscrew](https://coastermap.com/parks/valleyfair/corkscrew/): min height 48 in
+  - [Excalibur](https://coastermap.com/parks/valleyfair/excalibur/): min height 48 in
+  - [Wild Thing](https://coastermap.com/parks/valleyfair/wild-thing/): min height 48 in
+  - [Mad Mouse](https://coastermap.com/parks/valleyfair/mad-mouse/): min height 48 in
+  - [Steel Venom](https://coastermap.com/parks/valleyfair/steel-venom/): min height 52 in
+  - [Renegade](https://coastermap.com/parks/valleyfair/renegade/): min height 48 in
+  - [Cosmic Coaster](https://coastermap.com/parks/valleyfair/cosmic-coaster/): min height 42 in
+- [Michigan's Adventure](https://coastermap.com/parks/michigans-adventure/): 7 coasters
+  - [Corkscrew](https://coastermap.com/parks/michigans-adventure/corkscrew/): min height 48 in
+  - [Wolverine Wildcat](https://coastermap.com/parks/michigans-adventure/wolverine-wildcat/): min height 48 in
+  - [Zach's Zoomer](https://coastermap.com/parks/michigans-adventure/zachs-zoomer/): min height 46 in
+  - [Shivering Timbers](https://coastermap.com/parks/michigans-adventure/shivering-timbers/): min height 48 in
+  - [Mad Mouse](https://coastermap.com/parks/michigans-adventure/mad-mouse/): min height 48 in
+  - [Thunderhawk](https://coastermap.com/parks/michigans-adventure/thunderhawk/): min height 52 in
+  - [Woodstock Express](https://coastermap.com/parks/michigans-adventure/woodstock-express/): min height 42 in
+- [SeaWorld San Diego](https://coastermap.com/parks/seaworld-san-diego/): 5 coasters
+  - [Journey to Atlantis](https://coastermap.com/parks/seaworld-san-diego/journey-to-atlantis/): min height 42 in
+  - [Manta](https://coastermap.com/parks/seaworld-san-diego/manta/): min height 48 in
+  - [Electric Eel](https://coastermap.com/parks/seaworld-san-diego/electric-eel/): min height 54 in
+  - [Emperor](https://coastermap.com/parks/seaworld-san-diego/emperor/): min height 52 in
+  - [Arctic Rescue](https://coastermap.com/parks/seaworld-san-diego/arctic-rescue/): min height 48 in
+- [SeaWorld San Antonio](https://coastermap.com/parks/seaworld-san-antonio/): 7 coasters
+  - [Journey to Atlantis](https://coastermap.com/parks/seaworld-san-antonio/journey-to-atlantis/): min height 39 in
+  - [Wave Breaker: The Rescue Coaster](https://coastermap.com/parks/seaworld-san-antonio/wave-breaker-the-rescue-coaster/): min height 48 in
+  - [Texas Stingray](https://coastermap.com/parks/seaworld-san-antonio/texas-stingray/): min height 46 in
+  - [Beach Rescue Racer](https://coastermap.com/parks/seaworld-san-antonio/beach-rescue-racer/): min height 48 in
+  - [Barracuda Strike](https://coastermap.com/parks/seaworld-san-antonio/barracuda-strike/): min height 42 in
+  - [Great White](https://coastermap.com/parks/seaworld-san-antonio/great-white/): min height 54 in
+  - [Steel Eel](https://coastermap.com/parks/seaworld-san-antonio/steel-eel/): min height 48 in
+- [Kennywood](https://coastermap.com/parks/kennywood/): 8 coasters
+  - [Lil' Phantom](https://coastermap.com/parks/kennywood/lil-phantom/)
+  - [Exterminator](https://coastermap.com/parks/kennywood/exterminator/): min height 59 in
+  - [Jack Rabbit](https://coastermap.com/parks/kennywood/jack-rabbit/): min height 48 in
+  - [Racer](https://coastermap.com/parks/kennywood/racer/): min height 46 in
+  - [Thunderbolt](https://coastermap.com/parks/kennywood/thunderbolt/): min height 52 in
+  - [Phantom's Revenge](https://coastermap.com/parks/kennywood/phantoms-revenge/): min height 48 in
+  - [Sky Rocket](https://coastermap.com/parks/kennywood/sky-rocket/): min height 55 in
+  - [Steel Curtain](https://coastermap.com/parks/kennywood/steel-curtain/): min height 52 in
+- [Holiday World](https://coastermap.com/parks/holiday-world/): 6 coasters
+  - [Good Gravy!](https://coastermap.com/parks/holiday-world/good-gravy/): min height 48 in
+  - [The Raven](https://coastermap.com/parks/holiday-world/the-raven/): min height 48 in
+  - [The Howler](https://coastermap.com/parks/holiday-world/the-howler/): min height 42 in
+  - [The Legend](https://coastermap.com/parks/holiday-world/the-legend/): min height 48 in
+  - [The Voyage](https://coastermap.com/parks/holiday-world/the-voyage/): min height 48 in
+  - [Thunderbird](https://coastermap.com/parks/holiday-world/thunderbird/): min height 48 in
+- [Universal Studios Hollywood](https://coastermap.com/parks/universal-studios-hollywood/): 3 coasters
+  - [Revenge of the Mummy: The Ride](https://coastermap.com/parks/universal-studios-hollywood/revenge-of-the-mummy-the-ride/): min height 48 in
+  - [Flight of the Hippogriff](https://coastermap.com/parks/universal-studios-hollywood/flight-of-the-hippogriff/): min height 48 in
+  - [Fast & Furious: Hollywood Drift](https://coastermap.com/parks/universal-studios-hollywood/fast-furious-hollywood-drift/): min height 51 in
