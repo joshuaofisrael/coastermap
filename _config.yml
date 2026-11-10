@@ -1,5 +1,6 @@
 exclude:
   - README.md
   - OPS-NOTES.md
+  - expansion-log.md
   - indexnow.sh
   - _build

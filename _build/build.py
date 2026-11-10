@@ -275,10 +275,15 @@ def coaster_page(c):
 <li>Loose items, health warnings and accessibility rules are set by the park and posted at each ride.</li></ul>
 <p>Planning for a child? Try the <a href="/height-checker/">ride height checker</a> to see every coaster they can ride at {E(p["short"])}.</p></section>
 {faq_html(faqs)}
-<section aria-labelledby="more-h"><h2 id="more-h">More coasters at {E(p["name"])}</h2><ul class="cols">{sib}</ul><p><a href="/parks/{p["slug"]}/">See the full {E(p["name"])} coaster guide and map</a></p></section>
+<section aria-labelledby="more-h"><h2 id="more-h">More coasters at {E(p["name"]) if siblings else E(p["group"])}</h2>{f'<ul class="cols">{sib}</ul>' if siblings else '<ul class="cols">' + "".join(f'<li><a href="{coaster_path(x)}">{E(x["name"])}</a> <span class="muted">({E(x["park_name"])}{", " + str(x["hr"]["min"]) + " in" if x["hr"] else ""})</span></li>' for x in ALL if park_of(x)["group"] == p["group"] and x is not c) + '</ul>'}<p><a href="/parks/{p["slug"]}/">See the full {E(p["name"])} coaster guide and map</a></p></section>
 <section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ul>{srcs and "".join(srcs)}</ul><p class="note">Last checked {CHECKED}. Found an error? <a href="/contact/">Tell us</a>.</p></section></article>'''
     desc = f'{c["name"]} at {p["name"]}: ' + (f'height requirement {h["min"]} in, ' if h else "") + ", ".join(x for x in [mph(c["speed"]) and "top speed " + mph(c["speed"]), ft(c["height"]) and ft(c["height"]) + " tall"] if x) + ". How intense it is, best seat and who it suits."
-    title = f'{c["name"]}: Height Requirement, Stats & Best Seat | {BRAND}'
+    if sum(1 for x in ALL if x["name"] == c["name"]) > 1:  # same ride name at more than one park
+        title = f'{c["name"]} at {p["short"]}: Height Requirement & Stats | {BRAND}'
+        if len(title) > 70: title = f'{c["name"]} at {p["short"]}: Height & Stats | {BRAND}'
+        if len(title) > 70: title = f'{c["name"]} ({p["short"]}) Guide | {BRAND}'
+    else:
+        title = f'{c["name"]}: Height Requirement, Stats & Best Seat | {BRAND}'
     if len(title) > 70: title = f'{c["name"]} Height Requirement & Stats | {BRAND}'
     if len(title) > 70: title = f'{c["name"]} Guide | {BRAND}'
     ld = [{"@context": "https://schema.org", "@type": "TouristAttraction", "name": c["name"], "description": re.sub("<[^>]+>", "", describe(c))[:300],
@@ -317,7 +322,7 @@ def park_page(p):
     if fast: lead += (f' and the fastest is <a href="{coaster_path(fast)}">{E(fast["name"])}</a> at {mph(fast["speed"])}' if fast is not tall else ", which is also the fastest at " + mph(fast["speed"])) 
     lead += "."
     if lowest: lead += f' The lowest height requirement is {lowest["hr"]["min"]} in ({cm(lowest["hr"]["min"])} cm), for <a href="{coaster_path(lowest)}">{E(lowest["name"])}</a>.'
-    faqs = [(f'How many roller coasters does {p["name"]} have?', f'{p["name"]} has {n} operating roller coasters according to RCDB, checked {CHECKED}.')]
+    faqs = [(f'How many roller coasters does {p["name"]} have?', f'{p["name"]} has {n} operating roller coaster{"s" if n != 1 else ""} according to RCDB, checked {CHECKED}.')]
     if tall: faqs.append((f'What is the tallest roller coaster at {p["name"]}?', f'{tall["name"]}, at {ft(tall["height"])} tall (RCDB).'))
     if fast: faqs.append((f'What is the fastest roller coaster at {p["name"]}?', f'{fast["name"]}, with a top speed of {mph(fast["speed"])} (RCDB).'))
     if lowest: faqs.append((f'What is the easiest coaster for kids at {p["name"]}?', f'By height requirement, {lowest["name"]} has the lowest minimum at {lowest["hr"]["min"]} inches ({cm(lowest["hr"]["min"])} cm). Check the park for companion rules.'))
@@ -326,7 +331,7 @@ def park_page(p):
         if ok: faqs.append((f'Which {p["name"]} coasters can a {th}-inch child ride?', f'Based on official minimum heights checked {CHECKED}: ' + ", ".join(ok) + '. Some rides also need a companion below a certain height; confirm at the ride.'))
     if noinv: faqs.append((f'Which coasters at {p["name"]} do not go upside down?', ", ".join(c["name"] for c in noinv) + " have no inversions, per RCDB."))
     srcset = sorted({c["hr"]["src"] for c in cs if c["hr"]})
-    body = f'''<h1>{E(p["name"])} roller coasters</h1><p class="sub">{E(p["loc"])} · {n} coasters</p>
+    body = f'''<h1>{E(p["name"])} roller coasters</h1><p class="sub">{E(p["loc"])} · {n} coaster{"s" if n != 1 else ""}</p>
 <p class="answer">{lead}</p>
 {map_block(cs, 440)}
 <h2>Every coaster at {E(p["name"])}</h2>{coaster_table(sorted(cs, key=lambda c: -(c["height"] or 0)))}
@@ -338,12 +343,13 @@ def park_page(p):
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": url(coaster_path(c)), "name": c["name"]} for i, c in enumerate(cs)]}, faq_ld(faqs)]
     title = f'{p["name"]} Roller Coasters: Heights, Stats & Map | {BRAND}'
     if len(title) > 70: title = f'{p["short"]} Roller Coasters: Heights & Map | {BRAND}'
-    write(path, page(path, title, f'All {n} roller coasters at {p["name"]} with height requirements, top speeds, intensity and an interactive map.', body, ld, [("/", "Home"), ("/parks/", "Parks"), (path, p["name"])], LEAFLET_HEAD))
+    if len(title) > 70: title = f'{p["short"]} Coasters: Heights & Map | {BRAND}'
+    write(path, page(path, title, (f'All {n} roller coasters at {p["name"]}' if n != 1 else f'The roller coaster at {p["name"]}') + ' with height requirements, top speeds, intensity and an interactive map.', body, ld, [("/", "Home"), ("/parks/", "Parks"), (path, p["name"])], LEAFLET_HEAD))
 
 def parks_index():
-    cards = "".join(f'<li class="card"><h2><a href="/parks/{p["slug"]}/">{E(p["name"])}</a></h2><p>{E(p["loc"])}</p><p><strong>{len(p["coasters"])} coasters</strong>; tallest {E(max((c for c in p["coasters"] if c["height"]), key=lambda c: c["height"])["name"])}.</p></li>' for p in PARKS)
-    body = f'<h1>Theme park coaster guides</h1><p class="answer">Coaster Map covers {len(PARKS)} major theme parks so far, with {len(ALL)} roller coasters. Each guide lists every operating coaster with its height requirement, stats and map position. More parks are on the way: Disney, Universal, Six Flags, SeaWorld and Busch Gardens parks first, then major international parks.</p><ul class="cards">{cards}</ul>'
-    write("/parks/", page("/parks/", f"Theme Park Roller Coaster Guides by Park | {BRAND}", "Roller coaster guides for Cedar Point, Magic Kingdom, Epic Universe, Islands of Adventure, Universal Studios Florida, Six Flags Magic Mountain and Busch Gardens Tampa Bay.", body, None, [("/", "Home"), ("/parks/", "Parks")]))
+    cards = "".join(f'<li class="card"><h2><a href="/parks/{p["slug"]}/">{E(p["name"])}</a></h2><p>{E(p["loc"])}</p><p><strong>{len(p["coasters"])} coaster{"s" if len(p["coasters"]) != 1 else ""}</strong>' + (f'; tallest {E(max((c for c in p["coasters"] if c["height"]), key=lambda c: c["height"])["name"])}' if any(c["height"] for c in p["coasters"]) else "") + '.</p></li>' for p in PARKS)
+    body = f'<h1>Theme park coaster guides</h1><p class="answer">Coaster Map covers {len(PARKS)} major theme parks so far, with {len(ALL)} roller coasters. Each guide lists every operating coaster with its height requirement, stats and map position. More parks are on the way: more Six Flags, Universal and United States parks first, then major international parks.</p><ul class="cards">{cards}</ul>'
+    write("/parks/", page("/parks/", f"Theme Park Roller Coaster Guides by Park | {BRAND}", f"Roller coaster guides for {len(PARKS)} theme parks, including all four Walt Disney World parks, Universal Orlando, SeaWorld, Busch Gardens, Cedar Point, Kings Island, Hersheypark, Dollywood, Knott's and Six Flags.", body, None, [("/", "Home"), ("/parks/", "Parks")]))
 
 def all_coasters():
     body = f'<h1>All roller coasters on Coaster Map</h1><p class="answer">{len(ALL)} roller coasters across {len(PARKS)} parks, sorted tallest first. Height requirements come from official park pages; stats come from RCDB.</p>{coaster_table(sorted(ALL, key=lambda c: -(c["height"] or 0)), True)}'
@@ -351,8 +357,8 @@ def all_coasters():
 
 def map_page():
     opts = "".join(f'<option value="{E(p["name"])}">{E(p["name"])}</option>' for p in PARKS)
-    body = f'<h1>Roller coaster map</h1><p class="answer">Every coaster we cover, on one map. Zoom into a park to see where each ride sits, then open a pin for its height requirement and full guide.</p><p><label for="park-filter">Show park: </label><select id="park-filter" data-map="map"><option value="">All parks</option>{opts}</select></p>{map_block(ALL, 560)}<h2>Parks on the map</h2><ul>' + "".join(f'<li><a href="/parks/{p["slug"]}/">{E(p["name"])}</a> ({len(p["coasters"])} coasters)</li>' for p in PARKS) + "</ul>"
-    write("/map/", page("/map/", f"Theme Park Roller Coaster Map | {BRAND}", "Interactive map of roller coasters at Cedar Point, Disney, Universal, Six Flags Magic Mountain and Busch Gardens Tampa Bay.", body, None, [("/", "Home"), ("/map/", "Coaster map")], LEAFLET_HEAD))
+    body = f'<h1>Roller coaster map</h1><p class="answer">Every coaster we cover, on one map. Zoom into a park to see where each ride sits, then open a pin for its height requirement and full guide.</p><p><label for="park-filter">Show park: </label><select id="park-filter" data-map="map"><option value="">All parks</option>{opts}</select></p>{map_block(ALL, 560)}<h2>Parks on the map</h2><ul>' + "".join(f'<li><a href="/parks/{p["slug"]}/">{E(p["name"])}</a> ({len(p["coasters"])} coaster{"s" if len(p["coasters"]) != 1 else ""})</li>' for p in PARKS) + "</ul>"
+    write("/map/", page("/map/", f"Theme Park Roller Coaster Map | {BRAND}", f"Interactive map of {len(ALL)} roller coasters at Disney, Universal, SeaWorld, Busch Gardens, Cedar Point, Kings Island, Hersheypark, Dollywood, Knott's and Six Flags parks.", body, None, [("/", "Home"), ("/map/", "Coaster map")], LEAFLET_HEAD))
 
 def tool_data():
     return json.dumps([dict(n=c["name"], p=c["park_name"], ps=c["park"], u=coaster_path(c), min=c["hr"]["min"] if c["hr"] else None,
@@ -371,9 +377,9 @@ def height_checker():
 <h2>How height requirements work</h2><p>Each coaster has a minimum height set by the park and the ride maker. Some family coasters let shorter children ride with a companion (an adult or older rider), and a few kiddie coasters also have a maximum height. Our checker uses only those official numbers.</p>
 <script type="application/json" id="coaster-data">{tool_data()}</script>'''
     faqs = [("Where is height checked?", "At the ride entrance, by the park's ride team. Rules on footwear and re-measuring vary by park, so ask the ride team if your child is close to the line."),
-            ("Where do these height requirements come from?", f"From each park's official ride pages, and for Universal Orlando parks from Visit Orlando's coaster guide (updated 1 Jun 2026), all checked {CHECKED}. Each coaster page links its source.")]
+            ("Where do these height requirements come from?", f"From each park's official ride pages (for Hersheypark, its official 2026 roller coaster guide), and for Universal Orlando parks from Visit Orlando's coaster guide (updated 1 Jun 2026), all checked {CHECKED}. Each coaster page links its source.")]
     body += faq_html(faqs)
-    write("/height-checker/", page("/height-checker/", f"Ride Height Checker: Coasters Your Child Can Ride | {BRAND}", "Enter your child's height in inches or cm and see which roller coasters they can ride at Disney, Universal, Cedar Point, Six Flags Magic Mountain and Busch Gardens.", body, [faq_ld(faqs), {"@context": "https://schema.org", "@type": "WebApplication", "name": "Coaster Map ride height checker", "applicationCategory": "TravelApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": url("/height-checker/")}], [("/", "Home"), ("/height-checker/", "Height checker")]))
+    write("/height-checker/", page("/height-checker/", f"Ride Height Checker: Coasters Your Child Can Ride | {BRAND}", "Enter your child's height in inches or cm and see which roller coasters they can ride at Disney, Universal, SeaWorld, Busch Gardens, Cedar Point, Kings Island, Hersheypark, Dollywood, Knott's and Six Flags.", body, [faq_ld(faqs), {"@context": "https://schema.org", "@type": "WebApplication", "name": "Coaster Map ride height checker", "applicationCategory": "TravelApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": url("/height-checker/")}], [("/", "Home"), ("/height-checker/", "Height checker")]))
 
 def quiz():
     opts = "".join(f'<option value="{p["slug"]}">{E(p["name"])}</option>' for p in PARKS)
@@ -399,7 +405,7 @@ def home():
     fastest = sorted([c for c in ALL if c["speed"]], key=lambda c: -c["speed"])[:5]
     kid = sorted([c for c in ALL if c["hr"]], key=lambda c: c["hr"]["min"])[:6]
     li = lambda cs, f: "".join(f'<li><a href="{coaster_path(c)}">{E(c["name"])}</a> <span class="muted">({E(park_of(c)["short"])}, {f(c)})</span></li>' for c in cs)
-    cards = "".join(f'<li class="card"><h3><a href="/parks/{p["slug"]}/">{E(p["name"])}</a></h3><p>{len(p["coasters"])} coasters · {E(p["loc"].split(", ")[-1])}</p></li>' for p in PARKS)
+    cards = "".join(f'<li class="card"><h3><a href="/parks/{p["slug"]}/">{E(p["name"])}</a></h3><p>{len(p["coasters"])} coaster{"s" if len(p["coasters"]) != 1 else ""} · {E(p["loc"].split(", ")[-1])}</p></li>' for p in PARKS)
     body = f'''<section class="hero"><h1>Every roller coaster at the big theme parks, mapped and explained</h1>
 <p class="answer">Coaster Map answers the questions you have in the queue: <strong>how tall do you have to be, how fast does it go, how scary is it and where should you sit?</strong> {len(ALL)} coasters at {len(PARKS)} parks so far, with height rules from official park pages and stats from the Roller Coaster DataBase.</p>
 <p class="btnrow"><a class="btn" href="/height-checker/">Check what my child can ride</a> <a class="btn alt" href="/map/">Open the coaster map</a> <a class="btn alt" href="/quiz/">Take the coaster quiz</a></p></section>
@@ -408,7 +414,7 @@ def home():
 <section><h2>Fastest coasters</h2><ol>{li(fastest, lambda c: mph(c["speed"]))}</ol></section>
 <section><h2>Lowest height requirements</h2><ol>{li(kid, lambda c: str(c["hr"]["min"]) + " in")}</ol></section></div>
 <section><h2>How we check facts</h2><p>Every height requirement links to the park page it came from, and every stat links to its RCDB entry. If we can't verify a number, we leave it out rather than guess. Read our <a href="/methodology/">sources and methods</a>.</p></section>'''
-    write("/", page("/", f"{BRAND}: Roller Coaster Height Requirements, Stats & Maps", f"Height requirements, stats, intensity and best seats for {len(ALL)} roller coasters at Disney, Universal, Cedar Point, Six Flags and Busch Gardens, with interactive park maps.", body))
+    write("/", page("/", f"{BRAND}: Roller Coaster Height Requirements, Stats & Maps", f"Height requirements, stats, intensity and best seats for {len(ALL)} roller coasters at Disney, Universal, SeaWorld, Busch Gardens, Cedar Point, Kings Island, Hersheypark, Dollywood, Knott's and Six Flags, with interactive park maps.", body))
 
 def simple(path, title, desc, h1, inner, crumbs_name=None, legal=False, noindex=False):
     body = f'<article class="prose"><h1>{E(h1)}</h1>{inner}' + (f'<p class="legal-line">{LEGAL_LINE}</p>' if legal else "") + "</article>"
@@ -417,12 +423,12 @@ def simple(path, title, desc, h1, inner, crumbs_name=None, legal=False, noindex=
 def about_legal():
     simple("/about/", f"About {BRAND}", "What Coaster Map is, how we pick and check coaster facts, and what is coming next.", "About Coaster Map", f'''
 <p>Coaster Map is an independent guide to the roller coasters at the world's big theme parks. Our goal is simple: one clear page for every coaster, answering the questions families and thrill seekers actually ask, such as the height requirement, how intense the ride is, and where to sit, plus a map of where each coaster sits in its park.</p>
-<h2>What we cover</h2><p>We started with {len(PARKS)} parks and {len(ALL)} coasters: Cedar Point, Six Flags Magic Mountain, Magic Kingdom, Universal Epic Universe, Universal Islands of Adventure, Universal Studios Florida and Busch Gardens Tampa Bay. Next come the other Disney and Universal parks, more Six Flags parks, SeaWorld and Busch Gardens Williamsburg, then major parks in Europe and Asia.</p>
+<h2>What we cover</h2><p>We now cover {len(PARKS)} parks and {len(ALL)} coasters: {", ".join(p["name"] for p in PARKS[:-1])} and {PARKS[-1]["name"]}. Next come more Six Flags and other major United States parks, then major parks in Europe and Asia.</p>
 <h2>How we work</h2><p>Height requirements come from official park pages. Ride statistics, opening dates, manufacturers and map positions come from the Roller Coaster DataBase (RCDB). We write every description ourselves. If a fact can't be verified, we leave it out. See <a href="/methodology/">sources and methods</a>.</p>
 <h2>Independence</h2><p>Coaster Map is not affiliated with, endorsed by or sponsored by any park, operator or ride manufacturer. Park and ride names are used only to identify the rides we describe.</p>
 <p>Spotted something out of date? <a href="/contact/">Let us know</a> and we'll check it.</p>''')
     simple("/methodology/", f"Sources and Methods | {BRAND}", "Where Coaster Map's height requirements, ride stats and map positions come from, and how often we check them.", "Sources and methods", f'''
-<h2>Height requirements</h2><p>From official park pages: sixflags.com ride pages for Cedar Point and Six Flags Magic Mountain, disneyworld.disney.go.com attraction pages for Magic Kingdom, and the Busch Gardens Tampa Bay roller coaster page. Universal Orlando's own ride pages could not be read by our checker, so for Epic Universe, Islands of Adventure and Universal Studios Florida we use Visit Orlando's roller coaster guide (Orlando's official tourism organisation, updated 1 Jun 2026) and will switch to Universal's pages when we can confirm them. The Barnstormer's requirement is also from Visit Orlando. All were checked {CHECKED}. Where no official figure was found (Pteranodon Flyers, Great American Revolution and Canyon Cruiser), we say so instead of guessing.</p>
+<h2>Height requirements</h2><p>From official park pages: sixflags.com ride pages for Cedar Point, Kings Island, Knott's Berry Farm, Six Flags Magic Mountain and Six Flags Great Adventure; disneyworld.disney.go.com attraction pages for Magic Kingdom, EPCOT, Disney's Hollywood Studios and Disney's Animal Kingdom; the Busch Gardens Tampa Bay, Busch Gardens Williamsburg and SeaWorld Orlando roller coaster pages and ride pages; and dollywood.com ride pages. Hersheypark groups rides by height category (for example 42 to 48 in) and its ride pages do not print the numbers, so for Hersheypark we use its official 2026 roller coaster guide on hersheypa.com and list the lowest height category allowed to ride. Where a park sets a companion rule (a shorter child may ride with someone older), we show both heights; companion age rules vary by park, so check at the ride. Universal Orlando's own ride pages could not be read by our checker, so for Epic Universe, Islands of Adventure and Universal Studios Florida we use Visit Orlando's roller coaster guide (Orlando's official tourism organisation, updated 1 Jun 2026) and will switch to Universal's pages when we can confirm them. The Barnstormer's requirement is also from Visit Orlando. All were checked {CHECKED}. Where no official figure was found (Pteranodon Flyers, Great American Revolution and Canyon Cruiser), we say so instead of guessing.</p>
 <h2>Ride stats and positions</h2><p>Height, drop, speed, length, inversions, drop angle, g-force, opening date, manufacturer, model, type and map coordinates come from each coaster's <a href="https://rcdb.com/" rel="nofollow noopener">RCDB</a> entry. Our park lists include operating coasters only, as listed on RCDB on {CHECKED}. Dates of a ride's first opening follow RCDB; where a park dates a rebuilt version differently, the coaster page notes it.</p>
 <h2>Intensity, who it suits and best seat</h2><p>Intensity labels use RCDB's scale (kiddie, family, thrill, extreme) and, where the park publishes one, the park's own thrill rating. "Who it suits" is drawn from those labels, the height rules and the number of inversions. Seat advice is general guidance based on how each style of coaster moves (for example, back rows crest drops faster); it is not a park rule.</p>
 <h2>Maps</h2><p>Maps use <a href="https://leafletjs.com/">Leaflet</a> with tiles and map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Pins are approximate.</p>
@@ -470,7 +476,7 @@ def about_legal():
 <h2>Children</h2><p>The site is for a general audience and is not directed to children under 13. We do not knowingly collect personal information from children. The height checker does not collect or store a child's height.</p>
 <h2>Changes</h2><p>We will post any changes here with a new date.</p>'''),
     "/disclaimer/": ("Disclaimer", f'''<p>Last updated {date_h(TODAY)}.</p>
-<h2>Not affiliated with any park</h2><p>Coaster Map is an independent site. It is not affiliated with, endorsed by or sponsored by Walt Disney World, Universal Orlando Resort, Six Flags, Cedar Point, Busch Gardens, United Parks & Resorts, any ride manufacturer or the Roller Coaster DataBase. All park, ride and company names, logos and trademarks belong to their owners and are used only to identify the rides described.</p>
+<h2>Not affiliated with any park</h2><p>Coaster Map is an independent site. It is not affiliated with, endorsed by or sponsored by Walt Disney World, Universal Orlando Resort, Six Flags, Cedar Point, Kings Island, Knott's Berry Farm, Busch Gardens, SeaWorld, United Parks & Resorts, Hersheypark, Hershey Entertainment & Resorts, Dollywood, Herschend Family Entertainment, any ride manufacturer or the Roller Coaster DataBase. All park, ride and company names, logos and trademarks belong to their owners and are used only to identify the rides described.</p>
 <h2>Ride rules change: check with the park</h2><p>Height requirements, maximum heights, companion rules, health and accessibility restrictions, opening dates and ride status are set by each park and can change without notice. The figures on this site were correct on the source page on the date shown, but the park's posted rules and ride staff always take priority. Check the park's official website or app before your visit and confirm at the ride entrance.</p>
 <h2>No safety or medical advice</h2><p>Nothing on this site is safety, medical or professional advice. Descriptions of intensity, "who it suits" and seat suggestions are general opinions to help planning. Riders with health conditions, pregnancy, injuries or other concerns should follow the park's posted warnings and consult a doctor.</p>
 <h2>Accuracy and corrections</h2><p>We cite our sources and leave out what we cannot verify, but errors can happen. Please <a href="/contact/">report errors</a> and we will correct verified mistakes promptly.</p>

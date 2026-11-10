@@ -1,0 +1,392 @@
+{
+ "kings-island|Flight of Fear": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/flight-of-fear",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1996",
+  "ctx": "Min Height 54” Thrill Level 5 Location Kings Island Accessibility Attraction Accessibility Information Introduced 1996 Manufacturer Premier Rides Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Loa"
+ },
+ "kings-island|Beast": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/the-beast",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1979",
+  "ctx": "Min Height 48” Thrill Level 5 Location Kings Island Accessibility Attraction Accessibility Information Introduced 1979 Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Loading... Shop The Beast Coll"
+ },
+ "kings-island|Racer": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/the-racer-blue",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1972",
+  "ctx": "Min Height 48” Thrill Level 4 Location Kings Island Accessibility Attraction Accessibility Information Introduced 1972 Manufacturer Philadelphia Toboggan Coasters, Inc. Top Speed 0 Mph Elevation 0 Ft "
+ },
+ "kings-island|Adventure Express": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/adventure-express",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1991",
+  "ctx": "Min Height 48” Thrill Level 5 Location Kings Island Accessibility Attraction Accessibility Information Introduced 1991 Manufacturer Arrow Dynamics Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Lo"
+ },
+ "kings-island|Woodstock Express": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/woodstock-express",
+  "min": "46",
+  "acc_min": "40",
+  "acc_max": "46",
+  "max": null,
+  "thrill": "4",
+  "introduced": "1972",
+  "ctx": "Min Height 46” Min Height Accompanied 40” Thrill Level 4 Location Kings Island Accessibility Attraction Accessibility Information Introduced 1972 Manufacturer Philadelphia Toboggan Coasters, Inc. Top "
+ },
+ "kings-island|Bat": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/the-bat",
+  "min": "42",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1993",
+  "ctx": "Min Height 42” Thrill Level 4 Location Kings Island Accessibility Attraction Accessibility Information Introduced 1993 Manufacturer Arrow Dynamics Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Lo"
+ },
+ "kings-island|Great Pumpkin Coaster": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/the-great-pumpkin-coaster",
+  "min": "36",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "2",
+  "introduced": "1992",
+  "ctx": "Min Height 36” Thrill Level 2 Location Kings Island Accessibility Attraction Accessibility Information Introduced 1992 Manufacturer E&F Miler Industries Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 "
+ },
+ "kings-island|Invertigo": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/invertigo",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "1999",
+  "ctx": "Min Height 54” Max Height 78” Thrill Level 5 Location Kings Island Accessibility Attraction Accessibility Information Introduced 1999 Manufacturer Vekoma Top Speed 0 Mph Elevation 0 Ft Ride Duration 0"
+ },
+ "kings-island|Diamondback": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/diamondback",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2009",
+  "ctx": "Min Height 54” Thrill Level 5 Location Kings Island Accessibility Attraction Accessibility Information Introduced 2009 Manufacturer Bolliger & Mabillard Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 "
+ },
+ "kings-island|Banshee": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/banshee",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "2014",
+  "ctx": "Min Height 52” Max Height 78” Thrill Level 5 Location Kings Island Accessibility Attraction Accessibility Information Introduced 2014 Manufacturer Bolliger & Mabillard Top Speed 0 Mph Elevation 0 Ft R"
+ },
+ "kings-island|Orion": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/orion",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2020",
+  "ctx": "Min Height 54” Thrill Level 5 Location Kings Island Accessibility Attraction Accessibility Information Introduced 2020 Manufacturer Bolliger & Mabillard Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 "
+ },
+ "kings-island|Mystic Timbers": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/mystic-timbers",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2017",
+  "ctx": "Min Height 48” Thrill Level 5 Location Kings Island Accessibility Attraction Accessibility Information Introduced 2017 Manufacturer Great Coasters International Top Speed 0 Mph Elevation 0 Ft Ride Dur"
+ },
+ "kings-island|Snoopy's Soap Box Racers": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/snoopys-soap-box-racers",
+  "min": "48",
+  "acc_min": "38",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "4",
+  "introduced": "2024",
+  "ctx": "Min Height 48” Min Height Accompanied 38” Thrill Level 4 Location Kings Island Accessibility Attraction Accessibility Information Introduced 2024 Manufacturer Vekoma Top Speed 0 Mph Elevation 0 Ft Rid"
+ },
+ "kings-island|Woodstock’s Air Rail": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/woodstock-s-air-rail",
+  "min": "44",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "76",
+  "thrill": "4",
+  "introduced": "2001",
+  "ctx": "Min Height 44” Max Height 76” Thrill Level 4 Location Kings Island Accessibility Attraction Accessibility Information Introduced 2001 Manufacturer Vekoma Top Speed 0 Mph Elevation 0 Ft Ride Duration 0"
+ },
+ "kings-island|Queen City Stunt Coaster": {
+  "url": "https://www.sixflags.com/kingsisland/attractions/queen-city-stunt-coaster",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2005",
+  "ctx": "Min Height 48” Thrill Level 5 Location Kings Island Accessibility Attraction Accessibility Information Introduced 2005 Manufacturer Premier Rides Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Rel"
+ },
+ "knotts-berry-farm|Jaguar!": {
+  "url": "https://www.sixflags.com/knotts/attractions/jaguar",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 4 Location Knott's Berry Farm Accessibility Attraction Accessibility Information Length 0 Ft Related Rides Wipeout 48 ” MIN. Height Requirement 4 Thrill Level Banzai Falls "
+ },
+ "knotts-berry-farm|MonteZOOMa: The Forbidden Fortress": {
+  "url": "https://www.sixflags.com/knotts/attractions/montezooma-the-forbidden-fortress",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "79",
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Max Height 79” Thrill Level 5 Location Knott's Berry Farm Accessibility Attraction Accessibility Information Previous slide Next slide Related Rides Sol Spin 54 ” MIN. Height Requiremen"
+ },
+ "knotts-berry-farm|GhostRider": {
+  "url": "https://www.sixflags.com/knotts/attractions/ghostrider",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Location Knott's Berry Farm Accessibility Attraction Accessibility Information Special Features The West's longest, tallest, and fastest wooden coaster! Top Speed 0 Mph L"
+ },
+ "knotts-berry-farm|Xcelerator": {
+  "url": "https://www.sixflags.com/knotts/attractions/xcelerator-the-ride-",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 52” Thrill Level 5 Location Knott's Berry Farm Accessibility Attraction Accessibility Information Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 sec Related Rides Sol Spin 54 ” "
+ },
+ "knotts-berry-farm|Silver Bullet": {
+  "url": "https://www.sixflags.com/knotts/attractions/silver-bullet",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Thrill Level 5 Location Knott's Berry Farm Accessibility Attraction Accessibility Information Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 sec Related Rides Sol Spin 54 ” "
+ },
+ "knotts-berry-farm|Sierra Sidewinder": {
+  "url": "https://www.sixflags.com/knotts/attractions/sierra-sidewinder",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 42” Thrill Level 4 Location Knott's Berry Farm Accessibility Attraction Accessibility Information Top Speed 0 Mph Ride Duration 0 sec Related Rides Wipeout 48 ” M"
+ },
+ "knotts-berry-farm|Pony Express": {
+  "url": "https://www.sixflags.com/knotts/attractions/pony-express",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 4 Location Knott's Berry Farm Accessibility Attraction Accessibility Information Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 sec Related Rides Wipeout 48 ” M"
+ },
+ "knotts-berry-farm|Coast Rider": {
+  "url": "https://www.sixflags.com/knotts/attractions/coast-rider",
+  "min": "54",
+  "acc_min": "44",
+  "acc_max": "54",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 54” Min Height Accompanied 44” Thrill Level 4 Location Knott's Berry Farm Accessibility Attraction Accessibility Information Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 sec L"
+ },
+ "knotts-berry-farm|HangTime": {
+  "url": "https://www.sixflags.com/knotts/attractions/hangtime",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "77",
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Max Height 77” Thrill Level 5 Location Knott's Berry Farm Accessibility Attraction Accessibility Information Special Features Steepest Drop In California – 96 Degrees Top Speed 0 Mph Le"
+ },
+ "knotts-berry-farm|Snoopy’s Tenderpaw Twister Coaster": {
+  "url": "https://www.sixflags.com/knotts/attractions/snoopys-tenderpaw-twister-coaster",
+  "min": "42",
+  "acc_min": "36",
+  "acc_max": "42",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 42” Min Height Accompanied 36” Thrill Level 4 Location Knott's Berry Farm Accessibility Attraction Accessibility Information Related Rides Wipeout 48 ” MIN. Height Requirement 4 Thrill Leve"
+ },
+ "six-flags-great-adventure|Barrels O' Fun": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/barrels-o-fun",
+  "min": "59",
+  "acc_min": "48",
+  "acc_max": "59",
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 59” Min Height Accompanied 48” Location Shoreline Pier Accessibility Attraction Accessibility Information Related Rides Blue Lagoon 52 ” MIN. Height Requirement 4 Thrill Level Hypno Twister"
+ },
+ "six-flags-great-adventure|Superman - Ultimate Flight": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/superman-ultimate-flight",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Thrill Level 5 Location Boardwalk Accessibility Attraction Accessibility Information Manufacturer B & M Top Speed 0 Mph Length 0 Ft Ride Duration 0 sec Loading... Previous slide Next sl"
+ },
+ "six-flags-great-adventure|El Toro": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/el-toro",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Location Plaza Del Carnaval Accessibility Attraction Accessibility Information Manufacturer Intamin Top Speed 0 Mph Length 0 Ft Ride Duration 0 sec Loading... Previous sl"
+ },
+ "six-flags-great-adventure|Dark Knight": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/the-dark-knight-coaster",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 42” Thrill Level 4 Location Movietown Accessibility Attraction Accessibility Information Related Rides Blue Lagoon 52 ” MIN. Height Requirement 4 Thrill Level Hyp"
+ },
+ "six-flags-great-adventure|Joker": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/the-joker",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "77",
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Max Height 77” Thrill Level 5 Location Lakefront Accessibility Attraction Accessibility Information Related Rides Hurricane Mountain 48 ” MIN. Height Requirement 5 Thrill Level Tornado "
+ },
+ "six-flags-great-adventure|Jersey Devil Coaster": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/jersey-devil-coaster",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2021",
+  "ctx": "Min Height 48” Thrill Level 5 Location The Pine Barrens Accessibility Attraction Accessibility Information Introduced 2021 Manufacturer Rocky Mountain Construction Top Speed 0 Mph Length 0 Ft Elevatio"
+ },
+ "six-flags-great-adventure|Lil' Devil Coaster": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/lil-devil-coaster",
+  "min": "42",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "3",
+  "introduced": "2021",
+  "ctx": "Min Height 42” Thrill Level 3 Location Jr. Thrillseekers Accessibility Attraction Accessibility Information Introduced 2021 Manufacturer Zamperla Length 0 Ft Elevation 0 Ft Ride Duration 0 sec Loading"
+ },
+ "six-flags-great-adventure|Flash: Vertical Velocity": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/the-flash-vertical-velocity",
+  "min": "56",
+  "acc_min": "48",
+  "acc_max": "56",
+  "max": null,
+  "thrill": "5",
+  "introduced": "2025",
+  "ctx": "Min Height 56” Min Height Accompanied 48” Thrill Level 5 Location Movietown Accessibility Attraction Accessibility Information Introduced 2025 Manufacturer Vekoma Top Speed 0 Mph Related Rides Hurrica"
+ },
+ "six-flags-great-adventure|Batman The Ride": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/batman-the-ride",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Thrill Level 5 Location Movietown Accessibility Attraction Accessibility Information Manufacturer B & M Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 sec Loading... Previou"
+ },
+ "six-flags-great-adventure|Skull Mountain": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/skull-mountain",
+  "min": "48",
+  "acc_min": "44",
+  "acc_max": "48",
+  "max": "77",
+  "thrill": "3",
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 44” Max Height 77” Thrill Level 3 Location Adventure Alley Accessibility Attraction Accessibility Information Manufacturer Intamin Top Speed 0 Mph Length 0 Ft Ele"
+ },
+ "six-flags-great-adventure|Runaway Mine Train": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/runaway-train",
+  "min": "44",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 44” Thrill Level 4 Location Frontier Adventures Accessibility Attraction Accessibility Information Manufacturer Arrow Dynamics Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 sec"
+ },
+ "six-flags-great-adventure|Medusa": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/medusa",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Thrill Level 5 Location Frontier Adventures Accessibility Attraction Accessibility Information Manufacturer Bolliger and Mabillard Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Durati"
+ },
+ "six-flags-great-adventure|Harley Quinn Crazy Train": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/harley-quinn-crazy-train",
+  "min": "48",
+  "acc_min": "41",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "3",
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 41” Thrill Level 3 Location Lakefront Accessibility Attraction Accessibility Information Manufacturer Zierer Top Speed 0 Mph Length 0 Ft Ride Duration 0 sec Loadi"
+ },
+ "six-flags-great-adventure|Nitro": {
+  "url": "https://www.sixflags.com/greatadventure/attractions/nitro",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Thrill Level 5 Location The Pine Barrens Accessibility Attraction Accessibility Information Manufacturer B & M Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 sec Loading... "
+ }
+}
