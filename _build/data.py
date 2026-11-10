@@ -65,7 +65,7 @@ PARKS = [
  # Added 10 Nov 2026 (expansion batch 4)
  dict(slug="six-flags-darien-lake", name="Six Flags Darien Lake", short="Six Flags Darien Lake", loc="Darien Center, New York", state="NY", country="US", official="https://www.sixflags.com/darienlake", group="Six Flags"),
  dict(slug="frontier-city", name="Frontier City", short="Frontier City", loc="Oklahoma City, Oklahoma", state="OK", country="US", official="https://www.sixflags.com/frontiercity", group="Six Flags"),
- dict(slug="mid-america-adventure", name="Mid America Adventure", short="Mid America Adventure", loc="Eureka, Missouri", state="MO", country="US", official="https://midamericaadventure.enchantedparks.com/", group="Enchanted Parks"),
+ dict(slug="mid-america-adventure", name="Mid America Adventure", short="Mid America Adventure", loc="Eureka, Missouri", state="MO", country="US", official="https://midamericaadventure.enchantedparks.com/", group="Enchanted Parks", former="Six Flags St. Louis", former_note="sixflags.com/stlouis now redirects to the park's Enchanted Parks website, and RCDB lists the park as Mid America Adventure"),
  dict(slug="lake-compounce", name="Lake Compounce", short="Lake Compounce", loc="Bristol, Connecticut", state="CT", country="US", official="https://www.lakecompounce.com/", group="Palace Entertainment"),
 ]
 ORIGINAL = {"cedar-point", "six-flags-magic-mountain", "magic-kingdom", "epic-universe", "islands-of-adventure", "universal-studios-florida", "busch-gardens-tampa-bay"}
