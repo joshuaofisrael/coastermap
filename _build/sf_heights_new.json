@@ -388,5 +388,855 @@
   "thrill": "5",
   "introduced": null,
   "ctx": "Min Height 54” Thrill Level 5 Location The Pine Barrens Accessibility Attraction Accessibility Information Manufacturer B & M Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 sec Loading... "
+ },
+ "six-flags-great-america|Dark Knight": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/dark-knight-coaster",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "4",
+  "introduced": "2008",
+  "ctx": "Min Height 48” Min Height Accompanied 42” Max Height Accompanied 48” Thrill Level 4 Location Orleans Place Accessibility Attraction Accessibility Information Introduced 2008 Manufacturer Mack Rides Gm"
+ },
+ "six-flags-great-america|Little Dipper": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/little-dipper",
+  "min": "44",
+  "acc_min": "36",
+  "acc_max": "44",
+  "max": null,
+  "thrill": "2",
+  "introduced": "1950",
+  "ctx": "Min Height 44” Min Height Accompanied 36” Max Height Accompanied 44” Thrill Level 2 Location Yukon Territory Accessibility Attraction Accessibility Information Introduced 1950 Manufacturer PTC Top Spe"
+ },
+ "six-flags-great-america|Goliath": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/goliath",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2014",
+  "ctx": "Min Height 48” Thrill Level 5 Location County Fair Accessibility Attraction Accessibility Information Introduced 2014 Manufacturer Rocky Mountain Construction Top Speed 0 Mph Length 0 Ft Elevation 0 F"
+ },
+ "six-flags-great-america|X-Flight": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/x-flight",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "2012",
+  "ctx": "Min Height 52” Max Height 78” Thrill Level 5 Location County Fair Accessibility Attraction Accessibility Information Introduced 2012 Manufacturer Bolliger & Mabillard Top Speed 0 Mph Length 0 Ft Eleva"
+ },
+ "six-flags-great-america|Joker": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/joker",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "77",
+  "thrill": "5",
+  "introduced": "2017",
+  "ctx": "Min Height 48” Max Height 77” Thrill Level 5 Location DC UNIVERSE Accessibility Attraction Accessibility Information Introduced 2017 Manufacturer S and S Worldwide Top Speed 0 Mph Length 0 Ft Elevatio"
+ },
+ "six-flags-great-america|Maxx Force": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/maxx-force",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2019",
+  "ctx": "Min Height 48” Thrill Level 5 Location Carousel Plaza Accessibility Attraction Accessibility Information Introduced 2019 Manufacturer S&S Top Speed 0 Mph Length 0 Ft Loading... Previous slide Next sli"
+ },
+ "six-flags-great-america|Wrath of Rakshasa": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/wrath-of-rakshasa",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": "2025",
+  "ctx": "Min Height 48” Max Height 78” Thrill Level 5 Location County Fair Accessibility Attraction Accessibility Information Introduced 2025 Special Features Goes Upside Down Manufacturer Bolliger & Mabillard"
+ },
+ "six-flags-great-america|Demon": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/demon",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1976",
+  "ctx": "Min Height 48” Thrill Level 5 Location County Fair Accessibility Attraction Accessibility Information Introduced 1976 Manufacturer Arrow Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Loading... Previous "
+ },
+ "six-flags-great-america|Batman The Ride": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/batman-ride",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1992",
+  "ctx": "Min Height 54” Thrill Level 5 Location DC UNIVERSE Accessibility Attraction Accessibility Information Introduced 1992 Manufacturer Bolliger & Mabillard Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Loadi"
+ },
+ "six-flags-great-america|American Eagle": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/american-eagle",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1981",
+  "ctx": "Min Height 48” Thrill Level 4 Location County Fair Accessibility Attraction Accessibility Information Introduced 1981 Manufacturer Intamin Top Speed 0 Mph Length 0 Ft Loading... Previous slide Next sl"
+ },
+ "six-flags-great-america|Viper": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/viper",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1995",
+  "ctx": "Min Height 48” Thrill Level 4 Location Southwest Territory Accessibility Attraction Accessibility Information Introduced 1995 Manufacturer Six Flags Theme Parks Inc. Top Speed 0 Mph Length 0 Ft Elevat"
+ },
+ "six-flags-great-america|Whizzer": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/whizzer",
+  "min": "42",
+  "acc_min": "36",
+  "acc_max": "42",
+  "max": null,
+  "thrill": "3",
+  "introduced": "1976",
+  "ctx": "Min Height 42” Min Height Accompanied 36” Max Height Accompanied 42” Thrill Level 3 Location Hometown Square Accessibility Attraction Accessibility Information Introduced 1976 Manufacturer Schwarzkopf"
+ },
+ "six-flags-great-america|Sprocket Rockets": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/sprocket-rockets",
+  "min": "42",
+  "acc_min": "36",
+  "acc_max": "42",
+  "max": null,
+  "thrill": "2",
+  "introduced": "1998",
+  "ctx": "Min Height 42” Min Height Accompanied 36” Thrill Level 2 Location Camp Cartoon Accessibility Attraction Accessibility Information Introduced 1998 Manufacturer Vekoma Top Speed 0 Mph Length 0 Ft Elevat"
+ },
+ "six-flags-great-america|Raging Bull": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/raging-bull",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1999",
+  "ctx": "Min Height 54” Thrill Level 5 Location Southwest Territory Accessibility Attraction Accessibility Information Introduced 1999 Manufacturer Bolliger & Mabillard Length 0 Ft Elevation 0 Ft Ride Duration"
+ },
+ "six-flags-great-america|Flash: Vertical Velocity": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/flash-vertical-velocity",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "80",
+  "thrill": "5",
+  "introduced": "2001",
+  "ctx": "Min Height 52” Max Height 80” Thrill Level 5 Location DC UNIVERSE Accessibility Attraction Accessibility Information Introduced 2001 Manufacturer Intamin Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Pre"
+ },
+ "six-flags-great-america|Superman - Ultimate Flight": {
+  "url": "https://www.sixflags.com/greatamerica/attractions/superman-ultimate-flight",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2003",
+  "ctx": "Min Height 54” Thrill Level 5 Location Orleans Place Accessibility Attraction Accessibility Information Introduced 2003 Manufacturer Bolliger & Mabillard Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Rid"
+ },
+ "carowinds|Carolina Cyclone": {
+  "url": "https://www.sixflags.com/carowinds/attractions/carolina-cyclone",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1980",
+  "ctx": "Min Height 48” Thrill Level 5 Location Carowinds Accessibility Attraction Accessibility Information Introduced 1980 Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Loading... Related Rides Surf Clu"
+ },
+ "carowinds|Woodstock Express": {
+  "url": "https://www.sixflags.com/carowinds/attractions/woodstock-express",
+  "min": "46",
+  "acc_min": "40",
+  "acc_max": "46",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 46” Min Height Accompanied 40” Thrill Level 4 Location Carowinds Accessibility Attraction Accessibility Information Related Rides Hover & Dodge 48 ” MIN. Height Requirement 4 Thrill Level R"
+ },
+ "carowinds|Carolina Goldrusher": {
+  "url": "https://www.sixflags.com/carowinds/attractions/carolina-goldrusher",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1973",
+  "ctx": "Min Height 48” Thrill Level 4 Location Carowinds Accessibility Attraction Accessibility Information Introduced 1973 Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Loading... Related Rides Hover & "
+ },
+ "carowinds|Hurler": {
+  "url": "https://www.sixflags.com/carowinds/attractions/hurler",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1994",
+  "ctx": "Min Height 48” Thrill Level 4 Location Carowinds Accessibility Attraction Accessibility Information Introduced 1994 Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 sec Loading... Related Ri"
+ },
+ "carowinds|Vortex": {
+  "url": "https://www.sixflags.com/carowinds/attractions/vortex",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1992",
+  "ctx": "Min Height 54” Thrill Level 5 Location Carowinds Accessibility Attraction Accessibility Information Introduced 1992 Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Loading... Related Rides Surf Clu"
+ },
+ "carowinds|Wilderness Run": {
+  "url": "https://www.sixflags.com/carowinds/attractions/wilderness-run",
+  "min": "36",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "2",
+  "introduced": null,
+  "ctx": "Min Height 36” Thrill Level 2 Location Carowinds Accessibility Attraction Accessibility Information Related Rides Kite Eating Tree 36 ” MIN. Height Requirement 2 Thrill Level Gyro Force 42 ” MIN. Heig"
+ },
+ "carowinds|Afterburn": {
+  "url": "https://www.sixflags.com/carowinds/attractions/afterburn",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1999",
+  "ctx": "Min Height 54” Thrill Level 5 Location Carowinds Accessibility Attraction Accessibility Information Introduced 1999 Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Loading... Related Rides Thunder "
+ },
+ "carowinds|Flying Cobras": {
+  "url": "https://www.sixflags.com/carowinds/attractions/the-flying-cobras",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "80",
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Max Height 80” Thrill Level 5 Location Carowinds Accessibility Attraction Accessibility Information Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Loading... Related Rides Surf Club"
+ },
+ "carowinds|Thunder Striker": {
+  "url": "https://www.sixflags.com/carowinds/attractions/thunder-striker",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Thrill Level 5 Location Carowinds Accessibility Attraction Accessibility Information Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Loading... Related Rides Surf Club Harbor 52 ” MI"
+ },
+ "carowinds|Fury 325": {
+  "url": "https://www.sixflags.com/carowinds/attractions/fury-325",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Thrill Level 5 Location Carowinds Accessibility Attraction Accessibility Information Special Features North America’s Tallest, Fastest, Longest Giga Coaster Top Speed 0 Mph Length 0 Ft "
+ },
+ "carowinds|Copperhead Strike": {
+  "url": "https://www.sixflags.com/carowinds/attractions/copperhead-strike",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 52” Thrill Level 5 Location Carowinds Accessibility Attraction Accessibility Information Special Features Double Launch Coaster Manufacturer MACK Rides GmbH & Co KG, Waldkirch, Germany Top "
+ },
+ "carowinds|Snoopy’s Racing Railway": {
+  "url": "https://www.sixflags.com/carowinds/attractions/snoopys-racing-railway",
+  "min": "48",
+  "acc_min": "36",
+  "acc_max": "48",
+  "max": "77",
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 36” Max Height 77” Thrill Level 4 Location Carowinds Accessibility Attraction Accessibility Information Related Rides Hover & Dodge 48 ” MIN. Height Requirement 4"
+ },
+ "carowinds|Ricochet": {
+  "url": "https://www.sixflags.com/carowinds/attractions/ricochet",
+  "min": "54",
+  "acc_min": "44",
+  "acc_max": "54",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 54” Min Height Accompanied 44” Thrill Level 4 Location Carowinds Accessibility Attraction Accessibility Information Loading... Related Rides Hover & Dodge 48 ” MIN. Height Requirement 4 Thr"
+ },
+ "carowinds|Kiddy Hawk": {
+  "url": "https://www.sixflags.com/carowinds/attractions/kiddy-hawk",
+  "min": "44",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "76",
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 44” Max Height 76” Thrill Level 4 Location Carowinds Accessibility Attraction Accessibility Information Top Speed 0 Mph Elevation 0 Ft Related Rides Hover & Dodge 48 ” MIN. Height Requireme"
+ },
+ "canadas-wonderland|DareDeviler": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/the-daredeviler",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 52” Max Height 78” Location Canada's Wonderland Accessibility Attraction Accessibility Information Previous slide Next slide Related Rides Psyclone 54 ” MIN. Height Requirement 5 Thrill Lev"
+ },
+ "canadas-wonderland|Dragon Fyre": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/dragon-fyre",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 48” Location Canada's Wonderland Accessibility Attraction Accessibility Information 0 Ride Height (ft) 0 Ride Speed (km/h) Loading... Related Rides Psyclone 54 ” MIN. Height Requirement 5 T"
+ },
+ "canadas-wonderland|Mighty Canadian Minebuster": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/mighty-canadian-minebuster",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 48” Location Canada's Wonderland Accessibility Attraction Accessibility Information Loading... Related Rides Psyclone 54 ” MIN. Height Requirement 5 Thrill Level SlingShot 44 ” MIN. Height "
+ },
+ "canadas-wonderland|Wilde Beast": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/wilde-beast",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 48” Location Canada's Wonderland Accessibility Attraction Accessibility Information 0 Ride Height (ft) 0 Top Speed (km/h) Loading... Related Rides Krachenwagen 54 ” MIN. Height Requirement "
+ },
+ "canadas-wonderland|Ghoster Coaster": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/ghoster-coaster",
+  "min": "46",
+  "acc_min": "40",
+  "acc_max": "46",
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 46” Min Height Accompanied 40” Location Canada's Wonderland Accessibility Attraction Accessibility Information Loading... Related Rides Krachenwagen 54 ” MIN. Height Requirement 4 Thrill Le"
+ },
+ "canadas-wonderland|Thunder Run": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/thunder-run",
+  "min": "46",
+  "acc_min": "40",
+  "acc_max": "46",
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 46” Min Height Accompanied 40” Location Canada's Wonderland Accessibility Attraction Accessibility Information Loading... Related Rides Krachenwagen 54 ” MIN. Height Requirement 4 Thrill Le"
+ },
+ "canadas-wonderland|Bat": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/the-bat",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 48” Location Canada's Wonderland Accessibility Attraction Accessibility Information 0 Ride Height (ft) 0 Ride Speed (km/h) Loading... Related Rides Psyclone 54 ” MIN. Height Requirement 5 T"
+ },
+ "canadas-wonderland|Vortex": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/vortex",
+  "min": "42",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 42” Location Canada's Wonderland Accessibility Attraction Accessibility Information 0 Ride Height (ft) 0 Top Speed (km/h) Related Rides Krachenwagen 54 ” MIN. Height Requirement 4 Thrill Le"
+ },
+ "canadas-wonderland|Taxi Jam": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/taxi-jam",
+  "min": "36",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 36” Location Canada's Wonderland Accessibility Attraction Accessibility Information Related Rides Beagle Brigade Airfield 36 ” MIN. Height Requirement 2 Thrill Level Joe Cool's Dodgem Schoo"
+ },
+ "canadas-wonderland|Fly": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/the-fly",
+  "min": "54",
+  "acc_min": "44",
+  "acc_max": "54",
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 54” Min Height Accompanied 44” Location Canada's Wonderland Accessibility Attraction Accessibility Information Related Rides Krachenwagen 54 ” MIN. Height Requirement 4 Thrill Level Drop To"
+ },
+ "canadas-wonderland|Silver Streak": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/silver-streak",
+  "min": "44",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "76",
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 44” Max Height 76” Location Canada's Wonderland Accessibility Attraction Accessibility Information Loading... Related Rides Krachenwagen 54 ” MIN. Height Requirement 4 Thrill Level Drop Tow"
+ },
+ "canadas-wonderland|Backlot Stunt Coaster": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/backlot-stunt-coaster",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 48” Location Canada's Wonderland Accessibility Attraction Accessibility Information Loading... Related Rides Psyclone 54 ” MIN. Height Requirement 5 Thrill Level SlingShot 44 ” MIN. Height "
+ },
+ "canadas-wonderland|Behemoth": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/behemoth",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "80",
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 54” Max Height 80” Location Canada's Wonderland Accessibility Attraction Accessibility Information 0 Ride Height (ft) 0 Ride Speed (km/h) 0 Track Length (ft) Shop the Behemoth Collection Sh"
+ },
+ "canadas-wonderland|Leviathan": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/leviathan",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "80",
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 54” Max Height 80” Location Canada's Wonderland Accessibility Attraction Accessibility Information 0 Ride Height (ft) 0 Ride Speed (km/h) Shop the Leviathan Collection Gear up for the ultim"
+ },
+ "canadas-wonderland|Wonder Mountain's Guardian": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/wonder-mountains-guardian",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 42” Location Canada's Wonderland Accessibility Attraction Accessibility Information Loading... Related Rides Krachenwagen 54 ” MIN. Height Requirement 4 Thrill Le"
+ },
+ "canadas-wonderland|Yukon Striker": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/yukon-striker",
+  "min": "52",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "77",
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 52” Max Height 77” Location Canada's Wonderland Accessibility Attraction Accessibility Information 0 Ride Height (ft) 0 Ride Speed (km/h) 0 Ride Length (ft) Fast Lane Skip the line and get "
+ },
+ "canadas-wonderland|Snoopy's Racing Railway": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/snoopys-racing-railway",
+  "min": "48",
+  "acc_min": "36",
+  "acc_max": "48",
+  "max": null,
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 36” Location Canada's Wonderland Accessibility Attraction Accessibility Information Related Rides Krachenwagen 54 ” MIN. Height Requirement 4 Thrill Level Drop To"
+ },
+ "canadas-wonderland|AlpenFury": {
+  "url": "https://www.sixflags.com/canadaswonderland/attractions/alpenfury",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "81",
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 54” Max Height 81” Location Canada's Wonderland Accessibility Attraction Accessibility Information Loading... Record Breaking AlpenFury is a dual-launch roller coaster and will be the longe"
+ },
+ "six-flags-over-texas|Judge Roy Scream": {
+  "url": "https://www.sixflags.com/overtexas/attractions/judge-roy-scream",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1980",
+  "ctx": "Min Height 48” Thrill Level 4 Location GOTHAM CITY Accessibility Attraction Accessibility Information Introduced 1980 Manufacturer Marvin M. Black Co. Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride D"
+ },
+ "six-flags-over-texas|Runaway Mine Train": {
+  "url": "https://www.sixflags.com/overtexas/attractions/runaway-mine-train",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "3",
+  "introduced": "1966",
+  "ctx": "Min Height 48” Thrill Level 3 Location Boomtown Accessibility Attraction Accessibility Information Introduced 1966 Manufacturer Arrow Development Company Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Rid"
+ },
+ "six-flags-over-texas|Runaway Mountain": {
+  "url": "https://www.sixflags.com/overtexas/attractions/runaway-mountain",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1996",
+  "ctx": "Min Height 48” Thrill Level 4 Location France Accessibility Attraction Accessibility Information Introduced 1996 Manufacturer Premier Rides Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Loading.."
+ },
+ "six-flags-over-texas|Mini Mine Train": {
+  "url": "https://www.sixflags.com/overtexas/attractions/mini-mine-train",
+  "min": "42",
+  "acc_min": "36",
+  "acc_max": "42",
+  "max": null,
+  "thrill": "2",
+  "introduced": "1969",
+  "ctx": "Min Height 42” Min Height Accompanied 36” Thrill Level 2 Location Boomtown Accessibility Attraction Accessibility Information Introduced 1969 Manufacturer Arrow Development Company Top Speed 0 Mph Len"
+ },
+ "six-flags-over-texas|Mr. Freeze": {
+  "url": "https://www.sixflags.com/overtexas/attractions/mr-freeze",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 54” Thrill Level 4 Location GOTHAM CITY Accessibility Attraction Accessibility Information Manufacturer Premier Rides Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 sec Loading."
+ },
+ "six-flags-over-texas|Batman The Ride": {
+  "url": "https://www.sixflags.com/overtexas/attractions/batman-ride",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1999",
+  "ctx": "Min Height 54” Thrill Level 5 Location GOTHAM CITY Accessibility Attraction Accessibility Information Introduced 1999 Manufacturer Bolliger & Mabillard Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride "
+ },
+ "six-flags-over-texas|Titan": {
+  "url": "https://www.sixflags.com/overtexas/attractions/titan",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "2001",
+  "ctx": "Min Height 48” Thrill Level 5 Location Texas Accessibility Attraction Accessibility Information Introduced 2001 Manufacturer Giovanola Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 sec Lo"
+ },
+ "six-flags-over-texas|Wile E. Coyote's Grand Canyon Blaster": {
+  "url": "https://www.sixflags.com/overtexas/attractions/wile-e-coyotes-grand-canyon-blaster",
+  "min": "42",
+  "acc_min": "36",
+  "acc_max": "42",
+  "max": null,
+  "thrill": "2",
+  "introduced": "2001",
+  "ctx": "Min Height 42” Min Height Accompanied 36” Thrill Level 2 Location Bugs Bunny Boomtown Accessibility Attraction Accessibility Information Introduced 2001 Manufacturer Chance Rides, Inc. Top Speed 0 Mph"
+ },
+ "six-flags-over-texas|Pandemonium": {
+  "url": "https://www.sixflags.com/overtexas/attractions/pandemonium",
+  "min": "47",
+  "acc_min": "42",
+  "acc_max": "47",
+  "max": null,
+  "thrill": "4",
+  "introduced": "2008",
+  "ctx": "Min Height 47” Min Height Accompanied 42” Thrill Level 4 Location Boomtown Accessibility Attraction Accessibility Information Introduced 2008 Manufacturer Gerstlauer of Germany Top Speed 0 Mph Length "
+ },
+ "six-flags-over-texas|New Texas Giant": {
+  "url": "https://www.sixflags.com/overtexas/attractions/new-texas-giant",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": "1990",
+  "ctx": "Min Height 48” Thrill Level 5 Location Texas Accessibility Attraction Accessibility Information Introduced 1990 Manufacturer Dinn Corporation & Rocky Mountain Construction Top Speed 0 Mph Length 0 Ft "
+ },
+ "six-flags-over-texas|Joker": {
+  "url": "https://www.sixflags.com/overtexas/attractions/joker",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "77",
+  "thrill": "5",
+  "introduced": "2017",
+  "ctx": "Min Height 48” Max Height 77” Thrill Level 5 Location GOTHAM CITY Accessibility Attraction Accessibility Information Introduced 2017 Manufacturer S&S Worldwide Loading... Previous slide Next slide Rel"
+ },
+ "six-flags-over-texas|Aquaman: Power Wave": {
+  "url": "https://www.sixflags.com/overtexas/attractions/aquaman-power-wave",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Location USA Accessibility Attraction Accessibility Information Manufacturer Mack Rides Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Loading... Previous slide Next slide Re"
+ },
+ "six-flags-over-texas|Tormenta Rampaging Run": {
+  "url": "https://www.sixflags.com/overtexas/attractions/tormenta-rampaging-run",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": null,
+  "introduced": null,
+  "ctx": "Min Height 48” Max Height 78” Location Mexico & Spain Accessibility Attraction Accessibility Information Tormenta Rampaging Run Now Open Get Unlimited Rides and Exclusive Access to Tormenta with a Mem"
+ },
+ "six-flags-over-georgia|Blue Hawk": {
+  "url": "https://www.sixflags.com/overgeorgia/attractions/blue-hawk",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1992",
+  "ctx": "Min Height 48” Min Height Accompanied 48” Thrill Level 4 Location Lickskillet Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1992 Manufacturer Vekoma Top "
+ },
+ "six-flags-over-georgia|Great American Scream Machine": {
+  "url": "https://www.sixflags.com/overgeorgia/attractions/great-american-scream-machine",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1973",
+  "ctx": "Min Height 48” Min Height Accompanied 48” Thrill Level 4 Location Lickskillet Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1973 Manufacturer Philadelphi"
+ },
+ "six-flags-over-georgia|Dahlonega Mine Train": {
+  "url": "https://www.sixflags.com/overgeorgia/attractions/dahlonega-mine-train",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1967",
+  "ctx": "Min Height 48” Min Height Accompanied 48” Thrill Level 4 Location Peachtree Square Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1967 Manufacturer Arrow "
+ },
+ "six-flags-over-georgia|Batman The Ride": {
+  "url": "https://www.sixflags.com/overgeorgia/attractions/batman-the-ride",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1997",
+  "ctx": "Min Height 54” Min Height Accompanied 54” Thrill Level 4 Location GOTHAM CITY Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1997 Manufacturer Bolliger & "
+ },
+ "six-flags-over-georgia|Georgia Scorcher": {
+  "url": "https://www.sixflags.com/overgeorgia/attractions/georgia-scorcher",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1999",
+  "ctx": "Min Height 54” Min Height Accompanied 54” Thrill Level 4 Location Georgia Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1999 Manufacturer Bolliger & Mabi"
+ },
+ "six-flags-over-georgia|Superman - Ultimate Flight": {
+  "url": "https://www.sixflags.com/overgeorgia/attractions/superman-ultimate-flight",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "2002",
+  "ctx": "Min Height 54” Min Height Accompanied 54” Thrill Level 4 Location Metropolis Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 2002 Manufacturer Bolliger & M"
+ },
+ "six-flags-over-georgia|Joker Funhouse Coaster": {
+  "url": "https://www.sixflags.com/overgeorgia/attractions/joker-funhouse",
+  "min": "42",
+  "acc_min": "36",
+  "acc_max": "42",
+  "max": null,
+  "thrill": "4",
+  "introduced": "2016",
+  "ctx": "Min Height 42” Min Height Accompanied 36” Max Height Accompanied 42” Thrill Level 4 Location DC Super Friends Accessibility Exclusive access for people with disabilities and reduced mobility. Introduc"
+ },
+ "six-flags-over-georgia|Goliath": {
+  "url": "https://www.sixflags.com/overgeorgia/attractions/goliath",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "2006",
+  "ctx": "Min Height 54” Min Height Accompanied 54” Thrill Level 4 Location USA Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 2006 Manufacturer Bolliger & Mabillar"
+ },
+ "six-flags-over-georgia|Dare Devil Dive": {
+  "url": "https://www.sixflags.com/overgeorgia/attractions/dare-devil-dive",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "2011",
+  "ctx": "Min Height 48” Min Height Accompanied 48” Thrill Level 4 Location USA Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 2011 Manufacturer Gerstlauer Top Spee"
+ },
+ "six-flags-over-georgia|Twisted Cyclone": {
+  "url": "https://www.sixflags.com/overgeorgia/attractions/twisted-cyclone",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "2018",
+  "ctx": "Min Height 48” Min Height Accompanied 48” Thrill Level 4 Location Coastal Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 2018 Manufacturer Rocky Mountain "
+ },
+ "six-flags-over-georgia|Riddler Mindbender": {
+  "url": "https://www.sixflags.com/overgeorgia/attractions/the-riddler-mindbender",
+  "min": "42",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1978",
+  "ctx": "Min Height 42” Min Height Accompanied 42” Thrill Level 4 Location GOTHAM CITY Accessibility Exclusive access for people with disabilities and reduced mobility. Introduced 1978 Manufacturer Anton Schwa"
+ },
+ "kings-dominion|Racer 75": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/racer-75",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 4 Location Kings Dominion Accessibility Attraction Accessibility Information Loading... Related Rides White Water Canyon 46 ” MIN. Height Requirement 4 Thrill Level Woodsto"
+ },
+ "kings-dominion|Woodstock Express": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/woodstock-express",
+  "min": "46",
+  "acc_min": "40",
+  "acc_max": "46",
+  "max": null,
+  "thrill": "4",
+  "introduced": "1974",
+  "ctx": "Min Height 46” Min Height Accompanied 40” Thrill Level 4 Location Kings Dominion Accessibility Attraction Accessibility Information Introduced 1974 Related Rides White Water Canyon 46 ” MIN. Height Re"
+ },
+ "kings-dominion|Grizzly": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/grizzly",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": "1982",
+  "ctx": "Min Height 48” Thrill Level 4 Location Kings Dominion Accessibility Attraction Accessibility Information Introduced 1982 Top Speed 0 Mph Ride Duration 0 sec Related Rides White Water Canyon 46 ” MIN. "
+ },
+ "kings-dominion|Flight of Fear": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/flight-of-fear",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Thrill Level 5 Location Kings Dominion Accessibility Attraction Accessibility Information Related Rides Hurricane Heights 48 ” MIN. Height Requirement 5 Thrill Level Thunder Falls 48 ” "
+ },
+ "kings-dominion|Reptilian": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/reptilian",
+  "min": "46",
+  "acc_min": "40",
+  "acc_max": "46",
+  "max": "78",
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 46” Min Height Accompanied 40” Max Height 78” Thrill Level 4 Location Kings Dominion Accessibility Attraction Accessibility Information Related Rides White Water Canyon 46 ” MIN. Height Req"
+ },
+ "kings-dominion|Great Pumpkin Coaster": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/great-pumpkin-coaster",
+  "min": "36",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "2",
+  "introduced": null,
+  "ctx": "Min Height 36” Thrill Level 2 Location Kings Dominion Accessibility Attraction Accessibility Information Related Rides Flying Ace Balloon Race 42 ” MIN. Height Requirement 2 Thrill Level Snoopy's Rock"
+ },
+ "kings-dominion|Apple Zapple": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/apple-zapple",
+  "min": "54",
+  "acc_min": "44",
+  "acc_max": "54",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 54” Min Height Accompanied 44” Thrill Level 4 Location Kings Dominion Accessibility Attraction Accessibility Information Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Related Rides Whi"
+ },
+ "kings-dominion|Backlot Stunt Coaster": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/backlot-stunt-coaster",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Location Kings Dominion Accessibility Attraction Accessibility Information Top Speed 0 Mph Length 0 Ft Ride Duration 0 sec Related Rides Hurricane Heights 48 ” MIN. Heigh"
+ },
+ "kings-dominion|Dominator": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/dominator",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Thrill Level 5 Location Kings Dominion Accessibility Attraction Accessibility Information Top Speed 0 Mph Length 0 Ft Ride Duration 0 sec Related Rides Hurricane Heights 48 ” MIN. Heigh"
+ },
+ "kings-dominion|Pantherian": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/pantherian",
+  "min": "54",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "78",
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 54” Max Height 78” Thrill Level 5 Location Kings Dominion Accessibility Attraction Accessibility Information Top Speed 0 Mph Elevation 0 Ft Ride Duration 0 sec Loading... Related Rides Hurr"
+ },
+ "kings-dominion|Twisted Timbers": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/twisted-timbers",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Location Kings Dominion Accessibility Attraction Accessibility Information Top Speed 0 Mph Elevation 0 Ft A Wooden Coaster with a Twist of Steel Steel and wood combine fo"
+ },
+ "kings-dominion|Tumbili": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/tumbili",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "77",
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Max Height 77” Thrill Level 5 Location Kings Dominion Accessibility Attraction Accessibility Information Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Loading... Related Rides Hurricane He"
+ },
+ "kings-dominion|Rapterra": {
+  "url": "https://www.sixflags.com/kingsdominion/attractions/rapterra",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Location Kings Dominion Accessibility Attraction Accessibility Information Manufacturer Bolliger & Mabillard Top Speed 0 Mph Length 0 Ft Elevation 0 Ft Ride Duration 0 se"
  }
 }

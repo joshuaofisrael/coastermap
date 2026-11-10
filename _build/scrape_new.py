@@ -7,7 +7,8 @@ def get(u):
         except Exception as e: err=e; time.sleep(3)
     raise err
 def tx(s): return H.unescape(re.sub('<[^>]+>','',s)).strip()
-NEW={'epcot':15503,'hollywood-studios':4735,'animal-kingdom':5109,'seaworld-orlando':4746,'kings-island':4540,'busch-gardens-williamsburg':4548,'hersheypark':4545,'knotts-berry-farm':4546,'dollywood':4593,'six-flags-great-adventure':4534}
+NEW={'epcot':15503,'hollywood-studios':4735,'animal-kingdom':5109,'seaworld-orlando':4746,'kings-island':4540,'busch-gardens-williamsburg':4548,'hersheypark':4545,'knotts-berry-farm':4546,'dollywood':4593,'six-flags-great-adventure':4534,
+ 'six-flags-great-america':4530,'carowinds':4542,'canadas-wonderland':4539,'six-flags-over-texas':4531,'six-flags-over-georgia':4535,'kings-dominion':4544,'disneyland':4571,'disney-california-adventure':4783,'silver-dollar-city':4579}
 d=json.load(open('rcdb.json'))
 for slug in sys.argv[1:] or NEW:
     pid=NEW[slug]

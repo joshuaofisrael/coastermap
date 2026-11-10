@@ -11,6 +11,8 @@ SWO = ("SeaWorld Orlando, Roller Coasters page", "https://seaworld.com/orlando/r
 def sw(slug, title): return (f"SeaWorld Orlando, {title} ride page", f"https://seaworld.com/orlando/roller-coasters/{slug}")
 BGW = ("Busch Gardens Williamsburg, Roller Coasters page", "https://buschgardens.com/williamsburg/roller-coasters/")
 HP = ("Hershey Entertainment & Resorts, Hersheypark Roller Coaster Guide 2026 (lowest height category that may ride)", "https://stories.hersheypa.com/hersheypark-roller-coaster-guide-2026/")
+def dl(slug): return ("Disneyland Resort, official attraction page", f"https://disneyparks.disney.go.com/au/disneyland/attractions/{slug}/")
+def sdc(slug): return ("Silver Dollar City, official ride page", f"https://www.silverdollarcity.com/theme-park/attractions/rides/{slug}/")
 def dw(slug): return ("Dollywood, official ride page", f"https://www.dollywood.com/themepark/rides/{slug}/")
 PARKS = [
  dict(slug="cedar-point", name="Cedar Point", short="Cedar Point", loc="Sandusky, Ohio", state="OH", country="US", official="https://www.sixflags.com/cedarpoint", group="Six Flags (formerly Cedar Fair)"),
@@ -30,14 +32,25 @@ PARKS = [
  dict(slug="hersheypark", name="Hersheypark", short="Hersheypark", loc="Hershey, Pennsylvania", state="PA", country="US", official="https://www.hersheypark.com/", group="Hershey Entertainment & Resorts"),
  dict(slug="knotts-berry-farm", name="Knott's Berry Farm", short="Knott's", loc="Buena Park, California", state="CA", country="US", official="https://www.sixflags.com/knotts", group="Six Flags (formerly Cedar Fair)"),
  dict(slug="dollywood", name="Dollywood", short="Dollywood", loc="Pigeon Forge, Tennessee", state="TN", country="US", official="https://www.dollywood.com/themepark/", group="Herschend Family Entertainment"),
- dict(slug="six-flags-great-adventure", name="Six Flags Great Adventure", short="Great Adventure", loc="Jackson, New Jersey", state="NJ", country="US", official="https://www.sixflags.com/greatadventure", group="Six Flags"),
+ dict(slug="six-flags-great-adventure", name="Six Flags Great Adventure", short="Six Flags Great Adventure", loc="Jackson, New Jersey", state="NJ", country="US", official="https://www.sixflags.com/greatadventure", group="Six Flags"),
+ # Added 10 Nov 2026 (expansion batch 2)
+ dict(slug="six-flags-great-america", name="Six Flags Great America", short="Six Flags Great America", loc="Gurnee, Illinois", state="IL", country="US", official="https://www.sixflags.com/greatamerica", group="Six Flags"),
+ dict(slug="six-flags-over-texas", name="Six Flags Over Texas", short="Six Flags Over Texas", loc="Arlington, Texas", state="TX", country="US", official="https://www.sixflags.com/overtexas", group="Six Flags"),
+ dict(slug="six-flags-over-georgia", name="Six Flags Over Georgia", short="Six Flags Over Georgia", loc="Austell, Georgia", state="GA", country="US", official="https://www.sixflags.com/overgeorgia", group="Six Flags"),
+ dict(slug="carowinds", name="Carowinds", short="Carowinds", loc="Charlotte, North Carolina", state="NC", country="US", official="https://www.sixflags.com/carowinds", group="Six Flags (formerly Cedar Fair)"),
+ dict(slug="kings-dominion", name="Kings Dominion", short="Kings Dominion", loc="Doswell, Virginia", state="VA", country="US", official="https://www.sixflags.com/kingsdominion", group="Six Flags (formerly Cedar Fair)"),
+ dict(slug="canadas-wonderland", name="Canada's Wonderland", short="Canada's Wonderland", loc="Vaughan, Ontario", state="ON", country="CA", official="https://www.sixflags.com/canadaswonderland", group="Six Flags (formerly Cedar Fair)"),
+ dict(slug="disneyland", name="Disneyland Park", short="Disneyland", loc="Anaheim, California", state="CA", country="US", official="https://disneyland.disney.go.com/destinations/disneyland/", group="Disneyland Resort"),
+ dict(slug="disney-california-adventure", name="Disney California Adventure Park", short="California Adventure", loc="Anaheim, California", state="CA", country="US", official="https://disneyland.disney.go.com/destinations/disney-california-adventure/", group="Disneyland Resort"),
+ dict(slug="silver-dollar-city", name="Silver Dollar City", short="Silver Dollar City", loc="Branson, Missouri", state="MO", country="US", official="https://www.silverdollarcity.com/theme-park/", group="Herschend Family Entertainment"),
 ]
 ORIGINAL = {"cedar-point", "six-flags-magic-mountain", "magic-kingdom", "epic-universe", "islands-of-adventure", "universal-studios-florida", "busch-gardens-tampa-bay"}
 DISPLAY = {"Barnstormer": "The Barnstormer", "Incredible Hulk": "The Incredible Hulk Coaster", "VelociCoaster": "Jurassic World VelociCoaster",
  "Rock ‘n Roller Coaster Starring The Muppets": "Rock 'n' Roller Coaster Starring The Muppets", "Beast": "The Beast", "Racer": "The Racer", "Bat": "The Bat",
  "Great Pumpkin Coaster": "The Great Pumpkin Coaster", "Big Bad Wolf: The Wolf’s Revenge": "The Big Bad Wolf: The Wolf's Revenge", "Joker": "The Joker",
  "Dark Knight": "The Dark Knight Coaster", "Flash: Vertical Velocity": "The Flash: Vertical Velocity", "Woodstock’s Air Rail": "Woodstock's Air Rail",
- "Snoopy’s Tenderpaw Twister Coaster": "Snoopy's Tenderpaw Twister Coaster"}
+ "Snoopy’s Tenderpaw Twister Coaster": "Snoopy's Tenderpaw Twister Coaster", "Snoopy’s Racing Railway": "Snoopy's Racing Railway",
+ "Chip & Dale's Gadget Coaster": "Chip 'n' Dale's GADGETcoaster", "Fly": "The Fly", "Riddler Mindbender": "The Riddler Mindbender", "Incredicoaster": "Incredicoaster"}
 # Height requirements (inches) for non Six Flags parks, as read on the cited page on CHECKED.
 H = {
  "Space Mountain": dict(min=44, src=dz("space-mountain")),
@@ -86,6 +99,13 @@ HP2 = {
  ("dollywood", "Whistle Punk Chaser"): dict(min=42, acc_min=36, acc_max=42, src=dw("whistle-punk-chaser")),
  ("dollywood", "Dragonflier"): dict(min=48, acc_min=39, acc_max=48, max=81, src=dw("dragonflier")),
  ("dollywood", "Big Bear Mountain"): dict(min=48, acc_min=39, acc_max=48, src=dw("big-bear-mountain")),
+ ("disneyland", "Matterhorn Bobsleds"): dict(min=42, src=dl("matterhorn-bobsleds")), ("disneyland", "Space Mountain"): dict(min=40, src=dl("space-mountain")),
+ ("disneyland", "Big Thunder Mountain Railroad"): dict(min=40, src=dl("big-thunder-mountain-railroad")), ("disneyland", "Chip & Dale's Gadget Coaster"): dict(min=35, src=dl("chip-n-dales-gadgetcoaster")),
+ ("disney-california-adventure", "Incredicoaster"): dict(min=48, src=dl("incredicoaster")), ("disney-california-adventure", "Goofy's Sky School"): dict(min=42, src=dl("goofys-sky-school")),
+ ("silver-dollar-city", "Outlaw Run"): dict(min=48, src=sdc("outlaw-run")), ("silver-dollar-city", "Time Traveler"): dict(min=51, src=sdc("time-traveler")),
+ ("silver-dollar-city", "Wildfire"): dict(min=52, src=sdc("wildfire")), ("silver-dollar-city", "Powder Keg: A Blast in the Wilderness"): dict(min=48, acc_min=42, acc_max=48, src=sdc("powderkeg")),
+ ("silver-dollar-city", "Fire In The Hole"): dict(min=48, acc_min=36, acc_max=48, src=sdc("fire-in-the-hole")),
+ ("silver-dollar-city", "Grand Exposition Coaster"): dict(min=42, acc_min=36, acc_max=42, src=sdc("grand-exposition-coaster")),
  ("dollywood", "NightFlight Expedition"): dict(min=39, src=("Dollywood, NightFlight Expedition page", "https://www.dollywood.com/themepark/rides/nightflight-expedition/")),
 }
 def slugify(s):

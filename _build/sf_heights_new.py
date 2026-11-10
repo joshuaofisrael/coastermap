@@ -7,7 +7,7 @@ def slugify(s):
 extra=json.load(open('sf_extra_slugs.json'))
 try: res=json.load(open('sf_heights_new.json'))
 except: res={}
-for park,pk in [('kings-island','kingsisland'),('knotts-berry-farm','knotts'),('six-flags-great-adventure','greatadventure')]:
+for park,pk in [('kings-island','kingsisland'),('knotts-berry-farm','knotts'),('six-flags-great-adventure','greatadventure'),('six-flags-great-america','greatamerica'),('carowinds','carowinds'),('canadas-wonderland','canadaswonderland'),('six-flags-over-texas','overtexas'),('six-flags-over-georgia','overgeorgia'),('kings-dominion','kingsdominion')]:
     for c in d[park]['coasters']:
         n=c['name']; key=f'{park}|{n}'
         if res.get(key): continue

@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 146 coasters at 17 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 244 coasters at 26 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -175,3 +175,110 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Medusa](https://coastermap.com/parks/six-flags-great-adventure/medusa/): min height 54 in
   - [Harley Quinn Crazy Train](https://coastermap.com/parks/six-flags-great-adventure/harley-quinn-crazy-train/): min height 48 in
   - [Nitro](https://coastermap.com/parks/six-flags-great-adventure/nitro/): min height 54 in
+- [Six Flags Great America](https://coastermap.com/parks/six-flags-great-america/): 16 coasters
+  - [The Dark Knight Coaster](https://coastermap.com/parks/six-flags-great-america/the-dark-knight-coaster/): min height 48 in
+  - [Little Dipper](https://coastermap.com/parks/six-flags-great-america/little-dipper/): min height 44 in
+  - [Goliath](https://coastermap.com/parks/six-flags-great-america/goliath/): min height 48 in
+  - [X-Flight](https://coastermap.com/parks/six-flags-great-america/x-flight/): min height 52 in
+  - [The Joker](https://coastermap.com/parks/six-flags-great-america/the-joker/): min height 48 in
+  - [Maxx Force](https://coastermap.com/parks/six-flags-great-america/maxx-force/): min height 48 in
+  - [Wrath of Rakshasa](https://coastermap.com/parks/six-flags-great-america/wrath-of-rakshasa/): min height 48 in
+  - [Demon](https://coastermap.com/parks/six-flags-great-america/demon/): min height 48 in
+  - [Batman The Ride](https://coastermap.com/parks/six-flags-great-america/batman-the-ride/): min height 54 in
+  - [American Eagle](https://coastermap.com/parks/six-flags-great-america/american-eagle/): min height 48 in
+  - [Viper](https://coastermap.com/parks/six-flags-great-america/viper/): min height 48 in
+  - [Whizzer](https://coastermap.com/parks/six-flags-great-america/whizzer/): min height 42 in
+  - [Sprocket Rockets](https://coastermap.com/parks/six-flags-great-america/sprocket-rockets/): min height 42 in
+  - [Raging Bull](https://coastermap.com/parks/six-flags-great-america/raging-bull/): min height 54 in
+  - [The Flash: Vertical Velocity](https://coastermap.com/parks/six-flags-great-america/the-flash-vertical-velocity/): min height 52 in
+  - [Superman - Ultimate Flight](https://coastermap.com/parks/six-flags-great-america/superman-ultimate-flight/): min height 54 in
+- [Six Flags Over Texas](https://coastermap.com/parks/six-flags-over-texas/): 13 coasters
+  - [Judge Roy Scream](https://coastermap.com/parks/six-flags-over-texas/judge-roy-scream/): min height 48 in
+  - [Runaway Mine Train](https://coastermap.com/parks/six-flags-over-texas/runaway-mine-train/): min height 48 in
+  - [Runaway Mountain](https://coastermap.com/parks/six-flags-over-texas/runaway-mountain/): min height 48 in
+  - [Mini Mine Train](https://coastermap.com/parks/six-flags-over-texas/mini-mine-train/): min height 42 in
+  - [Mr. Freeze](https://coastermap.com/parks/six-flags-over-texas/mr-freeze/): min height 54 in
+  - [Batman The Ride](https://coastermap.com/parks/six-flags-over-texas/batman-the-ride/): min height 54 in
+  - [Titan](https://coastermap.com/parks/six-flags-over-texas/titan/): min height 48 in
+  - [Wile E. Coyote's Grand Canyon Blaster](https://coastermap.com/parks/six-flags-over-texas/wile-e-coyotes-grand-canyon-blaster/): min height 42 in
+  - [Pandemonium](https://coastermap.com/parks/six-flags-over-texas/pandemonium/): min height 47 in
+  - [New Texas Giant](https://coastermap.com/parks/six-flags-over-texas/new-texas-giant/): min height 48 in
+  - [The Joker](https://coastermap.com/parks/six-flags-over-texas/the-joker/): min height 48 in
+  - [Aquaman: Power Wave](https://coastermap.com/parks/six-flags-over-texas/aquaman-power-wave/): min height 48 in
+  - [Tormenta Rampaging Run](https://coastermap.com/parks/six-flags-over-texas/tormenta-rampaging-run/): min height 48 in
+- [Six Flags Over Georgia](https://coastermap.com/parks/six-flags-over-georgia/): 11 coasters
+  - [Blue Hawk](https://coastermap.com/parks/six-flags-over-georgia/blue-hawk/): min height 48 in
+  - [Great American Scream Machine](https://coastermap.com/parks/six-flags-over-georgia/great-american-scream-machine/): min height 48 in
+  - [Dahlonega Mine Train](https://coastermap.com/parks/six-flags-over-georgia/dahlonega-mine-train/): min height 48 in
+  - [Batman The Ride](https://coastermap.com/parks/six-flags-over-georgia/batman-the-ride/): min height 54 in
+  - [Georgia Scorcher](https://coastermap.com/parks/six-flags-over-georgia/georgia-scorcher/): min height 54 in
+  - [Superman - Ultimate Flight](https://coastermap.com/parks/six-flags-over-georgia/superman-ultimate-flight/): min height 54 in
+  - [Joker Funhouse Coaster](https://coastermap.com/parks/six-flags-over-georgia/joker-funhouse-coaster/): min height 42 in
+  - [Goliath](https://coastermap.com/parks/six-flags-over-georgia/goliath/): min height 54 in
+  - [Dare Devil Dive](https://coastermap.com/parks/six-flags-over-georgia/dare-devil-dive/): min height 48 in
+  - [Twisted Cyclone](https://coastermap.com/parks/six-flags-over-georgia/twisted-cyclone/): min height 48 in
+  - [The Riddler Mindbender](https://coastermap.com/parks/six-flags-over-georgia/the-riddler-mindbender/): min height 42 in
+- [Carowinds](https://coastermap.com/parks/carowinds/): 14 coasters
+  - [Carolina Cyclone](https://coastermap.com/parks/carowinds/carolina-cyclone/): min height 48 in
+  - [Woodstock Express](https://coastermap.com/parks/carowinds/woodstock-express/): min height 46 in
+  - [Carolina Goldrusher](https://coastermap.com/parks/carowinds/carolina-goldrusher/): min height 48 in
+  - [Hurler](https://coastermap.com/parks/carowinds/hurler/): min height 48 in
+  - [Vortex](https://coastermap.com/parks/carowinds/vortex/): min height 54 in
+  - [Wilderness Run](https://coastermap.com/parks/carowinds/wilderness-run/): min height 36 in
+  - [Afterburn](https://coastermap.com/parks/carowinds/afterburn/): min height 54 in
+  - [Flying Cobras](https://coastermap.com/parks/carowinds/flying-cobras/): min height 48 in
+  - [Thunder Striker](https://coastermap.com/parks/carowinds/thunder-striker/): min height 54 in
+  - [Fury 325](https://coastermap.com/parks/carowinds/fury-325/): min height 54 in
+  - [Copperhead Strike](https://coastermap.com/parks/carowinds/copperhead-strike/): min height 52 in
+  - [Snoopy's Racing Railway](https://coastermap.com/parks/carowinds/snoopys-racing-railway/): min height 48 in
+  - [Ricochet](https://coastermap.com/parks/carowinds/ricochet/): min height 54 in
+  - [Kiddy Hawk](https://coastermap.com/parks/carowinds/kiddy-hawk/): min height 44 in
+- [Kings Dominion](https://coastermap.com/parks/kings-dominion/): 13 coasters
+  - [Racer 75](https://coastermap.com/parks/kings-dominion/racer-75/): min height 48 in
+  - [Woodstock Express](https://coastermap.com/parks/kings-dominion/woodstock-express/): min height 46 in
+  - [Grizzly](https://coastermap.com/parks/kings-dominion/grizzly/): min height 48 in
+  - [Flight of Fear](https://coastermap.com/parks/kings-dominion/flight-of-fear/): min height 54 in
+  - [Reptilian](https://coastermap.com/parks/kings-dominion/reptilian/): min height 46 in
+  - [The Great Pumpkin Coaster](https://coastermap.com/parks/kings-dominion/the-great-pumpkin-coaster/): min height 36 in
+  - [Apple Zapple](https://coastermap.com/parks/kings-dominion/apple-zapple/): min height 54 in
+  - [Backlot Stunt Coaster](https://coastermap.com/parks/kings-dominion/backlot-stunt-coaster/): min height 48 in
+  - [Dominator](https://coastermap.com/parks/kings-dominion/dominator/): min height 54 in
+  - [Pantherian](https://coastermap.com/parks/kings-dominion/pantherian/): min height 54 in
+  - [Twisted Timbers](https://coastermap.com/parks/kings-dominion/twisted-timbers/): min height 48 in
+  - [Tumbili](https://coastermap.com/parks/kings-dominion/tumbili/): min height 48 in
+  - [Rapterra](https://coastermap.com/parks/kings-dominion/rapterra/): min height 48 in
+- [Canada's Wonderland](https://coastermap.com/parks/canadas-wonderland/): 18 coasters
+  - [DareDeviler](https://coastermap.com/parks/canadas-wonderland/daredeviler/): min height 52 in
+  - [Dragon Fyre](https://coastermap.com/parks/canadas-wonderland/dragon-fyre/): min height 48 in
+  - [Mighty Canadian Minebuster](https://coastermap.com/parks/canadas-wonderland/mighty-canadian-minebuster/): min height 48 in
+  - [Wilde Beast](https://coastermap.com/parks/canadas-wonderland/wilde-beast/): min height 48 in
+  - [Ghoster Coaster](https://coastermap.com/parks/canadas-wonderland/ghoster-coaster/): min height 46 in
+  - [Thunder Run](https://coastermap.com/parks/canadas-wonderland/thunder-run/): min height 46 in
+  - [The Bat](https://coastermap.com/parks/canadas-wonderland/the-bat/): min height 48 in
+  - [Vortex](https://coastermap.com/parks/canadas-wonderland/vortex/): min height 42 in
+  - [Taxi Jam](https://coastermap.com/parks/canadas-wonderland/taxi-jam/): min height 36 in
+  - [The Fly](https://coastermap.com/parks/canadas-wonderland/the-fly/): min height 54 in
+  - [Silver Streak](https://coastermap.com/parks/canadas-wonderland/silver-streak/): min height 44 in
+  - [Backlot Stunt Coaster](https://coastermap.com/parks/canadas-wonderland/backlot-stunt-coaster/): min height 48 in
+  - [Behemoth](https://coastermap.com/parks/canadas-wonderland/behemoth/): min height 54 in
+  - [Leviathan](https://coastermap.com/parks/canadas-wonderland/leviathan/): min height 54 in
+  - [Wonder Mountain's Guardian](https://coastermap.com/parks/canadas-wonderland/wonder-mountains-guardian/): min height 48 in
+  - [Yukon Striker](https://coastermap.com/parks/canadas-wonderland/yukon-striker/): min height 52 in
+  - [Snoopy's Racing Railway](https://coastermap.com/parks/canadas-wonderland/snoopys-racing-railway/): min height 48 in
+  - [AlpenFury](https://coastermap.com/parks/canadas-wonderland/alpenfury/): min height 54 in
+- [Disneyland Park](https://coastermap.com/parks/disneyland/): 4 coasters
+  - [Matterhorn Bobsleds](https://coastermap.com/parks/disneyland/matterhorn-bobsleds/): min height 42 in
+  - [Space Mountain](https://coastermap.com/parks/disneyland/space-mountain/): min height 40 in
+  - [Big Thunder Mountain Railroad](https://coastermap.com/parks/disneyland/big-thunder-mountain-railroad/): min height 40 in
+  - [Chip 'n' Dale's GADGETcoaster](https://coastermap.com/parks/disneyland/chip-n-dales-gadgetcoaster/): min height 35 in
+- [Disney California Adventure Park](https://coastermap.com/parks/disney-california-adventure/): 2 coasters
+  - [Incredicoaster](https://coastermap.com/parks/disney-california-adventure/incredicoaster/): min height 48 in
+  - [Goofy's Sky School](https://coastermap.com/parks/disney-california-adventure/goofys-sky-school/): min height 42 in
+- [Silver Dollar City](https://coastermap.com/parks/silver-dollar-city/): 7 coasters
+  - [Thunderation](https://coastermap.com/parks/silver-dollar-city/thunderation/)
+  - [Wildfire](https://coastermap.com/parks/silver-dollar-city/wildfire/): min height 52 in
+  - [Powder Keg: A Blast in the Wilderness](https://coastermap.com/parks/silver-dollar-city/powder-keg-a-blast-in-the-wilderness/): min height 48 in
+  - [Grand Exposition Coaster](https://coastermap.com/parks/silver-dollar-city/grand-exposition-coaster/): min height 42 in
+  - [Outlaw Run](https://coastermap.com/parks/silver-dollar-city/outlaw-run/): min height 48 in
+  - [Time Traveler](https://coastermap.com/parks/silver-dollar-city/time-traveler/): min height 51 in
+  - [Fire In The Hole](https://coastermap.com/parks/silver-dollar-city/fire-in-the-hole/): min height 48 in
