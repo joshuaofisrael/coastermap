@@ -814,3 +814,70 @@ INTL_PARKS += [
  dict(slug="parque-de-atracciones-madrid", name="Parque de Atracciones de Madrid", short="Parque de Atracciones", loc="Madrid, Spain", state="Community of Madrid", country="ES", official="https://www.parquedeatracciones.es/", group="Parques Reunidos"),
 ]
 DISPLAY_INTL.update({("parque-de-atracciones-madrid", "Paw Patrol: Patrulla Canina"): "Patrulla Canina (PAW Patrol)"})
+
+# ---- Batch 12a (11 Nov 2026): parks scraped earlier, official heights now read ----
+MTO = ("Mt. Olympus Water & Theme Park, Outdoor Theme Park ride list", "https://www.mtolympuspark.com/parks/outdoor-theme-park/")
+GWR = ("Gulliver's World Resort, official rides page", "https://www.gulliversworldresort.co.uk/explore/rides/")
+def FUR(s): return ("Furuvik, official ride page", f"https://www.furuvik.se/{s}")
+def BCW(s): return ("Beto Carrero World, official attraction page", f"https://www.betocarrero.com.br/atracoes/{s}")
+HHR = ("Hopi Hari, official thrill attractions page", "https://www.hopihari.com.br/atracoesRadical")
+HHA = ("Hopi Hari, official attractions page", "https://www.hopihari.com.br/atracoes")
+LEO = ("Leolandia, official rides and attractions page (ride detail panels)", "https://www.leolandia.it/giostre-e-attrazioni-per-bambini-e-ragazzi.html")
+def NIG(s): return ("Nigloland, official attraction page", f"https://www.nigloland.fr/attractions-et-spectacles/{s}")
+def WGE(s): return ("Walygator Grand Est, official attraction page", f"https://www.walygatorparc.com/grandest/attractions/{s}/")
+def HAN(s): return ("Hansa-Park, official attraction page (size and age limits)", f"https://www.hansapark.de/attraktion/{s}/?language=de")
+def _adult(a, m): return f"Riders {a} to {m} cm must ride with an adult."
+HP_B12a = {
+ ("mt-olympus", "Hades 360"): dict(min=48, src=MTO),
+ ("mt-olympus", "Cyclops"): dict(min=48, src=MTO),
+ ("mt-olympus", "Zeus"): dict(min=48, src=MTO),
+ ("mt-olympus", "Pegasus"): dict(min=42, src=MTO),
+ ("mt-olympus", "Little Titans"): dict(min=40, max=56, note="Kids' coaster: minimum 40 inches, maximum 56 inches, no adults.", src=MTO),
+ ("gullivers-warrington", "Antelope"): M(min=140, acc_min=110, acc_max=140, note=_adult(110, 140), src=GWR),
+ ("gullivers-warrington", "Grand Prix Racers"): M(min=120, acc_min=100, acc_max=120, max=195, note=_adult(100, 120), src=GWR),
+ ("gullivers-warrington", "Wriggler"): M(min=120, acc_min=90, acc_max=120, max=195, note=_adult(90, 120), src=GWR),
+ ("furuvik", "Fireball"): M(min=120, acc_min=100, acc_max=120, max=205, note="Riders 100 to 120 cm (and at least 4 years old) must ride with an adult; riding alone needs 120 cm and age 8.", src=FUR("fireball")),
+ ("furuvik", "Draken"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm (and at least 4 years old) must ride with an adult.", src=FUR("tivoli/draken")),
+ ("furuvik", "Lightning"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm (and at least 4 years old) must ride with an adult; riding alone needs 120 cm and age 6.", src=FUR("tivoli/lightning")),
+ ("beto-carrero", "Firewhip"): M(min=130, src=BCW("firewhip")),
+ ("beto-carrero", "Tigor Mountain"): M(min=95, src=BCW("tigor-mountain")),
+ ("beto-carrero", "Jacaré Dum-Dum"): M(min=80, src=BCW("dum-dum")),
+ ("hopi-hari", "Montezum"): M(min=140, src=HHR),
+ ("hopi-hari", "Vurang"): M(min=140, src=HHR),
+ ("hopi-hari", "Katapul"): M(min=140, src=HHR),
+ ("hopi-hari", "Speedi '64"): M(min=120, acc_min=100, acc_max=120, note="Children 100 to 120 cm must ride with a responsible adult.", src=HHA),
+ ("leolandia", "Reversum"): M(min=130, acc_min=105, acc_max=130, note=_adult(105, 130), src=LEO),
+ ("leolandia", "Twister Mountain"): M(min=120, acc_min=105, acc_max=120, note=_adult(105, 120), src=LEO),
+ ("leolandia", "Vroom"): M(min=120, acc_min=90, acc_max=120, note=_adult(90, 120), src=LEO),
+ ("leolandia", "Mine Train"): M(min=105, acc_min=90, acc_max=105, note=_adult(90, 105), src=LEO),
+ ("nigloland", "Alpina Blitz"): M(min=130, src=NIG("sensations-fortes/alpina-blitz")),
+ ("nigloland", "Krampus Expédition"): M(min=110, src=NIG("sensations-fortes/krampus-expedition")),
+ ("nigloland", "Spatiale Expérience"): M(min=140, acc_min=120, acc_max=140, note="Riders under 140 cm must be accompanied (minimum 120 cm).", src=NIG("sensations-fortes/spatiale-experience")),
+ ("nigloland", "Gold Mine Train"): M(min=120, acc_min=100, acc_max=120, note="Riders under 120 cm must be accompanied (minimum 100 cm).", src=NIG("sensations-fortes/le-train-de-la-mine")),
+ ("nigloland", "Descente en Schlitt'"): M(min=120, acc_min=100, acc_max=120, note="Riders under 120 cm must be accompanied (minimum 100 cm).", src=NIG("sensations-fortes/le-schlitt-express")),
+ ("nigloland", "Noisette Express"): M(min=120, acc_min=90, acc_max=120, note="Riders under 120 cm must be accompanied (minimum 90 cm).", src=NIG("pour-la-famille/noisette-express")),
+ ("walygator-grand-est", "Anaconda"): M(min=120, src=WGE("anaconda")),
+ ("walygator-grand-est", "Monster"): M(min=140, src=WGE("the-monster")),
+ ("walygator-grand-est", "Comet"): M(min=120, max=190, src=WGE("comet")),
+ ("walygator-grand-est", "Family Coaster"): M(min=120, acc_min=80, acc_max=120, note="Riders 80 to 120 cm must be accompanied.", src=WGE("family-coaster")),
+ ("hansa-park", "Schwur des Kärnan"): M(min=130, src=HAN("13/details/der-schwur-des-kaernan")),
+ ("hansa-park", "Flucht von Novgorod"): M(min=125, src=HAN("28/details/flucht-von-novgorod")),
+ ("hansa-park", "Kleine Zar"): M(min=120, acc_min=90, acc_max=120, note="Riders 90 to 120 cm may only ride in the child seat next to an accompanying adult.", src=HAN("12/details/der-kleine-zar")),
+ ("hansa-park", "Schlange von Midgard"): M(min=90, note="Children aged 5 and under must ride next to an adult.", src=HAN("15/details/die-schlange-von-midgard")),
+ ("hansa-park", "Cornwall Coaster"): M(min=90, note="Children aged 7 and under must ride next to an adult.", src=HAN("274/details/cornwall-coaster")),
+}
+HP_INTL.update(HP_B12a)
+INTL_PARKS += [
+ dict(slug="mt-olympus", name="Mt. Olympus Water & Theme Park", short="Mt. Olympus", loc="Wisconsin Dells, Wisconsin", state="WI", country="US", official="https://www.mtolympuspark.com/", group="Mt. Olympus", checked="11 Nov 2026"),
+ dict(slug="gullivers-warrington", name="Gulliver's World Warrington", short="Gulliver's World", loc="Warrington, England", state="Cheshire", country="GB", official="https://www.gulliversworldresort.co.uk/", group="Gulliver's", checked="11 Nov 2026"),
+ dict(slug="furuvik", name="Furuvik", short="Furuvik", loc="Furuvik, Sweden", state="Gävleborg", country="SE", official="https://www.furuvik.se/", group="Parks and Resorts Scandinavia", checked="11 Nov 2026"),
+ dict(slug="beto-carrero", name="Beto Carrero World", short="Beto Carrero", loc="Penha, Santa Catarina, Brazil", state="Santa Catarina", country="BR", official="https://www.betocarrero.com.br/", group="Beto Carrero World", checked="11 Nov 2026"),
+ dict(slug="hopi-hari", name="Hopi Hari", short="Hopi Hari", loc="Vinhedo, São Paulo, Brazil", state="São Paulo", country="BR", official="https://www.hopihari.com.br/", group="Hopi Hari", checked="11 Nov 2026"),
+ dict(slug="leolandia", name="Leolandia", short="Leolandia", loc="Capriate San Gervasio, Italy", state="Lombardy", country="IT", official="https://www.leolandia.it/", group="Leolandia", checked="11 Nov 2026"),
+ dict(slug="nigloland", name="Nigloland", short="Nigloland", loc="Dolancourt, France", state="Grand Est", country="FR", official="https://www.nigloland.fr/", group="Nigloland", checked="11 Nov 2026"),
+ dict(slug="walygator-grand-est", name="Walygator Grand Est", short="Walygator", loc="Maizières-lès-Metz, France", state="Grand Est", country="FR", official="https://www.walygatorparc.com/grandest/", group="Walygator", checked="11 Nov 2026"),
+ dict(slug="hansa-park", name="Hansa-Park", short="Hansa-Park", loc="Sierksdorf, Germany", state="Schleswig-Holstein", country="DE", official="https://www.hansapark.de/", group="Hansa-Park", checked="11 Nov 2026"),
+]
+DISPLAY_INTL.update({("gullivers-warrington", "Antelope"): "The Antelope", ("gullivers-warrington", "Wriggler"): "The Wriggler", ("walygator-grand-est", "Monster"): "The Monster",
+ ("hansa-park", "Schwur des Kärnan"): "Der Schwur des Kärnan", ("hansa-park", "Kleine Zar"): "Der kleine Zar", ("hansa-park", "Schlange von Midgard"): "Die Schlange von Midgard",
+ ("beto-carrero", "Firewhip"): "FireWhip"})

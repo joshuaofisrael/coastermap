@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 931 coasters at 139 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 971 coasters at 148 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1082,3 +1082,52 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Patrulla Canina (PAW Patrol)](https://coastermap.com/parks/parque-de-atracciones-madrid/patrulla-canina-paw-patrol/): min height 120 cm
   - [Padrinos Voladores](https://coastermap.com/parks/parque-de-atracciones-madrid/padrinos-voladores/): min height 120 cm
   - [TNT Tren de la Mina](https://coastermap.com/parks/parque-de-atracciones-madrid/tnt-tren-de-la-mina/): min height 120 cm
+- [Mt. Olympus Water & Theme Park](https://coastermap.com/parks/mt-olympus/): 5 coasters
+  - [Cyclops](https://coastermap.com/parks/mt-olympus/cyclops/): min height 48 in
+  - [Pegasus](https://coastermap.com/parks/mt-olympus/pegasus/): min height 42 in
+  - [Zeus](https://coastermap.com/parks/mt-olympus/zeus/): min height 48 in
+  - [Little Titans](https://coastermap.com/parks/mt-olympus/little-titans/): min height 40 in
+  - [Hades 360](https://coastermap.com/parks/mt-olympus/hades-360/): min height 48 in
+- [Gulliver's World Warrington](https://coastermap.com/parks/gullivers-warrington/): 3 coasters
+  - [The Antelope](https://coastermap.com/parks/gullivers-warrington/the-antelope/): min height 140 cm
+  - [Grand Prix Racers](https://coastermap.com/parks/gullivers-warrington/grand-prix-racers/): min height 120 cm
+  - [The Wriggler](https://coastermap.com/parks/gullivers-warrington/the-wriggler/): min height 120 cm
+- [Furuvik](https://coastermap.com/parks/furuvik/): 3 coasters
+  - [Fireball](https://coastermap.com/parks/furuvik/fireball/): min height 120 cm
+  - [Draken](https://coastermap.com/parks/furuvik/draken/): min height 120 cm
+  - [Lightning](https://coastermap.com/parks/furuvik/lightning/): min height 120 cm
+- [Beto Carrero World](https://coastermap.com/parks/beto-carrero/): 3 coasters
+  - [Jacaré Dum-Dum](https://coastermap.com/parks/beto-carrero/jacare-dum-dum/): min height 80 cm
+  - [Tigor Mountain](https://coastermap.com/parks/beto-carrero/tigor-mountain/): min height 95 cm
+  - [FireWhip](https://coastermap.com/parks/beto-carrero/firewhip/): min height 130 cm
+- [Hopi Hari](https://coastermap.com/parks/hopi-hari/): 4 coasters
+  - [Montezum](https://coastermap.com/parks/hopi-hari/montezum/): min height 140 cm
+  - [Vurang](https://coastermap.com/parks/hopi-hari/vurang/): min height 140 cm
+  - [Katapul](https://coastermap.com/parks/hopi-hari/katapul/): min height 140 cm
+  - [Speedi '64](https://coastermap.com/parks/hopi-hari/speedi-64/): min height 120 cm
+- [Leolandia](https://coastermap.com/parks/leolandia/): 4 coasters
+  - [Twister Mountain](https://coastermap.com/parks/leolandia/twister-mountain/): min height 120 cm
+  - [Mine Train](https://coastermap.com/parks/leolandia/mine-train/): min height 105 cm
+  - [Vroom](https://coastermap.com/parks/leolandia/vroom/): min height 120 cm
+  - [Reversum](https://coastermap.com/parks/leolandia/reversum/): min height 130 cm
+- [Nigloland](https://coastermap.com/parks/nigloland/): 6 coasters
+  - [Gold Mine Train](https://coastermap.com/parks/nigloland/gold-mine-train/): min height 120 cm
+  - [Spatiale Expérience](https://coastermap.com/parks/nigloland/spatiale-experience/): min height 140 cm
+  - [Descente en Schlitt'](https://coastermap.com/parks/nigloland/descente-en-schlitt/): min height 120 cm
+  - [Alpina Blitz](https://coastermap.com/parks/nigloland/alpina-blitz/): min height 130 cm
+  - [Noisette Express](https://coastermap.com/parks/nigloland/noisette-express/): min height 120 cm
+  - [Krampus Expédition](https://coastermap.com/parks/nigloland/krampus-expedition/): min height 110 cm
+- [Walygator Grand Est](https://coastermap.com/parks/walygator-grand-est/): 4 coasters
+  - [Anaconda](https://coastermap.com/parks/walygator-grand-est/anaconda/): min height 120 cm
+  - [Comet](https://coastermap.com/parks/walygator-grand-est/comet/): min height 120 cm
+  - [Family Coaster](https://coastermap.com/parks/walygator-grand-est/family-coaster/): min height 120 cm
+  - [The Monster](https://coastermap.com/parks/walygator-grand-est/the-monster/): min height 140 cm
+- [Hansa-Park](https://coastermap.com/parks/hansa-park/): 8 coasters
+  - [Nessie](https://coastermap.com/parks/hansa-park/nessie/)
+  - [Crazy Mine](https://coastermap.com/parks/hansa-park/crazy-mine/)
+  - [Royal Scotsman](https://coastermap.com/parks/hansa-park/royal-scotsman/)
+  - [Flucht von Novgorod](https://coastermap.com/parks/hansa-park/flucht-von-novgorod/): min height 125 cm
+  - [Die Schlange von Midgard](https://coastermap.com/parks/hansa-park/die-schlange-von-midgard/): min height 90 cm
+  - [Der Schwur des Kärnan](https://coastermap.com/parks/hansa-park/der-schwur-des-karnan/): min height 130 cm
+  - [Der kleine Zar](https://coastermap.com/parks/hansa-park/der-kleine-zar/): min height 120 cm
+  - [Cornwall Coaster](https://coastermap.com/parks/hansa-park/cornwall-coaster/): min height 90 cm

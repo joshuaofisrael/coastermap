@@ -174,7 +174,7 @@ def load():
     sfn = json.load(open(os.path.join(HERE, "sf_heights_new.json")))
     parks = []
     for p in PARKS:
-        r = rc[p["slug"]]; p = dict(p, rcdb_url=r["rcdb_url"], coasters=[])
+        r = rc[p["slug"]]; p = dict(p, rcdb_url=r["rcdb_url"], coasters=[], checked=p.get("checked") or CHECKED)
         for c in r["coasters"]:
             n = c["name"]; st = c.get("st", {})
             if any(x["rcdb_name"] == n for x in p["coasters"]): continue  # RCDB lists some twin-track rides twice under one name (Nagashima Double Wild Mouse): one page
@@ -201,7 +201,7 @@ def load():
                 design=next((t for t in tags if t in ("Sit Down", "Inverted", "Suspended", "Wing", "Flying", "Stand Up")), None),
                 height=num(st.get("Height")), drop=num(st.get("Drop")), speed=num(st.get("Speed")), length=num(st.get("Length")),
                 inversions=num(st.get("Inversions")), angle=num(st.get("Vertical Angle")), gforce=num(st.get("G-Force")),
-                twin=("Twin" in tags), lat=c["lat"], lon=c["lon"], former=former, hr=hr, trains=c.get("trains"))
+                checked=p["checked"], twin=("Twin" in tags), lat=c["lat"], lon=c["lon"], former=former, hr=hr, trains=c.get("trains"))
             p["coasters"].append(co)
         parks.append(p)
     return parks

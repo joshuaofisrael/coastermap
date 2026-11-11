@@ -1,13 +1,13 @@
 # Evergreen guide pages built only from verified site data. Exec'd inside build.py's namespace.
 GUIDES = []  # (path, title, blurb, group)
 REGION_PARKS = {}
-REGION = {"US": "North America", "CA": "North America", "DE": "Europe", "GB": "Europe", "ES": "Europe", "NL": "Europe", "SE": "Europe", "JP": "Asia", "CN": "Asia", "HK": "Asia", "FR": "Europe", "PL": "Europe", "IT": "Europe", "BE": "Europe", "AE": "Middle East", "SG": "Asia", "AU": "Oceania", "MX": "North America", "DK": "Europe", "FI": "Europe", "SA": "Middle East", "NO": "Europe"}
+REGION = {"US": "North America", "CA": "North America", "DE": "Europe", "GB": "Europe", "ES": "Europe", "NL": "Europe", "SE": "Europe", "JP": "Asia", "CN": "Asia", "HK": "Asia", "FR": "Europe", "PL": "Europe", "IT": "Europe", "BE": "Europe", "AE": "Middle East", "SG": "Asia", "AU": "Oceania", "MX": "North America", "DK": "Europe", "FI": "Europe", "SA": "Middle East", "NO": "Europe", "BR": "South America", "KR": "Asia", "TW": "Asia"}
 def pk(c): return park_of(c)
 def mtr(v): return f"{round(v * 0.3048):,} m"
 def kmh(v): return f"{round(v * 1.609)} km/h"
 def ftm(v): return f"{ft(v)} ({mtr(v)})" if v else "n/a"
 def mphk(v): return f"{mph(v)} ({kmh(v)})" if v else "n/a"
-def byline(): return f'<p class="byline">By the {BRAND} editorial team · Last verified {CHECKED} · <a href="/methodology/">How we verify</a></p>'
+def byline(d=None): return f'<p class="byline">By the {BRAND} editorial team · Last verified {d or CHECKED} · <a href="/methodology/">How we verify</a></p>'
 def clink(c, park=True): return f'<a href="{coaster_path(c)}">{E(c["name"])}</a>' + (f' <span class="muted">({E(pk(c)["name"])})</span>' if park else "")
 def hreq(c): return hs(c["hr"]) if c["hr"] else "not verified"
 def article_ld(path, title, desc):
@@ -135,7 +135,7 @@ def first_timer_guide():
 
 # ---------- regions ----------
 STATES = {"FL": "Florida", "CA": "California", "PA": "Pennsylvania", "TX": "Texas", "MO": "Missouri", "OH": "Ohio", "VA": "Virginia", "NY": "New York", "GA": "Georgia", "IN": "Indiana", "NJ": "New Jersey", "MN": "Minnesota"}
-COUNTRIES = {"GB": "the United Kingdom", "DE": "Germany", "ES": "Spain", "JP": "Japan", "FR": "France", "CA": "Canada", "AU": "Australia", "NL": "the Netherlands", "MX": "Mexico", "SE": "Sweden", "IT": "Italy", "DK": "Denmark", "BE": "Belgium"}
+COUNTRIES = {"GB": "the United Kingdom", "DE": "Germany", "ES": "Spain", "JP": "Japan", "FR": "France", "CA": "Canada", "AU": "Australia", "NL": "the Netherlands", "MX": "Mexico", "SE": "Sweden", "IT": "Italy", "DK": "Denmark", "BE": "Belgium", "BR": "Brazil"}
 def region_guides():
     groups = [(f"roller-coasters-in-{n.lower().replace(' ', '-')}", n, [p for p in PARKS if p["country"] == "US" and p["state"] == s]) for s, n in STATES.items()]
     groups += [(f"roller-coasters-in-{n.replace('the ', '').lower().replace(' ', '-')}", n, [p for p in PARKS if p["country"] == k]) for k, n in COUNTRIES.items()]

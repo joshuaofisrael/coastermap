@@ -230,7 +230,7 @@ def faq_items(c):
         if h.get("acc_min"): a += f', or {rngs(h)} with a companion'
         if h.get("max"): a += f'. The maximum rider height is {hs(h, "max")}'
         if h.get("note"): a += ". " + h["note"].rstrip(".")
-        a += f', according to {h["src"][0]} (checked {CHECKED}). Requirements can change, so confirm at the ride entrance.'
+        a += f', according to {h["src"][0]} (checked {c["checked"]}). Requirements can change, so confirm at the ride entrance.'
         q.append((f'What is the height requirement for {c["name"]}?', a))
     if c["height"]: q.append((f'How tall is {c["name"]}?', f'{c["name"]} is {ft(c["height"])} tall' + (f', with a drop of {ft(c["drop"])}' if c["drop"] else "") + ', according to RCDB.'))
     if c["speed"]: q.append((f'How fast does {c["name"]} go?', f'Its top speed is {mph(c["speed"])} ({round(c["speed"] * 1.609)} km/h), according to RCDB.'))
@@ -316,12 +316,12 @@ def coaster_page(c):
     siblings = [x for x in p["coasters"] if x is not c]
     sib = "".join(f'<li><a href="{coaster_path(x)}">{E(x["name"])}</a>' + (f' <span class="muted">({hshort(x["hr"])})</span>' if x["hr"] else "") + '</li>' for x in siblings)
     srcs = [f'<li>{rcdb_link(c)}: stats, opening date, manufacturer, type and map position.</li>']
-    if h: srcs.append(f'<li>{src_link(h["src"])}: height requirement' + (", thrill rating" if h.get("thrill") else "") + f' (checked {CHECKED}).</li>')
+    if h: srcs.append(f'<li>{src_link(h["src"])}: height requirement' + (", thrill rating" if h.get("thrill") else "") + f' (checked {c["checked"]}).</li>')
     srcs.append(f'<li><a href="{p["official"]}" rel="nofollow noopener" target="_blank">{E(p["name"])} official site</a>: hours, closures and current ride rules.</li>')
     if c["opened"] and h and h.get("introduced") and h["introduced"] != c["opened"][:4]:
         srcs.append(f'<li>Note: the park\'s ride page lists {h["introduced"]} as the year this ride was introduced; RCDB dates the opening of this coaster to {date_h(c["opened"])}.</li>')
     mp = map_block([c], 300, "map") if c["lat"] else ""
-    body = f'''<article class="coaster"><h1>{E(c["name"])}</h1><p class="sub">{E(p["name"])} · {E(p["loc"])}</p>{byline()}
+    body = f'''<article class="coaster"><h1>{E(c["name"])}</h1><p class="sub">{E(p["name"])} · {E(p["loc"])}</p>{byline(c["checked"])}
 <p class="answer">{"; ".join(answer)}.</p>
 <p>{describe(c)}</p>
 {feel_html(c)}
@@ -338,7 +338,7 @@ def coaster_page(c):
 <p>Planning for a child? The <a href="/height-checker/">ride height checker</a> shows every coaster they can ride at {E(p["short"])}.</p></section>
 {faq_html(faqs)}
 <section aria-labelledby="more-h"><h2 id="more-h">More coasters at {E(p["name"]) if siblings else E(p["group"])}</h2>{f'<ul class="cols">{sib}</ul>' if siblings else '<ul class="cols">' + "".join(f'<li><a href="{coaster_path(x)}">{E(x["name"])}</a> <span class="muted">({E(x["park_name"])}{", " + hshort(x["hr"]) if x["hr"] else ""})</span></li>' for x in ALL if park_of(x)["group"] == p["group"] and x is not c) + '</ul>'}<p><a href="/parks/{p["slug"]}/">See the full {E(p["name"])} coaster guide and map</a></p></section>
-{related_html(c=c)}<section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ul>{srcs and "".join(srcs)}</ul><p class="note">Last checked {CHECKED}. Found an error? <a href="/contact/">Tell us</a>.</p></section></article>'''
+{related_html(c=c)}<section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ul>{srcs and "".join(srcs)}</ul><p class="note">Last checked {c["checked"]}. Found an error? <a href="/contact/">Tell us</a>.</p></section></article>'''
     dparts = [x for x in [h and f'height requirement {hshort(h)}', mph(c["speed"]) and "top speed " + mph(c["speed"]), ft(c["height"]) and ft(c["height"]) + " tall"] if x]
     desc = f'{c["name"]} at {p["name"]}' + (": " + ", ".join(dparts) if dparts else "") + ". How intense it is, best seat and who it suits."
     if sum(1 for x in ALL if x["name"] == c["name"]) > 1:  # same ride name at more than one park
@@ -382,30 +382,30 @@ def park_page(p):
         if b: band_html += f'<h3>{label}</h3><ul>' + "".join(f'<li><a href="{coaster_path(c)}">{E(c["name"])}</a>: {hshort(c["hr"])}</li>' for c in b) + "</ul>"
     unv = [c for c in cs if not c["hr"]]
     if unv: band_html += "<h3>Height requirement not yet verified</h3><ul>" + "".join(f'<li><a href="{coaster_path(c)}">{E(c["name"])}</a></li>' for c in unv) + "</ul>"
-    lead = f'{E(p["name"])}' + (f' (formerly {E(p["former"])})' if p.get("former") else "") + f' in {E(p["loc"])} has <strong>{n} operating roller coaster{"s" if n != 1 else ""}</strong> listed on RCDB as of {CHECKED}.'
+    lead = f'{E(p["name"])}' + (f' (formerly {E(p["former"])})' if p.get("former") else "") + f' in {E(p["loc"])} has <strong>{n} operating roller coaster{"s" if n != 1 else ""}</strong> listed on RCDB as of {p["checked"]}.'
     if tall: lead += f' The tallest is <a href="{coaster_path(tall)}">{E(tall["name"])}</a> at {ft(tall["height"])}'
     if fast: lead += (f' and the fastest is <a href="{coaster_path(fast)}">{E(fast["name"])}</a> at {mph(fast["speed"])}' if fast is not tall else ", which is also the fastest at " + mph(fast["speed"])) 
     lead += "."
     if lowest: lead += f' The lowest height requirement is {hs(lowest["hr"])}, for <a href="{coaster_path(lowest)}">{E(lowest["name"])}</a>.'
     fm = p.get("former")
     faqs = []
-    if fm: faqs.append((f'Is {p["name"]} the same park as {fm}?', f'Yes. {p["name"]} in {p["loc"]} is the park formerly called {fm}; {p["former_note"]} (checked {CHECKED}).'))
-    faqs += [(f'How many roller coasters does {p["name"]} have?', f'{p["name"]} has {n} operating roller coaster{"s" if n != 1 else ""} according to RCDB, checked {CHECKED}.')]
+    if fm: faqs.append((f'Is {p["name"]} the same park as {fm}?', f'Yes. {p["name"]} in {p["loc"]} is the park formerly called {fm}; {p["former_note"]} (checked {p["checked"]}).'))
+    faqs += [(f'How many roller coasters does {p["name"]} have?', f'{p["name"]} has {n} operating roller coaster{"s" if n != 1 else ""} according to RCDB, checked {p["checked"]}.')]
     if tall: faqs.append((f'What is the tallest roller coaster at {p["name"]}?', f'{tall["name"]}, at {ft(tall["height"])} tall (RCDB).'))
     if fast: faqs.append((f'What is the fastest roller coaster at {p["name"]}?', f'{fast["name"]}, with a top speed of {mph(fast["speed"])} (RCDB).'))
     if lowest: faqs.append((f'What is the easiest coaster for kids at {p["name"]}?', f'By height requirement, {lowest["name"]} has the lowest minimum at {hs(lowest["hr"])}. Check the park for companion rules.'))
     for th in (42, 48):
         ok = [c["name"] for c in cs if c["hr"] and hin(c["hr"]) <= th + 1e-9]
-        if ok: faqs.append((f'Which {p["name"]} coasters can a {th}-inch child ride?', f'Based on official minimum heights checked {CHECKED}: ' + ", ".join(ok) + '. Some rides also need a companion below a certain height; confirm at the ride.'))
+        if ok: faqs.append((f'Which {p["name"]} coasters can a {th}-inch child ride?', f'Based on official minimum heights checked {p["checked"]}: ' + ", ".join(ok) + '. Some rides also need a companion below a certain height; confirm at the ride.'))
     if noinv: faqs.append((f'Which coasters at {p["name"]} do not go upside down?', ", ".join(c["name"] for c in noinv) + " have no inversions, per RCDB."))
     srcset = sorted({c["hr"]["src"] for c in cs if c["hr"]})
-    body = f'''<h1>{E(p["name"])} roller coasters</h1><p class="sub">{("Formerly " + E(p["former"]) + " · ") if p.get("former") else ""}{E(p["loc"])} · {n} coaster{"s" if n != 1 else ""}</p>{byline()}
+    body = f'''<h1>{E(p["name"])} roller coasters</h1><p class="sub">{("Formerly " + E(p["former"]) + " · ") if p.get("former") else ""}{E(p["loc"])} · {n} coaster{"s" if n != 1 else ""}</p>{byline(p["checked"])}
 <p class="answer">{lead}</p>
 {map_block(cs, 440)}
 <h2>Every coaster at {E(p["name"])}</h2>{coaster_table(sorted(cs, key=lambda c: -(c["height"] or 0)))}
 <section aria-labelledby="hb-h"><h2 id="hb-h">{E(p["name"])} coasters by height requirement</h2>{band_html}<p>Want a personal list? Use the <a href="/height-checker/">ride height checker</a>.</p></section>
 {faq_html(faqs)}
-{related_html(p=p)}<section class="sources"><h2>Sources</h2><ul><li><a href="{p["rcdb_url"]}" rel="nofollow noopener" target="_blank">RCDB: {E(p["name"])}</a>: operating coaster list, stats and map positions.</li>{"".join(f"<li>{src_link(s)}: height requirements (checked {CHECKED}).</li>" for s in srcset if not (s[1].startswith("https://www.sixflags.com") or ".enchantedparks.com/rides-and-experiences/" in s[1]))}{"<li>" + E(p["name"]) + " official ride pages on " + ("sixflags.com" if p["official"].startswith("https://www.sixflags.com") else p["official"].split("/")[2]) + ": height requirements and thrill ratings (linked on each coaster page, checked " + CHECKED + ").</li>" if any(c["hr"] and (c["hr"]["src"][1].startswith("https://www.sixflags.com") or ".enchantedparks.com/rides-and-experiences/" in c["hr"]["src"][1]) for c in cs) else ""}<li><a href="{p["official"]}" rel="nofollow noopener" target="_blank">{E(p["name"])} official site</a></li></ul></section>'''
+{related_html(p=p)}<section class="sources"><h2>Sources</h2><ul><li><a href="{p["rcdb_url"]}" rel="nofollow noopener" target="_blank">RCDB: {E(p["name"])}</a>: operating coaster list, stats and map positions.</li>{"".join(f"<li>{src_link(s)}: height requirements (checked {p["checked"]}).</li>" for s in srcset if not (s[1].startswith("https://www.sixflags.com") or ".enchantedparks.com/rides-and-experiences/" in s[1]))}{"<li>" + E(p["name"]) + " official ride pages on " + ("sixflags.com" if p["official"].startswith("https://www.sixflags.com") else p["official"].split("/")[2]) + ": height requirements and thrill ratings (linked on each coaster page, checked " + p["checked"] + ").</li>" if any(c["hr"] and (c["hr"]["src"][1].startswith("https://www.sixflags.com") or ".enchantedparks.com/rides-and-experiences/" in c["hr"]["src"][1]) for c in cs) else ""}<li><a href="{p["official"]}" rel="nofollow noopener" target="_blank">{E(p["name"])} official site</a></li></ul></section>'''
     ld = [{"@context": "https://schema.org", "@type": "AmusementPark", "name": p["name"], "url": p["official"], **({"alternateName": p["former"]} if p.get("former") else {}), "address": {"@type": "PostalAddress", "addressLocality": p["loc"].split(", ")[-2], "addressRegion": p["state"], "addressCountry": p["country"]}},
           {"@context": "https://schema.org", "@type": "ItemList", "name": f'Roller coasters at {p["name"]}', "numberOfItems": n,
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": url(coaster_path(c)), "name": c["name"]} for i, c in enumerate(cs)]}, faq_ld(faqs)]
