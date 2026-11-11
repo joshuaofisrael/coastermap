@@ -832,3 +832,41 @@ Same rules as batch 12. Every park has 3+ operating coasters on RCDB and every c
 - The full sweep has 383 uncovered operating parks with 3+ coasters, mostly small Chinese and Russian parks.
 
 Totals after batch 13: 221 parks, 1,285 coasters (1,181 with an official height rule), 1,605 sitemap URLs. Batch 13 added 38 parks, 154 coasters and 134 official rules. The validator reported 0 issues after every sub-batch. Near-duplicates over 0.6 held at 4 (median 0.34). IndexNow got HTTP 200 for all 1,605 sitemap URLs, after all 198 new pages were checked live and returned 200.
+
+## Batch 14 (11 Nov 2026): 12 more parks, including Kentucky Kingdom and Motiongate retries
+
+Same rules as batches 12 and 13. Heights come only from official park pages or official lists, with the source linked on each coaster page; stats come from RCDB; a rule the park does not clearly publish shows "Not clearly published by the park". New RCDB scrapes this batch: Jardin d'Acclimatation (5113), Mandoria (17863), Winnoland (11420), VinWonders Nha Trang (6218), Phu Quoc (7070) and Nam Hoi An (16441). `scrape_new.py` must run from `_build/` with `raw` linked to /workspace/coastermap-data/raw (the link is removed after the run), and new `NEW.update(...)` lines must sit above the `for slug in sys.argv` loop.
+
+**Batch 14a (efac03d1): 4 parks, 14 coasters, 14 official rules.**
+- Lotte World Adventure Busan 4/4 (official attractions list): Giant Digger 130 cm, Giant Splash 120, Giant Revolution 120, Mysterious Cookie Train 135.
+- E-DA Theme Park 4/4 (official facility pages; Chinese names matched to RCDB): Big Air = 極限挑戰 140 cm; Dark Ride = 地心歷險 (the park's indoor dark coaster) 120 alone, 100–120 with a parent; Roof Junior Coaster = 旋轉飛車 (RCDB: 雲霄旋轉飛車) 130 alone, 120–130 with a parent; Flume Ride = 飛越愛情海 (RCDB: 飛越愛琴海) 130.
+- Janfusun Fancyworld 3/3 (official ride restrictions page): Diving Machine G5 and Insane Speed "140 cm and under may not ride" (stored as 140 with the wording in a note); KuKu Coaster 110 alone, 80–110 with an adult.
+- Dream World (Thailand) 3/3 (official rides page, Thai names): Sky Coaster 130, Black Hole Coaster 121, Speedy Mouse 90.
+- New region guide: Taiwan. Thailand added to the ranking regions.
+
+**Batch 14b (6bbc99f3): 6 parks, 23 coasters, 21 official rules.**
+- VinWonders Nha Trang 3/3, VinWonders Phu Quoc 4/4 (official height table: each row's games cell pairs with its "Guests over N cm" cell), VinWonders Nam Hoi An 4/4 (Spinning Coaster = the park's "Spinning Coaster, Speed Racing", Family Coaster = its "Speed Coaster"; both are the park's only Visa coasters).
+- Jardin d'Acclimatation 4/4 (official attraction pages, three-tier "autorisé seul / si accompagné / non autorisé" blocks; Fort des Pirates page is /attractions/fortdespirates).
+- Mandoria 3/5: Merkant has no height on its official page; Mroczny Dwór (The Dark Manor) only states a 195 cm maximum. Aquila stored as 95 cm from "children as short as 95 cm can ride" (no companion rule stated).
+- Winnoland 3/3 (official attractions list; Grosse Pomme = the park's "Le Big Apple").
+- New region guides: Vietnam and Poland.
+
+**Batch 14c (1d28a05c): Kentucky Kingdom 6/6 (retry).** The official attractions list now shows every RCDB coaster (Lightning Run, Wind Chaser, Kentucky Flyer, Flying Fox, Hollyhock and Roll, Woodland Run). Ride pages block plain requests, so they were read with the page fetcher. Hollyhock and Roll is stored exactly as published (56 inches alone, 36 inches and up with a companion), and its note says so. Re-check it at the next verification, because the rule is unusually high for a junior coaster.
+
+**Batch 14d (0804c082): Motiongate Dubai 7/7 (retry).** Official dubaiparksandresorts.com attraction pages (blocked to curl, read with the page fetcher). John Wick: Open Contract and Now You See Me: High Roller also say "children must be accompanied by an adult" without a height band, so that is kept as a note only. New region guide: the United Arab Emirates.
+
+**Tried and skipped:**
+- Wonderla Bengaluru, Kochi and Hyderabad: ride pages and park rules give no per-ride heights ("check specific height requirements… before joining the queue").
+- Happy Valley Beijing (and the other Happy Valley parks): the official visitor guide says height, weight and waist limits are those on the signs at each ride; no per-ride list is published.
+- Sun World Bà Nà Hills: RCDB lists 3 alpine coasters, and the official rules page describes only "Alpine Coaster No. 1 and No. 2" (110 cm with an adult, 140 cm alone), so they can't be matched one-to-one. Fairy Knights isn't named.
+- Viaport Marina: the official list shows Red Fire (not on RCDB's operating list) and only Family Coaster among RCDB's 4 coasters.
+- Tier- und Freizeitpark Thüle: official pages give age-only rules (e.g. "ab 4 Jahren in Begleitung, ab 8 Jahren ohne"), and Maui's Peak has no official page yet.
+- Xetulul and Mundo Petapa (IRTRA): only ticket height bands and a general water-park rule, no per-ride heights.
+- New Jesolandia: no official heights found.
+- Paultons Park (retry): rules mix height and age ("under 1.2m and 8 years old must be accompanied"), so the companion band can't be stored.
+- Wiener Prater: rides are run by separate operators with no single official height list. Not added.
+- Lakeside, Playland Park (Rye): no new official data. Not retried in depth.
+
+Totals after batch 14: 233 parks, 1,335 coasters (1,229 with an official height rule), 1,671 sitemap URLs. Batch 14 added 12 parks, 50 coasters and 48 official rules. The validator reported 0 issues after every sub-batch. Near-duplicates over 0.6 held at 4 (median 0.34).
+
+**Remaining candidates:** the skipped parks above if their official data changes; OCT and Fantawild parks (no matchable official lists); and the rest of the RCDB sweep (about 370 operating parks with 3+ coasters, mostly small Chinese and Russian parks).
