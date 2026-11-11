@@ -160,6 +160,7 @@ HP2 = {
 }
 HP2.update(HP_INTL)
 def slugify(s):
+    s = s.replace("æ", "ae").replace("Æ", "Ae").replace("ø", "o").replace("Ø", "O")
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower().replace("'", "").replace("’", "")
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
 def num(v):

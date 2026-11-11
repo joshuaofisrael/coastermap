@@ -786,10 +786,10 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Twister](https://coastermap.com/parks/grona-lund/twister/): min height 120 cm
   - [Monster](https://coastermap.com/parks/grona-lund/monster/): min height 140 cm
 - [Tivoli Gardens](https://coastermap.com/parks/tivoli-gardens/): 4 coasters
-  - [Mælkevejen](https://coastermap.com/parks/tivoli-gardens/mlkevejen/)
+  - [Mælkevejen](https://coastermap.com/parks/tivoli-gardens/maelkevejen/)
   - [Kamelen](https://coastermap.com/parks/tivoli-gardens/kamelen/): min height 120 cm
   - [Rutschebanen](https://coastermap.com/parks/tivoli-gardens/rutschebanen/)
-  - [Dæmonen](https://coastermap.com/parks/tivoli-gardens/dmonen/): min height 132 cm
+  - [Dæmonen](https://coastermap.com/parks/tivoli-gardens/daemonen/): min height 132 cm
 - [Linnanmäki](https://coastermap.com/parks/linnanmaki/): 8 coasters
   - [Linnunrata](https://coastermap.com/parks/linnanmaki/linnunrata/): min height 120 cm
   - [Vuoristorata](https://coastermap.com/parks/linnanmaki/vuoristorata/): min height 140 cm
