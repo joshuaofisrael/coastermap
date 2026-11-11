@@ -1579,3 +1579,48 @@ INTL_PARKS += [
  dict(slug="adventure-world-shirahama", name="Adventure World", short="Adventure World", loc="Shirahama, Wakayama, Japan", state="Wakayama", country="JP", official="https://www.aws-s.com/", group="Adventure World", checked=_C),
  dict(slug="enakyo-wonderland", name="Enakyo Wonderland", short="Enakyo Wonderland", loc="Ena, Gifu, Japan", state="Gifu", country="JP", official="https://enakyo-wonderland.jp/", group="Enakyo Wonderland", checked=_C),
 ]
+
+# ---- Batch 15c (11 Nov 2026): 7 more parks in France and Poland ----
+def KGL(s): return ("Kingoland, official attraction page", f"https://kingoland.com/project/{s}/")
+def LFL(s): return ("Le Fleury, official attraction page", f"https://www.lefleury.com/{s}/")
+def DDL(s): return ("Didi'Land, official attraction page", f"https://www.didiland.fr/attraction/{s}")
+def FBW(s): return ("Fabrikus World, official attraction page", f"https://www.fabrikusworld.com/attraction/{s}/")
+def R3C(s): return ("La Récré des 3 Curés, official attraction page", f"https://www.larecredes3cures.com/parc-et-attractions/attractions-et-jeux/{s}/")
+def HSL(s): return ("Hossoland, official attraction page", f"https://hossoland.pl/en/{s}/")
+def MPL(s): return ("Magic Park Land, official attraction page", f"https://magic-park-land.com/{s}")
+HP_B15c = {
+ ("kingoland", "Apollo Steamrocket"): M(min=130, acc_min=110, acc_max=130, note="From 1.10 m; children up to 1.30 m must be accompanied.", src=KGL("apollo-steamrocket")),
+ ("kingoland", "Gold Rush"): M(min=130, acc_min=95, acc_max=130, note="From 0.95 m; children up to 1.30 m must be accompanied.", src=KGL("gold-rush")),
+ ("kingoland", "Maranello Twist"): M(min=140, acc_min=100, acc_max=140, note="From 1 m; children up to 1.40 m must be accompanied.", src=KGL("maranello-twist")),
+ ("kingoland", "Speed Chenille"): M(min=130, acc_min=100, acc_max=130, note="From 1 m; children up to 1.30 m must be accompanied.", src=KGL("speed-chenille")),
+ ("le-fleury", "Rhaegal"): M(min=130, note="130 cm to ride alone; under 95 cm cannot ride. The park's companion line for this ride is not clearly worded, so no companion band is shown.", src=LFL("rhaegal")),
+ ("le-fleury", "Bayou Express"): M(min=120, acc_min=90, acc_max=120, note="The park lists it as Le Bayou Express.", src=LFL("le-bayou-express")),
+ ("le-fleury", "Aircraft"): M(min=110, acc_min=90, acc_max=110, note="The park lists it as l'Aircraft, a coaster for young children.", src=LFL("aircraft")),
+ ("didiland", "Spinning Coaster"): M(min=120, acc_min=95, acc_max=120, note="The park lists it as Le Spinning Coaster and says its height bands can vary by season.", src=DDL("13-le-spinning-coaster")),
+ ("didiland", "Drakkar"): M(min=120, acc_min=95, acc_max=120, note="The park lists it as Le Drakkar and says its height bands can vary by season.", src=DDL("23-le-drakkar")),
+ ("didiland", "Family Coaster"): M(min=130, acc_min=110, acc_max=130, note="The park's page for La Pomme describes it as its caterpillar-shaped Family Coaster.", src=DDL("16-la-pomme")),
+ ("fabrikus-world", "EuroLoop"): M(min=140, src=FBW("euroloop-coaster-loopings-attraction-fabrikus-world")),
+ ("fabrikus-world", "Eurospeed"): M(min=120, acc_min=100, acc_max=120, src=FBW("eurospeed-coaster-far-west")),
+ ("fabrikus-world", "Mouse Coaster"): M(min=130, src=FBW("mouse-coaster")),
+ ("fabrikus-world", "Brucomela"): M(min=100, note="The park lists it as La Pomme: over 100 cm alone; under 100 cm only with an adult. No lower limit is stated.", src=FBW("la-pomme-fabrikus-world")),
+ ("la-recre-des-3-cures", "Train de la Mine"): M(min=100, note="The park lists it as Le Train de la Mine (its page address still uses the former name, Grand Huit). No companion rule is stated.", src=R3C("le-grand-huit")),
+ ("la-recre-des-3-cures", "Vertika"): M(min=130, max=195, note="The park lists it as Le Vertika.", src=R3C("le-vertika")),
+ ("la-recre-des-3-cures", "Jeepo Dino"): M(min=105, acc_min=90, acc_max=105, note="The park lists it as Jeepo' Dino, a kiddie coaster: from 90 cm, with children from 90 cm to 1.05 m accompanied by an adult.", src=R3C("jeepo-dino")),
+ ("hossoland", "Thor"): M(min=130, acc_min=95, acc_max=130, src=HSL("thor")),
+ ("hossoland", "Aurora"): M(min=130, acc_min=95, acc_max=130, note="The park describes it as a suspended coaster.", src=HSL("aurora")),
+ ("hossoland", "Mermaid Ride"): M(min=120, acc_min=95, acc_max=120, src=HSL("mermaid-ride")),
+ ("hossoland", "Veyron"): M(min=120, acc_min=90, acc_max=120, src=HSL("veyron")),
+ ("magic-park-land", "Shark Trip"): M(min=130, acc_min=90, acc_max=130, note="The park lists it as Le Shark Coaster.", src=MPL("attraction-45-shark-coaster")),
+ ("magic-park-land", "Storm"): M(min=130, acc_min=110, acc_max=130, note="The park lists it as Strom.", src=MPL("attraction-32-strom")),
+ ("magic-park-land", "Formula 1"): M(min=130, acc_min=110, acc_max=130, note="The park lists it as Formula One.", src=MPL("attraction-34-formula-one")),
+}
+HP_INTL.update(HP_B15c)
+INTL_PARKS += [
+ dict(slug="kingoland", name="Kingoland", short="Kingoland", loc="Plumelin, Brittany, France", state="Brittany", country="FR", official="https://kingoland.com/", group="Kingoland", checked=_C),
+ dict(slug="le-fleury", name="Le Fleury", short="Le Fleury", loc="Wavrechain-sous-Faulx, Hauts-de-France, France", state="Hauts-de-France", country="FR", official="https://www.lefleury.com/", group="Le Fleury", checked=_C),
+ dict(slug="didiland", name="Didi'Land", short="Didi'Land", loc="Morsbronn-les-Bains, Grand Est, France", state="Grand Est", country="FR", official="https://www.didiland.fr/", group="Didi'Land", checked=_C),
+ dict(slug="fabrikus-world", name="Fabrikus World", short="Fabrikus World", loc="Vias, Occitanie, France", state="Occitanie", country="FR", official="https://www.fabrikusworld.com/", group="Fabrikus World", checked=_C),
+ dict(slug="la-recre-des-3-cures", name="La Récré des 3 Curés", short="Récré des 3 Curés", loc="Milizac, Brittany, France", state="Brittany", country="FR", official="https://www.larecredes3cures.com/", group="La Récré des 3 Curés", checked=_C),
+ dict(slug="hossoland", name="Hossoland", short="Hossoland", loc="Brojce, West Pomerania, Poland", state="West Pomerania", country="PL", official="https://hossoland.pl/en/", group="Hossoland", checked=_C),
+ dict(slug="magic-park-land", name="Magic Park Land", short="Magic Park Land", loc="Ensuès-la-Redonne, Provence-Alpes-Côte d'Azur, France", state="Provence-Alpes-Côte d'Azur", country="FR", official="https://magic-park-land.com/", group="Magic Park Land", checked=_C),
+]

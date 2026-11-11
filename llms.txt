@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1386 coasters at 249 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1410 coasters at 256 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1647,3 +1647,34 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Camel Coaster](https://coastermap.com/parks/enakyo-wonderland/camel-coaster/): min height 110 cm
   - [Jungle Coaster](https://coastermap.com/parks/enakyo-wonderland/jungle-coaster/): min height 110 cm
   - [Cycle Coaster](https://coastermap.com/parks/enakyo-wonderland/cycle-coaster/)
+- [Kingoland](https://coastermap.com/parks/kingoland/): 4 coasters
+  - [Apollo Steamrocket](https://coastermap.com/parks/kingoland/apollo-steamrocket/): min height 130 cm
+  - [Speed Chenille](https://coastermap.com/parks/kingoland/speed-chenille/): min height 130 cm
+  - [Gold Rush](https://coastermap.com/parks/kingoland/gold-rush/): min height 130 cm
+  - [Maranello Twist](https://coastermap.com/parks/kingoland/maranello-twist/): min height 140 cm
+- [Le Fleury](https://coastermap.com/parks/le-fleury/): 3 coasters
+  - [Aircraft](https://coastermap.com/parks/le-fleury/aircraft/): min height 110 cm
+  - [Bayou Express](https://coastermap.com/parks/le-fleury/bayou-express/): min height 120 cm
+  - [Rhaegal](https://coastermap.com/parks/le-fleury/rhaegal/): min height 130 cm
+- [Didi'Land](https://coastermap.com/parks/didiland/): 3 coasters
+  - [Drakkar](https://coastermap.com/parks/didiland/drakkar/): min height 120 cm
+  - [Family Coaster](https://coastermap.com/parks/didiland/family-coaster/): min height 130 cm
+  - [Spinning Coaster](https://coastermap.com/parks/didiland/spinning-coaster/): min height 120 cm
+- [Fabrikus World](https://coastermap.com/parks/fabrikus-world/): 4 coasters
+  - [EuroLoop](https://coastermap.com/parks/fabrikus-world/euroloop/): min height 140 cm
+  - [Eurospeed](https://coastermap.com/parks/fabrikus-world/eurospeed/): min height 120 cm
+  - [Brucomela](https://coastermap.com/parks/fabrikus-world/brucomela/): min height 100 cm
+  - [Mouse Coaster](https://coastermap.com/parks/fabrikus-world/mouse-coaster/): min height 130 cm
+- [La Récré des 3 Curés](https://coastermap.com/parks/la-recre-des-3-cures/): 3 coasters
+  - [Train de la Mine](https://coastermap.com/parks/la-recre-des-3-cures/train-de-la-mine/): min height 100 cm
+  - [Vertika](https://coastermap.com/parks/la-recre-des-3-cures/vertika/): min height 130 cm
+  - [Jeepo Dino](https://coastermap.com/parks/la-recre-des-3-cures/jeepo-dino/): min height 105 cm
+- [Hossoland](https://coastermap.com/parks/hossoland/): 4 coasters
+  - [Thor](https://coastermap.com/parks/hossoland/thor/): min height 130 cm
+  - [Aurora](https://coastermap.com/parks/hossoland/aurora/): min height 130 cm
+  - [Mermaid Ride](https://coastermap.com/parks/hossoland/mermaid-ride/): min height 120 cm
+  - [Veyron](https://coastermap.com/parks/hossoland/veyron/): min height 120 cm
+- [Magic Park Land](https://coastermap.com/parks/magic-park-land/): 3 coasters
+  - [Formula 1](https://coastermap.com/parks/magic-park-land/formula-1/): min height 130 cm
+  - [Storm](https://coastermap.com/parks/magic-park-land/storm/): min height 130 cm
+  - [Shark Trip](https://coastermap.com/parks/magic-park-land/shark-trip/): min height 130 cm
