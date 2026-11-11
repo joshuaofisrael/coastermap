@@ -134,7 +134,7 @@ def first_timer_guide():
     guide("/guides/best-first-roller-coasters/", f"Best First Roller Coasters for Kids and Nervous Riders | {BRAND}"[:200], f"Gentle first roller coasters at {len(PARKS)} theme parks: no inversions, low height rules and modest speeds, from verified data.", "Best first roller coasters for kids and nervous riders", body, faqs, "For families", "Gentle starter coasters at every park, plus tips.", None, [("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids"), ("/guides/what-is-a-family-roller-coaster/", "What is a family roller coaster?"), ("/guides/most-intense-roller-coasters/", "Most intense roller coasters")])
 
 # ---------- regions ----------
-STATES = {"FL": "Florida", "CA": "California", "PA": "Pennsylvania", "TX": "Texas", "MO": "Missouri", "OH": "Ohio", "VA": "Virginia", "NY": "New York", "GA": "Georgia", "IN": "Indiana", "NJ": "New Jersey"}
+STATES = {"FL": "Florida", "CA": "California", "PA": "Pennsylvania", "TX": "Texas", "MO": "Missouri", "OH": "Ohio", "VA": "Virginia", "NY": "New York", "GA": "Georgia", "IN": "Indiana", "NJ": "New Jersey", "MN": "Minnesota"}
 COUNTRIES = {"GB": "the United Kingdom", "DE": "Germany", "ES": "Spain", "JP": "Japan", "FR": "France", "CA": "Canada", "AU": "Australia", "NL": "the Netherlands", "MX": "Mexico", "SE": "Sweden", "IT": "Italy", "DK": "Denmark", "BE": "Belgium"}
 def region_guides():
     groups = [(f"roller-coasters-in-{n.lower().replace(' ', '-')}", n, [p for p in PARKS if p["country"] == "US" and p["state"] == s]) for s, n in STATES.items()]

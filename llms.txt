@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 811 coasters at 113 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 852 coasters at 122 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -936,3 +936,53 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Flotter Otto](https://coastermap.com/parks/skyline-park/flotter-otto/): min height 120 cm
   - [Sky Rider](https://coastermap.com/parks/skyline-park/sky-rider/): min height 140 cm
   - [Sky Wheel](https://coastermap.com/parks/skyline-park/sky-wheel/): min height 150 cm
+- [Nickelodeon Universe (Mall of America)](https://coastermap.com/parks/nickelodeon-universe-moa/): 5 coasters
+  - [Pepsi Orange Streak](https://coastermap.com/parks/nickelodeon-universe-moa/pepsi-orange-streak/): min height 47 in
+  - [Back at the Barnyard Hayride](https://coastermap.com/parks/nickelodeon-universe-moa/back-at-the-barnyard-hayride/)
+  - [Fairly Odd Coaster](https://coastermap.com/parks/nickelodeon-universe-moa/fairly-odd-coaster/): min height 47 in
+  - [SpongeBob SquarePants Rock Bottom Plunge](https://coastermap.com/parks/nickelodeon-universe-moa/spongebob-squarepants-rock-bottom-plunge/): min height 48 in
+  - [Avatar Airbender](https://coastermap.com/parks/nickelodeon-universe-moa/avatar-airbender/): min height 48 in
+- [Nickelodeon Universe at American Dream](https://coastermap.com/parks/nickelodeon-universe-american-dream/): 5 coasters
+  - [TMNT Shellraiser](https://coastermap.com/parks/nickelodeon-universe-american-dream/tmnt-shellraiser/): min height 48 in
+  - [The Shredder](https://coastermap.com/parks/nickelodeon-universe-american-dream/the-shredder/): min height 52 in
+  - [Nickelodeon Slime Streak](https://coastermap.com/parks/nickelodeon-universe-american-dream/nickelodeon-slime-streak/): min height 48 in
+  - [Sandy's Blasting Bronco](https://coastermap.com/parks/nickelodeon-universe-american-dream/sandys-blasting-bronco/): min height 52 in
+  - [Timmy's Half-Pipe Havoc](https://coastermap.com/parks/nickelodeon-universe-american-dream/timmys-half-pipe-havoc/): min height 48 in
+- [Bakken (Dyrehavsbakken)](https://coastermap.com/parks/bakken/): 5 coasters
+  - [Mine Train Ulven](https://coastermap.com/parks/bakken/mine-train-ulven/)
+  - [Mariehønen](https://coastermap.com/parks/bakken/mariehonen/)
+  - [Tornado](https://coastermap.com/parks/bakken/tornado/): min height 120 cm
+  - [De Vilde Mus](https://coastermap.com/parks/bakken/de-vilde-mus/): min height 120 cm
+  - [Rutschebanen](https://coastermap.com/parks/bakken/rutschebanen/): min height 120 cm
+- [Walibi Rhône-Alpes](https://coastermap.com/parks/walibi-rhone-alpes/): 6 coasters
+  - [Generator](https://coastermap.com/parks/walibi-rhone-alpes/generator/): min height 130 cm
+  - [La Coccinelle](https://coastermap.com/parks/walibi-rhone-alpes/la-coccinelle/): min height 120 cm
+  - [Woodstock Express](https://coastermap.com/parks/walibi-rhone-alpes/woodstock-express/): min height 120 cm
+  - [Timber](https://coastermap.com/parks/walibi-rhone-alpes/timber/): min height 120 cm
+  - [Mystic](https://coastermap.com/parks/walibi-rhone-alpes/mystic/): min height 130 cm
+  - [Mahuka](https://coastermap.com/parks/walibi-rhone-alpes/mahuka/): min height 120 cm
+- [Bellewaerde Park](https://coastermap.com/parks/bellewaerde/): 5 coasters
+  - [Huracan](https://coastermap.com/parks/bellewaerde/huracan/): min height 120 cm
+  - [Dawson Duel](https://coastermap.com/parks/bellewaerde/dawson-duel/): min height 120 cm
+  - [Wakala](https://coastermap.com/parks/bellewaerde/wakala/): min height 120 cm
+  - [Brazilian Buggies](https://coastermap.com/parks/bellewaerde/brazilian-buggies/): min height 120 cm
+  - [Boomerang](https://coastermap.com/parks/bellewaerde/boomerang/): min height 130 cm
+- [Adventure Island](https://coastermap.com/parks/adventure-island/): 5 coasters
+  - [Green Scream](https://coastermap.com/parks/adventure-island/green-scream/): min height 120 cm
+  - [The Barnstormer](https://coastermap.com/parks/adventure-island/the-barnstormer/): min height 120 cm
+  - [Mighty Mini Mega](https://coastermap.com/parks/adventure-island/mighty-mini-mega/): min height 120 cm
+  - [Rage](https://coastermap.com/parks/adventure-island/rage/): min height 120 cm
+  - [Kiddi Koasta](https://coastermap.com/parks/adventure-island/kiddi-koasta/)
+- [Sea World (Gold Coast)](https://coastermap.com/parks/sea-world-gold-coast/): 4 coasters
+  - [Jet Rescue](https://coastermap.com/parks/sea-world-gold-coast/jet-rescue/)
+  - [Storm Coaster](https://coastermap.com/parks/sea-world-gold-coast/storm-coaster/): min height 130 cm
+  - [SpongeBob's Boating School Blast](https://coastermap.com/parks/sea-world-gold-coast/spongebobs-boating-school-blast/): min height 105 cm
+  - [Leviathan](https://coastermap.com/parks/sea-world-gold-coast/leviathan/): min height 122 cm
+- [IMG Worlds of Adventure](https://coastermap.com/parks/img-worlds/): 3 coasters
+  - [Spider-Man Doc Ock's Revenge](https://coastermap.com/parks/img-worlds/spider-man-doc-ocks-revenge/)
+  - [Velociraptor](https://coastermap.com/parks/img-worlds/velociraptor/): min height 130 cm
+  - [Predator](https://coastermap.com/parks/img-worlds/predator/): min height 125 cm
+- [Lightwater Valley](https://coastermap.com/parks/lightwater-valley/): 3 coasters
+  - [Caterpillar](https://coastermap.com/parks/lightwater-valley/caterpillar/)
+  - [Spinning Racer](https://coastermap.com/parks/lightwater-valley/spinning-racer/): min height 120 cm
+  - [Ladybird](https://coastermap.com/parks/lightwater-valley/ladybird/): min height 90 cm

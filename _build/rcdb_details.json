@@ -17142,5 +17142,690 @@
   ],
   "arrangement": "Single train with 2 cars. Riders are arranged 2 across in 3 rows for a total of 12 riders.",
   "capacity": "550 riders per hour"
+ },
+ "101": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    "60 ft tall, with a 40 ft drop"
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 15 cars per train. Riders are arranged 2 across in a single row for a total of 30 riders per train.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "former": [
+   [
+    "Pepsi Ripsaw",
+    "1992",
+    "2007"
+   ]
+  ]
+ },
+ "673": {
+  "arrangement": "Single train with 3 cars. Riders are arranged 2 across in 2 rows for a total of 12 riders.",
+  "former": [
+   [
+    "Li'l Shaver",
+    "1995",
+    "2007"
+   ]
+  ]
+ },
+ "2508": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "6 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "former": [
+   [
+    "Timberland Twister",
+    "2004",
+    "2007"
+   ]
+  ]
+ },
+ "3727": {
+  "elements": [
+   [
+    "Vertical Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Cutback",
+    null
+   ],
+   [
+    "Heartline Roll",
+    null
+   ],
+   [
+    "Helix",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 4 across in 2 rows for a total of 8 riders per car.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "4094": {
+  "elements": [
+   [
+    "LSM Launch (multi-pass)",
+    null
+   ]
+  ],
+  "arrangement": "1 car.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "15594": {
+  "elements": [
+   [
+    "Heartline Roll",
+    null
+   ],
+   [
+    "LSM Launch (rolling)",
+    "from 0 mph - 62.1 mph in 2 s"
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Banana Roll",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Vertical Chain Lift Hill",
+    null
+   ],
+   [
+    "Dive Loop",
+    null
+   ],
+   [
+    "Top Hat - Inside",
+    null
+   ],
+   [
+    "Immelmann",
+    null
+   ]
+  ],
+  "arrangement": "6 cars. Riders are arranged 4 across in 2 rows for a total of 8 riders per car.",
+  "installer": "Martin & Vleminckx"
+ },
+ "15600": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "installer": "Martin & Vleminckx"
+ },
+ "16775": {
+  "arrangement": "Single train with 5 cars. Riders are arranged 2 across in 2 rows for a total of 20 riders.",
+  "designers": [
+   "Joe Draves"
+  ]
+ },
+ "16793": {
+  "elements": [
+   [
+    "LSM Launch",
+    null
+   ],
+   [
+    "Immelmann",
+    null
+   ],
+   [
+    "Immelmann",
+    null
+   ],
+   [
+    "Roll Over",
+    null
+   ],
+   [
+    "Turntable",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 3 cars. Riders are arranged 2 across in 2 rows for a total of 12 riders."
+ },
+ "16794": {
+  "elements": [
+   [
+    "LSM Launch (multi-pass)",
+    null
+   ]
+  ],
+  "arrangement": "1 car. Riders are arranged 6 across in 2 rows for a total of 12 riders."
+ },
+ "1457": {
+  "elements": [
+   [
+    "Tunnel",
+    null
+   ]
+  ],
+  "arrangement": "7 cars per train. Riders are arranged 2 across in 2 rows for a total of 28 riders per train.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "train_note": true
+ },
+ "2225": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 5 cars. Riders are arranged 2 across in a single row for a total of 10 riders.",
+  "capacity": "600 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "4313": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "4 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "capacity": "480 riders per hour",
+  "installer": "RCS GmbH"
+ },
+ "10157": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "installer": "RCS GmbH"
+ },
+ "1055": {
+  "elements": [
+   [
+    "Cable Lift Hill",
+    null
+   ],
+   [
+    "Tunnel",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders.",
+  "restraints": [
+   "T-Bar"
+  ]
+ },
+ "943": {
+  "elements": [
+   [
+    "Catch Car Lift Hill",
+    null
+   ],
+   [
+    "Cobra Roll",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 7 cars. Riders are arranged 2 across in 2 rows for a total of 28 riders.",
+  "capacity": "760 riders per hour",
+  "designers": [
+   "Peter Clerx"
+  ],
+  "former": [
+   [
+    "EqWalizer",
+    "2014",
+    "2020"
+   ],
+   [
+    "Boomerang",
+    "1988",
+    "2013"
+   ]
+  ]
+ },
+ "946": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "capacity": "1250 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "former": [
+   [
+    "Coccinelle des Andes",
+    null,
+    null
+   ]
+  ]
+ },
+ "1713": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "former": [
+   [
+    "Scratch",
+    "2011",
+    "2015"
+   ],
+   [
+    "Zig Zag",
+    "2002",
+    "2011"
+   ]
+  ]
+ },
+ "12954": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in a single row for a total of 12 riders per train.",
+  "designers": [
+   "The Gravity Group, LLC"
+  ]
+ },
+ "15842": {
+  "elements": [
+   [
+    "Vertical Chain Lift Hill",
+    null
+   ],
+   [
+    "Top Hat - Outside",
+    null
+   ],
+   [
+    "Zero-G Roll",
+    null
+   ],
+   [
+    "Dive Loop",
+    null
+   ],
+   [
+    "Switch Track",
+    null
+   ],
+   [
+    "Twisted In-Line Rollback",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 3 cars per train. Riders are arranged 4 across in a single row for a total of 12 riders per train."
+ },
+ "19716": {
+  "elements": [
+   [
+    "Tire Propelled Launch (rolling)",
+    null
+   ],
+   [
+    "Top Hat - Inside",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Tire Propelled Boost",
+    null
+   ],
+   [
+    "Heartline Roll",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 9 cars per train. Riders are arranged inline in a single row for a total of 9 riders per train.",
+  "capacity": "600 riders per hour"
+ },
+ "10979": {
+  "elements": [
+   [
+    "Dark/Show Section",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "capacity": "1000 riders per hour"
+ },
+ "14196": {
+  "arrangement": "40 cars. Riders are arranged inline in 2 rows for a total of 2 riders per car.",
+  "capacity": "800 riders per hour",
+  "train_note": true
+ },
+ "17721": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Vertical Rollback",
+    null
+   ],
+   [
+    "Switch Track",
+    null
+   ]
+  ],
+  "arrangement": "3 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "capacity": "1000 riders per hour"
+ },
+ "20973": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in a single row for a total of 12 riders."
+ },
+ "926": {
+  "elements": [
+   [
+    "Catch Car Lift Hill",
+    null
+   ],
+   [
+    "Cobra Roll",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 7 cars. Riders are arranged 2 across in 2 rows for a total of 28 riders.",
+  "capacity": "760 riders per hour",
+  "designers": [
+   "Peter Clerx"
+  ]
+ },
+ "893": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 20 cars. Riders are arranged 2 across in a single row for a total of 40 riders.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "894": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "capacity": "850 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "2242": {
+  "capacity": "700 riders per hour"
+ },
+ "3573": {
+  "elements": [
+   [
+    "Vertical Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Cutback",
+    null
+   ],
+   [
+    "Heartline Roll",
+    null
+   ]
+  ],
+  "arrangement": "3 cars. Riders are arranged 4 across in 2 rows for a total of 8 riders per car.",
+  "capacity": "850 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "9596": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in 2 rows for a total of 24 riders."
+ },
+ "4293": {
+  "elements": [
+   [
+    "Tire Propelled Launch",
+    null
+   ],
+   [
+    "Tire Propelled Boost",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 8 cars per train. Riders are arranged 2 across in a single row for a total of 16 riders per train."
+ },
+ "11059": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Splash Down",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 4 rows for a total of 8 riders per car."
+ },
+ "12755": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in a single row for a total of 12 riders."
+ },
+ "17401": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 12 cars per train. Riders are arranged 2 across in a single row for a total of 24 riders per train.",
+  "designers": [
+   "The Gravity Group, LLC"
+  ]
+ },
+ "3580": {
+  "arrangement": "2 trains with 4 cars per train. Riders are arranged 2 across in 2 rows for a total of 16 riders per train."
+ },
+ "10748": {
+  "elements": [
+   [
+    "LSM Launch",
+    "from 0 mph - 62.1 mph in 2.5 s"
+   ],
+   [
+    "Loop",
+    "105 ft tall"
+   ],
+   [
+    "Twisted Horseshoe Roll",
+    null
+   ],
+   [
+    "In-Line Twist",
+    null
+   ]
+  ],
+  "arrangement": "3 trains with 5 cars per train. Riders are arranged 2 across in 2 rows for a total of 20 riders per train."
+ },
+ "13902": {
+  "elements": [
+   [
+    "Vertical Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Cutback",
+    null
+   ],
+   [
+    "Heartline Roll",
+    null
+   ]
+  ],
+  "capacity": "850 riders per hour"
+ },
+ "19366": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in 2 rows for a total of 24 riders.",
+  "relocations": [
+   [
+    "Lightwater Valley",
+    "Caterpillar"
+   ],
+   [
+    "Lightwater Valley",
+    "Little Dipper"
+   ],
+   [
+    "Lightwater Valley",
+    "Caterpillar"
+   ]
+  ],
+  "former": [
+   [
+    "Little Dipper",
+    "2021",
+    "2022"
+   ]
+  ]
+ },
+ "23604": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "8 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "relocations": [
+   [
+    "Fantasy Island",
+    "Spinning Racer"
+   ],
+   [
+    "South Sabahiya Park",
+    "Spinning Racer"
+   ],
+   [
+    "Lightwater Valley",
+    "Spinning Racer"
+   ]
+  ]
+ },
+ "783": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 10 cars. Riders are arranged inline in 2 rows for a total of 20 riders.",
+  "capacity": "1000 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
  }
 }

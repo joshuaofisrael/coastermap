@@ -612,3 +612,64 @@ INTL_PARKS += [
 DISPLAY_INTL.update({("legoland-windsor", "Dragon"): "The Dragon", ("legoland-billund", "Dragen"): "The Dragon", ("legoland-deutschland", "Das Große LEGO Rennen"): "Das Große LEGO Rennen (The Great LEGO Race)",
  ("legoland-deutschland", "Maximus - Der Flug des Wächters"): "Maximus: Der Flug des Wächters", ("drayton-manor", "Wave"): "The Wave", ("tusenfryd", "Storm - The Dragon Legend"): "Storm: The Dragon Legend",
  ("skyline-park", "Berg- und Tal Hetz"): "Berg & Tal Hetz"})
+
+# ---- Batch 11c (10 Nov 2026): Nickelodeon Universe (Mall of America, American Dream), Bakken, Walibi Rhone-Alpes, Bellewaerde, Adventure Island, Sea World, IMG Worlds, Lightwater Valley ----
+NUM = ("Nickelodeon Universe (Mall of America), official FAQ", "https://nickelodeonuniverse.com/faq/")
+def NAD(s): return ("Nickelodeon Universe at American Dream, official attraction page", f"https://www.americandream.com/venue/nickelodeon-universe/attraction/{s}")
+def BK(s): return ("Bakken, official ride page", f"https://www.bakken.dk/forlystelser/alle-forlystelser/{s}/")
+def WRA(s): return ("Walibi Rhône-Alpes, official ride page", f"https://www.walibi.fr/en/explore-the-park/rides/{s}")
+def BW(s): return ("Bellewaerde, official attraction page", f"https://www.bellewaerde.be/park/nl/het-park/attracties/{s}")
+def AI(s): return ("Adventure Island, official ride page", f"https://adventureisland.co.uk/ride/{s}/")
+def SWG(s): return ("Sea World Gold Coast, official attraction page", f"https://seaworld.com.au/attractions/{s}")
+IMGR = ("IMG Worlds of Adventure, official rides page", "https://www.imgworlds.com/activities/rides")
+LWV = ("Lightwater Valley, official rides page", "https://lightwatervalley.co.uk/rides")
+AIN = "Riders 100 to 120 cm must be accompanied by a person aged 14 or over."
+HP_B11c = {
+ ("nickelodeon-universe-moa", "Pepsi Orange Streak"): dict(min=47, acc_min=42, acc_max=47, note="Riders 42 to 47 inches must ride with a chaperone.", src=NUM),
+ ("nickelodeon-universe-moa", "Fairly Odd Coaster"): dict(min=47, acc_min=43, acc_max=47, note="Riders 43 to 47 inches must ride with a chaperone.", src=NUM),
+ ("nickelodeon-universe-moa", "SpongeBob SquarePants Rock Bottom Plunge"): dict(min=48, src=NUM),
+ ("nickelodeon-universe-moa", "Avatar Airbender"): dict(min=48, src=NUM),
+ ("nickelodeon-universe-american-dream", "TMNT Shellraiser"): dict(min=48, src=NAD("tmnt-shellraiser")),
+ ("nickelodeon-universe-american-dream", "Shredder"): dict(min=52, acc_min=44, acc_max=52, max=77, note="Riders 44 to 52 inches must ride with a companion.", src=NAD("the-shredder")),
+ ("nickelodeon-universe-american-dream", "Sandy’s Blasting Bronco"): dict(min=52, max=77, src=NAD("sandys-blasting-bronco")),
+ ("nickelodeon-universe-american-dream", "Nickelodeon Slime Streak"): dict(min=48, acc_min=42, acc_max=48, note="Riders 42 to 48 inches must ride with a companion.", src=NAD("nickelodeon-slime-streak")),
+ ("nickelodeon-universe-american-dream", "Timmy's Half-Pipe Havoc"): dict(min=48, max=77, src=NAD("timmys-half-pipe-havoc")),
+ ("bakken", "Vilde Mus"): M(min=120, acc_min=107, acc_max=120, note="Riders 107 to 120 cm must ride with an adult; the park also sets a minimum age of 8 to ride without an adult.", src=BK("de-vilde-mus")),
+ ("bakken", "Rutschebanen"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm must ride with an adult.", src=BK("rutschebanen")),
+ ("bakken", "Tornado"): M(min=120, src=BK("tornado")),
+ ("walibi-rhone-alpes", "Generator"): M(min=130, src=WRA("thrills/generator")),
+ ("walibi-rhone-alpes", "Coccinelle"): M(min=120, acc_min=90, acc_max=120, note="Riders 90 to 120 cm must be accompanied by an adult.", src=WRA("famille/la-coccinelle")),
+ ("walibi-rhone-alpes", "Woodstock Express"): M(min=120, src=WRA("thrills/woodstock-express")),
+ ("walibi-rhone-alpes", "Timber"): M(min=120, acc_min=110, acc_max=120, note="Riders 110 to 120 cm must be accompanied by an adult.", src=WRA("thrills/timber")),
+ ("walibi-rhone-alpes", "Mystic"): M(min=130, max=195, src=WRA("thrills/mystic")),
+ ("walibi-rhone-alpes", "Mahuka"): M(min=120, max=195, src=WRA("thrills/mahuka")),
+ ("bellewaerde", "Huracan"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm must be accompanied by an adult.", src=BW("huracan")),
+ ("bellewaerde", "Dawson Duel"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm must be accompanied by an adult.", src=BW("dawson-duel")),
+ ("bellewaerde", "Wakala"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm must be accompanied by an adult.", src=BW("wakala")),
+ ("bellewaerde", "Brazilian Buggies"): M(min=120, acc_min=90, acc_max=120, note="Riders 90 to 120 cm must be accompanied by an adult.", src=BW("brazilian-buggies")),
+ ("bellewaerde", "Boomerang"): M(min=130, src=BW("boomerang")),
+ ("adventure-island", "Green Scream"): M(min=120, acc_min=100, acc_max=120, note=AIN, src=AI("green-scream")),
+ ("adventure-island", "Barnstormer"): M(min=120, acc_min=100, acc_max=120, note=AIN, src=AI("barnstormer")),
+ ("adventure-island", "Mighty Mini Mega"): M(min=120, acc_min=100, acc_max=120, note=AIN, src=AI("mighty-mini-mega")),
+ ("adventure-island", "Rage"): M(min=120, src=AI("rage")),
+ ("sea-world-gold-coast", "Leviathan"): M(min=122, max=200, src=SWG("leviathan")),
+ ("sea-world-gold-coast", "Storm Coaster"): M(min=130, acc_min=110, acc_max=130, max=200, note="Riders 110 to 130 cm must be accompanied by a responsible person.", src=SWG("storm-coaster")),
+ ("sea-world-gold-coast", "SpongeBob's Boating School Blast"): M(min=105, acc_min=90, acc_max=105, note="Riders 90 to 105 cm must be accompanied by a responsible adult.", src=SWG("spongebobs-boating-school-blast")),
+ ("img-worlds", "Velociraptor"): M(min=130, src=IMGR),
+ ("img-worlds", "Predator"): M(min=125, src=IMGR),
+ ("lightwater-valley", "Spinning Racer"): M(min=120, src=LWV),
+ ("lightwater-valley", "Ladybird"): M(min=90, src=LWV),
+}
+HP_INTL.update(HP_B11c)
+INTL_PARKS += [
+ dict(slug="nickelodeon-universe-moa", name="Nickelodeon Universe (Mall of America)", short="Nickelodeon Universe MOA", loc="Bloomington, Minnesota", state="MN", country="US", official="https://nickelodeonuniverse.com/", group="Mall of America"),
+ dict(slug="nickelodeon-universe-american-dream", name="Nickelodeon Universe at American Dream", short="Nickelodeon Universe NJ", loc="East Rutherford, New Jersey", state="NJ", country="US", official="https://www.americandream.com/venue/nickelodeon-universe", group="American Dream"),
+ dict(slug="bakken", name="Bakken (Dyrehavsbakken)", short="Bakken", loc="Klampenborg, Denmark", state="Capital Region", country="DK", official="https://www.bakken.dk/", group="Bakken"),
+ dict(slug="walibi-rhone-alpes", name="Walibi Rhône-Alpes", short="Walibi Rhône-Alpes", loc="Les Avenières, France", state="Auvergne-Rhône-Alpes", country="FR", official="https://www.walibi.fr/en", group="Compagnie des Alpes"),
+ dict(slug="bellewaerde", name="Bellewaerde Park", short="Bellewaerde", loc="Ypres, Belgium", state="West Flanders", country="BE", official="https://www.bellewaerde.be/", group="Compagnie des Alpes"),
+ dict(slug="adventure-island", name="Adventure Island", short="Adventure Island", loc="Southend-on-Sea, England", state="Essex", country="GB", official="https://adventureisland.co.uk/", group="Adventure Island"),
+ dict(slug="sea-world-gold-coast", name="Sea World (Gold Coast)", short="Sea World Gold Coast", loc="Main Beach, Gold Coast, Australia", state="Queensland", country="AU", official="https://seaworld.com.au/", group="Village Roadshow Theme Parks"),
+ dict(slug="img-worlds", name="IMG Worlds of Adventure", short="IMG Worlds", loc="Dubai, United Arab Emirates", state="Dubai", country="AE", official="https://www.imgworlds.com/", group="IMG Group"),
+ dict(slug="lightwater-valley", name="Lightwater Valley", short="Lightwater Valley", loc="North Stainley, Ripon, England", state="North Yorkshire", country="GB", official="https://lightwatervalley.co.uk/", group="Lightwater Valley"),
+]
+DISPLAY_INTL.update({("nickelodeon-universe-american-dream", "Shredder"): "The Shredder", ("nickelodeon-universe-american-dream", "Sandy’s Blasting Bronco"): "Sandy's Blasting Bronco", ("bakken", "Vilde Mus"): "De Vilde Mus", ("walibi-rhone-alpes", "Coccinelle"): "La Coccinelle"})
