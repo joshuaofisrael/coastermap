@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 741 coasters at 102 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 811 coasters at 113 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -855,3 +855,84 @@ Not affiliated with any park. Ride rules change; confirm with the park.
 - [Idlewild & SoakZone](https://coastermap.com/parks/idlewild/): 2 coasters
   - [Wild Mouse](https://coastermap.com/parks/idlewild/wild-mouse/): min height 48 in
   - [Rollo Coaster](https://coastermap.com/parks/idlewild/rollo-coaster/): min height 42 in
+- [Six Flags Qiddiya City](https://coastermap.com/parks/six-flags-qiddiya-city/): 8 coasters
+  - [Sea Stallion](https://coastermap.com/parks/six-flags-qiddiya-city/sea-stallion/): min height 130 cm
+  - [Saw Mill Falls](https://coastermap.com/parks/six-flags-qiddiya-city/saw-mill-falls/): min height 130 cm
+  - [Twilight Express](https://coastermap.com/parks/six-flags-qiddiya-city/twilight-express/): min height 130 cm
+  - [Adrena-Line](https://coastermap.com/parks/six-flags-qiddiya-city/adrena-line/): min height 130 cm
+  - [Iron Rattler](https://coastermap.com/parks/six-flags-qiddiya-city/iron-rattler/): min height 130 cm
+  - [Spitfire](https://coastermap.com/parks/six-flags-qiddiya-city/spitfire/): min height 130 cm
+  - [Colossus](https://coastermap.com/parks/six-flags-qiddiya-city/colossus/): min height 130 cm
+  - [Falcons Flight](https://coastermap.com/parks/six-flags-qiddiya-city/falcons-flight/): min height 130 cm
+- [Legoland Windsor](https://coastermap.com/parks/legoland-windsor/): 4 coasters
+  - [The Dragon](https://coastermap.com/parks/legoland-windsor/the-dragon/): min height 130 cm
+  - [Dragon's Apprentice](https://coastermap.com/parks/legoland-windsor/dragons-apprentice/): min height 130 cm
+  - [DUPLO Dino Coaster](https://coastermap.com/parks/legoland-windsor/duplo-dino-coaster/): min height 90 cm
+  - [Minifigure Speedway](https://coastermap.com/parks/legoland-windsor/minifigure-speedway/): min height 105 cm
+- [Legoland Deutschland](https://coastermap.com/parks/legoland-deutschland/): 4 coasters
+  - [Das Große LEGO Rennen (The Great LEGO Race)](https://coastermap.com/parks/legoland-deutschland/das-groe-lego-rennen-the-great-lego-race/): min height 120 cm
+  - [Feuerdrache](https://coastermap.com/parks/legoland-deutschland/feuerdrache/): min height 120 cm
+  - [Drachenjagd](https://coastermap.com/parks/legoland-deutschland/drachenjagd/): min height 120 cm
+  - [Maximus: Der Flug des Wächters](https://coastermap.com/parks/legoland-deutschland/maximus-der-flug-des-wachters/): min height 130 cm
+- [Legoland Billund](https://coastermap.com/parks/legoland-billund/): 5 coasters
+  - [The Dragon](https://coastermap.com/parks/legoland-billund/the-dragon/): min height 120 cm
+  - [X-treme Racers](https://coastermap.com/parks/legoland-billund/x-treme-racers/): min height 120 cm
+  - [Polar X-plorer](https://coastermap.com/parks/legoland-billund/polar-x-plorer/): min height 130 cm
+  - [Flying Eagle](https://coastermap.com/parks/legoland-billund/flying-eagle/): min height 120 cm
+  - [Minifigure Speedway](https://coastermap.com/parks/legoland-billund/minifigure-speedway/): min height 130 cm
+- [Mirabilandia](https://coastermap.com/parks/mirabilandia/): 9 coasters
+  - [Katun](https://coastermap.com/parks/mirabilandia/katun/): min height 140 cm
+  - [Gold Digger](https://coastermap.com/parks/mirabilandia/gold-digger/): min height 90 cm
+  - [Rexplorer](https://coastermap.com/parks/mirabilandia/rexplorer/): min height 90 cm
+  - [PAW Patrol To The Rescue](https://coastermap.com/parks/mirabilandia/paw-patrol-to-the-rescue/): min height 90 cm
+  - [iSpeed](https://coastermap.com/parks/mirabilandia/ispeed/): min height 140 cm
+  - [Master Thai](https://coastermap.com/parks/mirabilandia/master-thai/): min height 120 cm
+  - [Divertical](https://coastermap.com/parks/mirabilandia/divertical/): min height 130 cm
+  - [Desmo Race](https://coastermap.com/parks/mirabilandia/desmo-race/): min height 120 cm
+  - [Cowabunga Carts](https://coastermap.com/parks/mirabilandia/cowabunga-carts/): min height 90 cm
+- [Erlebnispark Tripsdrill](https://coastermap.com/parks/tripsdrill/): 6 coasters
+  - [G'sengte Sau](https://coastermap.com/parks/tripsdrill/gsengte-sau/): min height 100 cm
+  - [Rasender Tausendfüßler](https://coastermap.com/parks/tripsdrill/rasender-tausendfuler/)
+  - [Mammut](https://coastermap.com/parks/tripsdrill/mammut/): min height 120 cm
+  - [Karacho](https://coastermap.com/parks/tripsdrill/karacho/): min height 125 cm
+  - [Volldampf](https://coastermap.com/parks/tripsdrill/volldampf/): min height 95 cm
+  - [Hals-über-Kopf](https://coastermap.com/parks/tripsdrill/hals-uber-kopf/): min height 120 cm
+- [Djurs Sommerland](https://coastermap.com/parks/djurs-sommerland/): 8 coasters
+  - [Thor's Hammer](https://coastermap.com/parks/djurs-sommerland/thors-hammer/): min height 130 cm
+  - [Piraten](https://coastermap.com/parks/djurs-sommerland/piraten/): min height 140 cm
+  - [Skatteøen](https://coastermap.com/parks/djurs-sommerland/skatteoen/): min height 130 cm
+  - [Juvelen](https://coastermap.com/parks/djurs-sommerland/juvelen/): min height 132 cm
+  - [Vilde Hønsejagt](https://coastermap.com/parks/djurs-sommerland/vilde-honsejagt/): min height 120 cm
+  - [DrageKongen](https://coastermap.com/parks/djurs-sommerland/dragekongen/): min height 130 cm
+  - [Jungle Rally](https://coastermap.com/parks/djurs-sommerland/jungle-rally/): min height 120 cm
+  - [T-Rex Family Coaster](https://coastermap.com/parks/djurs-sommerland/t-rex-family-coaster/): min height 130 cm
+- [Drayton Manor](https://coastermap.com/parks/drayton-manor/): 5 coasters
+  - [Jormungandr](https://coastermap.com/parks/drayton-manor/jormungandr/): min height 120 cm
+  - [Troublesome Trucks Runaway Coaster](https://coastermap.com/parks/drayton-manor/troublesome-trucks-runaway-coaster/): min height 120 cm
+  - [Accelerator](https://coastermap.com/parks/drayton-manor/accelerator/): min height 120 cm
+  - [The Wave](https://coastermap.com/parks/drayton-manor/the-wave/): min height 132 cm
+  - [Gold Rush](https://coastermap.com/parks/drayton-manor/gold-rush/): min height 100 cm
+- [TusenFryd](https://coastermap.com/parks/tusenfryd/): 7 coasters
+  - [Thundercoaster](https://coastermap.com/parks/tusenfryd/thundercoaster/): min height 120 cm
+  - [Loopen](https://coastermap.com/parks/tusenfryd/loopen/): min height 110 cm
+  - [SuperSplash](https://coastermap.com/parks/tusenfryd/supersplash/): min height 120 cm
+  - [Speed Monster](https://coastermap.com/parks/tusenfryd/speed-monster/): min height 140 cm
+  - [Western-Expressen](https://coastermap.com/parks/tusenfryd/western-expressen/): min height 110 cm
+  - [HuriHuri](https://coastermap.com/parks/tusenfryd/hurihuri/): min height 110 cm
+  - [Storm: The Dragon Legend](https://coastermap.com/parks/tusenfryd/storm-the-dragon-legend/): min height 130 cm
+- [Bobbejaanland](https://coastermap.com/parks/bobbejaanland/): 8 coasters
+  - [Dreamcatcher](https://coastermap.com/parks/bobbejaanland/dreamcatcher/): min height 130 cm
+  - [Revolution](https://coastermap.com/parks/bobbejaanland/revolution/): min height 140 cm
+  - [Bob Express](https://coastermap.com/parks/bobbejaanland/bob-express/): min height 140 cm
+  - [Oki Doki](https://coastermap.com/parks/bobbejaanland/oki-doki/): min height 140 cm
+  - [Typhoon](https://coastermap.com/parks/bobbejaanland/typhoon/): min height 140 cm
+  - [Speedy Bob](https://coastermap.com/parks/bobbejaanland/speedy-bob/): min height 140 cm
+  - [Naga Bay](https://coastermap.com/parks/bobbejaanland/naga-bay/): min height 140 cm
+  - [Fury](https://coastermap.com/parks/bobbejaanland/fury/): min height 130 cm
+- [Skyline Park](https://coastermap.com/parks/skyline-park/): 6 coasters
+  - [Sky Dragster](https://coastermap.com/parks/skyline-park/sky-dragster/)
+  - [Kids Spin](https://coastermap.com/parks/skyline-park/kids-spin/): min height 120 cm
+  - [Berg & Tal Hetz](https://coastermap.com/parks/skyline-park/berg-tal-hetz/): min height 130 cm
+  - [Flotter Otto](https://coastermap.com/parks/skyline-park/flotter-otto/): min height 120 cm
+  - [Sky Rider](https://coastermap.com/parks/skyline-park/sky-rider/): min height 140 cm
+  - [Sky Wheel](https://coastermap.com/parks/skyline-park/sky-wheel/): min height 150 cm

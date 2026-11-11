@@ -23,8 +23,11 @@ for park in rc.values():
         for k, v in rows(tr):
             if k == "Elements":
                 els = []
-                for m in re.finditer(r"<a href=/\d+\.htm>([^<]+)</a>(.*?)(?=<a href=/\d+\.htm>|$)", v, re.S):
-                    extra = tx(m.group(2))
+                for seg in re.split(r"<br>", v):
+                    m = re.search(r"<a href=/\d+\.htm>([^<]+)</a>", seg)
+                    if not m: continue
+                    pre, post = tx(seg[:m.start()]), tx(seg[m.end():])
+                    extra = ", ".join(x for x in [pre, post] if x)
                     els.append([H.unescape(m.group(1)), extra or None])
                 d["elements"] = els
         trn = sect(c, "Trains")
@@ -47,6 +50,8 @@ for park in rc.values():
                 ys = re.findall(r'datetime="(\d{4})', seg)
                 fl.append([nm, ys[0] if ys else None, ys[1] if len(ys) > 1 else None])
             d["former"] = fl
+        nt = sect(c, "Notes")
+        if nt and re.search(r"\bseats?\b|\bseated\b|\briders?\b|\bpassengers?\b|\brows?\b", tx(nt), re.I): d["train_note"] = True
         out[str(cid)] = d
 json.dump(out, open(os.path.join(HERE, "rcdb_details.json"), "w"), indent=1, ensure_ascii=False)
 from collections import Counter

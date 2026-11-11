@@ -699,3 +699,22 @@ Topics were picked from Google autocomplete queries (fear of coasters, stomach d
 **Batch 10f (5 official rules):** Dutch Wonderland 3/3 and Idlewild & SoakZone 2/2 (Palace Entertainment pages, headed Chrome). Not added: Lake Winnepesaukah and Kemah Boardwalk (no ride pages found on the official sites).
 
 Totals after batch 10: 102 parks, 741 coasters, 928 pages. Live 200 checks passed for the new park and coaster pages, and IndexNow returned HTTP 200 for the full sitemap after each push.
+
+## Batch 11 (10 Nov 2026, night): completeness audit, deeper coaster pages, more parks
+
+**Completeness audit.** Every park's RCDB page was re-fetched and its "Operating Roller Coasters" table compared with our list (`/workspace/cm2/check_complete.py`). Result for all 106 RCDB parks in `rcdb.json` (102 live + 4 skipped): 0 operating coasters missing, 0 listed coasters now SBNO or removed. All 102 live parks list every RCDB-operating coaster.
+
+**Batch 11a (commit 803c789): deeper coaster pages.** New `_build/details.py` parses the cached RCDB coaster pages into `_build/rcdb_details.json` (element list with values, restraints, capacity, designer, relocations, former names with years, a flag when RCDB notes qualify the seat count). New `_build/specs.py` (exec'd after coasterplus.py) adds a "layout, trains and ride system" section to every coaster page: lift or launch type from RCDB elements, the RCDB element list in RCDB's order (glossary links, ×N for repeats), trains, riders per train, restraints, hourly capacity, designer, previous locations, which kid-height lists the ride is on (alone or with a companion) and up to 4 same-maker rides elsewhere; plus FAQs for ride time, launch or lift, riders per train, restraints, first-timer fit (from RCDB class, inversions, speed and the height rule) and previous locations. Ride time (RCDB duration) is now in the stats table. Pages with no verified rule now say "Not clearly published by the park. Check the sign at the ride entrance."
+- Fix: former names were shown newest first (RCDB order) with "and later", which reversed the history on 55 pages (for example Woodstock Express at Kings Island). They are now oldest first.
+- Fix: an RCDB element value such as "100 ft tall" belongs to the element after it (Raptor's 100 ft loop), now parsed per element.
+- Where RCDB notes say the seat count differs from the train layout (28 coasters, e.g. Falcons Flight), riders per train and the train layout are left out.
+- Near-duplicate audit after the change: pages over 0.6 max Jaccard 4 (cap 4), median 0.34.
+
+**Batch 11b: 11 new parks, 70 coasters, 68 official rules.** Heights only from official park pages or official PDFs; cm parks stored in cm.
+- Six Flags Qiddiya City 8/8 (official ride accessibility guide PDFs, read as images; "adult companion required if below 130 cm" stored as a 130 cm ride-alone minimum with the listed lower bound; recommended ages kept as notes). Includes Falcons Flight.
+- Legoland Windsor 4/4 (official height restrictions page), Legoland Deutschland 4/4 (official age and height PDF; ages kept as notes), Legoland Billund 5/5 (official ride pages).
+- Mirabilandia 9/9 (official attraction pages; companion rules there are by age, kept as notes; unlabelled age figures left out).
+- Erlebnispark Tripsdrill 5/6: Rasender Tausendfüßler omitted (age rule only, no minimum height).
+- Djurs Sommerland 8/8, Drayton Manor 5/5, Bobbejaanland 8/8 (Dutch pages), TusenFryd 7/7 (HuriHuri and Western-Expressen list "minimum 110 cm" plus "adult companion required for 95 to 110 cm", stored as 110 alone, 95 to 110 with an adult).
+- Skyline Park 5/6: Sky Dragster omitted (no minimum height shown, only a companion rule under 130 cm).
+- New region guides: Italy, Denmark, Belgium. Saudi Arabia and Norway added to the ranking regions.

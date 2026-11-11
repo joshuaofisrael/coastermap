@@ -511,3 +511,104 @@ INTL_PARKS += [
  dict(slug="dutch-wonderland", name="Dutch Wonderland", short="Dutch Wonderland", loc="Lancaster, Pennsylvania", state="PA", country="US", official="https://www.dutchwonderland.com/", group="Palace Entertainment"),
  dict(slug="idlewild", name="Idlewild & SoakZone", short="Idlewild", loc="Ligonier, Pennsylvania", state="PA", country="US", official="https://www.idlewild.com/", group="Palace Entertainment"),
 ]
+
+# ---- Batch 11b (10 Nov 2026): Six Flags Qiddiya City, Legoland Windsor/Deutschland/Billund, Mirabilandia, Tripsdrill, Djurs Sommerland, Drayton Manor, TusenFryd, Bobbejaanland, Skyline Park ----
+def SFQ(s): return ("Six Flags Qiddiya City, official ride accessibility guide (PDF)", f"https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/rides/Accessibility%20Guide%20-%20{s}_r.pdf")
+LLW = ("Legoland Windsor, official height restrictions page", "https://www.legoland.co.uk/plan-your-day/useful-guides/height-restrictions/")
+LLD = ("Legoland Deutschland, official age and height restrictions (PDF)", "https://www.legoland.de/media/4l5pfnue/legoland-altersbeschraenkungen-groe%C3%9Fenbeschraenkungen.pdf")
+def LLB(s): return ("Legoland Billund, official ride page", f"https://www.legoland.dk/en/explore/the-park/attractions/{s}/")
+def MIR(s): return ("Mirabilandia, official attraction page", f"https://www.mirabilandia.it/en/attivita/attrazioni/{s}")
+def TD(s): return ("Erlebnispark Tripsdrill, official attraction page", f"https://tripsdrill.de/en/theme-park/attractions/detail-page/{s}")
+def DJ(s): return ("Djurs Sommerland, official ride page", f"https://www.djurssommerland.dk/en/rides/{s}/")
+def DM(s): return ("Drayton Manor, official ride page", f"https://www.draytonmanor.co.uk/attraction-details/{s}")
+def TF(s): return ("TusenFryd, official attraction page", f"https://www.tusenfryd.no/en/attraksjoner/{s}")
+def BJ(s): return ("Bobbejaanland, official attraction page", f"https://www.bobbejaanland.be/parkactiviteiten/attracties/{s}")
+def SKP(s): return ("Skyline Park, official attraction page", f"https://www.skylinepark.de/attraktionen/{s}/")
+Q130 = "Riders under 130 cm must ride with an adult companion."
+HP_B11b = {
+ ("six-flags-qiddiya-city", "Falcons Flight"): M(min=130, max=196, src=SFQ("Falcons%20Flight")),
+ ("six-flags-qiddiya-city", "Sea Stallion"): M(min=130, acc_min=120, acc_max=130, max=195, note=Q130 + " The park recommends a minimum age of 6.", src=SFQ("Sea%20Stallion")),
+ ("six-flags-qiddiya-city", "Saw Mill Falls"): M(min=130, acc_min=100, acc_max=130, note=Q130 + " Recommended minimum age: 5 with an adult, 8 unaccompanied.", src=SFQ("Saw%20Mill%20Falls")),
+ ("six-flags-qiddiya-city", "Twilight Express"): M(min=130, acc_min=95, acc_max=130, max=205, note=Q130 + " Recommended minimum age: 4 with an adult, 8 unaccompanied.", src=SFQ("Twilight%20Express")),
+ ("six-flags-qiddiya-city", "Adrena-Line"): M(min=130, acc_min=105, acc_max=130, max=205, note=Q130 + " Recommended minimum age: 4 with an adult, 8 unaccompanied.", src=SFQ("Adrena-Line")),
+ ("six-flags-qiddiya-city", "Iron Rattler"): M(min=130, acc_min=120, acc_max=130, max=205, note=Q130 + " Recommended minimum age to ride unaccompanied: 10.", src=SFQ("Iron%20Rattler")),
+ ("six-flags-qiddiya-city", "Spitfire"): M(min=130, acc_min=105, acc_max=130, note=Q130, src=SFQ("Spitfire")),
+ ("six-flags-qiddiya-city", "Colossus"): M(min=130, acc_min=120, acc_max=130, max=190, note=Q130, src=SFQ("Colossus")),
+ ("legoland-windsor", "Dragon"): M(min=130, acc_min=100, acc_max=130, note="Riders under 130 cm must be accompanied by a responsible person at least 16 years old.", src=LLW),
+ ("legoland-windsor", "Dragon's Apprentice"): M(min=130, acc_min=90, acc_max=130, note="Riders under 130 cm must be accompanied by a responsible person at least 16 years old.", src=LLW),
+ ("legoland-windsor", "DUPLO Dino Coaster"): M(min=90, src=LLW),
+ ("legoland-windsor", "Minifigure Speedway"): M(min=105, src=LLW),
+ ("legoland-deutschland", "Das Große LEGO Rennen"): M(min=120, acc_min=110, acc_max=120, note="Minimum age 4 with an adult, 6 without.", src=LLD),
+ ("legoland-deutschland", "Feuerdrache"): M(min=120, acc_min=110, acc_max=120, note="Minimum age 6 with an adult, 8 without.", src=LLD),
+ ("legoland-deutschland", "Drachenjagd"): M(min=120, acc_min=100, acc_max=120, note="Minimum age 4 with an adult, 6 without.", src=LLD),
+ ("legoland-deutschland", "Maximus - Der Flug des Wächters"): M(min=130, acc_min=120, acc_max=130, max=200, note="Minimum age 6 with an adult, 8 without.", src=LLD),
+ ("legoland-billund", "Dragen"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm must be accompanied by a responsible adult.", src=LLB("the-dragon")),
+ ("legoland-billund", "X-treme Racers"): M(min=120, max=195, src=LLB("x-treme-racers")),
+ ("legoland-billund", "Polar X-plorer"): M(min=130, acc_min=120, acc_max=130, note="Riders 120 to 130 cm must be accompanied by a responsible adult.", src=LLB("polar-x-plorer")),
+ ("legoland-billund", "Flying Eagle"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm must be accompanied by a responsible adult.", src=LLB("flying-eagle")),
+ ("legoland-billund", "Minifigure Speedway"): M(min=130, acc_min=110, acc_max=130, note="Riders 110 to 130 cm must be accompanied by a responsible adult.", src=LLB("minifigure-speedway")),
+ ("mirabilandia", "Katun"): M(min=140, src=MIR("katun")),
+ ("mirabilandia", "iSpeed"): M(min=140, max=195, src=MIR("ispeed")),
+ ("mirabilandia", "Divertical"): M(min=130, note="The park requires an adult companion for riders between 8 and 10 years old.", src=MIR("divertical")),
+ ("mirabilandia", "Cowabunga Carts"): M(min=90, note="The park requires an adult companion for riders under 8 years old and under 110 cm.", src=MIR("cowabunga-carts")),
+ ("mirabilandia", "PAW Patrol To The Rescue"): M(min=90, note="The park requires an adult companion for riders under 8 years old.", src=MIR("paw-patrol-to-the-rescue")),
+ ("mirabilandia", "Gold Digger"): M(min=90, note="The park requires an adult companion for riders between 3 and 10 years old.", src=MIR("gold-digger")),
+ ("mirabilandia", "Rexplorer"): M(min=90, note="The park requires an adult companion for riders between 3 and 10 years old.", src=MIR("rexplorer")),
+ ("mirabilandia", "Master Thai"): M(min=120, note="The park requires an adult companion for riders between 6 and 8 years old.", src=MIR("master-thai")),
+ ("mirabilandia", "Desmo Race"): M(min=120, max=195, note="The park requires an adult companion for riders under 10 years old and under 140 cm, and lists a maximum weight of 135 kg.", src=MIR("desmo-race")),
+ ("tripsdrill", "Karacho"): M(min=125, max=195, note="Minimum age 8 with an adult, 11 to ride alone.", src=TD("karacho")),
+ ("tripsdrill", "Mammut"): M(min=120, note="Minimum age 6 with an adult, 8 to ride alone.", src=TD("mammut")),
+ ("tripsdrill", "G'sengte Sau"): M(min=100, note="Minimum age 4 with an adult, 8 to ride alone.", src=TD("gsengte-sau")),
+ ("tripsdrill", "Volldampf"): M(min=95, note="Minimum age 4 with an adult, 8 to ride alone.", src=TD("volldampf")),
+ ("tripsdrill", "Hals-über-Kopf"): M(min=120, note="Minimum age 6 with an adult, 8 to ride alone.", src=TD("hals-ueber-kopf")),
+ ("djurs-sommerland", "Thor's Hammer"): M(min=130, acc_min=100, acc_max=130, note="Children under 130 cm must be accompanied and under adult supervision.", src=DJ("vikingeland/thors-hammer")),
+ ("djurs-sommerland", "Piraten"): M(min=140, max=196, src=DJ("piratland/piraten")),
+ ("djurs-sommerland", "Skatteøen"): M(min=130, acc_min=110, acc_max=130, src=DJ("piratland/skatteoeen")),
+ ("djurs-sommerland", "Juvelen"): M(min=132, acc_min=120, acc_max=132, src=DJ("mexicoland/juvelen")),
+ ("djurs-sommerland", "Vilde Hønsejagt"): M(min=120, acc_min=90, acc_max=120, src=DJ("bondegaardsland/den-vilde-hoensejagt")),
+ ("djurs-sommerland", "DrageKongen"): M(min=130, acc_min=120, acc_max=130, max=196, src=DJ("wild-asia/dragekongen")),
+ ("djurs-sommerland", "Jungle Rally"): M(min=120, acc_min=90, acc_max=120, src=DJ("wild-asia/jungle-rally")),
+ ("djurs-sommerland", "T-Rex Family Coaster"): M(min=130, acc_min=90, acc_max=130, src=DJ("dinosaurland/t-rex-family-coaster")),
+ ("drayton-manor", "Jormungandr"): M(min=120, acc_min=105, acc_max=120, note="Riders 105 to 120 cm must be accompanied by an adult.", src=DM("jormungandr")),
+ ("drayton-manor", "Troublesome Trucks Runaway Coaster"): M(min=120, acc_min=100, acc_max=120, note="Riders under 120 cm must be accompanied by an adult.", src=DM("troublesome-trucks-runaway-coaster")),
+ ("drayton-manor", "Accelerator"): M(min=120, acc_min=100, acc_max=120, note="Riders under 120 cm must be accompanied by a responsible person aged 16 or over.", src=DM("accelerator")),
+ ("drayton-manor", "Wave"): M(min=132, acc_min=120, acc_max=132, note="Riders under 132 cm must be accompanied by a responsible person aged 16 or over.", src=DM("the-wave")),
+ ("drayton-manor", "Gold Rush"): M(min=100, max=196, src=DM("gold-rush")),
+ ("tusenfryd", "Thundercoaster"): M(min=120, src=TF("thundercoaster")),
+ ("tusenfryd", "Loopen"): M(min=110, src=TF("loopen")),
+ ("tusenfryd", "SuperSplash"): M(min=120, src=TF("supersplash")),
+ ("tusenfryd", "Speed Monster"): M(min=140, src=TF("speedmonster")),
+ ("tusenfryd", "Western-Expressen"): M(min=110, acc_min=95, acc_max=110, src=TF("western-expressen")),
+ ("tusenfryd", "HuriHuri"): M(min=110, acc_min=95, acc_max=110, src=TF("hurihuri")),
+ ("tusenfryd", "Storm - The Dragon Legend"): M(min=130, src=TF("storm")),
+ ("bobbejaanland", "Dreamcatcher"): M(min=130, acc_min=110, acc_max=130, src=BJ("dreamcatcher")),
+ ("bobbejaanland", "Revolution"): M(min=140, acc_min=100, acc_max=140, src=BJ("revolution")),
+ ("bobbejaanland", "Bob Express"): M(min=140, acc_min=120, acc_max=140, max=195, src=BJ("bob-express")),
+ ("bobbejaanland", "Oki Doki"): M(min=140, acc_min=95, acc_max=140, src=BJ("oki-doki")),
+ ("bobbejaanland", "Typhoon"): M(min=140, acc_min=125, acc_max=140, src=BJ("typhoon")),
+ ("bobbejaanland", "Speedy Bob"): M(min=140, acc_min=110, acc_max=140, max=195, src=BJ("speedy-bob")),
+ ("bobbejaanland", "Naga Bay"): M(min=140, acc_min=120, acc_max=140, max=195, src=BJ("naga-bay")),
+ ("bobbejaanland", "Fury"): M(min=130, src=BJ("fury")),
+ ("skyline-park", "Berg- und Tal Hetz"): M(min=130, acc_min=120, acc_max=130, note="The park lists the ride from age 6.", src=SKP("berg-tal-hetz")),
+ ("skyline-park", "Flotter Otto"): M(min=120, acc_min=90, acc_max=120, note="The park lists the ride from age 2.", src=SKP("flotter-otto")),
+ ("skyline-park", "Kids Spin"): M(min=120, acc_min=105, acc_max=120, note="The park lists the ride from age 4.", src=SKP("kids-spin")),
+ ("skyline-park", "Sky Rider"): M(min=140, acc_min=120, acc_max=140, note="The park lists the ride from age 6; riders up to 10 years old must ride with an adult.", src=SKP("sky-rider")),
+ ("skyline-park", "Sky Wheel"): M(min=150, max=200, note="The park lists the ride from age 12.", src=SKP("sky-wheel")),
+}
+HP_INTL.update(HP_B11b)
+INTL_PARKS += [
+ dict(slug="six-flags-qiddiya-city", name="Six Flags Qiddiya City", short="Six Flags Qiddiya", loc="Qiddiya, Riyadh, Saudi Arabia", state="Riyadh", country="SA", official="https://sixflagsqiddiyacity.com/en", group="Six Flags Qiddiya City"),
+ dict(slug="legoland-windsor", name="Legoland Windsor", short="Legoland Windsor", loc="Windsor, England", state="Berkshire", country="GB", official="https://www.legoland.co.uk/", group="Merlin Entertainments"),
+ dict(slug="legoland-deutschland", name="Legoland Deutschland", short="Legoland Deutschland", loc="Günzburg, Germany", state="Bavaria", country="DE", official="https://www.legoland.de/", group="Merlin Entertainments"),
+ dict(slug="legoland-billund", name="Legoland Billund", short="Legoland Billund", loc="Billund, Denmark", state="Southern Denmark", country="DK", official="https://www.legoland.dk/en/", group="Merlin Entertainments"),
+ dict(slug="mirabilandia", name="Mirabilandia", short="Mirabilandia", loc="Ravenna, Italy", state="Emilia-Romagna", country="IT", official="https://www.mirabilandia.it/en", group="Parques Reunidos"),
+ dict(slug="tripsdrill", name="Erlebnispark Tripsdrill", short="Tripsdrill", loc="Cleebronn, Germany", state="Baden-Württemberg", country="DE", official="https://tripsdrill.de/en/", group="Tripsdrill"),
+ dict(slug="djurs-sommerland", name="Djurs Sommerland", short="Djurs Sommerland", loc="Nimtofte, Denmark", state="Central Denmark", country="DK", official="https://www.djurssommerland.dk/en/", group="Djurs Sommerland"),
+ dict(slug="drayton-manor", name="Drayton Manor", short="Drayton Manor", loc="Tamworth, England", state="Staffordshire", country="GB", official="https://www.draytonmanor.co.uk/", group="Drayton Manor"),
+ dict(slug="tusenfryd", name="TusenFryd", short="TusenFryd", loc="Vinterbro, Norway", state="Akershus", country="NO", official="https://www.tusenfryd.no/en/", group="Parques Reunidos"),
+ dict(slug="bobbejaanland", name="Bobbejaanland", short="Bobbejaanland", loc="Lichtaart, Belgium", state="Antwerp", country="BE", official="https://www.bobbejaanland.be/", group="Parques Reunidos"),
+ dict(slug="skyline-park", name="Skyline Park", short="Skyline Park", loc="Bad Wörishofen, Germany", state="Bavaria", country="DE", official="https://www.skylinepark.de/", group="Skyline Park"),
+]
+DISPLAY_INTL.update({("legoland-windsor", "Dragon"): "The Dragon", ("legoland-billund", "Dragen"): "The Dragon", ("legoland-deutschland", "Das Große LEGO Rennen"): "Das Große LEGO Rennen (The Great LEGO Race)",
+ ("legoland-deutschland", "Maximus - Der Flug des Wächters"): "Maximus: Der Flug des Wächters", ("drayton-manor", "Wave"): "The Wave", ("tusenfryd", "Storm - The Dragon Legend"): "Storm: The Dragon Legend",
+ ("skyline-park", "Berg- und Tal Hetz"): "Berg & Tal Hetz"})

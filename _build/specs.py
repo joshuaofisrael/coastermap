@@ -15,7 +15,8 @@ for _c in ALL:
             if _nm and _nm not in (_c["rcdb_name"], _c["name"], "Etymology", "Name") and _nm not in _f: _f.append(_nm)
         _c["former"] = _f or None
     _a = (_c["dx"].get("arrangement") or "")
-    _m = re.search(r"total of (\d+) riders", _a); _c["per_train"] = int(_m.group(1)) if _m else None
+    _m = re.search(r"total of (\d+) riders", _a); _c["per_train"] = int(_m.group(1)) if _m and not _c["dx"].get("train_note") else None
+    if _c["dx"].get("train_note"): _c["dx"].pop("arrangement", None)  # RCDB notes qualify the seat count, so leave the train layout out
     _m = re.search(r"(\d[\d,]*) riders per hour", _c["dx"].get("capacity") or ""); _c["capacity"] = int(_m.group(1).replace(",", "")) if _m else None
 
 GLOSS = {"Chain Lift Hill": "chain-lift", "Vertical Chain Lift Hill": "chain-lift", "Loop": "vertical-loop", "Corkscrew": "corkscrew", "Double Corkscrew": "corkscrew",

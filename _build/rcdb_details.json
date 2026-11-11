@@ -3,11 +3,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "100 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "100 ft tall"
    ],
    [
     "Zero-G Roll",
@@ -43,23 +43,23 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "119 ft tall"
+    null
    ],
    [
     "Loop",
-    "103 ft tall"
+    "119 ft tall"
    ],
    [
     "Dive Loop",
-    null
+    "103 ft tall"
    ],
    [
     "Block Brake",
-    "83 ft tall"
+    null
    ],
    [
     "Inclined Loop",
-    null
+    "83 ft tall"
    ],
    [
     "Corkscrew",
@@ -79,7 +79,8 @@
     "1996",
     "2014"
    ]
-  ]
+  ],
+  "train_note": true
  },
  "11": {
   "elements": [
@@ -196,19 +197,19 @@
   "elements": [
    [
     "Cable Lift Hill",
-    "with a 300 ft drop at 80 ° 169 ft tall 122 °"
+    "310 ft tall, with a 300 ft drop at 80 °"
    ],
    [
     "Over-Banked Curve",
-    null
+    "169 ft tall 122 °"
    ],
    [
     "Tunnel",
-    "182 ft tall"
+    null
    ],
    [
     "Hill",
-    null
+    "182 ft tall"
    ],
    [
     "Over-Banked Curve",
@@ -281,15 +282,15 @@
   "elements": [
    [
     "LSM Lift Hill",
-    "with a 100 ft drop at 95 °"
+    "105 ft tall, with a 100 ft drop at 95 °"
    ],
    [
     "Twisted Horseshoe Roll",
-    "400 ft long"
+    null
    ],
    [
     "Tunnel",
-    null
+    "400 ft long"
    ],
    [
     "LSM Launch (rolling)",
@@ -352,7 +353,7 @@
   "elements": [
    [
     "Immelmann",
-    null
+    "165 ft tall"
    ],
    [
     "Dive Loop",
@@ -369,7 +370,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 200 ft drop at 90 °"
+    "205 ft tall, with a 200 ft drop at 90 °"
    ],
    [
     "Outward Banked Airtime Hill",
@@ -414,15 +415,15 @@
    ],
    [
     "Vertical Rollback",
-    "420 ft tall"
+    null
    ],
    [
     "Top Hat - Outside",
-    "270 °"
+    "420 ft tall"
    ],
    [
     "Vertical Spiral",
-    null
+    "270 °"
    ]
   ],
   "arrangement": "6 trains with 5 cars per train. Riders are arranged 2 across in 2 rows for a total of 20 riders per train.",
@@ -437,7 +438,8 @@
     null,
     null
    ]
-  ]
+  ],
+  "train_note": true
  },
  "20342": {
   "elements": [
@@ -670,15 +672,15 @@
    ],
    [
     "LSM Boost",
-    "from 40 mph - 70 mph in 2.4 s 155 ft tall"
+    "from 40 mph - 70 mph in 2.4 s"
    ],
    [
     "Top Hat - Outside",
-    "100 ft long"
+    "155 ft tall"
    ],
    [
     "Zero-G Stall",
-    null
+    "100 ft long"
    ],
    [
     "Barrel Roll",
@@ -733,7 +735,7 @@
   "elements": [
    [
     "Tunnel",
-    null
+    "150 ft long"
    ],
    [
     "Tire Propelled Launch",
@@ -847,15 +849,15 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "90 ft tall"
+    null
    ],
    [
     "Loop",
-    "144 ft long"
+    "90 ft tall"
    ],
    [
     "Tunnel",
-    null
+    "144 ft long"
    ]
   ],
   "arrangement": "5 cars per train. Riders are arranged 2 across in 2 rows for a total of 20 riders per train.",
@@ -889,19 +891,19 @@
   "elements": [
    [
     "Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
     "88 ft tall"
    ],
    [
-    "Loop",
-    null
-   ],
-   [
     "Zero-G Roll",
-    "77 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "77 ft tall"
    ],
    [
     "Wing Over",
@@ -922,6 +924,10 @@
   "elements": [
    [
     "Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
     "144 ft tall"
    ],
    [
@@ -933,16 +939,12 @@
     "62 ft tall"
    ],
    [
-    "Loop",
-    null
-   ],
-   [
     "Batwing",
-    "40 ft tall"
+    null
    ],
    [
     "Double Corkscrew",
-    null
+    "40 ft tall"
    ]
   ],
   "arrangement": "3 trains with 7 cars per train. Riders are arranged 2 across in 2 rows for a total of 28 riders per train.",
@@ -966,11 +968,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "124 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "124 ft tall"
    ],
    [
     "Dive Loop",
@@ -1023,15 +1025,15 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "120 ft long"
+    null
    ],
    [
     "Tunnel",
-    "585 °"
+    "120 ft long"
    ],
    [
     "Helix",
-    null
+    "585 °"
    ]
   ],
   "arrangement": "3 trains with 5 cars per train. Riders are arranged 2 across in 3 rows for a total of 30 riders per train.",
@@ -1044,23 +1046,23 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "128 ft tall"
+    null
    ],
    [
     "Loop",
-    "96 ft tall"
+    "128 ft tall"
    ],
    [
     "Dive Loop",
-    null
+    "96 ft tall"
    ],
    [
     "Zero-G Roll",
-    "78 ft tall"
+    null
    ],
    [
     "Cobra Roll",
-    null
+    "78 ft tall"
    ],
    [
     "Block Brake",
@@ -1081,23 +1083,23 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "103 ft tall"
+    null
    ],
    [
     "Corkscrew",
-    "96 ft tall"
+    "103 ft tall"
    ],
    [
     "Zero-G Roll",
-    "80 ft tall"
+    "96 ft tall"
    ],
    [
     "Horseshoe",
-    "124 ft tall"
+    "80 ft tall"
    ],
    [
     "Pretzel Loop",
-    null
+    "124 ft tall"
    ],
    [
     "In-Line Twist",
@@ -1153,11 +1155,11 @@
   "elements": [
    [
     "LSM Launch",
-    "127.1 ft diameter 160 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "127.1 ft diameter 160 ft tall"
    ],
    [
     "Dive Drop",
@@ -1175,7 +1177,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 128 ft drop at 80 °"
+    "121 ft tall, with a 128 ft drop at 80 °"
    ],
    [
     "High Five",
@@ -1183,11 +1185,11 @@
    ],
    [
     "Zero-G Roll",
-    "121 ft tall"
+    null
    ],
    [
     "Chain Lift Hill",
-    "with a 128 ft drop at 80 °"
+    "121 ft tall, with a 128 ft drop at 80 °"
    ],
    [
     "High Five",
@@ -1272,11 +1274,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "104 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "104 ft tall"
    ],
    [
     "Immelmann",
@@ -1292,11 +1294,11 @@
    ],
    [
     "Block Brake",
-    "60 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "60 ft tall"
    ],
    [
     "Corkscrew",
@@ -1313,15 +1315,15 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "145 ft tall"
+    "200 ft tall"
    ],
    [
     "Immelmann",
-    "138 ft tall"
+    "145 ft tall"
    ],
    [
     "Hill",
-    null
+    "138 ft tall"
    ],
    [
     "Tunnel",
@@ -1587,31 +1589,31 @@
   "elements": [
    [
     "Water Channel",
+    null
+   ],
+   [
+    "Chain Lift Hill",
     "20 ft tall"
    ],
    [
     "Chain Lift Hill",
-    "40 ft tall"
-   ],
-   [
-    "Chain Lift Hill",
-    "with a 60 ft drop"
+    "40 ft tall, with a 60 ft drop"
    ],
    [
     "Splash Down",
-    "3 ft tall"
+    null
    ],
    [
     "Chain Lift Hill",
-    "with a 8 ft drop"
+    "3 ft tall, with a 8 ft drop"
    ],
    [
     "Splash Down",
-    "58 ft tall"
+    null
    ],
    [
     "Chain Lift Hill",
-    "with a 60 ft drop"
+    "58 ft tall, with a 60 ft drop"
    ],
    [
     "Splash Down",
@@ -1643,11 +1645,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "98 ft tall"
+    null
    ],
    [
     "Pretzel Loop",
-    null
+    "98 ft tall"
    ],
    [
     "In-Line Twist",
@@ -1690,15 +1692,15 @@
   "elements": [
    [
     "LSM Launch (multi-pass)",
-    "93 ft tall"
+    null
    ],
    [
     "Jr. Scorpion Tail",
-    "80 ft tall"
+    "93 ft tall"
    ],
    [
     "Top Hat - Outside",
-    null
+    "80 ft tall"
    ]
   ],
   "arrangement": "2 trains with 3 cars per train. Riders are arranged 2 across in 3 rows for a total of 18 riders per train."
@@ -1719,15 +1721,15 @@
    ],
    [
     "Horseshoe",
+    null
+   ],
+   [
+    "Helix",
     "360 °"
    ],
    [
     "Helix",
     "270 °"
-   ],
-   [
-    "Helix",
-    null
    ]
   ],
   "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train."
@@ -1788,7 +1790,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 135 ft drop at 53 °"
+    "110 ft tall, with a 135 ft drop at 53 °"
    ],
    [
     "Tunnel",
@@ -1804,11 +1806,11 @@
    ],
    [
     "Tunnel",
-    "540 °"
+    null
    ],
    [
     "Helix",
-    null
+    "540 °"
    ]
   ],
   "arrangement": "3 trains with 6 cars per train. Riders are arranged 2 across in 3 rows for a total of 36 riders per train.",
@@ -1977,7 +1979,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 215 ft drop at 74 °"
+    "230 ft tall, with a 215 ft drop at 74 °"
    ],
    [
     "Hill",
@@ -2045,7 +2047,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 300 ft drop at 85 ° 174 ft tall"
+    "287 ft tall, with a 300 ft drop at 85 °"
+   ],
+   [
+    "Hill",
+    "174 ft tall"
    ],
    [
     "Hill",
@@ -2070,10 +2076,6 @@
    [
     "Hill",
     "83 ft tall"
-   ],
-   [
-    "Hill",
-    null
    ]
   ],
   "arrangement": "3 trains with 8 cars per train. Riders are arranged 4 across in a single row for a total of 32 riders per train.",
@@ -2156,7 +2158,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    null
+    "205 ft tall"
    ],
    [
     "Immelmann",
@@ -2322,11 +2324,11 @@
    ],
    [
     "Immelmann",
-    "106 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "106 ft tall"
    ],
    [
     "Tunnel",
@@ -2359,7 +2361,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 210 ft drop"
+    "170 ft tall, with a 210 ft drop"
    ],
    [
     "Hill",
@@ -2430,15 +2432,15 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "57 ft tall"
+    null
    ],
    [
     "Loop",
-    "150 ft long"
+    "57 ft tall"
    ],
    [
     "Tunnel",
-    null
+    "150 ft long"
    ]
   ],
   "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
@@ -2486,11 +2488,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "100 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "100 ft tall"
    ],
    [
     "Immelmann",
@@ -2572,7 +2574,8 @@
     null
    ]
   ],
-  "arrangement": "2 trains with 8 cars per train. Riders are arranged 4 across in a single row for a total of 32 riders per train."
+  "arrangement": "2 trains with 8 cars per train. Riders are arranged 4 across in a single row for a total of 32 riders per train.",
+  "train_note": true
  },
  "11833": {
   "elements": [
@@ -2596,15 +2599,15 @@
   "elements": [
    [
     "Chain Lift Hill",
+    "210 ft tall"
+   ],
+   [
+    "Hill",
     "169 ft tall"
    ],
    [
     "Hill",
     "156 ft tall"
-   ],
-   [
-    "Hill",
-    null
    ]
   ],
   "arrangement": "3 trains with 7 cars per train. Riders are arranged 4 across in a single row for a total of 28 riders per train."
@@ -2641,15 +2644,15 @@
   "elements": [
    [
     "Hydraulic Launch",
-    "from 0 mph - 72 mph in 2 s 150 ft tall"
+    "from 0 mph - 72 mph in 2 s"
    ],
    [
     "Top Hat - Outside",
-    "135 ft tall"
+    "150 ft tall"
    ],
    [
     "Cobra Loop",
-    null
+    "135 ft tall"
    ],
    [
     "Heartline Roll",
@@ -2673,11 +2676,11 @@
   "elements": [
    [
     "Booster Wheel Lift Hill",
-    "65 ft tall"
+    null
    ],
    [
     "Booster Wheel Lift Hill",
-    "with a 45 ft drop at 20 °"
+    "65 ft tall, with a 45 ft drop at 20 °"
    ]
   ],
   "arrangement": "2 trains with 15 cars per train. Riders are arranged 2 across in a single row for a total of 30 riders per train.",
@@ -2747,11 +2750,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "105 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "105 ft tall"
    ],
    [
     "Cobra Roll",
@@ -2811,7 +2814,7 @@
   "elements": [
    [
     "Vertical Chain Lift Hill",
-    null
+    "150 ft tall"
    ],
    [
     "Negative-G Stall Loop",
@@ -2836,19 +2839,19 @@
   "elements": [
    [
     "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Helix",
     "450 °"
    ],
    [
-    "Helix",
-    null
-   ],
-   [
     "Tire Propelled Boost",
-    "540 °"
+    null
    ],
    [
     "Helix",
-    null
+    "540 °"
    ]
   ],
   "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders."
@@ -2864,11 +2867,11 @@
    ],
    [
     "Tunnel",
-    "110 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "110 ft tall"
    ],
    [
     "Loop",
@@ -2952,11 +2955,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "110 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "110 ft tall"
    ],
    [
     "Zero-G Roll",
@@ -3045,11 +3048,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "78 ft tall"
+    null
    ],
    [
     "Pretzel Loop",
-    null
+    "78 ft tall"
    ],
    [
     "Horseshoe",
@@ -3067,7 +3070,11 @@
   "elements": [
    [
     "Cable Lift Hill",
-    "with a 176 ft drop at 76 ° 112 ft tall"
+    "181 ft tall, with a 176 ft drop at 76 °"
+   ],
+   [
+    "Hill",
+    "112 ft tall"
    ],
    [
     "Hill",
@@ -3076,10 +3083,6 @@
    [
     "Hill",
     "82 ft tall"
-   ],
-   [
-    "Hill",
-    null
    ]
   ],
   "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in 3 rows for a total of 36 riders per train.",
@@ -3364,7 +3367,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 180 ft drop at 85 °"
+    "165 ft tall, with a 180 ft drop at 85 °"
    ],
    [
     "Tunnel",
@@ -3494,6 +3497,10 @@
   "elements": [
    [
     "Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
     "70 ft tall"
    ],
    [
@@ -3501,12 +3508,8 @@
     "55 ft tall"
    ],
    [
-    "Loop",
-    "35 ft tall"
-   ],
-   [
     "Double Corkscrew",
-    null
+    "35 ft tall"
    ]
   ],
   "arrangement": "3 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
@@ -3688,11 +3691,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "78 ft tall"
+    null
    ],
    [
     "Pretzel Loop",
-    null
+    "78 ft tall"
    ],
    [
     "Horseshoe",
@@ -3916,7 +3919,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 211 ft drop at 74 ° 178 ft tall"
+    "232 ft tall, with a 211 ft drop at 74 °"
+   ],
+   [
+    "Hill",
+    "178 ft tall"
    ],
    [
     "Hill",
@@ -3941,10 +3948,6 @@
    [
     "Hill",
     "48 ft tall"
-   ],
-   [
-    "Hill",
-    null
    ]
   ],
   "arrangement": "3 trains with 8 cars per train. Riders are arranged 4 across in a single row for a total of 32 riders per train.",
@@ -4318,7 +4321,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 245 ft drop at 90 °"
+    "223 ft tall, with a 245 ft drop at 90 °"
    ],
    [
     "Tunnel",
@@ -4342,11 +4345,11 @@
    ],
    [
     "Block Brake",
-    "360 °"
+    null
    ],
    [
     "Helix",
-    null
+    "360 °"
    ]
   ],
   "arrangement": "3 trains with 3 cars per train. Riders are arranged 8 across in a single row for a total of 24 riders per train.",
@@ -4526,7 +4529,8 @@
     "1998",
     "2011"
    ]
-  ]
+  ],
+  "train_note": true
  },
  "552": {
   "elements": [
@@ -4565,11 +4569,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "120 ft long"
+    null
    ],
    [
     "Tunnel",
-    null
+    "120 ft long"
    ]
   ],
   "arrangement": "3 trains with 5 cars per train. Riders are arranged 2 across in 3 rows for a total of 30 riders per train.",
@@ -4616,11 +4620,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 147 ft drop at 79 ° 95 °"
+    "153 ft tall, with a 147 ft drop at 79 °"
    ],
    [
     "Over-Banked Curve",
-    null
+    "95 °"
    ]
   ],
   "arrangement": "3 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
@@ -4670,15 +4674,15 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "218 ft tall"
+    null
    ],
    [
     "Immelmann",
-    "179 ft tall"
+    "218 ft tall"
    ],
    [
     "Loop",
-    null
+    "179 ft tall"
    ],
    [
     "Block Brake",
@@ -4818,11 +4822,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "81 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "81 ft tall"
    ],
    [
     "Corkscrew",
@@ -4839,11 +4843,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "78 ft tall"
+    null
    ],
    [
     "Pretzel Loop",
-    null
+    "78 ft tall"
    ],
    [
     "Horseshoe",
@@ -4876,7 +4880,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 170 ft drop"
+    "200 ft tall, with a 170 ft drop"
    ],
    [
     "Hill",
@@ -4884,11 +4888,11 @@
    ],
    [
     "Hill",
-    "with a 129 ft drop 540 °"
+    "with a 129 ft drop"
    ],
    [
     "Helix",
-    null
+    "540 °"
    ],
    [
     "Hill",
@@ -4943,7 +4947,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    null
+    "100 ft tall"
    ],
    [
     "Step-Up Under Flip",
@@ -4964,15 +4968,15 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "56 ft tall"
-   ],
-   [
-    "Loop",
-    "56 ft tall"
-   ],
-   [
-    "Loop",
     null
+   ],
+   [
+    "Loop",
+    "56 ft tall"
+   ],
+   [
+    "Loop",
+    "56 ft tall"
    ],
    [
     "Helix",
@@ -5181,11 +5185,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "135 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "135 ft tall"
    ],
    [
     "Cobra Roll",
@@ -5241,11 +5245,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "109 ft tall"
+    null
    ],
    [
     "Barrel Roll Downdrop",
-    null
+    "109 ft tall"
    ],
    [
     "Over-Banked Curve",
@@ -5293,7 +5297,8 @@
   "arrangement": "2 trains with 5 cars per train. Riders are arranged 4 across in a single row for a total of 20 riders per train."
  },
  "200": {
-  "arrangement": "2 cars per train. Riders are arranged inline in 3 rows for a total of 6 riders per train."
+  "arrangement": "2 cars per train. Riders are arranged inline in 3 rows for a total of 6 riders per train.",
+  "train_note": true
  },
  "201": {
   "arrangement": "2 cars per train. Riders are arranged 2 across in 3 rows for a total of 12 riders per train."
@@ -5465,11 +5470,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 162 ft drop at 81 ° 153 °"
+    "107 ft tall, with a 162 ft drop at 81 °"
    ],
    [
     "Over-Banked Inversion",
-    null
+    "153 °"
    ],
    [
     "Double Heartline Roll",
@@ -5489,11 +5494,11 @@
    ],
    [
     "LSM Launch",
-    "from 0 mph - 47 mph in 3 s 95 ft tall"
+    "from 0 mph - 47 mph in 3 s"
    ],
    [
     "Loop",
-    null
+    "95 ft tall"
    ],
    [
     "Zero-G Roll",
@@ -5514,27 +5519,27 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 171 ft drop at 81 ° 110 °"
+    "with a 171 ft drop at 81 °"
+   ],
+   [
+    "Over-Banked Curve",
+    "110 °"
    ],
    [
     "Over-Banked Curve",
     "95 °"
    ],
    [
-    "Over-Banked Curve",
+    "Zero-G Roll",
     null
    ],
    [
-    "Zero-G Roll",
+    "Over-Banked Curve",
     "98 °"
    ],
    [
     "Over-Banked Curve",
     "93 °"
-   ],
-   [
-    "Over-Banked Curve",
-    null
    ],
    [
     "Tunnel",
@@ -5569,13 +5574,14 @@
   "designers": [
    "Alan Schilke"
   ],
-  "installer": "Northwest Coasters"
+  "installer": "Northwest Coasters",
+  "train_note": true
  },
  "15368": {
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 100 ft drop at 90 °"
+    "113 ft tall, with a 100 ft drop at 90 °"
    ],
    [
     "Dive Loop",
@@ -5609,11 +5615,11 @@
    ],
    [
     "Zero-G Roll (variant)",
-    "360 °"
+    null
    ],
    [
     "Helix",
-    null
+    "360 °"
    ]
   ],
   "arrangement": "3 trains with 3 cars per train. Riders are arranged 7 across in a single row for a total of 21 riders per train."
@@ -5657,11 +5663,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "38 ft tall"
+    "73 ft tall"
    ],
    [
     "Chain Lift Hill",
-    null
+    "38 ft tall"
    ]
   ],
   "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in 3 rows for a total of 36 riders per train.",
@@ -5735,11 +5741,11 @@
    ],
    [
     "Zero-G Roll",
-    "78 ft tall"
+    null
    ],
    [
     "Cobra Roll",
-    null
+    "78 ft tall"
    ],
    [
     "Block Brake",
@@ -5942,7 +5948,8 @@
     "2000",
     "2008"
    ]
-  ]
+  ],
+  "train_note": true
  },
  "629": {
   "elements": [
@@ -6060,7 +6067,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    null
+    "109 ft tall"
    ],
    [
     "Zero-G Stall",
@@ -6141,11 +6148,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "128 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "128 ft tall"
    ],
    [
     "Dive Loop",
@@ -6297,7 +6304,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    null
+    "100 ft tall"
    ],
    [
     "Step-Up Under Flip",
@@ -6339,15 +6346,15 @@
   "elements": [
    [
     "Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
     "70 ft tall"
    ],
    [
     "Loop",
     "55 ft tall"
-   ],
-   [
-    "Loop",
-    null
    ],
    [
     "Tunnel",
@@ -6359,11 +6366,11 @@
    ],
    [
     "Tunnel",
-    "35 ft tall"
+    null
    ],
    [
     "Double Corkscrew",
-    null
+    "35 ft tall"
    ]
   ],
   "arrangement": "6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
@@ -6571,15 +6578,15 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "184 ft tall"
+    null
    ],
    [
     "Hill",
-    "580 °"
+    "184 ft tall"
    ],
    [
     "Helix",
-    null
+    "580 °"
    ]
   ],
   "arrangement": "3 trains with 6 cars per train. Riders are arranged 2 across in 3 rows for a total of 36 riders per train.",
@@ -6604,11 +6611,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 123 ft drop 89 ft tall"
+    "149 ft tall, with a 123 ft drop"
    ],
    [
     "Loop",
-    null
+    "89 ft tall"
    ],
    [
     "Zero-G Roll",
@@ -6725,6 +6732,10 @@
   "elements": [
    [
     "Chain Lift Hill",
+    "207 ft tall"
+   ],
+   [
+    "Hill",
     "103 ft tall"
    ],
    [
@@ -6734,10 +6745,6 @@
    [
     "Hill",
     "103 ft tall"
-   ],
-   [
-    "Hill",
-    null
    ],
    [
     "Tunnel",
@@ -6832,15 +6839,15 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "120 ft long"
-   ],
-   [
-    "Tunnel",
-    "120 ft long"
-   ],
-   [
-    "Tunnel",
     null
+   ],
+   [
+    "Tunnel",
+    "120 ft long"
+   ],
+   [
+    "Tunnel",
+    "120 ft long"
    ]
   ],
   "arrangement": "3 trains with 6 cars per train. Riders are arranged 2 across in 3 rows for a total of 36 riders per train.",
@@ -6882,11 +6889,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "98 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "98 ft tall"
    ],
    [
     "Zero-G Roll",
@@ -6911,15 +6918,15 @@
   "elements": [
    [
     "Heartline Roll",
-    "95 ft tall"
+    null
    ],
    [
     "Chain Lift Hill",
-    "with a 100 ft drop 62 ft tall"
+    "95 ft tall, with a 100 ft drop"
    ],
    [
     "Inclined Dive Loop",
-    null
+    "62 ft tall"
    ],
    [
     "Zero-G Roll",
@@ -7038,15 +7045,15 @@
   "elements": [
    [
     "Chain Lift Hill",
+    "122 ft tall"
+   ],
+   [
+    "Hill",
     "100 ft tall"
    ],
    [
     "Hill",
     "95 ft tall"
-   ],
-   [
-    "Hill",
-    null
    ],
    [
     "Helix",
@@ -7251,11 +7258,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "100 ft long"
+    null
    ],
    [
     "Tunnel",
-    null
+    "100 ft long"
    ]
   ],
   "arrangement": "2 trains with 12 cars per train. Riders are arranged 2 across in a single row for a total of 24 riders per train.",
@@ -7503,7 +7510,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 113 ft drop"
+    "99 ft tall, with a 113 ft drop"
    ],
    [
     "Hill",
@@ -7548,7 +7555,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 154 ft drop at 66 °"
+    "159 ft tall, with a 154 ft drop at 66 °"
    ],
    [
     "Hill",
@@ -7569,15 +7576,15 @@
   "elements": [
    [
     "LSM Launch",
-    "from 0 mph - 60 mph in 3.5 s 140 ft tall"
+    "from 0 mph - 60 mph in 3.5 s"
    ],
    [
     "Immelmann",
-    "125 ft tall"
+    "140 ft tall"
    ],
    [
     "Loop",
-    null
+    "125 ft tall"
    ],
    [
     "Zero-G Roll",
@@ -7949,7 +7956,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 170.6 ft drop at 70 ° 121.4 ft tall"
+    "174.8 ft tall, with a 170.6 ft drop at 70 °"
+   ],
+   [
+    "Hill",
+    "121.4 ft tall"
    ],
    [
     "Hill",
@@ -7982,10 +7993,6 @@
    [
     "Hill",
     "42.7 ft tall"
-   ],
-   [
-    "Hill",
-    null
    ]
   ],
   "arrangement": "2 trains with 9 cars per train. Riders are arranged 4 across in a single row for a total of 36 riders per train.",
@@ -8237,7 +8244,8 @@
     "1998",
     "2011"
    ]
-  ]
+  ],
+  "train_note": true
  },
  "43": {
   "elements": [
@@ -8575,11 +8583,11 @@
    ],
    [
     "In-Line Twist",
-    "540 °"
+    null
    ],
    [
     "Helix",
-    null
+    "540 °"
    ]
   ],
   "arrangement": "3 cars. Riders are arranged 4 across in 2 rows for a total of 8 riders per car."
@@ -8618,11 +8626,11 @@
    ],
    [
     "Lagoon Roll",
-    "450 °"
+    null
    ],
    [
     "Helix",
-    null
+    "450 °"
    ]
   ],
   "arrangement": "Single car trains. Riders are arranged 4 across in 3 rows for a total of 12 riders per car.",
@@ -8632,11 +8640,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "270 °"
+    null
    ],
    [
     "Helix",
-    null
+    "270 °"
    ],
    [
     "Dark/Show Section",
@@ -8796,15 +8804,15 @@
   "elements": [
    [
     "Catch Car Vertical Lift",
-    "110 ft tall"
+    null
    ],
    [
     "Cobra Roll",
-    "102 ft tall"
+    "110 ft tall"
    ],
    [
     "Loop",
-    null
+    "102 ft tall"
    ],
    [
     "Catch Car Vertical Lift",
@@ -8922,7 +8930,8 @@
     "1989",
     "2017"
    ]
-  ]
+  ],
+  "train_note": true
  },
  "974": {
   "elements": [
@@ -8938,7 +8947,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 219.8 ft drop"
+    "239.5 ft tall, with a 219.8 ft drop"
    ],
    [
     "Hill",
@@ -8964,11 +8973,11 @@
   "elements": [
    [
     "Water Channel",
-    "75.5 ft tall"
+    null
    ],
    [
     "Chain Lift Hill",
-    null
+    "75.5 ft tall"
    ],
    [
     "Splash Down",
@@ -8976,11 +8985,11 @@
    ],
    [
     "Water Channel",
-    "65.6 ft tall"
+    null
    ],
    [
     "Chain Lift Hill",
-    null
+    "65.6 ft tall"
    ],
    [
     "Splash Down",
@@ -9029,7 +9038,8 @@
   "arrangement": "2 trains with 5 cars per train. Riders are arranged 2 across in 2 rows for a total of 20 riders per train.",
   "designers": [
    "Ing.-Büro Stengel GmbH"
-  ]
+  ],
+  "train_note": true
  },
  "4074": {
   "elements": [
@@ -9039,11 +9049,11 @@
    ],
    [
     "LSM Launch",
-    "from 0 mph - 62.1 mph in 2.5 s 105 ft tall"
+    "from 0 mph - 62.1 mph in 2.5 s"
    ],
    [
     "Loop",
-    null
+    "105 ft tall"
    ],
    [
     "Block Brake",
@@ -9207,7 +9217,8 @@
   "capacity": "2300 riders per hour",
   "designers": [
    "Peter Clerx"
-  ]
+  ],
+  "train_note": true
  },
  "980": {
   "elements": [
@@ -9246,11 +9257,11 @@
   "elements": [
    [
     "Elevator Lift",
-    "360 °"
+    null
    ],
    [
     "Helix",
-    null
+    "360 °"
    ],
    [
     "Vertical Bounce Track",
@@ -9258,11 +9269,11 @@
    ],
    [
     "Elevator Lift",
-    "360 °"
+    null
    ],
    [
     "Helix",
-    null
+    "360 °"
    ],
    [
     "Horseshoe",
@@ -9283,11 +9294,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "65.6 ft tall"
+    null
    ],
    [
     "Loop",
-    null
+    "65.6 ft tall"
    ],
    [
     "Zero-G Roll",
@@ -9407,7 +9418,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 180 ft drop at 87.5 °"
+    "65 ft tall, with a 180 ft drop at 87.5 °"
    ],
    [
     "Tunnel",
@@ -9725,11 +9736,11 @@
   "elements": [
    [
     "Hydraulic Launch",
-    "205.1 ft tall"
+    null
    ],
    [
     "Top Hat - Outside",
-    null
+    "205.1 ft tall"
    ],
    [
     "Hill",
@@ -10069,15 +10080,15 @@
   "elements": [
    [
     "Chain Lift Hill",
+    "53 ft tall"
+   ],
+   [
+    "Chain Lift Hill",
     "37 ft tall"
    ],
    [
     "Chain Lift Hill",
     "54 ft tall"
-   ],
-   [
-    "Chain Lift Hill",
-    null
    ]
   ],
   "arrangement": "6 cars per train. Riders are arranged 2 across in 3 rows for a total of 36 riders per train."
@@ -10295,11 +10306,11 @@
    ],
    [
     "Zero-G Roll",
-    "360 °"
+    null
    ],
    [
     "Helix",
-    null
+    "360 °"
    ]
   ],
   "arrangement": "3 trains with 3 cars per train. Riders are arranged 6 across in a single row for a total of 18 riders per train.",
@@ -10309,7 +10320,8 @@
   "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in 2 rows for a total of 40 riders per train.",
   "designers": [
    "Stephan Alt"
-  ]
+  ],
+  "train_note": true
  },
  "1061": {
   "arrangement": "5 trains with 11 cars per train. Riders are arranged 2 across in a single row for a total of 22 riders per train.",
@@ -10384,7 +10396,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 164 ft drop"
+    "154.2 ft tall, with a 164 ft drop"
    ],
    [
     "Tunnel",
@@ -10730,7 +10742,8 @@
     "2000",
     null
    ]
-  ]
+  ],
+  "train_note": true
  },
  "11885": {
   "elements": [
@@ -10772,11 +10785,11 @@
    ],
    [
     "In-Line Twist",
-    "360 °"
+    null
    ],
    [
     "Helix",
-    null
+    "360 °"
    ],
    [
     "In-Line Twist",
@@ -10879,11 +10892,11 @@
    ],
    [
     "Chain Lift Hill",
-    "540 °"
+    null
    ],
    [
     "Helix",
-    null
+    "540 °"
    ],
    [
     "Chain Lift Hill",
@@ -10913,11 +10926,11 @@
    ],
    [
     "Loop",
-    "540 °"
+    null
    ],
    [
     "Helix",
-    null
+    "540 °"
    ]
   ],
   "arrangement": "2 cars per train. Riders are arranged 2 across in 3 rows for a total of 12 riders per train.",
@@ -10981,7 +10994,8 @@
   "arrangement": "2 trains with 9 cars per train. Riders are arranged 2 across in 2 rows for a total of 36 riders per train.",
   "designers": [
    "Peter Clerx"
-  ]
+  ],
+  "train_note": true
  },
  "1170": {
   "elements": [
@@ -11095,7 +11109,8 @@
   "arrangement": "7 trains with 7 cars per train. Riders are arranged 2 across in a single row for a total of 14 riders per train.",
   "designers": [
    "Peter Clerx"
-  ]
+  ],
+  "train_note": true
  },
  "11646": {
   "elements": [
@@ -11126,7 +11141,7 @@
   "elements": [
    [
     "Dark/Show Section",
-    null
+    "147.6 ft long"
    ],
    [
     "Booster Wheel Lift Hill",
@@ -11730,15 +11745,15 @@
   "elements": [
    [
     "Chain Lift Hill",
+    "39.3 ft tall"
+   ],
+   [
+    "Chain Lift Hill",
     "42.7 ft tall"
    ],
    [
     "Chain Lift Hill",
     "45.9 ft tall"
-   ],
-   [
-    "Chain Lift Hill",
-    null
    ]
   ],
   "arrangement": "3 trains with 6 cars per train. Riders are arranged 2 across in 3 rows for a total of 36 riders per train.",
@@ -11755,15 +11770,15 @@
    ],
    [
     "Corkscrew",
-    "55.8 ft tall"
+    null
    ],
    [
     "Zero-G Roll",
-    "32.8 ft tall"
+    "55.8 ft tall"
    ],
    [
     "In-Line Twist",
-    null
+    "32.8 ft tall"
    ]
   ],
   "arrangement": "2 trains with 7 cars per train. Riders are arranged 4 across in a single row for a total of 28 riders per train."
@@ -11780,11 +11795,11 @@
    ],
    [
     "Immelmann",
-    "270 °"
+    null
    ],
    [
     "Helix",
-    null
+    "270 °"
    ],
    [
     "Heartline Roll",
@@ -12077,7 +12092,8 @@
     null
    ]
   ],
-  "arrangement": "3 trains with 6 cars per train. Riders are arranged 2 across in 3 rows for a total of 36 riders per train."
+  "arrangement": "3 trains with 6 cars per train. Riders are arranged 2 across in 3 rows for a total of 36 riders per train.",
+  "train_note": true
  },
  "18210": {
   "elements": [
@@ -12434,15 +12450,15 @@
   "elements": [
    [
     "LSM Launch (multi-pass)",
-    "131.3 ft tall 180 °"
+    null
    ],
    [
     "Twisted Vertical Rollback",
-    "98.4 ft tall"
+    "131.3 ft tall 180 °"
    ],
    [
     "Top Hat - Outside",
-    null
+    "98.4 ft tall"
    ],
    [
     "Immelmann",
@@ -12450,15 +12466,15 @@
    ],
    [
     "Heartline Roll",
-    "100 °"
+    null
    ],
    [
     "Over-Banked Curve",
-    "270 °"
+    "100 °"
    ],
    [
     "Helix",
-    null
+    "270 °"
    ],
    [
     "Zero-G Roll",
@@ -12646,11 +12662,11 @@
   "elements": [
    [
     "Cable Lift Hill",
-    "121 °"
+    null
    ],
    [
     "Stengel Dive",
-    null
+    "121 °"
    ]
   ],
   "arrangement": "2 trains with 8 cars per train. Riders are arranged 2 across in 2 rows for a total of 32 riders per train.",
@@ -12682,19 +12698,19 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "270 °"
+    null
    ],
    [
     "Double Inverting Stall",
-    null
+    "270 °"
    ],
    [
     "Step-Up Under Flip",
-    "140 °"
+    null
    ],
    [
     "Over-Banked Inversion",
-    null
+    "140 °"
    ],
    [
     "Barrel Roll",
@@ -12711,11 +12727,11 @@
   "elements": [
    [
     "Booster Wheel Lift Hill",
-    "540 °"
+    null
    ],
    [
     "Helix",
-    null
+    "540 °"
    ]
   ],
   "arrangement": "Single train with 7 cars. Riders are arranged 2 across in a single row for a total of 14 riders.",
@@ -12830,11 +12846,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "124.7 ft tall"
+    null
    ],
    [
     "Hill",
-    null
+    "124.7 ft tall"
    ],
    [
     "Outward Banked Airtime Hill",
@@ -12911,11 +12927,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "45.9 ft tall"
+    "39.3 ft tall"
    ],
    [
     "Chain Lift Hill",
-    null
+    "45.9 ft tall"
    ]
   ],
   "arrangement": "3 trains with 5 cars per train. Riders are arranged 2 across in 3 rows for a total of 30 riders per train.",
@@ -12930,7 +12946,8 @@
     "1992",
     "1997"
    ]
-  ]
+  ],
+  "train_note": true
  },
  "1028": {
   "elements": [
@@ -12973,7 +12990,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    null
+    "98 ft tall"
    ],
    [
     "Tunnel",
@@ -12981,11 +12998,11 @@
    ],
    [
     "Tunnel",
-    "256 °"
+    null
    ],
    [
     "Helix",
-    null
+    "256 °"
    ]
   ],
   "arrangement": "2 trains with 14 cars per train. Riders are arranged 2 across in a single row for a total of 28 riders per train.",
@@ -12998,7 +13015,8 @@
     "1997",
     "2021"
    ]
-  ]
+  ],
+  "train_note": true
  },
  "753": {
   "elements": [
@@ -13123,19 +13141,19 @@
   "elements": [
    [
     "Tire Propelled Launch",
-    "68.8 ft tall"
+    null
    ],
    [
     "Chain Lift Hill",
-    null
+    "68.8 ft tall"
    ],
    [
     "Tunnel",
-    "42.5 ft tall"
+    null
    ],
    [
     "Booster Wheel Lift Hill",
-    null
+    "42.5 ft tall"
    ],
    [
     "Dark/Show Section",
@@ -13408,17 +13426,18 @@
    ]
   ],
   "arrangement": "2 cars. Riders are arranged 3 across in 4 rows for a total of 12 riders per car.",
-  "installer": "RCS GmbH"
+  "installer": "RCS GmbH",
+  "train_note": true
  },
  "12772": {
   "elements": [
    [
     "Cable Lift Hill",
-    "170.6 ft tall"
+    null
    ],
    [
     "Non Inverting Loop",
-    null
+    "170.6 ft tall"
    ],
    [
     "Heartline Roll",
@@ -13470,11 +13489,11 @@
   "elements": [
    [
     "Hydraulic Launch",
-    "from 0 mph - 62.1 mph in 2 s 131.3 ft tall"
+    "from 0 mph - 62.1 mph in 2 s"
    ],
    [
     "Top Hat - Outside",
-    null
+    "131.3 ft tall"
    ]
   ],
   "arrangement": "5 cars per train. Riders are arranged 2 across in 2 rows for a total of 20 riders per train.",
@@ -13506,14 +13525,15 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "131.3 ft tall"
+    null
    ],
    [
     "Non Inverting Loop",
-    null
+    "131.3 ft tall"
    ]
   ],
-  "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train."
+  "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
+  "train_note": true
  },
  "20272": {
   "arrangement": "2 trains with 8 cars per train. Riders are arranged 2 across in a single row for a total of 16 riders per train.",
@@ -13748,7 +13768,8 @@
   "arrangement": "8 cars per train. Riders are arranged 2 across in a single row for a total of 16 riders per train.",
   "designers": [
    "Peter Clerx"
-  ]
+  ],
+  "train_note": true
  },
  "8606": {
   "elements": [
@@ -13918,6 +13939,10 @@
   "elements": [
    [
     "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Loop",
     "45.9 ft diameter"
    ],
    [
@@ -13927,10 +13952,6 @@
    [
     "Loop",
     "39.4 ft diameter"
-   ],
-   [
-    "Loop",
-    null
    ]
   ],
   "arrangement": "3 cars per train. Riders are arranged 2 across in 2 rows for a total of 12 riders per train.",
@@ -14379,11 +14400,11 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 205 ft drop at 60 °"
+    "219.8 ft tall, with a 205 ft drop at 60 °"
    ],
    [
     "Hill",
-    "with a 136 ft drop 360 °"
+    "with a 136 ft drop"
    ],
    [
     "Helix",
@@ -14391,7 +14412,7 @@
    ],
    [
     "Helix",
-    null
+    "360 °"
    ]
   ],
   "arrangement": "3 trains with 6 cars per train. Riders are arranged 2 across in 3 rows for a total of 36 riders per train.",
@@ -14446,7 +14467,7 @@
   "elements": [
    [
     "Chain Lift Hill",
-    null
+    "98 ft tall"
    ],
    [
     "Barrel Roll Downdrop",
@@ -14660,15 +14681,15 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "with a 80.5 ft drop at 65 °"
+    "83 ft tall, with a 80.5 ft drop at 65 °"
    ],
    [
     "Corkscrew",
-    "115 °"
+    null
    ],
    [
     "Over-Banked Curve",
-    null
+    "115 °"
    ]
   ],
   "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in a single row for a total of 12 riders per train.",
@@ -14830,14 +14851,15 @@
    ],
    [
     "LSM Boost",
-    "405 °"
+    null
    ],
    [
     "Spiral Rollback",
-    null
+    "405 °"
    ]
   ],
-  "arrangement": "Single train with 7 cars. Riders are arranged 4 across in a single row for a total of 28 riders."
+  "arrangement": "Single train with 7 cars. Riders are arranged 4 across in a single row for a total of 28 riders.",
+  "train_note": true
  },
  "22526": {
   "elements": [
@@ -15138,11 +15160,11 @@
   "elements": [
    [
     "Vertical Chain Lift Hill",
-    "151.6 ft tall"
+    null
    ],
    [
     "Sky Loop",
-    null
+    "151.6 ft tall"
    ]
   ],
   "arrangement": "Single train with 2 cars. Riders are arranged 2 across in 3 rows for a total of 12 riders.",
@@ -15161,11 +15183,11 @@
    ],
    [
     "LSM Boost",
-    "170.6 ft tall"
+    null
    ],
    [
     "Top Hat - Outside",
-    null
+    "170.6 ft tall"
    ],
    [
     "Zero-G Stall",
@@ -15327,19 +15349,19 @@
   "elements": [
    [
     "Chain Lift Hill",
-    "87 ft tall"
+    null
    ],
    [
     "Loop",
-    "75.2 ft tall"
+    "87 ft tall"
    ],
    [
     "Cobra Roll",
-    "55 ft tall"
+    "75.2 ft tall"
    ],
    [
     "Zero-G Roll",
-    null
+    "55 ft tall"
    ]
   ],
   "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
@@ -15572,11 +15594,11 @@
   "elements": [
    [
     "Helix",
-    "520 °"
+    "590 °"
    ],
    [
     "Helix",
-    null
+    "520 °"
    ]
   ],
   "arrangement": "2 trains with 5 cars per train. Riders are arranged 2 across in 3 rows for a total of 30 riders per train.",
@@ -15596,15 +15618,15 @@
   "elements": [
    [
     "Catch Car Vertical Lift",
-    "110 ft tall"
+    null
    ],
    [
     "Cobra Roll",
-    "102 ft tall"
+    "110 ft tall"
    ],
    [
     "Loop",
-    null
+    "102 ft tall"
    ],
    [
     "Catch Car Vertical Lift",
@@ -15855,25 +15877,26 @@
   ],
   "designers": [
    "Vernon Keenan"
-  ]
+  ],
+  "train_note": true
  },
  "8788": {
   "elements": [
    [
     "Vertical Chain Lift Hill",
-    "98.4 ft tall"
+    "114.8 ft tall"
    ],
    [
     "Loop",
-    "82 ft tall"
+    "98.4 ft tall"
    ],
    [
     "Zero-G Roll",
-    "112 °"
+    "82 ft tall"
    ],
    [
     "Over-Banked Curve",
-    null
+    "112 °"
    ],
    [
     "Dive Loop",
@@ -16030,5 +16053,1094 @@
   "designers": [
    "Herbert Paul Schmeck"
   ]
+ },
+ "21308": {
+  "arrangement": "8 cars. Riders are arranged inline in 2 rows for a total of 2 riders per car.",
+  "restraints": [
+   "Seatbelt"
+  ]
+ },
+ "21309": {
+  "arrangement": "11 cars. Riders are arranged 2 across in 4 rows for a total of 8 riders per car."
+ },
+ "21310": {
+  "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train."
+ },
+ "21311": {
+  "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train."
+ },
+ "21312": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Tilt Track",
+    null
+   ],
+   [
+    "Zero-G Roll",
+    null
+   ],
+   [
+    "Zero-G Roll",
+    null
+   ],
+   [
+    "Barrel Roll Downdrop",
+    null
+   ],
+   [
+    "Barrel Roll",
+    null
+   ]
+  ]
+ },
+ "21313": {
+  "elements": [
+   [
+    "LSM Launch (multi-pass)",
+    null
+   ],
+   [
+    "Vertical Rollback",
+    null
+   ],
+   [
+    "Top Hat - Inside",
+    "239.5 ft tall"
+   ]
+  ],
+  "arrangement": "2 trains with 3 cars per train. Riders are arranged 2 across in 2 rows for a total of 12 riders per train."
+ },
+ "21314": {
+  "arrangement": "3 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "designers": [
+   "Skyline Design, LLC."
+  ]
+ },
+ "21315": {
+  "elements": [
+   [
+    "LSM Lift Hill",
+    null
+   ],
+   [
+    "LSM Boost",
+    null
+   ],
+   [
+    "Tunnel",
+    null
+   ],
+   [
+    "LSM Boost",
+    null
+   ],
+   [
+    "Hill",
+    "534.8 ft tall, with a 518.4 ft drop"
+   ]
+  ],
+  "arrangement": "6 trains with 4 cars per train. Riders are arranged 2 across in 2 rows for a total of 16 riders per train.",
+  "train_note": true
+ },
+ "844": {
+  "elements": [
+   [
+    "Dark/Show Section",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "7 cars per train. Riders are arranged 2 across in 2 rows for a total of 28 riders per train."
+ },
+ "845": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in a single row for a total of 12 riders."
+ },
+ "17692": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 5 cars. Riders are arranged 2 across in a single row for a total of 10 riders."
+ },
+ "21316": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train."
+ },
+ "1462": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "former": [
+   [
+    "Project X - Test Strecke",
+    "2002",
+    "2017"
+   ]
+  ]
+ },
+ "1476": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "3 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "1683": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 4 cars. Riders are arranged 2 across in 2 rows for a total of 16 riders.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "train_note": true
+ },
+ "19912": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Helix",
+    "360 °"
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Heartline Roll",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 5 cars per train. Riders are arranged 4 across in a single row for a total of 20 riders per train.",
+  "installer": "RCS GmbH"
+ },
+ "1475": {
+  "elements": [
+   [
+    "Dark/Show Section",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 7 cars per train. Riders are arranged 2 across in 2 rows for a total of 28 riders per train."
+ },
+ "1634": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car."
+ },
+ "10214": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Vertical Drop Track",
+    "with a 16.4 ft drop"
+   ]
+  ],
+  "arrangement": "2 trains with 8 cars per train. Riders are arranged 2 across in a single row for a total of 16 riders per train.",
+  "capacity": "848 riders per hour"
+ },
+ "15488": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders."
+ },
+ "22622": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "installer": "RCS GmbH"
+ },
+ "764": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Zero-G Roll",
+    null
+   ],
+   [
+    "Cobra Roll",
+    null
+   ],
+   [
+    "Block Brake",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ]
+  ],
+  "arrangement": "3 trains with 8 cars per train. Riders are arranged 4 across in a single row for a total of 32 riders per train.",
+  "capacity": "1700 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "installer": "RCS GmbH"
+ },
+ "765": {
+  "arrangement": "8 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "capacity": "760 riders per hour",
+  "former": [
+   [
+    "Pakal",
+    "2000",
+    "2015"
+   ],
+   [
+    "Wild Mouse",
+    "1998",
+    "1999"
+   ]
+  ]
+ },
+ "768": {
+  "arrangement": "Single train with 8 cars. Riders are arranged 2 across in 2 rows for a total of 32 riders.",
+  "capacity": "900 riders per hour",
+  "former": [
+   [
+    "Explorer",
+    "1992",
+    "2013"
+   ]
+  ]
+ },
+ "2981": {
+  "arrangement": "Single train with 5 cars. Riders are arranged 2 across in 2 rows for a total of 20 riders.",
+  "former": [
+   [
+    "Leprotto Express",
+    "2005",
+    "2024"
+   ]
+  ]
+ },
+ "4147": {
+  "elements": [
+   [
+    "LSM Launch",
+    "from 0 mph - 68.4 mph in 2.2 s"
+   ],
+   [
+    "Top Hat - Outside",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "In-Line Twist",
+    null
+   ]
+  ],
+  "arrangement": "3 cars per train. Riders are arranged 2 across in 2 rows for a total of 12 riders per train.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "9481": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 cars per train. Riders are arranged 2 across in 2 rows for a total of 8 riders per train.",
+  "former": [
+   [
+    "Max Adventures Master Thai",
+    "2011",
+    "2013"
+   ]
+  ],
+  "train_note": true
+ },
+ "10393": {
+  "elements": [
+   [
+    "Elevator Lift",
+    null
+   ],
+   [
+    "Splash Track",
+    null
+   ],
+   [
+    "Block Brake",
+    null
+   ],
+   [
+    "Splash Down",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 5 rows for a total of 10 riders per car.",
+  "capacity": "1000 riders per hour",
+  "installer": "RCS GmbH"
+ },
+ "15717": {
+  "arrangement": "12 cars. Riders are arranged inline in 2 rows for a total of 2 riders per car.",
+  "capacity": "1000 riders per hour",
+  "installer": "RCS GmbH"
+ },
+ "21928": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 8 cars. Riders are arranged 2 across in a single row for a total of 16 riders."
+ },
+ "1011": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "7 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "capacity": "720 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "1012": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "capacity": "1250 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "4065": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Tunnel",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 4 cars per train. Riders are arranged 2 across in 3 rows for a total of 24 riders per train.",
+  "restraints": [
+   "Individual hydraulic lap bar"
+  ],
+  "capacity": "1200 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "11057": {
+  "elements": [
+   [
+    "Heartline Roll",
+    null
+   ],
+   [
+    "LSM Launch (rolling)",
+    "from 0 mph - 55.9 mph in 1.6 s"
+   ],
+   [
+    "Top Hat - Outside",
+    null
+   ],
+   [
+    "Dive Loop",
+    null
+   ],
+   [
+    "Dive Loop",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ]
+  ],
+  "arrangement": "4 trains with 2 cars per train. Riders are arranged 4 across in a single row for a total of 8 riders per train.",
+  "capacity": "960 riders per hour"
+ },
+ "16277": {
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders.",
+  "capacity": "500 riders per hour",
+  "designers": [
+   "Benjamin Bloemendaal"
+  ],
+  "installer": "RCS GmbH"
+ },
+ "17715": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Zero-G Roll",
+    null
+   ],
+   [
+    "Jr. Immelmann",
+    null
+   ],
+   [
+    "Zero-G Roll",
+    null
+   ],
+   [
+    "In-Line Twist",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "capacity": "800 riders per hour",
+  "designers": [
+   "Benjamin Bloemendaal"
+  ],
+  "installer": "RCS GmbH"
+ },
+ "1463": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "capacity": "720 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "4038": {
+  "elements": [
+   [
+    "Cable Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 4 cars per train. Riders are arranged 2 across in 2 rows for a total of 16 riders per train.",
+  "capacity": "820 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "installer": "RCS GmbH"
+ },
+ "9377": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Splash Down",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 4 rows for a total of 8 riders per car.",
+  "installer": "RCS GmbH"
+ },
+ "11058": {
+  "elements": [
+   [
+    "Tire Propelled Launch",
+    null
+   ],
+   [
+    "Tire Propelled Boost",
+    null
+   ]
+  ],
+  "arrangement": "9 cars per train. Riders are arranged 2 across in a single row for a total of 18 riders per train.",
+  "installer": "RCS GmbH"
+ },
+ "12339": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "14084": {
+  "elements": [
+   [
+    "Tire Propelled Launch",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 7 cars per train. Riders are arranged 2 across in a single row for a total of 14 riders per train.",
+  "capacity": "750 riders per hour",
+  "installer": "RCS GmbH"
+ },
+ "15551": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in a single row for a total of 12 riders."
+ },
+ "18449": {
+  "installer": "RCS GmbH"
+ },
+ "816": {
+  "arrangement": "Single train with 9 cars. Riders are arranged 2 across in 2 rows for a total of 36 riders.",
+  "former": [
+   [
+    "Buffalo Mountain Coaster",
+    "1987",
+    "2021"
+   ]
+  ]
+ },
+ "3920": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 5 cars. Riders are arranged 2 across in 2 rows for a total of 20 riders.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "9607": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders.",
+  "capacity": "750 riders per hour",
+  "designers": [
+   "Stefan Holtman"
+  ],
+  "former": [
+   [
+    "Ben 10 - Ultimate Mission",
+    "2011",
+    "2016"
+   ]
+  ]
+ },
+ "814": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Zero-G Roll",
+    null
+   ],
+   [
+    "Double Corkscrew",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 4 across in a single row for a total of 24 riders.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "former": [
+   [
+    "Shockwave",
+    "1994",
+    "2023"
+   ]
+  ]
+ },
+ "20608": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Switch Track",
+    null
+   ],
+   [
+    "Tire Propelled Launch",
+    null
+   ],
+   [
+    "Switch Track",
+    null
+   ],
+   [
+    "Tire Propelled Boost",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 4 cars per train. Riders are arranged 2 across in 3 rows for a total of 24 riders per train.",
+  "installer": "RCS GmbH"
+ },
+ "1042": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Tunnel",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 12 cars per train. Riders are arranged 2 across in a single row for a total of 24 riders per train.",
+  "designers": [
+   "Allott and Lomax"
+  ],
+  "installer": "Martin & Vleminckx"
+ },
+ "1043": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 7 cars. Riders are arranged 2 across in 2 rows for a total of 28 riders.",
+  "designers": [
+   "Peter Clerx"
+  ]
+ },
+ "1900": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Tunnel",
+    null
+   ],
+   [
+    "Splash Down",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 4 across in 4 rows for a total of 16 riders per car."
+ },
+ "3245": {
+  "elements": [
+   [
+    "Hydraulic Launch",
+    "from 0 mph - 52.8 mph in 2.2 s"
+   ],
+   [
+    "Norwegian Loop",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 3 cars per train. Riders are arranged 2 across in 2 rows for a total of 12 riders per train.",
+  "capacity": "700 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "installer": "RCS GmbH"
+ },
+ "10448": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "relocations": [
+   [
+    "Mirabilandia",
+    "Family Adventure"
+   ],
+   [
+    "TusenFryd",
+    "Western-Expressen"
+   ]
+  ],
+  "designers": [
+   "Peter Clerx"
+  ],
+  "former": [
+   [
+    "Steampunk Hunters",
+    "2018",
+    null
+   ],
+   [
+    "Western-Expressen",
+    "2012",
+    "2017"
+   ]
+  ]
+ },
+ "20000": {
+  "arrangement": "Single train with 4 cars. Riders are arranged 2 across in 2 rows for a total of 16 riders.",
+  "capacity": "370 riders per hour"
+ },
+ "20266": {
+  "elements": [
+   [
+    "LSM Launch (multi-pass)",
+    null
+   ],
+   [
+    "Dive Loop",
+    null
+   ],
+   [
+    "Dive Loop",
+    null
+   ],
+   [
+    "Reverse Sidewinder",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 4 cars. Riders are arranged 2 across in 2 rows for a total of 16 riders."
+ },
+ "915": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "designers": [
+   "Peter Clerx",
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "former": [
+   [
+    "Air Race",
+    "1987",
+    "2005"
+   ]
+  ]
+ },
+ "917": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 30 cars. Riders are arranged inline in 2 rows for a total of 60 riders.",
+  "capacity": "1200 riders per hour",
+  "designers": [
+   "Peter Clerx"
+  ],
+  "former": [
+   [
+    "Evolution",
+    "2008",
+    "2013"
+   ],
+   [
+    "Revolution",
+    "1989",
+    "2007"
+   ]
+  ]
+ },
+ "919": {
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in 2 rows for a total of 40 riders.",
+  "restraints": [
+   "Single position lap bar"
+  ],
+  "capacity": "1520 riders per hour",
+  "installer": "Barth Schaustellerbetriebe",
+  "train_note": true
+ },
+ "2228": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "restraints": [
+   "Individual ratcheting lap bar"
+  ],
+  "capacity": "1285 riders per hour",
+  "designers": [
+   "Peter Clerx"
+  ],
+  "installer": "RCS GmbH",
+  "former": [
+   [
+    "Junior Coaster",
+    "2004",
+    "2004"
+   ]
+  ]
+ },
+ "2229": {
+  "elements": [
+   [
+    "Vertical Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    "62.4 ft tall"
+   ],
+   [
+    "Double Heartline Roll",
+    null
+   ],
+   [
+    "Helix",
+    "540 °"
+   ],
+   [
+    "Heartline Roll",
+    null
+   ],
+   [
+    "Helix",
+    null
+   ]
+  ],
+  "arrangement": "8 cars. Riders are arranged 4 across in 2 rows for a total of 8 riders per car.",
+  "capacity": "1400 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "installer": "RCS GmbH"
+ },
+ "2557": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "10 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "capacity": "1120 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "9331": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "6 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "capacity": "800 riders per hour",
+  "installer": "RCS GmbH",
+  "former": [
+   [
+    "Dizz",
+    "2011",
+    "2016"
+   ]
+  ]
+ },
+ "16110": {
+  "elements": [
+   [
+    "Turntable",
+    null
+   ],
+   [
+    "LSM Launch (multi-pass)",
+    null
+   ],
+   [
+    "Jr. Scorpion Tail",
+    null
+   ],
+   [
+    "Top Hat - Outside",
+    null
+   ],
+   [
+    "Wraparound Corkscrew",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Jr. Scorpion Tail",
+    null
+   ],
+   [
+    "Turntable",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 3 cars per train. Riders are arranged 4 across in a single row for a total of 12 riders per train.",
+  "train_note": true
+ },
+ "13786": {
+  "arrangement": "4 cars. Riders are arranged inline in 2 rows for a total of 2 riders per car.",
+  "capacity": "400 riders per hour"
+ },
+ "14396": {
+  "arrangement": "Single train with 4 cars. Riders are arranged 2 across in 2 rows for a total of 16 riders."
+ },
+ "19793": {
+  "elements": [
+   [
+    "Tire Propelled Launch",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 7 cars. Riders are arranged 2 across in a single row for a total of 14 riders."
+ },
+ "19794": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 5 cars."
+ },
+ "1454": {
+  "elements": [
+   [
+    "Elevator Lift",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains."
+ },
+ "2773": {
+  "elements": [
+   [
+    "Vertical Chain Lift Hill",
+    null
+   ],
+   [
+    "Sky Loop",
+    "151.6 ft tall"
+   ]
+  ],
+  "arrangement": "Single train with 2 cars. Riders are arranged 2 across in 3 rows for a total of 12 riders.",
+  "capacity": "550 riders per hour"
  }
 }
