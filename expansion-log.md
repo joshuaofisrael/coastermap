@@ -656,3 +656,13 @@ Heights come only from official park pages. Pages that need JavaScript were read
 - Skipped parks: Kentucky Kingdom (official site lists three RCDB coasters at Santa's Village, so the data conflicts); Universal Beijing (heights sit behind a modal); Everland and Lotte World (official sites did not render).
 
 Totals: 80 parks, 621 coasters, 756 pages. 45 live URLs returned 200; IndexNow returned HTTP 200 for 756 URLs.
+
+## Batch 9 (10 Nov 2026): evergreen question and manufacturer pages
+Topics were picked from Google autocomplete queries (fear of coasters, stomach drop, airtime, how coasters work, how they stay on the track, launches, brakes, restraints, best seat, height requirements, too tall, stuck coasters, motion sickness, pregnancy, record holders, glossary terms, manufacturers). 25 new pages in `_build/explainers.py`, each with a quick-answer box, FAQ schema, internal links to coaster and park pages, and a sources list:
+- Rider questions (14): how to not be scared, why your stomach drops, what is airtime, how coasters work, how they stay on the track, how launches work, how brakes work, how restraints work, best seat, height requirements explained, can you be too tall (all 114 coasters with an official maximum), what happens if a coaster gets stuck, motion sickness, pregnancy and health conditions.
+- Records (1): world record roller coasters, copied from RCDB Record Holders (operating coasters only), last verified 10 Nov 2026.
+- Glossary (1): 53 terms.
+- Manufacturers (9): hub plus Vekoma, B&M, Intamin, Mack Rides, Arrow Dynamics, Premier Rides, RMC and Gerstlauer. HQ and founding year come from RCDB company pages; ride lists come from site data.
+- Sources quoted: Universal Orlando Guide for Rider Safety and Accessibility (PDF); Universal Orlando ride height page; two planDisney panel answers on Disney's official planning site; CDC Travelers' Health and CDC Yellow Book on motion sickness. Health pages are framed as general information and tell readers to follow park signs and their doctor.
+- Coaster pages now link to their manufacturer page and the best-seat page, plus the launch, max-height or motion-sickness page where relevant. Park pages link to the height and fear pages. The home page and guides hub list the new pages.
+- Skipped: single rider and rider swap pages (rules are park-specific, so each needs its own official source), and "are roller coasters safe" statistics (no government source collected).

@@ -243,14 +243,14 @@ def types_hub():
     guide("/guides/roller-coaster-types/", f"Roller Coaster Types Explained: A Plain-English Guide | {BRAND}", "Wooden, hybrid, launch, hyper, inverted, wing, flying, dive, spinning, wild mouse, family and shuttle coasters explained, with examples.", "Roller coaster types explained", body, faqs, "Coaster types hub", "Every type, explained.", None, [])
 
 def guides_hub():
-    order = ["By height", "For families", "Records", "By place", "Coaster types hub", "Coaster types"]
-    names = {"By height": "Height requirement guides", "For families": "For families and first-timers", "Records": "Records and rankings", "By place": "Roller coasters by state and country", "Coaster types hub": "Roller coaster types", "Coaster types": "Type explainers"}
+    order = ["Questions", "By height", "For families", "Records", "By place", "Coaster types hub", "Coaster types", "Manufacturers"]
+    names = {"Questions": "Rider questions answered", "Manufacturers": "Roller coaster manufacturers", "By height": "Height requirement guides", "For families": "For families and first-timers", "Records": "Records and rankings", "By place": "Roller coasters by state and country", "Coaster types hub": "Roller coaster types", "Coaster types": "Type explainers"}
     sec = ""
     for g in order:
         items = [x for x in GUIDES if x[3] == g]
         if items: sec += f'<section><h2>{names[g]}</h2><ul>' + "".join(f'<li><a href="{u}">{E(t)}</a>: {E(b)}</li>' for u, t, b, _ in items) + "</ul></section>"
     body = f'<h1>Roller coaster guides</h1>{byline()}<p class="answer">Answers to the questions people ask before a park day: what a child of a given height can ride, which coasters are the tallest, fastest and most intense, where to start if you are nervous, and what each type of coaster is like. Every guide is built from the official height rules and RCDB statistics on Coaster Map, so each fact links back to its source.</p>{sec}'
-    write("/guides/", page("/guides/", f"Roller Coaster Guides: Heights, Records & Types | {BRAND}", "Evergreen roller coaster guides: height requirements by child height, tallest and fastest coasters, first-timer picks, coasters by state and coaster types explained.", body, None, [("/", "Home"), ("/guides/", "Guides")]))
+    write("/guides/", page("/guides/", f"Roller Coaster Guides: Heights, Records & Types | {BRAND}", "Evergreen roller coaster guides: height requirements by child height, tallest and fastest coasters, first-timer picks, coasters by state, coaster types, how coasters work and who builds them.", body, None, [("/", "Home"), ("/guides/", "Guides")]))
 
 def type_links(c):
     out = []
@@ -258,4 +258,4 @@ def type_links(c):
         if any(s == f"/guides/{slug}/" for s, *_ in GUIDES) and test(c): out.append((f"/guides/{slug}/", f"What is {('an' if name[0] in 'aeiou' else 'a')} {name}?"))
     return out
 def build_guides():
-    height_guides(); ranking_guides(); intense_guide(); first_timer_guide(); region_guides(); type_guides(); types_hub(); guides_hub()
+    height_guides(); ranking_guides(); intense_guide(); first_timer_guide(); region_guides(); type_guides(); types_hub(); build_explainers(); guides_hub()

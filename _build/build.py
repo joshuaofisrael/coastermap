@@ -260,6 +260,14 @@ def related_html(c=None, p=None):
                 if hin(h) <= H + 1e-9: links.append((f"/guides/roller-coasters-for-{H}-inch-kids/", f"Coasters for {H}-inch kids")); break
     for u, t, b, g in GUIDES:
         if g == "By place" and park["slug"] in REGION_PARKS.get(u, ()): links.append((u, t))
+    if c:
+        mp = maker_path(c)
+        if mp: links.append(mp)
+        links += [("/guides/best-seat-on-a-roller-coaster/", "Best seat on a roller coaster")]
+        if c["hr"] and c["hr"].get("max"): links.append(("/guides/can-you-be-too-tall-for-a-roller-coaster/", "Can you be too tall for a coaster?"))
+        if launched(c): links.append(("/guides/how-do-roller-coaster-launches-work/", "How roller coaster launches work"))
+        if "Spinning Cars" in c["tags"]: links.append(("/guides/roller-coaster-motion-sickness/", "Roller coaster motion sickness"))
+    if p: links += [("/guides/roller-coaster-height-requirements-explained/", "Height requirements explained"), ("/guides/how-to-not-be-scared-of-roller-coasters/", "How to not be scared of coasters")]
     if p: links += [("/guides/best-first-roller-coasters/", "Best first roller coasters"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids"), ("/guides/tallest-roller-coasters/", "Tallest roller coasters")]
     links = [(u, t) for u, t in dict.fromkeys(links) if u in gp]
     if not links: return ""
@@ -457,7 +465,7 @@ def home():
 <div class="grid3"><section><h2>Tallest coasters</h2><ol>{li(tallest, lambda c: ft(c["height"]))}</ol></section>
 <section><h2>Fastest coasters</h2><ol>{li(fastest, lambda c: mph(c["speed"]))}</ol></section>
 <section><h2>Lowest height requirements</h2><ol>{li(kid, lambda c: hshort(c["hr"]))}</ol></section></div>
-<section><h2>Popular guides</h2><ul class="cols"><li><a href="/guides/roller-coasters-for-42-inch-kids/">Coasters for 42-inch kids</a></li><li><a href="/guides/roller-coasters-for-48-inch-kids/">Coasters for 48-inch kids</a></li><li><a href="/guides/best-first-roller-coasters/">Best first roller coasters</a></li><li><a href="/guides/tallest-roller-coasters/">Tallest roller coasters</a></li><li><a href="/guides/fastest-roller-coasters/">Fastest roller coasters</a></li><li><a href="/guides/most-intense-roller-coasters/">Most intense roller coasters</a></li><li><a href="/guides/roller-coaster-types/">Roller coaster types explained</a></li><li><a href="/guides/">All guides</a></li></ul></section>
+<section><h2>Popular guides</h2><ul class="cols"><li><a href="/guides/roller-coasters-for-42-inch-kids/">Coasters for 42-inch kids</a></li><li><a href="/guides/roller-coasters-for-48-inch-kids/">Coasters for 48-inch kids</a></li><li><a href="/guides/best-first-roller-coasters/">Best first roller coasters</a></li><li><a href="/guides/tallest-roller-coasters/">Tallest roller coasters</a></li><li><a href="/guides/fastest-roller-coasters/">Fastest roller coasters</a></li><li><a href="/guides/most-intense-roller-coasters/">Most intense roller coasters</a></li><li><a href="/guides/roller-coaster-types/">Roller coaster types explained</a></li><li><a href="/guides/how-to-not-be-scared-of-roller-coasters/">How to not be scared of roller coasters</a></li><li><a href="/guides/best-seat-on-a-roller-coaster/">Best seat on a roller coaster</a></li><li><a href="/guides/world-record-roller-coasters/">World record roller coasters</a></li><li><a href="/guides/roller-coaster-manufacturers/">Roller coaster manufacturers</a></li><li><a href="/guides/roller-coaster-glossary/">Roller coaster glossary</a></li><li><a href="/guides/">All guides</a></li></ul></section>
 <section><h2>How we check facts</h2><p>Every height requirement links to the park page it came from, and every stat links to its RCDB entry. If we can't verify a number, we leave it out rather than guess. Read our <a href="/methodology/">sources and methods</a>.</p></section>'''
     write("/", page("/", f"{BRAND}: Roller Coaster Height Requirements, Stats & Maps", f"Height requirements, stats, intensity and best seats for {len(ALL)} roller coasters at Disney, Universal, Six Flags, Cedar Point, Kings Island, SeaWorld, Busch Gardens, Hersheypark, Dollywood, Knott's and more, with interactive park maps.", body))
 
@@ -572,6 +580,7 @@ def extras():
 
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "guides.py")).read(), "guides.py", "exec"))
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "parkguide.py")).read(), "parkguide.py", "exec"))
+exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "explainers.py")).read(), "explainers.py", "exec"))
 
 if __name__ == "__main__":
     build_guides()
