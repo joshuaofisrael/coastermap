@@ -232,16 +232,19 @@ def compare_html(c):
     bits = []
     if c["height"]: bits.append(f'taller than {pct(c["height"], hs_)}%')
     if c["speed"]: bits.append(f'faster than {pct(c["speed"], ss)}%')
-    if bits: out.append(f'<p>Across all {len(ALL)} coasters on {BRAND}, {E(c["name"])} is {andlist(bits)} of those with a listed figure.</p>')
+    if bits: out.append(_pick(c, "acr", [f'<p>Across all {len(ALL)} coasters on {BRAND}, {E(c["name"])} is {andlist(bits)} of those with a listed figure.</p>', f'<p>Measured against every coaster on {BRAND} with a listed figure, {E(c["name"])} is {andlist(bits)} of them.</p>', f'<p>Site-wide, {E(c["name"])} is {andlist(bits)} of the {len(ALL)} coasters we cover that have a listed figure.</p>']))
     others = sorted([x for x in ALL if x["park"] != c["park"] and x is not c and x["name"] != c["name"]], key=lambda x: (sim_dist(c, x), x["park"], x["slug"]))
+    fam = {id(x) for x in model_family(c)}
+    others = [x for x in others if id(x) not in fam] or others
     picks, seenp = [], set()
-    for x in others:
+    local = [x for x in others if c["lat"] and x["lat"] and _dist(c, x) < 700000]
+    for x in local[:1] + others:
         if x["park"] in seenp: continue
         picks.append(x); seenp.add(x["park"])
         if len(picks) == 3: break
     if picks:
         li = "".join(f'<li><a href="{coaster_path(x)}">{E(x["name"])}</a> at <a href="/parks/{x["park"]}/">{E(park_of(x)["name"])}</a>: ' + "; ".join(shared(c, x) + ([facts(x)] if facts(x) else [])) + (f'; {hshort(x["hr"])} minimum' if x["hr"] else "") + "</li>" for x in picks)
-        out.append(f'<h3>If you liked {E(c["name"])}, try</h3><p>The closest matches at other parks on {BRAND}, by type, class, builder, height, speed and inversions:</p><ul>{li}</ul>')
+        out.append(f'<h3>If you liked {E(c["name"])}, try</h3><p>{_pick(c, "lk", ["The closest matches at other parks on " + BRAND + ", by type, class, builder, height, speed and inversions, with one pick within about 700 km where there is one:", "Similar rides elsewhere on " + BRAND + ", matched on type, class, builder, size and inversions (the first is the nearest good match within about 700 km, where there is one):"])}</p><ul>{li}</ul>')
     return f'<section aria-labelledby="cmpx-h"><h2 id="cmpx-h">How {E(c["name"])} compares</h2>' + "".join(out) + "</section>"
 def PARK_LD(p):
     return [{"@context": "https://schema.org", "@type": "AmusementPark", "name": p["name"], "url": p["official"], **({"alternateName": p["former"]} if p.get("former") else {}),

@@ -146,10 +146,10 @@ def best_seat(c):
     if any(x in t for x in ("Enclosed", "Dark Ride")):
         return "Because much of the ride is themed or in the dark, the front rows give the clearest view of the show scenes and effects, while the back rows feel the drops a little more."
     if c["design"] in ("Inverted", "Wing", "Flying") or "Floorless" in t:
-        return "The front row gives an unobstructed view, which is the main reason riders choose it on this style of coaster. Outer seats feel more open; the back row is pulled over the drops faster and so tends to give the strongest drop sensation."
+        return _pick(c, "seat", ["The front row gives an unobstructed view, which is the main reason riders choose it on this style of coaster. Outer seats feel more open; the back row is pulled over the drops faster and so tends to give the strongest drop sensation.", "On this style of coaster, the front row has nothing in your line of sight, and the outermost seats feel the most exposed. Riders after the strongest drops pick the back row, which is pulled over each crest faster.", "Choose an outside seat for the most open feeling and the front row for a clear view; the back row feels the drops hardest because the train pulls it over the top at speed."])
     if c["scale"] in ("Kiddie", "Family"):
         return "On a small coaster any seat works. The front row gives the best view."
-    return "For the strongest airtime, sit near the back: the cars ahead pull the back of the train over each crest faster, so you leave your seat sooner on the drops. For the best view of what is coming, sit in the front row."
+    return _pick(c, "seat", ["For the strongest airtime, sit near the back: the cars ahead pull the back of the train over each crest faster, so you leave your seat sooner on the drops. For the best view of what is coming, sit in the front row.", "The back rows get pulled over each hill at speed, which gives the sharpest drops and most airtime; the front row trades some of that for a clear view of the track ahead.", "Pick the front row for the view and the back rows for airtime: the train drags the rear cars over every crest faster than the front."])
 
 def suits(c):
     h, s, inv = c["hr"], c["scale"], c["inversions"]
@@ -233,7 +233,20 @@ def faq_items(c):
     if sent: q.append((f'Is {c["name"]} scary?', f'It depends on the rider, but on intensity: {re.sub("<[^>]+>", "", sent)} ' + ({"Kiddie": "It is one of the gentlest coasters you can ride.", "Family": "It is built for families.", "Thrill": "Expect a lively ride that stops short of the most extreme coasters.", "Extreme": "That is RCDB's most intense class."}.get(c["scale"], ""))))
     if c["opened"]: q.append((f'When did {c["name"]} open?', f'{c["name"]} opened on {date_h(c["opened"])}' + (f' (previously known as {" and later ".join(c["former"])})' if c["former"] else "") + '.'))
     if c["make"]: q.append((f'Who built {c["name"]}?', f'{c["name"]} was manufactured by {c["make"]}.'))
+    q += clone_faqs(c)
     return q
+
+def before_ride(c):
+    p = park_of(c); h = c["hr"]; li = []
+    if h: li.append(f'Measure first: the ride-alone minimum is {hs(h)}' + (f', and riders from {rngs(h)} need a companion' if h.get("acc_min") else "") + '. Height is checked at the entrance, so ask the ride team before you queue if your child is close.')
+    else: li.append(f'We could not verify an official height rule for {E(c["name"])}, so check the sign at the entrance or the <a href="{p["official"]}" rel="nofollow noopener" target="_blank">{E(p["name"])} site</a>.')
+    if h and h.get("max"): li.append(f'Tall riders: the maximum is {hs(h, "max")}. See <a href="/guides/can-you-be-too-tall-for-a-roller-coaster/">can you be too tall?</a>')
+    if h and h.get("note"): li.append(E(h["note"]))
+    if "Spinning Cars" in c["tags"] or "Shuttle" in c["tags"]: li.append('If you get motion sick, note that this ride ' + ("spins" if "Spinning Cars" in c["tags"] else "runs backwards") + '. See our <a href="/guides/roller-coaster-motion-sickness/">motion sickness tips</a>.')
+    elif c["inversions"]: li.append(f'Secure glasses, phones and loose items before the {c["inversions"]} inversion' + ("s" if c["inversions"] != 1 else "") + '; the park posts its loose-article rules at the ride.')
+    else: li.append('Loose items, health warnings and accessibility rules are set by the park and posted at the ride.')
+    li.append(f'Opening times and ride status: check the {E(p["name"])} app or <a href="{p["official"]}" rel="nofollow noopener" target="_blank">official site</a> on the day.')
+    return "".join(f"<li>{x}</li>" for x in li)
 
 def faq_html(items):
     return '<section class="faq" aria-labelledby="faq-h"><h2 id="faq-h">Frequently asked questions</h2>' + "".join(f'<details><summary>{E(a)}</summary><p>{E(b)}</p></details>' for a, b in items) + "</section>"
@@ -297,19 +310,17 @@ def coaster_page(c):
     body = f'''<article class="coaster"><h1>{E(c["name"])}</h1><p class="sub">{E(p["name"])} · {E(p["loc"])}</p>{byline()}
 <p class="answer">{"; ".join(answer)}.</p>
 <p>{describe(c)}</p>
+{feel_html(c)}
 <div class="grid2"><section aria-labelledby="stats-h"><h2 id="stats-h">{E(c["name"])} stats</h2><table class="stats"><tbody>{rows}</tbody></table>
 {"<p class='note'>" + E(c["name"]) + " has two tracks; RCDB figures above are for one track.</p>" if c["twin"] else ""}</section>
 <section aria-labelledby="int-h"><h2 id="int-h">How intense is it?</h2><p class="pill">{E(lab)}</p><p>{isent}</p>
 <h2>Who is it for?</h2><p>{E(suits(c))}</p>
 <h2>Best seat to ride</h2><p>{E(best_seat(c))}</p>
-<p class="note">Seat advice is general guidance based on how this style of coaster moves, not a park rule.</p></section></div>
+<p class="note">General guidance from how this style of coaster moves, not a park rule. See <a href="/guides/best-seat-on-a-roller-coaster/">best seat on a roller coaster</a>.</p></section></div>
 {compare_html(c)}
 {mp}
-<section aria-labelledby="tips-h"><h2 id="tips-h">Before you ride</h2><ul>
-<li>Height is checked at the ride entrance. If your child is close to the line, ask the ride team before you queue.</li>
-<li>Rides close for weather and maintenance. Check the {E(p["name"])} app or <a href="{p["official"]}" rel="nofollow noopener" target="_blank">official site</a> for today's status and line-skip options.</li>
-<li>Loose items, health warnings and accessibility rules are set by the park and posted at each ride.</li></ul>
-<p>Planning for a child? Try the <a href="/height-checker/">ride height checker</a> to see every coaster they can ride at {E(p["short"])}.</p></section>
+<section aria-labelledby="tips-h"><h2 id="tips-h">Before you ride {E(c["name"])}</h2><ul>{before_ride(c)}</ul>
+<p>Planning for a child? The <a href="/height-checker/">ride height checker</a> shows every coaster they can ride at {E(p["short"])}.</p></section>
 {faq_html(faqs)}
 <section aria-labelledby="more-h"><h2 id="more-h">More coasters at {E(p["name"]) if siblings else E(p["group"])}</h2>{f'<ul class="cols">{sib}</ul>' if siblings else '<ul class="cols">' + "".join(f'<li><a href="{coaster_path(x)}">{E(x["name"])}</a> <span class="muted">({E(x["park_name"])}{", " + hshort(x["hr"]) if x["hr"] else ""})</span></li>' for x in ALL if park_of(x)["group"] == p["group"] and x is not c) + '</ul>'}<p><a href="/parks/{p["slug"]}/">See the full {E(p["name"])} coaster guide and map</a></p></section>
 {related_html(c=c)}<section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ul>{srcs and "".join(srcs)}</ul><p class="note">Last checked {CHECKED}. Found an error? <a href="/contact/">Tell us</a>.</p></section></article>'''
@@ -581,6 +592,7 @@ def extras():
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "guides.py")).read(), "guides.py", "exec"))
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "parkguide.py")).read(), "parkguide.py", "exec"))
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "explainers.py")).read(), "explainers.py", "exec"))
+exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "coasterplus.py")).read(), "coasterplus.py", "exec"))
 
 if __name__ == "__main__":
     build_guides()
