@@ -764,3 +764,71 @@ Every park has 3+ operating coasters on RCDB, and every one of those coasters ha
 **Tried and skipped:** Lakeside (no official heights found), Motiongate (heights don't render; site refuses plain requests), Legoland Malaysia (only 1/3 rides has a ride-alone height), Fiabilandia (only 2/4 rules published), Tobu Zoo (official site down, showing a system-outage page), E-World (heights only in script-rendered detail pages, not reached), Schloss Thurn (only 2 distinct coasters), Cinecittà World (2 operating coasters). Under 3 operating coasters on RCDB: Movieland, Legendia, Majaland, Legoland Japan/Dubai/Korea, Tokyo Dome City, Serengeti-Park, Warner Bros. World Abu Dhabi, M&D's, Kongeparken, Mundo Aventura, Genting, Joyland, Arnolds Park. Scraped but not yet researched: Julianatoren, Parque del Café, OK Corral, Dunia Fantasi, Vialand, Oriental Heritage.
 
 Totals after batch 12e: 183 parks, 1,131 coasters (1,047 with an official height rule), 1,407 sitemap URLs. Validator 0 issues after every sub-batch; near-duplicates over 0.6 held at 4 (median 0.34).
+
+## Batch 13 (11 Nov 2026): 38 more parks worldwide
+
+Same rules as batch 12. Every park has 3+ operating coasters on RCDB and every coaster has a page. Heights come only from official park pages, PDFs or official height-chart images, with the source linked on each coaster page. Stats come from RCDB. Where a park does not clearly publish a rule, the page says "Not clearly published by the park". The RCDB sweep (park list sorted by coaster count, 624 parks with 3+ coasters) gave the candidates below.
+
+**Batch 13a (1a408e3a): 6 parks, 18 coasters, 17 official rules.**
+- Parque del Café 3/3. Julianatoren 3/3 (from the official height-chart images). Vialand 3/3. Dunia Fantasi 3/3 (official ancol.com ride pages).
+- OK Corral 2/3: Pioneer left out because its badge says 130 cm alone and its text says 1.20 m.
+- E-World 3/3: Magic Castle = 매직열차.
+- New regions: Colombia, Turkey and Indonesia.
+
+**Batch 13b–d (26f31eba): 21 parks, 84 coasters, 78 official rules.**
+- US and Canada (inches):
+  - Magic Springs 3/3.
+  - Lost Island 3/4: Lokolo states only "36 inches to ride with an adult".
+  - COTALAND 5/5.
+  - Family Kingdom 2/3: Twist 'n' Shout couldn't be matched to an official ride with certainty.
+  - Quassy 3/3. Camden Park 3/3. Calaway Park 3/3. Santa's Village Dundee 3/3. Wonderland Amarillo 4/4. Alabama Adventure 3/3. Palace Playland 3/3.
+- France and Austria:
+  - Le PAL 5/5.
+  - Bagatelle 4/5: Kid'z Coaster has only an unclear "<1m50" free-access note.
+  - La Mer de Sable 4/4. Parc du Bocasse 5/5.
+  - Parc Saint Paul 4/5: Souris Verte has no official page.
+  - Familypark 4/4.
+- Cavallino Matto 6/6. Conny-Land 3/3. Tosselilla 3/3.
+- Freizeitpark Plohn 5/7. The official site is freizeitpark-plohn.de; the old plohn.de domain is for sale.
+  - Dønnervind left out: its badge says no companion is needed, but its text says 110–130 cm with a companion.
+  - Family Coaster couldn't be matched to an official ride.
+- New region guides: Iowa, Connecticut and Illinois. New regions: Austria and Switzerland.
+
+**Batch 13e (da58500f): 7 Japanese parks, 36 coasters, 25 official rules.**
+- Greenland (Kumamoto) 5/8: Milky Way uses the seated side's 120 cm, and the note gives the stand-up side's 130 cm. Blackhole, Sphinx and Ladybug Coaster are age-only ("no height limit").
+- Nasu Highland 4/7: Batflyer, Shinpi and Woopy Coaster officially have no height limit, only an age minimum.
+- Himeji Central Park 4/6: Go! Go! Jet and Imorinth are age-only.
+- Japan Monkey Park 3/4: Monkey Coaster is age-only.
+- Hokkaido Greenland 3/4: Torokko Coaster is age-only.
+- Yokohama Cosmoworld 3/3.
+- Benyland 3/4: Mini Cyclone is age-only.
+
+**Batch 13f (67dca798): 4 parks, 16 coasters, 14 official rules.**
+- Rainbow's End 3/3. Gold Reef City 5/6: Shongololo says only "under 1 m must be accompanied". Parque de la Costa 4/4.
+- Star City 2/3: Wacky Worm's "34 to 42 inches with a responsible person" doesn't say whether taller riders may ride alone.
+- New regions: New Zealand, South Africa and Argentina. New region guide: the Philippines.
+- The ranking guides' "Leader by region" list now includes South America and Africa.
+
+**Tried and skipped:**
+- Oriental Heritage Jinan: the official Fantawild project list shows no data, and RCDB's English names can't be matched with certainty. Other Fantawild parks have the same problem.
+- Tobu Zoo: the official site still shows a system-outage page.
+- Galaxyland: heights only appear in a separate map guide, and Mouse Trap isn't listed.
+- Little Amerricka: no heights published.
+- Jolly Roger: its rides weren't found on the official site.
+- Brean: the list mixes height bands with "CLOSED" labels, so the matches are uncertain.
+- New Reoma World: only 2 of 4 coasters have a height rule; the other 2 are age-only.
+- Gumbuya World: the desktop and mobile versions of the height guide disagree (TNT 105 vs 110 cm; Mining Race Coaster's companion band 110 vs 120 cm).
+- Kataplum: domain for sale.
+- Futuroscope, Dreamland Margate, Ocean Park Hong Kong: under 3 operating coasters on RCDB.
+- Wonderland Eurasia: RCDB currently lists no operating coasters.
+- Not finished: De Waarbeek, Karls Erlebnis-Dorf Elstal, Zoosafari Fasanolandia, Sommerland Sjælland (heights not found on the rendered pages).
+
+**Remaining candidates (3+ operating coasters, scraped or in the sweep, not yet researched):**
+- Asia: Wonderla Bengaluru/Kochi/Hyderabad (ride pages are script-rendered), Lotte World Adventure Busan, E-DA World, Janfusun Fancyworld, Sun World Bà Nà Hills, VinWonders, Dream World (Thailand).
+- China: Happy Valley (Beijing, Shanghai, Shenzhen and others) and the remaining OCT and Fantawild parks.
+- Europe: Viaport Marina, Wiener Prater (many separate operators), New Jesolandia, Tier- und Freizeitpark Thüle, Jardin d'Acclimatation, Mandoria, Winnoland.
+- Americas: Playland Park, Mundo Petapa, Xetulul.
+- Skipped earlier, worth a retry if the official data changes: Kentucky Kingdom, Paultons Park, Motiongate, Lakeside.
+- The full sweep has 383 uncovered operating parks with 3+ coasters, mostly small Chinese and Russian parks.
+
+Totals after batch 13: 221 parks, 1,285 coasters (1,181 with an official height rule), 1,605 sitemap URLs. Batch 13 added 38 parks, 154 coasters and 134 official rules. The validator reported 0 issues after every sub-batch. Near-duplicates over 0.6 held at 4 (median 0.34). IndexNow got HTTP 200 for all 1,605 sitemap URLs, after all 198 new pages were checked live and returned 200.
