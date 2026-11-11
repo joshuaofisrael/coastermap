@@ -1136,3 +1136,39 @@ INTL_PARKS += [
  dict(slug="enchanted-kingdom", name="Enchanted Kingdom", short="Enchanted Kingdom", loc="Santa Rosa, Laguna, Philippines", state="Laguna", country="PH", official="https://www.enchantedkingdom.ph/", group="Enchanted Kingdom", checked=_C),
 ]
 DISPLAY_INTL.update({("imagicaa", "Hot Wheels Nitro"): "Nitro"})
+
+# ---- Batch 13a (11 Nov 2026): Parque del Café, Julianatoren, Vialand, Dunia Fantasi, OK Corral, E-World ----
+def PDC(s): return ("Parque del Café, official attraction page", f"https://parquedelcafe.co/atracciones/{s}/")
+def JLT(s): return ("Julianatoren, official attraction page (height chart)", f"https://www.julianatoren.nl/pretpark/attracties/{s}/")
+def VIA(s): return ("Vialand, official ride page", f"https://www.vialand.com/uniteler/{s}")
+def DUF(s): return ("Ancol Taman Impian, official Dufan ride page", f"https://www.ancol.com/wahana/{s}")
+def OKC(s): return ("OK Corral, official attraction page", f"https://www.okcorral.fr/attraction/{s}/")
+def EWD(n): return ("E-World, official attraction page", f"https://eworld.kr/home/joy/attraction/{n}")
+HP_B13a = {
+ ("parque-del-cafe", "Kráter"): M(min=130, note="The park rates it extreme; riders over 110 kg may not fit the seats.", src=PDC("montana-rusa-krater")),
+ ("parque-del-cafe", "Avix"): M(min=140, acc_min=120, acc_max=140, max=200, note="Required height 120 to 200 cm; children 120 to 140 cm must sit in the same row as an adult.", src=PDC("montana-rusa-avix")),
+ ("parque-del-cafe", "Yippe"): M(min=140, acc_min=100, acc_max=140, note="Minimum 100 cm; children 100 to 140 cm must ride in the same row as an adult.", src=PDC("montana-rusa-yippe")),
+ ("julianatoren", "Jul's RollerSkates"): M(min=120, acc_min=95, acc_max=120, note="The park's height chart: from 120 cm alone, 95 to 120 cm with an adult.", src=JLT("juls-rollerskates")),
+ ("julianatoren", "Vlinder"): M(min=120, acc_min=105, acc_max=120, note="The park lists it as Jul's Vlinder. Height chart: from 120 cm alone, 105 to 120 cm with an adult.", src=JLT("juls-vlinder")),
+ ("julianatoren", "Texas Twister"): M(min=120, acc_min=95, acc_max=120, max=195, note="The park's height chart: from 120 cm alone, 95 to 120 cm with an adult; maximum 195 cm.", src=JLT("texas-twister")),
+ ("vialand", "Maceraperest"): M(min=120, max=196, src=VIA("maceraperest")),
+ ("vialand", "Nefeskesen"): M(min=140, max=196, src=VIA("nefeskesen")),
+ ("vialand", "Küçük Madenciler"): M(min=120, acc_min=100, acc_max=120, note="Minimum age 4; riders 100 to 120 cm may ride with a parent.", src=VIA("kucukmadenciler")),
+ ("dunia-fantasi", "Halilintar"): M(min=125, src=DUF("halilintar--13")),
+ ("dunia-fantasi", "Alap Alap"): M(min=100, note="The park spells it Alap-Alap.", src=DUF("alap-alap--16")),
+ ("dunia-fantasi", "Kereta Misteri"): M(min=125, src=DUF("kereta-misteri--1")),
+ ("ok-corral", "Gold Rush"): M(min=120, acc_min=100, acc_max=120, note="100 to 120 cm accompanied; 120 cm and over alone.", src=OKC("gold-rush")),
+ ("ok-corral", "Serpent Hopi"): M(min=130, acc_min=100, acc_max=130, note="100 to 130 cm accompanied; 130 cm and over alone.", src=OKC("serpent-hopi")),
+ ("e-world", "Hurricane"): M(min=120, note="The park lists it as 허리케인.", src=EWD(43)),
+ ("e-world", "Camel Back"): M(min=110, note="The park lists it as 카멜백.", src=EWD(39)),
+ ("e-world", "Magic Castle"): M(min=110, acc_min=90, acc_max=110, note="The park lists it as 매직열차 (Magic Train), the family coaster inside the Magic Castle. Riders 90 to 110 cm ride with a guardian aged 18 or over.", src=EWD(25)),
+}
+HP_INTL.update(HP_B13a)
+INTL_PARKS += [
+ dict(slug="parque-del-cafe", name="Parque del Café", short="Parque del Café", loc="Montenegro, Quindío, Colombia", state="Quindío", country="CO", official="https://parquedelcafe.co/", group="Parque del Café", checked=_C),
+ dict(slug="julianatoren", name="Julianatoren", short="Julianatoren", loc="Apeldoorn, Netherlands", state="Gelderland", country="NL", official="https://www.julianatoren.nl/", group="Julianatoren", checked=_C),
+ dict(slug="vialand", name="Vialand", short="Vialand", loc="Eyüpsultan, Istanbul, Turkey", state="Istanbul", country="TR", official="https://www.vialand.com/", group="Vialand", checked=_C),
+ dict(slug="dunia-fantasi", name="Dunia Fantasi (Dufan)", short="Dufan", loc="Ancol, North Jakarta, Indonesia", state="Jakarta", country="ID", official="https://www.ancol.com/unit-rekreasi/dufan-ancol--2", group="Taman Impian Jaya Ancol", checked=_C),
+ dict(slug="ok-corral", name="OK Corral", short="OK Corral", loc="Cuges-les-Pins, France", state="Provence-Alpes-Côte d'Azur", country="FR", official="https://www.okcorral.fr/", group="OK Corral", checked=_C),
+ dict(slug="e-world", name="E-World", short="E-World", loc="Daegu, South Korea", state="Daegu", country="KR", official="https://eworld.kr/", group="E-World", checked=_C),
+]

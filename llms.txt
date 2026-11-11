@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1131 coasters at 183 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1149 coasters at 189 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1326,3 +1326,27 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Space Shuttle](https://coastermap.com/parks/enchanted-kingdom/space-shuttle/): min height 48 in
   - [Roller Skater](https://coastermap.com/parks/enchanted-kingdom/roller-skater/): min height 52 in
   - [Twin Spin](https://coastermap.com/parks/enchanted-kingdom/twin-spin/): min height 48 in
+- [Parque del Café](https://coastermap.com/parks/parque-del-cafe/): 3 coasters
+  - [Kráter](https://coastermap.com/parks/parque-del-cafe/krater/): min height 130 cm
+  - [Yippe](https://coastermap.com/parks/parque-del-cafe/yippe/): min height 140 cm
+  - [Avix](https://coastermap.com/parks/parque-del-cafe/avix/): min height 140 cm
+- [Julianatoren](https://coastermap.com/parks/julianatoren/): 3 coasters
+  - [Jul's RollerSkates](https://coastermap.com/parks/julianatoren/juls-rollerskates/): min height 120 cm
+  - [Vlinder](https://coastermap.com/parks/julianatoren/vlinder/): min height 120 cm
+  - [Texas Twister](https://coastermap.com/parks/julianatoren/texas-twister/): min height 120 cm
+- [Vialand](https://coastermap.com/parks/vialand/): 3 coasters
+  - [Maceraperest](https://coastermap.com/parks/vialand/maceraperest/): min height 120 cm
+  - [Nefeskesen](https://coastermap.com/parks/vialand/nefeskesen/): min height 140 cm
+  - [Küçük Madenciler](https://coastermap.com/parks/vialand/kucuk-madenciler/): min height 120 cm
+- [Dunia Fantasi (Dufan)](https://coastermap.com/parks/dunia-fantasi/): 3 coasters
+  - [Halilintar](https://coastermap.com/parks/dunia-fantasi/halilintar/): min height 125 cm
+  - [Alap Alap](https://coastermap.com/parks/dunia-fantasi/alap-alap/): min height 100 cm
+  - [Kereta Misteri](https://coastermap.com/parks/dunia-fantasi/kereta-misteri/): min height 125 cm
+- [OK Corral](https://coastermap.com/parks/ok-corral/): 3 coasters
+  - [Serpent Hopi](https://coastermap.com/parks/ok-corral/serpent-hopi/): min height 130 cm
+  - [Gold Rush](https://coastermap.com/parks/ok-corral/gold-rush/): min height 120 cm
+  - [Pioneer](https://coastermap.com/parks/ok-corral/pioneer/)
+- [E-World](https://coastermap.com/parks/e-world/): 3 coasters
+  - [Hurricane](https://coastermap.com/parks/e-world/hurricane/): min height 120 cm
+  - [Magic Castle](https://coastermap.com/parks/e-world/magic-castle/): min height 110 cm
+  - [Camel Back](https://coastermap.com/parks/e-world/camel-back/): min height 110 cm
