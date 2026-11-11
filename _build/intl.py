@@ -324,3 +324,53 @@ INTL_PARKS += [
 DISPLAY_INTL.update({("gardaland", "Oblivion - The Black Hole"): "Oblivion: The Black Hole", ("heide-park", "Colossos - Kampf der Giganten"): "Colossos: Kampf der Giganten",
  ("universal-studios-singapore", "Puss In Boots’ Giant Journey"): "Puss In Boots' Giant Journey", ("universal-studios-singapore", "Battlestar Galactica"): "Battlestar Galactica: Human vs. Cylon",
  ("parc-asterix", "Trace Du Hourra"): "La Trace du Hourra", ("parc-asterix", "Vol D'Icare"): "Vol d'Icare", ("dreamworld", "Gold Coaster"): "The Gold Coaster"})
+
+# ---- Batch 10: regional parks (Indiana Beach, Adventureland, Wild Adventures, Waldameer, Six Flags Mexico) ----
+def IB(s): return ("Indiana Beach, official ride page", f"https://www.indianabeach.com/rides/{s}/")
+def AL(s): return ("Adventureland, official ride page", f"https://www.adventurelandpark.com/discover-the-park/adventureland-rides/{s}/")
+def WA(s): return ("Wild Adventures, official ride page", f"https://www.wildadventures.com/explore-the-park/rides/{s}/")
+def WL(s): return ("Waldameer, official attraction page", f"https://waldameer.com/park-attractions/{s}/")
+def SM(s): return ("Six Flags Mexico, official attraction page", f"https://www.sixflags.com/mexico/attractions/{s}")
+HP_B10 = {
+ ("indiana-beach", "Hoosier Hurricane"): dict(min=48, src=IB("hoosier-hurricane")),
+ ("indiana-beach", "Tig'rr"): dict(min=54, src=IB("tigrr")),
+ ("indiana-beach", "Lost Coaster of Superstition Mountain"): dict(min=48, src=IB("lost-coaster")),
+ ("indiana-beach", "Cornball Express"): dict(min=46, src=IB("cornball-express")),
+ ("indiana-beach", "Steel Hawg"): dict(min=48, note="Riders may not sit on another rider's lap.", src=IB("steel-hawg")),
+ ("indiana-beach", "All American Triple Loop"): dict(min=59, max=77, src=IB("all-american-triple-loop")),
+ ("indiana-beach", "Cyclone"): dict(min=48, src=IB("cyclone")),
+ ("adventureland-iowa", "Outlaw"): dict(min=48, src=AL("outlaw")),
+ ("adventureland-iowa", "Monster"): dict(min=48, src=AL("monster")),
+ ("adventureland-iowa", "Phoenix"): dict(min=48, src=AL("phoenix")),
+ ("adventureland-iowa", "Dragon Slayer"): dict(min=48, max=77, src=AL("dragon-slayer")),
+ ("adventureland-iowa", "Flying Viking"): dict(min=48, acc_min=36, acc_max=48, note="Riders 36 to 48 in must ride with a supervising companion at least 48 in tall.", src=AL("flying-viking")),
+ ("adventureland-iowa", "Tornado"): dict(min=48, src=AL("tornado")),
+ ("wild-adventures", "Boomerang"): dict(min=48, src=WA("boomerang")),
+ ("wild-adventures", "Twisted Typhoon"): dict(min=52, src=WA("twisted-typhoon")),
+ ("wild-adventures", "Outpost Express"): dict(min=44, acc_min=36, acc_max=44, note="Riders 36 to 44 in must ride with someone at least 14 years old.", src=WA("outpost-express")),
+ ("wild-adventures", "Marsh Mayhem"): dict(min=50, acc_min=46, acc_max=50, note="Riders 46 to 50 in must ride with someone at least 14 years old.", src=WA("marsh-mayhem")),
+ ("wild-adventures", "Swamp Thing"): dict(min=44, max=78, src=WA("swamp-thing")),
+ ("waldameer", "Comet"): dict(min=46, acc_min=36, acc_max=46, note="Riders 36 to 46 in must sit next to a supervising companion.", src=WL("comet")),
+ ("waldameer", "Ravine Flyer 3"): dict(min=40, src=WL("ravine-flyer-3")),
+ ("waldameer", "Ravine Flyer II"): dict(min=48, src=WL("ravine-flyer-ii")),
+ ("waldameer", "Steel Dragon"): dict(min=50, acc_min=46, acc_max=50, max=78, src=WL("steel-dragon")),
+ ("waldameer", "Whirlwind"): dict(min=48, acc_min=36, acc_max=48, max=77, src=WL("whirlwind")),
+ ("six-flags-mexico", "Tsunami"): M(min=120, acc_min=105, acc_max=120, src=SM("tsunami")),
+ ("six-flags-mexico", "Batgirl Batarang"): M(min=120, src=SM("batgirl-batarang")),
+ ("six-flags-mexico", "Batman The Ride"): M(min=130, src=SM("batman-ride-7")),
+ ("six-flags-mexico", "Superman el Último Escape"): M(min=130, src=SM("superman-el-ultimo-escape")),
+ ("six-flags-mexico", "Dark Knight"): M(min=120, acc_min=105, acc_max=120, src=SM("dark-knight-coaster-3")),
+ ("six-flags-mexico", "Joker"): M(min=120, acc_min=105, acc_max=120, src=SM("the-joker")),
+ ("six-flags-mexico", "Medusa Steel Coaster"): M(min=130, src=SM("medusa-steel-coaster")),
+ ("six-flags-mexico", "Wonder Woman"): M(min=122, src=SM("wonder-woman-coaster")),
+ ("six-flags-mexico", "Speedway Stunt Coaster"): M(min=120, acc_min=95, acc_max=120, src=SM("speedway-stunt-coaster")),
+}
+HP_INTL.update(HP_B10)
+INTL_PARKS += [
+ dict(slug="indiana-beach", name="Indiana Beach", short="Indiana Beach", loc="Monticello, Indiana", state="IN", country="US", official="https://www.indianabeach.com/", group="Indiana Beach"),
+ dict(slug="adventureland-iowa", name="Adventureland Park", short="Adventureland", loc="Altoona, Iowa", state="IA", country="US", official="https://www.adventurelandpark.com/", group="Palace Entertainment"),
+ dict(slug="wild-adventures", name="Wild Adventures Theme Park", short="Wild Adventures", loc="Valdosta, Georgia", state="GA", country="US", official="https://www.wildadventures.com/", group="Palace Entertainment"),
+ dict(slug="waldameer", name="Waldameer Park", short="Waldameer", loc="Erie, Pennsylvania", state="PA", country="US", official="https://waldameer.com/", group="Waldameer"),
+ dict(slug="six-flags-mexico", name="Six Flags Mexico", short="Six Flags Mexico", loc="Mexico City, Mexico", state="Mexico City", country="MX", official="https://www.sixflags.com/mexico", group="Six Flags"),
+]
+DISPLAY_INTL.update({("six-flags-mexico", "Joker"): "The Joker", ("six-flags-mexico", "Dark Knight"): "Dark Knight Coaster", ("six-flags-mexico", "Wonder Woman"): "Wonder Woman Coaster"})

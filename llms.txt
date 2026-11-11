@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 621 coasters at 80 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 656 coasters at 85 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -713,3 +713,43 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Battlestar Galactica: Human vs. Cylon](https://coastermap.com/parks/universal-studios-singapore/battlestar-galactica-human-vs-cylon/): min height 125 cm
   - [Canopy Flyer](https://coastermap.com/parks/universal-studios-singapore/canopy-flyer/): min height 122 cm
   - [Puss In Boots' Giant Journey](https://coastermap.com/parks/universal-studios-singapore/puss-in-boots-giant-journey/): min height 122 cm
+- [Indiana Beach](https://coastermap.com/parks/indiana-beach/): 7 coasters
+  - [Hoosier Hurricane](https://coastermap.com/parks/indiana-beach/hoosier-hurricane/): min height 48 in
+  - [Tig'rr](https://coastermap.com/parks/indiana-beach/tigrr/): min height 54 in
+  - [Lost Coaster of Superstition Mountain](https://coastermap.com/parks/indiana-beach/lost-coaster-of-superstition-mountain/): min height 48 in
+  - [Cornball Express](https://coastermap.com/parks/indiana-beach/cornball-express/): min height 46 in
+  - [Steel Hawg](https://coastermap.com/parks/indiana-beach/steel-hawg/): min height 48 in
+  - [All American Triple Loop](https://coastermap.com/parks/indiana-beach/all-american-triple-loop/): min height 59 in
+  - [Cyclone](https://coastermap.com/parks/indiana-beach/cyclone/): min height 48 in
+- [Adventureland Park](https://coastermap.com/parks/adventureland-iowa/): 7 coasters
+  - [Outlaw](https://coastermap.com/parks/adventureland-iowa/outlaw/): min height 48 in
+  - [Underground](https://coastermap.com/parks/adventureland-iowa/underground/)
+  - [Monster](https://coastermap.com/parks/adventureland-iowa/monster/): min height 48 in
+  - [Phoenix](https://coastermap.com/parks/adventureland-iowa/phoenix/): min height 48 in
+  - [Dragon Slayer](https://coastermap.com/parks/adventureland-iowa/dragon-slayer/): min height 48 in
+  - [Flying Viking](https://coastermap.com/parks/adventureland-iowa/flying-viking/): min height 48 in
+  - [Tornado](https://coastermap.com/parks/adventureland-iowa/tornado/): min height 48 in
+- [Wild Adventures Theme Park](https://coastermap.com/parks/wild-adventures/): 6 coasters
+  - [Boomerang](https://coastermap.com/parks/wild-adventures/boomerang/): min height 48 in
+  - [Twisted Typhoon](https://coastermap.com/parks/wild-adventures/twisted-typhoon/): min height 52 in
+  - [Outpost Express](https://coastermap.com/parks/wild-adventures/outpost-express/): min height 44 in
+  - [Marsh Mayhem](https://coastermap.com/parks/wild-adventures/marsh-mayhem/): min height 50 in
+  - [Swamp Thing](https://coastermap.com/parks/wild-adventures/swamp-thing/): min height 44 in
+  - [Swampwater Snake](https://coastermap.com/parks/wild-adventures/swampwater-snake/)
+- [Waldameer Park](https://coastermap.com/parks/waldameer/): 5 coasters
+  - [Ravine Flyer II](https://coastermap.com/parks/waldameer/ravine-flyer-ii/): min height 48 in
+  - [Whirlwind](https://coastermap.com/parks/waldameer/whirlwind/): min height 48 in
+  - [Comet](https://coastermap.com/parks/waldameer/comet/): min height 46 in
+  - [Ravine Flyer 3](https://coastermap.com/parks/waldameer/ravine-flyer-3/): min height 40 in
+  - [Steel Dragon](https://coastermap.com/parks/waldameer/steel-dragon/): min height 50 in
+- [Six Flags Mexico](https://coastermap.com/parks/six-flags-mexico/): 10 coasters
+  - [Tsunami](https://coastermap.com/parks/six-flags-mexico/tsunami/): min height 120 cm
+  - [Superman Krypton Coaster](https://coastermap.com/parks/six-flags-mexico/superman-krypton-coaster/)
+  - [Batgirl Batarang](https://coastermap.com/parks/six-flags-mexico/batgirl-batarang/): min height 120 cm
+  - [Batman The Ride](https://coastermap.com/parks/six-flags-mexico/batman-the-ride/): min height 130 cm
+  - [Superman el Último Escape](https://coastermap.com/parks/six-flags-mexico/superman-el-ultimo-escape/): min height 130 cm
+  - [Dark Knight Coaster](https://coastermap.com/parks/six-flags-mexico/dark-knight-coaster/): min height 120 cm
+  - [The Joker](https://coastermap.com/parks/six-flags-mexico/the-joker/): min height 120 cm
+  - [Medusa Steel Coaster](https://coastermap.com/parks/six-flags-mexico/medusa-steel-coaster/): min height 130 cm
+  - [Wonder Woman Coaster](https://coastermap.com/parks/six-flags-mexico/wonder-woman-coaster/): min height 122 cm
+  - [Speedway Stunt Coaster](https://coastermap.com/parks/six-flags-mexico/speedway-stunt-coaster/): min height 120 cm

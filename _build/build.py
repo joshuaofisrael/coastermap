@@ -176,11 +176,11 @@ def describe(c):
     kind = " ".join(x for x in [mat, design] if x) + " roller coaster"
     s1 = f'{E(c["name"])} is a{"n" if kind[0] in "aeiou" else ""} {kind} at {E(p["name"])} in {E(p["loc"])}'
     if c["make"]: s1 += f', built by {E(c["make"])}'
-    s1 += "."
+    s1 += "" if s1.endswith(".") else "."
     sents = [s1]
     if c["opened"]:
         if c["former"]:
-            sents.append(f'It first opened on {date_h(c["opened"])} and was previously known as {E(" and later ".join(c["former"]))}.')
+            sents.append(f'It first opened {"on " + date_h(c["opened"]) if len(c["opened"]) > 4 else "in " + c["opened"]} and was previously known as {E(" and later ".join(c["former"]))}.')
         else:
             sents.append(f'It opened on {date_h(c["opened"])}.' if len(c["opened"]) > 4 else f'It opened in {c["opened"]}.')
     stat = []
@@ -237,8 +237,8 @@ def faq_items(c):
     if c["inversions"] is not None: q.append((f'Does {c["name"]} go upside down?', (f'Yes. It has {c["inversions"]} inversion' + ("s" if c["inversions"] != 1 else "") + '.') if c["inversions"] else 'No. It has no inversions.'))
     lab, sent = intensity(c)
     if sent: q.append((f'Is {c["name"]} scary?', f'It depends on the rider, but on intensity: {re.sub("<[^>]+>", "", sent)} ' + ({"Kiddie": "It is one of the gentlest coasters you can ride.", "Family": "It is built for families.", "Thrill": "Expect a lively ride that stops short of the most extreme coasters.", "Extreme": "That is RCDB's most intense class."}.get(c["scale"], ""))))
-    if c["opened"]: q.append((f'When did {c["name"]} open?', f'{c["name"]} opened on {date_h(c["opened"])}' + (f' (previously known as {" and later ".join(c["former"])})' if c["former"] else "") + '.'))
-    if c["make"]: q.append((f'Who built {c["name"]}?', f'{c["name"]} was manufactured by {c["make"]}.'))
+    if c["opened"]: q.append((f'When did {c["name"]} open?', f'{c["name"]} opened {"on " + date_h(c["opened"]) if len(c["opened"]) > 4 else "in " + c["opened"]}' + (f' (previously known as {" and later ".join(c["former"])})' if c["former"] else "") + '.'))
+    if c["make"]: q.append((f'Who built {c["name"]}?', f'{c["name"]} was manufactured by {c["make"]}' + ("" if c["make"].endswith(".") else ".")))
     q += clone_faqs(c)
     return q
 
