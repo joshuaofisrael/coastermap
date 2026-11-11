@@ -719,13 +719,13 @@ Totals after batch 10: 102 parks, 741 coasters, 928 pages. Live 200 checks passe
 - Skyline Park 5/6: Sky Dragster omitted (no minimum height shown, only a companion rule under 130 cm).
 - New region guides: Italy, Denmark, Belgium. Saudi Arabia and Norway added to the ranking regions.
 
-**Batch 11c (commit e45d8d1): 9 new parks, 47 coasters, 34 official rules.**
+**Batch 11c (commit e45d8d1): 9 new parks, 41 coasters, 34 official rules.**
 - Nickelodeon Universe, Mall of America 4/5 (official FAQ; Back at the Barnyard Hayride omitted, no minimum with a chaperone). Nickelodeon Universe at American Dream 5/5 (official attraction pages).
 - Bakken 3/5 (Mariehønen has no minimum with an adult; Mine Train Ulven has an age-only rule). Walibi Rhône-Alpes 6/6 and Bellewaerde 5/5 (official ride pages, each ride's own block only; related-ride cards ignored).
 - Adventure Island 4/5 (Kiddi Koasta has no minimum). Sea World Gold Coast 3/4 (Jet Rescue page did not render). IMG Worlds 2/3 (Spider-Man Doc Ock's Revenge lists two unlabelled heights, left out). Lightwater Valley 2/3 (The Caterpillar listed "No Restrictions").
 - New region guide: Minnesota.
 
-**Batch 11d: 9 new parks, 35 coasters, 27 official rules.**
+**Batch 11d: 9 new parks, 34 coasters, 26 official rules.**
 - Fort Fun 4/4, Kolmården 3/3 (ages kept as notes), Terra Mítica 3/3, Beech Bend 3/3 (official height table), Casino Pier 3/4 (Hot Tamales says "48 inch minimum all riders" and "36 to 48 must be accompanied" at once, left out), Parc Spirou 3/5 (En avant Seccotine and Nid des Marsupilamis not on the rendered page).
 - Bayern-Park 3/5 (Raupenachterbahn only states 100 cm with an adult, no ride-alone height; Star-Shuttle not listed). Duinrell 2/3 (Kikker8baan page shows no height). Belantis 2/4 (Cobra des Amun Ra shows only an accompanied minimum; Huracanito not shown).
 - Not added: Nigloland (pages blocked to our renderer), Hopi Hari (coaster rules not on the rendered list), Leolandia (no ride links rendered).
@@ -738,3 +738,7 @@ Totals after batch 10: 102 parks, 741 coasters, 928 pages. Live 200 checks passe
 **Batch 11f: 2 new parks, 10 coasters, 10 official rules.**
 - Plopsaland De Panne 6/6 and Plopsaland Deutschland (formerly Holiday Park; RCDB former name, holidaypark.de redirects to plopsa.com) 4/4, from the official plopsa.com attraction pages (three-tier "not allowed / accompanied / allowed" blocks; some read from the page HTML when the rendered block was lazy-loaded).
 - Not added: Hansa-Park (height rules sit in a collapsed panel that did not open in the headless renderer), Ocean Park Hong Kong (only 2 operating coasters on RCDB).
+
+**Batch 11g: 2 new parks, 8 coasters, 7 official rules.** Avonturenpark Hellendoorn 4/4 (official attraction pages), Fraispertuis-City 3/4 (official attraction lists; La Ronde des Rondins not listed). Not added: Walygator Grand Est (site refused connections from our renderer).
+
+Totals after batch 11g: 138 parks, 925 coasters (858 with an official height rule), 1,152 pages in the sitemap. Validator 0 issues after every batch; near-duplicates over 0.6 stayed at 4 (median 0.34). Marked closed: none (every park matched RCDB's operating list).

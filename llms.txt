@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 917 coasters at 136 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 925 coasters at 138 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1065,3 +1065,13 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [100% Wolf](https://coastermap.com/parks/plopsaland-deutschland/100-wolf/): min height 130 cm
   - [Expedition GeForce](https://coastermap.com/parks/plopsaland-deutschland/expedition-geforce/): min height 140 cm
   - [Sky Scream](https://coastermap.com/parks/plopsaland-deutschland/sky-scream/): min height 140 cm
+- [Avonturenpark Hellendoorn](https://coastermap.com/parks/hellendoorn/): 4 coasters
+  - [Balagos](https://coastermap.com/parks/hellendoorn/balagos/): min height 120 cm
+  - [Rioolrat](https://coastermap.com/parks/hellendoorn/rioolrat/): min height 100 cm
+  - [Donderstenen](https://coastermap.com/parks/hellendoorn/donderstenen/): min height 120 cm
+  - [RidderStrijd](https://coastermap.com/parks/hellendoorn/ridderstrijd/): min height 140 cm
+- [Fraispertuis-City](https://coastermap.com/parks/fraispertuis-city/): 4 coasters
+  - [Le Grand Canyon](https://coastermap.com/parks/fraispertuis-city/le-grand-canyon/): min height 95 cm
+  - [Timber Drop](https://coastermap.com/parks/fraispertuis-city/timber-drop/): min height 122 cm
+  - [Ronde des Rondins](https://coastermap.com/parks/fraispertuis-city/ronde-des-rondins/)
+  - [Fireline Redwood](https://coastermap.com/parks/fraispertuis-city/fireline-redwood/): min height 95 cm

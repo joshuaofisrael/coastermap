@@ -778,3 +778,23 @@ INTL_PARKS += [
  dict(slug="plopsaland-deutschland", name="Plopsaland Deutschland", short="Plopsaland Deutschland", loc="Haßloch, Germany", state="Rhineland-Palatinate", country="DE", official="https://www.plopsa.com/de/plopsaland-deutschland", group="Plopsa", former="Holiday Park", former_note="RCDB lists Holiday Park as a former name, and holidaypark.de redirects to the Plopsaland Deutschland page on plopsa.com"),
 ]
 DISPLAY_INTL.update({("plopsaland-de-panne", "Ride to Happiness"): "The Ride to Happiness", ("plopsaland-deutschland", "Tabalugas Achterbahn"): "Tabaluga's Achterbahn"})
+
+# ---- Batch 11g (10 Nov 2026): Avonturenpark Hellendoorn, Fraispertuis-City ----
+def AVH(s): return ("Avonturenpark Hellendoorn, official attraction page", f"https://www.avonturenpark.nl/attraction-detail/{s}")
+FRS = ("Fraispertuis-City, official attractions page", "https://www.fraispertuis-city.fr/le-parc/attractions/le-plein-de-sensations/")
+FRF = ("Fraispertuis-City, official attractions page", "https://www.fraispertuis-city.fr/le-parc/attractions/pour-la-famille/")
+HP_B11g = {
+ ("hellendoorn", "Balagos"): M(min=120, src=AVH("balagos")),
+ ("hellendoorn", "Rioolrat"): M(min=100, src=AVH("rioolrat")),
+ ("hellendoorn", "Donderstenen"): M(min=120, acc_min=90, acc_max=120, note="Riders 90 to 120 cm must ride with an adult.", src=AVH("donderstenen")),
+ ("hellendoorn", "RidderStrijd"): M(min=140, acc_min=120, acc_max=140, note="Riders 120 to 140 cm must ride with an adult.", src=AVH("ridderstrijd")),
+ ("fraispertuis-city", "Timber Drop"): M(min=122, src=FRS),
+ ("fraispertuis-city", "Grand Canyon"): M(min=95, src=FRS),
+ ("fraispertuis-city", "Fireline Redwood"): M(min=95, src=FRF),
+}
+HP_INTL.update(HP_B11g)
+INTL_PARKS += [
+ dict(slug="hellendoorn", name="Avonturenpark Hellendoorn", short="Hellendoorn", loc="Hellendoorn, Netherlands", state="Overijssel", country="NL", official="https://www.avonturenpark.nl/", group="Avonturenpark Hellendoorn"),
+ dict(slug="fraispertuis-city", name="Fraispertuis-City", short="Fraispertuis-City", loc="Jeanménil, France", state="Grand Est", country="FR", official="https://www.fraispertuis-city.fr/", group="Fraispertuis-City"),
+]
+DISPLAY_INTL.update({("fraispertuis-city", "Grand Canyon"): "Le Grand Canyon"})

@@ -19423,5 +19423,247 @@
   ],
   "arrangement": "Single train with 2 cars. Riders are arranged 2 across in 3 rows for a total of 12 riders.",
   "installer": "RCS GmbH"
+ },
+ "902": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 7 cars. Riders are arranged 2 across in 2 rows for a total of 28 riders.",
+  "capacity": "1000 riders per hour",
+  "designers": [
+   "Peter Clerx"
+  ],
+  "former": [
+   [
+    "Tornado",
+    "1990",
+    "2020"
+   ]
+  ]
+ },
+ "904": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders.",
+  "capacity": "800 riders per hour",
+  "designers": [
+   "Peter Clerx"
+  ]
+ },
+ "2997": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "19652": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 4 across in a single row for a total of 4 riders per car.",
+  "relocations": [
+   [
+    "Aztlán Parque Urbano",
+    "Ratón Loco"
+   ],
+   [
+    "Avonturenpark Hellendoorn",
+    "RidderStrijd"
+   ]
+  ],
+  "capacity": "900 riders per hour"
+ },
+ "939": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "8 cars per train. Riders are arranged 2 across in 2 rows for a total of 32 riders per train.",
+  "designers": [
+   "William Cobb"
+  ]
+ },
+ "940": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Double Corkscrew",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 7 cars per train. Riders are arranged 2 across in 2 rows for a total of 28 riders per train.",
+  "designers": [
+   "Peter Clerx"
+  ],
+  "former": [
+   [
+    "Waly Coaster",
+    "2008",
+    "2013"
+   ],
+   [
+    "Comet Space",
+    "1989",
+    "2007"
+   ]
+  ]
+ },
+ "3643": {},
+ "4478": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    "100 ft tall"
+   ],
+   [
+    "Zero-G Roll",
+    null
+   ],
+   [
+    "Cobra Roll",
+    null
+   ],
+   [
+    "Helix",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Helix",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 8 cars per train. Riders are arranged 4 across in a single row for a total of 32 riders per train.",
+  "restraints": [
+   "Shoulder harness"
+  ],
+  "relocations": [
+   [
+    "Expoland",
+    "Orochi"
+   ],
+   [
+    "Walygator Grand Est",
+    "Monster"
+   ]
+  ],
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "1805": {
+  "arrangement": "2 cars per train. Riders are arranged 2 across in 2 rows for a total of 8 riders per train."
+ },
+ "9503": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Dive Loop",
+    null
+   ],
+   [
+    "In-Line Twist",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "designers": [
+   "Alan Schilke"
+  ]
+ },
+ "11583": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 5 cars. Riders are arranged 2 across in a single row for a total of 10 riders.",
+  "relocations": [
+   [
+    "Parc Astérix",
+    "Ronde des Rondins"
+   ],
+   [
+    "Fraispertuis City",
+    "Ronde des Rondins"
+   ]
+  ],
+  "capacity": "600 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "20200": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Tunnel",
+    null
+   ],
+   [
+    "Vertical Rollback",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders.",
+  "designers": [
+   "Camiel Bilsen"
+  ],
+  "installer": "RCS GmbH"
  }
 }
