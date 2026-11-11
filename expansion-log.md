@@ -418,3 +418,162 @@ Added: 36 parks, 314 coasters. Site now: 43 parks, 373 coasters.
 - Knoebels (RCDB 4557): ride pages load heights by script (show 0); related-ride cards show two unlabeled numbers. Needs a clearer official source.
 - Lagoon (4570), Silverwood (4564): site/PDF blocked to the checker; scraped into _build/rcdb.json but not published.
 - Mid America Adventure is the former Six Flags St. Louis (sixflags.com/stlouis redirects to midamericaadventure.enchantedparks.com).
+
+## Batch 5: international parks (commit 10374c4, metric support in a0a36bf)
+
+Heights are stored in cm as the parks publish them and shown with an inch conversion; the checker and quiz compare in the rule's own unit.
+
+### Europa-Park (`/parks/europa-park/`, RCDB https://rcdb.com/4870.htm), 14 coasters
+- Matterhorn Blitz: 130 cm (about 51.2 in)
+- Euro Mir: 130 cm (about 51.2 in)
+- Eurosat CanCan Coaster: 130 cm (about 51.2 in)
+- Swiss Bob Run: 130 cm (about 51.2 in)
+- Silver Star: 140 cm (about 55.1 in)
+- Poseidon: 130 cm (about 51.2 in)
+- Atlantica SuperSplash: 130 cm (about 51.2 in)
+- Pegasus: 130 cm (about 51.2 in)
+- Blue Fire Megacoaster: 130 cm (about 51.2 in)
+- Voltron Nevera: 130 cm (about 51.2 in)
+- Wodan Timburcoaster: 130 cm (about 51.2 in)
+- Arthur: 120 cm (about 47.2 in)
+- Ba-a-a-Express: 120 cm (about 47.2 in)
+- Alpine Express Enzian: 130 cm (about 51.2 in)
+
+### Phantasialand (`/parks/phantasialand/`, RCDB https://rcdb.com/4872.htm), 7 coasters
+- Colorado Adventure: 120 cm (about 47.2 in)
+- Crazy Bats: 120 cm (about 47.2 in)
+- Winja's Fear & Force: 140 cm (about 55.1 in)
+- Black Mamba: 140 cm (about 55.1 in)
+- Taron: 140 cm (about 55.1 in)
+- Raik: 120 cm (about 47.2 in)
+- F.L.Y.: 140 cm (about 55.1 in)
+
+### Alton Towers (`/parks/alton-towers/`, RCDB https://rcdb.com/4796.htm), 11 coasters
+- Nemesis Reborn: 140 cm (about 55.1 in)
+- Oblivion: 140 cm (about 55.1 in)
+- Runaway Mine Train: 130 cm (about 51.2 in)
+- Spinball Whizzer: 120 cm (about 47.2 in)
+- Rita: 140 cm (about 55.1 in)
+- TH13TEEN: 120 cm (about 47.2 in)
+- The Smiler: 140 cm (about 55.1 in)
+- Octonauts Rollercoaster Adventure: 110 cm (about 43.3 in)
+- Wicker Man: 120 cm (about 47.2 in)
+- Bluey the Ride: Here Come the Grannies!: 110 cm (about 43.3 in)
+- Galactica: 140 cm (about 55.1 in)
+
+### Thorpe Park (`/parks/thorpe-park/`, RCDB https://rcdb.com/4814.htm), 8 coasters
+- The Walking Dead: The Ride: 140 cm (about 55.1 in)
+- Flying Fish: 110 cm (about 43.3 in)
+- Colossus: 140 cm (about 55.1 in)
+- Nemesis Inferno: 140 cm (about 55.1 in)
+- Stealth: 140 cm (about 55.1 in)
+- SAW: The Ride: 140 cm (about 55.1 in)
+- The Swarm: 140 cm (about 55.1 in)
+- Hyperia: 130 cm (about 51.2 in)
+
+### Blackpool Pleasure Beach (`/parks/blackpool-pleasure-beach/`, RCDB https://rcdb.com/4795.htm), 9 coasters
+- The Big One: 132 cm (about 52 in)
+- Revolution: 127 cm (about 50 in)
+- Avalanche: 132 cm (about 52 in)
+- Grand National: 140 cm (about 55.1 in)
+- Nickelodeon Streak: 117 cm (about 46.1 in)
+- Steeplechase: 127 cm (about 50 in)
+- Blue Flyer: no verified height rule (omitted)
+- Infusion: 132 cm (about 52 in)
+- ICON: 130 cm (about 51.2 in)
+
+### PortAventura Park (`/parks/portaventura-park/`, RCDB https://rcdb.com/4792.htm), 8 coasters
+- Stampida: 120 cm (about 47.2 in)
+- Dragon Khan: 140 cm (about 55.1 in)
+- Tomahawk: 105 cm (about 41.3 in)
+- El Diablo: Tren de la Mina: 140 cm (about 55.1 in)
+- Tami-Tami: 130 cm (about 51.2 in)
+- Furius Baco: 140 cm (about 55.1 in)
+- Shambhala: 140 cm (about 55.1 in)
+- Uncharted: The Enigma of Penitence: no verified height rule (omitted)
+
+### Ferrari Land (`/parks/ferrari-land/`, RCDB https://rcdb.com/12016.htm), 2 coasters
+- Red Force: 140 cm (about 55.1 in)
+- Junior Red Force: 120 cm (about 47.2 in)
+
+### Efteling (`/parks/efteling/`, RCDB https://rcdb.com/4839.htm), 6 coasters
+- Python: 120 cm (about 47.2 in)
+- Vogel Rok: 120 cm (about 47.2 in)
+- De Vliegende Hollander: 120 cm (about 47.2 in)
+- Joris en de Draak: 120 cm (about 47.2 in)
+- Baron 1898: 132 cm (about 52 in)
+- Max + Moritz: 130 cm (about 51.2 in)
+
+### Liseberg (`/parks/liseberg/`, RCDB https://rcdb.com/4909.htm), 7 coasters
+- Lisebergbanan: 130 cm (about 51.2 in)
+- Rabalder: 110 cm (about 43.3 in)
+- Stampbanan: 110 cm (about 43.3 in)
+- Helix: 130 cm (about 51.2 in)
+- Valkyria: 132 cm (about 52 in)
+- Luna: 120 cm (about 47.2 in)
+- Balder: 130 cm (about 51.2 in)
+
+### Fuji-Q Highland (`/parks/fuji-q-highland/`, RCDB https://rcdb.com/4961.htm), 6 coasters
+- Nia and Animal Coaster: no verified height rule (omitted)
+- Fujiyama: 130 cm (about 51.2 in)
+- Gaspard et Lisa: Voyage Dans Le Ciel: 110 cm (about 43.3 in)
+- Eejanaika: 125 cm (about 49.2 in)
+- Takabisha: 125 cm (about 49.2 in)
+- Zokkon: 120 cm (about 47.2 in)
+
+### Tokyo Disneyland (`/parks/tokyo-disneyland/`, RCDB https://rcdb.com/4959.htm), 2 coasters
+- Big Thunder Mountain: 102 cm (about 40.2 in)
+- Gadget's Go Coaster: 90 cm (about 35.4 in)
+
+### Tokyo DisneySea (`/parks/tokyo-disneysea/`, RCDB https://rcdb.com/5073.htm), 2 coasters
+- Flounder's Flying Fish Coaster: 90 cm (about 35.4 in)
+- Raging Spirits: 117 cm (about 46.1 in)
+
+### Shanghai Disneyland (`/parks/shanghai-disneyland/`, RCDB https://rcdb.com/6556.htm), 3 coasters
+- TRON Lightcycle Power Run: 122 cm (about 48 in)
+- Seven Dwarfs Mine Train: 97 cm (about 38.2 in)
+- Rex's RC Racer: 120 cm (about 47.2 in)
+
+Batch 5 total: 13 parks, 85 coasters.
+
+## Totals after batch 5
+
+Site now: 56 parks, 458 coasters.
+
+## Batch 5 height rules omitted (unverified or not storable)
+
+- Blackpool Pleasure Beach, Blue Flyer: official page gives a companion rule with no minimum, so there is no ride-alone minimum to store.
+- PortAventura, Uncharted: only a with-adult minimum is published.
+- Fuji-Q Highland, Nia and Animal Coaster: the official pages give age rules only, with no height.
+
+## Batch 5 parks researched but not added
+
+- Canada's Wonderland is already covered.
+- Universal Studios Japan and Hong Kong Disneyland: the official pages render only with JavaScript and returned no rules to the checker.
+- Disneyland Paris and Disney Adventure World: the site is behind a Queue-it block, and the only PDF found is outdated.
+- Disneyland Resort (California) is already covered.
+- These parks are scraped into _build/rcdb.json but not published.
+
+## Quick fixes (commit a0a36bf)
+
+- Mid America Adventure: "formerly Six Flags St. Louis" added to the title, meta, sub line, lead, FAQ, JSON-LD alternateName and parks index.
+- README.md rewritten for the current data layout.
+- Batch 2 count is corrected above to 98. The commit message says 100.
+
+## Evergreen guides and ad-readiness (commit 42314d2)
+
+- 37 guide pages under /guides/, all generated only from verified site data. Each has an Article and FAQPage schema, a byline, related links and a "How this guide is built" note. Wording is free of time references and shows only a last-verified date.
+  - Height guides: 36, 42, 48 and 54 inch kids.
+  - Rankings: tallest, fastest, longest, steepest, most inversions, most intense (g-force).
+  - Best first roller coasters.
+  - 11 region pages: Florida, California, Pennsylvania, Texas, Missouri, Ohio, Virginia, United Kingdom, Germany, Spain, Japan.
+  - 12 "what is a ..." type explainers, a types hub and a guides hub.
+- Guides were added to the nav and home page, and coaster and park pages now link related guides.
+- Privacy page: a Google and third-party advertising cookie disclosure, opt-outs (Google Ads Settings, aboutads.info, youronlinechoices) and EEA/UK consent wording.
+- Advertising disclosure, contact, credits, quiz and height checker pages: expanded with original explanatory text, and the quiz and height checker gained FAQ schema.
+- About and credits wording made evergreen.
+- Bylines with "How we verify" added on coaster, park and guide pages.
+- newsletter/thanks is now noindex, and noindex pages are left out of the sitemap.
+- llms.txt shows cm rules correctly.
+- An HTML comment marks a future below-content ad slot. There is no ad code and no reserved empty space. ads.txt was skipped because there is no publisher ID.
+- Live checks: 150 URLs returned 200 (batch 5 pages, guides and legal pages). IndexNow HTTP 200 for all 564 sitemap URLs.
