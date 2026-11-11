@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1335 coasters at 233 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1386 coasters at 249 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1580,3 +1580,70 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Madagascar Mad Pursuit](https://coastermap.com/parks/motiongate/madagascar-mad-pursuit/): min height 125 cm
   - [John Wick: Open Contract](https://coastermap.com/parks/motiongate/john-wick-open-contract/): min height 125 cm
   - [Now You See Me: High Roller](https://coastermap.com/parks/motiongate/now-you-see-me-high-roller/): min height 120 cm
+- [Adventureland (Long Island)](https://coastermap.com/parks/adventureland-ny/): 3 coasters
+  - [Rattlesnake Coaster](https://coastermap.com/parks/adventureland-ny/rattlesnake-coaster/): min height 48 in
+  - [Turbulence](https://coastermap.com/parks/adventureland-ny/turbulence/): min height 48 in
+  - [Fireball](https://coastermap.com/parks/adventureland-ny/fireball/): min height 48 in
+- [Playland (Vancouver)](https://coastermap.com/parks/playland-vancouver/): 4 coasters
+  - [Coaster](https://coastermap.com/parks/playland-vancouver/coaster/): min height 48 in
+  - [Kettle Creek Mine](https://coastermap.com/parks/playland-vancouver/kettle-creek-mine/): min height 36 in
+  - [Bug Whirled](https://coastermap.com/parks/playland-vancouver/bug-whirled/): min height 48 in
+  - [ThunderVolt](https://coastermap.com/parks/playland-vancouver/thundervolt/): min height 52 in
+- [Luna Park Sydney](https://coastermap.com/parks/luna-park-sydney/): 4 coasters
+  - [Wild Mouse](https://coastermap.com/parks/luna-park-sydney/wild-mouse/): min height 132 cm
+  - [Big Dipper](https://coastermap.com/parks/luna-park-sydney/big-dipper/): min height 132 cm
+  - [Boomerang](https://coastermap.com/parks/luna-park-sydney/boomerang/): min height 132 cm
+  - [Little Nipper](https://coastermap.com/parks/luna-park-sydney/little-nipper/): min height 132 cm
+- [Doha Quest](https://coastermap.com/parks/quest-doha/): 4 coasters
+  - [EpiQ Coaster](https://coastermap.com/parks/quest-doha/epiq-coaster/): min height 140 cm
+  - [Oryx Express](https://coastermap.com/parks/quest-doha/oryx-express/): min height 130 cm
+  - [Space Twister](https://coastermap.com/parks/quest-doha/space-twister/): min height 130 cm
+  - [Fly with Flap](https://coastermap.com/parks/quest-doha/fly-with-flap/): min height 120 cm
+- [Crealy Theme Park](https://coastermap.com/parks/crealy/): 3 coasters
+  - [Maximus](https://coastermap.com/parks/crealy/maximus/): min height 120 cm
+  - [Shark Bay](https://coastermap.com/parks/crealy/shark-bay/): min height 120 cm
+  - [Twister Rollercoaster](https://coastermap.com/parks/crealy/twister-rollercoaster/): min height 133 cm
+- [West Midlands Safari Park](https://coastermap.com/parks/west-midlands-safari-park/): 3 coasters
+  - [African Big Apple](https://coastermap.com/parks/west-midlands-safari-park/african-big-apple/): min height 120 cm
+  - [Rhino Coaster](https://coastermap.com/parks/west-midlands-safari-park/rhino-coaster/): min height 120 cm
+  - [Monkey Mayhem](https://coastermap.com/parks/west-midlands-safari-park/monkey-mayhem/): min height 140 cm
+- [Gulliver's Valley](https://coastermap.com/parks/gullivers-valley/): 3 coasters
+  - [Rocky Ridge Railway](https://coastermap.com/parks/gullivers-valley/rocky-ridge-railway/): min height 120 cm
+  - [Grand Prix Racers](https://coastermap.com/parks/gullivers-valley/grand-prix-racers/): min height 120 cm
+  - [Wriggler](https://coastermap.com/parks/gullivers-valley/wriggler/): min height 120 cm
+- [Twinlakes Park](https://coastermap.com/parks/twinlakes/): 3 coasters
+  - [Mercury's Mini Coaster](https://coastermap.com/parks/twinlakes/mercurys-mini-coaster/): min height 120 cm
+  - [Buffalo Stampede](https://coastermap.com/parks/twinlakes/buffalo-stampede/): min height 100 cm
+  - [Rum Runner](https://coastermap.com/parks/twinlakes/rum-runner/): min height 120 cm
+- [Camel Creek Adventure Park](https://coastermap.com/parks/camel-creek/): 3 coasters
+  - [Morgawr](https://coastermap.com/parks/camel-creek/morgawr/): min height 110 cm
+  - [Clown Coaster](https://coastermap.com/parks/camel-creek/clown-coaster/): min height 90 cm
+  - [Magic Dragon](https://coastermap.com/parks/camel-creek/magic-dragon/): min height 120 cm
+- [The Milky Way Adventure Park](https://coastermap.com/parks/milky-way-adventure-park/): 3 coasters
+  - [Ziggy's Blast Quest](https://coastermap.com/parks/milky-way-adventure-park/ziggys-blast-quest/): min height 120 cm
+  - [Cosmic Typhoon](https://coastermap.com/parks/milky-way-adventure-park/cosmic-typhoon/): min height 120 cm
+  - [Cosmic Caterpillar](https://coastermap.com/parks/milky-way-adventure-park/cosmic-caterpillar/): min height 120 cm
+- [Festyland](https://coastermap.com/parks/festyland/): 3 coasters
+  - [Drakkar Express](https://coastermap.com/parks/festyland/drakkar-express/): min height 120 cm
+  - [1066](https://coastermap.com/parks/festyland/1066/): min height 120 cm
+  - [Valkyrie](https://coastermap.com/parks/festyland/valkyrie/): min height 130 cm
+- [Parc Ange Michel](https://coastermap.com/parks/ange-michel/): 3 coasters
+  - [Tacot en Folie](https://coastermap.com/parks/ange-michel/tacot-en-folie/): min height 95 cm
+  - [Tornado](https://coastermap.com/parks/ange-michel/tornado/): min height 110 cm
+  - [Tourbillon](https://coastermap.com/parks/ange-michel/tourbillon/): min height 95 cm
+- [Jaderpark](https://coastermap.com/parks/jaderpark/): 3 coasters
+  - [Holzwurm-Achterbahn](https://coastermap.com/parks/jaderpark/holzwurm-achterbahn/): min height 130 cm
+  - [Honigkiste](https://coastermap.com/parks/jaderpark/honigkiste/): min height 90 cm
+  - [Ziegelblitz](https://coastermap.com/parks/jaderpark/ziegelblitz/): min height 105 cm
+- [Luna Park Tel Aviv](https://coastermap.com/parks/luna-park-tel-aviv/): 3 coasters
+  - [Anaconda](https://coastermap.com/parks/luna-park-tel-aviv/anaconda/): min height 140 cm
+  - [Rakevet Harim](https://coastermap.com/parks/luna-park-tel-aviv/rakevet-harim/): min height 130 cm
+  - [Twister](https://coastermap.com/parks/luna-park-tel-aviv/twister/): min height 120 cm
+- [Adventure World](https://coastermap.com/parks/adventure-world-shirahama/): 3 coasters
+  - [Little Adventure](https://coastermap.com/parks/adventure-world-shirahama/little-adventure/): min height 110 cm
+  - [Pandafull Coaster](https://coastermap.com/parks/adventure-world-shirahama/pandafull-coaster/): min height 110 cm
+  - [Big Adventure Coaster](https://coastermap.com/parks/adventure-world-shirahama/big-adventure-coaster/): min height 125 cm
+- [Enakyo Wonderland](https://coastermap.com/parks/enakyo-wonderland/): 3 coasters
+  - [Camel Coaster](https://coastermap.com/parks/enakyo-wonderland/camel-coaster/): min height 110 cm
+  - [Jungle Coaster](https://coastermap.com/parks/enakyo-wonderland/jungle-coaster/): min height 110 cm
+  - [Cycle Coaster](https://coastermap.com/parks/enakyo-wonderland/cycle-coaster/)

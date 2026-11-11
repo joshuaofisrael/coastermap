@@ -1490,3 +1490,92 @@ HP_INTL.update(HP_B14d)
 INTL_PARKS += [
  dict(slug="motiongate", name="Motiongate Dubai", short="Motiongate", loc="Dubai, United Arab Emirates", state="Dubai", country="AE", official="https://www.dubaiparksandresorts.com/en/motiongatetm-dubai", group="Dubai Parks and Resorts", checked=_C),
 ]
+
+# ---- Batch 15a (11 Nov 2026): 16 parks from the RCDB sweep (US, Canada, UK, France, Germany, Australia, Japan, Qatar, Israel) ----
+def ALNY(s): return ("Adventureland (Long Island), official ride page", f"https://adventureland.us/{s}/")
+def PNE(s): return ("Playland (PNE), official ride page", f"https://pne.ca/rides/{s}/")
+LPS = ("Luna Park Sydney, official rides page", "https://www.lunaparksydney.com/rides/")
+QDQ = ("Doha Quest, official rides page", "https://dohaquest.com/en/rides")
+CRL = ("Crealy Theme Park, official ride height restrictions", "https://www.crealy.co.uk/theme-park/rides-attractions/ride-height-restrictions/")
+def WMSP(s): return ("West Midlands Safari Park, official attraction page", f"https://www.wmsp.co.uk/attraction-details/{s}")
+GVM = ("Gulliver's Valley, official park map (height key)", "https://images.gulliversfun.co.uk/content/files/COMPRESSED-GV-ROTHER%20VALLEY%202026%20DIBOND%20PARK%20MAP%20WEB%20.pdf")
+def TWL(s): return ("Twinlakes Park, official ride page", f"https://www.twinlakespark.co.uk/rides/{s}/")
+def CCK(s): return ("Camel Creek, official ride page", f"https://www.camelcreek.co.uk/the-park/rides-and-attractions/{s}/")
+def MWY(s): return ("The Milky Way Adventure Park, official ride page", f"https://themilkyway.co.uk/rides/{s}")
+def FST(s): return ("Festyland, official attraction page", f"https://festyland.com/attraction/{s}/")
+def AMI(s): return ("Ange Michel, official attraction page", f"https://www.angemichel.com/attraction/{s}/")
+def JDP(s): return ("Jaderpark, official attraction page", f"https://www.jaderpark.de/de/details/{s}")
+def LPTA(s): return ("Luna Park Tel Aviv, official attraction page", f"https://lunapark.co.il/attractions/{s}/")
+AWS = ("Adventure World, official Play Zone page", "https://www.aws-s.com/facility/play-zone/")
+def ENW(r): return ("Enakyo Wonderland, official attraction page", f"https://enakyo-wonderland.jp/pages/66/detail=1/b_id=350/r_id={r}/")
+HP_B15a = {
+ ("adventureland-ny", "Rattlesnake Coaster"): dict(min=48, acc_min=36, acc_max=48, note="The park's page is still at its old Lady Bug Coaster address: 36 inches to ride with an adult, 48 inches alone.", src=ALNY("lady-bug-coaster")),
+ ("adventureland-ny", "Turbulence"): dict(min=48, acc_min=44, acc_max=48, src=ALNY("turbulence")),
+ ("adventureland-ny", "Fireball"): dict(min=48, acc_min=42, acc_max=48, max=75, note="The park says anyone 6 feet 4 inches or taller cannot ride.", src=ALNY("fireball")),
+ ("playland-vancouver", "Coaster"): dict(min=48, note="The park calls it the Wooden Roller Coaster.", src=PNE("wooden-roller-coaster")),
+ ("playland-vancouver", "Kettle Creek Mine"): dict(min=36, note="The park lists it as Kettle Creek Mine Coaster: 36 inches and taller. It does not state a companion rule.", src=PNE("kettle-creek-mine-coaster")),
+ ("playland-vancouver", "Bug Whirled"): dict(min=48, acc_min=36, acc_max=48, max=77, note="Minimum 36 inches; riders from 36 to 48 inches must be accompanied by an adult. Minimum age 4.", src=PNE("bug-whirled")),
+ ("playland-vancouver", "ThunderVolt"): dict(min=52, src=PNE("thundervolt")),
+ ("luna-park-sydney", "Big Dipper"): M(min=132, src=LPS),
+ ("luna-park-sydney", "Wild Mouse"): M(min=132, acc_min=106, acc_max=132, src=LPS),
+ ("luna-park-sydney", "Boomerang"): M(min=132, acc_min=106, acc_max=132, src=LPS),
+ ("luna-park-sydney", "Little Nipper"): M(min=132, acc_min=106, acc_max=132, src=LPS),
+ ("quest-doha", "EpiQ Coaster"): M(min=140, max=195, src=QDQ),
+ ("quest-doha", "Oryx Express"): M(min=130, acc_min=105, acc_max=130, max=195, src=QDQ),
+ ("quest-doha", "Space Twister"): M(min=130, acc_min=105, acc_max=130, max=190, src=QDQ),
+ ("quest-doha", "Fly with Flap"): M(min=120, max=180, note="The park also sets a weight range of 30 to 113 kg.", src=QDQ),
+ ("crealy", "Maximus"): M(min=120, acc_min=92, acc_max=120, src=CRL),
+ ("crealy", "Shark Bay"): M(min=120, acc_min=92, acc_max=120, src=CRL),
+ ("crealy", "Twister Rollercoaster"): M(min=133, acc_min=120, acc_max=133, note="The park lists it as Twister.", src=CRL),
+ ("west-midlands-safari-park", "Rhino Coaster"): M(min=120, acc_min=100, acc_max=120, note="The park lists it as the Rhino Rollercoaster.", src=WMSP("rhino-rollercoaster")),
+ ("west-midlands-safari-park", "African Big Apple"): M(min=120, acc_min=100, acc_max=120, note="The park lists it as the African Big Apple Coaster.", src=WMSP("african-big-apple-coaster")),
+ ("west-midlands-safari-park", "Monkey Mayhem"): M(min=140, acc_min=120, acc_max=140, src=WMSP("monkey-mayhem")),
+ ("gullivers-valley", "Rocky Ridge Railway"): M(min=120, acc_min=90, acc_max=120, src=GVM),
+ ("gullivers-valley", "Grand Prix Racers"): M(min=120, acc_min=100, acc_max=120, note="Read from the height key on the Gulliver's Valley park map: below 100 cm cannot ride, and below 120 cm must be accompanied by a responsible adult. Unlike The Wriggler at the same park, which has a 195 cm limit, the map prints no maximum height for this ride. On RCDB it opened in May 2021, a year after Rocky Ridge Railway (July 2020) and almost two years before The Wriggler (February 2023), the park's other two coasters. The same map also lists the park's Rockin' Tug at 90 cm with a companion and 120 cm alone, the same bands as Rocky Ridge Railway.", src=GVM),
+ ("gullivers-valley", "Wriggler"): M(min=120, acc_min=90, acc_max=120, max=195, note="The park lists it as The Wriggler.", src=GVM),
+ ("twinlakes", "Buffalo Stampede"): M(min=100, src=TWL("buffalo-stampede-roller-coaster")),
+ ("twinlakes", "Mercury's Mini Coaster"): M(min=120, acc_min=90, acc_max=120, note="The park lists it as Mercury Mini Coaster: minimum 90 cm, with riders from 90 to 120 cm accompanied by an adult.", src=TWL("mercury-mini-coaster")),
+ ("twinlakes", "Rum Runner"): M(min=120, acc_min=95, acc_max=120, src=TWL("rum-runner-coaster")),
+ ("camel-creek", "Morgawr"): M(min=110, acc_min=92, acc_max=110, src=CCK("morgawr")),
+ ("camel-creek", "Magic Dragon"): M(min=120, acc_min=90, acc_max=120, note="The park lists it as The Dragon.", src=CCK("the-dragon")),
+ ("camel-creek", "Clown Coaster"): M(min=90, note="The park does not state a companion rule.", src=CCK("clown-coaster")),
+ ("milky-way-adventure-park", "Cosmic Typhoon"): M(min=120, src=MWY("cosmic-typhoon")),
+ ("milky-way-adventure-park", "Cosmic Caterpillar"): M(min=120, acc_min=80, acc_max=120, src=MWY("cosmic-caterpillar")),
+ ("milky-way-adventure-park", "Ziggy's Blast Quest"): M(min=120, acc_min=80, acc_max=120, note="A coaster with a laser-shooting theme; the same height rule as Cosmic Caterpillar.", src=MWY("ziggys-blast-quest")),
+ ("festyland", "Valkyrie"): M(min=130, acc_min=110, acc_max=130, src=FST("valkyrie")),
+ ("festyland", "Drakkar Express"): M(min=120, acc_min=100, acc_max=120, src=FST("drakkar-express")),
+ ("festyland", "1066"): M(min=120, acc_min=100, acc_max=120, src=FST("1066")),
+ ("ange-michel", "Tornado"): M(min=110, note="The park lists it as Le Tornado.", src=AMI("le-tornado")),
+ ("ange-michel", "Tacot en Folie"): M(min=95, note="The park does not state a companion rule.", src=AMI("le-tacot-en-folie")),
+ ("ange-michel", "Tourbillon"): M(min=95, note="The park lists it as Le Tourbillon and does not state a companion rule.", src=AMI("tourbillon")),
+ ("jaderpark", "Ziegelblitz"): M(min=105, note="105 cm with an adult from age 4; riding alone from age 6 and 105 cm.", src=JDP("familienachterbahn-ziegelblitz")),
+ ("jaderpark", "Holzwurm-Achterbahn"): M(min=130, acc_min=105, acc_max=130, note="With an adult from age 4 and 105 cm; alone from age 7 and 130 cm.", src=JDP("holzwurm-achterbahn")),
+ ("jaderpark", "Honigkiste"): M(min=90, max=120, note="A ride for children aged 3 to 5, from 90 to 120 cm.", src=JDP("honigkiste")),
+ ("luna-park-tel-aviv", "Anaconda"): M(min=140, acc_min=130, acc_max=140, src=LPTA("%D7%90%D7%A0%D7%A7%D7%95%D7%A0%D7%93%D7%94")),
+ ("luna-park-tel-aviv", "Rakevet Harim"): M(min=130, acc_min=100, acc_max=130, note="The park lists it as its family roller coaster (330 m of track).", src=LPTA("%D7%A8%D7%9B%D7%91%D7%AA-%D7%94%D7%A8%D7%99%D7%9D-%D7%9E%D7%A9%D7%A4%D7%97%D7%AA%D7%99%D7%AA")),
+ ("luna-park-tel-aviv", "Twister"): M(min=120, max=200, note="The park lists it as Crazy Twister, its spinning-car coaster; riders must also weigh 25 to 120 kg.", src=LPTA("%D7%A7%D7%A8%D7%99%D7%99%D7%96%D7%99-%D7%98%D7%95%D7%95%D7%99%D7%A1%D7%98%D7%A8")),
+ ("adventure-world-shirahama", "Big Adventure Coaster"): M(min=125, acc_min=105, acc_max=125, note="Riders from 105 to 125 cm need a companion aged 16 or older (or of high-school age) who meets the ride rules.", src=AWS),
+ ("adventure-world-shirahama", "Pandafull Coaster"): M(min=110, acc_min=90, acc_max=110, note="Riders from 90 to 110 cm need a companion aged 16 or older (or of high-school age).", src=AWS),
+ ("adventure-world-shirahama", "Little Adventure"): M(min=110, acc_min=90, acc_max=110, note="Riders from 90 to 110 cm need a companion aged 16 or older (or of high-school age).", src=AWS),
+ ("enakyo-wonderland", "Camel Coaster"): M(min=110, src=ENW(61)),
+ ("enakyo-wonderland", "Jungle Coaster"): M(min=110, src=ENW(81)),
+}
+HP_INTL.update(HP_B15a)
+INTL_PARKS += [
+ dict(slug="adventureland-ny", name="Adventureland (Long Island)", short="Adventureland Long Island", loc="Farmingdale, New York", state="NY", country="US", official="https://adventureland.us/", group="Adventureland", checked=_C),
+ dict(slug="playland-vancouver", name="Playland (Vancouver)", short="Playland", loc="Vancouver, British Columbia, Canada", state="BC", country="CA", official="https://pne.ca/playland/", group="Pacific National Exhibition", checked=_C),
+ dict(slug="luna-park-sydney", name="Luna Park Sydney", short="Luna Park Sydney", loc="Milsons Point, Sydney, Australia", state="NSW", country="AU", official="https://www.lunaparksydney.com/", group="Luna Park Sydney", checked=_C),
+ dict(slug="quest-doha", name="Doha Quest", short="Doha Quest", loc="Doha, Qatar", state="Doha", country="QA", official="https://dohaquest.com/en", group="Doha Oasis", checked=_C),
+ dict(slug="crealy", name="Crealy Theme Park", short="Crealy", loc="Exeter, Devon, England", state="Devon", country="GB", official="https://www.crealy.co.uk/", group="Crealy", checked=_C),
+ dict(slug="west-midlands-safari-park", name="West Midlands Safari Park", short="West Midlands Safari Park", loc="Bewdley, Worcestershire, England", state="Worcestershire", country="GB", official="https://www.wmsp.co.uk/", group="West Midlands Safari Park", checked=_C),
+ dict(slug="gullivers-valley", name="Gulliver's Valley", short="Gulliver's Valley", loc="Rotherham, South Yorkshire, England", state="South Yorkshire", country="GB", official="https://www.gulliversvalleyresort.co.uk/", group="Gulliver's", checked=_C),
+ dict(slug="twinlakes", name="Twinlakes Park", short="Twinlakes", loc="Melton Mowbray, Leicestershire, England", state="Leicestershire", country="GB", official="https://www.twinlakespark.co.uk/", group="Twinlakes", checked=_C),
+ dict(slug="camel-creek", name="Camel Creek Adventure Park", short="Camel Creek", loc="Tredinnick, Cornwall, England", state="Cornwall", country="GB", official="https://www.camelcreek.co.uk/", group="Camel Creek", checked=_C),
+ dict(slug="milky-way-adventure-park", name="The Milky Way Adventure Park", short="The Milky Way", loc="Bideford, Devon, England", state="Devon", country="GB", official="https://themilkyway.co.uk/", group="The Milky Way", checked=_C),
+ dict(slug="festyland", name="Festyland", short="Festyland", loc="Bretteville-sur-Odon, Normandy, France", state="Normandy", country="FR", official="https://festyland.com/", group="Festyland", checked=_C),
+ dict(slug="ange-michel", name="Parc Ange Michel", short="Ange Michel", loc="Saint-Martin-de-Landelles, Normandy, France", state="Normandy", country="FR", official="https://www.angemichel.com/", group="Ange Michel", checked=_C),
+ dict(slug="jaderpark", name="Jaderpark", short="Jaderpark", loc="Jaderberg, Lower Saxony, Germany", state="Lower Saxony", country="DE", official="https://www.jaderpark.de/", group="Jaderpark", checked=_C),
+ dict(slug="luna-park-tel-aviv", name="Luna Park Tel Aviv", short="Luna Park Tel Aviv", loc="Tel Aviv, Israel", state="Tel Aviv", country="IL", official="https://lunapark.co.il/", group="Luna Park Tel Aviv", checked=_C),
+ dict(slug="adventure-world-shirahama", name="Adventure World", short="Adventure World", loc="Shirahama, Wakayama, Japan", state="Wakayama", country="JP", official="https://www.aws-s.com/", group="Adventure World", checked=_C),
+ dict(slug="enakyo-wonderland", name="Enakyo Wonderland", short="Enakyo Wonderland", loc="Ena, Gifu, Japan", state="Gifu", country="JP", official="https://enakyo-wonderland.jp/", group="Enakyo Wonderland", checked=_C),
+]
