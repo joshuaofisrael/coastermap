@@ -870,3 +870,28 @@ Same rules as batches 12 and 13. Heights come only from official park pages or o
 Totals after batch 14: 233 parks, 1,335 coasters (1,229 with an official height rule), 1,671 sitemap URLs. Batch 14 added 12 parks, 50 coasters and 48 official rules. The validator reported 0 issues after every sub-batch. Near-duplicates over 0.6 held at 4 (median 0.34).
 
 **Remaining candidates:** the skipped parks above if their official data changes; OCT and Fantawild parks (no matchable official lists); and the rest of the RCDB sweep (about 370 operating parks with 3+ coasters, mostly small Chinese and Russian parks).
+
+## Batch 15 (11 Nov 2026)
+
+**Re-check: Kentucky Kingdom Hollyhock and Roll.** The official ride page (kentuckykingdom.com/explore-the-park/attractions/kentucky-kingdom/hollyhock-and-roll/) still reads "Min: 56 inches" and "Riders 36" tall and up may ride with a supervising companion… at least 14 years old". Not a misread, so the stored rule is unchanged.
+
+**Batch 15a (b8e714cd): 16 parks from the RCDB sweep, 51 coasters, 50 official rules.**
+- Adventureland Long Island 3/3 (Rattlesnake Coaster's official page is still at /lady-bug-coaster/; RCDB lists Ladybug as a former name), Playland Vancouver 4/4 (inches), Luna Park Sydney 4/4, Doha Quest 4/4, Crealy 3/3, West Midlands Safari Park 3/3, Gulliver's Valley 3/3, Twinlakes 3/3, Camel Creek 3/3 (Magic Dragon = the park's "The Dragon"), Milky Way 3/3, Festyland 3/3, Ange Michel 3/3, Jaderpark 3/3 (age wording kept as notes), Luna Park Tel Aviv 3/3 (Rakevet Harim = the park's family coaster, Twister = its Crazy Twister), Adventure World 3/3.
+- Enakyo Wonderland 2/3: Cycle Coaster omitted (age-only rule).
+- Gulliver's Valley Grand Prix Racers got a factual note from the park map key and RCDB opening dates to keep it distinct from the Gulliver's Land page (0.64 to 0.59).
+- New regions: Qatar and Israel (Middle East).
+
+**Batch 15b (16c24b9d): hub pages.** /guides/theme-parks-with-the-most-roller-coasters/ (top-30 ranking by operating RCDB coasters, tallest by listed RCDB height, count a 48 in / 122 cm rider can ride alone, region and country leaders, FAQs; built only from data already on the site). New region guides: Colorado and Kentucky.
+
+**Batch 15c (6827e968): 7 parks in France and Poland, 24 coasters, 24 official rules.**
+- Kingoland 4/4, Le Fleury 3/3 (Rhaegal stored as 130 cm alone only; its companion line "jusqu'à 95 cm" is unclear), Didi'Land 3/3 (Family Coaster = the park's La Pomme), Fabrikus World 4/4 (Brucomela = La Pomme, over 100 cm alone, no lower companion limit stated), La Récré des 3 Curés 3/3, Hossoland 4/4, Magic Park Land 3/3.
+
+**Tried and skipped:**
+- No official per-ride heights: Adventure Park USA, Tropic Falls (OWA rides page has none, brochure PDF 403), Sky Ranch, Canpol, Serena Aventura, Fun Land Towyn, Lunapark Fréjus, Trans Studio Cibubur, Churpfalzpark, Trampolino, Funny-World, Erlebniswelt Thale (age-only or none), Aztlán (parqueaztlan.com is not a clear official source and lists no heights).
+- Unclear figures: Taunus Wunderland (unlabelled "0 Jahre & 0 cm / 6 Jahre & 100 cm"), Barry Island (Caterpillar's 1.4 m unclear, Dragon Challenge none), Parc des Combes (mixed age/height companion rule, age-only luge), Antibes Land (1 of 3 clear), Western Playland (contradictory figures), Ocean Beach.
+- Can't match or fetch: Edelwies (site redirect), Fééryland (no official site), Karls Erlebnis-Dorf parks (shared rule pages), Robotland (Korean names not matchable with certainty), Wicksteed (official list shows only Clown Coaster), Lochmühle, Tolk-Schau, Ecoland (duplicate names, under 3 distinct coasters).
+- Under 3 operating RCDB coasters: Genting SkyWorlds, Lake Winnie, Real Madrid World, Serengeti-Park, Legoland Japan, Warner Bros. World Abu Dhabi, Parc du Petit Prince, Karls Oberhausen, Boudewijn Seapark, Global Village.
+
+Totals after batch 15: 256 parks, 1,410 coasters (1,303 with an official height rule), 1,772 sitemap URLs. Batch 15 added 23 parks, 75 coasters and 74 official rules. The validator reported 0 issues after every sub-batch. Near-duplicates over 0.6 held at 4 (median 0.34). IndexNow: 1,772 URLs, HTTP 200.
+
+**Remaining candidates:** Loos Parc, Parc de la Vallée, Europark Idroscalo, Fantasiland Pomezia, Cidade da Criança, Animália Park, Đầm Sen, Suối Tiên, Đại Nam, Jawa Timur Park 1, Atlantis Land, Kiftzuba, YesterLand, CJ Barrymore's, Festival Land Ajman, Adventureland Sharjah, Gateway Resort, Legendia; the skips above if official data changes; the rest of the sweep (mostly China, Russia and Iraq).
