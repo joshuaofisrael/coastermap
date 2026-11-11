@@ -295,6 +295,7 @@ def coaster_page(c):
 <h2>Who is it for?</h2><p>{E(suits(c))}</p>
 <h2>Best seat to ride</h2><p>{E(best_seat(c))}</p>
 <p class="note">Seat advice is general guidance based on how this style of coaster moves, not a park rule.</p></section></div>
+{compare_html(c)}
 {mp}
 <section aria-labelledby="tips-h"><h2 id="tips-h">Before you ride</h2><ul>
 <li>Height is checked at the ride entrance. If your child is close to the line, ask the ride team before you queue.</li>
@@ -381,7 +382,7 @@ def park_page(p):
 
 def parks_index():
     cards = "".join(f'<li class="card"><h2><a href="/parks/{p["slug"]}/">{E(p["name"])}</a></h2><p>{("Formerly " + E(p["former"]) + ", ") if p.get("former") else ""}{E(p["loc"])}</p><p><strong>{len(p["coasters"])} coaster{"s" if len(p["coasters"]) != 1 else ""}</strong>' + (f'; tallest {E(max((c for c in p["coasters"] if c["height"]), key=lambda c: c["height"])["name"])}' if any(c["height"] for c in p["coasters"]) else "") + '.</p></li>' for p in PARKS)
-    body = f'<h1>Theme park coaster guides</h1><p class="answer">Coaster Map covers {len(PARKS)} major theme parks so far, with {len(ALL)} roller coasters. Each guide lists every operating coaster with its height requirement, stats and map position. More parks are on the way: more Six Flags, Universal and United States parks first, then major international parks.</p><ul class="cards">{cards}</ul>'
+    body = f'<h1>Theme park coaster guides</h1><p class="answer">Coaster Map covers {len(PARKS)} major theme parks so far, with {len(ALL)} roller coasters. Each guide lists every operating coaster with its height requirement, stats and map position. Each park guide also ranks its coasters by intensity and suggests first-timer picks.</p><ul class="cards">{cards}</ul>'
     write("/parks/", page("/parks/", f"Theme Park Roller Coaster Guides by Park | {BRAND}", f"Roller coaster guides for {len(PARKS)} theme parks, including Walt Disney World, Disneyland Resort, Universal Orlando, Six Flags, Cedar Point, Kings Island, SeaWorld, Busch Gardens, Hersheypark and Dollywood.", body, None, [("/", "Home"), ("/parks/", "Parks")]))
 
 def all_coasters():
@@ -570,6 +571,7 @@ def extras():
     open(os.path.join(ROOT, "favicon.svg"), "w").write(LOGO.replace('width="34" height="34" ', 'xmlns="http://www.w3.org/2000/svg" ').replace(' aria-hidden="true" focusable="false"', ""))
 
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "guides.py")).read(), "guides.py", "exec"))
+exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "parkguide.py")).read(), "parkguide.py", "exec"))
 
 if __name__ == "__main__":
     build_guides()
