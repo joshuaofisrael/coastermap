@@ -2187,5 +2187,65 @@
   "thrill": "3",
   "introduced": null,
   "ctx": "Min Height 48” Min Height Accompanied 36” Thrill Level 3 Top Speed 27 MPH Length 843 Ft Location Brittania Start Your Engines! Jump in the driver’s seat and race side-by-side through twists, turns, an"
+ },
+ "great-escape|Comet": {
+  "url": "https://greatescapeparks.enchantedparks.com/rides-and-experiences/attractions/comet/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 4 Location Fest Area Accessibility Attraction Accessibility Information Comet You’ll spot The Comet before you even reach the ride area, towering over Great Escape as one o"
+ },
+ "great-escape|Steamin' Demon": {
+  "url": "https://greatescapeparks.enchantedparks.com/rides-and-experiences/attractions/steamin-demon/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "5",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 5 Location Ghost Town Accessibility Attraction Accessibility Information Steamin’ Demon Innovative from the moment it debuted and still a fan favorite today, the Steamin’ D"
+ },
+ "great-escape|Flashback": {
+  "url": "https://greatescapeparks.enchantedparks.com/rides-and-experiences/attractions/flashback/",
+  "min": "48",
+  "acc_min": null,
+  "acc_max": null,
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Thrill Level 4 Location Hot Rod USA Accessibility Attraction Accessibility Information Flashback Flashback is the standout thrill ride of Hot Rod USA and one you cannot miss. Step into "
+ },
+ "great-escape|Canyon Blaster": {
+  "url": "https://greatescapeparks.enchantedparks.com/rides-and-experiences/attractions/canyon-blaster/",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "3",
+  "introduced": "2003",
+  "ctx": "Min Height 48” Min Height Accompanied 42” Thrill Level 3 Top Speed 45 MPH Length 1800 Ft Elevation 56 Ft Duration 150 Sec Location Ghost Town Introduced 2003 Manufacturer Arrow Accessibility Attractio"
+ },
+ "great-escape|Frankie's Mine Train": {
+  "url": "https://greatescapeparks.enchantedparks.com/rides-and-experiences/attractions/frankies-mine-train/",
+  "min": "42",
+  "acc_min": null,
+  "acc_max": null,
+  "max": "54",
+  "thrill": "3",
+  "introduced": null,
+  "ctx": "Min Height 42” Max Height 54” Thrill Level 3 Location Timbertown Accessibility Attraction Accessibility Information Frankie’s Mine Train Timbertown’s favorite furry troublemaker is back again. Frankie"
+ },
+ "great-escape|Bobcat": {
+  "url": "https://greatescapeparks.enchantedparks.com/rides-and-experiences/attractions/the-bobcat/",
+  "min": "48",
+  "acc_min": "42",
+  "acc_max": "48",
+  "max": null,
+  "thrill": "4",
+  "introduced": null,
+  "ctx": "Min Height 48” Min Height Accompanied 42” Thrill Level 4 Location Fest Area Accessibility Attraction Accessibility Information The Bobcat Run like a bobcat along The Bobcat, Great Escape’s newest coas"
  }
 }

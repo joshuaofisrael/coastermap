@@ -161,3 +161,55 @@ INTL_PARKS += [
 DISPLAY_INTL.update({("la-ronde", "Monstre"): "Le Monstre", ("la-ronde", "Marche du Mille-pattes"): "La Marche du Mille-pattes", ("la-ronde", "Ednör - L'Attaque"): "Ednör",
  ("universal-studios-japan", "Flying Dinosaur"): "The Flying Dinosaur", ("disneyland-paris", "Indiana Jones et le Temple du Péril"): "Indiana Jones and the Temple of Peril",
  ("disneyland-paris", "Casey Jr., Le Petit Train du Cirque"): "Casey Jr., le Petit Train du Cirque"})
+
+# ---- Batch 7 (10 Nov 2026): remaining major US parks ----
+LG = ("Lagoon, official Rides & Attractions page", "https://www.lagoonpark.com/rides-and-attractions")
+SW = ("Silverwood, official Size Guide", "https://www.silverwoodthemepark.com/rides/size-guide.php")
+def LLF(s): return ("Legoland Florida, official ride page", f"https://www.legoland.com/florida/things-to-do/theme-park/rides-attractions/{s}/")
+def LLC(s): return ("Legoland California, official ride page", f"https://www.legoland.com/california/things-to-do/theme-park/rides/{s}/")
+def LLN(s): return ("Legoland New York, official ride page", f"https://www.legoland.com/new-york/things-to-do/theme-park/rides-attractions/{s}/")
+def EG(s): return ("Elitch Gardens, official attraction page", f"https://elitchgardens.com/attractions/{s}/")
+HP_B7 = {
+ ("lagoon", "Spider"): dict(min=50, acc_min=46, acc_max=50, src=LG),
+ ("lagoon", "Colossus the Fire Dragon"): dict(min=50, acc_min=46, acc_max=50, src=LG),
+ ("lagoon", "Wild Mouse"): dict(min=50, acc_min=46, acc_max=50, src=LG),
+ ("lagoon", "Roller Coaster"): dict(min=50, acc_min=46, acc_max=50, src=LG),
+ ("lagoon", "Wicked"): dict(min=50, acc_min=46, acc_max=50, note="Riders 46 to 50 in must ride in a designated seat.", src=LG),
+ ("lagoon", "Primordial"): dict(min=48, acc_min=36, acc_max=48, src=LG),
+ ("lagoon", "Bombora"): dict(min=48, acc_min=36, acc_max=48, src=LG),
+ ("lagoon", "Cannibal"): dict(min=48, src=LG),
+ ("lagoon", "Bat"): dict(min=42, src=LG),
+ ("silverwood", "Tremors"): dict(min=48, acc_min=42, acc_max=48, src=SW),
+ ("silverwood", "Aftershock"): dict(min=54, max=80, src=SW),
+ ("silverwood", "Krazy Koaster"): dict(min=48, acc_min=36, acc_max=48, src=SW),
+ ("silverwood", "Stunt Pilot"): dict(min=48, src=SW),
+ ("silverwood", "Timber Terror"): dict(min=48, acc_min=42, acc_max=48, src=SW),
+ ("silverwood", "Corkscrew"): dict(min=48, src=SW),
+ ("legoland-florida", "Dragon"): dict(min=48, acc_min=40, acc_max=48, note="Companions must be at least 14 years old.", src=LLF("the-dragon")),
+ ("legoland-florida", "Coastersaurus"): dict(min=42, src=LLF("coastersaurus")),
+ ("legoland-florida", "Great Lego Race"): dict(min=48, acc_min=42, acc_max=48, note="Companions must be at least 14 years old and at least 48 in tall.", src=LLF("the-great-lego-race")),
+ ("legoland-florida", "Galacticoaster"): dict(min=48, acc_min=36, acc_max=48, src=LLF("galacticoaster")),
+ ("legoland-california", "Dragon"): dict(min=48, acc_min=40, acc_max=48, note="Companions must be at least 14 years old and at least 48 in tall.", src=LLC("the-dragon")),
+ ("legoland-california", "Coastersaurus"): dict(min=48, acc_min=36, acc_max=48, note="Companions must be adults aged 18 or older.", src=LLC("coastersaurus")),
+ ("legoland-california", "Technic Coaster"): dict(min=48, acc_min=42, acc_max=48, note="Riders must be at least 4 years old, and at least 6 to ride alone.", src=LLC("lego-technic-coaster")),
+ ("legoland-california", "Galacticoaster"): dict(min=48, acc_min=36, acc_max=48, max=78, src=LLC("galacticoaster")),
+ ("legoland-new-york", "Dragon"): dict(min=48, acc_min=42, acc_max=48, max=76, note="Riders must be at least 4 years old; under 6 they must ride with a companion aged 14 or older.", src=LLN("the-dragon")),
+ ("legoland-new-york", "Dragon's Apprentice"): dict(min=42, acc_min=36, acc_max=42, src=LLN("dragon-s-apprentice")),
+ ("elitch-gardens", "Sidewinder"): dict(min=48, src=EG("sidewinder")),
+ ("elitch-gardens", "Twister III: Storm Chaser"): dict(min=48, src=EG("twisteriii")),
+ ("elitch-gardens", "Mind Eraser"): dict(min=52, max=80, src=EG("mind-eraser")),
+ ("elitch-gardens", "Boomerang"): dict(min=48, src=EG("boomerang")),
+ ("elitch-gardens", "Blazin' Buckaroo"): dict(min=42, acc_min=36, acc_max=42, src=EG("blazin-buckaroo")),
+}
+HP_INTL.update(HP_B7)
+INTL_PARKS += [
+ dict(slug="lagoon", name="Lagoon", short="Lagoon", loc="Farmington, Utah", state="UT", country="US", official="https://www.lagoonpark.com/", group="Lagoon"),
+ dict(slug="silverwood", name="Silverwood Theme Park", short="Silverwood", loc="Athol, Idaho", state="ID", country="US", official="https://www.silverwoodthemepark.com/", group="Silverwood"),
+ dict(slug="legoland-florida", name="Legoland Florida", short="Legoland Florida", loc="Winter Haven, Florida", state="FL", country="US", official="https://www.legoland.com/florida/", group="Merlin Entertainments"),
+ dict(slug="legoland-california", name="Legoland California", short="Legoland California", loc="Carlsbad, California", state="CA", country="US", official="https://www.legoland.com/california/", group="Merlin Entertainments"),
+ dict(slug="legoland-new-york", name="Legoland New York", short="Legoland New York", loc="Goshen, New York", state="NY", country="US", official="https://www.legoland.com/new-york/", group="Merlin Entertainments"),
+ dict(slug="great-escape", name="Great Escape", short="Great Escape", loc="Queensbury, New York", state="NY", country="US", official="https://greatescapeparks.enchantedparks.com/", group="Enchanted Parks", former="Six Flags Great Escape", former_note="sixflags.com/greatescape redirects to the Enchanted Parks site, and RCDB lists the park as Great Escape"),
+ dict(slug="elitch-gardens", name="Elitch Gardens", short="Elitch Gardens", loc="Denver, Colorado", state="CO", country="US", official="https://elitchgardens.com/", group="Elitch Gardens"),
+]
+DISPLAY_INTL.update({("legoland-florida", "Dragon"): "The Dragon", ("legoland-california", "Dragon"): "The Dragon", ("legoland-new-york", "Dragon"): "The Dragon",
+ ("legoland-florida", "Great Lego Race"): "The Great LEGO Race", ("legoland-california", "Technic Coaster"): "LEGO Technic Coaster", ("great-escape", "Bobcat"): "The Bobcat"})

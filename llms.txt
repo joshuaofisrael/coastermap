@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 488 coasters at 62 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 527 coasters at 69 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -562,3 +562,49 @@ Not affiliated with any park. Ride rules change; confirm with the park.
 - [Disney Adventure World](https://coastermap.com/parks/disney-adventure-world/): 2 coasters
   - [RC Racer](https://coastermap.com/parks/disney-adventure-world/rc-racer/): min height 120 cm
   - [Avengers Assemble: Flight Force](https://coastermap.com/parks/disney-adventure-world/avengers-assemble-flight-force/): min height 120 cm
+- [Lagoon](https://coastermap.com/parks/lagoon/): 10 coasters
+  - [Spider](https://coastermap.com/parks/lagoon/spider/): min height 50 in
+  - [Cannibal](https://coastermap.com/parks/lagoon/cannibal/): min height 48 in
+  - [Primordial](https://coastermap.com/parks/lagoon/primordial/): min height 48 in
+  - [Roller Coaster](https://coastermap.com/parks/lagoon/roller-coaster/): min height 50 in
+  - [Colossus the Fire Dragon](https://coastermap.com/parks/lagoon/colossus-the-fire-dragon/): min height 50 in
+  - [Puff the Little Fire Dragon](https://coastermap.com/parks/lagoon/puff-the-little-fire-dragon/)
+  - [Wild Mouse](https://coastermap.com/parks/lagoon/wild-mouse/): min height 50 in
+  - [The Bat](https://coastermap.com/parks/lagoon/the-bat/): min height 42 in
+  - [Wicked](https://coastermap.com/parks/lagoon/wicked/): min height 50 in
+  - [Bombora](https://coastermap.com/parks/lagoon/bombora/): min height 48 in
+- [Silverwood Theme Park](https://coastermap.com/parks/silverwood/): 7 coasters
+  - [Tiny Toot](https://coastermap.com/parks/silverwood/tiny-toot/)
+  - [Tremors](https://coastermap.com/parks/silverwood/tremors/): min height 48 in
+  - [Aftershock](https://coastermap.com/parks/silverwood/aftershock/): min height 54 in
+  - [Krazy Koaster](https://coastermap.com/parks/silverwood/krazy-koaster/): min height 48 in
+  - [Stunt Pilot](https://coastermap.com/parks/silverwood/stunt-pilot/): min height 48 in
+  - [Timber Terror](https://coastermap.com/parks/silverwood/timber-terror/): min height 48 in
+  - [Corkscrew](https://coastermap.com/parks/silverwood/corkscrew/): min height 48 in
+- [Legoland Florida](https://coastermap.com/parks/legoland-florida/): 4 coasters
+  - [The Dragon](https://coastermap.com/parks/legoland-florida/the-dragon/): min height 48 in
+  - [Coastersaurus](https://coastermap.com/parks/legoland-florida/coastersaurus/): min height 42 in
+  - [The Great LEGO Race](https://coastermap.com/parks/legoland-florida/the-great-lego-race/): min height 48 in
+  - [Galacticoaster](https://coastermap.com/parks/legoland-florida/galacticoaster/): min height 48 in
+- [Legoland California](https://coastermap.com/parks/legoland-california/): 4 coasters
+  - [The Dragon](https://coastermap.com/parks/legoland-california/the-dragon/): min height 48 in
+  - [LEGO Technic Coaster](https://coastermap.com/parks/legoland-california/lego-technic-coaster/): min height 48 in
+  - [Coastersaurus](https://coastermap.com/parks/legoland-california/coastersaurus/): min height 48 in
+  - [Galacticoaster](https://coastermap.com/parks/legoland-california/galacticoaster/): min height 48 in
+- [Legoland New York](https://coastermap.com/parks/legoland-new-york/): 2 coasters
+  - [The Dragon](https://coastermap.com/parks/legoland-new-york/the-dragon/): min height 48 in
+  - [Dragon's Apprentice](https://coastermap.com/parks/legoland-new-york/dragons-apprentice/): min height 42 in
+- [Great Escape](https://coastermap.com/parks/great-escape/): 6 coasters
+  - [Comet](https://coastermap.com/parks/great-escape/comet/): min height 48 in
+  - [Steamin' Demon](https://coastermap.com/parks/great-escape/steamin-demon/): min height 48 in
+  - [Flashback](https://coastermap.com/parks/great-escape/flashback/): min height 48 in
+  - [Canyon Blaster](https://coastermap.com/parks/great-escape/canyon-blaster/): min height 48 in
+  - [Frankie's Mine Train](https://coastermap.com/parks/great-escape/frankies-mine-train/): min height 42 in
+  - [The Bobcat](https://coastermap.com/parks/great-escape/the-bobcat/): min height 48 in
+- [Elitch Gardens](https://coastermap.com/parks/elitch-gardens/): 6 coasters
+  - [Sidewinder](https://coastermap.com/parks/elitch-gardens/sidewinder/): min height 48 in
+  - [Twister III: Storm Chaser](https://coastermap.com/parks/elitch-gardens/twister-iii-storm-chaser/): min height 48 in
+  - [Mind Eraser](https://coastermap.com/parks/elitch-gardens/mind-eraser/): min height 52 in
+  - [Boomerang](https://coastermap.com/parks/elitch-gardens/boomerang/): min height 48 in
+  - [Half Pipe](https://coastermap.com/parks/elitch-gardens/half-pipe/)
+  - [Blazin' Buckaroo](https://coastermap.com/parks/elitch-gardens/blazin-buckaroo/): min height 42 in
