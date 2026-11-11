@@ -110,3 +110,54 @@ DISPLAY_INTL = {
  ("fuji-q-highland", "Gaspard et Lisa - Voyage Dans Le Ciel"): "Gaspard et Lisa: Voyage Dans Le Ciel",
  ("shanghai-disneyland", "Rex's Racer"): "Rex's RC Racer",
 }
+
+# ---- Batch 6 (10 Nov 2026): rendered with a headless browser where the official pages need JavaScript ----
+def USJ(slug): return ("Universal Studios Japan, official attraction page", f"https://www.usj.co.jp/web/en/us/attractions/{slug}")
+def HK(slug): return ("Hong Kong Disneyland, official attraction page", f"https://www.hongkongdisneyland.com/attractions/{slug}/")
+DLPA = ("Disneyland Paris, official attractions page (height filter)", "https://www.disneylandparis.com/en-gb/attractions/")
+LR = ("La Ronde, official All Rides page", "https://laronde.com/en/attraction/")
+def KN(slug): return ("Knoebels, official ride page", f"https://knoebels.com/ride/{slug}/")
+CS = "Universal Studios Japan lists this ride on its Child Switch (rider swap) page."
+JH = "Supervising companions must be of junior high school age or older."
+HP_B6 = {
+ ("universal-studios-japan", "Flying Dinosaur"): M(min=132, max=198, note=CS, src=USJ("the-flying-dinosaur")),
+ ("universal-studios-japan", "Hollywood Dream: The Ride"): M(min=132, note="The Backdrop version, which runs backwards, has the same height rule. " + CS, src=USJ("hollywood-dream-the-ride")),
+ ("universal-studios-japan", "Flight of the Hippogriff"): M(min=122, acc_min=92, acc_max=122, max=195, note=JH + " " + CS, src=USJ("flight-of-the-hippogriff")),
+ ("universal-studios-japan", "Mine Cart Madness"): M(min=122, acc_min=107, acc_max=122, note=JH + " " + CS, src=USJ("donkey-kong-country-ride")),
+ ("universal-studios-japan", "Snoopy's Flying Ace Adventure"): M(min=122, acc_min=92, acc_max=122, note=JH + " " + CS, src=USJ("snoopys-flying-ace-adventure")),
+ ("hong-kong-disneyland", "Hyperspace Mountain"): M(min=102, src=HK("hyperspace-mountain")),
+ ("hong-kong-disneyland", "Big Grizzly Mountain Runaway Mine Cars"): M(min=112, src=HK("big-grizzly-mountain-runaway-mine-cars")),
+ ("hong-kong-disneyland", "RC Racer"): M(min=120, src=HK("rc-racer")),
+ ("hong-kong-disneyland", "Wandering Oaken’s Sliding Sleighs"): M(min=95, src=HK("wandering-oakens-sliding-sleighs")),
+ ("disneyland-paris", "Big Thunder Mountain"): M(min=102, src=DLPA),
+ ("disneyland-paris", "Indiana Jones et le Temple du Péril"): M(min=140, src=DLPA),
+ ("disneyland-paris", "Star Wars Hyperspace Mountain: Rebel Mission"): M(min=120, src=DLPA),
+ ("disney-adventure-world", "RC Racer"): M(min=120, src=DLPA),
+ ("disney-adventure-world", "Avengers Assemble: Flight Force"): M(min=120, src=DLPA),
+ ("la-ronde", "Monstre"): dict(min=54, thrill=5, src=LR),
+ ("la-ronde", "Boomerang"): dict(min=48, thrill=5, src=LR),
+ ("la-ronde", "Dragon"): dict(min=52, acc_min=42, acc_max=52, thrill=3, src=LR),
+ ("la-ronde", "Marche du Mille-pattes"): dict(min=42, acc_min=36, acc_max=42, thrill=2, src=LR),
+ ("la-ronde", "Vampire"): dict(min=54, thrill=5, src=LR),
+ ("la-ronde", "Toboggan Nordique"): dict(min=48, acc_min=42, acc_max=48, thrill=4, src=LR),
+ ("la-ronde", "Goliath"): dict(min=54, thrill=5, src=LR),
+ ("la-ronde", "Ednör - L'Attaque"): dict(min=52, thrill=5, src=LR),
+ ("knoebels", "Phoenix"): dict(min=48, acc_min=42, acc_max=48, src=KN("phoenix")),
+ ("knoebels", "Twister"): dict(min=42, src=KN("twister")),
+ ("knoebels", "Impulse"): dict(min=52, acc_min=48, acc_max=52, src=KN("impulse")),
+ ("knoebels", "Black Diamond"): dict(min=42, src=KN("black-diamond")),
+ ("knoebels", "Flying Turns"): dict(min=48, acc_min=42, acc_max=48, src=KN("flying-turns")),
+ ("knoebels", "Kozmo's Kurves"): dict(min=36, src=KN("kozmos-kurves")),
+}
+HP_INTL.update(HP_B6)
+INTL_PARKS += [
+ dict(slug="knoebels", name="Knoebels Amusement Resort", short="Knoebels", loc="Elysburg, Pennsylvania", state="PA", country="US", official="https://knoebels.com/", group="Knoebels"),
+ dict(slug="la-ronde", name="La Ronde", short="La Ronde", loc="Montréal, Canada", state="Quebec", country="CA", official="https://laronde.com/en/", group="Enchanted Parks"),
+ dict(slug="universal-studios-japan", name="Universal Studios Japan", short="Universal Studios Japan", loc="Osaka, Japan", state="Osaka", country="JP", official="https://www.usj.co.jp/web/en/us", group="Universal Studios Japan"),
+ dict(slug="hong-kong-disneyland", name="Hong Kong Disneyland", short="Hong Kong Disneyland", loc="Lantau Island, Hong Kong", state="Hong Kong", country="HK", official="https://www.hongkongdisneyland.com/", group="Hong Kong Disneyland Resort"),
+ dict(slug="disneyland-paris", name="Disneyland Park (Paris)", short="Disneyland Paris", loc="Marne-la-Vallée, France", state="Île-de-France", country="FR", official="https://www.disneylandparis.com/en-gb/", group="Disneyland Paris"),
+ dict(slug="disney-adventure-world", name="Disney Adventure World", short="Disney Adventure World", loc="Marne-la-Vallée, France", state="Île-de-France", country="FR", official="https://www.disneylandparis.com/en-gb/", group="Disneyland Paris", former="Walt Disney Studios Park", former_note="RCDB lists the park's former name as Walt Disney Studios Park, and Disneyland Paris's official attractions page lists it as Disney Adventure World"),
+]
+DISPLAY_INTL.update({("la-ronde", "Monstre"): "Le Monstre", ("la-ronde", "Marche du Mille-pattes"): "La Marche du Mille-pattes", ("la-ronde", "Ednör - L'Attaque"): "Ednör",
+ ("universal-studios-japan", "Flying Dinosaur"): "The Flying Dinosaur", ("disneyland-paris", "Indiana Jones et le Temple du Péril"): "Indiana Jones and the Temple of Peril",
+ ("disneyland-paris", "Casey Jr., Le Petit Train du Cirque"): "Casey Jr., le Petit Train du Cirque"})

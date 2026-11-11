@@ -1,7 +1,7 @@
 # Evergreen guide pages built only from verified site data. Exec'd inside build.py's namespace.
 GUIDES = []  # (path, title, blurb, group)
 REGION_PARKS = {}
-REGION = {"US": "North America", "CA": "North America", "DE": "Europe", "GB": "Europe", "ES": "Europe", "NL": "Europe", "SE": "Europe", "JP": "Asia", "CN": "Asia"}
+REGION = {"US": "North America", "CA": "North America", "DE": "Europe", "GB": "Europe", "ES": "Europe", "NL": "Europe", "SE": "Europe", "JP": "Asia", "CN": "Asia", "HK": "Asia", "FR": "Europe"}
 def pk(c): return park_of(c)
 def mtr(v): return f"{round(v * 0.3048):,} m"
 def kmh(v): return f"{round(v * 1.609)} km/h"
@@ -135,7 +135,7 @@ def first_timer_guide():
 
 # ---------- regions ----------
 STATES = {"FL": "Florida", "CA": "California", "PA": "Pennsylvania", "TX": "Texas", "MO": "Missouri", "OH": "Ohio", "VA": "Virginia"}
-COUNTRIES = {"GB": "the United Kingdom", "DE": "Germany", "ES": "Spain", "JP": "Japan"}
+COUNTRIES = {"GB": "the United Kingdom", "DE": "Germany", "ES": "Spain", "JP": "Japan", "FR": "France", "CA": "Canada"}
 def region_guides():
     groups = [(f"roller-coasters-in-{n.lower()}", n, [p for p in PARKS if p["country"] == "US" and p["state"] == s]) for s, n in STATES.items()]
     groups += [(f"roller-coasters-in-{n.replace('the ', '').lower().replace(' ', '-')}", n, [p for p in PARKS if p["country"] == k]) for k, n in COUNTRIES.items()]
