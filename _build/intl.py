@@ -1474,3 +1474,19 @@ HP_INTL.update(HP_B14c)
 INTL_PARKS += [
  dict(slug="kentucky-kingdom", name="Kentucky Kingdom", short="Kentucky Kingdom", loc="Louisville, Kentucky", state="KY", country="US", official="https://www.kentuckykingdom.com/", group="Kentucky Kingdom", checked=_C),
 ]
+
+# ---- Batch 14d (11 Nov 2026): Motiongate Dubai (retry; official ride pages read with a page fetcher) ----
+def MGD(s): return ("Motiongate Dubai, official attraction page", f"https://www.dubaiparksandresorts.com/en/motiongatetm-dubai/attraction/{s}")
+HP_B14d = {
+ ("motiongate", "Green Hornet: High Speed Chase"): M(min=130, acc_min=105, acc_max=130, note="Minimum 105 cm; children from 105 to 130 cm must ride with a supervising companion.", src=MGD("green-hornet-high-speed-chase")),
+ ("motiongate", "Capitol Bullet Train"): M(min=130, src=MGD("capitol-bullet-train")),
+ ("motiongate", "Dragon Gliders"): M(min=122, acc_min=100, acc_max=122, note="Minimum 100 cm; children from 100 to 122 cm must ride with a supervising companion.", src=MGD("dragon-gliders")),
+ ("motiongate", "Smurf Village Express"): M(min=122, acc_min=100, acc_max=122, note="Minimum 100 cm; children from 100 to 122 cm must ride with a supervising companion.", src=MGD("smurf-village-express")),
+ ("motiongate", "Madagascar Mad Pursuit"): M(min=125, src=MGD("madagascar-mad-pursuit")),
+ ("motiongate", "John Wick: Open Contract"): M(min=125, note="The park also states that children must be accompanied by an adult.", src=MGD("john-wick-open-contract")),
+ ("motiongate", "Now You See Me: High Roller"): M(min=120, note="The park also states that children must be accompanied by an adult.", src=MGD("now-you-see-me-high-roller")),
+}
+HP_INTL.update(HP_B14d)
+INTL_PARKS += [
+ dict(slug="motiongate", name="Motiongate Dubai", short="Motiongate", loc="Dubai, United Arab Emirates", state="Dubai", country="AE", official="https://www.dubaiparksandresorts.com/en/motiongatetm-dubai", group="Dubai Parks and Resorts", checked=_C),
+]

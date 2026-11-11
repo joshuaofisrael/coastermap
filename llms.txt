@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1328 coasters at 232 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1335 coasters at 233 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1572,3 +1572,11 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Flying Fox](https://coastermap.com/parks/kentucky-kingdom/flying-fox/): min height 48 in
   - [Hollyhock and Roll](https://coastermap.com/parks/kentucky-kingdom/hollyhock-and-roll/): min height 56 in
   - [Woodland Run](https://coastermap.com/parks/kentucky-kingdom/woodland-run/): min height 48 in
+- [Motiongate Dubai](https://coastermap.com/parks/motiongate/): 7 coasters
+  - [Green Hornet: High Speed Chase](https://coastermap.com/parks/motiongate/green-hornet-high-speed-chase/): min height 130 cm
+  - [Capitol Bullet Train](https://coastermap.com/parks/motiongate/capitol-bullet-train/): min height 130 cm
+  - [Dragon Gliders](https://coastermap.com/parks/motiongate/dragon-gliders/): min height 122 cm
+  - [Smurf Village Express](https://coastermap.com/parks/motiongate/smurf-village-express/): min height 122 cm
+  - [Madagascar Mad Pursuit](https://coastermap.com/parks/motiongate/madagascar-mad-pursuit/): min height 125 cm
+  - [John Wick: Open Contract](https://coastermap.com/parks/motiongate/john-wick-open-contract/): min height 125 cm
+  - [Now You See Me: High Roller](https://coastermap.com/parks/motiongate/now-you-see-me-high-roller/): min height 120 cm
