@@ -374,3 +374,25 @@ INTL_PARKS += [
  dict(slug="six-flags-mexico", name="Six Flags Mexico", short="Six Flags Mexico", loc="Mexico City, Mexico", state="Mexico City", country="MX", official="https://www.sixflags.com/mexico", group="Six Flags"),
 ]
 DISPLAY_INTL.update({("six-flags-mexico", "Joker"): "The Joker", ("six-flags-mexico", "Dark Knight"): "Dark Knight Coaster", ("six-flags-mexico", "Wonder Woman"): "Wonder Woman Coaster"})
+CB = ("Canobie Lake Park, official attraction page", "https://www.canobie.com/park-attractions/{}/")
+def CBs(s): return (CB[0], CB[1].format(s))
+FSO = ("Fun Spot America Orlando, official roller coasters page", "https://fun-spot.com/orlando/roller-coasters/")
+FSK = ("Fun Spot America Kissimmee, official roller coasters page", "https://fun-spot.com/kissimmee/kissimmee-roller-coasters/")
+HP_B10b = {
+ ("canobie-lake-park", "Untamed"): dict(min=48, src=CBs("untamed")),
+ ("canobie-lake-park", "Yankee Cannonball"): dict(min=48, src=CBs("yankee-cannonball")),
+ ("canobie-lake-park", "Dragon"): dict(min=42, note="The park says riders under 42 in may ride with a supervising companion.", src=CBs("dragon-coaster")),
+ ("fun-spot-orlando", "White Lightning"): dict(min=46, src=FSO),
+ ("fun-spot-orlando", "Freedom Flyer"): dict(min=52, acc_min=38, acc_max=52, note="Riders 38 to 52 in must ride with an adult.", src=FSO),
+ ("fun-spot-orlando", "Sea Serpent"): dict(min=36, src=FSO),
+ ("fun-spot-kissimmee", "Mine Blower"): dict(min=48, src=FSK),
+ ("fun-spot-kissimmee", "Galaxy Spin"): dict(min=48, acc_min=42, acc_max=48, note="Riders 42 to 48 in must ride with an adult.", src=FSK),
+ ("fun-spot-kissimmee", "Sea Serpent"): dict(min=36, src=FSK),
+ ("fun-spot-kissimmee", "Hurricane"): dict(min=42, src=FSK),
+}
+HP_INTL.update(HP_B10b)
+INTL_PARKS += [
+ dict(slug="canobie-lake-park", name="Canobie Lake Park", short="Canobie Lake", loc="Salem, New Hampshire", state="NH", country="US", official="https://www.canobie.com/", group="Canobie Lake Park"),
+ dict(slug="fun-spot-orlando", name="Fun Spot America Orlando", short="Fun Spot Orlando", loc="Orlando, Florida", state="FL", country="US", official="https://fun-spot.com/orlando/", group="Fun Spot America Theme Parks"),
+ dict(slug="fun-spot-kissimmee", name="Fun Spot America Kissimmee", short="Fun Spot Kissimmee", loc="Kissimmee, Florida", state="FL", country="US", official="https://fun-spot.com/kissimmee/", group="Fun Spot America Theme Parks"),
+]

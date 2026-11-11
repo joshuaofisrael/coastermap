@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 656 coasters at 85 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 666 coasters at 88 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -753,3 +753,16 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Medusa Steel Coaster](https://coastermap.com/parks/six-flags-mexico/medusa-steel-coaster/): min height 130 cm
   - [Wonder Woman Coaster](https://coastermap.com/parks/six-flags-mexico/wonder-woman-coaster/): min height 122 cm
   - [Speedway Stunt Coaster](https://coastermap.com/parks/six-flags-mexico/speedway-stunt-coaster/): min height 120 cm
+- [Canobie Lake Park](https://coastermap.com/parks/canobie-lake-park/): 3 coasters
+  - [Untamed](https://coastermap.com/parks/canobie-lake-park/untamed/): min height 48 in
+  - [Yankee Cannonball](https://coastermap.com/parks/canobie-lake-park/yankee-cannonball/): min height 48 in
+  - [Dragon](https://coastermap.com/parks/canobie-lake-park/dragon/): min height 42 in
+- [Fun Spot America Orlando](https://coastermap.com/parks/fun-spot-orlando/): 3 coasters
+  - [Freedom Flyer](https://coastermap.com/parks/fun-spot-orlando/freedom-flyer/): min height 52 in
+  - [White Lightning](https://coastermap.com/parks/fun-spot-orlando/white-lightning/): min height 46 in
+  - [Sea Serpent](https://coastermap.com/parks/fun-spot-orlando/sea-serpent/): min height 36 in
+- [Fun Spot America Kissimmee](https://coastermap.com/parks/fun-spot-kissimmee/): 4 coasters
+  - [Galaxy Spin](https://coastermap.com/parks/fun-spot-kissimmee/galaxy-spin/): min height 48 in
+  - [Sea Serpent](https://coastermap.com/parks/fun-spot-kissimmee/sea-serpent/): min height 36 in
+  - [Mine Blower](https://coastermap.com/parks/fun-spot-kissimmee/mine-blower/): min height 48 in
+  - [Hurricane](https://coastermap.com/parks/fun-spot-kissimmee/hurricane/): min height 42 in
