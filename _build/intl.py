@@ -461,3 +461,37 @@ INTL_PARKS += [
  dict(slug="parque-warner-madrid", name="Parque Warner Madrid", short="Parque Warner", loc="San Martín de la Vega, Spain", state="Madrid", country="ES", official="https://www.parquewarner.com/en", group="Parques Reunidos"),
 ]
 DISPLAY_INTL.update({("moreys-piers", "Great Nor'Easter"): "The Great Nor'Easter", ("moreys-piers", "Rollies Coaster"): "Rollie's Coaster", ("parque-warner-madrid", "Superman / la Atracción de Acero"): "Superman: La Atracción de Acero"})
+
+# ---- Batch 10e: Särkänniemi, Seabreeze, Santa Cruz Beach Boardwalk, Luna Park (Coney Island) ----
+def SK(s): return ("Särkänniemi, official ride page", f"https://sarkanniemi.fi/en/rides/{s}")
+SB = ("Seabreeze, official ride requirements page", "https://seabreeze.com/plan-your-visit/ride-requirements/")
+SC = ("Santa Cruz Beach Boardwalk, official height requirements page", "https://beachboardwalk.com/rides/height-requirements/")
+def LP(s): return ("Luna Park in Coney Island, official ride page", f"https://lunaparknyc.com/rides/{s}/")
+HP_B10e = {
+ ("sarkanniemi", "MotoGee"): M(min=120, src=SK("Motogee")),
+ ("sarkanniemi", "Hype"): M(min=140, src=SK("hype")),
+ ("sarkanniemi", "Konect"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm must ride with an adult; riding without an adult also requires being at least 6.", src=SK("konect")),
+ ("sarkanniemi", "Tornado"): M(min=140, src=SK("tornado")),
+ ("seabreeze", "Jack Rabbit"): dict(min=48, src=SB),
+ ("seabreeze", "Bobsleds"): dict(min=48, acc_min=38, acc_max=48, note="Riders 38 to 48 in must ride with a responsible person who meets the ride criteria.", src=SB),
+ ("seabreeze", "Bear Trax"): dict(min=36, note="Guests over 58 in must ride with a child in their party.", src=SB),
+ ("seabreeze", "Whirlwind"): dict(min=48, src=SB),
+ ("santa-cruz-beach-boardwalk", "Giant Dipper"): dict(min=50, src=SC),
+ ("santa-cruz-beach-boardwalk", "Undertow"): dict(min=48, max=77, src=SC),
+ ("santa-cruz-beach-boardwalk", "Sea Serpent"): dict(min=48, acc_min=34, acc_max=48, note="Riders 34 to 48 in may ride with a chaperone.", src=SC),
+ ("luna-park-coney-island", "Cyclone"): dict(min=54, src=LP("coney-island-cyclone")),
+ ("luna-park-coney-island", "Thunderbolt"): dict(min=50, src=LP("thunderbolt")),
+ ("luna-park-coney-island", "Tickler"): dict(min=48, acc_min=42, acc_max=48, src=LP("the-tickler")),
+ ("luna-park-coney-island", "Circus Coaster"): dict(min=48, acc_min=36, acc_max=48, src=LP("circus-coaster")),
+ ("luna-park-coney-island", "Soarin' Eagle"): dict(min=52, src=LP("soarin-eagle")),
+ ("luna-park-coney-island", "Steeplechase"): dict(min=48, src=LP("steeplechase")),
+ ("luna-park-coney-island", "Mini Mouse"): dict(min=48, src=LP("mini-mouse")),
+}
+HP_INTL.update(HP_B10e)
+INTL_PARKS += [
+ dict(slug="sarkanniemi", name="Särkänniemi", short="Särkänniemi", loc="Tampere, Finland", state="Pirkanmaa", country="FI", official="https://sarkanniemi.fi/en/", group="Särkänniemi"),
+ dict(slug="seabreeze", name="Seabreeze Amusement Park", short="Seabreeze", loc="Rochester, New York", state="NY", country="US", official="https://seabreeze.com/", group="Seabreeze"),
+ dict(slug="santa-cruz-beach-boardwalk", name="Santa Cruz Beach Boardwalk", short="Santa Cruz Beach Boardwalk", loc="Santa Cruz, California", state="CA", country="US", official="https://beachboardwalk.com/", group="Santa Cruz Seaside Company"),
+ dict(slug="luna-park-coney-island", name="Luna Park in Coney Island", short="Luna Park", loc="Brooklyn, New York", state="NY", country="US", official="https://lunaparknyc.com/", group="Central Amusement International"),
+]
+DISPLAY_INTL.update({("luna-park-coney-island", "Cyclone"): "Coney Island Cyclone", ("luna-park-coney-island", "Tickler"): "The Tickler"})

@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 716 coasters at 96 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 736 coasters at 100 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -824,3 +824,27 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Stunt Fall](https://coastermap.com/parks/parque-warner-madrid/stunt-fall/): min height 137 cm
   - [Correcaminos Bip, Bip](https://coastermap.com/parks/parque-warner-madrid/correcaminos-bip-bip/)
   - [Batman Gotham City Escape](https://coastermap.com/parks/parque-warner-madrid/batman-gotham-city-escape/): min height 140 cm
+- [Särkänniemi](https://coastermap.com/parks/sarkanniemi/): 5 coasters
+  - [Vauhtimato](https://coastermap.com/parks/sarkanniemi/vauhtimato/)
+  - [MotoGee](https://coastermap.com/parks/sarkanniemi/motogee/): min height 120 cm
+  - [Hype](https://coastermap.com/parks/sarkanniemi/hype/): min height 140 cm
+  - [Konect](https://coastermap.com/parks/sarkanniemi/konect/): min height 120 cm
+  - [Tornado](https://coastermap.com/parks/sarkanniemi/tornado/): min height 140 cm
+- [Seabreeze Amusement Park](https://coastermap.com/parks/seabreeze/): 4 coasters
+  - [Jack Rabbit](https://coastermap.com/parks/seabreeze/jack-rabbit/): min height 48 in
+  - [Bobsleds](https://coastermap.com/parks/seabreeze/bobsleds/): min height 48 in
+  - [Bear Trax](https://coastermap.com/parks/seabreeze/bear-trax/): min height 36 in
+  - [Whirlwind](https://coastermap.com/parks/seabreeze/whirlwind/): min height 48 in
+- [Santa Cruz Beach Boardwalk](https://coastermap.com/parks/santa-cruz-beach-boardwalk/): 3 coasters
+  - [Giant Dipper](https://coastermap.com/parks/santa-cruz-beach-boardwalk/giant-dipper/): min height 50 in
+  - [Sea Serpent](https://coastermap.com/parks/santa-cruz-beach-boardwalk/sea-serpent/): min height 48 in
+  - [Undertow](https://coastermap.com/parks/santa-cruz-beach-boardwalk/undertow/): min height 48 in
+- [Luna Park in Coney Island](https://coastermap.com/parks/luna-park-coney-island/): 8 coasters
+  - [Coney Island Cyclone](https://coastermap.com/parks/luna-park-coney-island/coney-island-cyclone/): min height 54 in
+  - [Thunderbolt](https://coastermap.com/parks/luna-park-coney-island/thunderbolt/): min height 50 in
+  - [The Tickler](https://coastermap.com/parks/luna-park-coney-island/the-tickler/): min height 48 in
+  - [Circus Coaster](https://coastermap.com/parks/luna-park-coney-island/circus-coaster/): min height 48 in
+  - [Soarin' Eagle](https://coastermap.com/parks/luna-park-coney-island/soarin-eagle/): min height 52 in
+  - [Steeplechase](https://coastermap.com/parks/luna-park-coney-island/steeplechase/): min height 48 in
+  - [Tony's Express](https://coastermap.com/parks/luna-park-coney-island/tonys-express/)
+  - [Mini Mouse](https://coastermap.com/parks/luna-park-coney-island/mini-mouse/): min height 48 in

@@ -31824,5 +31824,793 @@
     }
    }
   ]
+ },
+ "sarkanniemi": {
+  "rcdb_id": 4919,
+  "name": "Särkänniemi Amusement Park",
+  "rcdb_url": "https://rcdb.com/4919.htm",
+  "coasters": [
+   {
+    "rcdb_id": 1079,
+    "name": "Vauhtimato",
+    "rcdb_url": "https://rcdb.com/1079.htm",
+    "opened": "1984",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Family",
+     "Oval"
+    ],
+    "make": "Zierer",
+    "model": "Tivoli / Custom",
+    "stats": {
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "Single train with 5 cars. Riders are arranged 2 across in a single row for a total of 10 riders.",
+    "lat": 61.506402,
+    "lon": 23.746243,
+    "former": null,
+    "st": {
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 8832,
+    "name": "MotoGee",
+    "rcdb_url": "https://rcdb.com/8832.htm",
+    "opened": "2010-04-30",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Thrill",
+     "Straddled Seating"
+    ],
+    "make": "Zamperla",
+    "model": "Moto Coaster / 364m",
+    "stats": {
+     "Length": [
+      "1194.2 ft"
+     ],
+     "Height": [
+      "42.7 ft"
+     ],
+     "Speed": [
+      "37.3 mph"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "2 trains with 6 cars per train. Riders are arranged 2 across in a single row for a total of 12 riders per train.",
+    "lat": 61.505793,
+    "lon": 23.74248,
+    "former": null,
+    "st": {
+     "Length": "1194.2 ft",
+     "Height": "42.7 ft",
+     "Speed": "37.3 mph",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 14759,
+    "name": "Hype",
+    "rcdb_url": "https://rcdb.com/14759.htm",
+    "opened": "2017-06-18",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Extreme"
+    ],
+    "make": "Premier Rides",
+    "model": "Sky Rocket / II",
+    "stats": {
+     "Length": [
+      "863 ft"
+     ],
+     "Height": [
+      "150 ft"
+     ],
+     "Speed": [
+      "62 mph"
+     ],
+     "Inversions": [
+      "1"
+     ],
+     "Duration": [
+      "0:55"
+     ]
+    },
+    "trains": "Single train with 2 cars. Riders are arranged 2 across in 3 rows for a total of 12 riders.",
+    "lat": 61.506478,
+    "lon": 23.747064,
+    "former": null,
+    "st": {
+     "Length": "863 ft",
+     "Height": "150 ft",
+     "Speed": "62 mph",
+     "Inversions": "1",
+     "Duration": "0"
+    }
+   },
+   {
+    "rcdb_id": 22928,
+    "name": "Konect",
+    "rcdb_url": "https://rcdb.com/22928.htm",
+    "opened": "2026-05-01",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Thrill",
+     "Onboard Sound"
+    ],
+    "make": "Vekoma",
+    "model": "Junior Coaster / Custom",
+    "stats": {
+     "Length": [
+      "1722.4 ft"
+     ],
+     "Height": [
+      "88.6 ft"
+     ],
+     "Speed": [
+      "42.3 mph"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+    "lat": 61.506153,
+    "lon": 23.748551,
+    "former": null,
+    "st": {
+     "Length": "1722.4 ft",
+     "Height": "88.6 ft",
+     "Speed": "42.3 mph",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 1076,
+    "name": "Tornado",
+    "rcdb_url": "https://rcdb.com/1076.htm",
+    "opened": "2001-04-30",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Inverted",
+     "Extreme",
+     "Station Fly-Through"
+    ],
+    "make": "Intamin Amusement Rides",
+    "model": "Other / Suspended Looping Coaster",
+    "stats": {
+     "Length": [
+      "2296.6 ft"
+     ],
+     "Height": [
+      "82 ft"
+     ],
+     "Speed": [
+      "46.6 mph"
+     ],
+     "Inversions": [
+      "5"
+     ],
+     "Duration": [
+      "1:34"
+     ]
+    },
+    "trains": "2 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
+    "lat": 61.505082,
+    "lon": 23.744889,
+    "former": null,
+    "st": {
+     "Length": "2296.6 ft",
+     "Height": "82 ft",
+     "Speed": "46.6 mph",
+     "Inversions": "5",
+     "Duration": "1"
+    }
+   }
+  ]
+ },
+ "seabreeze": {
+  "rcdb_id": 4583,
+  "name": "Seabreeze",
+  "rcdb_url": "https://rcdb.com/4583.htm",
+  "coasters": [
+   {
+    "rcdb_id": 227,
+    "name": "Jack Rabbit",
+    "rcdb_url": "https://rcdb.com/227.htm",
+    "opened": "1920-05-31",
+    "tags": [
+     "Roller Coaster",
+     "Wood",
+     "Sit Down",
+     "Terrain"
+    ],
+    "make": null,
+    "model": null,
+    "stats": {
+     "Length": [
+      "2130 ft"
+     ],
+     "Height": [
+      "75 ft"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "Single train with 5 cars. Riders are arranged 2 across in 2 rows for a total of 20 riders.",
+    "lat": 43.230497,
+    "lon": -77.543117,
+    "former": null,
+    "st": {
+     "Length": "2130 ft",
+     "Height": "75 ft",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 228,
+    "name": "Bobsleds",
+    "rcdb_url": "https://rcdb.com/228.htm",
+    "opened": "1954",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Family",
+     "Hybrid"
+    ],
+    "make": null,
+    "model": null,
+    "stats": {
+     "Length": [
+      "1240 ft"
+     ],
+     "Height": [
+      "31 ft"
+     ],
+     "Speed": [
+      "23 mph"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+    "lat": 43.233772,
+    "lon": -77.54261,
+    "former": "Junior Coaster ( to )",
+    "st": {
+     "Length": "1240 ft",
+     "Height": "31 ft",
+     "Speed": "23 mph",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 570,
+    "name": "Bear Trax",
+    "rcdb_url": "https://rcdb.com/570.htm",
+    "opened": "1997",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Family"
+    ],
+    "make": "E&F Miler Industries",
+    "model": "Family Coaster / 16ft Outside Spiral CW",
+    "stats": {
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "Single train with 6 cars. Riders are arranged 2 across in a single row for a total of 12 riders.",
+    "lat": 43.231437,
+    "lon": -77.543509,
+    "former": null,
+    "st": {
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 2315,
+    "name": "Whirlwind",
+    "rcdb_url": "https://rcdb.com/2315.htm",
+    "opened": "2004",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Thrill",
+     "Spinning Cars"
+    ],
+    "make": "Maurer Rides GmbH",
+    "model": "Spinning Coaster / SC 2000",
+    "stats": {
+     "Length": [
+      "1391.1 ft"
+     ],
+     "Height": [
+      "50.8 ft"
+     ],
+     "Speed": [
+      "37.3 mph"
+     ],
+     "Inversions": [
+      "0"
+     ],
+     "Vertical Angle": [
+      "50°"
+     ],
+     "Duration": [
+      "1:10"
+     ]
+    },
+    "trains": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+    "lat": 43.234027,
+    "lon": -77.542908,
+    "former": null,
+    "st": {
+     "Length": "1391.1 ft",
+     "Height": "50.8 ft",
+     "Speed": "37.3 mph",
+     "Inversions": "0",
+     "Vertical Angle": "50 °",
+     "Duration": "1"
+    }
+   }
+  ]
+ },
+ "santa-cruz-beach-boardwalk": {
+  "rcdb_id": 4573,
+  "name": "Santa Cruz Beach Boardwalk",
+  "rcdb_url": "https://rcdb.com/4573.htm",
+  "coasters": [
+   {
+    "rcdb_id": 204,
+    "name": "Giant Dipper",
+    "rcdb_url": "https://rcdb.com/204.htm",
+    "opened": "1924-05-17",
+    "tags": [
+     "Roller Coaster",
+     "Wood",
+     "Sit Down"
+    ],
+    "make": null,
+    "model": null,
+    "stats": {
+     "Length": [
+      "2640 ft"
+     ],
+     "Height": [
+      "70 ft"
+     ],
+     "Drop": [
+      "65 ft"
+     ],
+     "Speed": [
+      "55 mph"
+     ],
+     "Inversions": [
+      "0"
+     ],
+     "Duration": [
+      "1:52"
+     ]
+    },
+    "trains": "2 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
+    "lat": 36.964722,
+    "lon": -122.01528,
+    "former": null,
+    "st": {
+     "Length": "2640 ft",
+     "Height": "70 ft",
+     "Drop": "65 ft",
+     "Speed": "55 mph",
+     "Inversions": "0",
+     "Duration": "1"
+    }
+   },
+   {
+    "rcdb_id": 717,
+    "name": "Sea Serpent",
+    "rcdb_url": "https://rcdb.com/717.htm",
+    "opened": "2000",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Family"
+    ],
+    "make": "E&F Miler Industries",
+    "model": "Family Coaster / Custom",
+    "stats": {
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "Single train with 6 cars. Riders are arranged 2 across in a single row for a total of 12 riders.",
+    "lat": 36.965263,
+    "lon": -122.01381,
+    "former": null,
+    "st": {
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 10930,
+    "name": "Undertow",
+    "rcdb_url": "https://rcdb.com/10930.htm",
+    "opened": "2013-10-19",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Thrill",
+     "Spinning Cars"
+    ],
+    "make": "Maurer Rides GmbH",
+    "model": "Spinning Coaster / SC 2000",
+    "stats": {
+     "Length": [
+      "1410 ft"
+     ],
+     "Height": [
+      "50 ft"
+     ],
+     "Speed": [
+      "40 mph"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "7 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+    "lat": 36.964338,
+    "lon": -122.018049,
+    "former": null,
+    "st": {
+     "Length": "1410 ft",
+     "Height": "50 ft",
+     "Speed": "40 mph",
+     "Inversions": "0"
+    }
+   }
+  ]
+ },
+ "luna-park-coney-island": {
+  "rcdb_id": 9250,
+  "name": "Luna Park",
+  "rcdb_url": "https://rcdb.com/9250.htm",
+  "coasters": [
+   {
+    "rcdb_id": 222,
+    "name": "Cyclone",
+    "rcdb_url": "https://rcdb.com/222.htm",
+    "opened": "1927-06-26",
+    "tags": [
+     "Roller Coaster",
+     "Wood",
+     "Sit Down",
+     "Thrill",
+     "Cyclone",
+     "Hybrid",
+     "Single position lap bar"
+    ],
+    "make": null,
+    "model": null,
+    "stats": {
+     "Length": [
+      "2850.3 ft"
+     ],
+     "Height": [
+      "75 ft"
+     ],
+     "Speed": [
+      "60 mph"
+     ],
+     "Inversions": [
+      "0"
+     ],
+     "Vertical Angle": [
+      "58.6°"
+     ],
+     "Duration": [
+      "1:50"
+     ]
+    },
+    "trains": "3 trains with 3 cars per train. Riders are arranged 2 across in 4 rows for a total of 24 riders per train.",
+    "lat": 40.574563,
+    "lon": -73.977646,
+    "former": null,
+    "st": {
+     "Length": "2850.3 ft",
+     "Height": "75 ft",
+     "Speed": "60 mph",
+     "Inversions": "0",
+     "Vertical Angle": "58.6 °",
+     "Duration": "1"
+    }
+   },
+   {
+    "rcdb_id": 8788,
+    "name": "Thunderbolt",
+    "rcdb_url": "https://rcdb.com/8788.htm",
+    "opened": "2014-06-14",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Extreme"
+    ],
+    "make": "Zamperla",
+    "model": "Thunderbolt / 681m / @zamperla.com",
+    "stats": {
+     "Length": [
+      "2234.3 ft"
+     ],
+     "Height": [
+      "114.8 ft"
+     ],
+     "Speed": [
+      "55.9 mph"
+     ],
+     "Inversions": [
+      "4"
+     ],
+     "Vertical Angle": [
+      "90°"
+     ],
+     "G-Force": [
+      "4.3"
+     ]
+    },
+    "trains": "Single car trains. Riders are arranged 3 across in 3 rows for a total of 9 riders per car.",
+    "lat": 40.573912,
+    "lon": -73.982283,
+    "former": null,
+    "st": {
+     "Length": "2234.3 ft",
+     "Height": "114.8 ft",
+     "Speed": "55.9 mph",
+     "Inversions": "4",
+     "Vertical Angle": "90 °",
+     "G-Force": "4.3"
+    }
+   },
+   {
+    "rcdb_id": 9251,
+    "name": "Tickler",
+    "rcdb_url": "https://rcdb.com/9251.htm",
+    "opened": "2010-05-29",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Thrill",
+     "Wild Mouse",
+     "Spinning Cars"
+    ],
+    "make": "Zamperla",
+    "model": "Twister Coaster / 420m",
+    "stats": {
+     "Length": [
+      "1377.9 ft"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "Single car trains. Riders are arranged 4 across in a single row for a total of 4 riders per car.",
+    "lat": 40.574846,
+    "lon": -73.97859,
+    "former": null,
+    "st": {
+     "Length": "1377.9 ft",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 9254,
+    "name": "Circus Coaster",
+    "rcdb_url": "https://rcdb.com/9254.htm",
+    "opened": "2010-05-29",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Family"
+    ],
+    "make": "Zamperla",
+    "model": "Other / Speedy Coaster",
+    "stats": {
+     "Length": [
+      "574.2 ft"
+     ],
+     "Height": [
+      "29.5 ft"
+     ],
+     "Speed": [
+      "18.6 mph"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
+    "lat": 40.573882,
+    "lon": -73.978755,
+    "former": null,
+    "st": {
+     "Length": "574.2 ft",
+     "Height": "29.5 ft",
+     "Speed": "18.6 mph",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 9515,
+    "name": "Soarin' Eagle",
+    "rcdb_url": "https://rcdb.com/9515.htm",
+    "opened": "2011-04",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Flying",
+     "Extreme"
+    ],
+    "make": "Zamperla",
+    "model": "Volare / 391m",
+    "stats": {
+     "Length": [
+      "1282.8 ft"
+     ],
+     "Height": [
+      "50 ft"
+     ],
+     "Speed": [
+      "25.7 mph"
+     ],
+     "Inversions": [
+      "2"
+     ],
+     "Duration": [
+      "0:48"
+     ],
+     "G-Force": [
+      "3.3"
+     ]
+    },
+    "trains": "7 cars. Riders are arranged 4 across in a single row for a total of 4 riders per car.",
+    "lat": 40.573848,
+    "lon": -73.980459,
+    "former": null,
+    "st": {
+     "Length": "1282.8 ft",
+     "Height": "50 ft",
+     "Speed": "25.7 mph",
+     "Inversions": "2",
+     "Duration": "0",
+     "G-Force": "3.3"
+    }
+   },
+   {
+    "rcdb_id": 9664,
+    "name": "Steeplechase",
+    "rcdb_url": "https://rcdb.com/9664.htm",
+    "opened": "2011-04",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Thrill",
+     "Straddled Seating"
+    ],
+    "make": "Zamperla",
+    "model": "Moto Coaster / 364m",
+    "stats": {
+     "Length": [
+      "1194.2 ft"
+     ],
+     "Height": [
+      "42.7 ft"
+     ],
+     "Speed": [
+      "37.3 mph"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "2 trains with 6 cars per train. Riders are arranged 2 across in a single row for a total of 12 riders per train.",
+    "lat": 40.573854,
+    "lon": -73.979959,
+    "former": null,
+    "st": {
+     "Length": "1194.2 ft",
+     "Height": "42.7 ft",
+     "Speed": "37.3 mph",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 17674,
+    "name": "Tony's Express",
+    "rcdb_url": "https://rcdb.com/17674.htm",
+    "opened": "2022-09",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Family"
+    ],
+    "make": "Zamperla",
+    "model": "Junior Coaster / J2SK 400m Combo",
+    "stats": {
+     "Length": [
+      "1312.3 ft"
+     ],
+     "Height": [
+      "49.9 ft"
+     ],
+     "Speed": [
+      "26.1 mph"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": null,
+    "lat": 40.573341,
+    "lon": -73.982551,
+    "former": null,
+    "st": {
+     "Length": "1312.3 ft",
+     "Height": "49.9 ft",
+     "Speed": "26.1 mph",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 18703,
+    "name": "Mini Mouse",
+    "rcdb_url": "https://rcdb.com/18703.htm",
+    "opened": "2021",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Family"
+    ],
+    "make": "Zamperla",
+    "model": "Other / Mini Mouse",
+    "stats": {
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "Single train with 8 cars. Riders are arranged 2 across in a single row for a total of 16 riders.",
+    "lat": 40.574892,
+    "lon": -73.978166,
+    "former": null,
+    "st": {
+     "Inversions": "0"
+    }
+   }
+  ]
  }
 }

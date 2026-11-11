@@ -690,3 +690,6 @@ Topics were picked from Google autocomplete queries (fear of coasters, stomach d
 - Omitted: Flamingo Land Zooom! (no minimum with an adult) and Runaway Mine Train (not in the table); Morey's Great White (no ride page found); Parque Warner Tom y Jerry and Correcaminos Bip, Bip (the companion height is not stated); Gröna Lund Nyckelpigan and Tuff-Tuff Tåget (no minimum with an adult); Tivoli Rutschebanen (no minimum with a companion) and Mælkevejen (no page found).
 - Not added: Paultons Park (rules are only in marketing text that conflicts with ride type), Plopsaland De Panne and Hansa-Park (heights not shown on the pages that rendered).
 - New region guides: New Jersey and Sweden. Denmark and Finland added to the Europe ranking region.
+
+**Batch 10e (18 official rules):** Särkänniemi 4/5 (Vauhtimato has no ride page), Seabreeze 4/4 (official ride requirements table and its footnotes), Santa Cruz Beach Boardwalk 3/3 (official height requirements table, headed Chrome), Luna Park in Coney Island 7/8 (Coney Island Cyclone 54 in, Thunderbolt 50 in). Omitted Tony's Express: its page text says 42 in alone but the ride info panel says 48 in alone and 36 in accompanied.
+- Slugs now transliterate æ and ø (Tivoli Dæmonen is /parks/tivoli-gardens/daemonen/). Energylandia Formuła keeps its existing slug so the published URL does not change.
