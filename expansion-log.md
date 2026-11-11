@@ -695,3 +695,7 @@ Topics were picked from Google autocomplete queries (fear of coasters, stomach d
 - Slugs now transliterate æ and ø (Tivoli Dæmonen is /parks/tivoli-gardens/daemonen/). Energylandia Formuła keeps its existing slug so the published URL does not change.
 
 **Internal links:** contextual explainer links added to coaster and park pages; the least-linked explainer now has 7 internal links (was 2). Click depth still 2 at most, no orphans.
+
+**Batch 10f (5 official rules):** Dutch Wonderland 3/3 and Idlewild & SoakZone 2/2 (Palace Entertainment pages, headed Chrome). Not added: Lake Winnepesaukah and Kemah Boardwalk (no ride pages found on the official sites).
+
+Totals after batch 10: 102 parks, 741 coasters, 928 pages. Live 200 checks passed for the new park and coaster pages, and IndexNow returned HTTP 200 for the full sitemap after each push.

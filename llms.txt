@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 736 coasters at 100 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 741 coasters at 102 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -848,3 +848,10 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Steeplechase](https://coastermap.com/parks/luna-park-coney-island/steeplechase/): min height 48 in
   - [Tony's Express](https://coastermap.com/parks/luna-park-coney-island/tonys-express/)
   - [Mini Mouse](https://coastermap.com/parks/luna-park-coney-island/mini-mouse/): min height 48 in
+- [Dutch Wonderland](https://coastermap.com/parks/dutch-wonderland/): 3 coasters
+  - [Kingdom Coaster](https://coastermap.com/parks/dutch-wonderland/kingdom-coaster/): min height 46 in
+  - [Joust](https://coastermap.com/parks/dutch-wonderland/joust/): min height 42 in
+  - [Merlin's Mayhem](https://coastermap.com/parks/dutch-wonderland/merlins-mayhem/): min height 39 in
+- [Idlewild & SoakZone](https://coastermap.com/parks/idlewild/): 2 coasters
+  - [Wild Mouse](https://coastermap.com/parks/idlewild/wild-mouse/): min height 48 in
+  - [Rollo Coaster](https://coastermap.com/parks/idlewild/rollo-coaster/): min height 42 in

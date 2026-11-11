@@ -495,3 +495,19 @@ INTL_PARKS += [
  dict(slug="luna-park-coney-island", name="Luna Park in Coney Island", short="Luna Park", loc="Brooklyn, New York", state="NY", country="US", official="https://lunaparknyc.com/", group="Central Amusement International"),
 ]
 DISPLAY_INTL.update({("luna-park-coney-island", "Cyclone"): "Coney Island Cyclone", ("luna-park-coney-island", "Tickler"): "The Tickler"})
+
+# ---- Batch 10f: Dutch Wonderland, Idlewild ----
+def DW(s): return ("Dutch Wonderland, official attraction page", f"https://www.dutchwonderland.com/discover-the-park/attractions/{s}/")
+def IW(s): return ("Idlewild & SoakZone, official attraction page", f"https://www.idlewild.com/discover-the-park/attractions/{s}/")
+HP_B10f = {
+ ("dutch-wonderland", "Kingdom Coaster"): dict(min=46, src=DW("kingdom-coaster")),
+ ("dutch-wonderland", "Joust"): dict(min=42, acc_min=36, acc_max=42, note="Riders under 42 in must ride with a responsible rider at least 18 years old.", src=DW("joust-family-coaster")),
+ ("dutch-wonderland", "Merlin's Mayhem"): dict(min=39, max=78, src=DW("merlins-mayhem")),
+ ("idlewild", "Wild Mouse"): dict(min=48, src=IW("wild-mouse")),
+ ("idlewild", "Rollo Coaster"): dict(min=42, note="The park lists an adult companion as required.", src=IW("rollo-coaster")),
+}
+HP_INTL.update(HP_B10f)
+INTL_PARKS += [
+ dict(slug="dutch-wonderland", name="Dutch Wonderland", short="Dutch Wonderland", loc="Lancaster, Pennsylvania", state="PA", country="US", official="https://www.dutchwonderland.com/", group="Palace Entertainment"),
+ dict(slug="idlewild", name="Idlewild & SoakZone", short="Idlewild", loc="Ligonier, Pennsylvania", state="PA", country="US", official="https://www.idlewild.com/", group="Palace Entertainment"),
+]

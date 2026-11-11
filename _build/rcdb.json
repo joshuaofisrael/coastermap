@@ -32612,5 +32612,195 @@
     }
    }
   ]
+ },
+ "dutch-wonderland": {
+  "rcdb_id": 4591,
+  "name": "Dutch Wonderland",
+  "rcdb_url": "https://rcdb.com/4591.htm",
+  "coasters": [
+   {
+    "rcdb_id": 251,
+    "name": "Kingdom Coaster",
+    "rcdb_url": "https://rcdb.com/251.htm",
+    "opened": "1992",
+    "tags": [
+     "Roller Coaster",
+     "Wood",
+     "Sit Down",
+     "Thrill"
+    ],
+    "make": "Custom Coasters International, Inc.",
+    "model": null,
+    "stats": {
+     "Length": [
+      "2000 ft"
+     ],
+     "Height": [
+      "55 ft"
+     ],
+     "Speed": [
+      "40 mph"
+     ],
+     "Inversions": [
+      "0"
+     ],
+     "Duration": [
+      "1:30"
+     ]
+    },
+    "trains": "Single train with 6 cars. Riders are arranged 2 across in 2 rows for a total of 24 riders.",
+    "lat": 40.029343,
+    "lon": -76.217013,
+    "former": "Sky Princess ( to )",
+    "st": {
+     "Length": "2000 ft",
+     "Height": "55 ft",
+     "Speed": "40 mph",
+     "Inversions": "0",
+     "Duration": "1"
+    }
+   },
+   {
+    "rcdb_id": 509,
+    "name": "Joust",
+    "rcdb_url": "https://rcdb.com/509.htm",
+    "opened": "1998-05-23",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Family"
+    ],
+    "make": "Chance Rides",
+    "model": "Big Dipper / Standard",
+    "stats": {
+     "Height": [
+      "16.1 ft"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "Single train with 4 cars. Riders are arranged 2 across in 2 rows for a total of 16 riders.",
+    "lat": 40.029662,
+    "lon": -76.217563,
+    "former": null,
+    "st": {
+     "Height": "16.1 ft",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 14395,
+    "name": "Merlin's Mayhem",
+    "rcdb_url": "https://rcdb.com/14395.htm",
+    "opened": "2018-04-28",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Inverted",
+     "Family",
+     "Onboard Sound"
+    ],
+    "make": "S&S Worldwide",
+    "model": "All Models / Family Inverted Coaster",
+    "stats": {
+     "Length": [
+      "1300 ft"
+     ],
+     "Height": [
+      "60 ft"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": null,
+    "lat": 40.028504,
+    "lon": -76.218616,
+    "former": null,
+    "st": {
+     "Length": "1300 ft",
+     "Height": "60 ft",
+     "Inversions": "0"
+    }
+   }
+  ]
+ },
+ "idlewild": {
+  "rcdb_id": 4600,
+  "name": "Idlewild & SoakZone",
+  "rcdb_url": "https://rcdb.com/4600.htm",
+  "coasters": [
+   {
+    "rcdb_id": 271,
+    "name": "Wild Mouse",
+    "rcdb_url": "https://rcdb.com/271.htm",
+    "opened": "1993-05-15",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Thrill",
+     "Wild Mouse"
+    ],
+    "make": "Vekoma",
+    "model": "Other / Wild Mouse",
+    "stats": {
+     "Length": [
+      "1640.4 ft"
+     ],
+     "Height": [
+      "56 ft"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "6 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+    "lat": 40.259737,
+    "lon": -79.279949,
+    "former": null,
+    "st": {
+     "Length": "1640.4 ft",
+     "Height": "56 ft",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 272,
+    "name": "Rollo Coaster",
+    "rcdb_url": "https://rcdb.com/272.htm",
+    "opened": "1938",
+    "tags": [
+     "Roller Coaster",
+     "Wood",
+     "Sit Down",
+     "Family"
+    ],
+    "make": "Philadelphia Toboggan Coasters, Inc.",
+    "model": null,
+    "stats": {
+     "Length": [
+      "900 ft"
+     ],
+     "Height": [
+      "27 ft"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "Single train with 4 cars.",
+    "lat": 40.260263,
+    "lon": -79.281565,
+    "former": null,
+    "st": {
+     "Length": "900 ft",
+     "Height": "27 ft",
+     "Inversions": "0"
+    }
+   }
+  ]
  }
 }
