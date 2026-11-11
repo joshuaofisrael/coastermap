@@ -1389,3 +1389,32 @@ INTL_PARKS += [
  dict(slug="parque-de-la-costa", name="Parque de la Costa", short="Parque de la Costa", loc="Tigre, Argentina", state="Buenos Aires", country="AR", official="https://www.parquedelacosta.com.ar/", group="Parque de la Costa", checked=_C),
  dict(slug="star-city", name="Star City", short="Star City", loc="Pasay, Philippines", state="Metro Manila", country="PH", official="https://starcity.com.ph/", group="Star City", checked=_C),
 ]
+
+# ---- Batch 14a (11 Nov 2026): Lotte World Adventure Busan, E-DA, Janfusun, Dream World ----
+LWB = ("Lotte World Adventure Busan, official attractions list", "https://adventurebusan.lotteworld.com/enjoy/attrctn/list")
+def EDA(i): return ("E-DA Theme Park, official facility page", f"https://www.edathemepark.com.tw/Intro/Info/{i}")
+JFS = ("Janfusun Fancyworld, official ride restrictions page", "https://www.janfusun.com.tw/html/place/show.php?cid2=110&pid=425&show=0&unid=2")
+DWT = ("Dream World, official rides page", "https://dreamworld.co.th/Rides")
+HP_B14a = {
+ ("lotte-world-busan", "Giant Digger"): M(min=130, src=LWB),
+ ("lotte-world-busan", "Giant Splash"): M(min=120, src=LWB),
+ ("lotte-world-busan", "Giant Revolution"): M(min=120, src=LWB),
+ ("lotte-world-busan", "Mysterious Cookie Train"): M(min=135, src=LWB),
+ ("e-da", "Big Air"): M(min=140, note="Chinese name 極限挑戰. The park also sets a 90 kg maximum weight.", src=EDA(43)),
+ ("e-da", "Dark Ride"): M(min=120, acc_min=100, acc_max=120, note="The park lists it as 地心歷險, its indoor coaster in the dark; 100 to 120 cm may ride with a parent.", src=EDA(60)),
+ ("e-da", "Roof Junior Coaster"): M(min=130, acc_min=120, acc_max=130, note="The park lists it as 旋轉飛車 (RCDB: 雲霄旋轉飛車); 120 to 130 cm may ride with a parent.", src=EDA(87)),
+ ("e-da", "Flume Ride"): M(min=130, note="The park lists it as 飛越愛情海 and advises wearing a raincoat.", src=EDA(41)),
+ ("janfusun", "Diving Machine G5"): M(min=140, note="Chinese name 飛天潛艇G5. The park's wording: riders 140 cm and under may not ride.", src=JFS),
+ ("janfusun", "Insane Speed"): M(min=140, note="Chinese name 衝瘋飛車. The park's wording: riders 140 cm and under may not ride.", src=JFS),
+ ("janfusun", "KuKu Coaster"): M(min=110, acc_min=80, acc_max=110, note="Chinese name 咕咕飛車. Children 80 to 110 cm must ride with an adult.", src=JFS),
+ ("dream-world-thailand", "Sky Coaster"): M(min=130, note="Thai name สกายโคสเตอร์.", src=DWT),
+ ("dream-world-thailand", "Black Hole Coaster"): M(min=121, note="Thai name แบล็คโฮลโคสเตอร์. The park gives 121 cm, not 120.", src=DWT),
+ ("dream-world-thailand", "Speedy Mouse"): M(min=90, note="Thai name หนูลมกรด.", src=DWT),
+}
+HP_INTL.update(HP_B14a)
+INTL_PARKS += [
+ dict(slug="lotte-world-busan", name="Lotte World Adventure Busan", short="Lotte World Busan", loc="Gijang, Busan, South Korea", state="Busan", country="KR", official="https://adventurebusan.lotteworld.com/", group="Lotte World", checked=_C),
+ dict(slug="e-da", name="E-DA Theme Park", short="E-DA", loc="Dashu, Kaohsiung, Taiwan", state="Kaohsiung", country="TW", official="https://www.edathemepark.com.tw/", group="E-DA", checked=_C),
+ dict(slug="janfusun", name="Janfusun Fancyworld", short="Janfusun", loc="Gukeng, Yunlin County, Taiwan", state="Yunlin County", country="TW", official="https://www.janfusun.com.tw/", group="Janfusun", checked=_C),
+ dict(slug="dream-world-thailand", name="Dream World", short="Dream World", loc="Pathum Thani, Thailand", state="Pathum Thani", country="TH", official="https://dreamworld.co.th/", group="Dream World", checked=_C),
+]

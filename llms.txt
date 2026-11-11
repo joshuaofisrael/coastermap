@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1285 coasters at 221 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1299 coasters at 225 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1518,3 +1518,21 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Star Flyer](https://coastermap.com/parks/star-city/star-flyer/): min height 54 in
   - [Wacky Worm](https://coastermap.com/parks/star-city/wacky-worm/)
   - [Egyptian Spinning Coaster](https://coastermap.com/parks/star-city/egyptian-spinning-coaster/): min height 42 in
+- [Lotte World Adventure Busan](https://coastermap.com/parks/lotte-world-busan/): 4 coasters
+  - [Giant Splash](https://coastermap.com/parks/lotte-world-busan/giant-splash/): min height 120 cm
+  - [Giant Digger](https://coastermap.com/parks/lotte-world-busan/giant-digger/): min height 130 cm
+  - [Mysterious Cookie Train](https://coastermap.com/parks/lotte-world-busan/mysterious-cookie-train/): min height 135 cm
+  - [Giant Revolution](https://coastermap.com/parks/lotte-world-busan/giant-revolution/): min height 120 cm
+- [E-DA Theme Park](https://coastermap.com/parks/e-da/): 4 coasters
+  - [Big Air](https://coastermap.com/parks/e-da/big-air/): min height 140 cm
+  - [Dark Ride](https://coastermap.com/parks/e-da/dark-ride/): min height 120 cm
+  - [Roof Junior Coaster](https://coastermap.com/parks/e-da/roof-junior-coaster/): min height 130 cm
+  - [Flume Ride](https://coastermap.com/parks/e-da/flume-ride/): min height 130 cm
+- [Janfusun Fancyworld](https://coastermap.com/parks/janfusun/): 3 coasters
+  - [Diving Machine G5](https://coastermap.com/parks/janfusun/diving-machine-g5/): min height 140 cm
+  - [Insane Speed](https://coastermap.com/parks/janfusun/insane-speed/): min height 140 cm
+  - [KuKu Coaster](https://coastermap.com/parks/janfusun/kuku-coaster/): min height 110 cm
+- [Dream World](https://coastermap.com/parks/dream-world-thailand/): 3 coasters
+  - [Sky Coaster](https://coastermap.com/parks/dream-world-thailand/sky-coaster/): min height 130 cm
+  - [Black Hole Coaster](https://coastermap.com/parks/dream-world-thailand/black-hole-coaster/): min height 121 cm
+  - [Speedy Mouse](https://coastermap.com/parks/dream-world-thailand/speedy-mouse/): min height 90 cm
