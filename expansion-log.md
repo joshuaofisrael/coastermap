@@ -643,3 +643,16 @@ Site now: 62 parks, 488 coasters, 602 pages.
 
 - Live checks: 45 URLs returned 200 (every new batch 6 URL plus a sample of rebuilt park and coaster pages). IndexNow HTTP 200 for all 602 sitemap URLs.
 - Still not added: Lagoon and Silverwood (not retried this run).
+
+## Batches 7 and 8 (10 Nov 2026): remaining major parks
+Heights come only from official park pages. Pages that need JavaScript were read with headless Chromium, and pages behind Akamai or Cloudflare (Silverwood, Movie World) with headed Chrome. Stats come from RCDB.
+
+**Batch 7, US (32 rules, commit 02a744f):** Lagoon 9/10, Silverwood 6/7, Legoland Florida 4/4, Legoland California 4/4, Legoland New York 2/2, Great Escape 6/6 (Enchanted Parks pages, former name Six Flags Great Escape), Elitch Gardens 5/6. New region guide: New York.
+- Omitted: Lagoon Puff the Little Fire Dragon (any height with a companion); Silverwood Tiny Toot (any height with an adult); Elitch Half Pipe (no official page).
+
+**Batch 8, international (83 rules, commit c078af9):** Energylandia 12/19, Gardaland 7/7, Heide Park 8/9, Movie Park Germany 8/8, Walibi Holland 9/9, Walibi Belgium 10/10, Parc Astérix 6/9, Ferrari World Abu Dhabi 5/5, Warner Bros. Movie World 4/8, Dreamworld 5/5, Universal Studios Singapore 5/5. New region guides: Australia and the Netherlands. Region leader lists now include the Middle East and Oceania.
+- Omitted: Energylandia Frutti Loop, Mars, Circus Coaster, Happy Loops and Draken (rules combine age and guardian, so they are ambiguous), and Choco Chip Creek and Honey Harbour (no page); Heide Park Grottenblitz (no minimum height); Parc Astérix Toutatis (accompanied minimum only), Goudurix and SOS Tournevis (no page); Movie World Scooby-Doo Spooky Coaster, Kansas Twister and Flight of the Wicked Witch (age-conditional rules), and Flash: Speed Force (no page).
+- Movie Park Germany pages list ages without saying what they mean, so they are left out.
+- Skipped parks: Kentucky Kingdom (official site lists three RCDB coasters at Santa's Village, so the data conflicts); Universal Beijing (heights sit behind a modal); Everland and Lotte World (official sites did not render).
+
+Totals: 80 parks, 621 coasters, 756 pages. 45 live URLs returned 200; IndexNow returned HTTP 200 for 756 URLs.
