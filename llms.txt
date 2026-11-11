@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 527 coasters at 69 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 621 coasters at 80 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -608,3 +608,108 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Boomerang](https://coastermap.com/parks/elitch-gardens/boomerang/): min height 48 in
   - [Half Pipe](https://coastermap.com/parks/elitch-gardens/half-pipe/)
   - [Blazin' Buckaroo](https://coastermap.com/parks/elitch-gardens/blazin-buckaroo/): min height 42 in
+- [Energylandia](https://coastermap.com/parks/energylandia/): 19 coasters
+  - [Energuś](https://coastermap.com/parks/energylandia/energus/): min height 120 cm
+  - [Frutti Loop Coaster](https://coastermap.com/parks/energylandia/frutti-loop-coaster/)
+  - [Viking Roller Coaster](https://coastermap.com/parks/energylandia/viking-roller-coaster/): min height 140 cm
+  - [Roller Coaster Mayan](https://coastermap.com/parks/energylandia/roller-coaster-mayan/): min height 140 cm
+  - [Dragon Roller Coaster](https://coastermap.com/parks/energylandia/dragon-roller-coaster/): min height 130 cm
+  - [Formuła](https://coastermap.com/parks/energylandia/formua/): min height 140 cm
+  - [Mars](https://coastermap.com/parks/energylandia/mars/)
+  - [Boomerang](https://coastermap.com/parks/energylandia/boomerang/): min height 120 cm
+  - [Circus Coaster](https://coastermap.com/parks/energylandia/circus-coaster/)
+  - [Speed](https://coastermap.com/parks/energylandia/speed/): min height 140 cm
+  - [Hyperion](https://coastermap.com/parks/energylandia/hyperion/): min height 140 cm
+  - [Happy Loops](https://coastermap.com/parks/energylandia/happy-loops/)
+  - [Zadra](https://coastermap.com/parks/energylandia/zadra/): min height 140 cm
+  - [Draken](https://coastermap.com/parks/energylandia/draken/)
+  - [Frida](https://coastermap.com/parks/energylandia/frida/): min height 120 cm
+  - [Abyssus](https://coastermap.com/parks/energylandia/abyssus/): min height 140 cm
+  - [Choco Chip Creek](https://coastermap.com/parks/energylandia/choco-chip-creek/)
+  - [Light Explorers](https://coastermap.com/parks/energylandia/light-explorers/): min height 120 cm
+  - [Honey Harbour](https://coastermap.com/parks/energylandia/honey-harbour/)
+- [Gardaland](https://coastermap.com/parks/gardaland/): 7 coasters
+  - [Blue Tornado](https://coastermap.com/parks/gardaland/blue-tornado/): min height 140 cm
+  - [Shaman](https://coastermap.com/parks/gardaland/shaman/): min height 120 cm
+  - [Ortobruco Tour](https://coastermap.com/parks/gardaland/ortobruco-tour/): min height 120 cm
+  - [Mammut](https://coastermap.com/parks/gardaland/mammut/): min height 130 cm
+  - [Raptor](https://coastermap.com/parks/gardaland/raptor/): min height 140 cm
+  - [Oblivion: The Black Hole](https://coastermap.com/parks/gardaland/oblivion-the-black-hole/): min height 140 cm
+  - [Dragon Rush](https://coastermap.com/parks/gardaland/dragon-rush/): min height 130 cm
+- [Heide Park Resort](https://coastermap.com/parks/heide-park/): 9 coasters
+  - [Bobbahn](https://coastermap.com/parks/heide-park/bobbahn/): min height 120 cm
+  - [Grottenblitz](https://coastermap.com/parks/heide-park/grottenblitz/)
+  - [Big Loop](https://coastermap.com/parks/heide-park/big-loop/): min height 120 cm
+  - [Toxic Garden](https://coastermap.com/parks/heide-park/toxic-garden/): min height 130 cm
+  - [Colossos: Kampf der Giganten](https://coastermap.com/parks/heide-park/colossos-kampf-der-giganten/): min height 140 cm
+  - [Desert Race](https://coastermap.com/parks/heide-park/desert-race/): min height 140 cm
+  - [Indy-Blitz](https://coastermap.com/parks/heide-park/indy-blitz/): min height 100 cm
+  - [Flug der Dämonen](https://coastermap.com/parks/heide-park/flug-der-damonen/): min height 140 cm
+  - [Krake](https://coastermap.com/parks/heide-park/krake/): min height 140 cm
+- [Movie Park Germany](https://coastermap.com/parks/movie-park-germany/): 8 coasters
+  - [Ghost Chasers](https://coastermap.com/parks/movie-park-germany/ghost-chasers/): min height 120 cm
+  - [Bandit](https://coastermap.com/parks/movie-park-germany/bandit/): min height 120 cm
+  - [Backyardigans: Mission to Mars](https://coastermap.com/parks/movie-park-germany/backyardigans-mission-to-mars/): min height 135 cm
+  - [Iron Claw](https://coastermap.com/parks/movie-park-germany/iron-claw/): min height 130 cm
+  - [Jimmy Neutron's Atomic Flyer](https://coastermap.com/parks/movie-park-germany/jimmy-neutrons-atomic-flyer/): min height 130 cm
+  - [Van Helsing's Factory](https://coastermap.com/parks/movie-park-germany/van-helsings-factory/): min height 120 cm
+  - [Star Trek: Operation Enterprise](https://coastermap.com/parks/movie-park-germany/star-trek-operation-enterprise/): min height 130 cm
+  - [Studio Tour](https://coastermap.com/parks/movie-park-germany/studio-tour/): min height 130 cm
+- [Walibi Holland](https://coastermap.com/parks/walibi-holland/): 9 coasters
+  - [Xpress: Platform 13](https://coastermap.com/parks/walibi-holland/xpress-platform-13/): min height 120 cm
+  - [Condor](https://coastermap.com/parks/walibi-holland/condor/): min height 140 cm
+  - [Speed of Sound](https://coastermap.com/parks/walibi-holland/speed-of-sound/): min height 120 cm
+  - [Drako](https://coastermap.com/parks/walibi-holland/drako/): min height 120 cm
+  - [Goliath](https://coastermap.com/parks/walibi-holland/goliath/): min height 140 cm
+  - [Lost Gravity](https://coastermap.com/parks/walibi-holland/lost-gravity/): min height 140 cm
+  - [Untamed](https://coastermap.com/parks/walibi-holland/untamed/): min height 120 cm
+  - [Eat My Dust](https://coastermap.com/parks/walibi-holland/eat-my-dust/): min height 105 cm
+  - [YoY](https://coastermap.com/parks/walibi-holland/yoy/): min height 120 cm
+- [Walibi Belgium](https://coastermap.com/parks/walibi-belgium/): 10 coasters
+  - [Mecalodon](https://coastermap.com/parks/walibi-belgium/mecalodon/): min height 120 cm
+  - [Pulsar](https://coastermap.com/parks/walibi-belgium/pulsar/): min height 120 cm
+  - [Tiki-Waka](https://coastermap.com/parks/walibi-belgium/tiki-waka/): min height 120 cm
+  - [Fun Pilot](https://coastermap.com/parks/walibi-belgium/fun-pilot/): min height 120 cm
+  - [Kondaa](https://coastermap.com/parks/walibi-belgium/kondaa/): min height 130 cm
+  - [Turbine](https://coastermap.com/parks/walibi-belgium/turbine/): min height 140 cm
+  - [Vampire](https://coastermap.com/parks/walibi-belgium/vampire/): min height 130 cm
+  - [Calamity Mine](https://coastermap.com/parks/walibi-belgium/calamity-mine/): min height 120 cm
+  - [Cobra](https://coastermap.com/parks/walibi-belgium/cobra/): min height 130 cm
+  - [Loup-Garou](https://coastermap.com/parks/walibi-belgium/loup-garou/): min height 120 cm
+- [Parc Astérix](https://coastermap.com/parks/parc-asterix/): 9 coasters
+  - [Tonnerre 2 Zeus](https://coastermap.com/parks/parc-asterix/tonnerre-2-zeus/): min height 120 cm
+  - [Goudurix](https://coastermap.com/parks/parc-asterix/goudurix/)
+  - [SOS Tournevis](https://coastermap.com/parks/parc-asterix/sos-tournevis/)
+  - [Vol d'Icare](https://coastermap.com/parks/parc-asterix/vol-dicare/): min height 130 cm
+  - [La Trace du Hourra](https://coastermap.com/parks/parc-asterix/la-trace-du-hourra/): min height 130 cm
+  - [OzIris](https://coastermap.com/parks/parc-asterix/oziris/): min height 130 cm
+  - [Pégase Express](https://coastermap.com/parks/parc-asterix/pegase-express/): min height 130 cm
+  - [Toutatis](https://coastermap.com/parks/parc-asterix/toutatis/)
+  - [Cétautomatix](https://coastermap.com/parks/parc-asterix/cetautomatix/): min height 100 cm
+- [Ferrari World Abu Dhabi](https://coastermap.com/parks/ferrari-world/): 5 coasters
+  - [Fiorano GT Challenge](https://coastermap.com/parks/ferrari-world/fiorano-gt-challenge/): min height 130 cm
+  - [Mission Ferrari](https://coastermap.com/parks/ferrari-world/mission-ferrari/): min height 130 cm
+  - [Turbo Track](https://coastermap.com/parks/ferrari-world/turbo-track/): min height 130 cm
+  - [Flying Aces](https://coastermap.com/parks/ferrari-world/flying-aces/): min height 130 cm
+  - [Formula Rossa Junior](https://coastermap.com/parks/ferrari-world/formula-rossa-junior/): min height 90 cm
+- [Warner Bros. Movie World](https://coastermap.com/parks/warner-bros-movie-world/): 8 coasters
+  - [SCOOBY-DOO! Spooky Coaster](https://coastermap.com/parks/warner-bros-movie-world/scooby-doo-spooky-coaster/)
+  - [Superman Escape](https://coastermap.com/parks/warner-bros-movie-world/superman-escape/): min height 140 cm
+  - [Green Lantern Coaster](https://coastermap.com/parks/warner-bros-movie-world/green-lantern-coaster/): min height 140 cm
+  - [DC Rivals HyperCoaster](https://coastermap.com/parks/warner-bros-movie-world/dc-rivals-hypercoaster/): min height 130 cm
+  - [Kansas Twister](https://coastermap.com/parks/warner-bros-movie-world/kansas-twister/)
+  - [Flight of the Wicked Witch](https://coastermap.com/parks/warner-bros-movie-world/flight-of-the-wicked-witch/)
+  - [Flash: Speed Force](https://coastermap.com/parks/warner-bros-movie-world/flash-speed-force/)
+  - [Road Runner Roller Coaster](https://coastermap.com/parks/warner-bros-movie-world/road-runner-roller-coaster/): min height 120 cm
+- [Dreamworld](https://coastermap.com/parks/dreamworld/): 5 coasters
+  - [The Gold Coaster](https://coastermap.com/parks/dreamworld/the-gold-coaster/): min height 120 cm
+  - [Kenny's Forest Flyer](https://coastermap.com/parks/dreamworld/kennys-forest-flyer/): min height 130 cm
+  - [Steel Taipan](https://coastermap.com/parks/dreamworld/steel-taipan/): min height 130 cm
+  - [Big Red Boat](https://coastermap.com/parks/dreamworld/big-red-boat/): min height 105 cm
+  - [Jungle Rush](https://coastermap.com/parks/dreamworld/jungle-rush/): min height 120 cm
+- [Universal Studios Singapore](https://coastermap.com/parks/universal-studios-singapore/): 5 coasters
+  - [Enchanted Airways](https://coastermap.com/parks/universal-studios-singapore/enchanted-airways/): min height 122 cm
+  - [Revenge of the Mummy](https://coastermap.com/parks/universal-studios-singapore/revenge-of-the-mummy/): min height 122 cm
+  - [Battlestar Galactica: Human vs. Cylon](https://coastermap.com/parks/universal-studios-singapore/battlestar-galactica-human-vs-cylon/): min height 125 cm
+  - [Canopy Flyer](https://coastermap.com/parks/universal-studios-singapore/canopy-flyer/): min height 122 cm
+  - [Puss In Boots' Giant Journey](https://coastermap.com/parks/universal-studios-singapore/puss-in-boots-giant-journey/): min height 122 cm

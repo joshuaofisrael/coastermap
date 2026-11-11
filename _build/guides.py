@@ -1,7 +1,7 @@
 # Evergreen guide pages built only from verified site data. Exec'd inside build.py's namespace.
 GUIDES = []  # (path, title, blurb, group)
 REGION_PARKS = {}
-REGION = {"US": "North America", "CA": "North America", "DE": "Europe", "GB": "Europe", "ES": "Europe", "NL": "Europe", "SE": "Europe", "JP": "Asia", "CN": "Asia", "HK": "Asia", "FR": "Europe"}
+REGION = {"US": "North America", "CA": "North America", "DE": "Europe", "GB": "Europe", "ES": "Europe", "NL": "Europe", "SE": "Europe", "JP": "Asia", "CN": "Asia", "HK": "Asia", "FR": "Europe", "PL": "Europe", "IT": "Europe", "BE": "Europe", "AE": "Middle East", "SG": "Asia", "AU": "Oceania"}
 def pk(c): return park_of(c)
 def mtr(v): return f"{round(v * 0.3048):,} m"
 def kmh(v): return f"{round(v * 1.609)} km/h"
@@ -77,7 +77,7 @@ def ranking_guides():
         path = f"/guides/{slug}-roller-coasters/" if slug != "most-inversions" else "/guides/roller-coasters-with-the-most-inversions/"
         rows = "".join(f'<tr><td>{i + 1}</td><th scope="row"><a href="{coaster_path(c)}">{E(c["name"])}</a></th><td>{E(pk(c)["name"])}</td><td>{E(fmt(c))}</td><td>{E(hreq(c))}</td></tr>' for i, c in enumerate(top))
         reg = ""
-        for r in ("North America", "Europe", "Asia"):
+        for r in ("North America", "Europe", "Asia", "Middle East", "Oceania"):
             rc = [c for c in cs if REGION.get(pk(c)["country"]) == r]
             if rc: reg += f'<li>{r}: {clink(rc[0])}, {E(fmt(rc[0]))}</li>'
         lead = top[0]
@@ -135,7 +135,7 @@ def first_timer_guide():
 
 # ---------- regions ----------
 STATES = {"FL": "Florida", "CA": "California", "PA": "Pennsylvania", "TX": "Texas", "MO": "Missouri", "OH": "Ohio", "VA": "Virginia", "NY": "New York"}
-COUNTRIES = {"GB": "the United Kingdom", "DE": "Germany", "ES": "Spain", "JP": "Japan", "FR": "France", "CA": "Canada"}
+COUNTRIES = {"GB": "the United Kingdom", "DE": "Germany", "ES": "Spain", "JP": "Japan", "FR": "France", "CA": "Canada", "AU": "Australia", "NL": "the Netherlands"}
 def region_guides():
     groups = [(f"roller-coasters-in-{n.lower().replace(' ', '-')}", n, [p for p in PARKS if p["country"] == "US" and p["state"] == s]) for s, n in STATES.items()]
     groups += [(f"roller-coasters-in-{n.replace('the ', '').lower().replace(' ', '-')}", n, [p for p in PARKS if p["country"] == k]) for k, n in COUNTRIES.items()]
