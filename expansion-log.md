@@ -729,3 +729,8 @@ Totals after batch 10: 102 parks, 741 coasters, 928 pages. Live 200 checks passe
 - Fort Fun 4/4, Kolmården 3/3 (ages kept as notes), Terra Mítica 3/3, Beech Bend 3/3 (official height table), Casino Pier 3/4 (Hot Tamales says "48 inch minimum all riders" and "36 to 48 must be accompanied" at once, left out), Parc Spirou 3/5 (En avant Seccotine and Nid des Marsupilamis not on the rendered page).
 - Bayern-Park 3/5 (Raupenachterbahn only states 100 cm with an adult, no ride-alone height; Star-Shuttle not listed). Duinrell 2/3 (Kikker8baan page shows no height). Belantis 2/4 (Cobra des Amun Ra shows only an accompanied minimum; Huracanito not shown).
 - Not added: Nigloland (pages blocked to our renderer), Hopi Hari (coaster rules not on the rendered list), Leolandia (no ride links rendered).
+
+**Batch 11e: 3 new parks (Japan), 21 coaster pages, 16 official rules.**
+- Nagashima Spa Land 8/11 (official restrictions table; Jet Coaster and Peter Rabbit Coaster have age-only rules, Children Coaster not matched to a listed ride). RCDB lists Double Wild Mouse as two coasters with the same name; `data.py` now keeps one page per name per park, so both tracks share /parks/nagashima-spa-land/double-wild-mouse/.
+- Yomiuriland 5/5 (official attraction pages; DinoRunner limits apply to the dinosaur cars, the trolley cars have none, as stated).
+- Hirakata Park 3/5 (Fantastic Coaster Rowdy has no height minimum with a companion; Korottruck has no attraction page).

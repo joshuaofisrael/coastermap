@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 886 coasters at 131 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 907 coasters at 134 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1029,3 +1029,27 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Alucinakis](https://coastermap.com/parks/terra-mitica/alucinakis/): min height 110 cm
   - [Titánide](https://coastermap.com/parks/terra-mitica/titanide/): min height 130 cm
   - [Inferno](https://coastermap.com/parks/terra-mitica/inferno/): min height 140 cm
+- [Nagashima Spa Land](https://coastermap.com/parks/nagashima-spa-land/): 11 coasters
+  - [Jet Coaster](https://coastermap.com/parks/nagashima-spa-land/jet-coaster/)
+  - [Children Coaster](https://coastermap.com/parks/nagashima-spa-land/children-coaster/)
+  - [Double Wild Mouse](https://coastermap.com/parks/nagashima-spa-land/double-wild-mouse/): min height 120 cm
+  - [Peter Rabbit Coaster](https://coastermap.com/parks/nagashima-spa-land/peter-rabbit-coaster/)
+  - [Acrobat](https://coastermap.com/parks/nagashima-spa-land/acrobat/): min height 135 cm
+  - [Arashi](https://coastermap.com/parks/nagashima-spa-land/arashi/): min height 120 cm
+  - [Hakugei](https://coastermap.com/parks/nagashima-spa-land/hakugei/): min height 130 cm
+  - [Corkscrew](https://coastermap.com/parks/nagashima-spa-land/corkscrew/): min height 110 cm
+  - [Shuttle Loop](https://coastermap.com/parks/nagashima-spa-land/shuttle-loop/): min height 120 cm
+  - [Looping Star](https://coastermap.com/parks/nagashima-spa-land/looping-star/): min height 130 cm
+  - [Steel Dragon 2000](https://coastermap.com/parks/nagashima-spa-land/steel-dragon-2000/): min height 140 cm
+- [Yomiuriland](https://coastermap.com/parks/yomiuriland/): 5 coasters
+  - [Bandit](https://coastermap.com/parks/yomiuriland/bandit/): min height 120 cm
+  - [Wan Wan Coaster Wandit](https://coastermap.com/parks/yomiuriland/wan-wan-coaster-wandit/): min height 90 cm
+  - [Spin Runway](https://coastermap.com/parks/yomiuriland/spin-runway/): min height 130 cm
+  - [Lipovitan Rocket Luna](https://coastermap.com/parks/yomiuriland/lipovitan-rocket-luna/): min height 130 cm
+  - [DinoRunner](https://coastermap.com/parks/yomiuriland/dinorunner/): min height 110 cm
+- [Hirakata Park](https://coastermap.com/parks/hirakata-park/): 5 coasters
+  - [Crazy Mouse](https://coastermap.com/parks/hirakata-park/crazy-mouse/): min height 130 cm
+  - [Elf](https://coastermap.com/parks/hirakata-park/elf/): min height 110 cm
+  - [Fantastic Coaster Rowdy](https://coastermap.com/parks/hirakata-park/fantastic-coaster-rowdy/)
+  - [Red Falcon](https://coastermap.com/parks/hirakata-park/red-falcon/): min height 120 cm
+  - [Korottruck](https://coastermap.com/parks/hirakata-park/korottruck/)

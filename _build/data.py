@@ -177,6 +177,7 @@ def load():
         r = rc[p["slug"]]; p = dict(p, rcdb_url=r["rcdb_url"], coasters=[])
         for c in r["coasters"]:
             n = c["name"]; st = c.get("st", {})
+            if any(x["rcdb_name"] == n for x in p["coasters"]): continue  # RCDB lists some twin-track rides twice under one name (Nagashima Double Wild Mouse): one page
             tags = [t for t in c["tags"] if t not in ("Roller Coaster",)]
             scale = next((t for t in tags if t in ("Kiddie", "Family", "Thrill", "Extreme")), None)
             material = next((t for t in tags if t in ("Steel", "Wood")), None)

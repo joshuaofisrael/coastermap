@@ -725,3 +725,33 @@ INTL_PARKS += [
  dict(slug="terra-mitica", name="Terra Mítica", short="Terra Mítica", loc="Benidorm, Spain", state="Valencian Community", country="ES", official="https://www.terramiticabenidorm.com/", group="Terra Mítica"),
 ]
 DISPLAY_INTL.update({("bayern-park", "Achterbahn"): "Raupenachterbahn", ("duinrell", "Dragon Fly"): "Dragonfly", ("casino-pier", "Pirates Hideaway"): "Pirate's Hideaway"})
+
+# ---- Batch 11e (10 Nov 2026): Nagashima Spa Land, Yomiuriland, Hirakata Park ----
+NSL = ("Nagashima Spa Land, official attraction restrictions page", "https://www.nagashima-onsen.co.jp/spaland/attraction/limit.html")
+def YL(s): return ("Yomiuriland, official attraction page", f"https://www.yomiuriland.com/attraction/{s}/")
+def HKP(s): return ("Hirakata Park, official attraction page", f"https://www.hirakatapark.co.jp/attractions/{s}/")
+HP_B11e = {
+ ("nagashima-spa-land", "Steel Dragon 2000"): M(min=140, max=185, note="Minimum age 10.", src=NSL),
+ ("nagashima-spa-land", "Hakugei"): M(min=130, src=NSL),
+ ("nagashima-spa-land", "Arashi"): M(min=120, src=NSL),
+ ("nagashima-spa-land", "Acrobat"): M(min=135, max=198, src=NSL),
+ ("nagashima-spa-land", "Looping Star"): M(min=130, src=NSL),
+ ("nagashima-spa-land", "Shuttle Loop"): M(min=120, src=NSL),
+ ("nagashima-spa-land", "Wild Mouse"): M(min=120, note="Minimum age 9.", src=NSL),
+ ("nagashima-spa-land", "Corkscrew"): M(min=110, src=NSL),
+ ("yomiuriland", "Bandit"): M(min=120, note="The park also requires riders to be elementary-school age or older.", src=YL("bandit")),
+ ("yomiuriland", "Lipovitan Rocket☆Luna"): M(min=130, acc_min=110, acc_max=130, note="Riders 110 to 130 cm must ride with a companion of junior-high age or older.", src=YL("lipovitan")),
+ ("yomiuriland", "Spin Runway"): M(min=130, acc_min=110, acc_max=130, note="Riders 110 to 130 cm need a companion of junior-high age or older. Minimum age 4; under 6 must ride with a companion.", src=YL("spinrunway")),
+ ("yomiuriland", "Wan Wan Coaster Wandit"): M(min=90, note="Minimum age 3; under 5 must ride with a companion of junior-high age or older.", src=YL("wandit")),
+ ("yomiuriland", "DinoRunner"): M(min=110, acc_min=90, acc_max=110, note="These limits are for the dinosaur cars: riders 90 to 110 cm need a companion of junior-high age or older. The park lists no height limit for the trolley cars. Minimum age 2.", src=YL("dinorunner")),
+ ("hirakata-park", "Crazy Mouse"): M(min=130, acc_min=110, acc_max=130, note="Riding alone needs both 130 cm and age 10. Riders 110 to 130 cm, or under 10, must ride with a companion aged 15 or older.", src=HKP("crazy-mouse")),
+ ("hirakata-park", "Elf"): M(min=110, src=HKP("elf")),
+ ("hirakata-park", "Red Falcon"): M(min=120, src=HKP("red-falcon")),
+}
+HP_INTL.update(HP_B11e)
+INTL_PARKS += [
+ dict(slug="nagashima-spa-land", name="Nagashima Spa Land", short="Nagashima Spa Land", loc="Kuwana, Mie, Japan", state="Mie", country="JP", official="https://www.nagashima-onsen.co.jp/spaland/", group="Nagashima Resort"),
+ dict(slug="yomiuriland", name="Yomiuriland", short="Yomiuriland", loc="Inagi, Tokyo, Japan", state="Tokyo", country="JP", official="https://www.yomiuriland.com/", group="Yomiuriland"),
+ dict(slug="hirakata-park", name="Hirakata Park", short="Hirakata Park", loc="Hirakata, Osaka, Japan", state="Osaka", country="JP", official="https://www.hirakatapark.co.jp/", group="Keihan"),
+]
+DISPLAY_INTL.update({("nagashima-spa-land", "Wild Mouse"): "Double Wild Mouse", ("yomiuriland", "Lipovitan Rocket☆Luna"): "Lipovitan Rocket Luna"})
