@@ -693,3 +693,5 @@ Topics were picked from Google autocomplete queries (fear of coasters, stomach d
 
 **Batch 10e (18 official rules):** Särkänniemi 4/5 (Vauhtimato has no ride page), Seabreeze 4/4 (official ride requirements table and its footnotes), Santa Cruz Beach Boardwalk 3/3 (official height requirements table, headed Chrome), Luna Park in Coney Island 7/8 (Coney Island Cyclone 54 in, Thunderbolt 50 in). Omitted Tony's Express: its page text says 42 in alone but the ride info panel says 48 in alone and 36 in accompanied.
 - Slugs now transliterate æ and ø (Tivoli Dæmonen is /parks/tivoli-gardens/daemonen/). Energylandia Formuła keeps its existing slug so the published URL does not change.
+
+**Internal links:** contextual explainer links added to coaster and park pages; the least-linked explainer now has 7 internal links (was 2). Click depth still 2 at most, no orphans.
