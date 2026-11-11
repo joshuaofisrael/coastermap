@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1104 coasters at 176 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1131 coasters at 183 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1292,3 +1292,37 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Little Rattler](https://coastermap.com/parks/leofoo-village/little-rattler/): min height 90 cm
   - [Screaming Condor](https://coastermap.com/parks/leofoo-village/screaming-condor/): min height 140 cm
   - [Sahara Twist](https://coastermap.com/parks/leofoo-village/sahara-twist/): min height 90 cm
+- [Salitre Mágico](https://coastermap.com/parks/salitre-magico/): 5 coasters
+  - [Magnus](https://coastermap.com/parks/salitre-magico/magnus/): min height 135 cm
+  - [Gusano Loco](https://coastermap.com/parks/salitre-magico/gusano-loco/): min height 110 cm
+  - [Doble Loop](https://coastermap.com/parks/salitre-magico/doble-loop/): min height 135 cm
+  - [Drakko: The Flying Beast](https://coastermap.com/parks/salitre-magico/drakko-the-flying-beast/): min height 140 cm
+  - [Rallus](https://coastermap.com/parks/salitre-magico/rallus/)
+- [Parque Diversiones](https://coastermap.com/parks/parque-diversiones/): 5 coasters
+  - [Teletren](https://coastermap.com/parks/parque-diversiones/teletren/): min height 110 cm
+  - [Montana Ghibli](https://coastermap.com/parks/parque-diversiones/montana-ghibli/): min height 80 cm
+  - [Bocaraca](https://coastermap.com/parks/parque-diversiones/bocaraca/): min height 120 cm
+  - [Búmeran](https://coastermap.com/parks/parque-diversiones/bumeran/): min height 130 cm
+  - [Torbellino](https://coastermap.com/parks/parque-diversiones/torbellino/): min height 120 cm
+- [The Land of Legends](https://coastermap.com/parks/land-of-legends/): 4 coasters
+  - [Typhoon Coaster](https://coastermap.com/parks/land-of-legends/typhoon-coaster/): min height 130 cm
+  - [Hyper Coaster](https://coastermap.com/parks/land-of-legends/hyper-coaster/): min height 130 cm
+  - [Family Coaster](https://coastermap.com/parks/land-of-legends/family-coaster/): min height 120 cm
+  - [Zippy Zappy Coaster](https://coastermap.com/parks/land-of-legends/zippy-zappy-coaster/): min height 120 cm
+- [Imagicaa](https://coastermap.com/parks/imagicaa/): 4 coasters
+  - [Nitro](https://coastermap.com/parks/imagicaa/nitro/): min height 132 cm
+  - [Deep Space](https://coastermap.com/parks/imagicaa/deep-space/): min height 137 cm
+  - [Gold Rush Express](https://coastermap.com/parks/imagicaa/gold-rush-express/): min height 107 cm
+  - [Chhota Bheem The Ride](https://coastermap.com/parks/imagicaa/chhota-bheem-the-ride/)
+- [Schwaben Park](https://coastermap.com/parks/schwaben-park/): 3 coasters
+  - [Raupen Express](https://coastermap.com/parks/schwaben-park/raupen-express/): min height 140 cm
+  - [Force One](https://coastermap.com/parks/schwaben-park/force-one/): min height 140 cm
+  - [Hummel Brummel](https://coastermap.com/parks/schwaben-park/hummel-brummel/): min height 140 cm
+- [Eifelpark](https://coastermap.com/parks/eifelpark/): 3 coasters
+  - [Eifel Blitz](https://coastermap.com/parks/eifelpark/eifel-blitz/): min height 130 cm
+  - [Eifel-Coaster](https://coastermap.com/parks/eifelpark/eifel-coaster/)
+  - [Käpt'n Jack's Wilde Maus](https://coastermap.com/parks/eifelpark/kaptn-jacks-wilde-maus/): min height 140 cm
+- [Enchanted Kingdom](https://coastermap.com/parks/enchanted-kingdom/): 3 coasters
+  - [Space Shuttle](https://coastermap.com/parks/enchanted-kingdom/space-shuttle/): min height 48 in
+  - [Roller Skater](https://coastermap.com/parks/enchanted-kingdom/roller-skater/): min height 52 in
+  - [Twin Spin](https://coastermap.com/parks/enchanted-kingdom/twin-spin/): min height 48 in

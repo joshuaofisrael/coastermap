@@ -1089,3 +1089,50 @@ INTL_PARKS += [
  dict(slug="seoul-land", name="Seoul Land", short="Seoul Land", loc="Gwacheon, Gyeonggi, South Korea", state="Gyeonggi", country="KR", official="https://seoulland.co.kr/", group="Seoul Land", checked=_C),
  dict(slug="leofoo-village", name="Leofoo Village Theme Park", short="Leofoo Village", loc="Guanxi, Hsinchu County, Taiwan", state="Hsinchu County", country="TW", official="https://www.leofoovillage.com.tw/", group="Leofoo", checked=_C),
 ]
+
+# ---- Batch 12e (11 Nov 2026): Salitre Mágico, Parque Diversiones, Land of Legends, Imagicaa, Schwaben Park, Eifelpark, Enchanted Kingdom ----
+def SAL(s): return ("Salitre Mágico, official attraction page", f"https://salitremagico.com.co/atraccion/{s}/")
+def PDV(s): return ("Parque Diversiones, official attraction page", f"https://parquediversiones.com/atracciones/{s}")
+def LOL(s): return ("The Land of Legends, official attraction page", f"https://www.thelandoflegends.com/en/theme-park/{s}")
+IMG = ("Imagicaa, official ride restrictions page", "https://booking-backend.imagicaaworld.com/theme-park/ride-restrictions/")
+SWP = ("Schwaben Park, official age and height table (PDF)", "https://www.schwabenpark.de/fileadmin/attraktionen/Alters-__und_Groessentabelle.pdf")
+def EFP(s): return ("Eifelpark, official attraction page", f"https://www.eifelpark.de/attraktionen/{s}/")
+def EKG(s): return ("Enchanted Kingdom, official ride page", f"https://www.enchantedkingdom.ph/{s}/")
+_SW = lambda a, age_a, age_b: f"Riding alone needs 1.40 m and age {age_b}; from {a} cm and age {age_a} riders must be accompanied by an adult."
+HP_B12e = {
+ ("salitre-magico", "Drakko: The Flying Beast"): M(min=140, src=SAL("drakko")),
+ ("salitre-magico", "Magnus"): M(min=135, src=SAL("magnus")),
+ ("salitre-magico", "Doble Loop"): M(min=135, src=SAL("doble-loop")),
+ ("salitre-magico", "Gusano Loco"): M(min=110, max=134, src=SAL("gusano-loco")),
+ ("parque-diversiones", "Búmeran"): M(min=130, src=PDV("bumeran")),
+ ("parque-diversiones", "Bocaraca"): M(min=120, src=PDV("bocaraca")),
+ ("parque-diversiones", "Torbellino"): M(min=120, src=PDV("torbellino")),
+ ("parque-diversiones", "Montana Ghibli"): M(min=80, src=PDV("ghibli")),
+ ("parque-diversiones", "Teletren"): M(min=110, acc_min=80, acc_max=110, note="Riders 0.80 to 1.10 m need a supervising companion.", src=PDV("teletren")),
+ ("land-of-legends", "Typhoon Coaster"): M(min=130, max=196, src=LOL("adventure-land-units/typhoon-coaster")),
+ ("land-of-legends", "Hyper Coaster"): M(min=130, src=LOL("adventure-land-units/hyper-coaster")),
+ ("land-of-legends", "Family Coaster"): M(min=120, note="The park notes that parental supervision is required.", src=LOL("adventure-land-units/family-coaster")),
+ ("land-of-legends", "Zippy Zappy Coaster"): M(min=120, note="The park notes that parental supervision is required.", src=LOL("masha-and-the-bear-fun-units/zippy-zappy-coaster")),
+ ("imagicaa", "Deep Space"): M(min=137, acc_min=132, acc_max=137, note="Riders from 1.32 m may ride with a guardian.", src=IMG),
+ ("imagicaa", "Hot Wheels Nitro"): M(min=132, note="The park lists it as Nitro.", src=IMG),
+ ("imagicaa", "Gold Rush Express"): M(min=107, src=IMG),
+ ("schwaben-park", "Force One"): M(min=140, acc_min=120, acc_max=140, note=_SW(120, 6, 8), src=SWP),
+ ("schwaben-park", "Hummel Brummel"): M(min=140, acc_min=105, acc_max=140, note=_SW(105, 4, 8), src=SWP),
+ ("schwaben-park", "Raupen Express"): M(min=140, acc_min=95, acc_max=140, note=_SW(95, 3, 8), src=SWP),
+ ("eifelpark", "Eifel Blitz"): M(min=130, acc_min=100, acc_max=130, note="From 100 cm and age 4; riders up to 130 cm or age 8 must ride with an adult.", src=EFP("familienachterbahn-eifelpark-blitz")),
+ ("eifelpark", "Käpt'n Jack's Wilde Maus"): M(min=140, acc_min=120, acc_max=140, note="From 120 cm and age 6; riders up to 140 cm or age 10 must ride with an adult.", src=EFP("achterbahn-kaeptn-jacks-wilde-maus")),
+ ("enchanted-kingdom", "Space Shuttle"): dict(min=48, src=EKG("space-shuttle")),
+ ("enchanted-kingdom", "Roller Skater"): dict(min=52, acc_min=36, acc_max=52, note="Guests 36 to 52 inches must be accompanied by a chaperone.", src=EKG("roller-skater")),
+ ("enchanted-kingdom", "Twin Spin"): dict(min=48, acc_min=39, acc_max=48, note="Guests 39 to 48 inches must be accompanied by a supervising companion.", src=EKG("twin-spin")),
+}
+HP_INTL.update(HP_B12e)
+INTL_PARKS += [
+ dict(slug="salitre-magico", name="Salitre Mágico", short="Salitre Mágico", loc="Bogotá, Colombia", state="Bogotá", country="CO", official="https://salitremagico.com.co/", group="Salitre Mágico", checked=_C),
+ dict(slug="parque-diversiones", name="Parque Diversiones", short="Parque Diversiones", loc="La Uruca, San José, Costa Rica", state="San José", country="CR", official="https://parquediversiones.com/", group="Parque Diversiones", checked=_C),
+ dict(slug="land-of-legends", name="The Land of Legends", short="Land of Legends", loc="Belek, Antalya, Turkey", state="Antalya", country="TR", official="https://www.thelandoflegends.com/", group="The Land of Legends", checked=_C),
+ dict(slug="imagicaa", name="Imagicaa", short="Imagicaa", loc="Khopoli, Maharashtra, India", state="Maharashtra", country="IN", official="https://www.imagicaaworld.com/", group="Imagicaa", checked=_C),
+ dict(slug="schwaben-park", name="Schwaben Park", short="Schwaben Park", loc="Kaisersbach, Germany", state="Baden-Württemberg", country="DE", official="https://www.schwabenpark.de/", group="Schwaben Park", checked=_C),
+ dict(slug="eifelpark", name="Eifelpark", short="Eifelpark", loc="Gondorf, Germany", state="Rhineland-Palatinate", country="DE", official="https://www.eifelpark.de/", group="Eifelpark", checked=_C),
+ dict(slug="enchanted-kingdom", name="Enchanted Kingdom", short="Enchanted Kingdom", loc="Santa Rosa, Laguna, Philippines", state="Laguna", country="PH", official="https://www.enchantedkingdom.ph/", group="Enchanted Kingdom", checked=_C),
+]
+DISPLAY_INTL.update({("imagicaa", "Hot Wheels Nitro"): "Nitro"})
