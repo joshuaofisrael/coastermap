@@ -286,8 +286,15 @@ def related_html(c=None, p=None):
         if c["hr"] and c["hr"].get("max"): links.append(("/guides/can-you-be-too-tall-for-a-roller-coaster/", "Can you be too tall for a coaster?"))
         if launched(c): links.append(("/guides/how-do-roller-coaster-launches-work/", "How roller coaster launches work"))
         if "Spinning Cars" in c["tags"]: links.append(("/guides/roller-coaster-motion-sickness/", "Roller coaster motion sickness"))
+        if c.get("inversions"): links.append(("/guides/how-do-roller-coaster-restraints-work/", "How coaster restraints work"))
+        else: links.append(("/guides/how-do-roller-coasters-stay-on-the-track/", "How coasters stay on the track"))
+        if (c.get("height") or 0) >= 150 or "Wood" in c["tags"]: links.append(("/guides/what-is-airtime-on-a-roller-coaster/", "What is airtime?"))
+        if (c.get("height") or 0) >= 100: links.append(("/guides/why-your-stomach-drops-on-a-roller-coaster/", "Why your stomach drops"))
+        if (c.get("speed") or 0) >= 55 or (c.get("inversions") or 0) >= 3: links.append(("/guides/roller-coasters-and-health-conditions/", "Coasters and health conditions"))
+        if launched(c) or (c.get("speed") or 0) >= 60: links.append(("/guides/how-do-roller-coaster-brakes-work/", "How coaster brakes work"))
     if p: links += [("/guides/roller-coaster-height-requirements-explained/", "Height requirements explained"), ("/guides/how-to-not-be-scared-of-roller-coasters/", "How to not be scared of coasters")]
     if p: links += [("/guides/best-first-roller-coasters/", "Best first roller coasters"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids"), ("/guides/tallest-roller-coasters/", "Tallest roller coasters")]
+    if p: links += [("/guides/roller-coaster-glossary/", "Roller coaster glossary"), ("/guides/what-happens-if-a-roller-coaster-gets-stuck/", "What happens if a coaster gets stuck"), ("/guides/world-record-roller-coasters/", "World record roller coasters")]
     links = [(u, t) for u, t in dict.fromkeys(links) if u in gp]
     if not links: return ""
     return '<section aria-labelledby="rg-h"><h2 id="rg-h">Related guides</h2><ul class="cols">' + "".join(f'<li><a href="{u}">{E(t)}</a></li>' for u, t in links) + "</ul></section>"
