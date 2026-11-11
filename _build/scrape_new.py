@@ -16,6 +16,7 @@ NEW.update({'legoland-florida':5589,'legoland-california':4733,'legoland-new-yor
 NEW.update({'indiana-beach':4599,'adventureland-iowa':4576,'wild-adventures':4703,'waldameer':4646,'six-flags-mexico':4629,'canobie-lake-park':4602,'fun-spot-orlando':10346,'fun-spot-kissimmee':6373,'toverland':4900,'chessington':4798,'grona-lund':4910,'tivoli-gardens':4905,'linnanmaki':4917,'flamingo-land':4804,'moreys-piers':4560,'parque-warner-madrid':5028,'sarkanniemi':4919,'seabreeze':4583,'santa-cruz-beach-boardwalk':4573,'luna-park-coney-island':9250,'dutch-wonderland':4591,'idlewild':4600})
 NEW.update({'six-flags-qiddiya-city':21275,'legoland-windsor':4813,'legoland-deutschland':5059,'legoland-billund':4903,'mirabilandia':4793,'tripsdrill':4886,'djurs-sommerland':5012,'drayton-manor':4803,'tusenfryd':4901,'bobbejaanland':4846,'skyline-park':4885})
 NEW.update({'nickelodeon-universe-moa':4547,'nickelodeon-universe-american-dream':15593,'bakken':4907,'walibi-rhone-alpes':4857,'bellewaerde':4848,'adventure-island':4836,'sea-world-gold-coast':4942,'img-worlds':6645,'lightwater-valley':4797})
+NEW.update({'nigloland':4854,'mt-olympus':4561,'kolmarden':6334,'nagashima-spa-land':4958,'parc-spirou':12676,'bayern-park':5068,'leolandia':5117,'belantis':5112,'fort-fun':4881,'casino-pier':4624,'lakeside':4575,'beech-bend':4717,'duinrell':4858,'furuvik':4911,'terra-mitica':4921,'beto-carrero':4948,'hopi-hari':4947,'yomiuriland':4968,'hirakata-park':5004,'gullivers-warrington':4823})
 d=json.load(open('rcdb.json'))
 for slug in sys.argv[1:] or NEW:
     pid=NEW[slug]

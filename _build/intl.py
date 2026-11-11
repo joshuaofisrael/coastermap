@@ -673,3 +673,55 @@ INTL_PARKS += [
  dict(slug="lightwater-valley", name="Lightwater Valley", short="Lightwater Valley", loc="North Stainley, Ripon, England", state="North Yorkshire", country="GB", official="https://lightwatervalley.co.uk/", group="Lightwater Valley"),
 ]
 DISPLAY_INTL.update({("nickelodeon-universe-american-dream", "Shredder"): "The Shredder", ("nickelodeon-universe-american-dream", "Sandy’s Blasting Bronco"): "Sandy's Blasting Bronco", ("bakken", "Vilde Mus"): "De Vilde Mus", ("walibi-rhone-alpes", "Coccinelle"): "La Coccinelle"})
+
+# ---- Batch 11d (10 Nov 2026): Fort Fun, Kolmården, Bayern-Park, Beech Bend, Casino Pier, Parc Spirou, Duinrell, Belantis, Terra Mítica ----
+def FF(s): return ("Fort Fun Abenteuerland, official attraction page", f"https://fortfun.de/attraktion/{s}")
+KOL = ("Kolmården, official attractions page", "https://www.kolmarden.com/attraktioner")
+def BYP(s): return ("Bayern-Park, official attraction page", f"https://www.bayern-park.com/de/attraktionen/{s}")
+BBH = ("Beech Bend, official height and weight requirements page", "https://beechbend.com/amusement-park/rides-attractions/height-requirements/")
+CPR = ("Casino Pier, official boardwalk rides page", "https://casinopiernj.com/boardwalk-rides/")
+SPI = ("Parc Spirou, official attractions page", "https://www.parc-spirou.com/les-attractions/")
+def DR(s): return ("Duinrell, official attraction page", f"https://www.duinrell.nl/attractiepark/attracties/{s}")
+BEL = ("Belantis, official attractions page", "https://www.belantis.de/de/belantis-entdecken/attraktionen")
+def TM(s): return ("Terra Mítica, official attraction page", f"https://www.terramiticabenidorm.com/atracciones/{s}/")
+HP_B11d = {
+ ("fort-fun", "Devil's Mine"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm must ride with an adult.", src=FF("devils-mine")),
+ ("fort-fun", "Marienkäferbahn"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm must ride with an adult.", src=FF("marienkaeferbahn")),
+ ("fort-fun", "SpeedSnake FREE"): M(min=140, acc_min=130, acc_max=140, note="Riders 130 to 140 cm must ride with an adult.", src=FF("speedsnake-free")),
+ ("fort-fun", "Trapper Slider"): M(min=130, acc_min=100, acc_max=130, note="Riders 100 to 130 cm must ride with an adult.", src=FF("trapper-slider")),
+ ("kolmarden", "Wildfire"): M(min=120, src=KOL),
+ ("kolmarden", "Delfinexpressen"): M(min=120, acc_min=95, acc_max=120, note="The park also sets a minimum age: 8 to ride alone, 4 with an adult.", src=KOL),
+ ("kolmarden", "Godiståget"): M(min=120, acc_min=100, acc_max=120, max=195, note="The park also sets a minimum age: 6 to ride alone, 4 with an adult.", src=KOL),
+ ("bayern-park", "Freischütz"): M(min=140, max=210, note="The park lists the ride from age 8.", src=BYP("details/freischuetz-1/")),
+ ("bayern-park", "FirleFranz"): M(min=90, max=210, note="The park lists the ride from age 3.", src=BYP("details/firlefranz-familienachterbahn/")),
+ ("bayern-park", "Froschbahn"): M(min=95, note="The park lists the ride from age 3.", src=BYP("")),
+ ("beech-bend", "Kentucky Rumbler"): dict(min=48, src=BBH),
+ ("beech-bend", "Wild Mouse"): dict(min=48, acc_min=42, acc_max=48, note="Riders 42 to 48 inches must be accompanied by an adult.", src=BBH),
+ ("beech-bend", "Spinning Out"): dict(min=47, acc_min=36, acc_max=47, note="Riders 36 to 47 inches must be accompanied by an adult.", src=BBH),
+ ("casino-pier", "Hydrus"): dict(min=48, src=CPR),
+ ("casino-pier", "Pirates Hideaway"): dict(min=48, acc_min=38, acc_max=48, note="Riders 38 to 48 inches must be accompanied by a paying adult (18+).", src=CPR),
+ ("casino-pier", "Xolo Loca"): dict(min=47, acc_min=36, acc_max=47, note="47 inches is the minimum for the spinning car; the rollover car needs 55 inches (maximum 77). Riders 36 to 47 inches must be accompanied by a paying adult rider (18+).", src=CPR),
+ ("parc-spirou", "Kyûbi Unchained"): M(min=130, acc_min=105, acc_max=130, note="Riders 105 to 130 cm must ride accompanied.", src=SPI),
+ ("parc-spirou", "Spirou Racing"): M(min=130, acc_min=100, acc_max=130, max=195, note="Riders 100 to 130 cm must ride accompanied.", src=SPI),
+ ("parc-spirou", "Wanted Dalton"): M(min=130, acc_min=90, acc_max=130, note="Riders 90 to 130 cm must ride accompanied.", src=SPI),
+ ("duinrell", "Falcon"): M(min=120, src=DR("falcon")),
+ ("duinrell", "Dragon Fly"): M(min=110, src=DR("dragonfly")),
+ ("belantis", "Huracan"): M(min=130, max=195, src=BEL),
+ ("belantis", "Drachenritt"): M(min=100, src=BEL),
+ ("terra-mitica", "Titánide"): M(min=130, max=195, note="Recommended minimum age: 14.", src=TM("titanide")),
+ ("terra-mitica", "Inferno"): M(min=140, max=195, note="Recommended minimum age: 14.", src=TM("inferno")),
+ ("terra-mitica", "Alucinakis"): M(min=110, acc_min=92, acc_max=110, note="Riders 92 to 110 cm must ride accompanied; recommended minimum age 5.", src=TM("alucinakis")),
+}
+HP_INTL.update(HP_B11d)
+INTL_PARKS += [
+ dict(slug="fort-fun", name="Fort Fun Abenteuerland", short="Fort Fun", loc="Bestwig, Germany", state="North Rhine-Westphalia", country="DE", official="https://fortfun.de/", group="Fort Fun"),
+ dict(slug="kolmarden", name="Kolmården Wildlife Park", short="Kolmården", loc="Kolmården, Sweden", state="Östergötland", country="SE", official="https://www.kolmarden.com/", group="Parks and Resorts Scandinavia"),
+ dict(slug="bayern-park", name="Bayern-Park", short="Bayern-Park", loc="Reisbach, Germany", state="Bavaria", country="DE", official="https://www.bayern-park.com/de/", group="Bayern-Park"),
+ dict(slug="beech-bend", name="Beech Bend Amusement Park", short="Beech Bend", loc="Bowling Green, Kentucky", state="KY", country="US", official="https://beechbend.com/", group="Beech Bend"),
+ dict(slug="casino-pier", name="Casino Pier", short="Casino Pier", loc="Seaside Heights, New Jersey", state="NJ", country="US", official="https://casinopiernj.com/", group="Casino Pier"),
+ dict(slug="parc-spirou", name="Parc Spirou Provence", short="Parc Spirou", loc="Monteux, France", state="Provence-Alpes-Côte d'Azur", country="FR", official="https://www.parc-spirou.com/", group="Parc Spirou"),
+ dict(slug="duinrell", name="Duinrell", short="Duinrell", loc="Wassenaar, Netherlands", state="South Holland", country="NL", official="https://www.duinrell.nl/", group="Duinrell"),
+ dict(slug="belantis", name="Belantis", short="Belantis", loc="Leipzig, Germany", state="Saxony", country="DE", official="https://www.belantis.de/", group="Parques Reunidos"),
+ dict(slug="terra-mitica", name="Terra Mítica", short="Terra Mítica", loc="Benidorm, Spain", state="Valencian Community", country="ES", official="https://www.terramiticabenidorm.com/", group="Terra Mítica"),
+]
+DISPLAY_INTL.update({("bayern-park", "Achterbahn"): "Raupenachterbahn", ("duinrell", "Dragon Fly"): "Dragonfly", ("casino-pier", "Pirates Hideaway"): "Pirate's Hideaway"})

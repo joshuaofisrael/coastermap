@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 852 coasters at 122 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 886 coasters at 131 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -986,3 +986,46 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Caterpillar](https://coastermap.com/parks/lightwater-valley/caterpillar/)
   - [Spinning Racer](https://coastermap.com/parks/lightwater-valley/spinning-racer/): min height 120 cm
   - [Ladybird](https://coastermap.com/parks/lightwater-valley/ladybird/): min height 90 cm
+- [Fort Fun Abenteuerland](https://coastermap.com/parks/fort-fun/): 4 coasters
+  - [Devil's Mine](https://coastermap.com/parks/fort-fun/devils-mine/): min height 120 cm
+  - [Marienkäferbahn](https://coastermap.com/parks/fort-fun/marienkaferbahn/): min height 120 cm
+  - [SpeedSnake FREE](https://coastermap.com/parks/fort-fun/speedsnake-free/): min height 140 cm
+  - [Trapper Slider](https://coastermap.com/parks/fort-fun/trapper-slider/): min height 130 cm
+- [Kolmården Wildlife Park](https://coastermap.com/parks/kolmarden/): 3 coasters
+  - [Delfinexpressen](https://coastermap.com/parks/kolmarden/delfinexpressen/): min height 120 cm
+  - [Godiståget](https://coastermap.com/parks/kolmarden/godistaget/): min height 120 cm
+  - [Wildfire](https://coastermap.com/parks/kolmarden/wildfire/): min height 120 cm
+- [Bayern-Park](https://coastermap.com/parks/bayern-park/): 5 coasters
+  - [Froschbahn](https://coastermap.com/parks/bayern-park/froschbahn/): min height 95 cm
+  - [Raupenachterbahn](https://coastermap.com/parks/bayern-park/raupenachterbahn/)
+  - [Star-Shuttle](https://coastermap.com/parks/bayern-park/star-shuttle/)
+  - [Freischütz](https://coastermap.com/parks/bayern-park/freischutz/): min height 140 cm
+  - [FirleFranz](https://coastermap.com/parks/bayern-park/firlefranz/): min height 90 cm
+- [Beech Bend Amusement Park](https://coastermap.com/parks/beech-bend/): 3 coasters
+  - [Kentucky Rumbler](https://coastermap.com/parks/beech-bend/kentucky-rumbler/): min height 48 in
+  - [Wild Mouse](https://coastermap.com/parks/beech-bend/wild-mouse/): min height 48 in
+  - [Spinning Out](https://coastermap.com/parks/beech-bend/spinning-out/): min height 47 in
+- [Casino Pier](https://coastermap.com/parks/casino-pier/): 4 coasters
+  - [Hot Tamales](https://coastermap.com/parks/casino-pier/hot-tamales/)
+  - [Pirate's Hideaway](https://coastermap.com/parks/casino-pier/pirates-hideaway/): min height 48 in
+  - [Hydrus](https://coastermap.com/parks/casino-pier/hydrus/): min height 48 in
+  - [Xolo Loca](https://coastermap.com/parks/casino-pier/xolo-loca/): min height 47 in
+- [Parc Spirou Provence](https://coastermap.com/parks/parc-spirou/): 5 coasters
+  - [Wanted Dalton](https://coastermap.com/parks/parc-spirou/wanted-dalton/): min height 130 cm
+  - [Spirou Racing](https://coastermap.com/parks/parc-spirou/spirou-racing/): min height 130 cm
+  - [En avant Seccotine](https://coastermap.com/parks/parc-spirou/en-avant-seccotine/)
+  - [Nid des Marsupilamis](https://coastermap.com/parks/parc-spirou/nid-des-marsupilamis/)
+  - [Kyûbi Unchained](https://coastermap.com/parks/parc-spirou/kyubi-unchained/): min height 130 cm
+- [Duinrell](https://coastermap.com/parks/duinrell/): 3 coasters
+  - [Falcon](https://coastermap.com/parks/duinrell/falcon/): min height 120 cm
+  - [Dragonfly](https://coastermap.com/parks/duinrell/dragonfly/): min height 110 cm
+  - [Kikker8baan](https://coastermap.com/parks/duinrell/kikker8baan/)
+- [Belantis](https://coastermap.com/parks/belantis/): 4 coasters
+  - [Drachenritt](https://coastermap.com/parks/belantis/drachenritt/): min height 100 cm
+  - [Huracan](https://coastermap.com/parks/belantis/huracan/): min height 130 cm
+  - [Huracanito](https://coastermap.com/parks/belantis/huracanito/)
+  - [Cobra des Amun Ra](https://coastermap.com/parks/belantis/cobra-des-amun-ra/)
+- [Terra Mítica](https://coastermap.com/parks/terra-mitica/): 3 coasters
+  - [Alucinakis](https://coastermap.com/parks/terra-mitica/alucinakis/): min height 110 cm
+  - [Titánide](https://coastermap.com/parks/terra-mitica/titanide/): min height 130 cm
+  - [Inferno](https://coastermap.com/parks/terra-mitica/inferno/): min height 140 cm
