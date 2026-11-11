@@ -134,7 +134,7 @@ def first_timer_guide():
     guide("/guides/best-first-roller-coasters/", f"Best First Roller Coasters for Kids and Nervous Riders | {BRAND}"[:200], f"Gentle first roller coasters at {len(PARKS)} theme parks: no inversions, low height rules and modest speeds, from verified data.", "Best first roller coasters for kids and nervous riders", body, faqs, "For families", "Gentle starter coasters at every park, plus tips.", None, [("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids"), ("/guides/what-is-a-family-roller-coaster/", "What is a family roller coaster?"), ("/guides/most-intense-roller-coasters/", "Most intense roller coasters")])
 
 # ---------- regions ----------
-STATES = {"FL": "Florida", "CA": "California", "PA": "Pennsylvania", "TX": "Texas", "MO": "Missouri", "OH": "Ohio", "VA": "Virginia", "NY": "New York", "GA": "Georgia", "IN": "Indiana", "NJ": "New Jersey", "MN": "Minnesota", "IA": "Iowa", "CT": "Connecticut", "IL": "Illinois"}
+STATES = {"FL": "Florida", "CA": "California", "PA": "Pennsylvania", "TX": "Texas", "MO": "Missouri", "OH": "Ohio", "VA": "Virginia", "NY": "New York", "GA": "Georgia", "IN": "Indiana", "NJ": "New Jersey", "MN": "Minnesota", "IA": "Iowa", "CT": "Connecticut", "IL": "Illinois", "CO": "Colorado", "KY": "Kentucky"}
 COUNTRIES = {"GB": "the United Kingdom", "DE": "Germany", "ES": "Spain", "JP": "Japan", "FR": "France", "CA": "Canada", "AU": "Australia", "NL": "the Netherlands", "MX": "Mexico", "SE": "Sweden", "IT": "Italy", "DK": "Denmark", "BE": "Belgium", "BR": "Brazil", "CN": "China", "FI": "Finland", "KR": "South Korea", "CO": "Colombia", "TR": "Turkey", "PH": "the Philippines", "TW": "Taiwan", "VN": "Vietnam", "PL": "Poland", "AE": "the United Arab Emirates"}
 def region_guides():
     groups = [(f"roller-coasters-in-{n.lower().replace(' ', '-')}", n, [p for p in PARKS if p["country"] == "US" and p["state"] == s]) for s, n in STATES.items()]
@@ -257,5 +257,56 @@ def type_links(c):
     for slug, name, test, *_ in TYPES:
         if any(s == f"/guides/{slug}/" for s, *_ in GUIDES) and test(c): out.append((f"/guides/{slug}/", f"What is {('an' if name[0] in 'aeiou' else 'a')} {name}?"))
     return out
+
+# ---------- parks with the most coasters (batch 15) ----------
+def most_coasters_guide():
+    def alone_at(c, H): return bool(c["hr"]) and hin(c["hr"]) <= H + 1e-9 and not (c["hr"].get("max") and hin(c["hr"], "max") < H)
+    ps = sorted(PARKS, key=lambda p: (-len(p["coasters"]), p["name"]))
+    top = ps[:30]; n1 = len(top[0]["coasters"]); leaders = [p for p in ps if len(p["coasters"]) == n1]
+    total = sum(len(p["coasters"]) for p in PARKS)
+    rows = ""
+    rank = 0; prev = None
+    for i, p in enumerate(top):
+        k = len(p["coasters"])
+        if k != prev: rank = i + 1; prev = k
+        tall = max((c for c in p["coasters"] if c["height"]), key=lambda c: c["height"], default=None)
+        k48 = sum(1 for c in p["coasters"] if alone_at(c, 48))
+        rows += (f'<tr><td>{rank}</td><td><a href="/parks/{p["slug"]}/">{E(p["name"])}</a><br><span class="muted">{E(p["loc"])}</span></td><td>{k}</td>'
+                 f'<td>{clink(tall, False) + " (" + ft(tall["height"]) + ")" if tall else "n/a"}</td><td>{k48}</td></tr>')
+    table = f'<div class="tablewrap"><table><thead><tr><th scope="col">Rank</th><th scope="col">Park</th><th scope="col">Coasters</th><th scope="col">Tallest by listed height</th><th scope="col">Ride alone at 48 in (122 cm)</th></tr></thead><tbody>{rows}</tbody></table></div>'
+    regs = {}
+    for p in ps: regs.setdefault(REGION.get(p["country"], "Other"), []).append(p)
+    regl = ""
+    for r in ["North America", "Europe", "Asia", "Middle East", "Oceania", "South America", "Africa"]:
+        if r not in regs: continue
+        best = regs[r]; k = len(best[0]["coasters"]); tied = [p for p in best if len(p["coasters"]) == k]
+        regl += f'<li><strong>{E(r)}</strong>: ' + " and ".join(f'<a href="/parks/{p["slug"]}/">{E(p["name"])}</a>' for p in tied) + f' ({k} coasters{" each" if len(tied) > 1 else ""}), out of {len(best)} park{"s" if len(best) != 1 else ""} we cover there</li>'
+    byc = {}
+    for p in ps: byc.setdefault(p["country"], []).append(p)
+    cl = ""
+    for cc, pl in sorted(byc.items(), key=lambda kv: (-len(kv[1][0]["coasters"]), kv[1][0]["name"])):
+        if len(pl) < 2: continue
+        b = pl[0]; cname = COUNTRIES.get(cc, "the United States" if cc == "US" else cc)
+        cl += f'<li>{E(cname[0].upper() + cname[1:])}: <a href="/parks/{b["slug"]}/">{E(b["name"])}</a> ({len(b["coasters"])} of the {sum(len(x["coasters"]) for x in pl)} coasters at the {len(pl)} parks we cover)</li>'
+    lead = " and ".join(E(p["name"]) for p in leaders)
+    k48_top = max(top, key=lambda p: sum(1 for c in p["coasters"] if alone_at(c, 48)))
+    k48n = sum(1 for c in k48_top["coasters"] if alone_at(c, 48))
+    body = (f'<p class="answer">Of the {len(PARKS)} theme parks on Coaster Map, <strong>{lead}</strong> {"have" if len(leaders) > 1 else "has"} the most operating roller coasters, with <strong>{n1}</strong>{" each" if len(leaders) > 1 else ""}, going by RCDB\'s list of operating coasters at each park. '
+            f'The table ranks the 30 parks with the most coasters and shows how many of each park\'s coasters a 48-inch (122 cm) child can ride alone under the park\'s official height rules.</p>'
+            f'<p>Counts include kiddie and family coasters as well as the big thrill rides, because RCDB lists every roller coaster a park operates. A park with many small coasters can therefore outrank one with fewer, bigger rides. Of the top 30, {E(k48_top["name"])} has the most coasters a 48-inch rider can ride alone ({k48n}); the park pages list every coaster with its height rule.</p>'
+            f'<section aria-labelledby="top-h"><h2 id="top-h">The 30 parks with the most roller coasters on Coaster Map</h2>{table}<p class="muted">Parks with the same number of coasters share a rank. "Ride alone at 48 in" counts coasters whose official ride-alone minimum is 48 inches (122 cm) or less, excluding rides with a maximum below that height. "Tallest by listed height" uses the structure height RCDB gives for each coaster; coasters without a listed height (such as some rides built into the ground) are left out of that column.</p></section>'
+            f'<section aria-labelledby="reg-h"><h2 id="reg-h">The park with the most coasters in each region</h2><ul>{regl}</ul></section>'
+            f'<section aria-labelledby="cty-h"><h2 id="cty-h">The park with the most coasters in each country</h2><p>For each country where we cover two or more parks:</p><ul>{cl}</ul></section>')
+    eu = regs.get("Europe", [None])[0]; asia = regs.get("Asia", [None])[0]
+    faqs = [("Which theme park has the most roller coasters?", f"Of the {len(PARKS)} parks Coaster Map covers, {' and '.join(p['name'] for p in leaders)} {'have' if len(leaders) > 1 else 'has'} the most, with {n1} operating roller coasters{' each' if len(leaders) > 1 else ''} on RCDB's list, last verified {CHECKED}."),
+            ("Do kiddie coasters count?", "Yes. RCDB lists every roller coaster a park operates, from kiddie coasters to giga coasters, and the counts here follow RCDB. Water coasters and alpine coasters count where RCDB lists them as roller coasters.")]
+    if eu: faqs.append(("Which park in Europe has the most roller coasters?", f"Of the European parks we cover, {eu['name']}, with {len(eu['coasters'])} operating coasters."))
+    if asia: faqs.append(("Which park in Asia has the most roller coasters?", f"Of the Asian parks we cover, {asia['name']}, with {len(asia['coasters'])} operating coasters."))
+    faqs.append(("How many roller coasters does Coaster Map cover?", f"{total:,} operating roller coasters at {len(PARKS)} theme parks, each with its own page, RCDB statistics and the park's official height rule where the park publishes one."))
+    title = f"Theme Parks With the Most Roller Coasters | {BRAND}"
+    guide("/guides/theme-parks-with-the-most-roller-coasters/", title, f"The theme parks with the most roller coasters, ranked from RCDB's operating lists, with the leader in each region and country and kid-friendly counts.",
+          "Theme parks with the most roller coasters", body, faqs, "Records", "Ranked by number of coasters, with leaders by region.", None,
+          [("/guides/tallest-roller-coasters/", "Tallest roller coasters"), ("/guides/fastest-roller-coasters/", "Fastest roller coasters"), ("/guides/world-record-roller-coasters/", "World-record roller coasters"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids")])
+
 def build_guides():
-    height_guides(); ranking_guides(); intense_guide(); first_timer_guide(); region_guides(); type_guides(); types_hub(); build_explainers(); guides_hub()
+    height_guides(); ranking_guides(); intense_guide(); first_timer_guide(); region_guides(); most_coasters_guide(); type_guides(); types_hub(); build_explainers(); guides_hub()
