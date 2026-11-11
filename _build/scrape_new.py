@@ -20,6 +20,7 @@ NEW.update({'nigloland':4854,'mt-olympus':4561,'kolmarden':6334,'nagashima-spa-l
 NEW.update({'hansa-park':4873,'plopsaland-de-panne':4850,'plopsaland-deutschland':4871})
 NEW.update({'hellendoorn':4841,'walygator-grand-est':4855,'fraispertuis-city':5216})
 NEW.update({'parque-de-atracciones-madrid':4928})
+NEW.update({'chimelong-ocean-kingdom':8991,'chimelong-paradise':5904,'farup-sommerland':4908,'magicland':5627,'motiongate':13813,'legoland-malaysia':9575,'freizeit-land-geiselwind':4876,'pleasurewood-hills':4818,'gullivers-land':4825,'gyeongju-world':5040,'powerpark':5532,'fantasy-island':4812,'schloss-thurn':4894,'fantasilandia':4949,'julianatoren':4853})
 d=json.load(open('rcdb.json'))
 for slug in sys.argv[1:] or NEW:
     pid=NEW[slug]

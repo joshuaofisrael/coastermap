@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 971 coasters at 148 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1034 coasters at 159 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1131,3 +1131,77 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Der Schwur des Kärnan](https://coastermap.com/parks/hansa-park/der-schwur-des-karnan/): min height 130 cm
   - [Der kleine Zar](https://coastermap.com/parks/hansa-park/der-kleine-zar/): min height 120 cm
   - [Cornwall Coaster](https://coastermap.com/parks/hansa-park/cornwall-coaster/): min height 90 cm
+- [Fårup Sommerland](https://coastermap.com/parks/farup-sommerland/): 8 coasters
+  - [Mine-Expressen](https://coastermap.com/parks/farup-sommerland/mine-expressen/): min height 105 cm
+  - [Flagermusen](https://coastermap.com/parks/farup-sommerland/flagermusen/): min height 150 cm
+  - [Falken](https://coastermap.com/parks/farup-sommerland/falken/): min height 130 cm
+  - [Lynet](https://coastermap.com/parks/farup-sommerland/lynet/): min height 120 cm
+  - [Pindsvinet](https://coastermap.com/parks/farup-sommerland/pindsvinet/): min height 105 cm
+  - [Orkanen](https://coastermap.com/parks/farup-sommerland/orkanen/): min height 105 cm
+  - [Saven](https://coastermap.com/parks/farup-sommerland/saven/): min height 120 cm
+  - [Fønix](https://coastermap.com/parks/farup-sommerland/fonix/): min height 140 cm
+- [PowerPark](https://coastermap.com/parks/powerpark/): 7 coasters
+  - [Joyride](https://coastermap.com/parks/powerpark/joyride/): min height 120 cm
+  - [Cobra](https://coastermap.com/parks/powerpark/cobra/): min height 130 cm
+  - [Thunderbird](https://coastermap.com/parks/powerpark/thunderbird/): min height 130 cm
+  - [Mine Train](https://coastermap.com/parks/powerpark/mine-train/): min height 110 cm
+  - [Neo's Twister](https://coastermap.com/parks/powerpark/neos-twister/): min height 130 cm
+  - [Junker](https://coastermap.com/parks/powerpark/junker/): min height 130 cm
+  - [Pitts Special](https://coastermap.com/parks/powerpark/pitts-special/): min height 130 cm
+- [MagicLand](https://coastermap.com/parks/magicland/): 5 coasters
+  - [Esplorabruco](https://coastermap.com/parks/magicland/esplorabruco/): min height 120 cm
+  - [Olandese Volante](https://coastermap.com/parks/magicland/olandese-volante/): min height 130 cm
+  - [Dune](https://coastermap.com/parks/magicland/dune/): min height 122 cm
+  - [Shock](https://coastermap.com/parks/magicland/shock/): min height 130 cm
+  - [Cagliostro](https://coastermap.com/parks/magicland/cagliostro/): min height 120 cm
+- [Freizeit-Land Geiselwind](https://coastermap.com/parks/freizeit-land-geiselwind/): 8 coasters
+  - [Silverpony Express](https://coastermap.com/parks/freizeit-land-geiselwind/silverpony-express/)
+  - [Doggy Dog](https://coastermap.com/parks/freizeit-land-geiselwind/doggy-dog/): min height 105 cm
+  - [Cobra](https://coastermap.com/parks/freizeit-land-geiselwind/cobra/): min height 130 cm
+  - [Drachenhöhle](https://coastermap.com/parks/freizeit-land-geiselwind/drachenhohle/): min height 120 cm
+  - [Taka Waka](https://coastermap.com/parks/freizeit-land-geiselwind/taka-waka/): min height 120 cm
+  - [Wilde Hilde](https://coastermap.com/parks/freizeit-land-geiselwind/wilde-hilde/): min height 130 cm
+  - [Fluch des Kraken](https://coastermap.com/parks/freizeit-land-geiselwind/fluch-des-kraken/): min height 130 cm
+  - [Piraten Spinner](https://coastermap.com/parks/freizeit-land-geiselwind/piraten-spinner/)
+- [Pleasurewood Hills](https://coastermap.com/parks/pleasurewood-hills/): 5 coasters
+  - [Wipeout](https://coastermap.com/parks/pleasurewood-hills/wipeout/): min height 130 cm
+  - [Marble Madness](https://coastermap.com/parks/pleasurewood-hills/marble-madness/): min height 125 cm
+  - [Family Coaster](https://coastermap.com/parks/pleasurewood-hills/family-coaster/)
+  - [Barnyard Whirl](https://coastermap.com/parks/pleasurewood-hills/barnyard-whirl/)
+  - [Egg-Spress](https://coastermap.com/parks/pleasurewood-hills/egg-spress/): min height 125 cm
+- [Gulliver's Land](https://coastermap.com/parks/gullivers-land/): 4 coasters
+  - [Crazy Mouse](https://coastermap.com/parks/gullivers-land/crazy-mouse/)
+  - [Runaway Train](https://coastermap.com/parks/gullivers-land/runaway-train/): min height 120 cm
+  - [Grand Prix Racers](https://coastermap.com/parks/gullivers-land/grand-prix-racers/): min height 120 cm
+  - [Wriggler](https://coastermap.com/parks/gullivers-land/wriggler/): min height 120 cm
+- [Fantasy Island](https://coastermap.com/parks/fantasy-island/): 6 coasters
+  - [The Rhombus Express](https://coastermap.com/parks/fantasy-island/the-rhombus-express/): min height 120 cm
+  - [Jellikins Coaster](https://coastermap.com/parks/fantasy-island/jellikins-coaster/): min height 100 cm
+  - [Millennium](https://coastermap.com/parks/fantasy-island/millennium/): min height 140 cm
+  - [Odyssey](https://coastermap.com/parks/fantasy-island/odyssey/): min height 140 cm
+  - [Family Roller Coaster](https://coastermap.com/parks/fantasy-island/family-roller-coaster/)
+  - [Snow Drift](https://coastermap.com/parks/fantasy-island/snow-drift/)
+- [Fantasilandia](https://coastermap.com/parks/fantasilandia/): 6 coasters
+  - [Montaña Dragón](https://coastermap.com/parks/fantasilandia/montana-dragon/): min height 90 cm
+  - [Wild Mouse](https://coastermap.com/parks/fantasilandia/wild-mouse/): min height 120 cm
+  - [Raptor](https://coastermap.com/parks/fantasilandia/raptor/): min height 140 cm
+  - [Tren Minero](https://coastermap.com/parks/fantasilandia/tren-minero/): min height 140 cm
+  - [Car City](https://coastermap.com/parks/fantasilandia/car-city/): min height 120 cm
+  - [Boomerang](https://coastermap.com/parks/fantasilandia/boomerang/): min height 120 cm
+- [Chimelong Ocean Kingdom](https://coastermap.com/parks/chimelong-ocean-kingdom/): 5 coasters
+  - [Walrus Splash](https://coastermap.com/parks/chimelong-ocean-kingdom/walrus-splash/): min height 132 cm
+  - [Polar Explorer](https://coastermap.com/parks/chimelong-ocean-kingdom/polar-explorer/): min height 150 cm
+  - [Parrot Coaster](https://coastermap.com/parks/chimelong-ocean-kingdom/parrot-coaster/): min height 132 cm
+  - [Penguin Coaster](https://coastermap.com/parks/chimelong-ocean-kingdom/penguin-coaster/): min height 120 cm
+  - [Jungle Coaster](https://coastermap.com/parks/chimelong-ocean-kingdom/jungle-coaster/): min height 120 cm
+- [Chimelong Paradise](https://coastermap.com/parks/chimelong-paradise/): 4 coasters
+  - [Circus Roller Coaster](https://coastermap.com/parks/chimelong-paradise/circus-roller-coaster/): min height 140 cm
+  - [Young Star Coaster](https://coastermap.com/parks/chimelong-paradise/young-star-coaster/): min height 130 cm
+  - [Sky Rocket](https://coastermap.com/parks/chimelong-paradise/sky-rocket/): min height 140 cm
+  - [Launch Coaster](https://coastermap.com/parks/chimelong-paradise/launch-coaster/): min height 130 cm
+- [Gyeongju World](https://coastermap.com/parks/gyeongju-world/): 5 coasters
+  - [Phaethon](https://coastermap.com/parks/gyeongju-world/phaethon/): min height 145 cm
+  - [Draken](https://coastermap.com/parks/gyeongju-world/draken/): min height 135 cm
+  - [Valkyrie](https://coastermap.com/parks/gyeongju-world/valkyrie/): min height 120 cm
+  - [Sköll & Hati](https://coastermap.com/parks/gyeongju-world/skoll-hati/): min height 125 cm
+  - [Wizard Race](https://coastermap.com/parks/gyeongju-world/wizard-race/): min height 105 cm

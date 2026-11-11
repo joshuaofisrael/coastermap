@@ -834,7 +834,7 @@ HP_B12a = {
  ("mt-olympus", "Pegasus"): dict(min=42, src=MTO),
  ("mt-olympus", "Little Titans"): dict(min=40, max=56, note="Kids' coaster: minimum 40 inches, maximum 56 inches, no adults.", src=MTO),
  ("gullivers-warrington", "Antelope"): M(min=140, acc_min=110, acc_max=140, note=_adult(110, 140), src=GWR),
- ("gullivers-warrington", "Grand Prix Racers"): M(min=120, acc_min=100, acc_max=120, max=195, note=_adult(100, 120), src=GWR),
+ ("gullivers-warrington", "Grand Prix Racers"): M(min=120, acc_min=100, acc_max=120, max=195, note="At Gulliver's World it sits in the Gulliver's Gears area; riders 100 to 120 cm must ride with an adult, and riders over 195 cm cannot ride.", src=GWR),
  ("gullivers-warrington", "Wriggler"): M(min=120, acc_min=90, acc_max=120, max=195, note=_adult(90, 120), src=GWR),
  ("furuvik", "Fireball"): M(min=120, acc_min=100, acc_max=120, max=205, note="Riders 100 to 120 cm (and at least 4 years old) must ride with an adult; riding alone needs 120 cm and age 8.", src=FUR("fireball")),
  ("furuvik", "Draken"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm (and at least 4 years old) must ride with an adult.", src=FUR("tivoli/draken")),
@@ -881,3 +881,91 @@ INTL_PARKS += [
 DISPLAY_INTL.update({("gullivers-warrington", "Antelope"): "The Antelope", ("gullivers-warrington", "Wriggler"): "The Wriggler", ("walygator-grand-est", "Monster"): "The Monster",
  ("hansa-park", "Schwur des Kärnan"): "Der Schwur des Kärnan", ("hansa-park", "Kleine Zar"): "Der kleine Zar", ("hansa-park", "Schlange von Midgard"): "Die Schlange von Midgard",
  ("beto-carrero", "Firewhip"): "FireWhip"})
+
+# ---- Batch 12b (11 Nov 2026): Fårup, PowerPark, MagicLand, Geiselwind, UK seaside parks, Fantasilandia, Chimelong, Gyeongju World ----
+FAR = ("Fårup Sommerland, official height and age guide", "https://www.faarupsommerland.dk/planlaeg/praktisk-information/hoejde-og-alderskrav/")
+PPK = ("PowerPark, official safety limits table (Turvarajat)", "https://www.powerpark.fi/huvilaitteet/turvarajat/")
+def MGL(s): return ("MagicLand, official attraction page", f"https://magicland.it/it/attrazioni/{s}")
+def FLG(s): return ("Freizeit-Land Geiselwind, official attraction page", f"https://freizeit-land.de/{s}/")
+def PWH(s): return ("Pleasurewood Hills, official ride page", f"https://pleasurewoodhills.com/ride/{s}/")
+GLR = ("Gulliver's Land Resort, official rides page", "https://www.gulliverslandresort.co.uk/explore/rides/")
+def FIS(s): return ("Fantasy Island, official ride page", f"https://www.fantasyislandresort.co.uk/rides-and-attractions/{s}/")
+def FTL(s): return ("Fantasilandia, official attraction page", f"https://www.fantasilandia.cl/explora-el-parque/atracciones/{s}.html")
+def CLO(i): return ("Chimelong Ocean Kingdom, official attraction page (safety rules)", f"https://www.chimelong.com/zh/oceankingdom/exhibition/{i}.html")
+def CLP(i): return ("Chimelong Paradise, official attraction page (height limits)", f"https://www.chimelong.com/gz/chimelongparadise/exhibition/{i}.html")
+def GJW(n): return ("Gyeongju World, official attraction page", f"https://www.gjw.co.kr/Contents/eng_contents.php?cmsNo=ENGN100%2Fview%2F{n}")
+HP_B12b = {
+ ("farup-sommerland", "Fønix"): M(min=140, acc_min=120, acc_max=140, note=_adult(120, 140), src=FAR),
+ ("farup-sommerland", "Lynet"): M(min=120, src=FAR),
+ ("farup-sommerland", "Falken"): M(min=130, acc_min=110, acc_max=130, note=_adult(110, 130), src=FAR),
+ ("farup-sommerland", "Flagermusen"): M(min=150, acc_min=115, acc_max=150, note=_adult(115, 150), src=FAR),
+ ("farup-sommerland", "Saven"): M(min=120, acc_min=95, acc_max=120, note=_adult(95, 120), src=FAR),
+ ("farup-sommerland", "Orkanen"): M(min=105, max=205, src=FAR),
+ ("farup-sommerland", "Mine Expressen"): M(min=105, acc_min=90, acc_max=105, note=_adult(90, 105), src=FAR),
+ ("farup-sommerland", "Pindsvinet"): M(min=105, acc_min=90, acc_max=105, note=_adult(90, 105), src=FAR),
+ ("powerpark", "Thunderbird"): M(min=130, src=PPK),
+ ("powerpark", "Cobra"): M(min=130, max=195, src=PPK),
+ ("powerpark", "Junker"): M(min=130, max=195, note="Riders aged 8 to 10 (over 130 cm) must ride with a guardian.", src=PPK),
+ ("powerpark", "Pitts Special"): M(min=130, max=195, note="Riders aged 8 to 10 (over 130 cm) must ride with a guardian.", src=PPK),
+ ("powerpark", "Neo's Twister"): M(min=130, acc_min=120, acc_max=130, note="Riders 120 to 130 cm must ride with a guardian (15 or older).", src=PPK),
+ ("powerpark", "Joyride"): M(min=120, src=PPK),
+ ("powerpark", "Mine Train"): M(min=110, note="The park lists 110 cm as the safety limit and says riders under 110 cm may ride only with a guardian (15 or older); no lower limit is stated.", src=PPK),
+ ("magicland", "Shock"): M(min=130, max=200, note="Minimum age 8.", src=MGL("shock")),
+ ("magicland", "Cagliostro"): M(min=120, max=195, src=MGL("cagliostro")),
+ ("magicland", "Olandese Volante"): M(min=130, acc_min=110, acc_max=130, note="Riders under 130 cm must be accompanied (minimum 110 cm, minimum age 4).", src=MGL("olandese-volante")),
+ ("magicland", "Dune"): M(min=122, acc_min=95, acc_max=122, max=200, note="Riders under 122 cm must be accompanied (minimum 95 cm, minimum age 4).", src=MGL("dune")),
+ ("magicland", "Esplorabruco"): M(min=120, acc_min=95, acc_max=120, note="Riders under 120 cm must be accompanied (minimum 95 cm).", src=MGL("esplorabruco")),
+ ("freizeit-land-geiselwind", "Fluch des Kraken"): M(min=130, max=190, note="Minimum age 10.", src=FLG("fluch-des-kraken")),
+ ("freizeit-land-geiselwind", "Cobra"): M(min=130, max=195, note="Children under 12 must ride with a companion.", src=FLG("cobra-coaster")),
+ ("freizeit-land-geiselwind", "Wilde Hilde"): M(min=130, acc_min=120, acc_max=130, note="Riders 120 to 130 cm must ride with a companion; minimum age 6.", src=FLG("wildehilde")),
+ ("freizeit-land-geiselwind", "Taka Waka"): M(min=120, note="Ages 6 and 7 ride with a companion; from age 8 alone.", src=FLG("taka-waka")),
+ ("freizeit-land-geiselwind", "Drachen Höhle"): M(min=120, note="Children aged 6 to 12 ride with a companion.", src=FLG("drachenhoehle")),
+ ("freizeit-land-geiselwind", "Doggy Dog"): M(min=105, note="Children aged 3 to 6 ride with a companion.", src=FLG("doggy-dog")),
+ ("pleasurewood-hills", "Wipeout"): M(min=130, src=PWH("wipeout")),
+ ("pleasurewood-hills", "Marble Madness"): M(min=125, src=PWH("marble-madness-roller-coaster")),
+ ("pleasurewood-hills", "Egg-Spress"): M(min=125, acc_min=90, acc_max=125, note="Guests between 0.9 m and 1.25 m must be accompanied by an adult.", src=PWH("egg-spress-roller-coaster")),
+ ("gullivers-land", "Runaway Train"): M(min=120, acc_min=90, acc_max=120, note=_adult(90, 120), src=GLR),
+ ("gullivers-land", "Grand Prix Racers"): M(min=120, acc_min=100, acc_max=120, note="At Gulliver's Land it sits in the Adventure Land area; riders 100 to 120 cm must ride with an adult (no maximum height is listed there).", src=GLR),
+ ("gullivers-land", "Wriggler"): M(min=120, acc_min=90, acc_max=120, max=195, note=_adult(90, 120), src=GLR),
+ ("fantasy-island", "Millennium"): M(min=140, acc_min=120, acc_max=140, note="Riders under 1.4 m must be accompanied by an adult (minimum 1.2 m).", src=FIS("millennium")),
+ ("fantasy-island", "Odyssey"): M(min=140, acc_min=130, acc_max=140, note="Riders under 1.4 m must be accompanied by an adult (minimum 1.3 m).", src=FIS("odyssey")),
+ ("fantasy-island", "Rhombus Express"): M(min=120, acc_min=100, acc_max=120, note="Riders under 1.2 m must be accompanied by an adult (minimum 1.0 m).", src=FIS("the-rhombus-express")),
+ ("fantasy-island", "Jellikins Coaster"): M(min=100, max=160, src=FIS("jellikins")),
+ ("fantasilandia", "Raptor"): M(min=140, src=FTL("adrenalina/raptor")),
+ ("fantasilandia", "Boomerang"): M(min=120, src=FTL("adrenalina/boomerang")),
+ ("fantasilandia", "Wild Mouse"): M(min=120, src=FTL("familiares/wild-mouse")),
+ ("fantasilandia", "Tren Minero"): M(min=140, acc_min=90, acc_max=140, note="Riders 0.90 to 1.40 m must ride with an adult.", src=FTL("adrenalina/tren-minero")),
+ ("fantasilandia", "Car City"): M(min=120, acc_min=90, acc_max=120, max=195, note="Riders 0.90 to 1.20 m must ride with an adult.", src=FTL("familiares/car-city")),
+ ("fantasilandia", "Montaña Dragón"): M(min=90, src=FTL("zona-kids/monta%C3%B1a-dragon")),
+ ("chimelong-ocean-kingdom", "Parrot Coaster"): M(min=132, max=195, src=CLO(2330)),
+ ("chimelong-ocean-kingdom", "Polar Explorer"): M(min=150, acc_min=120, acc_max=150, note="Children 1.2 m to 1.5 m (inclusive) must ride with an adult.", src=CLO(2336)),
+ ("chimelong-ocean-kingdom", "Walrus Splash"): M(min=132, acc_min=120, acc_max=132, note="Children 1.2 m to 1.32 m (inclusive) must ride with a guardian.", src=CLO(2325)),
+ ("chimelong-ocean-kingdom", "Jungle Coaster"): M(min=120, acc_min=100, acc_max=120, note="Children 1 m to 1.2 m (inclusive) must ride with an adult; not for children under 4.", src=CLO(2328)),
+ ("chimelong-ocean-kingdom", "Penguin Coaster"): M(min=120, acc_min=100, acc_max=120, note="Children 1 m to 1.2 m (inclusive) must ride with an adult; not for children under 4.", src=CLO(2312)),
+ ("chimelong-paradise", "Circus Roller Coaster"): M(min=140, max=195, note="Children under 12 must ride with a parent.", src=CLP(7897)),
+ ("chimelong-paradise", "Sky Rocket"): M(min=140, max=195, src=CLP(2358)),
+ ("chimelong-paradise", "Launch Coaster"): M(min=130, max=195, note="Children under 10 must ride with a parent.", src=CLP(7607)),
+ ("chimelong-paradise", "Young Star Coaster"): M(min=130, acc_min=100, acc_max=130, note="Children 1 m to 1.3 m must ride with a parent.", src=CLP(2356)),
+ ("gyeongju-world", "Phaethon"): M(min=145, src=GJW(8)),
+ ("gyeongju-world", "Draken"): M(min=135, src=GJW(14)),
+ ("gyeongju-world", "Sköll & Hati"): M(min=125, src=GJW(56)),
+ ("gyeongju-world", "Valkyrie"): M(min=120, src=GJW(50)),
+ ("gyeongju-world", "Wizard Race"): M(min=105, src=GJW(54)),
+}
+HP_INTL.update(HP_B12b)
+_C = "11 Nov 2026"
+INTL_PARKS += [
+ dict(slug="farup-sommerland", name="Fårup Sommerland", short="Fårup", loc="Blokhus, Denmark", state="North Jutland", country="DK", official="https://www.faarupsommerland.dk/", group="Parks and Resorts Scandinavia", checked=_C),
+ dict(slug="powerpark", name="PowerPark", short="PowerPark", loc="Härmä, Kauhava, Finland", state="South Ostrobothnia", country="FI", official="https://www.powerpark.fi/", group="PowerPark", checked=_C),
+ dict(slug="magicland", name="MagicLand", short="MagicLand", loc="Valmontone, Italy", state="Lazio", country="IT", official="https://magicland.it/", group="MagicLand", checked=_C),
+ dict(slug="freizeit-land-geiselwind", name="Freizeit-Land Geiselwind", short="Geiselwind", loc="Geiselwind, Germany", state="Bavaria", country="DE", official="https://freizeit-land.de/", group="Freizeit-Land Geiselwind", checked=_C),
+ dict(slug="pleasurewood-hills", name="Pleasurewood Hills", short="Pleasurewood Hills", loc="Lowestoft, England", state="Suffolk", country="GB", official="https://pleasurewoodhills.com/", group="Pleasurewood Hills", checked=_C),
+ dict(slug="gullivers-land", name="Gulliver's Land", short="Gulliver's Land", loc="Milton Keynes, England", state="Buckinghamshire", country="GB", official="https://www.gulliverslandresort.co.uk/", group="Gulliver's", checked=_C),
+ dict(slug="fantasy-island", name="Fantasy Island", short="Fantasy Island", loc="Ingoldmells, England", state="Lincolnshire", country="GB", official="https://www.fantasyislandresort.co.uk/", group="Fantasy Island", checked=_C),
+ dict(slug="fantasilandia", name="Fantasilandia", short="Fantasilandia", loc="Santiago, Chile", state="Santiago Metropolitan Region", country="CL", official="https://www.fantasilandia.cl/", group="Fantasilandia", checked=_C),
+ dict(slug="chimelong-ocean-kingdom", name="Chimelong Ocean Kingdom", short="Ocean Kingdom", loc="Hengqin, Zhuhai, China", state="Guangdong", country="CN", official="https://www.chimelong.com/zh/oceankingdom/", group="Chimelong", checked=_C),
+ dict(slug="chimelong-paradise", name="Chimelong Paradise", short="Chimelong Paradise", loc="Panyu, Guangzhou, China", state="Guangdong", country="CN", official="https://www.chimelong.com/gz/chimelongparadise/", group="Chimelong", checked=_C),
+ dict(slug="gyeongju-world", name="Gyeongju World", short="Gyeongju World", loc="Gyeongju, South Korea", state="North Gyeongsang", country="KR", official="https://www.gjw.co.kr/", group="Gyeongju World", checked=_C),
+]
+DISPLAY_INTL.update({("farup-sommerland", "Mine Expressen"): "Mine-Expressen", ("fantasy-island", "Rhombus Express"): "The Rhombus Express",
+ ("freizeit-land-geiselwind", "Drachen Höhle"): "Drachenhöhle"})
