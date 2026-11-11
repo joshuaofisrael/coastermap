@@ -388,7 +388,8 @@ GLOSSARY = [
 ]
 def glossary_page():
     gp = {u for u, *_ in GUIDES}
-    def dd(t, d, u=None): return f'<dt id="{slugify(t)}">{E(t)}</dt><dd>{E(d)}' + (f' <a href="{u}">Read more</a>.' if u and u in gp else "") + "</dd>"
+    GTITLE = {u: h for u, h, *_ in GUIDES}
+    def dd(t, d, u=None): return f'<dt id="{slugify(t)}">{E(t)}</dt><dd>{E(d)}' + (f' Guide: <a href="{u}">{E(GTITLE.get(u, t))}</a>.' if u and u in gp else "") + "</dd>"
     letters = sorted({t[0].upper() for t, *_ in GLOSSARY})
     body = '<p>Jump to: ' + " · ".join(f'<a href="#letter-{l.lower()}">{l}</a>' for l in letters) + '</p>'
     for l in letters: body += f'<h2 id="letter-{l.lower()}">{l}</h2><dl>' + "".join(dd(*g) for g in GLOSSARY if g[0][0].upper() == l) + "</dl>"
