@@ -37,7 +37,13 @@ def signup_box():
 <label class="consent"><input type="checkbox" name="consent" value="yes" required> Email me new-coaster alerts from Coaster Map. I can unsubscribe anytime (see our <a href="/privacy/">privacy policy</a>).</label>
 <button class="btn" type="submit">Sign up</button><p class="form-status" role="status" hidden></p></form></section>'''
 
+def clip_desc(d, n=158):
+    if len(d) <= n: return d
+    cut = d[:n]; i = cut.rfind(". ")
+    if i > 90: return cut[:i + 1]
+    return cut[:cut.rfind(" ")].rstrip(",;:") + "."
 def page(path, title, desc, body, jsonld=None, crumbs=None, extra_head="", modified=TODAY, noindex=False, legal=False):
+    desc = clip_desc(desc)
     canon = url(path)
     if not noindex: PAGES.append((path, modified))
     ld = [{"@context": "https://schema.org", "@type": "WebSite", "name": BRAND, "url": BASE_URL,
@@ -484,7 +490,17 @@ def simple(path, title, desc, h1, inner, crumbs_name=None, legal=False, noindex=
     body = f'<article class="prose"><h1>{E(h1)}</h1>{inner}' + (f'<p class="legal-line">{LEGAL_LINE}</p>' if legal else "") + "</article>"
     write(path, page(path, title, desc, body, None, [("/", "Home"), (path, crumbs_name or h1)], legal=False, noindex=noindex))
 
+def _affil():
+    names = []
+    for p in PARKS:
+        for n in (p["name"], p["group"]):
+            if n not in names: names.append(n)
+    for n in ("Six Flags", "United Parks & Resorts", "Herschend Family Entertainment", "Oriental Land Company", "Ferrari"):
+        if n not in names: names.append(n)
+    return ", ".join(names)
 def about_legal():
+    global AFFIL
+    AFFIL = _affil()
     simple("/about/", f"About {BRAND}", "What Coaster Map is, how we pick and check coaster facts, and what is coming next.", "About Coaster Map", f'''
 <p>Coaster Map is an independent guide to the roller coasters at the world's big theme parks. Our goal is simple: one clear page for every coaster, answering the questions families and thrill seekers actually ask, such as the height requirement, how intense the ride is, and where to sit, plus a map of where each coaster sits in its park.</p>
 <h2>What we cover</h2><p>We now cover {len(PARKS)} parks and {len(ALL)} coasters: {", ".join(p["name"] for p in PARKS[:-1])} and {PARKS[-1]["name"]}. We add parks when we can verify their height rules on official park sources, and we leave out any rule we cannot verify.</p>
@@ -548,7 +564,7 @@ def about_legal():
 <h2>Children</h2><p>The site is for a general audience and is not directed to children under 13. We do not knowingly collect personal information from children. The height checker does not collect or store a child's height.</p>
 <h2>Changes</h2><p>We will post any changes here with a new date.</p>'''),
     "/disclaimer/": ("Disclaimer", f'''<p>Last updated {date_h(TODAY)}.</p>
-<h2>Not affiliated with any park</h2><p>Coaster Map is an independent site. It is not affiliated with, endorsed by or sponsored by Walt Disney World, Universal Orlando Resort, Disneyland Resort, Six Flags, Cedar Point, Kings Island, Kings Dominion, Carowinds, Canada's Wonderland, Knott's Berry Farm, Busch Gardens, SeaWorld, United Parks & Resorts, Hersheypark, Hershey Entertainment & Resorts, Dollywood, Silver Dollar City, Herschend Family Entertainment, Enchanted Parks, Worlds of Fun, Valleyfair, Michigan's Adventure, Mid America Adventure, Kennywood, Lake Compounce, Palace Entertainment, Holiday World, Universal Studios Hollywood, Europa-Park, Phantasialand, Merlin Entertainments, Alton Towers, Thorpe Park, Pleasure Beach Resort, PortAventura World, Ferrari, Efteling, Liseberg, Fuji-Q Highland, Fujikyu, Tokyo Disney Resort, Oriental Land Company, Shanghai Disney Resort, any ride manufacturer or the Roller Coaster DataBase. All park, ride and company names, logos and trademarks belong to their owners and are used only to identify the rides described.</p>
+<h2>Not affiliated with any park</h2><p>Coaster Map is an independent site. It is not affiliated with, endorsed by or sponsored by any of the parks or operators it covers, including {E(AFFIL)}, by any ride manufacturer, or by the Roller Coaster DataBase. All park, ride and company names, logos and trademarks belong to their owners and are used only to identify the rides described.</p>
 <h2>Ride rules change: check with the park</h2><p>Height requirements, maximum heights, companion rules, health and accessibility restrictions, opening dates and ride status are set by each park and can change without notice. The figures on this site were correct on the source page on the date shown, but the park's posted rules and ride staff always take priority. Check the park's official website or app before your visit and confirm at the ride entrance.</p>
 <h2>No safety or medical advice</h2><p>Nothing on this site is safety, medical or professional advice. Descriptions of intensity, "who it suits" and seat suggestions are general opinions to help planning. Riders with health conditions, pregnancy, injuries or other concerns should follow the park's posted warnings and consult a doctor.</p>
 <h2>Accuracy and corrections</h2><p>We cite our sources and leave out what we cannot verify, but errors can happen. Please <a href="/contact/">report errors</a> and we will correct verified mistakes promptly.</p>
@@ -565,12 +581,11 @@ def about_legal():
     }
     for pth, (t, inner) in legal.items():
         body = f'<article class="prose"><h1>{E(t)}</h1>{inner}{L()}</article>'
-        write(pth, page(pth, f"{t} | {BRAND}", f"{t} for Coaster Map (coastermap.com).", body, None, [("/", "Home"), (pth, t)], legal=False))
+        write(pth, page(pth, f"{t} | {BRAND}", f"{t} for Coaster Map (coastermap.com), the independent guide to theme park roller coasters.", body, None, [("/", "Home"), (pth, t)], legal=False))
 
 def not_found():
     body = '<h1>Page not found</h1><p>That page has moved or never existed. Try the <a href="/parks/">park guides</a>, the <a href="/coasters/">full coaster list</a> or the <a href="/map/">coaster map</a>.</p>'
     html_ = page("/404.html", f"Page not found | {BRAND}", "Page not found.", body, noindex=True)
-    PAGES.pop()
     open(os.path.join(ROOT, "404.html"), "w").write(html_)
 
 def extras():
