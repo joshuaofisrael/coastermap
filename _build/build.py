@@ -215,10 +215,10 @@ def stat_rows(c):
         if h.get("note"): rows.append(("Other rider rules", h["note"]))
         if h.get("thrill"): rows.append(("Park thrill rating", f'{h["thrill"]} of 5'))
     else:
-        rows.append(("Minimum height", "Not yet verified. Check with the park."))
+        rows.append(("Minimum height", "Not clearly published by the park. Check the sign at the ride entrance."))
     for k, v in [("Height", ft(c["height"])), ("Drop", ft(c["drop"])), ("Top speed", mph(c["speed"])), ("Track length", ft(c["length"])),
                  ("Inversions", c["inversions"]), ("Steepest drop angle", f'{c["angle"]}°' if c["angle"] else None), ("Max g-force", c["gforce"]),
-                 ("Opened", date_h(c["opened"])), ("Manufacturer", c["make"]), ("Model", c["model"]), ("Type", ", ".join(c["tags"]))]:
+                 ("Ride time", f'{c["duration"] // 60}:{c["duration"] % 60:02d}' if c.get("duration") else None), ("Opened", date_h(c["opened"])), ("Manufacturer", c["make"]), ("Model", c["model"]), ("Type", ", ".join(c["tags"]))]:
         if v not in (None, ""): rows.append((k, str(v)))
     return rows
 
@@ -239,6 +239,7 @@ def faq_items(c):
     if sent: q.append((f'Is {c["name"]} scary?', f'It depends on the rider, but on intensity: {re.sub("<[^>]+>", "", sent)} ' + ({"Kiddie": "It is one of the gentlest coasters you can ride.", "Family": "It is built for families.", "Thrill": "Expect a lively ride that stops short of the most extreme coasters.", "Extreme": "That is RCDB's most intense class."}.get(c["scale"], ""))))
     if c["opened"]: q.append((f'When did {c["name"]} open?', f'{c["name"]} opened {"on " + date_h(c["opened"]) if len(c["opened"]) > 4 else "in " + c["opened"]}' + (f' (previously known as {" and later ".join(c["former"])})' if c["former"] else "") + '.'))
     if c["make"]: q.append((f'Who built {c["name"]}?', f'{c["name"]} was manufactured by {c["make"]}' + ("" if c["make"].endswith(".") else ".")))
+    q += detail_faqs(c)
     q += clone_faqs(c)
     return q
 
@@ -324,6 +325,7 @@ def coaster_page(c):
 <p class="answer">{"; ".join(answer)}.</p>
 <p>{describe(c)}</p>
 {feel_html(c)}
+{specs_html(c)}
 <div class="grid2"><section aria-labelledby="stats-h"><h2 id="stats-h">{E(c["name"])} stats</h2><table class="stats"><tbody>{rows}</tbody></table>
 {"<p class='note'>" + E(c["name"]) + " has two tracks; RCDB figures above are for one track.</p>" if c["twin"] else ""}</section>
 <section aria-labelledby="int-h"><h2 id="int-h">How intense is it?</h2><p class="pill">{E(lab)}</p><p>{isent}</p>
@@ -615,6 +617,7 @@ exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "guid
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "parkguide.py")).read(), "parkguide.py", "exec"))
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "explainers.py")).read(), "explainers.py", "exec"))
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "coasterplus.py")).read(), "coasterplus.py", "exec"))
+exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "specs.py")).read(), "specs.py", "exec"))
 
 if __name__ == "__main__":
     build_guides()
