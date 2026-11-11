@@ -742,3 +742,7 @@ Totals after batch 10: 102 parks, 741 coasters, 928 pages. Live 200 checks passe
 **Batch 11g: 2 new parks, 8 coasters, 7 official rules.** Avonturenpark Hellendoorn 4/4 (official attraction pages), Fraispertuis-City 3/4 (official attraction lists; La Ronde des Rondins not listed). Not added: Walygator Grand Est (site refused connections from our renderer).
 
 Totals after batch 11g: 138 parks, 925 coasters (858 with an official height rule), 1,152 pages in the sitemap. Validator 0 issues after every batch; near-duplicates over 0.6 stayed at 4 (median 0.34). Marked closed: none (every park matched RCDB's operating list).
+
+**Batch 11h: 1 new park, 6 coasters, 6 official rules.** Parque de Atracciones de Madrid 6/6 (official attraction pages; the "under 120 cm with an adult" notes stored as the companion band).
+
+Totals after batch 11h: 139 parks, 931 coasters (864 with an official height rule), 1,159 sitemap URLs. Validator 0 issues; near-duplicates over 0.6: 4 (median 0.34).

@@ -19665,5 +19665,93 @@
    "Camiel Bilsen"
   ],
   "installer": "RCS GmbH"
+ },
+ "1101": {
+  "elements": [
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
+  "capacity": "1500 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "2924": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "8 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "capacity": "870 riders per hour",
+  "installer": "RCS GmbH"
+ },
+ "3185": {
+  "elements": [
+   [
+    "Vertical Chain Lift Hill",
+    null
+   ],
+   [
+    "Sky Loop",
+    "160.8 ft tall"
+   ]
+  ],
+  "arrangement": "Single train with 2 cars. Riders are arranged 2 across in 3 rows for a total of 12 riders.",
+  "capacity": "550 riders per hour"
+ },
+ "3848": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in a single row for a total of 12 riders.",
+  "former": [
+   [
+    "Vagones Locos",
+    "2007",
+    "2017"
+   ]
+  ]
+ },
+ "3922": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 5 cars. Riders are arranged 2 across in 2 rows for a total of 20 riders.",
+  "former": [
+   [
+    "Turbulencia",
+    "2007",
+    "2013"
+   ]
+  ]
+ },
+ "10402": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 9 cars per train. Riders are arranged 2 across in a single row for a total of 18 riders per train.",
+  "capacity": "1000 riders per hour"
  }
 }

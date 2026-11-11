@@ -798,3 +798,19 @@ INTL_PARKS += [
  dict(slug="fraispertuis-city", name="Fraispertuis-City", short="Fraispertuis-City", loc="Jeanménil, France", state="Grand Est", country="FR", official="https://www.fraispertuis-city.fr/", group="Fraispertuis-City"),
 ]
 DISPLAY_INTL.update({("fraispertuis-city", "Grand Canyon"): "Le Grand Canyon"})
+
+# ---- Batch 11h (10 Nov 2026): Parque de Atracciones de Madrid ----
+def PAM(s): return ("Parque de Atracciones de Madrid, official attraction page", f"https://www.parquedeatracciones.es/experiencias/atracciones/{s}")
+HP_B11h = {
+ ("parque-de-atracciones-madrid", "Abismo"): M(min=135, max=200, src=PAM("abismo")),
+ ("parque-de-atracciones-madrid", "Tornado"): M(min=120, max=193, src=PAM("tornado")),
+ ("parque-de-atracciones-madrid", "Tarántula"): M(min=120, max=195, src=PAM("tarantula")),
+ ("parque-de-atracciones-madrid", "TNT Tren de la Mina"): M(min=120, acc_min=100, acc_max=120, max=195, note="Riders 100 to 120 cm must ride with an adult.", src=PAM("tnt-tren-de-la-mina")),
+ ("parque-de-atracciones-madrid", "Paw Patrol: Patrulla Canina"): M(min=120, acc_min=90, acc_max=120, note="Riders 90 to 120 cm must ride with an adult.", src=PAM("patrulla-canina")),
+ ("parque-de-atracciones-madrid", "Padrinos Voladores"): M(min=120, acc_min=90, acc_max=120, note="Riders 90 to 120 cm must ride with an adult.", src=PAM("padrinos-voladores")),
+}
+HP_INTL.update(HP_B11h)
+INTL_PARKS += [
+ dict(slug="parque-de-atracciones-madrid", name="Parque de Atracciones de Madrid", short="Parque de Atracciones", loc="Madrid, Spain", state="Community of Madrid", country="ES", official="https://www.parquedeatracciones.es/", group="Parques Reunidos"),
+]
+DISPLAY_INTL.update({("parque-de-atracciones-madrid", "Paw Patrol: Patrulla Canina"): "Patrulla Canina (PAW Patrol)"})

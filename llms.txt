@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 925 coasters at 138 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 931 coasters at 139 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1075,3 +1075,10 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Timber Drop](https://coastermap.com/parks/fraispertuis-city/timber-drop/): min height 122 cm
   - [Ronde des Rondins](https://coastermap.com/parks/fraispertuis-city/ronde-des-rondins/)
   - [Fireline Redwood](https://coastermap.com/parks/fraispertuis-city/fireline-redwood/): min height 95 cm
+- [Parque de Atracciones de Madrid](https://coastermap.com/parks/parque-de-atracciones-madrid/): 6 coasters
+  - [Tornado](https://coastermap.com/parks/parque-de-atracciones-madrid/tornado/): min height 120 cm
+  - [Tarántula](https://coastermap.com/parks/parque-de-atracciones-madrid/tarantula/): min height 120 cm
+  - [Abismo](https://coastermap.com/parks/parque-de-atracciones-madrid/abismo/): min height 135 cm
+  - [Patrulla Canina (PAW Patrol)](https://coastermap.com/parks/parque-de-atracciones-madrid/patrulla-canina-paw-patrol/): min height 120 cm
+  - [Padrinos Voladores](https://coastermap.com/parks/parque-de-atracciones-madrid/padrinos-voladores/): min height 120 cm
+  - [TNT Tren de la Mina](https://coastermap.com/parks/parque-de-atracciones-madrid/tnt-tren-de-la-mina/): min height 120 cm

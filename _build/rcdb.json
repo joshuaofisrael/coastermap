@@ -41970,5 +41970,263 @@
     }
    }
   ]
+ },
+ "parque-de-atracciones-madrid": {
+  "rcdb_id": 4928,
+  "name": "Parque de Atracciones de Madrid",
+  "rcdb_url": "https://rcdb.com/4928.htm",
+  "coasters": [
+   {
+    "rcdb_id": 1101,
+    "name": "Tornado",
+    "rcdb_url": "https://rcdb.com/1101.htm",
+    "opened": "1999-05-23",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Inverted",
+     "Extreme"
+    ],
+    "make": "Intamin Amusement Rides",
+    "model": "Other / Suspended Looping Coaster",
+    "stats": {
+     "Length": [
+      "2624.7 ft"
+     ],
+     "Height": [
+      "98 ft"
+     ],
+     "Speed": [
+      "49.7 mph"
+     ],
+     "Inversions": [
+      "3"
+     ],
+     "Duration": [
+      "2:00"
+     ],
+     "G-Force": [
+      "4"
+     ]
+    },
+    "trains": "2 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
+    "lat": 40.413438,
+    "lon": -3.748026,
+    "former": null,
+    "st": {
+     "Length": "2624.7 ft",
+     "Height": "98 ft",
+     "Speed": "49.7 mph",
+     "Inversions": "3",
+     "Duration": "2",
+     "G-Force": "4"
+    }
+   },
+   {
+    "rcdb_id": 2924,
+    "name": "Tarántula",
+    "rcdb_url": "https://rcdb.com/2924.htm",
+    "opened": "2005-05-14",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Thrill",
+     "Spinning Cars"
+    ],
+    "make": "Maurer Rides GmbH",
+    "model": "Spinning Coaster / SC 3000",
+    "stats": {
+     "Length": [
+      "2066.9 ft"
+     ],
+     "Height": [
+      "83.7 ft"
+     ],
+     "Speed": [
+      "42.3 mph"
+     ],
+     "Inversions": [
+      "0"
+     ],
+     "Vertical Angle": [
+      "51°"
+     ],
+     "Duration": [
+      "1:30"
+     ]
+    },
+    "trains": "8 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+    "lat": 40.413322,
+    "lon": -3.749464,
+    "former": null,
+    "st": {
+     "Length": "2066.9 ft",
+     "Height": "83.7 ft",
+     "Speed": "42.3 mph",
+     "Inversions": "0",
+     "Vertical Angle": "51 °",
+     "Duration": "1"
+    }
+   },
+   {
+    "rcdb_id": 3185,
+    "name": "Abismo",
+    "rcdb_url": "https://rcdb.com/3185.htm",
+    "opened": "2006-06-27",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Extreme"
+    ],
+    "make": "Maurer Rides GmbH",
+    "model": "SkyLoop / XT 450",
+    "stats": {
+     "Length": [
+      "1345.1 ft"
+     ],
+     "Height": [
+      "160.8 ft"
+     ],
+     "Speed": [
+      "65.2 mph"
+     ],
+     "Inversions": [
+      "2"
+     ],
+     "Duration": [
+      "1:00"
+     ],
+     "G-Force": [
+      "4"
+     ]
+    },
+    "trains": "Single train with 2 cars. Riders are arranged 2 across in 3 rows for a total of 12 riders.",
+    "lat": 40.412767,
+    "lon": -3.749234,
+    "former": null,
+    "st": {
+     "Length": "1345.1 ft",
+     "Height": "160.8 ft",
+     "Speed": "65.2 mph",
+     "Inversions": "2",
+     "Duration": "1",
+     "G-Force": "4"
+    }
+   },
+   {
+    "rcdb_id": 3848,
+    "name": "Paw Patrol: Patrulla Canina",
+    "rcdb_url": "https://rcdb.com/3848.htm",
+    "opened": "2007-06-02",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Family",
+     "Single Helix (center)"
+    ],
+    "make": "Zamperla",
+    "model": "Family Coaster / Gravity 80STD",
+    "stats": {
+     "Length": [
+      "262.5 ft"
+     ],
+     "Height": [
+      "13 ft"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "Single train with 6 cars. Riders are arranged 2 across in a single row for a total of 12 riders.",
+    "lat": 40.410471,
+    "lon": -3.751786,
+    "former": "Vagones Locos ( to )",
+    "st": {
+     "Length": "262.5 ft",
+     "Height": "13 ft",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 3922,
+    "name": "Padrinos Voladores",
+    "rcdb_url": "https://rcdb.com/3922.htm",
+    "opened": "2007-05",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Suspended",
+     "Family",
+     "Wild Mouse"
+    ],
+    "make": "Zamperla",
+    "model": "Air Force / 5",
+    "stats": {
+     "Length": [
+      "360.9 ft"
+     ],
+     "Height": [
+      "20.3 ft"
+     ],
+     "Speed": [
+      "7.8 mph"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "Single train with 5 cars. Riders are arranged 2 across in 2 rows for a total of 20 riders.",
+    "lat": 40.410095,
+    "lon": -3.752671,
+    "former": "Turbulencia ( to )",
+    "st": {
+     "Length": "360.9 ft",
+     "Height": "20.3 ft",
+     "Speed": "7.8 mph",
+     "Inversions": "0"
+    }
+   },
+   {
+    "rcdb_id": 10402,
+    "name": "TNT Tren de la Mina",
+    "rcdb_url": "https://rcdb.com/10402.htm",
+    "opened": "2012-03-30",
+    "tags": [
+     "Roller Coaster",
+     "Steel",
+     "Sit Down",
+     "Thrill"
+    ],
+    "make": "Gerstlauer Amusement Rides GmbH",
+    "model": "Family Coaster / Custom",
+    "stats": {
+     "Length": [
+      "1476.4 ft"
+     ],
+     "Height": [
+      "55.8 ft"
+     ],
+     "Speed": [
+      "35 mph"
+     ],
+     "Inversions": [
+      "0"
+     ]
+    },
+    "trains": "2 trains with 9 cars per train. Riders are arranged 2 across in a single row for a total of 18 riders per train.",
+    "lat": 40.410454,
+    "lon": -3.752548,
+    "former": null,
+    "st": {
+     "Length": "1476.4 ft",
+     "Height": "55.8 ft",
+     "Speed": "35 mph",
+     "Inversions": "0"
+    }
+   }
+  ]
  }
 }
