@@ -21,6 +21,7 @@ NEW.update({'hansa-park':4873,'plopsaland-de-panne':4850,'plopsaland-deutschland
 NEW.update({'hellendoorn':4841,'walygator-grand-est':4855,'fraispertuis-city':5216})
 NEW.update({'parque-de-atracciones-madrid':4928})
 NEW.update({'chimelong-ocean-kingdom':8991,'chimelong-paradise':5904,'farup-sommerland':4908,'magicland':5627,'motiongate':13813,'legoland-malaysia':9575,'freizeit-land-geiselwind':4876,'pleasurewood-hills':4818,'gullivers-land':4825,'gyeongju-world':5040,'powerpark':5532,'fantasy-island':4812,'schloss-thurn':4894,'fantasilandia':4949,'julianatoren':4853})
+NEW.update({'emerald-park':12363,'potts-park':4879,'drievliet':4840,'bonbon-land':5015,'tivoli-friheden':4726,'glenwood-caverns':6423,'playlands-castaway-cove':4675,'denos-wonder-wheel':4772,'cliffs-amusement-park':4661,'rusutsu':4985,'kijima-kogen':4983,'parque-espana':4970,'tobu-zoo':4978,'seoul-land':5019,'salitre-magico':5085,'parque-diversiones':5473,'land-of-legends':13838,'imagicaa':11296,'lagunasia':5228,'suzuka-circuit':4969,'washuzan-highland':5051,'e-world':5041,'leofoo-village':5045,'dunia-fantasi':5036,'vialand':10829,'schwaben-park':4877,'eifelpark':4884,'ok-corral':4861,'parque-del-cafe':5034,'enchanted-kingdom':4971,'fiabilandia':5198,'oriental-heritage':11603})
 d=json.load(open('rcdb.json'))
 for slug in sys.argv[1:] or NEW:
     pid=NEW[slug]

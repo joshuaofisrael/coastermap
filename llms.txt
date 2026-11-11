@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1034 coasters at 159 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1082 coasters at 170 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1205,3 +1205,62 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Valkyrie](https://coastermap.com/parks/gyeongju-world/valkyrie/): min height 120 cm
   - [Sköll & Hati](https://coastermap.com/parks/gyeongju-world/skoll-hati/): min height 125 cm
   - [Wizard Race](https://coastermap.com/parks/gyeongju-world/wizard-race/): min height 105 cm
+- [Emerald Park](https://coastermap.com/parks/emerald-park/): 6 coasters
+  - [The Cú Chulainn Coaster](https://coastermap.com/parks/emerald-park/the-cu-chulainn-coaster/): min height 120 cm
+  - [Ladybird Loop](https://coastermap.com/parks/emerald-park/ladybird-loop/)
+  - [Flight School](https://coastermap.com/parks/emerald-park/flight-school/)
+  - [Dino Dash](https://coastermap.com/parks/emerald-park/dino-dash/): min height 120 cm
+  - [The Quest](https://coastermap.com/parks/emerald-park/the-quest/): min height 120 cm
+  - [Na Fianna Force](https://coastermap.com/parks/emerald-park/na-fianna-force/): min height 120 cm
+- [Potts Park](https://coastermap.com/parks/potts-park/): 5 coasters
+  - [Turbo-Drachen](https://coastermap.com/parks/potts-park/turbo-drachen/): min height 130 cm
+  - [Kiddy-Racer](https://coastermap.com/parks/potts-park/kiddy-racer/): min height 90 cm
+  - [Säbelsaurus](https://coastermap.com/parks/potts-park/sabelsaurus/): min height 125 cm
+  - [Braus & Saus](https://coastermap.com/parks/potts-park/braus-saus/): min height 120 cm
+  - [Potts Blitz](https://coastermap.com/parks/potts-park/potts-blitz/)
+- [BonBon-Land](https://coastermap.com/parks/bonbon-land/): 4 coasters
+  - [Hundeprutten](https://coastermap.com/parks/bonbon-land/hundeprutten/): min height 115 cm
+  - [Vildsvinet](https://coastermap.com/parks/bonbon-land/vildsvinet/): min height 140 cm
+  - [Hankatten](https://coastermap.com/parks/bonbon-land/hankatten/): min height 130 cm
+  - [Viktor Vandorm](https://coastermap.com/parks/bonbon-land/viktor-vandorm/): min height 120 cm
+- [Tivoli Friheden](https://coastermap.com/parks/tivoli-friheden/): 4 coasters
+  - [Dragen](https://coastermap.com/parks/tivoli-friheden/dragen/)
+  - [Tyfonen](https://coastermap.com/parks/tivoli-friheden/tyfonen/): min height 120 cm
+  - [Bisværmen](https://coastermap.com/parks/tivoli-friheden/bisvaermen/): min height 120 cm
+  - [Vindfald](https://coastermap.com/parks/tivoli-friheden/vindfald/): min height 125 cm
+- [Drievliet](https://coastermap.com/parks/drievliet/): 4 coasters
+  - [Kopermijn](https://coastermap.com/parks/drievliet/kopermijn/): min height 130 cm
+  - [Twistrix](https://coastermap.com/parks/drievliet/twistrix/): min height 120 cm
+  - [Dynamite Express](https://coastermap.com/parks/drievliet/dynamite-express/): min height 120 cm
+  - [Formule X](https://coastermap.com/parks/drievliet/formule-x/): min height 130 cm
+- [Glenwood Caverns Adventure Park](https://coastermap.com/parks/glenwood-caverns/): 4 coasters
+  - [Cliffhanger](https://coastermap.com/parks/glenwood-caverns/cliffhanger/): min height 56 in
+  - [Wild West Express](https://coastermap.com/parks/glenwood-caverns/wild-west-express/): min height 48 in
+  - [Alpine Coaster](https://coastermap.com/parks/glenwood-caverns/alpine-coaster/): min height 54 in
+  - [Defiance](https://coastermap.com/parks/glenwood-caverns/defiance/): min height 56 in
+- [Playland's Castaway Cove](https://coastermap.com/parks/playlands-castaway-cove/): 4 coasters
+  - [Pirates Gold Rush](https://coastermap.com/parks/playlands-castaway-cove/pirates-gold-rush/): min height 36 in
+  - [GaleForce](https://coastermap.com/parks/playlands-castaway-cove/galeforce/): min height 48 in
+  - [Wild Waves](https://coastermap.com/parks/playlands-castaway-cove/wild-waves/): min height 48 in
+  - [Whirlwind](https://coastermap.com/parks/playlands-castaway-cove/whirlwind/): min height 48 in
+- [Deno's Wonder Wheel Amusement Park](https://coastermap.com/parks/denos-wonder-wheel/): 3 coasters
+  - [Sea Serpent](https://coastermap.com/parks/denos-wonder-wheel/sea-serpent/): min height 38 in
+  - [Skyflyer](https://coastermap.com/parks/denos-wonder-wheel/skyflyer/): min height 36 in
+  - [Phoenix](https://coastermap.com/parks/denos-wonder-wheel/phoenix/): min height 48 in
+- [Cliff's Amusement Park](https://coastermap.com/parks/cliffs-amusement-park/): 3 coasters
+  - [Galaxi](https://coastermap.com/parks/cliffs-amusement-park/galaxi/): min height 48 in
+  - [New Mexico Rattler](https://coastermap.com/parks/cliffs-amusement-park/new-mexico-rattler/): min height 48 in
+  - [Spin-O-Rama](https://coastermap.com/parks/cliffs-amusement-park/spin-o-rama/): min height 48 in
+- [Rusutsu Resort Amusement Park](https://coastermap.com/parks/rusutsu/): 7 coasters
+  - [Ultra Twister](https://coastermap.com/parks/rusutsu/ultra-twister/): min height 120 cm
+  - [Hurricane](https://coastermap.com/parks/rusutsu/hurricane/): min height 130 cm
+  - [Loop the Loop](https://coastermap.com/parks/rusutsu/loop-the-loop/): min height 110 cm
+  - [Corkscrew](https://coastermap.com/parks/rusutsu/corkscrew/): min height 125 cm
+  - [Standing Coaster](https://coastermap.com/parks/rusutsu/standing-coaster/): min height 130 cm
+  - [Mountain Jet Coaster](https://coastermap.com/parks/rusutsu/mountain-jet-coaster/): min height 110 cm
+  - [Go Go Sneaker](https://coastermap.com/parks/rusutsu/go-go-sneaker/): min height 110 cm
+- [Shima Spain Village Parque España](https://coastermap.com/parks/parque-espana/): 4 coasters
+  - [Gran Montserrat](https://coastermap.com/parks/parque-espana/gran-montserrat/): min height 110 cm
+  - [Pyrenees](https://coastermap.com/parks/parque-espana/pyrenees/): min height 130 cm
+  - [Steampunk Coaster Iron Bull](https://coastermap.com/parks/parque-espana/steampunk-coaster-iron-bull/): min height 110 cm
+  - [Kiddy Montserrat](https://coastermap.com/parks/parque-espana/kiddy-montserrat/): min height 90 cm

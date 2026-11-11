@@ -925,7 +925,7 @@ HP_B12b = {
  ("pleasurewood-hills", "Marble Madness"): M(min=125, src=PWH("marble-madness-roller-coaster")),
  ("pleasurewood-hills", "Egg-Spress"): M(min=125, acc_min=90, acc_max=125, note="Guests between 0.9 m and 1.25 m must be accompanied by an adult.", src=PWH("egg-spress-roller-coaster")),
  ("gullivers-land", "Runaway Train"): M(min=120, acc_min=90, acc_max=120, note=_adult(90, 120), src=GLR),
- ("gullivers-land", "Grand Prix Racers"): M(min=120, acc_min=100, acc_max=120, note="At Gulliver's Land it sits in the Adventure Land area; riders 100 to 120 cm must ride with an adult (no maximum height is listed there).", src=GLR),
+ ("gullivers-land", "Grand Prix Racers"): M(min=120, acc_min=100, acc_max=120, note="At Gulliver's Land it sits in the Adventure Land area, where the park pitches it as a race to the finish to nail the perfect lap. Riders 100 to 120 cm must ride with an adult, under 100 cm cannot ride, and no maximum height is listed there.", src=GLR),
  ("gullivers-land", "Wriggler"): M(min=120, acc_min=90, acc_max=120, max=195, note=_adult(90, 120), src=GLR),
  ("fantasy-island", "Millennium"): M(min=140, acc_min=120, acc_max=140, note="Riders under 1.4 m must be accompanied by an adult (minimum 1.2 m).", src=FIS("millennium")),
  ("fantasy-island", "Odyssey"): M(min=140, acc_min=130, acc_max=140, note="Riders under 1.4 m must be accompanied by an adult (minimum 1.3 m).", src=FIS("odyssey")),
@@ -969,3 +969,81 @@ INTL_PARKS += [
 ]
 DISPLAY_INTL.update({("farup-sommerland", "Mine Expressen"): "Mine-Expressen", ("fantasy-island", "Rhombus Express"): "The Rhombus Express",
  ("freizeit-land-geiselwind", "Drachen Höhle"): "Drachenhöhle"})
+
+# ---- Batch 12c (11 Nov 2026): Emerald Park, Potts Park, BonBon-Land, Tivoli Friheden, Drievliet, US family parks, Rusutsu, Parque España ----
+def EMP(s): return ("Emerald Park, official attraction page", f"https://www.emeraldpark.ie/attraction/{s}/")
+POT = ("Potts Park, official access restrictions (Zugangsbeschränkungen, PDF)", "https://www.pottspark-minden.de/wp-content/uploads/2025/09/Zugangsbeschraenkungen-2025.pdf")
+BBL = ("BonBon-Land, official height requirements (Højdekrav, PDF)", "https://www.bonbonland.dk/content/dam/bbl/files/Hoejdekrav.pdf")
+def TFR(s): return ("Tivoli Friheden, official ride page", f"https://www.friheden.dk/oplev-friheden/forlystelser/{s}")
+def DRV(s): return ("Drievliet, official attraction page", f"https://www.drievliet.nl/attraction-detail/{s}")
+def GWC(s): return ("Glenwood Caverns Adventure Park, official ride page", f"https://www.glenwoodcaverns.com/thrill-rides/{s}/")
+def PCC(s): return ("Playland's Castaway Cove, official ride page", f"https://oceancityfun.com/Rides/{s}/")
+def DWW(s): return ("Deno's Wonder Wheel Amusement Park, official rides page", f"https://www.denoswonderwheel.com/{s}")
+CLF = ("Cliff's Amusement Park, official attraction height requirements (PDF)", "https://www.cliffsamusementpark.com/wp-content/uploads/2025/03/2025-Attraction-Height-Requirements-and-Accessibility.pdf")
+RUS = ("Rusutsu Resort Amusement Park, official attractions page", "https://rusutsu.com/amusement-park/attractions/")
+PQE = ("Shima Spain Village Parque España, official attraction rules page", "https://www.parque-net.com/attraction/information.html")
+_BB = lambda a, m: f"Riders {a} to {m} cm must ride with a companion aged 15 or older."
+_DR = lambda a, m: f"Riders {a} to {m} cm must ride with an adult."
+_P65 = "Not for guests aged 65 or older."
+HP_B12c = {
+ ("emerald-park", "Cú Chulainn Coaster"): M(min=120, src=EMP("the-cu-chulainn-coaster")),
+ ("emerald-park", "Fianna Force"): M(min=120, max=205, src=EMP("na-fianna-force")),
+ ("emerald-park", "Quest"): M(min=120, acc_min=95, acc_max=120, note=_adult(95, 120), src=EMP("the-quest")),
+ ("emerald-park", "Dino Dash"): M(min=120, acc_min=95, acc_max=120, note=_adult(95, 120), src=EMP("dino-dash")),
+ ("potts-park", "Braus & Saus"): M(min=120, acc_min=90, acc_max=120, note="Riding alone needs 120 cm and age 6; from 90 cm and age 3 riders must be accompanied.", src=POT),
+ ("potts-park", "Säbelsaurus"): M(min=125, acc_min=105, acc_max=125, note="Riding alone needs 125 cm and age 7; from 105 cm and age 4 riders must be accompanied.", src=POT),
+ ("potts-park", "Turbo-Drachen"): M(min=130, acc_min=105, acc_max=130, note="Riding alone needs 130 cm and age 8; from 105 cm and age 3 riders must be accompanied.", src=POT),
+ ("potts-park", "Kiddy-Racer"): M(min=90, note="Minimum age 3, ridden under supervision; maximum weight 40 kg.", src=POT),
+ ("bonbon-land", "Vild-Svinet"): M(min=140, acc_min=125, acc_max=140, note=_BB(125, 140), src=BBL),
+ ("bonbon-land", "Han-Katten"): M(min=130, acc_min=110, acc_max=130, note=_BB(110, 130), src=BBL),
+ ("bonbon-land", "Hundeprutten"): M(min=115, acc_min=95, acc_max=115, note=_BB(95, 115), src=BBL),
+ ("bonbon-land", "Viktor Vandorm"): M(min=120, acc_min=90, acc_max=120, note=_BB(90, 120), src=BBL),
+ ("tivoli-friheden", "Tyfonen"): M(min=120, src=TFR("tyfonen")),
+ ("tivoli-friheden", "Vindfald"): M(min=125, max=195, src=TFR("vindfald")),
+ ("tivoli-friheden", "Bisværmen"): M(min=120, acc_min=90, acc_max=120, max=195, note="Riders from 90 cm may ride with an adult; 120 cm to ride alone.", src=TFR("bisvaermen")),
+ ("drievliet", "Kopermijn"): M(min=130, acc_min=100, acc_max=130, note=_DR(100, 130), src=DRV("kopermijn")),
+ ("drievliet", "Twistrix"): M(min=120, acc_min=100, acc_max=120, note=_DR(100, 120), src=DRV("twistrix")),
+ ("drievliet", "Dynamite Express"): M(min=120, acc_min=100, acc_max=120, note=_DR(100, 120), src=DRV("dynamite-express")),
+ ("drievliet", "Formule X"): M(min=130, src=DRV("formule-x")),
+ ("glenwood-caverns", "Defiance"): dict(min=56, acc_min=48, acc_max=56, note="Riders 48 to 56 inches must ride with a Supervising Companion (16 or older).", src=GWC("defiance-coaster")),
+ ("glenwood-caverns", "Cliffhanger"): dict(min=56, acc_min=48, acc_max=56, note="Riders 48 to 56 inches must ride with a Supervising Companion (16 or older).", src=GWC("cliffhanger-roller-coaster")),
+ ("glenwood-caverns", "Wild West Express"): dict(min=48, acc_min=36, acc_max=48, note="Riders 36 to 48 inches must ride with a Supervising Companion.", src=GWC("wild-west-express")),
+ ("glenwood-caverns", "Alpine Coaster"): dict(min=54, acc_min=38, acc_max=54, note="54 inches to ride alone; from 38 inches (and at least 3 years old) as the front rider with a taller driver; maximum combined weight 330 lb.", src=GWC("alpine-coaster")),
+ ("playlands-castaway-cove", "GaleForce"): dict(min=48, src=PCC("galeforce-roller-coaster-ocean-city-new-jersey")),
+ ("playlands-castaway-cove", "Wild Waves"): dict(min=48, acc_min=42, acc_max=48, note="42 inches to ride; 48 inches to ride alone.", src=PCC("wild-waves-coaster")),
+ ("playlands-castaway-cove", "Whirlwind"): dict(min=48, acc_min=36, acc_max=48, note="36 inches to ride; 48 inches to ride alone.", src=PCC("whirlwind-coaster")),
+ ("playlands-castaway-cove", "Pirates Gold Rush"): dict(min=36, acc_min=33, acc_max=36, note="33 inches to ride; 36 inches to ride alone.", src=PCC("pirates-gold-rush-2")),
+ ("denos-wonder-wheel", "Phoenix"): dict(min=48, acc_min=39, acc_max=48, note="48 inches to ride alone; 39 inches with a responsible person.", src=DWW("adultpark")),
+ ("denos-wonder-wheel", "Sea Serpent"): dict(min=38, acc_min=36, acc_max=38, note="38 inches alone or 36 inches accompanied by a responsible attending person.", src=DWW("kiddie-park")),
+ ("denos-wonder-wheel", "Skyflyer"): dict(min=36, src=DWW("kiddie-park")),
+ ("cliffs-amusement-park", "New Mexico Rattler"): dict(min=48, src=CLF),
+ ("cliffs-amusement-park", "Galaxi"): dict(min=48, acc_min=36, acc_max=48, note="No one under 36 inches; riders under 48 inches need a Supervising Companion at least 54 inches tall.", src=CLF),
+ ("cliffs-amusement-park", "Spin-O-Rama"): dict(min=48, acc_min=36, acc_max=48, note="No one under 36 inches; riders under 48 inches need a Supervising Companion at least 54 inches tall.", src=CLF),
+ ("rusutsu", "Hurricane"): M(min=130, max=200, note="Minimum age 10.", src=RUS),
+ ("rusutsu", "Ultra Twister"): M(min=120, src=RUS),
+ ("rusutsu", "Standing Coaster"): M(min=130, src=RUS),
+ ("rusutsu", "Corkscrew"): M(min=125, src=RUS),
+ ("rusutsu", "Loop the Loop"): M(min=110, src=RUS),
+ ("rusutsu", "Mountain Jet Coaster"): M(min=110, src=RUS),
+ ("rusutsu", "Go Go Sneaker"): M(min=110, acc_min=105, acc_max=110, note="Minimum age 4; riders 105 to 110 cm (age 4 or older) may ride with an adult.", src=RUS),
+ ("parque-espana", "Pyrenees"): M(min=130, note="Not for children under 10. " + _P65, src=PQE),
+ ("parque-espana", "Steampunk Coaster Iron Bull"): M(min=110, note=_P65, src=PQE),
+ ("parque-espana", "Gran Montserrat"): M(min=110, note=_P65, src=PQE),
+ ("parque-espana", "Kiddy Montserrat"): M(min=90, note="Children below school age must ride with a guardian.", src=PQE),
+}
+HP_INTL.update(HP_B12c)
+INTL_PARKS += [
+ dict(slug="emerald-park", name="Emerald Park", short="Emerald Park", loc="Ashbourne, County Meath, Ireland", state="County Meath", country="IE", official="https://www.emeraldpark.ie/", group="Emerald Park", checked=_C),
+ dict(slug="potts-park", name="Potts Park", short="Potts Park", loc="Minden, Germany", state="North Rhine-Westphalia", country="DE", official="https://www.pottspark-minden.de/", group="Potts Park", checked=_C),
+ dict(slug="bonbon-land", name="BonBon-Land", short="BonBon-Land", loc="Holme-Olstrup, Denmark", state="Zealand", country="DK", official="https://www.bonbonland.dk/", group="Parques Reunidos", checked=_C),
+ dict(slug="tivoli-friheden", name="Tivoli Friheden", short="Friheden", loc="Aarhus, Denmark", state="Central Jutland", country="DK", official="https://www.friheden.dk/", group="Tivoli Friheden", checked=_C),
+ dict(slug="drievliet", name="Drievliet", short="Drievliet", loc="The Hague, Netherlands", state="South Holland", country="NL", official="https://www.drievliet.nl/", group="Drievliet", checked=_C),
+ dict(slug="glenwood-caverns", name="Glenwood Caverns Adventure Park", short="Glenwood Caverns", loc="Glenwood Springs, Colorado", state="CO", country="US", official="https://www.glenwoodcaverns.com/", group="Glenwood Caverns", checked=_C),
+ dict(slug="playlands-castaway-cove", name="Playland's Castaway Cove", short="Castaway Cove", loc="Ocean City, New Jersey", state="NJ", country="US", official="https://oceancityfun.com/", group="Playland's Castaway Cove", checked=_C),
+ dict(slug="denos-wonder-wheel", name="Deno's Wonder Wheel Amusement Park", short="Deno's", loc="Coney Island, Brooklyn, New York", state="NY", country="US", official="https://www.denoswonderwheel.com/", group="Deno's Wonder Wheel", checked=_C),
+ dict(slug="cliffs-amusement-park", name="Cliff's Amusement Park", short="Cliff's", loc="Albuquerque, New Mexico", state="NM", country="US", official="https://www.cliffsamusementpark.com/", group="Cliff's", checked=_C),
+ dict(slug="rusutsu", name="Rusutsu Resort Amusement Park", short="Rusutsu", loc="Rusutsu, Hokkaido, Japan", state="Hokkaido", country="JP", official="https://rusutsu.com/amusement-park/", group="Rusutsu Resort", checked=_C),
+ dict(slug="parque-espana", name="Shima Spain Village Parque España", short="Parque España", loc="Shima, Mie, Japan", state="Mie", country="JP", official="https://www.parque-net.com/", group="Kintetsu", checked=_C),
+]
+DISPLAY_INTL.update({("emerald-park", "Quest"): "The Quest", ("emerald-park", "Cú Chulainn Coaster"): "The Cú Chulainn Coaster", ("emerald-park", "Fianna Force"): "Na Fianna Force",
+ ("bonbon-land", "Vild-Svinet"): "Vildsvinet", ("bonbon-land", "Han-Katten"): "Hankatten"})
