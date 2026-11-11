@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1269 coasters at 217 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1285 coasters at 221 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1498,3 +1498,23 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Yagiyama Cyclone](https://coastermap.com/parks/benyland/yagiyama-cyclone/): min height 110 cm
   - [Aero 5](https://coastermap.com/parks/benyland/aero-5/): min height 105 cm
   - [Mini Cyclone](https://coastermap.com/parks/benyland/mini-cyclone/)
+- [Rainbow's End](https://coastermap.com/parks/rainbows-end/): 3 coasters
+  - [Corkscrew Coaster](https://coastermap.com/parks/rainbows-end/corkscrew-coaster/): min height 120 cm
+  - [Gold Rush](https://coastermap.com/parks/rainbows-end/gold-rush/): min height 130 cm
+  - [Choco Express](https://coastermap.com/parks/rainbows-end/choco-express/): min height 120 cm
+- [Gold Reef City](https://coastermap.com/parks/gold-reef-city/): 6 coasters
+  - [Golden Loop](https://coastermap.com/parks/gold-reef-city/golden-loop/): min height 130 cm
+  - [Anaconda](https://coastermap.com/parks/gold-reef-city/anaconda/): min height 130 cm
+  - [Run A Way Mine Train](https://coastermap.com/parks/gold-reef-city/run-a-way-mine-train/): min height 130 cm
+  - [Tower of Terror](https://coastermap.com/parks/gold-reef-city/tower-of-terror/): min height 130 cm
+  - [Jozi Express](https://coastermap.com/parks/gold-reef-city/jozi-express/): min height 130 cm
+  - [Shongololo](https://coastermap.com/parks/gold-reef-city/shongololo/)
+- [Parque de la Costa](https://coastermap.com/parks/parque-de-la-costa/): 4 coasters
+  - [Boomerang](https://coastermap.com/parks/parque-de-la-costa/boomerang/): min height 120 cm
+  - [Desafío](https://coastermap.com/parks/parque-de-la-costa/desafio/): min height 130 cm
+  - [Vigía](https://coastermap.com/parks/parque-de-la-costa/vigia/): min height 110 cm
+  - [Torbellino](https://coastermap.com/parks/parque-de-la-costa/torbellino/): min height 130 cm
+- [Star City](https://coastermap.com/parks/star-city/): 3 coasters
+  - [Star Flyer](https://coastermap.com/parks/star-city/star-flyer/): min height 54 in
+  - [Wacky Worm](https://coastermap.com/parks/star-city/wacky-worm/)
+  - [Egyptian Spinning Coaster](https://coastermap.com/parks/star-city/egyptian-spinning-coaster/): min height 42 in

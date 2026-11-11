@@ -1360,3 +1360,32 @@ INTL_PARKS += [
  dict(slug="yokohama-cosmoworld", name="Yokohama Cosmoworld", short="Cosmoworld", loc="Yokohama, Japan", state="Kanagawa", country="JP", official="https://cosmoworld.jp/", group="Senyo Kogyo", checked=_C),
  dict(slug="benyland", name="Yagiyama Benyland", short="Benyland", loc="Sendai, Japan", state="Miyagi", country="JP", official="https://www.benyland.com/", group="Benyland", checked=_C),
 ]
+
+# ---- Batch 13f (11 Nov 2026): Rainbow's End, Gold Reef City, Parque de la Costa, Star City ----
+def RBE(s): return ("Rainbow's End, official ride page", f"https://rainbowsend.co.nz/rides/categories/{s}")
+def GRC(s): return ("Gold Reef City, official ride page", f"https://www.tsogosun.com/casino/{s}/")
+PDC = ("Parque de la Costa, official attractions list", "https://www.parquedelacosta.com.ar/atracciones-2/")
+STC = ("Star City, official rides and attractions list", "https://starcity.com.ph/rides-and-attractions")
+HP_B13f = {
+ ("rainbows-end", "Corkscrew Coaster"): M(min=120, note="The park lists it as Corkscrew Roller Coaster.", src=RBE("thrill-rides/corkscrew-roller-coaster")),
+ ("rainbows-end", "Gold Rush"): M(min=130, acc_min=80, acc_max=130, note="Minimum 80 cm; children under 130 cm must sit next to a responsible person over 160 cm tall.", src=RBE("exciting-rides/gold-rush")),
+ ("rainbows-end", "Choco Express"): M(min=120, acc_min=90, acc_max=120, note="Minimum 90 cm; children under 120 cm must sit next to a responsible person over 160 cm tall.", src=RBE("kidz-kingdom/choco-express")),
+ ("gold-reef-city", "Golden Loop"): M(min=130, src=GRC("gold-reef-city-golden-loop")),
+ ("gold-reef-city", "Anaconda"): M(min=130, src=GRC("gold-reef-city-anaconda")),
+ ("gold-reef-city", "Run A Way Mine Train"): M(min=130, note="The park lists it as Runaway Train.", src=GRC("Runaway%20Train")),
+ ("gold-reef-city", "Tower of Terror"): M(min=130, src=GRC("tower-of-terror")),
+ ("gold-reef-city", "Jozi Express"): M(min=130, src=GRC("gold-reef-city-jozi-express")),
+ ("parque-de-la-costa", "Boomerang"): M(min=120, note="The park lists it as Montaña Rusa Boomerang.", src=PDC),
+ ("parque-de-la-costa", "Desafío"): M(min=130, note="The park lists it as Montaña Rusa El Desafío.", src=PDC),
+ ("parque-de-la-costa", "Vigía"): M(min=110, note="The park lists it as Montaña Rusa El Vigía.", src=PDC),
+ ("parque-de-la-costa", "Torbellino"): M(min=130, note="The park lists it as Montaña Rusa Torbellino.", src=PDC),
+ ("star-city", "Star Flyer"): dict(min=54, max=74, src=STC),
+ ("star-city", "Egyptian Spinning Coaster"): dict(min=42, src=STC),
+}
+HP_INTL.update(HP_B13f)
+INTL_PARKS += [
+ dict(slug="rainbows-end", name="Rainbow's End", short="Rainbow's End", loc="Auckland, New Zealand", state="Auckland", country="NZ", official="https://rainbowsend.co.nz/", group="Rainbow's End", checked=_C),
+ dict(slug="gold-reef-city", name="Gold Reef City", short="Gold Reef City", loc="Johannesburg, South Africa", state="Gauteng", country="ZA", official="https://www.tsogosun.com/casino/gold-reef-city-theme-park/", group="Tsogo Sun", checked=_C),
+ dict(slug="parque-de-la-costa", name="Parque de la Costa", short="Parque de la Costa", loc="Tigre, Argentina", state="Buenos Aires", country="AR", official="https://www.parquedelacosta.com.ar/", group="Parque de la Costa", checked=_C),
+ dict(slug="star-city", name="Star City", short="Star City", loc="Pasay, Philippines", state="Metro Manila", country="PH", official="https://starcity.com.ph/", group="Star City", checked=_C),
+]
