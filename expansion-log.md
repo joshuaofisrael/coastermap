@@ -666,3 +666,21 @@ Topics were picked from Google autocomplete queries (fear of coasters, stomach d
 - Sources quoted: Universal Orlando Guide for Rider Safety and Accessibility (PDF); Universal Orlando ride height page; two planDisney panel answers on Disney's official planning site; CDC Travelers' Health and CDC Yellow Book on motion sickness. Health pages are framed as general information and tell readers to follow park signs and their doctor.
 - Coaster pages now link to their manufacturer page and the best-seat page, plus the launch, max-height or motion-sickness page where relevant. Park pages link to the height and fear pages. The home page and guides hub list the new pages.
 - Skipped: single rider and rider swap pages (rules are park-specific, so each needs its own official source), and "are roller coasters safe" statistics (no government source collected).
+
+## Batch 10 (10 Nov 2026): uniqueness, regional parks, technical SEO
+**Per-coaster uniqueness (commit 3edded6).** New `_build/coasterplus.py` adds a data-driven "What riding X is like" section on every coaster page (layout shape, drop, launch, angle, inversion spacing, g-force against the site median, age at the park, same-model family, height-rule context, position in the park and nearest coasters from RCDB coordinates). "Before you ride" is now ride-specific (companion band, maximum height, park note, loose items on spinning, shuttle and inverting rides). Same-model rides get an "Is X the same as Y?" FAQ. "If you liked" picks now skip clones and prefer a ride within 700 km. Seat and comparison sentences vary per page. Near-duplicate audit (5-word shingles, coaster articles): pages with max Jaccard over 0.6 fell from 34 to 2, over 0.5 from 84 to 38; median max Jaccard 0.39 to 0.36.
+
+**Regional parks (commits 12d09ef, af5e171), 42 official rules:**
+- Indiana Beach 7/7 (indianabeach.com ride pages; All American Triple Loop max 77 in).
+- Adventureland Park, Iowa 6/7 (adventurelandpark.com, headed Chrome). Omitted Underground: the page gives a 42 in minimum and also says riders may ride with a 42 in companion, which conflicts.
+- Wild Adventures 5/6 (headed Chrome). Omitted Swampwater Snake: minimum 36 in but also says guests below 36 in may ride accompanied. Marsh Mayhem max height left out (the field says no max, the text says 75 in).
+- Waldameer 5/5 (waldameer.com attraction pages, including companion bands and maximums).
+- Six Flags Mexico 9/10, in cm (sixflags.com/mexico; the page labels cm values with an inch mark, the related-ride cards and Spanish text confirm cm). Omitted Superman Krypton Coaster (no attraction page found).
+- Canobie Lake Park 3/3, Fun Spot America Orlando 3/3 and Kissimmee 4/4 (official coaster pages; prices and closures not copied).
+- New region guides: Georgia and Indiana. Mexico added to North America ranking region.
+- Not added: Playland (Rye, NY) (official site refused connections), Six Flags St. Louis (already covered as Mid America Adventure).
+- Data fixes: former-name junk like "(≤ to )" cleaned; "opened on 1993" now "opened in 1993"; no double full stop after "Inc.".
+
+**Technical SEO.** Lighthouse 12 (mobile, live site): home 100/100/100/100, park page 100/100/100/100, coaster page 99/100/100/100, glossary 100/100/100/92 before fixing "Read more" link text (now descriptive), map 94/100/96/100 (Leaflet tiles). All pages CLS 0, LCP 1.6 to 1.7 s except the map (2.9 s). Site audit: 0 duplicate titles, 0 duplicate descriptions, canonical on every page and matching its URL, one h1 per page, all JSON-LD parses, no images, every indexable page in the sitemap, no orphans except the noindex newsletter thank-you page, every page within 2 clicks of the home page. Fixed: /ad-disclosure/ was missing from the sitemap (a stray `PAGES.pop()`), 18 descriptions over 170 characters (now clipped to 158), short legal descriptions, and the disclaimer now names every covered park and operator automatically.
+
+**Records.** RCDB Record Holders re-checked 10 Nov 2026 for speed, height, length, drop, inversions and angle; leaders unchanged (Falcons Flight 155.3 mph, 534.8 ft, 13,943.6 ft; Top Thrill 2 400 ft drop; The Smiler 14 inversions; TMNT Shellraiser 121.5°).
