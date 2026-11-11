@@ -734,3 +734,7 @@ Totals after batch 10: 102 parks, 741 coasters, 928 pages. Live 200 checks passe
 - Nagashima Spa Land 8/11 (official restrictions table; Jet Coaster and Peter Rabbit Coaster have age-only rules, Children Coaster not matched to a listed ride). RCDB lists Double Wild Mouse as two coasters with the same name; `data.py` now keeps one page per name per park, so both tracks share /parks/nagashima-spa-land/double-wild-mouse/.
 - Yomiuriland 5/5 (official attraction pages; DinoRunner limits apply to the dinosaur cars, the trolley cars have none, as stated).
 - Hirakata Park 3/5 (Fantastic Coaster Rowdy has no height minimum with a companion; Korottruck has no attraction page).
+
+**Batch 11f: 2 new parks, 10 coasters, 10 official rules.**
+- Plopsaland De Panne 6/6 and Plopsaland Deutschland (formerly Holiday Park; RCDB former name, holidaypark.de redirects to plopsa.com) 4/4, from the official plopsa.com attraction pages (three-tier "not allowed / accompanied / allowed" blocks; some read from the page HTML when the rendered block was lazy-loaded).
+- Not added: Hansa-Park (height rules sit in a collapsed panel that did not open in the headless renderer), Ocean Park Hong Kong (only 2 operating coasters on RCDB).

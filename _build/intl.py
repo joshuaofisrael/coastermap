@@ -755,3 +755,26 @@ INTL_PARKS += [
  dict(slug="hirakata-park", name="Hirakata Park", short="Hirakata Park", loc="Hirakata, Osaka, Japan", state="Osaka", country="JP", official="https://www.hirakatapark.co.jp/", group="Keihan"),
 ]
 DISPLAY_INTL.update({("nagashima-spa-land", "Wild Mouse"): "Double Wild Mouse", ("yomiuriland", "Lipovitan Rocket☆Luna"): "Lipovitan Rocket Luna"})
+
+# ---- Batch 11f (10 Nov 2026): Plopsaland De Panne, Plopsaland Deutschland ----
+def PLB(s): return ("Plopsaland De Panne, official attraction page", f"https://www.plopsa.com/nl/plopsaland-belgium/attracties/{s}")
+def PLD(s): return ("Plopsaland Deutschland, official attraction page", f"https://www.plopsa.com/de/plopsaland-deutschland/attraktionen/{s}")
+def _acc(a, m): return f"Riders {a} to {m} cm must ride accompanied."
+HP_B11f = {
+ ("plopsaland-de-panne", "Ride to Happiness"): M(min=130, src=PLB("the-ride-to-happiness-by-tomorrowland")),
+ ("plopsaland-de-panne", "Anubis: The Ride"): M(min=140, acc_min=125, acc_max=140, note=_acc(125, 140), src=PLB("anubis-the-ride")),
+ ("plopsaland-de-panne", "Heidi The Ride"): M(min=140, acc_min=120, acc_max=140, note=_acc(120, 140), src=PLB("heidi-the-ride")),
+ ("plopsaland-de-panne", "Draconis"): M(min=120, acc_min=96, acc_max=120, note=_acc(96, 120), src=PLB("draconis")),
+ ("plopsaland-de-panne", "K3 Roller Skater"): M(min=120, acc_min=90, acc_max=120, note=_acc(90, 120), src=PLB("k3-roller-skater")),
+ ("plopsaland-de-panne", "#LikeMe Coaster"): M(min=120, acc_min=90, acc_max=120, note=_acc(90, 120), src=PLB("likeme-coaster")),
+ ("plopsaland-deutschland", "Expedition GeForce"): M(min=140, src=PLD("bigfm-expedition-geforce")),
+ ("plopsaland-deutschland", "Sky Scream"): M(min=140, src=PLD("sky-scream")),
+ ("plopsaland-deutschland", "100% Wolf"): M(min=130, acc_min=100, acc_max=130, note=_acc(100, 130), src=PLD("100-wolf-die-familienachterbahn")),
+ ("plopsaland-deutschland", "Tabalugas Achterbahn"): M(min=120, acc_min=100, acc_max=120, note=_acc(100, 120), src=PLD("tabalugas-achterbahn")),
+}
+HP_INTL.update(HP_B11f)
+INTL_PARKS += [
+ dict(slug="plopsaland-de-panne", name="Plopsaland De Panne", short="Plopsaland De Panne", loc="Adinkerke-De Panne, Belgium", state="West Flanders", country="BE", official="https://www.plopsa.com/nl/plopsaland-belgium", group="Plopsa"),
+ dict(slug="plopsaland-deutschland", name="Plopsaland Deutschland", short="Plopsaland Deutschland", loc="Haßloch, Germany", state="Rhineland-Palatinate", country="DE", official="https://www.plopsa.com/de/plopsaland-deutschland", group="Plopsa", former="Holiday Park", former_note="RCDB lists Holiday Park as a former name, and holidaypark.de redirects to the Plopsaland Deutschland page on plopsa.com"),
+]
+DISPLAY_INTL.update({("plopsaland-de-panne", "Ride to Happiness"): "The Ride to Happiness", ("plopsaland-deutschland", "Tabalugas Achterbahn"): "Tabaluga's Achterbahn"})

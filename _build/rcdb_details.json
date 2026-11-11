@@ -19062,5 +19062,366 @@
     null
    ]
   ]
+ },
+ "981": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Block Brake",
+    null
+   ],
+   [
+    "Tunnel",
+    null
+   ]
+  ],
+  "arrangement": "3 trains with 7 cars per train. Riders are arranged 2 across in 2 rows for a total of 28 riders per train.",
+  "capacity": "1700 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "former": [
+   [
+    "Nessie Superrollercoaster",
+    "1980",
+    "2018"
+   ]
+  ]
+ },
+ "982": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "8 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "capacity": "900 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "983": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "capacity": "1000 riders per hour",
+  "designers": [
+   "Peter Clerx"
+  ],
+  "former": [
+   [
+    "Rasender Roland",
+    "1993",
+    "2019"
+   ]
+  ]
+ },
+ "4075": {
+  "elements": [
+   [
+    "Dark/Show Section",
+    null
+   ],
+   [
+    "LSM Launch (rolling)",
+    "from 0 mph - 62.1 mph in 1.4 s"
+   ],
+   [
+    "Heartline Roll",
+    null
+   ],
+   [
+    "Vertical Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 cars per train. Riders are arranged 4 across in a single row for a total of 8 riders per train.",
+  "capacity": "900 riders per hour",
+  "former": [
+   [
+    "Fluch von Novgorod",
+    "2009",
+    "2020"
+   ]
+  ]
+ },
+ "9465": {
+  "elements": [
+   [
+    "Dark/Show Section",
+    null
+   ],
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in a single row for a total of 12 riders."
+ },
+ "11615": {
+  "elements": [
+   [
+    "Vertical Chain Lift Hill",
+    null
+   ],
+   [
+    "Heartline Roll",
+    null
+   ]
+  ],
+  "arrangement": "3 trains with 4 cars per train. Riders are arranged 4 across in a single row for a total of 16 riders per train.",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "13621": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in a single row for a total of 12 riders.",
+  "capacity": "280 riders per hour"
+ },
+ "22633": {
+  "elements": [
+   [
+    "Tire Propelled Launch (multi-pass)",
+    null
+   ],
+   [
+    "Tire Propelled Boost",
+    null
+   ],
+   [
+    "Switch Track",
+    null
+   ],
+   [
+    "Vertical Rollback",
+    null
+   ]
+  ],
+  "arrangement": "10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "restraints": [
+   "Individual hydraulic lap bar"
+  ]
+ },
+ "997": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 8 cars. Riders are arranged 2 across in a single row for a total of 16 riders.",
+  "designers": [
+   "Peter Clerx"
+  ],
+  "former": [
+   [
+    "Rollerskater",
+    "1991",
+    "2018"
+   ]
+  ]
+ },
+ "1006": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 20 cars. Riders are arranged 2 across in a single row for a total of 40 riders.",
+  "capacity": "1250 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "former": [
+   [
+    "Viktor's Race",
+    "2013",
+    "2021"
+   ],
+   [
+    "Dongo's Race",
+    "2000",
+    "2012"
+   ],
+   [
+    "Keverbaan",
+    "1976",
+    "1999"
+   ]
+  ]
+ },
+ "2447": {
+  "arrangement": "10 cars per train.",
+  "former": [
+   [
+    "Draak",
+    "2004",
+    "2024"
+   ]
+  ]
+ },
+ "4181": {
+  "elements": [
+   [
+    "LSM Launch (rolling)",
+    null
+   ],
+   [
+    "Dive Loop",
+    null
+   ],
+   [
+    "Immelmann",
+    null
+   ],
+   [
+    "Block Brake",
+    null
+   ],
+   [
+    "Heartline Roll",
+    null
+   ]
+  ],
+  "arrangement": "3 cars. Riders are arranged 2 across in 3 rows for a total of 6 riders per car.",
+  "capacity": "700 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "7645": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in a single row for a total of 12 riders per train.",
+  "capacity": "635 riders per hour",
+  "designers": [
+   "Jeff Pike",
+   "Skyline Design, LLC."
+  ]
+ },
+ "17725": {
+  "elements": [
+   [
+    "Heartline Roll",
+    null
+   ],
+   [
+    "LSM Launch",
+    null
+   ],
+   [
+    "Banana Roll",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Zero-G Roll",
+    null
+   ],
+   [
+    "LSM Boost",
+    null
+   ],
+   [
+    "Step-Up Under Flip",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 4 cars per train. Riders are arranged 2 across in 2 rows for a total of 16 riders per train.",
+  "capacity": "550 riders per hour",
+  "installer": "RCS GmbH"
+ },
+ "15332": {
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "21866": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ],
+   [
+    "Tunnel",
+    null
+   ],
+   [
+    "Vertical Rollback",
+    null
+   ],
+   [
+    "Switch Track",
+    null
+   ]
+  ],
+  "arrangement": "3 trains with 10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train.",
+  "capacity": "1000 riders per hour"
+ },
+ "977": {
+  "elements": [
+   [
+    "Cable Lift Hill",
+    null
+   ],
+   [
+    "Over-Banked Curve",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 7 cars per train. Riders are arranged 2 across in 2 rows for a total of 28 riders per train.",
+  "capacity": "1300 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ],
+  "installer": "RCS GmbH"
+ },
+ "6736": {
+  "elements": [
+   [
+    "LSM Launch (multi-pass)",
+    null
+   ],
+   [
+    "In-Line Twist",
+    null
+   ],
+   [
+    "Non Inverting Loop",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 2 cars. Riders are arranged 2 across in 3 rows for a total of 12 riders.",
+  "installer": "RCS GmbH"
  }
 }

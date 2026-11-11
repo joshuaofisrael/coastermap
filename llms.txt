@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 907 coasters at 134 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 917 coasters at 136 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1053,3 +1053,15 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Fantastic Coaster Rowdy](https://coastermap.com/parks/hirakata-park/fantastic-coaster-rowdy/)
   - [Red Falcon](https://coastermap.com/parks/hirakata-park/red-falcon/): min height 120 cm
   - [Korottruck](https://coastermap.com/parks/hirakata-park/korottruck/)
+- [Plopsaland De Panne](https://coastermap.com/parks/plopsaland-de-panne/): 6 coasters
+  - [K3 Roller Skater](https://coastermap.com/parks/plopsaland-de-panne/k3-roller-skater/): min height 120 cm
+  - [#LikeMe Coaster](https://coastermap.com/parks/plopsaland-de-panne/likeme-coaster/): min height 120 cm
+  - [Draconis](https://coastermap.com/parks/plopsaland-de-panne/draconis/): min height 120 cm
+  - [Anubis: The Ride](https://coastermap.com/parks/plopsaland-de-panne/anubis-the-ride/): min height 140 cm
+  - [Heidi The Ride](https://coastermap.com/parks/plopsaland-de-panne/heidi-the-ride/): min height 140 cm
+  - [The Ride to Happiness](https://coastermap.com/parks/plopsaland-de-panne/the-ride-to-happiness/): min height 130 cm
+- [Plopsaland Deutschland](https://coastermap.com/parks/plopsaland-deutschland/): 4 coasters
+  - [Tabaluga's Achterbahn](https://coastermap.com/parks/plopsaland-deutschland/tabalugas-achterbahn/): min height 120 cm
+  - [100% Wolf](https://coastermap.com/parks/plopsaland-deutschland/100-wolf/): min height 130 cm
+  - [Expedition GeForce](https://coastermap.com/parks/plopsaland-deutschland/expedition-geforce/): min height 140 cm
+  - [Sky Scream](https://coastermap.com/parks/plopsaland-deutschland/sky-scream/): min height 140 cm
