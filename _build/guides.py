@@ -135,7 +135,7 @@ def first_timer_guide():
 
 # ---------- regions ----------
 STATES = {"FL": "Florida", "CA": "California", "PA": "Pennsylvania", "TX": "Texas", "MO": "Missouri", "OH": "Ohio", "VA": "Virginia", "NY": "New York", "GA": "Georgia", "IN": "Indiana", "NJ": "New Jersey", "MN": "Minnesota"}
-COUNTRIES = {"GB": "the United Kingdom", "DE": "Germany", "ES": "Spain", "JP": "Japan", "FR": "France", "CA": "Canada", "AU": "Australia", "NL": "the Netherlands", "MX": "Mexico", "SE": "Sweden", "IT": "Italy", "DK": "Denmark", "BE": "Belgium", "BR": "Brazil", "CN": "China", "FI": "Finland"}
+COUNTRIES = {"GB": "the United Kingdom", "DE": "Germany", "ES": "Spain", "JP": "Japan", "FR": "France", "CA": "Canada", "AU": "Australia", "NL": "the Netherlands", "MX": "Mexico", "SE": "Sweden", "IT": "Italy", "DK": "Denmark", "BE": "Belgium", "BR": "Brazil", "CN": "China", "FI": "Finland", "KR": "South Korea"}
 def region_guides():
     groups = [(f"roller-coasters-in-{n.lower().replace(' ', '-')}", n, [p for p in PARKS if p["country"] == "US" and p["state"] == s]) for s, n in STATES.items()]
     groups += [(f"roller-coasters-in-{n.replace('the ', '').lower().replace(' ', '-')}", n, [p for p in PARKS if p["country"] == k]) for k, n in COUNTRIES.items()]

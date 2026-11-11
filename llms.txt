@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1082 coasters at 170 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1104 coasters at 176 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1264,3 +1264,31 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Pyrenees](https://coastermap.com/parks/parque-espana/pyrenees/): min height 130 cm
   - [Steampunk Coaster Iron Bull](https://coastermap.com/parks/parque-espana/steampunk-coaster-iron-bull/): min height 110 cm
   - [Kiddy Montserrat](https://coastermap.com/parks/parque-espana/kiddy-montserrat/): min height 90 cm
+- [Kijima Kogen Park](https://coastermap.com/parks/kijima-kogen/): 5 coasters
+  - [Jupiter](https://coastermap.com/parks/kijima-kogen/jupiter/): min height 120 cm
+  - [Super LS Coaster](https://coastermap.com/parks/kijima-kogen/super-ls-coaster/): min height 120 cm
+  - [Gold Rush](https://coastermap.com/parks/kijima-kogen/gold-rush/): min height 120 cm
+  - [Dragon](https://coastermap.com/parks/kijima-kogen/dragon/): min height 120 cm
+  - [Roller Skater](https://coastermap.com/parks/kijima-kogen/roller-skater/): min height 110 cm
+- [Suzuka Circuit Park](https://coastermap.com/parks/suzuka-circuit/): 3 coasters
+  - [Rocky Coaster](https://coastermap.com/parks/suzuka-circuit/rocky-coaster/): min height 120 cm
+  - [Adventure Drive](https://coastermap.com/parks/suzuka-circuit/adventure-drive/): min height 100 cm
+  - [GP Racers](https://coastermap.com/parks/suzuka-circuit/gp-racers/): min height 120 cm
+- [Brazilian Park Washuzan Highland](https://coastermap.com/parks/washuzan-highland/): 3 coasters
+  - [Ultra Twister](https://coastermap.com/parks/washuzan-highland/ultra-twister/): min height 120 cm
+  - [Pink Typhoon Standing Coaster](https://coastermap.com/parks/washuzan-highland/pink-typhoon-standing-coaster/): min height 140 cm
+  - [Chupy Coaster](https://coastermap.com/parks/washuzan-highland/chupy-coaster/): min height 110 cm
+- [Lagunasia](https://coastermap.com/parks/lagunasia/): 3 coasters
+  - [Gummy Coaster](https://coastermap.com/parks/lagunasia/gummy-coaster/): min height 110 cm
+  - [Aqua Wind](https://coastermap.com/parks/lagunasia/aqua-wind/): min height 130 cm
+  - [Pirates' Blast](https://coastermap.com/parks/lagunasia/pirates-blast/): min height 130 cm
+- [Seoul Land](https://coastermap.com/parks/seoul-land/): 5 coasters
+  - [Columbia Double Loop Coaster](https://coastermap.com/parks/seoul-land/columbia-double-loop-coaster/): min height 120 cm
+  - [Black Hole 2000](https://coastermap.com/parks/seoul-land/black-hole-2000/): min height 120 cm
+  - [Tobot Train](https://coastermap.com/parks/seoul-land/tobot-train/): min height 80 cm
+  - [Tikitoc Train](https://coastermap.com/parks/seoul-land/tikitoc-train/): min height 100 cm
+  - [Crazy Mouse](https://coastermap.com/parks/seoul-land/crazy-mouse/): min height 120 cm
+- [Leofoo Village Theme Park](https://coastermap.com/parks/leofoo-village/): 3 coasters
+  - [Little Rattler](https://coastermap.com/parks/leofoo-village/little-rattler/): min height 90 cm
+  - [Screaming Condor](https://coastermap.com/parks/leofoo-village/screaming-condor/): min height 140 cm
+  - [Sahara Twist](https://coastermap.com/parks/leofoo-village/sahara-twist/): min height 90 cm

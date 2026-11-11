@@ -1047,3 +1047,45 @@ INTL_PARKS += [
 ]
 DISPLAY_INTL.update({("emerald-park", "Quest"): "The Quest", ("emerald-park", "Cú Chulainn Coaster"): "The Cú Chulainn Coaster", ("emerald-park", "Fianna Force"): "Na Fianna Force",
  ("bonbon-land", "Vild-Svinet"): "Vildsvinet", ("bonbon-land", "Han-Katten"): "Hankatten"})
+
+# ---- Batch 12d (11 Nov 2026): Kijima Kogen, Suzuka Circuit, Washuzan Highland, Lagunasia, Seoul Land, Leofoo Village ----
+def KJK(s): return ("Kijima Kogen Park, official attraction page", f"https://www.kijimakogen-park.jp/ride/{s}/")
+SZK = ("Suzuka Circuit Park, official attraction usage conditions", "https://www.suzukacircuit.jp/park/limit/")
+WSH = ("Brazilian Park Washuzan Highland, official attractions page", "https://www.w-highland.co.jp/attraction/")
+LGN = ("Lagunasia, official guide map with attraction limits (PDF)", "https://www.lagunatenbosch.co.jp/lagunasia/l_img/guidemap/p_guidemap2025_07.pdf")
+SEL = ("Seoul Land, official attractions page", "https://seoulland.co.kr/?p=42")
+LFV = ("Leofoo Village Theme Park, official park rules (ride height limits)", "https://www.leofoovillage.com.tw/Infos/Considerations/")
+_K65 = "Not for guests aged 65 or older."
+HP_B12d = {
+ ("kijima-kogen", "Jupiter"): M(min=120, note=_K65, src=KJK("jupiter")),
+ ("kijima-kogen", "Super LS Coaster"): M(min=120, note=_K65, src=KJK("lscoaster")),
+ ("kijima-kogen", "Gold Rush"): M(min=120, note=_K65, src=KJK("goldrush")),
+ ("kijima-kogen", "Dragon"): M(min=120, acc_min=105, acc_max=120, note="Riding alone needs 120 cm and age 7; riders 105 to 120 cm, and children aged 4 to 6, must ride with a guardian.", src=KJK("dragoncoaster")),
+ ("kijima-kogen", "Roller Skater"): M(min=110, acc_min=105, acc_max=110, note="Minimum age 4; riders 105 to 110 cm must ride with a guardian.", src=KJK("rollerskate")),
+ ("suzuka-circuit", "Rocky Coaster"): M(min=120, src=SZK),
+ ("suzuka-circuit", "GP Racers"): M(min=120, src=SZK),
+ ("suzuka-circuit", "Adventure Drive"): M(min=100, note="Pre-school children (ages 0 to 6) must be accompanied by someone of junior-high age or older.", src=SZK),
+ ("washuzan-highland", "Ultra Twister"): M(min=120, src=WSH),
+ ("washuzan-highland", "Pink Typhoon Standing Coaster"): M(min=140, note="The park lists it as the Standing Coaster.", src=WSH),
+ ("washuzan-highland", "Chupy Coaster"): M(min=110, src=WSH),
+ ("lagunasia", "Pirates' Blast"): M(min=130, note="No accompanied option is listed.", src=LGN),
+ ("lagunasia", "Aqua Wind"): M(min=130, acc_min=110, acc_max=130, note="Riders from 110 cm may ride with a guardian; it runs forwards and backwards.", src=LGN),
+ ("lagunasia", "Gummy Coaster"): M(min=110, acc_min=90, acc_max=110, note="Riders from 90 cm may ride with a guardian. The park map lists it under its former name, Stella Coaster.", src=LGN),
+ ("seoul-land", "Columbia Double Loop Coaster"): M(min=120, note="The park lists it as 은하열차888 (Galaxy Train 888).", src=SEL),
+ ("seoul-land", "Black Hole 2000"): M(min=120, src=SEL),
+ ("seoul-land", "Crazy Mouse"): M(min=120, note="The park lists it as 달나라열차 (Moon Train).", src=SEL),
+ ("seoul-land", "Tikitoc Train"): M(min=100, note="The park lists it as 티키톡열차.", src=SEL),
+ ("seoul-land", "Tobot Train"): M(min=80, note="The park lists it as 또봇트레인.", src=SEL),
+ ("leofoo-village", "Screaming Condor"): M(min=140, max=190, note="Chinese name 笑傲飛鷹.", src=LFV),
+ ("leofoo-village", "Sahara Twist"): M(min=90, max=185, note="Chinese name 沙漠風暴.", src=LFV),
+ ("leofoo-village", "Little Rattler"): M(min=90, note="Chinese name 西部瘋狂列車.", src=LFV),
+}
+HP_INTL.update(HP_B12d)
+INTL_PARKS += [
+ dict(slug="kijima-kogen", name="Kijima Kogen Park", short="Kijima Kogen", loc="Beppu, Oita, Japan", state="Oita", country="JP", official="https://www.kijimakogen-park.jp/", group="Kijima Kogen", checked=_C),
+ dict(slug="suzuka-circuit", name="Suzuka Circuit Park", short="Suzuka Circuit", loc="Suzuka, Mie, Japan", state="Mie", country="JP", official="https://www.suzukacircuit.jp/park/", group="Mobilityland", checked=_C),
+ dict(slug="washuzan-highland", name="Brazilian Park Washuzan Highland", short="Washuzan Highland", loc="Kurashiki, Okayama, Japan", state="Okayama", country="JP", official="https://www.w-highland.co.jp/", group="Washuzan Highland", checked=_C),
+ dict(slug="lagunasia", name="Lagunasia", short="Lagunasia", loc="Gamagori, Aichi, Japan", state="Aichi", country="JP", official="https://www.lagunatenbosch.co.jp/lagunasia/", group="Laguna Ten Bosch", checked=_C),
+ dict(slug="seoul-land", name="Seoul Land", short="Seoul Land", loc="Gwacheon, Gyeonggi, South Korea", state="Gyeonggi", country="KR", official="https://seoulland.co.kr/", group="Seoul Land", checked=_C),
+ dict(slug="leofoo-village", name="Leofoo Village Theme Park", short="Leofoo Village", loc="Guanxi, Hsinchu County, Taiwan", state="Hsinchu County", country="TW", official="https://www.leofoovillage.com.tw/", group="Leofoo", checked=_C),
+]
