@@ -1458,3 +1458,19 @@ INTL_PARKS += [
  dict(slug="mandoria", name="Mandoria", short="Mandoria", loc="Rzgów, Poland", state="Łódź", country="PL", official="https://mandoria.com/en/", group="Mandoria", checked=_C),
  dict(slug="winnoland", name="Winnoland", short="Winnoland", loc="Saint-Pierre-du-Perray, France", state="Île-de-France", country="FR", official="https://winnoland.fr/", group="Winnoland", checked=_C),
 ]
+
+# ---- Batch 14c (11 Nov 2026): Kentucky Kingdom (retry; the official site now lists every RCDB coaster) ----
+def KYK(s): return ("Kentucky Kingdom, official attraction page", f"https://www.kentuckykingdom.com/explore-the-park/attractions/kentucky-kingdom/{s}/")
+KYL = ("Kentucky Kingdom, official rides and attractions list", "https://www.kentuckykingdom.com/explore-the-park/attractions/")
+HP_B14c = {
+ ("kentucky-kingdom", "Lightning Run"): dict(min=48, src=KYK("lightning-run")),
+ ("kentucky-kingdom", "Woodland Run"): dict(min=48, src=KYK("woodland-run")),
+ ("kentucky-kingdom", "Wind Chaser"): dict(min=48, src=KYL),
+ ("kentucky-kingdom", "Kentucky Flyer"): dict(min=46, acc_min=40, acc_max=46, note="Riders 40 inches and up may ride with a supervising companion who meets all rider requirements and is at least 14.", src=KYL),
+ ("kentucky-kingdom", "Flying Fox"): dict(min=48, acc_min=38, acc_max=48, max=81, note="Riders 38 inches and up may ride with a supervising companion; 48 inches to ride alone.", src=KYL),
+ ("kentucky-kingdom", "Hollyhock and Roll"): dict(min=56, acc_min=36, acc_max=56, note="As published by the park: 56 inches to ride alone; riders 36 inches and up may ride with a supervising companion who is at least 14.", src=KYK("hollyhock-and-roll")),
+}
+HP_INTL.update(HP_B14c)
+INTL_PARKS += [
+ dict(slug="kentucky-kingdom", name="Kentucky Kingdom", short="Kentucky Kingdom", loc="Louisville, Kentucky", state="KY", country="US", official="https://www.kentuckykingdom.com/", group="Kentucky Kingdom", checked=_C),
+]

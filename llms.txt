@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1322 coasters at 231 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1328 coasters at 232 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1565,3 +1565,10 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Grosse Pomme](https://coastermap.com/parks/winnoland/grosse-pomme/): min height 80 cm
   - [Bûche Dansante](https://coastermap.com/parks/winnoland/buche-dansante/): min height 105 cm
   - [Wild West Coaster](https://coastermap.com/parks/winnoland/wild-west-coaster/): min height 95 cm
+- [Kentucky Kingdom](https://coastermap.com/parks/kentucky-kingdom/): 6 coasters
+  - [Lightning Run](https://coastermap.com/parks/kentucky-kingdom/lightning-run/): min height 48 in
+  - [Wind Chaser](https://coastermap.com/parks/kentucky-kingdom/wind-chaser/): min height 48 in
+  - [Kentucky Flyer](https://coastermap.com/parks/kentucky-kingdom/kentucky-flyer/): min height 46 in
+  - [Flying Fox](https://coastermap.com/parks/kentucky-kingdom/flying-fox/): min height 48 in
+  - [Hollyhock and Roll](https://coastermap.com/parks/kentucky-kingdom/hollyhock-and-roll/): min height 56 in
+  - [Woodland Run](https://coastermap.com/parks/kentucky-kingdom/woodland-run/): min height 48 in
