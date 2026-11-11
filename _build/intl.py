@@ -1172,3 +1172,145 @@ INTL_PARKS += [
  dict(slug="ok-corral", name="OK Corral", short="OK Corral", loc="Cuges-les-Pins, France", state="Provence-Alpes-Côte d'Azur", country="FR", official="https://www.okcorral.fr/", group="OK Corral", checked=_C),
  dict(slug="e-world", name="E-World", short="E-World", loc="Daegu, South Korea", state="Daegu", country="KR", official="https://eworld.kr/", group="E-World", checked=_C),
 ]
+
+# ---- Batch 13b (11 Nov 2026): US and Canada regional parks ----
+MSP = lambda p: (f"Magic Springs Theme and Water Park, official {p} rides page", f"https://magicsprings.com/rides-{p}/")
+def LIS(s): return ("Lost Island Theme Park, official ride page", f"https://www.thelostisland.com/amusement-park/attractions/rollercoasters/{s}/")
+COT = ("COTALAND, official rides page", "https://cotaland.com/rides")
+FKP = lambda p: ("Family Kingdom Amusement Park, official rides page", f"https://www.familykingdomfun.com/{p}")
+QSY = ("Quassy Amusement Park, official rides and attractions page", "https://www.quassy.com/things-do/rides-and-attractions")
+CMP = ("Camden Park, official main rides page", "https://www.camdenpark.com/rides-attractions/main-rides/")
+CAL = ("Calaway Park, official height guide", "https://www.calawaypark.com/rides/height-guide/")
+SVD = ("Santa's Village Amusement & Water Park, official amusement park rides page", "https://santasvillagedundee.com/things-to-do/amusement-park-rides/")
+WLA = ("Wonderland Amusement Park, official coasters and thrill rides page", "https://www.wonderlandpark.com/coasters-thrill-rides")
+ALA = ("Alabama Adventure, official attractions page", "https://alabamaadventure.com/attractions/")
+PPL = ("Palace Playland, official rides page", "https://www.palaceplayland.com/rides/")
+HP_B13b = {
+ ("magic-springs", "Gauntlet"): dict(min=52, src=MSP("thrill")),
+ ("magic-springs", "Big Bad John"): dict(min=42, src=MSP("thrill")),
+ ("magic-springs", "Diamond Mine Run"): dict(min=42, acc_min=36, acc_max=42, note="The park lists it as Diamond Mine Coaster: riders 36 to 42 inches must be accompanied by a supervising companion.", src=MSP("family")),
+ ("lost-island", "Matugani"): dict(min=52, src=LIS("launch-coaster")),
+ ("lost-island", "Nopuko Air Coaster"): dict(min=52, src=LIS("looping-coaster")),
+ ("lost-island", "Fire Runner"): dict(min=48, src=LIS("fire-runner")),
+ ("cotaland", "Circuit Breaker"): dict(min=48, max=80, src=COT),
+ ("cotaland", "Palindrome"): dict(min=48, max=77, src=COT),
+ ("cotaland", "Retro Rambler"): dict(min=42, src=COT),
+ ("cotaland", "Checkers' Sky Flyer"): dict(min=47, acc_min=36, acc_max=47, max=77, note="Riders from 36 inches may ride accompanied by a supervising companion.", src=COT),
+ ("cotaland", "Wacky Worm"): dict(min=47, acc_min=39, acc_max=47, max=78, note="Riders from 39 inches may ride accompanied by a supervising companion.", src=COT),
+ ("family-kingdom", "Swamp Fox"): dict(min=52, src=FKP("thrill-rides")),
+ ("family-kingdom", "Dragon"): dict(min=47, acc_min=36, acc_max=47, note="The park lists it as Dragon Coaster: 47 inches to ride alone, 36 to 46 inches with an adult.", src=FKP("kiddie-rides")),
+ ("quassy", "Wooden Warrior"): dict(min=48, acc_min=40, acc_max=48, note="Minimum 40 inches; 48 inches to ride alone.", src=QSY),
+ ("quassy", "Little Dipper"): dict(min=36, note="36 inches to ride alone or with a companion.", src=QSY),
+ ("quassy", "Crazy 8 Spin Coaster"): dict(min=47, acc_min=36, acc_max=47, max=77, note="The park lists it as Crazy 8 Family Roller Coaster: minimum 36 inches, 47 inches to ride alone.", src=QSY),
+ ("camden-park", "Big Dipper"): dict(min=48, note="Riders under 48 inches must ride with a responsible person; no lower limit is listed.", src=CMP),
+ ("camden-park", "Lil' Dipper"): dict(min=48, note="Riders under 48 inches must ride with a responsible person; no lower limit is listed.", src=CMP),
+ ("camden-park", "Slingshot"): dict(min=48, acc_min=36, acc_max=48, note="The park lists it as Sling Shot: riders 36 to 48 inches must ride with a responsible person.", src=CMP),
+ ("calaway-park", "Vortex"): dict(min=48, note="The park lists it as The Vortex.", src=CAL),
+ ("calaway-park", "Mini Express"): dict(min=36, src=CAL),
+ ("calaway-park", "Bumble Blast"): dict(min=48, acc_min=42, acc_max=48, note="The height guide lists it as accompanied by an adult from 42 inches and alone from 48 inches.", src=CAL),
+ ("santas-village-dundee", "Super Cyclone"): dict(min=52, acc_min=48, acc_max=52, note="Riders 48 to 52 inches must be accompanied by an adult over 52 inches.", src=SVD),
+ ("santas-village-dundee", "Farmers Fling"): dict(min=48, acc_min=36, acc_max=48, max=77, note="The park lists it as Farmer's Fling.", src=SVD),
+ ("santas-village-dundee", "Wacky Worm"): dict(min=42, acc_min=36, acc_max=42, src=SVD),
+ ("wonderland-amarillo", "Texas Tornado"): dict(min=50, src=WLA),
+ ("wonderland-amarillo", "Hornet"): dict(min=48, acc_min=42, acc_max=48, src=WLA),
+ ("wonderland-amarillo", "Cyclone"): dict(min=48, src=WLA),
+ ("wonderland-amarillo", "Mouse Trap"): dict(min=48, src=WLA),
+ ("alabama-adventure", "Rampage"): dict(min=48, src=ALA),
+ ("alabama-adventure", "Cheddar Chase"): dict(min=48, src=ALA),
+ ("alabama-adventure", "Centi-SPEED"): dict(min=42, acc_min=36, acc_max=42, note="Riders from 36 inches may ride with a responsible person.", src=ALA),
+ ("palace-playland", "Sea Viper"): dict(min=51, acc_min=48, acc_max=51, note="Riders from 48 inches may ride with a paying adult.", src=PPL),
+ ("palace-playland", "Wipeout"): dict(min=46, acc_min=36, acc_max=46, note="Riders from 36 inches may ride with a paying adult.", src=PPL),
+ ("palace-playland", "Gold Rush"): dict(min=42, max=79, src=PPL),
+}
+HP_INTL.update(HP_B13b)
+INTL_PARKS += [
+ dict(slug="magic-springs", name="Magic Springs Theme and Water Park", short="Magic Springs", loc="Hot Springs, Arkansas", state="AR", country="US", official="https://magicsprings.com/", group="Magic Springs", checked=_C),
+ dict(slug="lost-island", name="Lost Island Theme Park", short="Lost Island", loc="Waterloo, Iowa", state="IA", country="US", official="https://www.thelostisland.com/", group="Lost Island", checked=_C),
+ dict(slug="cotaland", name="COTALAND", short="COTALAND", loc="Austin, Texas", state="TX", country="US", official="https://cotaland.com/", group="Circuit of The Americas", checked=_C),
+ dict(slug="family-kingdom", name="Family Kingdom Amusement Park", short="Family Kingdom", loc="Myrtle Beach, South Carolina", state="SC", country="US", official="https://www.familykingdomfun.com/", group="Family Kingdom", checked=_C),
+ dict(slug="quassy", name="Quassy Amusement Park", short="Quassy", loc="Middlebury, Connecticut", state="CT", country="US", official="https://www.quassy.com/", group="Quassy", checked=_C),
+ dict(slug="camden-park", name="Camden Park", short="Camden Park", loc="Huntington, West Virginia", state="WV", country="US", official="https://www.camdenpark.com/", group="Camden Park", checked=_C),
+ dict(slug="calaway-park", name="Calaway Park", short="Calaway Park", loc="Calgary, Alberta", state="AB", country="CA", official="https://www.calawaypark.com/", group="Calaway Park", checked=_C),
+ dict(slug="santas-village-dundee", name="Santa's Village Amusement & Water Park", short="Santa's Village", loc="East Dundee, Illinois", state="IL", country="US", official="https://santasvillagedundee.com/", group="Santa's Village", checked=_C),
+ dict(slug="wonderland-amarillo", name="Wonderland Amusement Park", short="Wonderland", loc="Amarillo, Texas", state="TX", country="US", official="https://www.wonderlandpark.com/", group="Wonderland Amusement Park", checked=_C),
+ dict(slug="alabama-adventure", name="Alabama Adventure & Splash Adventure", short="Alabama Adventure", loc="Bessemer, Alabama", state="AL", country="US", official="https://alabamaadventure.com/", group="Alabama Adventure", checked=_C),
+ dict(slug="palace-playland", name="Palace Playland", short="Palace Playland", loc="Old Orchard Beach, Maine", state="ME", country="US", official="https://www.palaceplayland.com/", group="Palace Playland", checked=_C),
+]
+
+# ---- Batch 13c (11 Nov 2026): France and Austria family parks ----
+def LPL(s): return ("Le PAL, official attraction page (access conditions)", f"https://www.lepal.com/attractions/{s}")
+def BAG(s): return ("Parc Bagatelle, official attraction page", f"https://www.parcbagatelle.com/attraction-details/{s}")
+def MDS(s): return ("La Mer de Sable, official attraction page", f"https://www.merdesable.fr/attraction-details/{s}")
+def BOC(s): return ("Parc du Bocasse, official attraction page", f"https://parcdubocasse.fr/attractions/{s}/")
+def PSP(s): return ("Parc Saint Paul, official attraction page", f"https://www.parcsaintpaul.fr/attraction-details/{s}/")
+def FPA(s): return ("Familypark, official attraction page", f"https://www.familypark.at/attraktionen/{s}/")
+_LP = lambda lo, hi, n: f"Under {lo} cm not allowed; under {hi} cm must be accompanied (one adult over 16 for {n} child{'ren' if n > 1 else ''})."
+HP_B13c = {
+ ("le-pal", "Azteka"): M(min=140, acc_min=100, acc_max=140, note=_LP(100, 140, 3), src=LPL("azteka-train-de-la-mine")),
+ ("le-pal", "Twist"): M(min=140, acc_min=100, acc_max=140, note="The park lists it as Le Twist. " + _LP(100, 140, 1), src=LPL("le-twist")),
+ ("le-pal", "Yukon Quad"): M(min=140, acc_min=120, acc_max=140, note=_LP(120, 140, 3), src=LPL("yukon-quad")),
+ ("le-pal", "Fjord Explorer"): M(min=130, acc_min=110, acc_max=130, note=_LP(110, 130, 3), src=LPL("fjord-explorer")),
+ ("le-pal", "Tigre de Sibérie"): M(min=140, acc_min=100, acc_max=140, note="The park lists it as Le Tigre de Sibérie. " + _LP(100, 140, 3), src=LPL("le-tigre-de-siberie")),
+ ("bagatelle", "Gaz Express"): M(min=130, acc_min=100, acc_max=130, note="The park spells it Gaz'Express: from 1 m, accompanied up to 1.30 m.", src=BAG("gazexpress")),
+ ("bagatelle", "Spirale Express"): M(min=120, acc_min=100, acc_max=120, src=BAG("spirale-express")),
+ ("bagatelle", "Triops"): M(min=145, acc_min=135, acc_max=145, max=200, src=BAG("triops")),
+ ("bagatelle", "Famous Jack"): M(min=130, acc_min=110, acc_max=130, src=BAG("famous-jack")),
+ ("mer-de-sable", "Bandidos"): M(min=120, acc_min=95, acc_max=120, max=195, src=MDS("bandidos")),
+ ("mer-de-sable", "Silver Mountain"): M(min=120, acc_min=100, acc_max=120, src=MDS("du-nouveau-a-lwest-silver-mountain")),
+ ("mer-de-sable", "Tiger Express"): M(min=140, acc_min=120, acc_max=140, src=MDS("tiger-express-1")),
+ ("mer-de-sable", "Wild Buffalo"): M(min=130, acc_min=110, acc_max=130, src=MDS("wild-buffalo-1")),
+ ("parc-du-bocasse", "Orochi"): M(min=130, acc_min=120, acc_max=130, max=205, note="Maximum weight 91 kg.", src=BOC("orochi")),
+ ("parc-du-bocasse", "Jurassic Twister"): M(min=120, acc_min=105, acc_max=120, src=BOC("jurassic-twister")),
+ ("parc-du-bocasse", "Fort d'Odin"): M(min=130, acc_min=105, acc_max=130, src=BOC("fort-dodin")),
+ ("parc-du-bocasse", "Speedy Gonzales"): M(min=120, acc_min=100, acc_max=120, note="The park lists it as Speedy.", src=BOC("speedy")),
+ ("parc-du-bocasse", "Pirate's Coaster"): M(min=120, acc_min=90, acc_max=120, src=BOC("pirates-coaster")),
+ ("parc-saint-paul", "Pomme"): M(min=110, acc_min=90, acc_max=110, note="The park lists it as La Pomme.", src=PSP("la-pomme")),
+ ("parc-saint-paul", "Aérotrain"): M(min=120, acc_min=100, acc_max=120, src=PSP("laerotrain")),
+ ("parc-saint-paul", "Mini Mouse Cartoon"): M(min=100, note="Riders under 100 cm must be accompanied; no lower limit is listed.", src=PSP("mini-mouse-cartoon")),
+ ("parc-saint-paul", "Wood Express"): M(min=120, acc_min=110, acc_max=120, note="The park lists it as Wood.", src=PSP("wood")),
+ ("familypark", "Götterblitz"): M(min=130, acc_min=100, acc_max=130, note="Children under 130 cm only with an adult.", src=FPA("goetterblitz-de")),
+ ("familypark", "Rattenmühle"): M(min=130, acc_min=105, acc_max=130, note="Children under 130 cm only with an adult.", src=FPA("rattenmuehle")),
+ ("familypark", "Adlerflug"): M(min=120, acc_min=105, acc_max=120, note="Children under 120 cm only with an adult.", src=FPA("adlerflug-de")),
+ ("familypark", "Herkules"): M(min=90, max=120, note="A children's coaster: riders over 120 cm or 45 kg may not ride.", src=FPA("herkules-de")),
+}
+HP_INTL.update(HP_B13c)
+INTL_PARKS += [
+ dict(slug="le-pal", name="Le PAL", short="Le PAL", loc="Dompierre-sur-Besbre, France", state="Auvergne-Rhône-Alpes", country="FR", official="https://www.lepal.com/", group="Le PAL", checked=_C),
+ dict(slug="bagatelle", name="Parc Bagatelle", short="Bagatelle", loc="Merlimont, France", state="Hauts-de-France", country="FR", official="https://www.parcbagatelle.com/", group="Looping Group", checked=_C),
+ dict(slug="mer-de-sable", name="La Mer de Sable", short="Mer de Sable", loc="Ermenonville, France", state="Hauts-de-France", country="FR", official="https://www.merdesable.fr/", group="Looping Group", checked=_C),
+ dict(slug="parc-du-bocasse", name="Parc du Bocasse", short="Bocasse", loc="Le Bocasse, France", state="Normandy", country="FR", official="https://parcdubocasse.fr/", group="Parc du Bocasse", checked=_C),
+ dict(slug="parc-saint-paul", name="Parc Saint Paul", short="Parc Saint Paul", loc="Saint-Paul, Oise, France", state="Hauts-de-France", country="FR", official="https://www.parcsaintpaul.fr/", group="Parc Saint Paul", checked=_C),
+ dict(slug="familypark", name="Familypark Neusiedlersee", short="Familypark", loc="St. Margarethen, Austria", state="Burgenland", country="AT", official="https://www.familypark.at/", group="Familypark", checked=_C),
+]
+
+# ---- Batch 13d (11 Nov 2026): Cavallino Matto, Conny-Land, Tosselilla, Freizeitpark Plohn ----
+def CVM(s): return ("Cavallino Matto, official attraction page", f"https://www.cavallinomatto.it/index.php/{s}/")
+def CNY(s): return ("Conny-Land, official attraction page", f"https://www.connyland.ch/attraktionen-details/{s}/")
+def TOS(s): return ("Tosselilla, official activity page", f"https://tosselilla.se/aktiviteter/{s}/")
+def PLO(s): return ("Freizeitpark Plohn, official attraction page", f"https://www.freizeitpark-plohn.de/de/park-entdecken/attraktionen/{s}")
+HP_B13d = {
+ ("cavallino-matto", "Project 1"): M(min=130, acc_min=110, acc_max=130, note="Minimum 110 cm; children up to 130 cm ride accompanied.", src=CVM("project1")),
+ ("cavallino-matto", "Topo Zorro"): M(min=110, acc_min=90, acc_max=110, note="The park lists it as Topozorro Explorer. Minimum 90 cm; children up to 110 cm ride accompanied.", src=CVM("topozorro")),
+ ("cavallino-matto", "Freestyle"): M(min=140, max=200, note="Minimum age 8; maximum weight 110 kg.", src=CVM("freestyle")),
+ ("cavallino-matto", "Jurassic River"): M(min=120, acc_min=100, acc_max=120, note="Minimum 100 cm; children up to 120 cm ride accompanied. Riders get wet.", src=CVM("jurassic-river")),
+ ("cavallino-matto", "Speedy Mouse"): M(min=110, acc_min=90, acc_max=110, note="Minimum 90 cm; children up to 110 cm ride accompanied.", src=CVM("speedygonzales")),
+ ("cavallino-matto", "Wild Mine"): M(min=130, acc_min=100, acc_max=130, note="Minimum 100 cm; children up to 130 cm ride accompanied.", src=CVM("wild-mine")),
+ ("conny-land", "Cobra"): M(min=130, note="The park lists it as Die Cobra. Minimum age 8.", src=CNY("cobra")),
+ ("conny-land", "Antares"): M(min=130, acc_min=115, acc_max=130, note="Riders from 115 cm may ride accompanied.", src=CNY("antares")),
+ ("conny-land", "Cobralino"): M(min=90, note="The park lists it as Kiddy Coaster Cobralino. Minimum age 3; maximum weight 30 kg.", src=CNY("kiddy-coaster-cobralino")),
+ ("tosselilla", "Kålmasken"): M(min=120, acc_min=90, acc_max=120, note="120 cm, or 90 cm with an adult.", src=TOS("kalmasken")),
+ ("tosselilla", "Mad Mouse"): M(min=130, note="The park lists it as Vilda Musen.", src=TOS("vilda-musen")),
+ ("tosselilla", "Forza"): M(min=120, acc_min=110, acc_max=120, note="120 cm, or 110 cm with an adult.", src=TOS("forza")),
+ ("freizeitpark-plohn", "El Toro"): M(min=130, acc_min=120, acc_max=130, note="Ages 6 to 8 ride with an adult (minimum 1.20 m); riding alone needs age 9 and 1.30 m. Age and height rules must both be met.", src=PLO("holzachterbahn-el-toro")),
+ ("freizeitpark-plohn", "Plohseidon"): M(min=100, note="Minimum age 4; children up to age 8 ride with an adult. Age and height rules must both be met.", src=PLO("familienachterbahn-plohseidon")),
+ ("freizeitpark-plohn", "Miniwah"): M(min=100, note="Minimum age 4; ages 4 to 8 only with an adult.", src=PLO("miniwah-das-geheimnis-von-gold-creek-city")),
+ ("freizeitpark-plohn", "Drachenwirbel"): M(min=120, acc_min=105, acc_max=120, max=195, note="Minimum age 4; 1.05 to 1.20 m only with an adult.", src=PLO("familiencoaster-drachenwirbel")),
+ ("freizeitpark-plohn", "Dynamite"): M(min=130, max=195, note="Minimum age 8; no companion required.", src=PLO("big-dipper-coaster-dynamite")),
+}
+HP_INTL.update(HP_B13d)
+INTL_PARKS += [
+ dict(slug="cavallino-matto", name="Cavallino Matto", short="Cavallino Matto", loc="Marina di Castagneto Carducci, Italy", state="Tuscany", country="IT", official="https://www.cavallinomatto.it/", group="Cavallino Matto", checked=_C),
+ dict(slug="conny-land", name="Conny-Land", short="Conny-Land", loc="Lipperswil, Switzerland", state="Thurgau", country="CH", official="https://www.connyland.ch/", group="Conny-Land", checked=_C),
+ dict(slug="tosselilla", name="Tosselilla Sommarland", short="Tosselilla", loc="Tomelilla, Sweden", state="Skåne", country="SE", official="https://tosselilla.se/", group="Tosselilla", checked=_C),
+ dict(slug="freizeitpark-plohn", name="Freizeitpark Plohn", short="Plohn", loc="Lengenfeld, Germany", state="Saxony", country="DE", official="https://www.freizeitpark-plohn.de/", group="Freizeitpark Plohn", checked=_C),
+]

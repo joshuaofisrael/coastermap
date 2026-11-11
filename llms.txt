@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1149 coasters at 189 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1233 coasters at 210 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1350,3 +1350,108 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Hurricane](https://coastermap.com/parks/e-world/hurricane/): min height 120 cm
   - [Magic Castle](https://coastermap.com/parks/e-world/magic-castle/): min height 110 cm
   - [Camel Back](https://coastermap.com/parks/e-world/camel-back/): min height 110 cm
+- [Magic Springs Theme and Water Park](https://coastermap.com/parks/magic-springs/): 3 coasters
+  - [Diamond Mine Run](https://coastermap.com/parks/magic-springs/diamond-mine-run/): min height 42 in
+  - [Big Bad John](https://coastermap.com/parks/magic-springs/big-bad-john/): min height 42 in
+  - [Gauntlet](https://coastermap.com/parks/magic-springs/gauntlet/): min height 52 in
+- [Lost Island Theme Park](https://coastermap.com/parks/lost-island/): 4 coasters
+  - [Matugani](https://coastermap.com/parks/lost-island/matugani/): min height 52 in
+  - [Lokolo](https://coastermap.com/parks/lost-island/lokolo/)
+  - [Nopuko Air Coaster](https://coastermap.com/parks/lost-island/nopuko-air-coaster/): min height 52 in
+  - [Fire Runner](https://coastermap.com/parks/lost-island/fire-runner/): min height 48 in
+- [COTALAND](https://coastermap.com/parks/cotaland/): 5 coasters
+  - [Checkers' Sky Flyer](https://coastermap.com/parks/cotaland/checkers-sky-flyer/): min height 47 in
+  - [Wacky Worm](https://coastermap.com/parks/cotaland/wacky-worm/): min height 47 in
+  - [Retro Rambler](https://coastermap.com/parks/cotaland/retro-rambler/): min height 42 in
+  - [Palindrome](https://coastermap.com/parks/cotaland/palindrome/): min height 48 in
+  - [Circuit Breaker](https://coastermap.com/parks/cotaland/circuit-breaker/): min height 48 in
+- [Family Kingdom Amusement Park](https://coastermap.com/parks/family-kingdom/): 3 coasters
+  - [Swamp Fox](https://coastermap.com/parks/family-kingdom/swamp-fox/): min height 52 in
+  - [Twist 'n' Shout](https://coastermap.com/parks/family-kingdom/twist-n-shout/)
+  - [Dragon](https://coastermap.com/parks/family-kingdom/dragon/): min height 47 in
+- [Quassy Amusement Park](https://coastermap.com/parks/quassy/): 3 coasters
+  - [Little Dipper](https://coastermap.com/parks/quassy/little-dipper/): min height 36 in
+  - [Wooden Warrior](https://coastermap.com/parks/quassy/wooden-warrior/): min height 48 in
+  - [Crazy 8 Spin Coaster](https://coastermap.com/parks/quassy/crazy-8-spin-coaster/): min height 47 in
+- [Camden Park](https://coastermap.com/parks/camden-park/): 3 coasters
+  - [Big Dipper](https://coastermap.com/parks/camden-park/big-dipper/): min height 48 in
+  - [Lil' Dipper](https://coastermap.com/parks/camden-park/lil-dipper/): min height 48 in
+  - [Slingshot](https://coastermap.com/parks/camden-park/slingshot/): min height 48 in
+- [Calaway Park](https://coastermap.com/parks/calaway-park/): 3 coasters
+  - [Vortex](https://coastermap.com/parks/calaway-park/vortex/): min height 48 in
+  - [Mini Express](https://coastermap.com/parks/calaway-park/mini-express/): min height 36 in
+  - [Bumble Blast](https://coastermap.com/parks/calaway-park/bumble-blast/): min height 48 in
+- [Santa's Village Amusement & Water Park](https://coastermap.com/parks/santas-village-dundee/): 3 coasters
+  - [Wacky Worm](https://coastermap.com/parks/santas-village-dundee/wacky-worm/): min height 42 in
+  - [Super Cyclone](https://coastermap.com/parks/santas-village-dundee/super-cyclone/): min height 52 in
+  - [Farmers Fling](https://coastermap.com/parks/santas-village-dundee/farmers-fling/): min height 48 in
+- [Wonderland Amusement Park](https://coastermap.com/parks/wonderland-amarillo/): 4 coasters
+  - [Texas Tornado](https://coastermap.com/parks/wonderland-amarillo/texas-tornado/): min height 50 in
+  - [Mouse Trap](https://coastermap.com/parks/wonderland-amarillo/mouse-trap/): min height 48 in
+  - [Cyclone](https://coastermap.com/parks/wonderland-amarillo/cyclone/): min height 48 in
+  - [Hornet](https://coastermap.com/parks/wonderland-amarillo/hornet/): min height 48 in
+- [Alabama Adventure & Splash Adventure](https://coastermap.com/parks/alabama-adventure/): 3 coasters
+  - [Rampage](https://coastermap.com/parks/alabama-adventure/rampage/): min height 48 in
+  - [Centi-SPEED](https://coastermap.com/parks/alabama-adventure/centi-speed/): min height 42 in
+  - [Cheddar Chase](https://coastermap.com/parks/alabama-adventure/cheddar-chase/): min height 48 in
+- [Palace Playland](https://coastermap.com/parks/palace-playland/): 3 coasters
+  - [Sea Viper](https://coastermap.com/parks/palace-playland/sea-viper/): min height 51 in
+  - [Wipeout](https://coastermap.com/parks/palace-playland/wipeout/): min height 46 in
+  - [Gold Rush](https://coastermap.com/parks/palace-playland/gold-rush/): min height 42 in
+- [Le PAL](https://coastermap.com/parks/le-pal/): 5 coasters
+  - [Azteka](https://coastermap.com/parks/le-pal/azteka/): min height 140 cm
+  - [Twist](https://coastermap.com/parks/le-pal/twist/): min height 140 cm
+  - [Yukon Quad](https://coastermap.com/parks/le-pal/yukon-quad/): min height 140 cm
+  - [Fjord Explorer](https://coastermap.com/parks/le-pal/fjord-explorer/): min height 130 cm
+  - [Tigre de Sibérie](https://coastermap.com/parks/le-pal/tigre-de-siberie/): min height 140 cm
+- [Parc Bagatelle](https://coastermap.com/parks/bagatelle/): 5 coasters
+  - [Gaz Express](https://coastermap.com/parks/bagatelle/gaz-express/): min height 130 cm
+  - [Spirale Express](https://coastermap.com/parks/bagatelle/spirale-express/): min height 120 cm
+  - [Triops](https://coastermap.com/parks/bagatelle/triops/): min height 145 cm
+  - [Kid'z Coaster](https://coastermap.com/parks/bagatelle/kidz-coaster/)
+  - [Famous Jack](https://coastermap.com/parks/bagatelle/famous-jack/): min height 130 cm
+- [La Mer de Sable](https://coastermap.com/parks/mer-de-sable/): 4 coasters
+  - [Tiger Express](https://coastermap.com/parks/mer-de-sable/tiger-express/): min height 140 cm
+  - [Bandidos](https://coastermap.com/parks/mer-de-sable/bandidos/): min height 120 cm
+  - [Silver Mountain](https://coastermap.com/parks/mer-de-sable/silver-mountain/): min height 120 cm
+  - [Wild Buffalo](https://coastermap.com/parks/mer-de-sable/wild-buffalo/): min height 130 cm
+- [Parc du Bocasse](https://coastermap.com/parks/parc-du-bocasse/): 5 coasters
+  - [Speedy Gonzales](https://coastermap.com/parks/parc-du-bocasse/speedy-gonzales/): min height 120 cm
+  - [Jurassic Twister](https://coastermap.com/parks/parc-du-bocasse/jurassic-twister/): min height 120 cm
+  - [Pirate's Coaster](https://coastermap.com/parks/parc-du-bocasse/pirates-coaster/): min height 120 cm
+  - [Orochi](https://coastermap.com/parks/parc-du-bocasse/orochi/): min height 130 cm
+  - [Fort d'Odin](https://coastermap.com/parks/parc-du-bocasse/fort-dodin/): min height 130 cm
+- [Parc Saint Paul](https://coastermap.com/parks/parc-saint-paul/): 5 coasters
+  - [Mini Mouse Cartoon](https://coastermap.com/parks/parc-saint-paul/mini-mouse-cartoon/): min height 100 cm
+  - [Pomme](https://coastermap.com/parks/parc-saint-paul/pomme/): min height 110 cm
+  - [Souris Verte](https://coastermap.com/parks/parc-saint-paul/souris-verte/)
+  - [Aérotrain](https://coastermap.com/parks/parc-saint-paul/aerotrain/): min height 120 cm
+  - [Wood Express](https://coastermap.com/parks/parc-saint-paul/wood-express/): min height 120 cm
+- [Familypark Neusiedlersee](https://coastermap.com/parks/familypark/): 4 coasters
+  - [Götterblitz](https://coastermap.com/parks/familypark/gotterblitz/): min height 130 cm
+  - [Rattenmühle](https://coastermap.com/parks/familypark/rattenmuhle/): min height 130 cm
+  - [Adlerflug](https://coastermap.com/parks/familypark/adlerflug/): min height 120 cm
+  - [Herkules](https://coastermap.com/parks/familypark/herkules/): min height 90 cm
+- [Cavallino Matto](https://coastermap.com/parks/cavallino-matto/): 6 coasters
+  - [Project 1](https://coastermap.com/parks/cavallino-matto/project-1/): min height 130 cm
+  - [Topo Zorro](https://coastermap.com/parks/cavallino-matto/topo-zorro/): min height 110 cm
+  - [Freestyle](https://coastermap.com/parks/cavallino-matto/freestyle/): min height 140 cm
+  - [Jurassic River](https://coastermap.com/parks/cavallino-matto/jurassic-river/): min height 120 cm
+  - [Speedy Mouse](https://coastermap.com/parks/cavallino-matto/speedy-mouse/): min height 110 cm
+  - [Wild Mine](https://coastermap.com/parks/cavallino-matto/wild-mine/): min height 130 cm
+- [Conny-Land](https://coastermap.com/parks/conny-land/): 3 coasters
+  - [Cobra](https://coastermap.com/parks/conny-land/cobra/): min height 130 cm
+  - [Cobralino](https://coastermap.com/parks/conny-land/cobralino/): min height 90 cm
+  - [Antares](https://coastermap.com/parks/conny-land/antares/): min height 130 cm
+- [Tosselilla Sommarland](https://coastermap.com/parks/tosselilla/): 3 coasters
+  - [Kålmasken](https://coastermap.com/parks/tosselilla/kalmasken/): min height 120 cm
+  - [Mad Mouse](https://coastermap.com/parks/tosselilla/mad-mouse/): min height 130 cm
+  - [Forza](https://coastermap.com/parks/tosselilla/forza/): min height 120 cm
+- [Freizeitpark Plohn](https://coastermap.com/parks/freizeitpark-plohn/): 7 coasters
+  - [Family Coaster](https://coastermap.com/parks/freizeitpark-plohn/family-coaster/)
+  - [El Toro](https://coastermap.com/parks/freizeitpark-plohn/el-toro/): min height 130 cm
+  - [Plohseidon](https://coastermap.com/parks/freizeitpark-plohn/plohseidon/): min height 100 cm
+  - [Miniwah](https://coastermap.com/parks/freizeitpark-plohn/miniwah/): min height 100 cm
+  - [Drachenwirbel](https://coastermap.com/parks/freizeitpark-plohn/drachenwirbel/): min height 120 cm
+  - [Dynamite](https://coastermap.com/parks/freizeitpark-plohn/dynamite/): min height 130 cm
+  - [Dønnervind](https://coastermap.com/parks/freizeitpark-plohn/donnervind/)

@@ -1,7 +1,7 @@
 # Evergreen guide pages built only from verified site data. Exec'd inside build.py's namespace.
 GUIDES = []  # (path, title, blurb, group)
 REGION_PARKS = {}
-REGION = {"US": "North America", "CA": "North America", "DE": "Europe", "GB": "Europe", "ES": "Europe", "NL": "Europe", "SE": "Europe", "JP": "Asia", "CN": "Asia", "HK": "Asia", "FR": "Europe", "PL": "Europe", "IT": "Europe", "BE": "Europe", "AE": "Middle East", "SG": "Asia", "AU": "Oceania", "MX": "North America", "DK": "Europe", "FI": "Europe", "SA": "Middle East", "NO": "Europe", "BR": "South America", "KR": "Asia", "TW": "Asia", "CL": "South America", "IE": "Europe", "CO": "South America", "CR": "North America", "TR": "Asia", "IN": "Asia", "PH": "Asia", "ID": "Asia"}
+REGION = {"US": "North America", "CA": "North America", "DE": "Europe", "GB": "Europe", "ES": "Europe", "NL": "Europe", "SE": "Europe", "JP": "Asia", "CN": "Asia", "HK": "Asia", "FR": "Europe", "PL": "Europe", "IT": "Europe", "BE": "Europe", "AE": "Middle East", "SG": "Asia", "AU": "Oceania", "MX": "North America", "DK": "Europe", "FI": "Europe", "SA": "Middle East", "NO": "Europe", "BR": "South America", "KR": "Asia", "TW": "Asia", "CL": "South America", "IE": "Europe", "CO": "South America", "CR": "North America", "TR": "Asia", "IN": "Asia", "PH": "Asia", "ID": "Asia", "AT": "Europe", "CH": "Europe"}
 def pk(c): return park_of(c)
 def mtr(v): return f"{round(v * 0.3048):,} m"
 def kmh(v): return f"{round(v * 1.609)} km/h"
@@ -134,7 +134,7 @@ def first_timer_guide():
     guide("/guides/best-first-roller-coasters/", f"Best First Roller Coasters for Kids and Nervous Riders | {BRAND}"[:200], f"Gentle first roller coasters at {len(PARKS)} theme parks: no inversions, low height rules and modest speeds, from verified data.", "Best first roller coasters for kids and nervous riders", body, faqs, "For families", "Gentle starter coasters at every park, plus tips.", None, [("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids"), ("/guides/what-is-a-family-roller-coaster/", "What is a family roller coaster?"), ("/guides/most-intense-roller-coasters/", "Most intense roller coasters")])
 
 # ---------- regions ----------
-STATES = {"FL": "Florida", "CA": "California", "PA": "Pennsylvania", "TX": "Texas", "MO": "Missouri", "OH": "Ohio", "VA": "Virginia", "NY": "New York", "GA": "Georgia", "IN": "Indiana", "NJ": "New Jersey", "MN": "Minnesota"}
+STATES = {"FL": "Florida", "CA": "California", "PA": "Pennsylvania", "TX": "Texas", "MO": "Missouri", "OH": "Ohio", "VA": "Virginia", "NY": "New York", "GA": "Georgia", "IN": "Indiana", "NJ": "New Jersey", "MN": "Minnesota", "IA": "Iowa", "CT": "Connecticut", "IL": "Illinois"}
 COUNTRIES = {"GB": "the United Kingdom", "DE": "Germany", "ES": "Spain", "JP": "Japan", "FR": "France", "CA": "Canada", "AU": "Australia", "NL": "the Netherlands", "MX": "Mexico", "SE": "Sweden", "IT": "Italy", "DK": "Denmark", "BE": "Belgium", "BR": "Brazil", "CN": "China", "FI": "Finland", "KR": "South Korea", "CO": "Colombia", "TR": "Turkey"}
 def region_guides():
     groups = [(f"roller-coasters-in-{n.lower().replace(' ', '-')}", n, [p for p in PARKS if p["country"] == "US" and p["state"] == s]) for s, n in STATES.items()]
