@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1233 coasters at 210 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1269 coasters at 217 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1455,3 +1455,46 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Drachenwirbel](https://coastermap.com/parks/freizeitpark-plohn/drachenwirbel/): min height 120 cm
   - [Dynamite](https://coastermap.com/parks/freizeitpark-plohn/dynamite/): min height 130 cm
   - [Dønnervind](https://coastermap.com/parks/freizeitpark-plohn/donnervind/)
+- [Greenland](https://coastermap.com/parks/greenland/): 8 coasters
+  - [Spin Mouse](https://coastermap.com/parks/greenland/spin-mouse/): min height 120 cm
+  - [Nio](https://coastermap.com/parks/greenland/nio/): min height 130 cm
+  - [Gao](https://coastermap.com/parks/greenland/gao/): min height 130 cm
+  - [Milky Way](https://coastermap.com/parks/greenland/milky-way/): min height 120 cm
+  - [Grampus Jet](https://coastermap.com/parks/greenland/grampus-jet/): min height 110 cm
+  - [Sphinx Coaster](https://coastermap.com/parks/greenland/sphinx-coaster/)
+  - [Ladybug Coaster](https://coastermap.com/parks/greenland/ladybug-coaster/)
+  - [Blackhole Coaster](https://coastermap.com/parks/greenland/blackhole-coaster/)
+- [Nasu Highland Park](https://coastermap.com/parks/nasu-highland/): 7 coasters
+  - [Camel Coaster](https://coastermap.com/parks/nasu-highland/camel-coaster/): min height 110 cm
+  - [F² Fright Flight](https://coastermap.com/parks/nasu-highland/f2-fright-flight/): min height 130 cm
+  - [Batflyer](https://coastermap.com/parks/nasu-highland/batflyer/)
+  - [Big Boom](https://coastermap.com/parks/nasu-highland/big-boom/): min height 120 cm
+  - [Spinturn Coaster](https://coastermap.com/parks/nasu-highland/spinturn-coaster/): min height 135 cm
+  - [Shinpi](https://coastermap.com/parks/nasu-highland/shinpi/)
+  - [Woopy Coaster](https://coastermap.com/parks/nasu-highland/woopy-coaster/)
+- [Himeji Central Park](https://coastermap.com/parks/himeji-central-park/): 6 coasters
+  - [Diavlo](https://coastermap.com/parks/himeji-central-park/diavlo/): min height 140 cm
+  - [Labyrinth](https://coastermap.com/parks/himeji-central-park/labyrinth/): min height 130 cm
+  - [Imorinth](https://coastermap.com/parks/himeji-central-park/imorinth/)
+  - [Go! Go! Jet](https://coastermap.com/parks/himeji-central-park/go-go-jet/)
+  - [Hurricane](https://coastermap.com/parks/himeji-central-park/hurricane/): min height 120 cm
+  - [Venus GP](https://coastermap.com/parks/himeji-central-park/venus-gp/): min height 120 cm
+- [Japan Monkey Park](https://coastermap.com/parks/japan-monkey-park/): 4 coasters
+  - [Highway Coaster](https://coastermap.com/parks/japan-monkey-park/highway-coaster/): min height 120 cm
+  - [Monkey Coaster](https://coastermap.com/parks/japan-monkey-park/monkey-coaster/)
+  - [Go! Go! Banana Coaster](https://coastermap.com/parks/japan-monkey-park/go-go-banana-coaster/): min height 120 cm
+  - [Spinning  Coaster](https://coastermap.com/parks/japan-monkey-park/spinning-coaster/): min height 120 cm
+- [Hokkaido Greenland](https://coastermap.com/parks/hokkaido-greenland/): 4 coasters
+  - [Dragon King](https://coastermap.com/parks/hokkaido-greenland/dragon-king/): min height 120 cm
+  - [GO-ON](https://coastermap.com/parks/hokkaido-greenland/go-on/): min height 115 cm
+  - [Wani Wani Coaster](https://coastermap.com/parks/hokkaido-greenland/wani-wani-coaster/): min height 120 cm
+  - [Torokko Coaster](https://coastermap.com/parks/hokkaido-greenland/torokko-coaster/)
+- [Yokohama Cosmoworld](https://coastermap.com/parks/yokohama-cosmoworld/): 3 coasters
+  - [Diving Coaster: Vanish](https://coastermap.com/parks/yokohama-cosmoworld/diving-coaster-vanish/): min height 120 cm
+  - [Spinning Coaster](https://coastermap.com/parks/yokohama-cosmoworld/spinning-coaster/): min height 140 cm
+  - [Family Banana Coaster](https://coastermap.com/parks/yokohama-cosmoworld/family-banana-coaster/): min height 120 cm
+- [Yagiyama Benyland](https://coastermap.com/parks/benyland/): 4 coasters
+  - [Cork Screw](https://coastermap.com/parks/benyland/cork-screw/): min height 110 cm
+  - [Yagiyama Cyclone](https://coastermap.com/parks/benyland/yagiyama-cyclone/): min height 110 cm
+  - [Aero 5](https://coastermap.com/parks/benyland/aero-5/): min height 105 cm
+  - [Mini Cyclone](https://coastermap.com/parks/benyland/mini-cyclone/)

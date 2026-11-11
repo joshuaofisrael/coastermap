@@ -1314,3 +1314,49 @@ INTL_PARKS += [
  dict(slug="tosselilla", name="Tosselilla Sommarland", short="Tosselilla", loc="Tomelilla, Sweden", state="Skåne", country="SE", official="https://tosselilla.se/", group="Tosselilla", checked=_C),
  dict(slug="freizeitpark-plohn", name="Freizeitpark Plohn", short="Plohn", loc="Lengenfeld, Germany", state="Saxony", country="DE", official="https://www.freizeitpark-plohn.de/", group="Freizeitpark Plohn", checked=_C),
 ]
+
+# ---- Batch 13e (11 Nov 2026): Japan regional parks ----
+def GLK(s): return ("Greenland (Kumamoto), official attraction page", f"https://greenland-resort.com/park/attraction/{s}/")
+def NHP(n): return ("Nasu Highland Park, official attraction page", f"https://www.nasuhai.co.jp/attraction/{n}")
+HCP = ("Himeji Central Park, official attraction list", "https://www.central-park.co.jp/amusement/attraction")
+def JMP(s): return ("Japan Monkey Park, official attraction page", f"https://www.japan-monkeypark.jp/attraction/{s}/")
+def HGL(s): return ("Hokkaido Greenland, official attraction page", f"https://h-greenland.com/attraction/{s}/")
+def YCW(s): return ("Yokohama Cosmoworld, official attraction page", f"https://cosmoworld.jp/attraction/{s}/")
+BNY = ("Yagiyama Benyland, official attraction list", "https://www.benyland.com/attraction/")
+HP_B13e = {
+ ("greenland", "Nio"): M(min=130, max=200, note="Riders must be 64 or younger.", src=GLK("nio")),
+ ("greenland", "Gao"): M(min=130, note="The park lists it as Dinosaur Coaster GAO. Riders must be 64 or younger.", src=GLK("gao")),
+ ("greenland", "Grampus Jet"): M(min=110, max=200, note="No age limit is listed.", src=GLK("grampusjet")),
+ ("greenland", "Milky Way"): M(min=120, note="The seated side (Orihime) needs 120 cm; the stand-up side (Hikoboshi) needs 130 cm. Riders must be 64 or younger.", src=GLK("orihime")),
+ ("greenland", "Spin Mouse"): M(min=120, note="Riders must be 64 or younger.", src=GLK("spinmouse")),
+ ("nasu-highland", "Camel Coaster"): M(min=110, note="The park lists it as Camel Coaster Goku. Children under elementary-school age ride with a guardian.", src=NHP(34)),
+ ("nasu-highland", "F² Fright Flight"): M(min=130, max=200, note="The park lists it as F² (F-Two). Riders 65 and over may not ride.", src=NHP(22)),
+ ("nasu-highland", "Big Boom"): M(min=120, note="The park lists it as Big Boom Coaster. Riders 65 and over may not ride.", src=NHP(38)),
+ ("nasu-highland", "Spinturn Coaster"): M(min=135, acc_min=110, acc_max=135, note="Minimum 110 cm; riders under 135 cm ride with a guardian.", src=NHP(35)),
+ ("himeji-central-park", "Diavlo"): M(min=140, note="Children 9 and under may not ride.", src=HCP),
+ ("himeji-central-park", "Labyrinth"): M(min=130, src=HCP),
+ ("himeji-central-park", "Hurricane"): M(min=120, max=185, src=HCP),
+ ("himeji-central-park", "Venus GP"): M(min=120, note="Riders 65 and over may not ride; children under elementary-school age ride with a guardian.", src=HCP),
+ ("japan-monkey-park", "Highway Coaster"): M(min=120, note="Riders must be elementary-school age or older; 65 and over may not ride.", src=JMP("ハイウェイコースター")),
+ ("japan-monkey-park", "Go! Go! Banana Coaster"): M(min=120, acc_min=95, acc_max=120, note="Minimum 95 cm; elementary-school children under 120 cm and ages 3 to 6 ride with a guardian.", src=JMP("go！go！バナナコースター")),
+ ("japan-monkey-park", "Spinning  Coaster"): M(min=120, acc_min=100, acc_max=120, note="Minimum 100 cm; elementary-school children under 120 cm and ages 3 to 6 ride with a guardian.", src=JMP("スピニングコースター")),
+ ("hokkaido-greenland", "Dragon King"): M(min=120, note="The park lists it as Ryuo (龍王).", src=HGL("龍王")),
+ ("hokkaido-greenland", "GO-ON"): M(min=115, note="The park lists it as 轟音 (Go-on).", src=HGL("轟音")),
+ ("hokkaido-greenland", "Wani Wani Coaster"): M(min=120, note="Children from age 3 under 120 cm may ride with a paying guardian.", src=HGL("ワニワニコースター")),
+ ("yokohama-cosmoworld", "Diving Coaster: Vanish"): M(min=120, note="Riders must be elementary-school age to 64.", src=YCW("wonder/vanish")),
+ ("yokohama-cosmoworld", "Spinning Coaster"): M(min=140, acc_min=120, acc_max=140, note="Minimum 120 cm; riders under 140 cm need a companion aged 16 or older (who pays). Riders must be elementary-school age to 64.", src=YCW("wonder/spinningcoaster")),
+ ("yokohama-cosmoworld", "Family Banana Coaster"): M(min=120, acc_min=95, acc_max=120, note="Minimum 95 cm and age 3; children under elementary-school age or under 120 cm need a companion aged 16 or older (who pays).", src=YCW("burano/familybanana")),
+ ("benyland", "Cork Screw"): M(min=110, note="The park lists it as Corkscrew. No companion is required.", src=BNY),
+ ("benyland", "Yagiyama Cyclone"): M(min=110, note="No companion is required.", src=BNY),
+ ("benyland", "Aero 5"): M(min=105, acc_min=90, acc_max=105, note="Minimum 90 cm; riders under 105 cm ride with an adult.", src=BNY),
+}
+HP_INTL.update(HP_B13e)
+INTL_PARKS += [
+ dict(slug="greenland", name="Greenland", short="Greenland", loc="Arao, Japan", state="Kumamoto", country="JP", official="https://greenland-resort.com/park/", group="Greenland Resort", checked=_C),
+ dict(slug="nasu-highland", name="Nasu Highland Park", short="Nasu Highland", loc="Nasu, Japan", state="Tochigi", country="JP", official="https://www.nasuhai.co.jp/", group="Nasu Highland Park", checked=_C),
+ dict(slug="himeji-central-park", name="Himeji Central Park", short="Himeji Central Park", loc="Himeji, Japan", state="Hyōgo", country="JP", official="https://www.central-park.co.jp/", group="Himeji Central Park", checked=_C),
+ dict(slug="japan-monkey-park", name="Japan Monkey Park", short="Monkey Park", loc="Inuyama, Japan", state="Aichi", country="JP", official="https://www.japan-monkeypark.jp/", group="Japan Monkey Park", checked=_C),
+ dict(slug="hokkaido-greenland", name="Hokkaido Greenland", short="Hokkaido Greenland", loc="Iwamizawa, Japan", state="Hokkaido", country="JP", official="https://h-greenland.com/", group="Greenland Resort", checked=_C),
+ dict(slug="yokohama-cosmoworld", name="Yokohama Cosmoworld", short="Cosmoworld", loc="Yokohama, Japan", state="Kanagawa", country="JP", official="https://cosmoworld.jp/", group="Senyo Kogyo", checked=_C),
+ dict(slug="benyland", name="Yagiyama Benyland", short="Benyland", loc="Sendai, Japan", state="Miyagi", country="JP", official="https://www.benyland.com/", group="Benyland", checked=_C),
+]
