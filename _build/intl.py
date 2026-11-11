@@ -396,3 +396,68 @@ INTL_PARKS += [
  dict(slug="fun-spot-orlando", name="Fun Spot America Orlando", short="Fun Spot Orlando", loc="Orlando, Florida", state="FL", country="US", official="https://fun-spot.com/orlando/", group="Fun Spot America Theme Parks"),
  dict(slug="fun-spot-kissimmee", name="Fun Spot America Kissimmee", short="Fun Spot Kissimmee", loc="Kissimmee, Florida", state="FL", country="US", official="https://fun-spot.com/kissimmee/", group="Fun Spot America Theme Parks"),
 ]
+
+# ---- Batch 10d: Europe and US additions ----
+def TV(s): return ("Toverland, official ride page", f"https://www.toverland.com/en/rides/{s}")
+def CH(s): return ("Chessington World of Adventures, official ride page", f"https://www.chessington.com/explore/theme-park-zoo/rides-attractions/{s}/")
+def GL(s): return ("Gröna Lund, official ride page", f"https://www.gronalund.com/en/rides/{s}")
+def TI(s): return ("Tivoli Gardens, official ride page", f"https://www.tivoli.dk/en/rides/{s}")
+def LM(s): return ("Linnanmäki, official ride page", f"https://www.linnanmaki.fi/en/ride/{s}/")
+FL = ("Flamingo Land, official ride restrictions page", "https://www.flamingoland.co.uk/plan-your-visit/ride-restrictions/")
+def MP(s): return ("Morey's Piers, official ride page", f"https://www.moreyspiers.com/moreys-rides/{s}/")
+def PW(s): return ("Parque Warner Madrid, official attraction page", f"https://www.parquewarner.com/en/experiencias/atracciones/{s}")
+HP_B10d = {
+ ("toverland", "Toos-Express"): M(min=120, acc_min=90, acc_max=120, src=TV("toos-express")),
+ ("toverland", "Booster Bike"): M(min=140, src=TV("booster-bike")),
+ ("toverland", "Troy"): M(min=120, src=TV("troy")),
+ ("toverland", "Dwervelwind"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm must ride with an adult (16+).", src=TV("dwervelwind")),
+ ("toverland", "Fēnix"): M(min=132, max=195, src=TV("fenix")),
+ ("chessington", "Dragon's Fury"): M(min=120, max=195, src=CH("dragons-fury")),
+ ("chessington", "Mandrill Mayhem"): M(min=120, max=195, src=CH("mandrill-mayhem")),
+ ("chessington", "Chase's Mountain Mission"): M(min=110, acc_min=90, acc_max=110, note="Riders 90 to 110 cm must ride with an adult (16+).", src=CH("chases-mountain-mission")),
+ ("chessington", "Vampire"): M(min=130, acc_min=110, acc_max=130, note="Riders 110 to 130 cm must ride with an adult aged 16+.", src=CH("vampire")),
+ ("chessington", "Rattlesnake"): M(min=140, max=196, src=CH("rattlesnake")),
+ ("grona-lund", "Kvasten"): M(min=120, acc_min=110, acc_max=120, note="Riders must also be at least 4 years old.", src=GL("kvasten")),
+ ("grona-lund", "Insane"): M(min=140, max=195, src=GL("insane")),
+ ("grona-lund", "Twister"): M(min=120, src=GL("twister")),
+ ("grona-lund", "Monster"): M(min=140, src=GL("monster")),
+ ("tivoli-gardens", "Dæmonen"): M(min=132, src=TI("the-demon")),
+ ("tivoli-gardens", "Kamelen"): M(min=120, acc_min=100, acc_max=120, note="Riders 100 to 120 cm must ride with a paying companion aged at least 14.", src=TI("the-camel-trail")),
+ ("linnanmaki", "Linnunrata"): M(min=120, max=195, note="Riders must be over 6 to ride without a guardian.", src=LM("linnunrata-extra")),
+ ("linnanmaki", "Vuoristorata"): M(min=140, acc_min=120, acc_max=140, note="Riders 120 to 140 cm must ride with a guardian.", src=LM("vuoristorata")),
+ ("linnanmaki", "Pikajuna"): M(min=130, acc_min=100, acc_max=130, note="Riding without a guardian also requires being over 10.", src=LM("pikajuna")),
+ ("linnanmaki", "Tulireki"): M(min=140, acc_min=120, acc_max=140, note="Riding alone requires being over 8; riding with a guardian requires being over 6.", src=LM("tulireki")),
+ ("linnanmaki", "Kirnu"): M(min=140, max=195, src=LM("kirnu")),
+ ("linnanmaki", "Salama"): M(min=140, acc_min=120, acc_max=140, max=195, src=LM("salama")),
+ ("linnanmaki", "Ukko"): M(min=140, src=LM("ukko")),
+ ("linnanmaki", "Taiga"): M(min=140, max=195, src=LM("taiga")),
+ ("flamingo-land", "Mumbo Jumbo"): M(min=122, src=FL),
+ ("flamingo-land", "Hero"): M(min=127, src=FL),
+ ("flamingo-land", "Twistosaurus"): M(min=105, src=FL),
+ ("flamingo-land", "Sik"): M(min=140, max=195, src=FL),
+ ("flamingo-land", "Velocity"): M(min=140, max=198, src=FL),
+ ("flamingo-land", "Kumali"): M(min=130, src=FL),
+ ("moreys-piers", "Great Nor'Easter"): dict(min=52, max=79, src=MP("the-great-noreaster")),
+ ("moreys-piers", "Sea Serpent"): dict(min=48, max=81, src=MP("sea-serpent")),
+ ("moreys-piers", "Rollies Coaster"): dict(min=50, acc_min=44, acc_max=50, max=75, note="Riders 44 to 50 in must ride with an adult.", src=MP("rollies-coaster")),
+ ("moreys-piers", "Doo Wopper"): dict(min=48, acc_min=36, acc_max=48, src=MP("doo-wopper")),
+ ("moreys-piers", "Wild Whizzer"): dict(min=48, acc_min=36, acc_max=48, max=77, src=MP("wild-whizzer")),
+ ("moreys-piers", "Runaway Tram"): dict(min=48, acc_min=40, acc_max=48, src=MP("runaway-tram")),
+ ("parque-warner-madrid", "Shadows of Arkham"): M(min=132, src=PW("batman-arkham-asylum")),
+ ("parque-warner-madrid", "Superman / la Atracción de Acero"): M(min=132, src=PW("superman-atraccion-de-acero")),
+ ("parque-warner-madrid", "Coaster Express"): M(min=121, max=197, src=PW("coaster-express")),
+ ("parque-warner-madrid", "Stunt Fall"): M(min=137, max=195, src=PW("stunt-fall-new")),
+ ("parque-warner-madrid", "Batman Gotham City Escape"): M(min=140, max=195, src=PW("Batman-Gotham-City-Escape")),
+}
+HP_INTL.update(HP_B10d)
+INTL_PARKS += [
+ dict(slug="toverland", name="Toverland", short="Toverland", loc="Sevenum, Netherlands", state="Limburg", country="NL", official="https://www.toverland.com/en/", group="Toverland"),
+ dict(slug="chessington", name="Chessington World of Adventures", short="Chessington", loc="Chessington, England", state="Greater London", country="GB", official="https://www.chessington.com/", group="Merlin Entertainments"),
+ dict(slug="grona-lund", name="Gröna Lund", short="Gröna Lund", loc="Stockholm, Sweden", state="Stockholm", country="SE", official="https://www.gronalund.com/en", group="Parks and Resorts Scandinavia"),
+ dict(slug="tivoli-gardens", name="Tivoli Gardens", short="Tivoli", loc="Copenhagen, Denmark", state="Capital Region", country="DK", official="https://www.tivoli.dk/en", group="Tivoli"),
+ dict(slug="linnanmaki", name="Linnanmäki", short="Linnanmäki", loc="Helsinki, Finland", state="Uusimaa", country="FI", official="https://www.linnanmaki.fi/en/", group="Linnanmäki"),
+ dict(slug="flamingo-land", name="Flamingo Land", short="Flamingo Land", loc="Kirby Misperton, England", state="North Yorkshire", country="GB", official="https://www.flamingoland.co.uk/", group="Flamingo Land"),
+ dict(slug="moreys-piers", name="Morey's Piers", short="Morey's Piers", loc="Wildwood, New Jersey", state="NJ", country="US", official="https://www.moreyspiers.com/", group="Morey's Piers"),
+ dict(slug="parque-warner-madrid", name="Parque Warner Madrid", short="Parque Warner", loc="San Martín de la Vega, Spain", state="Madrid", country="ES", official="https://www.parquewarner.com/en", group="Parques Reunidos"),
+]
+DISPLAY_INTL.update({("moreys-piers", "Great Nor'Easter"): "The Great Nor'Easter", ("moreys-piers", "Rollies Coaster"): "Rollie's Coaster", ("parque-warner-madrid", "Superman / la Atracción de Acero"): "Superman: La Atracción de Acero"})

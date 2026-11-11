@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 666 coasters at 88 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 716 coasters at 96 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -766,3 +766,61 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Sea Serpent](https://coastermap.com/parks/fun-spot-kissimmee/sea-serpent/): min height 36 in
   - [Mine Blower](https://coastermap.com/parks/fun-spot-kissimmee/mine-blower/): min height 48 in
   - [Hurricane](https://coastermap.com/parks/fun-spot-kissimmee/hurricane/): min height 42 in
+- [Toverland](https://coastermap.com/parks/toverland/): 5 coasters
+  - [Toos-Express](https://coastermap.com/parks/toverland/toos-express/): min height 120 cm
+  - [Booster Bike](https://coastermap.com/parks/toverland/booster-bike/): min height 140 cm
+  - [Troy](https://coastermap.com/parks/toverland/troy/): min height 120 cm
+  - [Dwervelwind](https://coastermap.com/parks/toverland/dwervelwind/): min height 120 cm
+  - [Fēnix](https://coastermap.com/parks/toverland/fenix/): min height 132 cm
+- [Chessington World of Adventures](https://coastermap.com/parks/chessington/): 5 coasters
+  - [Dragon's Fury](https://coastermap.com/parks/chessington/dragons-fury/): min height 120 cm
+  - [Mandrill Mayhem](https://coastermap.com/parks/chessington/mandrill-mayhem/): min height 120 cm
+  - [Chase's Mountain Mission](https://coastermap.com/parks/chessington/chases-mountain-mission/): min height 110 cm
+  - [Vampire](https://coastermap.com/parks/chessington/vampire/): min height 130 cm
+  - [Rattlesnake](https://coastermap.com/parks/chessington/rattlesnake/): min height 140 cm
+- [Gröna Lund](https://coastermap.com/parks/grona-lund/): 6 coasters
+  - [Nyckelpigan](https://coastermap.com/parks/grona-lund/nyckelpigan/)
+  - [Kvasten](https://coastermap.com/parks/grona-lund/kvasten/): min height 120 cm
+  - [Insane](https://coastermap.com/parks/grona-lund/insane/): min height 140 cm
+  - [Tuff-Tuff Tåget](https://coastermap.com/parks/grona-lund/tuff-tuff-taget/)
+  - [Twister](https://coastermap.com/parks/grona-lund/twister/): min height 120 cm
+  - [Monster](https://coastermap.com/parks/grona-lund/monster/): min height 140 cm
+- [Tivoli Gardens](https://coastermap.com/parks/tivoli-gardens/): 4 coasters
+  - [Mælkevejen](https://coastermap.com/parks/tivoli-gardens/mlkevejen/)
+  - [Kamelen](https://coastermap.com/parks/tivoli-gardens/kamelen/): min height 120 cm
+  - [Rutschebanen](https://coastermap.com/parks/tivoli-gardens/rutschebanen/)
+  - [Dæmonen](https://coastermap.com/parks/tivoli-gardens/dmonen/): min height 132 cm
+- [Linnanmäki](https://coastermap.com/parks/linnanmaki/): 8 coasters
+  - [Linnunrata](https://coastermap.com/parks/linnanmaki/linnunrata/): min height 120 cm
+  - [Vuoristorata](https://coastermap.com/parks/linnanmaki/vuoristorata/): min height 140 cm
+  - [Pikajuna](https://coastermap.com/parks/linnanmaki/pikajuna/): min height 130 cm
+  - [Tulireki](https://coastermap.com/parks/linnanmaki/tulireki/): min height 140 cm
+  - [Kirnu](https://coastermap.com/parks/linnanmaki/kirnu/): min height 140 cm
+  - [Salama](https://coastermap.com/parks/linnanmaki/salama/): min height 140 cm
+  - [Ukko](https://coastermap.com/parks/linnanmaki/ukko/): min height 140 cm
+  - [Taiga](https://coastermap.com/parks/linnanmaki/taiga/): min height 140 cm
+- [Flamingo Land](https://coastermap.com/parks/flamingo-land/): 8 coasters
+  - [Mumbo Jumbo](https://coastermap.com/parks/flamingo-land/mumbo-jumbo/): min height 122 cm
+  - [Zooom!](https://coastermap.com/parks/flamingo-land/zooom/)
+  - [Hero](https://coastermap.com/parks/flamingo-land/hero/): min height 127 cm
+  - [Twistosaurus](https://coastermap.com/parks/flamingo-land/twistosaurus/): min height 105 cm
+  - [Runaway Mine Train](https://coastermap.com/parks/flamingo-land/runaway-mine-train/)
+  - [Sik](https://coastermap.com/parks/flamingo-land/sik/): min height 140 cm
+  - [Velocity](https://coastermap.com/parks/flamingo-land/velocity/): min height 140 cm
+  - [Kumali](https://coastermap.com/parks/flamingo-land/kumali/): min height 130 cm
+- [Morey's Piers](https://coastermap.com/parks/moreys-piers/): 7 coasters
+  - [The Great Nor'Easter](https://coastermap.com/parks/moreys-piers/the-great-noreaster/): min height 52 in
+  - [Sea Serpent](https://coastermap.com/parks/moreys-piers/sea-serpent/): min height 48 in
+  - [Rollie's Coaster](https://coastermap.com/parks/moreys-piers/rollies-coaster/): min height 50 in
+  - [Great White](https://coastermap.com/parks/moreys-piers/great-white/)
+  - [Doo Wopper](https://coastermap.com/parks/moreys-piers/doo-wopper/): min height 48 in
+  - [Wild Whizzer](https://coastermap.com/parks/moreys-piers/wild-whizzer/): min height 48 in
+  - [Runaway Tram](https://coastermap.com/parks/moreys-piers/runaway-tram/): min height 48 in
+- [Parque Warner Madrid](https://coastermap.com/parks/parque-warner-madrid/): 7 coasters
+  - [Shadows of Arkham](https://coastermap.com/parks/parque-warner-madrid/shadows-of-arkham/): min height 132 cm
+  - [Superman: La Atracción de Acero](https://coastermap.com/parks/parque-warner-madrid/superman-la-atraccion-de-acero/): min height 132 cm
+  - [Tom y Jerry](https://coastermap.com/parks/parque-warner-madrid/tom-y-jerry/)
+  - [Coaster Express](https://coastermap.com/parks/parque-warner-madrid/coaster-express/): min height 121 cm
+  - [Stunt Fall](https://coastermap.com/parks/parque-warner-madrid/stunt-fall/): min height 137 cm
+  - [Correcaminos Bip, Bip](https://coastermap.com/parks/parque-warner-madrid/correcaminos-bip-bip/)
+  - [Batman Gotham City Escape](https://coastermap.com/parks/parque-warner-madrid/batman-gotham-city-escape/): min height 140 cm

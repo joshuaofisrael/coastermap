@@ -181,7 +181,7 @@ def load():
             material = next((t for t in tags if t in ("Steel", "Wood")), None)
             former = None
             if c.get("former"):
-                former = [x.strip() for x in re.split(r"\(\s*[?≤≥]?\s*to\s*[?≤≥]?\s*\)", c["former"]) if x.strip() and x.strip() != n]
+                former = [x.strip() for x in re.split(r"\(\s*[?≤≥]?\s*(?:to)?\s*[?≤≥]?\s*\)", c["former"]) if x.strip() and x.strip() != n and x.strip() not in ("Etymology", "Name")]
             hr = None
             s = sfn.get(f'{p["slug"]}|{n}') if p["slug"] not in ORIGINAL else sf.get(n)
             if s:
