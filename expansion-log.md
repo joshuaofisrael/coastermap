@@ -577,3 +577,69 @@ Site now: 56 parks, 458 coasters.
 - llms.txt shows cm rules correctly.
 - An HTML comment marks a future below-content ad slot. There is no ad code and no reserved empty space. ads.txt was skipped because there is no publisher ID.
 - Live checks: 150 URLs returned 200 (batch 5 pages, guides and legal pages). IndexNow HTTP 200 for all 564 sitemap URLs.
+
+## Park ride guides and coaster comparisons (commit 22fbc2f)
+
+- Each park page is now a single "height requirements and roller coasters ranked" guide, rebuilt in place at the same URL rather than added as near-duplicate pages. Titles target "[Park] Height Requirements & Coasters Ranked". Parks with one coaster use "... & Roller Coaster Guide".
+- Sections on each park page:
+  - Park-specific analysis: class mix compared with the site, median height rule compared with the site, ride types, main builder, longest-serving coaster, site-wide records, and a centimetre note where it applies.
+  - Height table for every coaster: ride alone, with a companion, maximum, intensity and inversions.
+  - What a child can ride at 36, 42, 48 and 54 in, with how many rides each height adds, companion options and the nearest ride still out of reach.
+  - Companion rules, shown only where the park states them.
+  - Intensity ranking, built from RCDB class, height, speed, inversions, launches and beyond-vertical drops.
+  - A three-step first-timer plan and a records table.
+  - A comparison table with the other parks in the same group or resort.
+  - Expanded FAQ (height requirements, scariest, tallest, fastest, first-timers, 42 and 48 inch) and ItemList schema in ranked order.
+- Coaster pages gained a "How it compares" section:
+  - Its rank within the park by intensity and by height.
+  - The next gentler and next more intense coaster at the same park.
+  - Site-wide percentiles for height and speed.
+  - "If you liked X, try" picks: the three closest matches at other parks by type, class, builder, model, height, speed and inversions.
+
+## Batch 6 (commit ecd4577): 6 parks, 30 coasters, plus France and Canada region guides
+
+Rules were read with a headless Chromium render (Playwright) where the official page needs JavaScript.
+
+- Knoebels Amusement Resort (`/parks/knoebels/`, RCDB 4557), 6 coasters. Source: official ride pages, labelled counters "min height to ride alone" and "min height with supervising companion".
+  - Phoenix: 48 in (42 to 48 in with a companion)
+  - Twister: 42 in
+  - Flying Turns: 48 in (42 to 48 in with a companion)
+  - Kozmo's Kurves: 36 in
+  - Black Diamond: 42 in
+  - Impulse: 52 in (48 to 52 in with a companion)
+- La Ronde (`/parks/la-ronde/`, RCDB 4567, Enchanted Parks), 8 coasters. Source: laronde.com/en/attraction/ ride cards, including thrill level out of 5.
+  - Le Monstre: 54 in
+  - Boomerang: 48 in
+  - Dragon: 52 in (42 to 52 in with a companion)
+  - La Marche du Mille-pattes: 42 in (36 to 42 in with a companion)
+  - Vampire: 54 in
+  - Toboggan Nordique: 48 in (42 to 48 in with a companion)
+  - Goliath: 54 in
+  - Ednör: 52 in
+- Universal Studios Japan (`/parks/universal-studios-japan/`, RCDB 5492), 6 coasters. Source: official attraction pages.
+  - The Flying Dinosaur: 132 cm, maximum 198 cm
+  - Hollywood Dream: The Ride: 132 cm (the Backdrop version has the same rule)
+  - Flight of the Hippogriff: 122 cm (92 to 122 cm with a companion), maximum 195 cm
+  - Mine Cart Madness: 122 cm (107 to 122 cm with a companion)
+  - Snoopy's Flying Ace Adventure: 122 cm (92 to 122 cm with a companion)
+  - Dark Horror Ride Sadako's Curse: no official page found (omitted)
+  - Notes cover the companion age rule (junior high school age or older) and USJ's Child Switch (rider swap) page.
+- Hong Kong Disneyland (`/parks/hong-kong-disneyland/`, RCDB 5279), 4 coasters. Source: official attraction pages.
+  - Hyperspace Mountain: 102 cm
+  - Big Grizzly Mountain Runaway Mine Cars: 112 cm
+  - RC Racer: 120 cm
+  - Wandering Oaken's Sliding Sleighs: 95 cm
+- Disneyland Park (Paris) (`/parks/disneyland-paris/`, RCDB 4864), 4 coasters. Source: the official attractions page height filter.
+  - Big Thunder Mountain: 102 cm
+  - Indiana Jones and the Temple of Peril: 140 cm
+  - Star Wars Hyperspace Mountain: 120 cm
+  - Casey Jr.: listed as "Any Height", which the model cannot store (omitted)
+- Disney Adventure World (`/parks/disney-adventure-world/`, RCDB 5054, formerly Walt Disney Studios Park), 2 coasters.
+  - RC Racer: 120 cm
+  - Avengers Assemble: Flight Force: 120 cm
+  - Crush's Coaster is not in RCDB's operating list, so it is not published.
+
+Site now: 62 parks, 488 coasters, 602 pages.
+
+- Live checks: 45 URLs returned 200 (every new batch 6 URL plus a sample of rebuilt park and coaster pages). IndexNow HTTP 200 for all 602 sitemap URLs.
+- Still not added: Lagoon and Silverwood (not retried this run).
