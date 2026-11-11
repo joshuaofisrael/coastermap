@@ -26980,5 +26980,270 @@
    ]
   ],
   "arrangement": "Single train with 5 cars. Riders are arranged 4 across in a single row for a total of 20 riders."
+ },
+ "1576": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "7 cars.",
+  "former": [
+   [
+    "Papillons d'Alice",
+    "2002",
+    "2018"
+   ]
+  ]
+ },
+ "14454": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "5 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car."
+ },
+ "20216": {
+  "elements": [
+   [
+    "Tire Propelled Launch",
+    null
+   ],
+   [
+    "Turntable",
+    null
+   ],
+   [
+    "Tire Propelled Launch (multi-pass)",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 8 cars per train. Riders are arranged 2 across in a single row for a total of 16 riders per train."
+ },
+ "20967": {
+  "arrangement": "Single train with 5 cars. Riders are arranged 2 across in 2 rows for a total of 20 riders.",
+  "former": [
+   [
+    "Fils du Dragon",
+    "2023",
+    "2025"
+   ]
+  ]
+ },
+ "17864": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 5 cars. Riders are arranged inline in 3 rows for a total of 15 riders."
+ },
+ "19408": {
+  "arrangement": "Single train with 4 cars. Riders are arranged 2 across in 2 rows for a total of 16 riders."
+ },
+ "20029": {
+  "arrangement": "Single train with 5 cars. Riders are arranged 2 across in 2 rows for a total of 20 riders."
+ },
+ "21330": {
+  "elements": [
+   [
+    "LIM Launch",
+    "from 0 mph - 43.5 mph in 3 s"
+   ]
+  ],
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders.",
+  "designers": [
+   "Camiel Bilsen"
+  ]
+ },
+ "22010": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car."
+ },
+ "11421": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in 2 rows for a total of 24 riders."
+ },
+ "16122": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 4 cars. Riders are arranged 2 across in 2 rows for a total of 16 riders."
+ },
+ "20970": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders."
+ },
+ "14129": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "designers": [
+   "Peter Clerx"
+  ]
+ },
+ "14180": {
+  "elements": [
+   [
+    "Cable Lift Hill",
+    null
+   ],
+   [
+    "Cable Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged inline in 2 rows for a total of 2 riders per car."
+ },
+ "23444": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Tilt Track",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train."
+ },
+ "14492": {
+  "elements": [
+   [
+    "LSM Launch",
+    null
+   ],
+   [
+    "Top Hat - Outside",
+    null
+   ],
+   [
+    "Heartline Roll",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Over-Banked Curve",
+    null
+   ]
+  ],
+  "arrangement": "5 cars per train. Riders are arranged 2 across in 2 rows for a total of 20 riders per train.",
+  "designers": [
+   "Benjamin Bloemendaal"
+  ]
+ },
+ "17705": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "designers": [
+   "Benjamin Bloemendaal"
+  ]
+ },
+ "18228": {
+  "arrangement": "Single car trains. Riders are arranged inline in a single row for a total of 1 riders per car."
+ },
+ "18252": {},
+ "16453": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "designers": [
+   "Peter Clerx"
+  ]
+ },
+ "16454": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 10 cars. Riders are arranged 2 across in a single row for a total of 20 riders.",
+  "designers": [
+   "Benjamin Bloemendaal"
+  ]
+ },
+ "16462": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 4 cars. Riders are arranged 2 across in 2 rows for a total of 16 riders."
+ },
+ "16463": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in 2 rows for a total of 24 riders.",
+  "capacity": "720 riders per hour"
  }
 }

@@ -1418,3 +1418,43 @@ INTL_PARKS += [
  dict(slug="janfusun", name="Janfusun Fancyworld", short="Janfusun", loc="Gukeng, Yunlin County, Taiwan", state="Yunlin County", country="TW", official="https://www.janfusun.com.tw/", group="Janfusun", checked=_C),
  dict(slug="dream-world-thailand", name="Dream World", short="Dream World", loc="Pathum Thani, Thailand", state="Pathum Thani", country="TH", official="https://dreamworld.co.th/", group="Dream World", checked=_C),
 ]
+
+# ---- Batch 14b (11 Nov 2026): VinWonders (Nha Trang, Phu Quoc, Nam Hoi An), Jardin d'Acclimatation, Mandoria, Winnoland ----
+VWN = ("VinWonders, official attraction requirements at VinWonders Nha Trang", "https://vinwonders.com/en/wonderpedia/news/information-attraction-requirements-at-vinwonders-nha-trang/")
+VWP = ("VinWonders, official height requirements at VinWonders Phu Quoc", "https://vinwonders.com/en/wonderpedia/news/height-requirements-vinwonders-phu-quoc/")
+VWH = ("VinWonders, official ride guidelines at VinWonders Nam Hoi An", "https://vinwonders.com/en/wonderpedia/news/important-information-and-guidelines-for-participating-in-the-games-at-vinwonders-nam-hoi-an/")
+def JDA(s): return ("Jardin d'Acclimatation, official attraction page", f"https://www.jardindacclimatation.fr/attractions/{s}")
+def MAN(s): return ("Mandoria, official attraction page", f"https://mandoria.com/en/{s}/")
+WIN = ("Winnoland, official attractions list", "https://winnoland.fr/attractions")
+HP_B14b = {
+ ("vinwonders-nha-trang", "Mine Adventure"): M(min=110, src=VWN),
+ ("vinwonders-nha-trang", "Alpine Coaster"): M(min=100, src=VWN),
+ ("vinwonders-nha-trang", "Tilt of Thunder"): M(min=120, src=VWN),
+ ("vinwonders-phu-quoc", "Wrath Of Zeus"): M(min=140, note="The park lists it as The Wrath of Zeus in its 'guests over 140 cm' group.", src=VWP),
+ ("vinwonders-phu-quoc", "Ipanema Skate Ride"): M(min=140, note="Listed in the park's 'guests over 140 cm' group.", src=VWP),
+ ("vinwonders-phu-quoc", "Eagle Warrior"): M(min=130, note="The park lists it as The Eagle Warrior in its 'guests over 130 cm' group.", src=VWP),
+ ("vinwonders-phu-quoc", "Eagle Soar Glider"): M(min=120, note="Listed in the park's 'guests over 120 cm' group.", src=VWP),
+ ("vinwonders-nam-hoi-an", "Desert Twister"): M(min=130, max=200, src=VWH),
+ ("vinwonders-nam-hoi-an", "Lost Valley"): M(min=130, acc_min=110, acc_max=130, note="Minimum 1.1 m; children from 1.1 to 1.3 m must ride with an adult.", src=VWH),
+ ("vinwonders-nam-hoi-an", "Spinning Coaster"): M(min=130, acc_min=100, acc_max=130, max=190, note="The park lists it as Spinning Coaster, Speed Racing: 1.0 to 1.9 m, with children from 1.0 to 1.3 m accompanied by an adult.", src=VWH),
+ ("vinwonders-nam-hoi-an", "Family Coaster"): M(min=120, acc_min=100, acc_max=120, note="The park lists it as Speed Coaster: from 1 m, with children from 1.0 to 1.2 m accompanied by an adult.", src=VWH),
+ ("jardin-d-acclimatation", "Défi du Dragon"): M(min=120, acc_min=100, acc_max=120, note="The park lists it as Le Défi du Dragon.", src=JDA("le-defi-du-dragon-paris-rollercoaster")),
+ ("jardin-d-acclimatation", "Speed Rockets"): M(min=120, acc_min=100, acc_max=120, note="The park lists it as Les Speed Rockets.", src=JDA("les-speed-rockets")),
+ ("jardin-d-acclimatation", "Souris Mécaniques"): M(min=120, acc_min=90, acc_max=120, note="The park lists it as Les Souris Mécaniques.", src=JDA("les-souris-mecaniques")),
+ ("jardin-d-acclimatation", "Fort des Pirates"): M(min=120, acc_min=90, acc_max=120, note="The park lists it as Le Fort des Pirates, its family coaster.", src=JDA("fortdespirates")),
+ ("mandoria", "Carrara"): M(min=90, src=MAN("carrara")),
+ ("mandoria", "Valtor"): M(min=100, src=MAN("valtor")),
+ ("mandoria", "Aquila"): M(min=95, note="The park says children as short as 95 cm can ride; it does not state a companion rule.", src=MAN("aquila")),
+ ("winnoland", "Wild West Coaster"): M(min=95, src=WIN),
+ ("winnoland", "Bûche Dansante"): M(min=105, max=195, note="The park lists it as La Bûche Dansante.", src=WIN),
+ ("winnoland", "Grosse Pomme"): M(min=80, note="The park lists it as Le Big Apple, its family coaster.", src=WIN),
+}
+HP_INTL.update(HP_B14b)
+INTL_PARKS += [
+ dict(slug="vinwonders-nha-trang", name="VinWonders Nha Trang", short="VinWonders Nha Trang", loc="Hon Tre Island, Nha Trang, Vietnam", state="Khánh Hòa", country="VN", official="https://vinwonders.com/en/vinwonders-nha-trang/", group="Vinpearl", checked=_C),
+ dict(slug="vinwonders-phu-quoc", name="VinWonders Phu Quoc", short="VinWonders Phu Quoc", loc="Gành Dầu, Phú Quốc, Vietnam", state="Kiên Giang", country="VN", official="https://vinwonders.com/en/vinwonders-phu-quoc/", group="Vinpearl", checked=_C),
+ dict(slug="vinwonders-nam-hoi-an", name="VinWonders Nam Hoi An", short="VinWonders Nam Hoi An", loc="Thăng Bình, near Hội An, Vietnam", state="Quảng Nam", country="VN", official="https://vinwonders.com/en/vinwonders-nam-hoi-an/", group="Vinpearl", checked=_C),
+ dict(slug="jardin-d-acclimatation", name="Jardin d'Acclimatation", short="Jardin d'Acclimatation", loc="Paris, France", state="Île-de-France", country="FR", official="https://www.jardindacclimatation.fr/", group="Jardin d'Acclimatation", checked=_C),
+ dict(slug="mandoria", name="Mandoria", short="Mandoria", loc="Rzgów, Poland", state="Łódź", country="PL", official="https://mandoria.com/en/", group="Mandoria", checked=_C),
+ dict(slug="winnoland", name="Winnoland", short="Winnoland", loc="Saint-Pierre-du-Perray, France", state="Île-de-France", country="FR", official="https://winnoland.fr/", group="Winnoland", checked=_C),
+]

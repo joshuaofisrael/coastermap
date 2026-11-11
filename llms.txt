@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1299 coasters at 225 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1322 coasters at 231 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1536,3 +1536,32 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Sky Coaster](https://coastermap.com/parks/dream-world-thailand/sky-coaster/): min height 130 cm
   - [Black Hole Coaster](https://coastermap.com/parks/dream-world-thailand/black-hole-coaster/): min height 121 cm
   - [Speedy Mouse](https://coastermap.com/parks/dream-world-thailand/speedy-mouse/): min height 90 cm
+- [VinWonders Nha Trang](https://coastermap.com/parks/vinwonders-nha-trang/): 3 coasters
+  - [Mine Adventure](https://coastermap.com/parks/vinwonders-nha-trang/mine-adventure/): min height 110 cm
+  - [Alpine Coaster](https://coastermap.com/parks/vinwonders-nha-trang/alpine-coaster/): min height 100 cm
+  - [Tilt of Thunder](https://coastermap.com/parks/vinwonders-nha-trang/tilt-of-thunder/): min height 120 cm
+- [VinWonders Phu Quoc](https://coastermap.com/parks/vinwonders-phu-quoc/): 4 coasters
+  - [Wrath Of Zeus](https://coastermap.com/parks/vinwonders-phu-quoc/wrath-of-zeus/): min height 140 cm
+  - [Eagle Warrior](https://coastermap.com/parks/vinwonders-phu-quoc/eagle-warrior/): min height 130 cm
+  - [Eagle Soar Glider](https://coastermap.com/parks/vinwonders-phu-quoc/eagle-soar-glider/): min height 120 cm
+  - [Ipanema Skate Ride](https://coastermap.com/parks/vinwonders-phu-quoc/ipanema-skate-ride/): min height 140 cm
+- [VinWonders Nam Hoi An](https://coastermap.com/parks/vinwonders-nam-hoi-an/): 4 coasters
+  - [Lost Valley](https://coastermap.com/parks/vinwonders-nam-hoi-an/lost-valley/): min height 130 cm
+  - [Desert Twister](https://coastermap.com/parks/vinwonders-nam-hoi-an/desert-twister/): min height 130 cm
+  - [Spinning Coaster](https://coastermap.com/parks/vinwonders-nam-hoi-an/spinning-coaster/): min height 130 cm
+  - [Family Coaster](https://coastermap.com/parks/vinwonders-nam-hoi-an/family-coaster/): min height 120 cm
+- [Jardin d'Acclimatation](https://coastermap.com/parks/jardin-d-acclimatation/): 4 coasters
+  - [Souris Mécaniques](https://coastermap.com/parks/jardin-d-acclimatation/souris-mecaniques/): min height 120 cm
+  - [Speed Rockets](https://coastermap.com/parks/jardin-d-acclimatation/speed-rockets/): min height 120 cm
+  - [Défi du Dragon](https://coastermap.com/parks/jardin-d-acclimatation/defi-du-dragon/): min height 120 cm
+  - [Fort des Pirates](https://coastermap.com/parks/jardin-d-acclimatation/fort-des-pirates/): min height 120 cm
+- [Mandoria](https://coastermap.com/parks/mandoria/): 5 coasters
+  - [Merkant](https://coastermap.com/parks/mandoria/merkant/)
+  - [Mroczny Dwór](https://coastermap.com/parks/mandoria/mroczny-dwor/)
+  - [Carrara](https://coastermap.com/parks/mandoria/carrara/): min height 90 cm
+  - [Aquila](https://coastermap.com/parks/mandoria/aquila/): min height 95 cm
+  - [Valtor](https://coastermap.com/parks/mandoria/valtor/): min height 100 cm
+- [Winnoland](https://coastermap.com/parks/winnoland/): 3 coasters
+  - [Grosse Pomme](https://coastermap.com/parks/winnoland/grosse-pomme/): min height 80 cm
+  - [Bûche Dansante](https://coastermap.com/parks/winnoland/buche-dansante/): min height 105 cm
+  - [Wild West Coaster](https://coastermap.com/parks/winnoland/wild-west-coaster/): min height 95 cm
