@@ -930,7 +930,7 @@ Totals after batch 15: 256 parks, 1,410 coasters (1,303 with an official height 
 - Under 3 operating RCDB coasters: Fantasiland Pomezia, CJ Barrymore's, Gateway Resort, Legendia.
 - Lusail Winter Wonderland: seasonal.
 
-Totals after batch 16: 269 parks, 1,454 coasters (1,345 with an official height rule), 1,832 sitemap URLs. Batch 16 added 13 parks, 44 coasters, 42 official rules, 2 height guides and 1 country guide. The validator reported 0 issues after every sub-batch. Near-duplicates over 0.6 held at 4 (median 0.34). Pages over 0.5 rose from 56 to 58.
+Totals after batch 16: 269 parks, 1,454 coasters (1,345 with an official height rule), 1,832 sitemap URLs. Batch 16 added 13 parks, 44 coasters, 42 official rules, 2 height guides and 1 country guide. The validator reported 0 issues after every sub-batch. Near-duplicates over 0.6 held at 4 (median 0.34). Pages over 0.5 rose from 56 to 58. IndexNow: 1,832 URLs, HTTP 200.
 
 **Remaining candidates:**
 - Not yet tried: Sommerland Sjælland, De Waarbeek, Fasanolandia, Karls Elstal.
