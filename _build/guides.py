@@ -28,8 +28,9 @@ def guide(path, title, desc, h1, body_html, faqs, group, blurb, cs_for_list=None
 
 # ---------- height guides ----------
 HEIGHTS = (36, 42, 48, 54)
+GUIDE_HEIGHTS = (36, 40, 42, 48, 54)  # 40 in guide added in batch 16; HEIGHTS (park bands, coaster pages) unchanged
 def height_guides():
-    for H in HEIGHTS:
+    for H in GUIDE_HEIGHTS:
         path = f"/guides/roller-coasters-for-{H}-inch-kids/"
         alone = [c for c in ALL if c["hr"] and hin(c["hr"]) <= H + 1e-9 and not (c["hr"].get("max") and hin(c["hr"], "max") < H)]
         comp = [c for c in ALL if c["hr"] and c["hr"].get("acc_min") and hin(c["hr"], "acc_min") <= H + 1e-9 < hin(c["hr"]) + 1e-9 and hin(c["hr"]) > H + 1e-9]
@@ -59,7 +60,7 @@ def height_guides():
         if biggest: faqs.append((f"What is the biggest coaster a {H}-inch child can ride?", f"By height, {biggest['name']} at {pk(biggest)['name']}, which is {ft(biggest['height'])} tall (RCDB) with a ride-alone minimum of {hshort(biggest['hr'])}."))
         title = f"Roller Coasters a {H}-Inch ({cmH} cm) Child Can Ride | {BRAND}"
         desc = f"Every coaster a {H}-inch ({cmH} cm) child can ride alone or with a companion at {parks_n} theme parks, from official height rules."
-        rel = [(f"/guides/roller-coasters-for-{x}-inch-kids/", f"Coasters for {x}-inch kids") for x in HEIGHTS if x != H] + [("/guides/best-first-roller-coasters/", "Best first roller coasters")]
+        rel = [(f"/guides/roller-coasters-for-{x}-inch-kids/", f"Coasters for {x}-inch kids") for x in GUIDE_HEIGHTS if x != H] + [("/guides/roller-coasters-kids-can-ride-with-an-adult/", "Coasters kids can ride with an adult"), ("/guides/best-first-roller-coasters/", "Best first roller coasters")]
         guide(path, title, desc, f"Roller coasters a {H}-inch ({cmH} cm) child can ride", body, faqs, "By height", f"What a {H}-inch ({cmH} cm) rider can ride, park by park.", alone[:100] if len(alone) <= 100 else None, rel)
 
 # ---------- record rankings ----------
@@ -308,5 +309,43 @@ def most_coasters_guide():
           "Theme parks with the most roller coasters", body, faqs, "Records", "Ranked by number of coasters, with leaders by region.", None,
           [("/guides/tallest-roller-coasters/", "Tallest roller coasters"), ("/guides/fastest-roller-coasters/", "Fastest roller coasters"), ("/guides/world-record-roller-coasters/", "World-record roller coasters"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids")])
 
+# ---------- companion (ride with an adult) guide (batch 16) ----------
+def companion_guide():
+    cs = [c for c in ALL if c["hr"] and c["hr"].get("acc_min") and c["hr"].get("acc_max")]
+    byp = {}
+    for c in cs: byp.setdefault(c["park"], []).append(c)
+    low = sorted(cs, key=lambda c: (hin(c["hr"], "acc_min"), pk(c)["name"], c["name"]))
+    gap = sorted(cs, key=lambda c: (-(hin(c["hr"]) - hin(c["hr"], "acc_min")), pk(c)["name"], c["name"]))
+    tall = max((c for c in cs if c["height"]), key=lambda c: c["height"], default=None)
+    fast = max((c for c in cs if c["speed"]), key=lambda c: c["speed"], default=None)
+    inv = [c for c in cs if c["inversions"]]
+    nrule = sum(1 for c in ALL if c["hr"])
+    def accs(h): return f'{h["acc_min"]} cm' if metric(h) else f'{h["acc_min"]} in'
+    rows = "".join(f'<tr><td>{i + 1}</td><th scope="row"><a href="{coaster_path(c)}">{E(c["name"])}</a></th><td>{E(pk(c)["name"])}</td><td>{E(accs(c["hr"]))}</td><td>{E(hshort(c["hr"]))}</td></tr>' for i, c in enumerate(low[:25]))
+    sec = ""
+    for p in sorted(PARKS, key=lambda p: p["name"]):
+        pc = sorted(byp.get(p["slug"], []), key=lambda c: (hin(c["hr"], "acc_min"), c["name"]))
+        if pc: sec += f'<h3><a href="/parks/{p["slug"]}/">{E(p["name"])}</a> ({len(pc)})</h3><ul>' + "".join(f'<li>{clink(c, False)}: {rngs(c["hr"])} with a companion, {hshort(c["hr"])} alone</li>' for c in pc) + "</ul>"
+    g0 = gap[0]; l0 = low[0]
+    body = (f'<p class="answer"><strong>{len(cs)} of the {nrule} coasters</strong> with a verified height rule on Coaster Map let a shorter child ride if a companion rides with them, at {len(byp)} of the {len(PARKS)} parks we cover. '
+            f'The lowest companion minimum is <strong>{E(accs(l0["hr"]))}</strong>, on {clink(l0)}. Each listing below shows the companion range and the height needed to ride alone, straight from the park\'s official rule.</p>'
+            '<p>A companion rule means two heights apply to one ride: a ride-alone minimum, and a lower minimum for a child who rides next to an older companion. Below the lower figure a child cannot ride at all. '
+            'Who counts as a companion is set by each park: some ask for an adult, others for a rider of a minimum age, such as 14 or 16, or a "responsible person", and a few count only a fare-paying companion. Where the park states its companion or age rule, we quote it on the coaster page. '
+            'Parks outside North America publish these rules in centimetres, so the lists use each park\'s own unit.</p>'
+            f'<p>The widest gap between the two heights is on {clink(g0)}: {rngs(g0["hr"])} with a companion and {E(hshort(g0["hr"]))} alone.'
+            + (f' The tallest coaster with a companion option is {clink(tall)} at {ftm(tall["height"])}' if tall else "")
+            + (f', and the fastest is {clink(fast)} at {mphk(fast["speed"])}.' if fast and fast is not tall else ".")
+            + f' {len(inv)} of these coasters go upside down.</p>'
+            f'<section aria-labelledby="low-h"><h2 id="low-h">Lowest companion minimums</h2><div class="tablewrap"><table class="list"><thead><tr><th scope="col">Rank</th><th scope="col">Coaster</th><th scope="col">Park</th><th scope="col">With a companion from</th><th scope="col">Alone from</th></tr></thead><tbody>{rows}</tbody></table></div><p class="note">Ranked by the companion minimum converted to inches; a park\'s rule is always applied in its own unit.</p></section>'
+            f'<section aria-labelledby="park-h"><h2 id="park-h">Every coaster with a companion option, by park</h2>{sec}</section>'
+            '<p>To see what a particular child can ride, alone or with you, enter their height in the <a href="/height-checker/">ride height checker</a>.</p>')
+    faqs = [("Can a child ride a roller coaster with an adult if they are under the height requirement?", f"Only where the park publishes a companion rule. On Coaster Map {len(cs)} coasters have one; on the rest, the posted minimum applies to every rider and a companion makes no difference."),
+            ("What is the lowest height to ride a roller coaster with an adult?", f"Among the coasters we cover, {l0['name']} at {pk(l0)['name']} has the lowest companion minimum, {accs(l0['hr'])}, according to the park's official rule."),
+            ("Who can be the companion?", "Each park sets its own rule. Many require an adult; others accept a rider of a minimum age, such as 14 or 16, or a fare-paying companion. Coaster pages quote the park's wording where it publishes one.")]
+    guide("/guides/roller-coasters-kids-can-ride-with-an-adult/", f"Roller Coasters Kids Can Ride With an Adult | {BRAND}",
+          f"All {len(cs)} roller coasters where a shorter child can ride with a companion, with the companion and ride-alone heights from official park rules.",
+          "Roller coasters shorter kids can ride with an adult", body, faqs, "By height", "Companion height rules at every park.", None,
+          [("/guides/roller-coasters-for-36-inch-kids/", "Coasters for 36-inch kids"), ("/guides/roller-coasters-for-40-inch-kids/", "Coasters for 40-inch kids"), ("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids"), ("/guides/roller-coaster-height-requirements-explained/", "Height requirements explained"), ("/guides/best-first-roller-coasters/", "Best first roller coasters")])
+
 def build_guides():
-    height_guides(); ranking_guides(); intense_guide(); first_timer_guide(); region_guides(); most_coasters_guide(); type_guides(); types_hub(); build_explainers(); guides_hub()
+    height_guides(); companion_guide(); ranking_guides(); intense_guide(); first_timer_guide(); region_guides(); most_coasters_guide(); type_guides(); types_hub(); build_explainers(); guides_hub()
