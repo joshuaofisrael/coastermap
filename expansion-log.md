@@ -895,3 +895,44 @@ Totals after batch 14: 233 parks, 1,335 coasters (1,229 with an official height 
 Totals after batch 15: 256 parks, 1,410 coasters (1,303 with an official height rule), 1,772 sitemap URLs. Batch 15 added 23 parks, 75 coasters and 74 official rules. The validator reported 0 issues after every sub-batch. Near-duplicates over 0.6 held at 4 (median 0.34). IndexNow: 1,772 URLs, HTTP 200.
 
 **Remaining candidates:** Loos Parc, Parc de la Vallée, Europark Idroscalo, Fantasiland Pomezia, Cidade da Criança, Animália Park, Đầm Sen, Suối Tiên, Đại Nam, Jawa Timur Park 1, Atlantis Land, Kiftzuba, YesterLand, CJ Barrymore's, Festival Land Ajman, Adventureland Sharjah, Gateway Resort, Legendia; the skips above if official data changes; the rest of the sweep (mostly China, Russia and Iraq).
+
+## Batch 16 (12 Nov 2026)
+
+**Batch 16a (35d516ab): 5 parks from the batch 15 remaining list, 15 coasters, 13 official rules.** The commit message says "13 coasters"; the correct count is 15 coasters with 13 rules. It was not amended because that would need a force-push.
+- Parc de la Vallée 2/3: Bobsleigh 140 cm (120–140 with an adult). Chenille Vallée is stored as 120 cm alone only, because its two official pages give different companion lower limits (90 vs 95 cm). Grand Canyon is omitted because the main site and the booking site conflict.
+- Cidade da Criança 3/3 (official height table), Kiftzuba 3/3 (Hebrew ride pages), Adventureland Sharjah 3/3.
+- Animália Park 2/3: Big Air Coaster is omitted because the park publishes two rule sets (Big Air Coaster and Big Air Coaster 360) for the single RCDB ride.
+- New country guide: /guides/roller-coasters-in-israel/ (Luna Park Tel Aviv and Kiftzuba).
+
+**Batch 16b (1921a976): 8 parks from the RCDB sweep, 29 coasters, 29 official rules.** The commit message says "30 coasters"; the correct count is 29.
+- Skara Sommarland 3/3 (Spinner also has a 195 cm maximum).
+- Dalmaland 3/3 (maximum 200 cm on Mine Train Coaster; the park's minimum ages are kept as notes).
+- Yerevan Park 4/4 (the park writes cm as "sm").
+- Walygator Sud-Ouest 4/4, Great Yarmouth Pleasure Beach 4/4.
+- Botton's Pleasure Beach 4/4 (wristband height list; Big Apple = the park's "Apple").
+- Dennlys Parc 3/3 (official attractions data file), Papéa Parc 4/4.
+- New regions: Croatia (Europe) and Armenia (Asia).
+
+**Batch 16c (a5dcf2a2): guides and wording.**
+- /guides/roller-coasters-for-40-inch-kids/: 40 in was added to the height guide series through GUIDE_HEIGHTS in guides.py. HEIGHTS itself is unchanged.
+- /guides/roller-coasters-kids-can-ride-with-an-adult/: coasters with an official companion band, grouped by park. It uses only the stored rules.
+- Both guides are built only from site data. The explainers now link the 40 in guide.
+- Fix: month-only RCDB opening dates now read "opened in Jun 2006", not "opened on Jun 2006". This affected 75 pages, in both the sentence and the FAQ.
+
+**Tried and skipped:**
+- No official per-ride heights: Loos Parc, Europark Idroscalo, Jawa Timur Park 1, Atlantis Land, Suối Tiên, Đại Nam, Hacienda Napoles, Formosan Aboriginal Culture Village.
+- Too little to add:
+  - YesterLand publishes only "most of our rides" at 36/42 in.
+  - Nicco Park publishes only Cyclone (120 cm), 1 of 4.
+  - Merlin's Kinderwelt and Higashiyama Zoo give ages only.
+- Rasti-Land: only Verrücktwärts is clear. Holta Di Polta and Strohnado mix age and gondola types, and Achterbahn can't be matched.
+- Đầm Sen and Festival Land Ajman: an RCDB coaster is listed as "unknown", so it can't be matched.
+- Under 3 operating RCDB coasters: Fantasiland Pomezia, CJ Barrymore's, Gateway Resort, Legendia.
+- Lusail Winter Wonderland: seasonal.
+
+Totals after batch 16: 269 parks, 1,454 coasters (1,345 with an official height rule), 1,832 sitemap URLs. Batch 16 added 13 parks, 44 coasters, 42 official rules, 2 height guides and 1 country guide. The validator reported 0 issues after every sub-batch. Near-duplicates over 0.6 held at 4 (median 0.34). Pages over 0.5 rose from 56 to 58.
+
+**Remaining candidates:**
+- Not yet tried: Sommerland Sjælland, De Waarbeek, Fasanolandia, Karls Elstal.
+- Retries: Parc de la Vallée Grand Canyon and Animália Big Air Coaster, if the official sources are reconciled; the skips above if official data changes.
+- The rest of the RCDB sweep, mostly China, Russia, Iraq, Iran and Central Asia.
