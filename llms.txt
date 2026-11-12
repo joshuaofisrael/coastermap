@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1425 coasters at 261 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1454 coasters at 269 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1698,3 +1698,40 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Kukulcan](https://coastermap.com/parks/adventureland-sharjah/kukulcan/): min height 105 cm
   - [Forest Train](https://coastermap.com/parks/adventureland-sharjah/forest-train/): min height 105 cm
   - [Rocket Cycles](https://coastermap.com/parks/adventureland-sharjah/rocket-cycles/): min height 120 cm
+- [Skara Sommarland](https://coastermap.com/parks/skara-sommarland/): 3 coasters
+  - [Gruvbanan](https://coastermap.com/parks/skara-sommarland/gruvbanan/): min height 130 cm
+  - [Tranan](https://coastermap.com/parks/skara-sommarland/tranan/): min height 110 cm
+  - [Spinner](https://coastermap.com/parks/skara-sommarland/spinner/): min height 140 cm
+- [Dalmaland](https://coastermap.com/parks/dalmaland/): 3 coasters
+  - [Mine Train Coaster](https://coastermap.com/parks/dalmaland/mine-train-coaster/): min height 120 cm
+  - [Big Blue](https://coastermap.com/parks/dalmaland/big-blue/): min height 140 cm
+  - [Alien](https://coastermap.com/parks/dalmaland/alien/): min height 130 cm
+- [Yerevan Park](https://coastermap.com/parks/yerevan-park/): 4 coasters
+  - [Yan Coaster](https://coastermap.com/parks/yerevan-park/yan-coaster/): min height 120 cm
+  - [Happy Coaster](https://coastermap.com/parks/yerevan-park/happy-coaster/): min height 120 cm
+  - [Zor's Coaster](https://coastermap.com/parks/yerevan-park/zors-coaster/): min height 130 cm
+  - [Boomerang](https://coastermap.com/parks/yerevan-park/boomerang/): min height 120 cm
+- [Walygator Sud-Ouest](https://coastermap.com/parks/walygator-sud-ouest/): 4 coasters
+  - [Boomerang](https://coastermap.com/parks/walygator-sud-ouest/boomerang/): min height 130 cm
+  - [Coccinelle](https://coastermap.com/parks/walygator-sud-ouest/coccinelle/): min height 120 cm
+  - [Mine de Thor](https://coastermap.com/parks/walygator-sud-ouest/mine-de-thor/): min height 120 cm
+  - [Titan](https://coastermap.com/parks/walygator-sud-ouest/titan/): min height 140 cm
+- [Great Yarmouth Pleasure Beach](https://coastermap.com/parks/great-yarmouth-pleasure-beach/): 4 coasters
+  - [Roller Coaster](https://coastermap.com/parks/great-yarmouth-pleasure-beach/roller-coaster/): min height 110 cm
+  - [Big Apple](https://coastermap.com/parks/great-yarmouth-pleasure-beach/big-apple/): min height 110 cm
+  - [Family Star](https://coastermap.com/parks/great-yarmouth-pleasure-beach/family-star/): min height 130 cm
+  - [Whirlwind](https://coastermap.com/parks/great-yarmouth-pleasure-beach/whirlwind/): min height 120 cm
+- [Botton's Pleasure Beach](https://coastermap.com/parks/bottons/): 4 coasters
+  - [Runaway Train](https://coastermap.com/parks/bottons/runaway-train/): min height 100 cm
+  - [Queen Bee](https://coastermap.com/parks/bottons/queen-bee/): min height 100 cm
+  - [Rockin' Roller](https://coastermap.com/parks/bottons/rockin-roller/): min height 130 cm
+  - [Big Apple](https://coastermap.com/parks/bottons/big-apple/): min height 100 cm
+- [Dennlys Parc](https://coastermap.com/parks/dennlys/): 3 coasters
+  - [Furio](https://coastermap.com/parks/dennlys/furio/): min height 120 cm
+  - [Nitro](https://coastermap.com/parks/dennlys/nitro/): min height 140 cm
+  - [Voltigo](https://coastermap.com/parks/dennlys/voltigo/): min height 120 cm
+- [Papéa Parc](https://coastermap.com/parks/papea/): 4 coasters
+  - [Train de la Mine](https://coastermap.com/parks/papea/train-de-la-mine/): min height 120 cm
+  - [Roller Coaster](https://coastermap.com/parks/papea/roller-coaster/): min height 120 cm
+  - [Chenille](https://coastermap.com/parks/papea/chenille/): min height 120 cm
+  - [Speedy Nuts](https://coastermap.com/parks/papea/speedy-nuts/): min height 140 cm

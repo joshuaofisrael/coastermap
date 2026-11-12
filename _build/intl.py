@@ -1655,3 +1655,56 @@ INTL_PARKS += [
  dict(slug="kiftzuba", name="Kiftzuba", short="Kiftzuba", loc="Kibbutz Tzuba, near Jerusalem, Israel", state="Jerusalem", country="IL", official="https://kiftzuba.co.il/", group="Kiftzuba", checked=_C16),
  dict(slug="adventureland-sharjah", name="Adventureland (Sharjah)", short="Adventureland Sharjah", loc="Sahara Centre, Sharjah, United Arab Emirates", state="Sharjah", country="AE", official="https://www.adventurelanduae.com/", group="Adventureland Sharjah", checked=_C16),
 ]
+
+# ---- Batch 16b (12 Nov 2026): RCDB sweep and earlier scraped parks ----
+def SKS(s): return ("Skara Sommarland, official attraction page", f"https://www.sommarland.se/attraktioner/{s}")
+def DLM(s): return ("Dalmaland, official attraction page", f"https://www.dalmaland.com/atrakcija/{s}")
+def YVP(s): return ("Yerevan Park, official attraction page", f"https://yerevanpark.am/en/attractions/{s}")
+def WSO(s): return ("Walygator Sud-Ouest, official attraction page", f"https://www.walygatorparc.com/sudouest/mecanique/{s}/")
+GYP = ("Great Yarmouth Pleasure Beach, official rides page (ride restrictions)", "https://pleasure-beach.co.uk/explore-the-park/rides/")
+BPB = ("Botton's Pleasure Beach, official wristbands page (ride height restrictions)", "https://www.pleasurebeachskegness.co.uk/wristbands/")
+DNY = ("Dennlys Parc, official attractions page", "https://www.dennlys-parc.com/pages/attractions.php")
+def PAP(s): return ("Papéa Parc, official attraction page", f"https://www.papeaparc.fr/attractions/{s}/")
+YVN = "Yerevan Park writes centimetres as \"sm\"."
+HP_B16b = {
+ ("skara-sommarland", "Gruvbanan"): M(min=130, acc_min=100, acc_max=130, note="130 cm to ride alone; 100 cm is enough with an adult.", src=SKS("gruvbanan")),
+ ("skara-sommarland", "Tranan"): M(min=110, note="No companion rule is stated.", src=SKS("tranan")),
+ ("skara-sommarland", "Spinner"): M(min=140, acc_min=120, acc_max=140, max=195, note="140 cm to ride alone, 120 cm with an adult; maximum 195 cm.", src=SKS("spinner")),
+ ("dalmaland", "Mine Train Coaster"): M(min=120, acc_min=95, acc_max=120, max=200, note="The park also lists a minimum age of 6.", src=DLM("mine-train-coaster/36")),
+ ("dalmaland", "Big Blue"): M(min=140, acc_min=130, acc_max=140, note="The park also lists a minimum age of 10.", src=DLM("big-blue/21")),
+ ("dalmaland", "Alien"): M(min=130, acc_min=120, acc_max=130, note="The park also lists a minimum age of 8.", src=DLM("alien/15")),
+ ("yerevan-park", "Yan Coaster"): M(min=120, acc_min=95, acc_max=120, note=YVN, src=YVP("yanicoaster")),
+ ("yerevan-park", "Happy Coaster"): M(min=120, acc_min=95, acc_max=120, note=YVN, src=YVP("happycoaster")),
+ ("yerevan-park", "Zor's Coaster"): M(min=130, acc_min=100, acc_max=130, note=YVN, src=YVP("zoricoaster")),
+ ("yerevan-park", "Boomerang"): M(min=120, acc_min=100, acc_max=120, note=YVN + " The park describes this Boomerang as a family coaster in its Looys' Zone.", src=YVP("boomerang")),
+ ("walygator-sud-ouest", "Titan"): M(min=140, src=WSO("titan")),
+ ("walygator-sud-ouest", "Mine de Thor"): M(min=120, src=WSO("mine-de-thor")),
+ ("walygator-sud-ouest", "Boomerang"): M(min=130, src=WSO("boomerang")),
+ ("walygator-sud-ouest", "Coccinelle"): M(min=120, acc_min=90, acc_max=120, src=WSO("coccinelle")),
+ ("great-yarmouth-pleasure-beach", "Roller Coaster"): M(min=110, acc_min=90, acc_max=110, note="The park's wooden scenic railway, opened in 1932. Children between 0.9 m and 1.1 m must ride with a fare-paying, more mature person.", src=GYP),
+ ("great-yarmouth-pleasure-beach", "Big Apple"): M(min=110, acc_min=90, acc_max=110, note="The park lists it as the Big Apple Coaster. Children between 0.9 m and 1.1 m must ride with a fare-paying, more mature person.", src=GYP),
+ ("great-yarmouth-pleasure-beach", "Family Star"): M(min=130, note="No companion rule is stated.", src=GYP),
+ ("great-yarmouth-pleasure-beach", "Whirlwind"): M(min=120, acc_min=100, acc_max=120, note="Children between 1.0 m and 1.2 m must ride with a fare-paying, more mature person.", src=GYP),
+ ("bottons", "Big Apple"): M(min=100, acc_min=80, acc_max=100, note="The park lists it as Apple (0.8 m to 1.0 m accompanied).", src=BPB),
+ ("bottons", "Queen Bee"): M(min=100, acc_min=80, acc_max=100, note="The park lists 0.8 m to 1.0 m as accompanied.", src=BPB),
+ ("bottons", "Runaway Train"): M(min=100, acc_min=80, acc_max=100, note="The park lists 0.8 m to 1.0 m as accompanied, and below 0.8 m as not allowed.", src=BPB),
+ ("bottons", "Rockin' Roller"): M(min=130, note="The park lists Rockin Roller at 1.3m under its ride height restrictions, with no companion option.", src=BPB),
+ ("dennlys", "Furio"): M(min=120, acc_min=90, acc_max=120, note="The park lists it as Le Furio: no access under 90 cm, and children are accompanied up to 1.20 m.", src=DNY),
+ ("dennlys", "Nitro"): M(min=140, acc_min=110, acc_max=140, note="The park lists it as Le Nitro: no access under 1.10 m, and children are accompanied up to 1.40 m.", src=DNY),
+ ("dennlys", "Voltigo"): M(min=120, acc_min=90, acc_max=120, note="The park lists it as Le Voltigo: no access under 90 cm, and children are accompanied up to 1.20 m.", src=DNY),
+ ("papea", "Train de la Mine"): M(min=120, acc_min=105, acc_max=120, src=PAP("train-de-la-mine")),
+ ("papea", "Roller Coaster"): M(min=120, acc_min=95, acc_max=120, src=PAP("roller-coaster")),
+ ("papea", "Chenille"): M(min=120, acc_min=95, acc_max=120, src=PAP("chenille")),
+ ("papea", "Speedy Nuts"): M(min=140, acc_min=120, acc_max=140, src=PAP("speedy-nuts")),
+}
+HP_INTL.update(HP_B16b)
+INTL_PARKS += [
+ dict(slug="skara-sommarland", name="Skara Sommarland", short="Skara Sommarland", loc="Skara, Västra Götaland, Sweden", state="Västra Götaland", country="SE", official="https://www.sommarland.se/", group="Skara Sommarland", checked=_C16),
+ dict(slug="dalmaland", name="Dalmaland", short="Dalmaland", loc="Biograd na Moru, Zadar County, Croatia", state="Zadar County", country="HR", official="https://www.dalmaland.com/", group="Dalmaland", checked=_C16),
+ dict(slug="yerevan-park", name="Yerevan Park", short="Yerevan Park", loc="Yerevan, Armenia", state="Yerevan", country="AM", official="https://yerevanpark.am/en", group="Yerevan Park", checked=_C16),
+ dict(slug="walygator-sud-ouest", name="Walygator Sud-Ouest", short="Walygator Sud-Ouest", loc="Roquefort, Nouvelle-Aquitaine, France", state="Nouvelle-Aquitaine", country="FR", official="https://www.walygatorparc.com/sudouest/", group="Walygator", checked=_C16),
+ dict(slug="great-yarmouth-pleasure-beach", name="Great Yarmouth Pleasure Beach", short="Great Yarmouth Pleasure Beach", loc="Great Yarmouth, Norfolk, England", state="Norfolk", country="GB", official="https://pleasure-beach.co.uk/", group="Great Yarmouth Pleasure Beach", checked=_C16),
+ dict(slug="bottons", name="Botton's Pleasure Beach", short="Botton's", loc="Skegness, Lincolnshire, England", state="Lincolnshire", country="GB", official="https://www.pleasurebeachskegness.co.uk/", group="Botton's Pleasure Beach", checked=_C16),
+ dict(slug="dennlys", name="Dennlys Parc", short="Dennlys Parc", loc="Dennebrœucq, Hauts-de-France, France", state="Hauts-de-France", country="FR", official="https://www.dennlys-parc.com/", group="Dennlys Parc", checked=_C16),
+ dict(slug="papea", name="Papéa Parc", short="Papéa", loc="Yvré-l'Évêque, Pays de la Loire, France", state="Pays de la Loire", country="FR", official="https://www.papeaparc.fr/", group="Papéa Parc", checked=_C16),
+]
