@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1410 coasters at 256 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1425 coasters at 261 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1678,3 +1678,23 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Formula 1](https://coastermap.com/parks/magic-park-land/formula-1/): min height 130 cm
   - [Storm](https://coastermap.com/parks/magic-park-land/storm/): min height 130 cm
   - [Shark Trip](https://coastermap.com/parks/magic-park-land/shark-trip/): min height 130 cm
+- [Parc de la Vallée](https://coastermap.com/parks/parc-de-la-vallee/): 3 coasters
+  - [Grand Canyon](https://coastermap.com/parks/parc-de-la-vallee/grand-canyon/)
+  - [Bobsleigh](https://coastermap.com/parks/parc-de-la-vallee/bobsleigh/): min height 140 cm
+  - [Chenille Vallée](https://coastermap.com/parks/parc-de-la-vallee/chenille-vallee/): min height 120 cm
+- [Cidade da Criança](https://coastermap.com/parks/cidade-da-crianca/): 3 coasters
+  - [Magic Bee](https://coastermap.com/parks/cidade-da-crianca/magic-bee/): min height 120 cm
+  - [Formula 1 Coaster](https://coastermap.com/parks/cidade-da-crianca/formula-1-coaster/): min height 120 cm
+  - [Spinning Coaster](https://coastermap.com/parks/cidade-da-crianca/spinning-coaster/): min height 110 cm
+- [Animália Park](https://coastermap.com/parks/animalia-park/): 3 coasters
+  - [Cyclone](https://coastermap.com/parks/animalia-park/cyclone/): min height 130 cm
+  - [Bear Mountain](https://coastermap.com/parks/animalia-park/bear-mountain/): min height 120 cm
+  - [Big Air Coaster](https://coastermap.com/parks/animalia-park/big-air-coaster/)
+- [Kiftzuba](https://coastermap.com/parks/kiftzuba/): 3 coasters
+  - [Caterpillar](https://coastermap.com/parks/kiftzuba/caterpillar/): min height 120 cm
+  - [Airplanes](https://coastermap.com/parks/kiftzuba/airplanes/): min height 130 cm
+  - [Car Racing](https://coastermap.com/parks/kiftzuba/car-racing/): min height 120 cm
+- [Adventureland (Sharjah)](https://coastermap.com/parks/adventureland-sharjah/): 3 coasters
+  - [Kukulcan](https://coastermap.com/parks/adventureland-sharjah/kukulcan/): min height 105 cm
+  - [Forest Train](https://coastermap.com/parks/adventureland-sharjah/forest-train/): min height 105 cm
+  - [Rocket Cycles](https://coastermap.com/parks/adventureland-sharjah/rocket-cycles/): min height 120 cm

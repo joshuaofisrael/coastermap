@@ -1624,3 +1624,34 @@ INTL_PARKS += [
  dict(slug="hossoland", name="Hossoland", short="Hossoland", loc="Brojce, West Pomerania, Poland", state="West Pomerania", country="PL", official="https://hossoland.pl/en/", group="Hossoland", checked=_C),
  dict(slug="magic-park-land", name="Magic Park Land", short="Magic Park Land", loc="Ensuès-la-Redonne, Provence-Alpes-Côte d'Azur, France", state="Provence-Alpes-Côte d'Azur", country="FR", official="https://magic-park-land.com/", group="Magic Park Land", checked=_C),
 ]
+
+# ---- Batch 16a (12 Nov 2026): remaining candidates from batch 15 ----
+_C16 = "12 Nov 2026"
+def PDV(s): return ("Parc de la Vallée, official attraction page", f"https://parcdelavallee.fr/attraction/{s}/")
+CDC = ("Cidade da Criança, official attractions height table", "https://www.cidadedacrianca.com.br/")
+def ANP(s): return ("Animália Park, official attraction page (ride rules graphic)", f"https://animaliapark.com.br/site/atracao/{s}/")
+def KFZ(s): return ("Kiftzuba, official ride page", f"https://kiftzuba.co.il/project/{s}/")
+def ALS(s): return ("Adventureland (Sharjah), official ride page", f"https://www.adventurelanduae.com/explore-adventureland/rides/{s}/")
+HP_B16a = {
+ ("parc-de-la-vallee", "Bobsleigh"): M(min=140, acc_min=120, acc_max=140, note="The park lists it as Le Bobsleigh: from 1.20 m, and children under 1.40 m must be accompanied. The park's booking site gives the same rule.", src=PDV("le-bobsleigh")),
+ ("parc-de-la-vallee", "Chenille Vallée"): M(min=120, note="The park lists it as Le Magic Pomme (Magic Pomme Vallée on its booking site), its caterpillar family coaster. Both official pages give 1.20 m to ride alone, but they differ on the lowest height with a companion (0.90 m on the main site, 0.95 m on the booking site), so no companion band is shown.", src=PDV("le-magic-pomme")),
+ ("cidade-da-crianca", "Magic Bee"): M(min=120, note="The park's table says no companion is needed at or above the minimum.", src=CDC),
+ ("cidade-da-crianca", "Formula 1 Coaster"): M(min=120, acc_min=100, acc_max=120, note="The park lists it as Fórmula 1 Coaster: minimum 1.00 m, and a companion is needed below 1.20 m.", src=CDC),
+ ("cidade-da-crianca", "Spinning Coaster"): M(min=110, acc_min=90, acc_max=110, note="Minimum 0.90 m, and a companion is needed below 1.10 m.", src=CDC),
+ ("animalia-park", "Cyclone"): M(min=130, note="Below 1.30 m riders may not ride; no companion option is listed. The park sets no maximum height but says riders over 1.95 m or 120 kg may not fit the seat.", src=ANP("cyclone")),
+ ("animalia-park", "Bear Mountain"): M(min=120, acc_min=100, acc_max=120, note="Below 1.00 m riders may not ride; from 1.00 m to 1.20 m only with a responsible adult.", src=ANP("bear-mountain")),
+ ("kiftzuba", "Caterpillar"): M(min=120, acc_min=80, acc_max=120, note="The park's family coaster (a caterpillar-style train): riders from 80 cm to 120 cm must ride with an adult, and riders under 80 cm may not ride.", src=KFZ("%D7%A8%D7%9B%D7%91%D7%AA-%D7%94%D7%94%D7%A8%D7%99%D7%9D-%D7%94%D7%9E%D7%A9%D7%A4%D7%97%D7%AA%D7%99%D7%AA")),
+ ("kiftzuba", "Airplanes"): M(min=130, acc_min=90, acc_max=130, note="The park lists it as its airplanes coaster: for children from 90 cm, with riders up to 130 cm accompanied by an adult.", src=KFZ("%D7%A8%D7%9B%D7%91%D7%AA-%D7%94%D7%A8%D7%99%D7%9D-%D7%9E%D7%98%D7%95%D7%A1%D7%99%D7%9D")),
+ ("kiftzuba", "Car Racing"): M(min=120, acc_min=95, acc_max=120, note="The park lists it as its car-race coaster: children from 95 cm to 120 cm must ride with an adult.", src=KFZ("%D7%A8%D7%9B%D7%91%D7%AA-%D7%94%D7%A8%D7%99%D7%9D-%D7%9E%D7%A8%D7%95%D7%A5-%D7%9E%D7%9B%D7%95%D7%A0%D7%99%D7%95%D7%AA")),
+ ("adventureland-sharjah", "Kukulcan"): M(min=105, src=ALS("kukulcan")),
+ ("adventureland-sharjah", "Forest Train"): M(min=105, acc_min=95, acc_max=105, note="If accompanied by an adult, the minimum is 95 cm.", src=ALS("forest-train")),
+ ("adventureland-sharjah", "Rocket Cycles"): M(min=120, src=ALS("rocket-cycles")),
+}
+HP_INTL.update(HP_B16a)
+INTL_PARKS += [
+ dict(slug="parc-de-la-vallee", name="Parc de la Vallée", short="Parc de la Vallée", loc="Massais (Val-en-Vignes), Nouvelle-Aquitaine, France", state="Nouvelle-Aquitaine", country="FR", official="https://parcdelavallee.fr/", group="Parc de la Vallée", checked=_C16),
+ dict(slug="cidade-da-crianca", name="Cidade da Criança", short="Cidade da Criança", loc="São Bernardo do Campo, São Paulo, Brazil", state="São Paulo", country="BR", official="https://www.cidadedacrianca.com.br/", group="Cidade da Criança", checked=_C16),
+ dict(slug="animalia-park", name="Animália Park", short="Animália Park", loc="Cotia, São Paulo, Brazil", state="São Paulo", country="BR", official="https://animaliapark.com.br/", group="Animália Park", checked=_C16),
+ dict(slug="kiftzuba", name="Kiftzuba", short="Kiftzuba", loc="Kibbutz Tzuba, near Jerusalem, Israel", state="Jerusalem", country="IL", official="https://kiftzuba.co.il/", group="Kiftzuba", checked=_C16),
+ dict(slug="adventureland-sharjah", name="Adventureland (Sharjah)", short="Adventureland Sharjah", loc="Sahara Centre, Sharjah, United Arab Emirates", state="Sharjah", country="AE", official="https://www.adventurelanduae.com/", group="Adventureland Sharjah", checked=_C16),
+]

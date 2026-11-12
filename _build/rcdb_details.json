@@ -30219,5 +30219,123 @@
  },
  "12018": {
   "arrangement": "Single train with 6 cars. Riders are arranged 2 across in a single row for a total of 12 riders."
+ },
+ "1465": {
+  "former": [
+   [
+    "Berg-o-dal-banan",
+    "1987",
+    "1997"
+   ]
+  ]
+ },
+ "4312": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 4 rows for a total of 8 riders per car.",
+  "capacity": "900 riders per hour"
+ },
+ "9913": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "6 cars. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "relocations": [
+   [
+    "Karls Erlebnis-Dorf Oberhausen",
+    "Speedy"
+   ],
+   [
+    "Skara Sommarland",
+    "Spinner"
+   ]
+  ],
+  "capacity": "650 riders per hour"
+ },
+ "14323": {
+  "arrangement": "Single train with 4 cars. Riders are arranged 2 across in 2 rows for a total of 16 riders."
+ },
+ "14355": {
+  "elements": [
+   [
+    "Loop",
+    null
+   ]
+  ],
+  "arrangement": "6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
+  "relocations": [
+   [
+    "OK Corral",
+    "Looping Star"
+   ],
+   [
+    "Ocean Beach Amusement Park",
+    "Looping Star"
+   ],
+   [
+    "Camelot Theme Park",
+    "Tower of Terror"
+   ],
+   [
+    "Dreamland",
+    "Looping Star"
+   ],
+   [
+    "Loudoun Castle",
+    "Twist and Shout"
+   ],
+   [
+    "Dalmaland",
+    "Big Blue"
+   ]
+  ],
+  "capacity": "1500 riders per hour",
+  "designers": [
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "15282": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 4 across in a single row for a total of 4 riders per car."
+ },
+ "17232": {
+  "arrangement": "Single train with 8 cars. Riders are arranged 2 across in a single row for a total of 16 riders.",
+  "designers": [
+   "Stefan Holtman"
+  ]
+ },
+ "18356": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ]
+ },
+ "18357": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 8 cars. Riders are arranged 2 across in a single row for a total of 16 riders."
+ },
+ "18585": {
+  "designers": [
+   "Fraser Ross"
+  ]
  }
 }
