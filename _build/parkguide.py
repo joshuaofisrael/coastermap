@@ -100,11 +100,13 @@ def park_page(p):
     def hrow(c):
         h = c["hr"]
         return (f'<tr><th scope="row"><a href="{coaster_path(c)}">{E(c["name"])}</a></th><td>{E(hs(h)) if h else "Not verified"}</td><td>{E(rngs(h)) if h and h.get("acc_min") else "None"}</td>'
-                f'<td>{E(hs(h, "max")) if h and h.get("max") else "None"}</td><td>{E(ilabel(c))}</td><td>{c["inversions"] if c["inversions"] is not None else "n/a"}</td></tr>')
+                f'<td>{E(hs(h, "max")) if h and h.get("max") else "None"}</td><td>{E(ilabel(c))}</td>' + (f'<td>{h["thrill"]} of 5</td>' if h and h.get("thrill") else ("<td>n/a</td>" if thr else "")) + f'<td>{c["inversions"] if c["inversions"] is not None else "n/a"}</td></tr>')
+    thr = any(c["hr"] and c["hr"].get("thrill") for c in cs)
     hsort = sorted(cs, key=lambda c: (0, hin(c["hr"])) if c["hr"] else (1, 0))
     notes = [c for c in ver if c["hr"].get("note")]
-    htable = ('<div class="tablewrap"><table class="list"><thead><tr><th scope="col">Coaster</th><th scope="col">Ride alone</th><th scope="col">With a companion</th><th scope="col">Maximum</th><th scope="col">Intensity</th><th scope="col">Inversions</th></tr></thead><tbody>'
+    htable = ('<div class="tablewrap"><table class="list"><thead><tr><th scope="col">Coaster</th><th scope="col">Ride alone</th><th scope="col">With a companion</th><th scope="col">Maximum</th><th scope="col">Intensity</th>' + ('<th scope="col">Park thrill level</th>' if thr else "") + '<th scope="col">Inversions</th></tr></thead><tbody>'
               + "".join(hrow(c) for c in hsort) + "</tbody></table></div>")
+    if thr: htable += f'<p class="note">Park thrill level is the park\'s own 1 to 5 rating from its official ride pages (5 is the most intense). Intensity is our label from RCDB\'s class.</p>'
     if notes: htable += "<h3>Other rider rules stated by the park</h3><ul>" + "".join(f'<li><a href="{coaster_path(c)}">{E(c["name"])}</a>: {E(c["hr"]["note"])}</li>' for c in notes) + "</ul>"
     unv = [c for c in cs if not c["hr"]]
     if unv: htable += f'<p class="note">We could not verify a height rule on an official {PN} source for {andlist(E(c["name"]) for c in unv)}, so ' + ("it is" if len(unv) == 1 else "they are") + ' left out of the height lists below. Ask the park before you queue.</p>'
@@ -127,7 +129,10 @@ def park_page(p):
         g = max(gains, key=lambda x: (x[0], -x[1]))
         if g[0]: bands = f'<p>At {PN} the biggest single step is reaching <strong>{hb(g[1])}</strong>, which opens up {pl(g[0], "more coaster")}' + (" than the height below" if g[1] != HEIGHTS[0] else "") + '. Measure at home in the shoes your child will wear, since parks measure at the ride entrance and a child even slightly under the line is turned away.</p>' + bands
         maxs = [c for c in ver if c["hr"].get("max")]
-        if maxs: bands += "<h3>Maximum heights</h3><p>Some rides are built for children and have an upper limit: " + andlist(f'<a href="{coaster_path(c)}">{E(c["name"])}</a> (up to {hs(c["hr"], "max")})' for c in maxs) + ". Taller riders are turned away for restraint fit, not age.</p>"
+        if maxs:
+            kid = [c for c in maxs if c["scale"] in ("Kiddie", "Family")]; big = [c for c in maxs if c not in kid]
+            ml = lambda xs: andlist(f'<a href="{coaster_path(c)}">{E(c["name"])}</a> (up to {hs(c["hr"], "max")})' for c in xs)
+            bands += "<h3>Maximum heights</h3><p>" + (f'{"A ride" if len(big) == 1 else "Some rides"} here also {"has" if len(big) == 1 else "have"} an official maximum height: ' + ml(big) + ". " if big else "") + (("Family and kiddie coasters with an upper limit: " if big else ("This family or kiddie coaster has an upper limit: " if len(kid) == 1 else "These family and kiddie coasters have an upper limit: ")) + ml(kid) + ". " if kid else "") + "Riders over the maximum are turned away because the restraints are sized for a range of body heights; the limit is about fit, not age.</p>"
     accs = [c for c in ver if c["hr"].get("acc_min")]
     comp = ""
     if accs or notes:
@@ -166,8 +171,11 @@ def park_page(p):
     for th in (42, 48):
         ok = [c["name"] for c in cnt[th]]
         if ver and n > 1: faqs.append((f'What can a {th}-inch child ride at {p["name"]}?', (f'Riding alone, a {th}-inch ({cm(th)} cm) child meets the official minimum on: ' + ", ".join(ok) + '.' if ok else f'No coaster here has a ride-alone minimum of {th} in or less.') + (" With a companion they can also ride " + ", ".join(c["name"] for c in cs if can_acc(c, th)) + "." if any(can_acc(c, th) for c in cs) else "")))
+    mx = [c for c in ver if c["hr"].get("max")]
+    if mx: faqs.append((f'Do any coasters at {p["name"]} have a maximum height?', "Yes. " + "; ".join(f'{c["name"]} has a maximum of {hs(c["hr"], "max")}' for c in mx) + f', according to official park sources checked {p["checked"]}.'))
     if noinv and n > 1: faqs.append((f'Which coasters at {p["name"]} do not go upside down?', ", ".join(c["name"] for c in noinv) + " have no inversions, per RCDB."))
     srcset = sorted({c["hr"]["src"] for c in ver})
+    srcn = {x: [c["name"] for c in hsort if c["hr"] and c["hr"]["src"] == x] for x in srcset}
     body = f'''<h1>{PN} height requirements and roller coasters ranked</h1><p class="sub">{("Formerly " + E(fm) + " · ") if fm else ""}{E(p["loc"])} · {pl(n, "coaster")}</p>{byline(p["checked"])}
 <p class="answer">{lead}</p>
 {ana_html}
@@ -181,7 +189,7 @@ def park_page(p):
 <h2>Every coaster at {PN}: full stats</h2>{coaster_table(sorted(cs, key=lambda c: -(c["height"] or 0)))}
 {group_html(p)}
 {faq_html(faqs)}
-{related_html(p=p)}<section class="sources"><h2>Sources</h2><ul><li><a href="{p["rcdb_url"]}" rel="nofollow noopener" target="_blank">RCDB: {PN}</a>: operating coaster list, stats and map positions.</li>{"".join(f"<li>{src_link(s)}: height requirements (checked {p["checked"]}).</li>" for s in srcset)}<li><a href="{p["official"]}" rel="nofollow noopener" target="_blank">{PN} official site</a>: hours and ride status.</li></ul><p class="note">Intensity labels, rankings and first-timer picks are {BRAND} editorial guidance built from the facts above, not park rules. Last checked {p["checked"]}.</p></section>'''
+{related_html(p=p)}<section class="sources"><h2>Sources</h2><ul><li><a href="{p["rcdb_url"]}" rel="nofollow noopener" target="_blank">RCDB: {PN}</a>: operating coaster list, stats and map positions.</li>{"".join(f"<li>{src_link(s)}: height requirement" + ("s" if len(srcn[s]) > 1 else "") + " for " + andlist(E(x) for x in srcn[s]) + f" (checked {p["checked"]}).</li>" for s in srcset)}<li><a href="{p["official"]}" rel="nofollow noopener" target="_blank">{PN} official site</a>: hours and ride status.</li></ul><p class="note">Intensity labels, rankings and first-timer picks are {BRAND} editorial guidance built from the facts above, not park rules. Last checked {p["checked"]}.</p></section>'''
     old_ld = PARK_LD(p)
     ld = [*old_ld, {"@context": "https://schema.org", "@type": "ItemList", "name": f'{p["name"]} roller coasters ranked by intensity', "numberOfItems": n, "itemListOrder": "https://schema.org/ItemListOrderDescending",
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": url(coaster_path(c)), "name": c["name"]} for i, c in enumerate(ranked)]}, faq_ld(faqs)]
@@ -192,7 +200,15 @@ def park_page(p):
                f'{p["short"]} Height Requirements & Ride Guide | {BRAND}', f'{p["short"]} Height Requirements | {BRAND}'] if not fm else
               [f'{p["name"]} (ex {fm}) Height Requirements', f'{p["name"]} Height Requirements & Coasters Ranked']):
         if len(t) <= 70: title = t; break
-    desc = (f'Height requirements for all {n} roller coasters at {p["name"]}' if n > 1 else f'Height requirement for the roller coaster at {p["name"]}') + (f' (formerly {fm})' if fm else "") + (', what 42 and 48-inch kids can ride, coasters ranked by intensity and first-timer picks.' if n > 1 else ", with stats and who it suits.")
+    desc = (f'Height requirements for all {n} roller coasters at {p["name"]}' if n > 1 else f'Height requirement for the roller coaster at {p["name"]}') + (f' (formerly {fm})' if fm else "")
+    if n > 1:
+        if ver and lowest is not highest: desc += f', {hs(lowest["hr"]).split(" (")[0]} to {hs(highest["hr"]).split(" (")[0]}'
+        bits = ["what 42 and 48-inch kids can ride"] + (["max heights"] if any(c["hr"].get("max") for c in ver) else []) + ["coasters ranked by intensity", "first-timer picks"]
+        out = []
+        for b in bits:
+            if len(desc + ": " + ", ".join(out + [b]) + ".") <= 158: out.append(b)
+        desc += (": " + ", ".join(out) + ".") if out else "."
+    else: desc += ", with stats and who it suits."
     write(path, page(path, title, desc, body, ld, [("/", "Home"), ("/parks/", "Parks"), (path, p["name"])]))
 
 # ---------- coaster comparisons ----------

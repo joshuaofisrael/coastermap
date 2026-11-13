@@ -49,7 +49,7 @@ PARKS = [
  dict(slug="disney-california-adventure", name="Disney California Adventure Park", short="California Adventure", loc="Anaheim, California", state="CA", country="US", official="https://disneyland.disney.go.com/destinations/disney-california-adventure/", group="Disneyland Resort"),
  dict(slug="silver-dollar-city", name="Silver Dollar City", short="Silver Dollar City", loc="Branson, Missouri", state="MO", country="US", official="https://www.silverdollarcity.com/theme-park/", group="Herschend Family Entertainment"),
  # Added 10 Nov 2026 (expansion batch 3)
- dict(slug="six-flags-fiesta-texas", name="Six Flags Fiesta Texas", short="Six Flags Fiesta Texas", loc="San Antonio, Texas", state="TX", country="US", official="https://www.sixflags.com/fiestatexas", group="Six Flags"),
+ dict(slug="six-flags-fiesta-texas", name="Six Flags Fiesta Texas", short="Six Flags Fiesta Texas", loc="San Antonio, Texas", state="TX", country="US", official="https://www.sixflags.com/fiestatexas", group="Six Flags", checked="13 Nov 2026"),
  dict(slug="six-flags-new-england", name="Six Flags New England", short="Six Flags New England", loc="Agawam, Massachusetts", state="MA", country="US", official="https://www.sixflags.com/newengland", group="Six Flags"),
  dict(slug="six-flags-discovery-kingdom", name="Six Flags Discovery Kingdom", short="Discovery Kingdom", loc="Vallejo, California", state="CA", country="US", official="https://www.sixflags.com/discoverykingdom", group="Six Flags"),
  dict(slug="californias-great-america", name="California's Great America", short="California's Great America", loc="Santa Clara, California", state="CA", country="US", official="https://www.sixflags.com/cagreatamerica", group="Six Flags (formerly Cedar Fair)"),
