@@ -936,3 +936,21 @@ Totals after batch 16: 269 parks, 1,454 coasters (1,345 with an official height 
 - Not yet tried: Sommerland Sjælland, De Waarbeek, Fasanolandia, Karls Elstal.
 - Retries: Parc de la Vallée Grand Canyon and Animália Big Air Coaster, if the official sources are reconciled; the skips above if official data changes.
 - The rest of the RCDB sweep, mostly China, Russia, Iraq, Iran and Central Asia.
+
+## Batch 17 (13 Nov 2026): improving the Google entry page (no coverage added)
+
+**Why this and not coverage:** Cloudflare Web Analytics (bot-filtered, 6–13 Nov) showed Google sending real visits: 10 on 12 Nov to /parks/six-flags-fiesta-texas/, plus 1 each to the Universal Studios Singapore Canopy Flyer page and /parks/ (12 Nov) and Disneyland Chip 'n' Dale's GADGETcoaster (13 Nov). Pageviews by day: 10 Nov 13, 11 Nov 29, 12 Nov 18, 13 Nov 7 (to about 11 AM ET). Nothing was recorded before 10 Nov. No day reached 100. GSC and Bing data can't be read without a browser, so they were skipped.
+
+**Commit c369adfc: Six Flags Fiesta Texas cluster and park-page template.**
+- Re-verified all 11 Fiesta Texas rules against the live sixflags.com ride pages on 13 Nov 2026. All matched, including the Pandemonium 42 in companion rule and the maximums on Batman The Ride (77 in), Dr. Diabolical's Cliffhanger (78 in) and Boomerang Coast to Coaster (80 in). The park's `checked` is now 13 Nov 2026, which updates the park page and all 11 coaster pages.
+- Fix (on every park page with a maximum, 126 parks): the "Maximum heights" text used to say every ride with a maximum is "built for children", which is wrong for extreme rides such as Batman The Ride and Dr. Diabolical's. The wording now depends on the RCDB class: thrill or extreme rides "have an official maximum height", and family or kiddie coasters are labelled as such. It also explains the restraint-fit reason.
+- New FAQ (FAQ schema) on parks with a maximum: "Do any coasters at X have a maximum height?", built from the stored official rules.
+- New "Park thrill level" column on park height tables (23 parks: Six Flags and Enchanted Parks) showing the park's own 1–5 rating from its official ride pages, with a note on what it means.
+- Sources: each official ride-page line on park pages now names the ride or rides it supports. Before, there were 11 identical "official ride page" lines.
+- CTR: park meta descriptions now include the height range (for example "36 in to 54 in", or cm for metric parks) and mention max heights where they exist. The extra phrases are added only while the description stays at or under 158 characters, so they are never cut off mid-phrase.
+- Internal links: /guides/theme-parks-with-the-most-roller-coasters/ had 1 inbound link. It is now linked from the home page's popular guides and from the related guides on every park page.
+- No new parks or coasters, so the height checker, quiz and map data are unchanged.
+
+Totals (unchanged): 269 parks, 1,454 coasters (1,345 with an official height rule), 1,832 sitemap URLs. Validator: 1,834 files, 0 issues. seo.py: no duplicate titles or descriptions, depth ≤ 2, only orphan /newsletter/thanks/ (expected). The one description over 170 characters (Chip 'n' Dale) only counts that long because of HTML entities; the text itself is about 156. dup.py: median 0.34, 4 pairs over 0.6, 58 over 0.5 (unchanged). IndexNow: 281 changed URLs, HTTP 200.
+
+**Next:** watch whether Google traffic to Fiesta Texas holds or spreads to other Six Flags or Texas pages. If it does, give Six Flags Over Texas and SeaWorld San Antonio the same treatment. Coverage candidates are unchanged: Sommerland Sjælland, De Waarbeek, Fasanolandia, Karls Elstal, then the RCDB sweep.
