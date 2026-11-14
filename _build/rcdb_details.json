@@ -30337,5 +30337,306 @@
   "designers": [
    "Fraser Ross"
   ]
+ },
+ "2510": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 7 cars. Riders are arranged 2 across in 2 rows for a total of 28 riders.",
+  "relocations": [
+   [
+    "Magic Land",
+    "Corkscrew"
+   ],
+   [
+    "Wonder Island",
+    "Whirl Wind Looping Coaster"
+   ]
+  ],
+  "designers": [
+   "Peter Clerx"
+  ]
+ },
+ "2867": {
+  "arrangement": "12 cars per train. Riders are arranged 2 across in a single row for a total of 24 riders per train.",
+  "relocations": [
+   [
+    "Kure Portopialand",
+    "Andalusia Railroad"
+   ],
+   [
+    "Wonder Island",
+    "Big Roller Coaster"
+   ]
+  ],
+  "capacity": "1250 riders per hour",
+  "designers": [
+   "Schwarzkopf",
+   "Ing.-Büro Stengel GmbH"
+  ]
+ },
+ "12340": {
+  "elements": [
+   [
+    "LSM Launch",
+    "from 0 mph - 62.1 mph in 2.5 s"
+   ],
+   [
+    "Loop",
+    "105 ft tall"
+   ],
+   [
+    "Twisted Horseshoe Roll",
+    null
+   ],
+   [
+    "In-Line Twist",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 5 cars per train. Riders are arranged 2 across in 2 rows for a total of 20 riders per train.",
+  "capacity": "830 riders per hour",
+  "former": [
+   [
+    "Velikolukskiy Myasokombinat",
+    "2025",
+    null
+   ]
+  ]
+ },
+ "13953": {
+  "elements": [
+   [
+    "Cable Lift Hill",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Cobra Roll",
+    null
+   ],
+   [
+    "Double Corkscrew",
+    null
+   ],
+   [
+    "Quad Heartline Roll",
+    null
+   ],
+   [
+    "Heartline Roll",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 6 cars per train. Riders are arranged 2 across in 2 rows for a total of 24 riders per train.",
+  "capacity": "1250 riders per hour"
+ },
+ "23220": {
+  "arrangement": "10 cars per train. Riders are arranged 2 across in a single row for a total of 20 riders per train."
+ },
+ "22183": {},
+ "22184": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ]
+ },
+ "14506": {
+  "elements": [
+   [
+    "LSM Launch",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Inclined Dive Loop",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "Heartline Roll",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 4 cars per train. Riders are arranged 2 across in 2 rows for a total of 16 riders per train.",
+  "installer": "RCS GmbH"
+ },
+ "17292": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ]
+ },
+ "21688": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 4 cars. Riders are arranged 2 across in 2 rows for a total of 16 riders."
+ },
+ "24427": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 8 cars. Riders are arranged 2 across in a single row for a total of 16 riders."
+ },
+ "15217": {
+  "arrangement": "6 cars per train."
+ },
+ "18628": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 6 cars. Riders are arranged 2 across in 2 rows for a total of 24 riders."
+ },
+ "22592": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car.",
+  "relocations": [
+   [
+    "VVC Wheel Park",
+    "Formula"
+   ],
+   [
+    "Central Park",
+    "Roller Coaster"
+   ],
+   [
+    "Family Park Skazka",
+    "Formula"
+   ]
+  ]
+ },
+ "24032": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Cobra Roll",
+    null
+   ],
+   [
+    "Loop",
+    null
+   ],
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 5 cars. Riders are arranged 2 across in 2 rows for a total of 20 riders."
+ },
+ "24213": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Corkscrew",
+    null
+   ],
+   [
+    "In-Line Twist",
+    null
+   ]
+  ]
+ },
+ "24214": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ],
+   [
+    "Heartline Roll",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car."
+ },
+ "10838": {
+  "elements": [
+   [
+    "LSM Launch",
+    "from 0 mph - 62.1 mph in 2.5 s"
+   ],
+   [
+    "Loop",
+    "105 ft tall"
+   ],
+   [
+    "Twisted Horseshoe Roll",
+    null
+   ],
+   [
+    "In-Line Twist",
+    null
+   ]
+  ],
+  "arrangement": "2 trains with 5 cars per train. Riders are arranged 2 across in 2 rows for a total of 20 riders per train.",
+  "capacity": "830 riders per hour",
+  "installer": "RCS GmbH"
+ },
+ "10839": {
+  "elements": [
+   [
+    "Chain Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single car trains. Riders are arranged 2 across in 2 rows for a total of 4 riders per car."
+ },
+ "24688": {
+  "elements": [
+   [
+    "Booster Wheel Lift Hill",
+    null
+   ]
+  ],
+  "arrangement": "Single train with 4 cars. Riders are arranged 2 across in 2 rows for a total of 16 riders."
  }
 }

@@ -1708,3 +1708,56 @@ INTL_PARKS += [
  dict(slug="dennlys", name="Dennlys Parc", short="Dennlys Parc", loc="Dennebrœucq, Hauts-de-France, France", state="Hauts-de-France", country="FR", official="https://www.dennlys-parc.com/", group="Dennlys Parc", checked=_C16),
  dict(slug="papea", name="Papéa Parc", short="Papéa", loc="Yvré-l'Évêque, Pays de la Loire, France", state="Pays de la Loire", country="FR", official="https://www.papeaparc.fr/", group="Papéa Parc", checked=_C16),
 ]
+
+# ---- Batch 18 (14 Nov 2026): major-chain retries (Universal Beijing, Lotte World), De Waarbeek, Russian parks from the RCDB sweep ----
+_C18 = "14 Nov 2026"
+def UBJ(s): return ("Universal Beijing Resort, official ride page (accessibility information)", f"https://www.universalbeijingresort.com/en/play/{s}")
+def LWA(i): return ("Lotte World Adventure, official attraction page", f"https://adventure.lotteworld.com/enjoy/attrctn/detail?shopSysCd={i}")
+WBK = ("De Waarbeek, official attractions page (height requirements per attraction)", "https://waarbeek.nl/attracties/")
+def DVO(s): return ("Divo Ostrov, official attraction page", f"https://divo-ostrov.ru/attraction/{s}/")
+def DRI(s): return ("Dream Island, official attraction page", f"https://dreamisland.ru/attractions/{s}")
+def SKZ(s): return ("Skazka park, official attraction page", f"https://parkskazka.com/attractions/{s}/")
+def SKZR(n): return (f"Skazka park, official ride rules sheet for {n} (PDF)", f"https://parkskazka.com/upload/files/rules/{n}.pdf")
+def SOP(s): return ("Sochi Park, official ride page", f"https://www.sochipark.ru/thingstodo/rides/{s}/")
+UBJN = "Weight must not exceed 136 kg."
+WBKN = "The park defines a companion as an adult aged at least 18."
+HP_B18 = {
+ ("universal-beijing-resort", "Decepticoaster"): M(min=132, note="Guests under 132 cm cannot ride. No companion rule is stated.", src=UBJ("decepticoaster")),
+ ("universal-beijing-resort", "Jurassic Flyers"): M(min=122, acc_min=100, acc_max=122, note="Guests under 100 cm cannot ride; children between 100 cm and 122 cm must be accompanied by an adult. " + UBJN, src=UBJ("jurassic-flyers")),
+ ("universal-beijing-resort", "Flight of the Hippogriff"): M(min=122, acc_min=99, acc_max=122, note="Guests under 99 cm cannot ride; children between 99 cm and 122 cm must be accompanied by an adult. " + UBJN, src=UBJ("flight-hippogrifftm")),
+ ("universal-beijing-resort", "Loop-Dee-Doop-Dee"): M(min=122, acc_min=92, acc_max=122, max=190, note="Guests must be between 92 cm and 190 cm; children between 92 cm and 122 cm must be accompanied by an adult. " + UBJN, src=UBJ("loop-dee-doop-dee")),
+ ("lotte-world", "French Revolution"): M(min=120, note="The park says riders 120 cm or taller may ride. No companion rule is stated.", src=LWA(1198)),
+ ("lotte-world", "Comet Express"): M(min=120, note="The park lists it as Comet Express (혜성특급). Riders 120 cm or taller may ride; the park also asks for a waist of 38 inches or less.", src=LWA(1214)),
+ ("lotte-world", "Atlantis Adventure"): M(min=135, max=190, note="The park lists it as Atlantis (아트란티스): 135 cm to 190 cm, and for riders under 65 years old.", src=LWA(2286)),
+ ("lotte-world", "Stone Express"): M(min=110, acc_min=90, acc_max=110, note="110 cm or taller may ride; children from 90 cm to 110 cm can ride when accompanied by a guardian.", src=LWA(6313)),
+ ("de-waarbeek", "Missie 18"): M(min=120, acc_min=105, acc_max=120, note="The park lists it as Twekky's Ruimtereis (Missie 18), a spinning coaster. " + WBKN, src=WBK),
+ ("de-waarbeek", "Raptor Adventure"): M(min=120, acc_min=95, acc_max=120, note=WBKN, src=WBK),
+ ("de-waarbeek", "Rodelbaan"): M(min=130, acc_min=100, acc_max=130, note="The park's classic coaster in the red cars. " + WBKN, src=WBK),
+ ("de-waarbeek", "Rupsje Mae"): M(min=120, acc_min=90, acc_max=120, note=WBKN, src=WBK),
+ ("divo-ostrov", "Nesterov Loop"): M(min=130, note="The park lists it as Горка «Петля Нестерова» (Nesterov Loop), for riders from 1.3 m. No companion rule is stated.", src=DVO("bluefire")),
+ ("divo-ostrov", "Velikolukskiy Myasokombinat-2"): M(min=140, max=196, note="The park lists it as Горка ВЛМК, for riders from 1.4 m to 1.96 m.", src=DVO("velikolukskiy-myasokombinat-2")),
+ ("divo-ostrov", "Big Roller Coaster"): M(min=135, note="The park lists it as Большая Русская горка (the Big Russian Mountain), for riders from 1.35 m. No companion rule is stated.", src=DVO("bolshaya-russkaya-gorka")),
+ ("divo-ostrov", "Whirl Wind Looping Coaster"): M(min=110, note="The park lists this looping coaster as Русские горки (Russian Mountains) and describes a 20 m structure with loops, which matches RCDB's 64 ft (about 20 m), two-inversion Vekoma Whirlwind here. For riders from 1.1 m; no companion rule is stated.", src=DVO("russkie-gorki")),
+ ("dream-island", "Dream Grand PrIx"): M(min=130, acc_min=110, acc_max=130, note="The park lists it as Гран-при Мечты: 110 cm to 130 cm with a companion, 130 cm and up without.", src=DRI("grand-pri-mechty")),
+ ("dream-island", "Speedblaze"): M(min=120, max=196, note="The park lists it as Пламя скорости, for riders 120 cm to 196 cm. No companion rule is stated.", src=DRI("plamya-skorosti")),
+ ("dream-island", "Treasure Mine"): M(min=120, acc_min=90, acc_max=120, max=195, note="The park lists it as Шахта сокровищ: 90 cm to 120 cm with a companion, 120 cm to 195 cm without.", src=DRI("shakhta-sokrovishch")),
+ ("dream-island", "Shred The Sewers"): M(min=130, max=196, note="The park lists it as Полёт в тоннеле, for riders 130 cm to 196 cm. No companion rule is stated.", src=DRI("polyet-v-tonnele")),
+ ("dream-island", "Race of the Future"): M(min=130, acc_min=110, acc_max=130, note="The park lists it as Гонка будущего: 110 cm to 130 cm with a companion, 130 cm and up without.", src=DRI("gonka-budushchego")),
+ ("dream-island", "Whirlwind in the Jungle"): M(min=120, acc_min=105, acc_max=120, max=195, note="The park lists it as Вихрь в Джунглях: 105 cm to 120 cm with a companion, 120 cm to 195 cm without.", src=DRI("vikhr")),
+ ("skazka-moscow", "Nitro"): M(min=140, acc_min=100, acc_max=140, note="The ride's rules sheet lists 100 cm to 140 cm with a companion over 18, and 140 cm to ride alone. The ride page shows only the 100 cm minimum.", src=SKZR("Нитро")),
+ ("skazka-moscow", "Boomerang"): M(min=130, max=195, note="The ride's rules sheet lists 130 cm to 195 cm to ride alone and riders up to 60 years old.", src=SKZR("Бумеранг")),
+ ("skazka-moscow", "Vortex"): M(min=140, max=190, note="The park lists it as Вихрь. Its rules sheet lists 140 cm to 190 cm to ride alone and a minimum age of 10.", src=SKZR("Вихрь")),
+ ("skazka-moscow", "Caterpillar"): M(min=110, acc_min=50, acc_max=110, note="The park lists it as Гусеница: height from 50 cm, and children under 110 cm ride with an adult.", src=SKZ("semejnye-aktivnye/gusenitsa")),
+ ("sochi-park", "Serpent Dragon"): M(min=130, note="The park lists it as Змей Горыныч: from 130 cm and 7 years old; children aged 7 to 10 ride with an adult.", src=SOP("zmei-gorynych")),
+ ("sochi-park", "Forest Mail"): M(min=120, acc_min=90, acc_max=120, note="The park lists it as Лесная почта: minimum 90 cm, and riders from 90 cm to 120 cm only with an adult.", src=SOP("lesnaya-pochta")),
+}
+HP_INTL.update(HP_B18)
+INTL_PARKS += [
+ dict(slug="universal-beijing-resort", name="Universal Studios Beijing", short="Universal Studios Beijing", loc="Tongzhou, Beijing, China", state="Beijing", country="CN", official="https://www.universalbeijingresort.com/en", group="Universal Beijing Resort", checked=_C18),
+ dict(slug="lotte-world", name="Lotte World Adventure", short="Lotte World", loc="Jamsil, Songpa-gu, Seoul, South Korea", state="Seoul", country="KR", official="https://adventure.lotteworld.com/", group="Lotte World", checked=_C18),
+ dict(slug="de-waarbeek", name="De Waarbeek", short="De Waarbeek", loc="Hengelo, Overijssel, Netherlands", state="Overijssel", country="NL", official="https://waarbeek.nl/", group="De Waarbeek", checked=_C18),
+ dict(slug="divo-ostrov", name="Divo Ostrov", short="Divo Ostrov", loc="Krestovsky Island, Saint Petersburg, Russia", state="Saint Petersburg", country="RU", official="https://divo-ostrov.ru/", group="Divo Ostrov", checked=_C18),
+ dict(slug="dream-island", name="Dream Island", short="Dream Island", loc="Moscow, Russia", state="Moscow", country="RU", official="https://dreamisland.ru/", group="Dream Island", checked=_C18),
+ dict(slug="skazka-moscow", name="Skazka Family Park", short="Skazka", loc="Krylatskoye, Moscow, Russia", state="Moscow", country="RU", official="https://parkskazka.com/", group="Skazka", checked=_C18),
+ dict(slug="sochi-park", name="Sochi Park", short="Sochi Park", loc="Sochi, Krasnodar Krai, Russia", state="Krasnodar Krai", country="RU", official="https://www.sochipark.ru/", group="Sochi Park", checked=_C18),
+]

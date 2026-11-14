@@ -1,6 +1,6 @@
 # Coaster Map
 
-> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1454 coasters at 269 parks as of 10 Nov 2026.
+> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. 1486 coasters at 276 parks as of 10 Nov 2026.
 
 Not affiliated with any park. Ride rules change; confirm with the park.
 
@@ -1735,3 +1735,42 @@ Not affiliated with any park. Ride rules change; confirm with the park.
   - [Roller Coaster](https://coastermap.com/parks/papea/roller-coaster/): min height 120 cm
   - [Chenille](https://coastermap.com/parks/papea/chenille/): min height 120 cm
   - [Speedy Nuts](https://coastermap.com/parks/papea/speedy-nuts/): min height 140 cm
+- [Universal Studios Beijing](https://coastermap.com/parks/universal-beijing-resort/): 4 coasters
+  - [Jurassic Flyers](https://coastermap.com/parks/universal-beijing-resort/jurassic-flyers/): min height 122 cm
+  - [Decepticoaster](https://coastermap.com/parks/universal-beijing-resort/decepticoaster/): min height 132 cm
+  - [Flight of the Hippogriff](https://coastermap.com/parks/universal-beijing-resort/flight-of-the-hippogriff/): min height 122 cm
+  - [Loop-Dee-Doop-Dee](https://coastermap.com/parks/universal-beijing-resort/loop-dee-doop-dee/): min height 122 cm
+- [Lotte World Adventure](https://coastermap.com/parks/lotte-world/): 4 coasters
+  - [French Revolution](https://coastermap.com/parks/lotte-world/french-revolution/): min height 120 cm
+  - [Comet Express](https://coastermap.com/parks/lotte-world/comet-express/): min height 120 cm
+  - [Atlantis Adventure](https://coastermap.com/parks/lotte-world/atlantis-adventure/): min height 135 cm
+  - [Stone Express](https://coastermap.com/parks/lotte-world/stone-express/): min height 110 cm
+- [De Waarbeek](https://coastermap.com/parks/de-waarbeek/): 4 coasters
+  - [Rodelbaan](https://coastermap.com/parks/de-waarbeek/rodelbaan/): min height 130 cm
+  - [Rupsje Mae](https://coastermap.com/parks/de-waarbeek/rupsje-mae/): min height 120 cm
+  - [Raptor Adventure](https://coastermap.com/parks/de-waarbeek/raptor-adventure/): min height 120 cm
+  - [Missie 18](https://coastermap.com/parks/de-waarbeek/missie-18/): min height 120 cm
+- [Divo Ostrov](https://coastermap.com/parks/divo-ostrov/): 4 coasters
+  - [Whirl Wind Looping Coaster](https://coastermap.com/parks/divo-ostrov/whirl-wind-looping-coaster/): min height 110 cm
+  - [Big Roller Coaster](https://coastermap.com/parks/divo-ostrov/big-roller-coaster/): min height 135 cm
+  - [Nesterov Loop](https://coastermap.com/parks/divo-ostrov/nesterov-loop/): min height 130 cm
+  - [Velikolukskiy Myasokombinat-2](https://coastermap.com/parks/divo-ostrov/velikolukskiy-myasokombinat-2/): min height 140 cm
+- [Dream Island](https://coastermap.com/parks/dream-island/): 6 coasters
+  - [Dream Grand PrIx](https://coastermap.com/parks/dream-island/dream-grand-prix/): min height 130 cm
+  - [Speedblaze](https://coastermap.com/parks/dream-island/speedblaze/): min height 120 cm
+  - [Treasure Mine](https://coastermap.com/parks/dream-island/treasure-mine/): min height 120 cm
+  - [Shred The Sewers](https://coastermap.com/parks/dream-island/shred-the-sewers/): min height 130 cm
+  - [Race of the Future](https://coastermap.com/parks/dream-island/race-of-the-future/): min height 130 cm
+  - [Whirlwind in the Jungle](https://coastermap.com/parks/dream-island/whirlwind-in-the-jungle/): min height 120 cm
+- [Skazka Family Park](https://coastermap.com/parks/skazka-moscow/): 7 coasters
+  - [Nitro](https://coastermap.com/parks/skazka-moscow/nitro/): min height 140 cm
+  - [Lightning](https://coastermap.com/parks/skazka-moscow/lightning/)
+  - [Caterpillar](https://coastermap.com/parks/skazka-moscow/caterpillar/): min height 110 cm
+  - [Formula](https://coastermap.com/parks/skazka-moscow/formula/)
+  - [Boomerang](https://coastermap.com/parks/skazka-moscow/boomerang/): min height 130 cm
+  - [Way of the Dragon](https://coastermap.com/parks/skazka-moscow/way-of-the-dragon/)
+  - [Vortex](https://coastermap.com/parks/skazka-moscow/vortex/): min height 140 cm
+- [Sochi Park](https://coastermap.com/parks/sochi-park/): 3 coasters
+  - [Serpent Dragon](https://coastermap.com/parks/sochi-park/serpent-dragon/): min height 130 cm
+  - [Sharolet](https://coastermap.com/parks/sochi-park/sharolet/)
+  - [Forest Mail](https://coastermap.com/parks/sochi-park/forest-mail/): min height 120 cm
