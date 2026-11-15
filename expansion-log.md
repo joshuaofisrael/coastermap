@@ -1003,3 +1003,11 @@ Totals after batch 18: 276 parks, 1,486 coasters (1,373 with an official height 
 Totals (unchanged): 276 parks, 1,486 coasters (1,373 with an official height rule), 1,872 sitemap URLs. Validator: 1,874 files, 0 issues. seo.py: no duplicate titles or descriptions, depth ≤ 2, only orphan /newsletter/thanks/ (expected), 1 description outside 50–170 (Chip 'n' Dale, HTML entities, as before). dup.py: median max-Jaccard 0.35; pages over 0.6: 2, over 0.5: 56 (was 4 and 58). All 8 Phantasialand URLs returned HTTP 200 live with the 15 Nov date after the Pages deploy. IndexNow: 1,761 changed sitemap URLs, HTTP 200.
 
 **Next:** watch whether Phantasialand search visits grow (especially the cm FAQs and the cm-line table). If they do, give Europa-Park and Efteling the same rule re-check, since they are the other big metric parks with Google visits.
+
+## 15 Nov 2026 (central daily SEO run): sitemap lastmod follows each park's last-checked date (no content change)
+
+**Why:** every sitemap URL still carried the launch date (2026-11-10) as lastmod, even for parks added or re-verified later (batches 2 to 19). The site rulebook says lastmod should move only when a page's content materially changes, and on park and coaster pages the only date shown is "last checked".
+
+**Change (commit 99ec158d):** `_build/build.py` gains `iso_day()`, and park guide pages (`_build/parkguide.py`) and coaster pages now pass `modified=iso_day(p["checked"])`, never earlier than launch. 712 sitemap URLs moved to their real date (11 Nov 117 parks, 12 Nov 13, 13 Nov Six Flags Fiesta Texas, 14 Nov 7, 15 Nov Phantasialand and its 7 coasters). Hubs, guides and legal pages keep 2026-11-10. No HTML changed.
+
+Validator: 1,874 files, 0 issues. Live sitemap and sample URLs HTTP 200 after the Pages deploy. IndexNow: sitemap.xml only (the page content itself did not change today; batch 19 already pinged 1,761 URLs this morning), HTTP 200.
