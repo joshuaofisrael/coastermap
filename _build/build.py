@@ -306,15 +306,18 @@ def coaster_page(c):
     h = c["hr"]
     lab, isent = intensity(c)
     answer = []
-    if h: answer.append(f'<strong>Height requirement: {hs(h)}</strong>' + (f', or {rngs(h)} with a companion' if h.get("acc_min") else ""))
+    if h: answer.append(f'<strong>Height requirement: {hs(h)}</strong>' + (f', or {rngs(h)} with {E(p.get("companion") or "a companion")}' if h.get("acc_min") else "") + (f', maximum {hs(h, "max")}' if h.get("max") else ""))
     if c["speed"]: answer.append(f'top speed {mph(c["speed"])}')
     if c["height"]: answer.append(f'{ft(c["height"])} tall')
     if c["inversions"] is not None: answer.append(f'{c["inversions"]} inversion{"s" if c["inversions"] != 1 else ""}')
     if year(c): answer.append(f'opened {year(c)}')
     rows = "".join(f'<tr><th scope="row">{E(k)}</th><td>{E(v)}</td></tr>' for k, v in stat_rows(c))
     faqs = faq_items(c)
-    siblings = [x for x in p["coasters"] if x is not c]
-    sib = "".join(f'<li><a href="{coaster_path(x)}">{E(x["name"])}</a>' + (f' <span class="muted">({hshort(x["hr"])})</span>' if x["hr"] else "") + '</li>' for x in siblings)
+    siblings = sorted([x for x in p["coasters"] if x is not c], key=lambda x: (0, hin(x["hr"]), x["name"]) if x["hr"] else (1, 0, x["name"]))
+    def sibrule(x):
+        r = x["hr"]
+        return hshort(r) + (f'; {hshort(r, "acc_min")} with {"an adult" if p.get("companion") == "an adult" else "a companion"}' if r.get("acc_min") else "") + (f'; max {hshort(r, "max")}' if r.get("max") else "")
+    sib = "".join(f'<li><a href="{coaster_path(x)}">{E(x["name"])}</a>' + (f' <span class="muted">({E(sibrule(x))})</span>' if x["hr"] else "") + '</li>' for x in siblings)
     srcs = [f'<li>{rcdb_link(c)}: stats, opening date, manufacturer, type and map position.</li>']
     if h: srcs.append(f'<li>{src_link(h["src"])}: height requirement' + (", thrill rating" if h.get("thrill") else "") + f' (checked {c["checked"]}).</li>')
     srcs.append(f'<li><a href="{p["official"]}" rel="nofollow noopener" target="_blank">{E(p["name"])} official site</a>: hours, closures and current ride rules.</li>')
@@ -337,10 +340,13 @@ def coaster_page(c):
 <section aria-labelledby="tips-h"><h2 id="tips-h">Before you ride {E(c["name"])}</h2><ul>{before_ride(c)}</ul>
 <p>Planning for a child? The <a href="/height-checker/">ride height checker</a> shows every coaster they can ride at {E(p["short"])}.</p></section>
 {faq_html(faqs)}
-<section aria-labelledby="more-h"><h2 id="more-h">More coasters at {E(p["name"]) if siblings else E(p["group"])}</h2>{f'<ul class="cols">{sib}</ul>' if siblings else '<ul class="cols">' + "".join(f'<li><a href="{coaster_path(x)}">{E(x["name"])}</a> <span class="muted">({E(x["park_name"])}{", " + hshort(x["hr"]) if x["hr"] else ""})</span></li>' for x in ALL if park_of(x)["group"] == p["group"] and x is not c) + '</ul>'}<p><a href="/parks/{p["slug"]}/">See the full {E(p["name"])} coaster guide and map</a></p></section>
+<section aria-labelledby="more-h"><h2 id="more-h">More coasters at {E(p["name"]) if siblings else E(p["group"])}</h2>{(f'<p>Sorted by ride-alone height, with the lowest height allowed with {E(p.get("companion") or "a companion")} and any maximum from the official rules.</p>' if any(x["hr"] for x in siblings) else "") + f'<ul class="cols">{sib}</ul>' if siblings else '<ul class="cols">' + "".join(f'<li><a href="{coaster_path(x)}">{E(x["name"])}</a> <span class="muted">({E(x["park_name"])}{", " + hshort(x["hr"]) if x["hr"] else ""})</span></li>' for x in ALL if park_of(x)["group"] == p["group"] and x is not c) + '</ul>'}<p><a href="/parks/{p["slug"]}/">See the full {E(p["name"])} coaster guide and map</a></p></section>
 {related_html(c=c)}<section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ul>{srcs and "".join(srcs)}</ul><p class="note">Last checked {c["checked"]}. Found an error? <a href="/contact/">Tell us</a>.</p></section></article>'''
     dparts = [x for x in [h and f'height requirement {hshort(h)}', mph(c["speed"]) and "top speed " + mph(c["speed"]), ft(c["height"]) and ft(c["height"]) + " tall"] if x]
     desc = f'{c["name"]} at {p["name"]}' + (": " + ", ".join(dparts) if dparts else "") + ". How intense it is, best seat and who it suits."
+    if h and h.get("acc_min") and dparts:
+        d2 = desc.replace(f'height requirement {hshort(h)}', f'height requirement {hshort(h)} ({hshort(h, "acc_min")} with {p.get("companion") or "a companion"})', 1)
+        if len(d2) <= 158: desc = d2
     if sum(1 for x in ALL if x["name"] == c["name"]) > 1:  # same ride name at more than one park
         title = f'{c["name"]} at {p["short"]}: Height Requirement & Stats | {BRAND}'
         if len(title) > 70: title = f'{c["name"]} at {p["short"]}: Height & Stats | {BRAND}'

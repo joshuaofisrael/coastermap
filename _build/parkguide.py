@@ -51,7 +51,11 @@ def park_analysis(p):
         if c["make"]: mk[c["make"]] = mk.get(c["make"], 0) + 1
     if mk and n >= 3:
         m, k = max(mk.items(), key=lambda x: (x[1], x[0]))
-        if k >= 2: out.append(f'The most common builder is {E(m)}, with {k} of the coasters.')
+        def mlink(name):
+            mp = maker_path({"make": name})
+            return f'<a href="{mp[0]}">{E(name)}</a>' if mp else E(name)
+        rest = [x for x, _ in sorted(mk.items(), key=lambda x: (-x[1], x[0])) if x != m]
+        if k >= 2: out.append(f'The most common builder is {mlink(m)}, with {k} of the coasters' + (f'; the others come from {andlist(mlink(x) for x in rest)}.' if rest else '.'))
     old = min((c for c in cs if c["opened"]), key=lambda c: c["opened"], default=None)
     if old and n > 1: out.append(f'The longest-serving coaster in the lineup is <a href="{coaster_path(old)}">{E(old["name"])}</a>, which opened in {old["opened"][:4]}.')
     for key, word in (("height", "tallest"), ("speed", "fastest")):
@@ -63,6 +67,17 @@ def park_analysis(p):
     if any(c["hr"] and metric(c["hr"]) for c in cs):
         out.append(f'{E(p["name"])} publishes its height rules in centimetres. We show the official centimetre figure with an inch conversion, and every list on this page compares in centimetres, so a child exactly at the line counts as tall enough.')
     return out
+def cmline(h, k="min"): return h[k] if metric(h) else h[k] * 2.54
+def can_cm(c, X): h = c["hr"]; return bool(h) and cmline(h) <= X + 1e-9 and not (h.get("max") and cmline(h, "max") < X - 1e-9)
+def acc_cm(c, X): h = c["hr"]; return bool(h) and not can_cm(c, X) and bool(h.get("acc_min")) and cmline(h, "acc_min") <= X + 1e-9 <= cmline(h, "acc_max") + 1e-9
+def metric_park(p):
+    v = [c for c in p["coasters"] if c["hr"]]
+    return bool(v) and all(metric(c["hr"]) for c in v)
+def cm_lines(p):
+    # the park's own centimetre lines: every distinct ride-alone minimum and companion minimum it publishes
+    v = [c["hr"] for c in p["coasters"] if c["hr"]]
+    return sorted({h["min"] for h in v} | {h["acc_min"] for h in v if h.get("acc_min")})
+def compw(p): return p.get("companion") or "a companion"
 def ordinal(n): return f'{n}{"th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")}'
 
 def ladder(cs):
@@ -95,7 +110,17 @@ def park_page(p):
     if lowest and highest and lowest is not highest:
         lead += f' Height requirements run from <strong>{hs(lowest["hr"])}</strong> on <a href="{coaster_path(lowest)}">{E(lowest["name"])}</a> to <strong>{hs(highest["hr"])}</strong> on <a href="{coaster_path(highest)}">{E(highest["name"])}</a>.'
     elif lowest: lead += f' The height requirement is <strong>{hs(lowest["hr"])}</strong> on <a href="{coaster_path(lowest)}">{E(lowest["name"])}</a>.'
-    if ver and n > 1: lead += " Riding alone, a 42-inch (107 cm) child can ride " + f'{len(cnt[42])}, a 48-inch (122 cm) child {len(cnt[48])} and a 54-inch (137 cm) rider {len(cnt[54])} of them.'
+    MP = metric_park(p); CW = compw(p)
+    if ver and n > 1 and MP:
+        lb = []
+        for X in cm_lines(p):
+            a = sum(1 for c in cs if can_cm(c, X)); w = a + sum(1 for c in cs if acc_cm(c, X))
+            if a: lb.append(f'at {X} cm, {"all " + str(a) if a == len(ver) == n else str(a) + " alone"}' + (f' ({w} with {CW})' if w > a else ""))
+        if lb: lb[0] = lb[0].replace(" cm, ", " cm a child can ride ", 1) + (" coaster" if lb[0].endswith(" 1 alone") else ""); lead += " By the park's own centimetre lines: " + "; ".join(lb[:4]) + "."
+    elif ver and n > 1:
+        lead += " Riding alone, a 42-inch (107 cm) child can ride " + f'{len(cnt[42])}, a 48-inch (122 cm) child {len(cnt[48])} and a 54-inch (137 cm) rider {len(cnt[54])} of them.'
+        wa = sum(1 for c in cs if can_acc(c, 42))
+        if wa: lead += f' With {CW}, a 42-inch child can ride {wa} more.'
     # table of heights
     def hrow(c):
         h = c["hr"]
@@ -128,17 +153,23 @@ def park_page(p):
             bands += s + "</p>"; prev = {c["slug"] for c in ok}
         g = max(gains, key=lambda x: (x[0], -x[1]))
         if g[0]: bands = f'<p>At {PN} the biggest single step is reaching <strong>{hb(g[1])}</strong>, which opens up {pl(g[0], "more coaster")}' + (" than the height below" if g[1] != HEIGHTS[0] else "") + '. Measure at home in the shoes your child will wear, since parks measure at the ride entrance and a child even slightly under the line is turned away.</p>' + bands
+        if MP and len(cm_lines(p)) >= 2:
+            lk = lambda xs: andlist(f'<a href="{coaster_path(c)}">{E(c["name"])}</a>' for c in xs) if xs else "None"
+            rows = "".join(f'<tr><th scope="row">{X} cm (about {_n(X / 2.54)} in)</th><td>{lk([c for c in hsort if can_cm(c, X)])}</td><td>{lk([c for c in hsort if acc_cm(c, X)])}</td></tr>' for X in cm_lines(p))
+            bands += (f'<h3>By {PN}\'s own centimetre lines</h3><p>{PN} publishes its rules in centimetres, so these are the exact heights where the choice changes: each ride-alone minimum and each lowest height allowed with {E(CW)}. A child at or above a line can ride everything in that row.</p>'
+                      f'<div class="tablewrap"><table class="list"><thead><tr><th scope="col">Child\'s height</th><th scope="col">Can ride alone</th><th scope="col">Can ride with {E(CW)}</th></tr></thead><tbody>{rows}</tbody></table></div>')
+        bands += '<p>Comparing parks? See every coaster at every park we cover for ' + andlist(f'<a href="/guides/roller-coasters-for-{x}-inch-kids/">{x}-inch</a>' for x in GUIDE_HEIGHTS) + ' kids.</p>'
         maxs = [c for c in ver if c["hr"].get("max")]
         if maxs:
             kid = [c for c in maxs if c["scale"] in ("Kiddie", "Family")]; big = [c for c in maxs if c not in kid]
             ml = lambda xs: andlist(f'<a href="{coaster_path(c)}">{E(c["name"])}</a> (up to {hs(c["hr"], "max")})' for c in xs)
-            bands += "<h3>Maximum heights</h3><p>" + (f'{"A ride" if len(big) == 1 else "Some rides"} here also {"has" if len(big) == 1 else "have"} an official maximum height: ' + ml(big) + ". " if big else "") + (("Family and kiddie coasters with an upper limit: " if big else ("This family or kiddie coaster has an upper limit: " if len(kid) == 1 else "These family and kiddie coasters have an upper limit: ")) + ml(kid) + ". " if kid else "") + "Riders over the maximum are turned away because the restraints are sized for a range of body heights; the limit is about fit, not age.</p>"
+            bands += "<h3>Maximum heights</h3><p>" + (f'{"A ride" if len(big) == 1 else "Some rides"} here also {"has" if len(big) == 1 else "have"} an official maximum height: ' + ml(big) + ". " if big else "") + (("Family and kiddie coasters with an upper limit: " if big else ("This family or kiddie coaster has an upper limit: " if len(kid) == 1 else "These family and kiddie coasters have an upper limit: ")) + ml(kid) + ". " if kid else "") + "Riders over the maximum are turned away because the restraints are sized for a range of body heights; the limit is about fit, not age. More in <a href=\"/guides/can-you-be-too-tall-for-a-roller-coaster/\">can you be too tall for a roller coaster?</a></p>"
     accs = [c for c in ver if c["hr"].get("acc_min")]
     comp = ""
     if accs or notes:
-        comp = f'<section aria-labelledby="cmp-h"><h2 id="cmp-h">Companion rules at {PN}</h2><p>These are the rules {PN} states on its official pages for riding with a companion or other conditions. Who counts as a companion (age or height) is set by the park; check the linked source for the exact wording.</p><ul>'
-        comp += "".join(f'<li><a href="{coaster_path(c)}">{E(c["name"])}</a>: riders {rngs(c["hr"])} tall must ride with a companion.</li>' for c in accs)
-        comp += "".join(f'<li><a href="{coaster_path(c)}">{E(c["name"])}</a>: {E(c["hr"]["note"])}</li>' for c in notes if c not in accs) + "</ul></section>"
+        comp = f'<section aria-labelledby="cmp-h"><h2 id="cmp-h">Companion rules at {PN}</h2><p>These are the rules {PN} states on its official pages for riding with a companion or other conditions. ' + (f'On these pages the companion must be {E(CW)}.' if p.get("companion") else 'Who counts as a companion (age or height) is set by the park; check the linked source for the exact wording.') + '</p><ul>'
+        comp += "".join(f'<li><a href="{coaster_path(c)}">{E(c["name"])}</a>: riders {rngs(c["hr"])} tall must ride with {E(CW)}.</li>' for c in sorted(accs, key=lambda c: hin(c["hr"], "acc_min")))
+        comp += "".join(f'<li><a href="{coaster_path(c)}">{E(c["name"])}</a>: {E(c["hr"]["note"])}</li>' for c in notes if c not in accs) + "</ul>" + ('<p>Every park on our list that lets shorter children ride with an adult: <a href="/guides/roller-coasters-kids-can-ride-with-an-adult/">roller coasters kids can ride with an adult</a>.</p>' if accs else "") + "</section>"
     # intensity ranking
     rk = "".join(f'<li><a href="{coaster_path(c)}">{E(c["name"])}</a> <span class="muted">{E(ilabel(c))}' + (f' · {facts(c)}' if facts(c) else "") + "</span></li>" for c in ranked)
     rank_html = (f'<section aria-labelledby="rk-h"><h2 id="rk-h">{PN} roller coasters ranked, most intense first</h2>'
@@ -168,7 +199,12 @@ def park_page(p):
     if tall: faqs.append((f'What is the tallest roller coaster at {p["name"]}?', f'{tall["name"]}, at {ft(tall["height"])} tall (RCDB).'))
     if fast: faqs.append((f'What is the fastest roller coaster at {p["name"]}?', f'{fast["name"]}, with a top speed of {mph(fast["speed"])} (RCDB).'))
     if lad: faqs.append((f'What is the best coaster at {p["name"]} for first-timers?', f'{lad[0][1]["name"]} is the gentlest coaster here by our intensity ranking, with a {hs(lad[0][1]["hr"])} minimum height.'))
-    for th in (42, 48):
+    if MP and ver and n > 1:
+        L = [X for X in cm_lines(p) if any(can_cm(c, X) or acc_cm(c, X) for c in cs) and not all(can_cm(c, X) for c in ver)]
+        for X in sorted(sorted(L, key=lambda X: -sum(1 for c in cs if can_cm(c, X) or acc_cm(c, X)))[:2]):
+            ok = [c["name"] for c in hsort if can_cm(c, X)]; ac = [c["name"] for c in hsort if acc_cm(c, X)]
+            faqs.append((f'What can a {X} cm child ride at {p["name"]}?', (f'Riding alone, a {X} cm (about {_n(X / 2.54)} in) child meets the official minimum on: ' + ", ".join(ok).rstrip(".") + '.' if ok else f'No coaster here can be ridden alone at {X} cm.') + (f' With {CW} they can also ride ' + ", ".join(ac).rstrip(".") + "." if ac else "") + f' Source: official {p["name"]} ride pages, checked {p["checked"]}.'))
+    for th in (() if MP else (42, 48)):
         ok = [c["name"] for c in cnt[th]]
         if ver and n > 1: faqs.append((f'What can a {th}-inch child ride at {p["name"]}?', (f'Riding alone, a {th}-inch ({cm(th)} cm) child meets the official minimum on: ' + ", ".join(ok) + '.' if ok else f'No coaster here has a ride-alone minimum of {th} in or less.') + (" With a companion they can also ride " + ", ".join(c["name"] for c in cs if can_acc(c, th)) + "." if any(can_acc(c, th) for c in cs) else "")))
     mx = [c for c in ver if c["hr"].get("max")]
@@ -203,7 +239,8 @@ def park_page(p):
     desc = (f'Height requirements for all {n} roller coasters at {p["name"]}' if n > 1 else f'Height requirement for the roller coaster at {p["name"]}') + (f' (formerly {fm})' if fm else "")
     if n > 1:
         if ver and lowest is not highest: desc += f', {hs(lowest["hr"]).split(" (")[0]} to {hs(highest["hr"]).split(" (")[0]}'
-        bits = ["what 42 and 48-inch kids can ride"] + (["max heights"] if any(c["hr"].get("max") for c in ver) else []) + ["coasters ranked by intensity", "first-timer picks"]
+        L = [X for X in cm_lines(p) if any(can_cm(c, X) for c in cs)] if MP else []
+        bits = ([f'what {andlist(str(X) for X in L[:3])} cm kids can ride' if len(L) > 1 else "what kids can ride by height"] if MP else ["what 42 and 48-inch kids can ride"]) + (["max heights"] if any(c["hr"].get("max") for c in ver) else []) + ["coasters ranked by intensity", "first-timer picks"]
         out = []
         for b in bits:
             if len(desc + ": " + ", ".join(out + [b]) + ".") <= 158: out.append(b)
