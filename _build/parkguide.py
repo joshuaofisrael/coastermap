@@ -246,7 +246,7 @@ def park_page(p):
             if len(desc + ": " + ", ".join(out + [b]) + ".") <= 158: out.append(b)
         desc += (": " + ", ".join(out) + ".") if out else "."
     else: desc += ", with stats and who it suits."
-    write(path, page(path, title, desc, body, ld, [("/", "Home"), ("/parks/", "Parks"), (path, p["name"])]))
+    write(path, page(path, title, desc, body, ld, [("/", "Home"), ("/parks/", "Parks"), (path, p["name"])], modified=iso_day(p["checked"])))
 
 # ---------- coaster comparisons ----------
 def sim_dist(a, b):

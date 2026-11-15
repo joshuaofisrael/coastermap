@@ -19,6 +19,10 @@ ALL = [c for p in PARKS for c in p["coasters"]]
 PAGES = []  # (path, lastmod)
 
 def url(path): return BASE_URL + path.lstrip("/")
+def iso_day(d):
+    """Sitemap lastmod for park and coaster pages: the page's own "last checked" date (never earlier than launch)."""
+    v = datetime.datetime.strptime(d, "%d %b %Y").date().isoformat()
+    return max(v, TODAY)
 def write(path, content):
     fp = os.path.join(ROOT, path.lstrip("/"))
     if path.endswith("/"): fp = os.path.join(fp, "index.html")
@@ -362,7 +366,7 @@ def coaster_page(c):
            "containedInPlace": {"@type": "AmusementPark", "name": p["name"], "url": p["official"]},
            **({"geo": {"@type": "GeoCoordinates", "latitude": c["lat"], "longitude": c["lon"]}} if c["lat"] else {}),
            "publisher": {"@type": "Organization", "name": BRAND, "url": BASE_URL}}, faq_ld(faqs)]
-    write(path, page(path, title, desc, body, ld, [("/", "Home"), ("/parks/", "Parks"), (f'/parks/{p["slug"]}/', p["name"]), (path, c["name"])], LEAFLET_HEAD if c["lat"] else ""))
+    write(path, page(path, title, desc, body, ld, [("/", "Home"), ("/parks/", "Parks"), (f'/parks/{p["slug"]}/', p["name"]), (path, c["name"])], LEAFLET_HEAD if c["lat"] else "", modified=iso_day(c["checked"])))
 
 def coaster_table(cs, show_park=False):
     head = "<tr><th scope='col'>Coaster</th>" + ("<th scope='col'>Park</th>" if show_park else "") + "<th scope='col'>Min height</th><th scope='col'>Height</th><th scope='col'>Top speed</th><th scope='col'>Inversions</th><th scope='col'>Intensity</th><th scope='col'>Opened</th></tr>"
