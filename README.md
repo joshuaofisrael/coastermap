@@ -4,7 +4,7 @@ Roller coasters at the big theme parks, mapped and explained: height requirement
 
 - Repo: https://github.com/joshuaofisrael/coastermap  · Hosting: GitHub Pages, branch `main`, folder `/`, custom domain coastermap.com (CNAME file).
 - Build: `python3 _build/build.py` then `python3 _build/check.py` (JSON-LD, beacon, legal line, broken links, duplicate titles). Commit the built HTML.
-- Data (all in `_build/`):
+- Data (all in `_build/`). Optional park field `companion` (e.g. "an adult", only where every official page says so) changes companion wording on that park; metric parks get a cm-line table and cm FAQs (parkguide.py `cm_lines`).
   - `rcdb.json`: RCDB scrape (10 Nov 2026) for every park: operating coasters, stats, coordinates, former names. Scraper: `scrape_new.py` (park slug to RCDB id map in `NEW`; run `python3 scrape_new.py slug...`, caches raw pages in /workspace/coastermap-data/raw/).
   - `sf_heights.json`: sixflags.com heights for the original Cedar Point and Magic Mountain, keyed by ride name.
   - `sf_heights_new.json`: heights scraped by `sf_heights_new.py` from sixflags.com ride pages and Enchanted Parks ride pages (Worlds of Fun, Valleyfair, Michigan's Adventure, Mid America Adventure), keyed `park-slug|RCDB name`; `sf_extra_slugs.json` holds slug overrides. After a run, clear acc_min when it equals min.
@@ -31,4 +31,4 @@ Roller coasters at the big theme parks, mapped and explained: height requirement
 - Region guides: `STATES` and `COUNTRIES` in guides.py (built when at least 2 parks); `REGION` maps country to continent for the record leaders.
 - Detail modules (batch 11): `_build/details.py` parses the cached RCDB coaster pages (/workspace/coastermap-data/raw/) into `_build/rcdb_details.json` (element list with values, restraints, seating arrangement, capacity, designers, installer, relocations, former names with years, `train_note` when RCDB notes contradict the seat layout). Run it after every scrape. `_build/specs.py` (exec'd after coasterplus.py) turns that into the "Layout, trains and restraints" section (lift or launch, numbered element list with glossary links, trains table, relocations, first-timer fit, four same-maker picks) and extra FAQs (`detail_faqs`); riders per train is withheld when `train_note` is set.
 - `data.py` keeps one page per RCDB name per park (RCDB lists Nagashima's Double Wild Mouse twice under one name).
-- Counts (14 Nov 2026, after batch 18): 276 parks, 1,486 coasters (1,373 with an official height rule), 1,872 sitemap URLs. Height guides are listed in GUIDE_HEIGHTS (guides.py); the companion-rule guide is companion_guide(). Batch details and omitted rules: expansion-log.md.
+- Counts (15 Nov 2026, after batch 19, unchanged since batch 18): 276 parks, 1,486 coasters (1,373 with an official height rule), 1,872 sitemap URLs. Height guides are listed in GUIDE_HEIGHTS (guides.py); the companion-rule guide is companion_guide(). Batch details and omitted rules: expansion-log.md.
