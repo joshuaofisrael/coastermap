@@ -1011,3 +1011,13 @@ Totals (unchanged): 276 parks, 1,486 coasters (1,373 with an official height rul
 **Change (commit 99ec158d):** `_build/build.py` gains `iso_day()`, and park guide pages (`_build/parkguide.py`) and coaster pages now pass `modified=iso_day(p["checked"])`, never earlier than launch. 712 sitemap URLs moved to their real date (11 Nov 117 parks, 12 Nov 13, 13 Nov Six Flags Fiesta Texas, 14 Nov 7, 15 Nov Phantasialand and its 7 coasters). Hubs, guides and legal pages keep 2026-11-10. No HTML changed.
 
 Validator: 1,874 files, 0 issues. Live sitemap and sample URLs HTTP 200 after the Pages deploy. IndexNow: sitemap.xml only (the page content itself did not change today; batch 19 already pinged 1,761 URLs this morning), HTTP 200.
+
+## 16 Nov 2026 (central daily SEO run): Six Flags Over Texas re-verification (Fiesta Texas treatment)
+
+**Why:** the 16 Nov search pattern backlog puts Six Flags Over Texas first for the Fiesta Texas treatment (Fiesta Texas had 10 of 45 search visits in the 7 days to 16 Nov). The sitewide template improvements from batches 17 and 19 (max-height FAQ, thrill-level column, per-ride source lines, companion minimums in meta and sibling lists) already apply to this park, so the remaining step was the official rule re-check.
+
+**Change:** re-fetched all 13 sixflags.com/overtexas ride pages on 16 Nov 2026. Every stored rule matched: Judge Roy Scream 48 in; Runaway Mine Train 48; Runaway Mountain 48; Mini Mine Train 42 (36 with a companion); Mr. Freeze 54; Batman The Ride 54; Titan 48; Wile E. Coyote's Grand Canyon Blaster 42 (36 with a companion); Pandemonium 47 (42 with a companion); New Texas Giant 48; The Joker 48, max 77; Aquaman: Power Wave 48; Tormenta Rampaging Run 48, max 78. Thrill levels unchanged. RCDB (https://rcdb.com/4531.htm, re-fetched 16 Nov) still lists the same 13 operating coasters (Shock Wave SBNO, not listed). The park's `checked` is now 16 Nov 2026, so the park page and its 13 coaster pages show the new verified date and their sitemap lastmod moves to 2026-11-16. No rule values changed; height checker data unchanged.
+
+Validator: 1,874 files, 0 issues. dup.py: median 0.35, pages over 0.6: 2, over 0.5: 56 (unchanged, cap holds).
+
+**Next:** SeaWorld San Antonio the same way, then Gold Reef City and Warner Bros Movie World.

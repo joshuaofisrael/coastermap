@@ -40,7 +40,7 @@ PARKS = [
  dict(slug="six-flags-great-adventure", name="Six Flags Great Adventure", short="Six Flags Great Adventure", loc="Jackson, New Jersey", state="NJ", country="US", official="https://www.sixflags.com/greatadventure", group="Six Flags"),
  # Added 10 Nov 2026 (expansion batch 2)
  dict(slug="six-flags-great-america", name="Six Flags Great America", short="Six Flags Great America", loc="Gurnee, Illinois", state="IL", country="US", official="https://www.sixflags.com/greatamerica", group="Six Flags"),
- dict(slug="six-flags-over-texas", name="Six Flags Over Texas", short="Six Flags Over Texas", loc="Arlington, Texas", state="TX", country="US", official="https://www.sixflags.com/overtexas", group="Six Flags"),
+ dict(slug="six-flags-over-texas", name="Six Flags Over Texas", short="Six Flags Over Texas", loc="Arlington, Texas", state="TX", country="US", official="https://www.sixflags.com/overtexas", group="Six Flags", checked="16 Nov 2026"),
  dict(slug="six-flags-over-georgia", name="Six Flags Over Georgia", short="Six Flags Over Georgia", loc="Austell, Georgia", state="GA", country="US", official="https://www.sixflags.com/overgeorgia", group="Six Flags"),
  dict(slug="carowinds", name="Carowinds", short="Carowinds", loc="Charlotte, North Carolina", state="NC", country="US", official="https://www.sixflags.com/carowinds", group="Six Flags (formerly Cedar Fair)"),
  dict(slug="kings-dominion", name="Kings Dominion", short="Kings Dominion", loc="Doswell, Virginia", state="VA", country="US", official="https://www.sixflags.com/kingsdominion", group="Six Flags (formerly Cedar Fair)"),
