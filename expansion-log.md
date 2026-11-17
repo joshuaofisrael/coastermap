@@ -1021,3 +1021,13 @@ Validator: 1,874 files, 0 issues. Live sitemap and sample URLs HTTP 200 after th
 Validator: 1,874 files, 0 issues. dup.py: median 0.35, pages over 0.6: 2, over 0.5: 56 (unchanged, cap holds).
 
 **Next:** SeaWorld San Antonio the same way, then Gold Reef City and Warner Bros Movie World.
+
+## 17 Nov 2026 (central daily SEO run): SeaWorld San Antonio re-verification (Fiesta Texas treatment)
+
+**Why:** backlog item 1 of the 16 Nov search pattern list (Six Flags Over Texas done 16 Nov, SeaWorld San Antonio next).
+
+**Change:** re-fetched the official https://seaworld.com/san-antonio/rides/ page on 17 Nov 2026 (ride cards and the Quick Queue height list). Stored rules matched: Texas Stingray 46 in; Steel Eel 48; Wave Breaker: The Rescue Coaster 48; Journey to Atlantis 39; Great White 54; Barracuda Strike 42; Beach Rescue Racer 48 alone (38 to 48 with a supervising companion). **Correction:** Wave Breaker's ride card states "48” min. height and 77” max. height", so `max=77` was added (the page previously showed no maximum). RCDB (https://rcdb.com/4601.htm, re-fetched 17 Nov) still lists the same 7 operating coasters (Super Grover's Box Car Derby in storage, not listed). The park's `checked` is now 17 Nov 2026 (park page + 7 coaster pages, sitemap lastmod 2026-11-17). The max-height change also updates the too-tall guide, the 48 and 54-inch kid guides, the height checker and the quiz data. Steel Eel's "temporarily closed" note on the official page was not added (no closures by rule).
+
+Validator: 1,874 files, 0 issues. dup.py: median 0.35, pages over 0.6: 2, over 0.5: 56 (unchanged, cap holds).
+
+**Next:** Gold Reef City and Warner Bros Movie World quality pass.
