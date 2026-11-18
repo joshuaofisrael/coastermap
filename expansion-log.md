@@ -1043,3 +1043,9 @@ Validator: 1,874 files, 0 issues. dup.py: median 0.35, pages over 0.6: 2, over 0
 Validator: 1,874 files, 0 issues. dup.py/seo.py were not available in this environment (no `/workspace/audit/` present); no coaster-page prose changed (only "checked"/date tokens), so the duplicate-content profile from batch 19 (2 pairs over 0.6, 56 over 0.5) is unaffected.
 
 **Next:** Warner Bros Movie World, SeaWorld Orlando and the SeaWorld San Antonio/Busch Gardens Williamsburg re-checks once those sites stop challenge-walling automated requests.
+
+## 18 Nov 2026: Image Policy page added (global rule, all JI Ventures sites)
+
+Coaster Map had no image policy page (404). Added `/image-policy/`, stating plainly that the site currently uses no photographs or AI-generated images at all (only the original logo, favicon and Leaflet/OpenStreetMap maps, as the credits page already said), and that any future photo-style image will be labelled and will link its caption's Source to this page. It uses the same `page()` template as every other page (self-canonical, Cloudflare beacon, no GA4, matching how every existing Coaster Map page is built), carries the required legal line, and is linked in the site-wide footer between Disclaimer and Advertising disclosure. `_build/check.py`'s `LEGAL` set now includes `image-policy`.
+
+Validator: 1,875 files, 0 issues.

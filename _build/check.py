@@ -1,6 +1,6 @@
 import glob,re,json,os,sys,html
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LEGAL={'terms','privacy','disclaimer','copyright','ad-disclosure'}
+LEGAL={'terms','privacy','disclaimer','copyright','ad-disclosure','image-policy'}
 bad=0;titles={}
 files=[f for f in glob.glob(ROOT+'/**/*.html',recursive=True) if '/_build/' not in f]
 for f in files:

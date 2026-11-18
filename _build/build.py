@@ -14,6 +14,7 @@ SIGNUP_ENDPOINT = "https://coastermap-signups.joshofisrael.workers.dev/subscribe
 FORM_ENDPOINT = "https://formsubmit.co/4497ee41a1200e746e967998473d21da"
 LEGAL_LINE = "© 2026 Joshua Israel Ventures LLC. All rights reserved. Coaster Map is a trade name of Joshua Israel Ventures LLC, a Florida limited liability company."
 ADS_UPDATED = "2026-11-16"
+IMAGE_POLICY_ADDED = "2026-11-18"
 ADSENSE_HEAD = '<meta name="google-adsense-account" content="ca-pub-5681559774142917"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5681559774142917" crossorigin="anonymous"></script>'
 E = html.escape
 PARKS = load()
@@ -77,7 +78,7 @@ def page(path, title, desc, body, jsonld=None, crumbs=None, extra_head="", modif
 <main id="main" class="wrap">{bc}{body}<!-- ad-slot: below-content (reserved for future use; no ad code) -->{signup_box()}</main>
 <footer class="site"><div class="wrap"><p class="fbrand"><strong>{BRAND}</strong>: roller coasters at the big theme parks, mapped and explained with height requirements and stats from official park pages and the Roller Coaster DataBase. Not affiliated with any park. Ride rules change, so always check with the park.</p>
 <section class="contact-us" aria-labelledby="contact-us"><h2 id="contact-us">Contact us</h2><p>Corrections, questions or a park you want next? Use our <a href="/contact/">contact form</a>.</p></section>
-<p class="flinks"><a href="/about/">About</a> | <a href="/methodology/">Sources and methods</a> | <a href="/terms/">Terms of use</a> | <a href="/privacy/">Privacy</a> | <a href="/disclaimer/">Disclaimer</a> | <a href="/ad-disclosure/">Advertising disclosure</a> | <a href="/copyright/">Copyright and DMCA</a> | <a href="/credits/">Credits</a> | <a href="/contact/">Contact</a></p>
+<p class="flinks"><a href="/about/">About</a> | <a href="/methodology/">Sources and methods</a> | <a href="/terms/">Terms of use</a> | <a href="/privacy/">Privacy</a> | <a href="/disclaimer/">Disclaimer</a> | <a href="/image-policy/">Image policy</a> | <a href="/ad-disclosure/">Advertising disclosure</a> | <a href="/copyright/">Copyright and DMCA</a> | <a href="/credits/">Credits</a> | <a href="/contact/">Contact</a></p>
 {f'<p class="legal-line">{LEGAL_LINE}</p>' if legal else ''}</div></footer>
 <script src="/assets/site.js?v=2" defer></script>{beacon}
 </body></html>'''
@@ -590,6 +591,11 @@ def about_legal():
 <h2>No safety or medical advice</h2><p>Nothing on this site is safety, medical or professional advice. Descriptions of intensity, "who it suits" and seat suggestions are general opinions to help planning. Riders with health conditions, pregnancy, injuries or other concerns should follow the park's posted warnings and consult a doctor.</p>
 <h2>Accuracy and corrections</h2><p>We cite our sources and leave out what we cannot verify, but errors can happen. Please <a href="/contact/">report errors</a> and we will correct verified mistakes promptly.</p>
 <h2>Limitation of liability</h2><p>To the extent permitted by law, Joshua Israel Ventures LLC is not liable for any loss or injury arising from reliance on this site. See our <a href="/terms/">terms of use</a>.</p>'''),
+    "/image-policy/": ("Image Policy", f'''<p>Last updated {date_h(IMAGE_POLICY_ADDED)}.</p>
+<h2>No ride photos or AI-generated images yet</h2><p>Coaster Map, a trade name of Joshua Israel Ventures LLC, does not currently use photographs, AI-generated photo-style images or any other illustrations of rides, parks or riders. The only graphics on the site are our own simple, original designs: the Coaster Map logo and favicon, and the interactive maps built with Leaflet and OpenStreetMap tiles, both credited on our <a href="/credits/">credits page</a>. None of these is a photograph or an AI-generated picture.</p>
+<h2>If photo-style images are added later</h2><p>If Coaster Map adds photo-style images in future, each one will say in its own caption what it is, for example an AI-generated illustration or a licensed or Creative Commons photograph with its source named, and the caption's Source link will point to this page. Where a specific photographer, artist or licence applies, we will also name it on our <a href="/credits/">credits page</a>. We will not use a real park's or ride's photograph without a licence or permission, and we will not generate or use an image that misrepresents a real ride, event or person as if it were a genuine photo.</p>
+<h2>Why this page exists</h2><p>Joshua Israel Ventures LLC keeps one image policy page per site it publishes, so visitors can see in one place how any image on the site was made or sourced. If you have a question about an image, use our <a href="/contact/">contact page</a>.</p>
+<h2>Related pages</h2><p>See also our <a href="/terms/">Terms of Use</a>, <a href="/privacy/">Privacy Policy</a>, <a href="/disclaimer/">Disclaimer</a> and <a href="/credits/">Credits</a>.</p>'''),
     "/copyright/": ("Copyright and DMCA Policy", f'''<p>Last updated {date_h(TODAY)}. Original text, design, data compilations and graphics on Coaster Map are owned by Joshua Israel Ventures LLC. Facts such as ride statistics are cited to their sources. The site uses no ride photos at launch; any future images will be our own, licensed or properly credited.</p>
 <h2>Reporting infringement</h2><p>If you believe material on this site infringes your copyright, send a notice through our <a href="/contact/">contact form</a> with: (1) your name and contact details; (2) a description of the copyrighted work; (3) the URL of the material on our site; (4) a statement that you have a good-faith belief the use is not authorised by the owner, its agent or the law; (5) a statement, under penalty of perjury, that the information is accurate and you are the owner or authorised to act for the owner; and (6) your physical or electronic signature. We will review notices promptly and remove or disable material where appropriate.</p>
 <h2>Counter-notice</h2><p>If material you provided was removed and you believe this was a mistake, you may send a counter-notice through the contact form with the details required by 17 U.S.C. § 512(g).</p>
@@ -600,7 +606,7 @@ def about_legal():
 <h2>Editorial independence</h2><p>Stats come from RCDB and height rules from official park sources, as described on our <a href="/methodology/">sources and methods</a> page. Intensity labels, seat tips and "who it suits" notes are our own editorial guidance, written the same way for every coaster whatever its park.</p>
 <p>No park, operator or ride manufacturer pays for coverage on Coaster Map. Questions: use our <a href="/contact/">contact form</a>.</p>'''),
     }
-    legal_mod = {"/privacy/": ADS_UPDATED, "/ad-disclosure/": ADS_UPDATED}
+    legal_mod = {"/privacy/": ADS_UPDATED, "/ad-disclosure/": ADS_UPDATED, "/image-policy/": IMAGE_POLICY_ADDED}
     for pth, (t, inner) in legal.items():
         body = f'<article class="prose"><h1>{E(t)}</h1>{inner}{L()}</article>'
         write(pth, page(pth, f"{t} | {BRAND}", f"{t} for Coaster Map (coastermap.com), the independent guide to theme park roller coasters.", body, None, [("/", "Home"), (pth, t)], legal=False, modified=legal_mod.get(pth, TODAY)))
