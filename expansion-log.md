@@ -1031,3 +1031,15 @@ Validator: 1,874 files, 0 issues. dup.py: median 0.35, pages over 0.6: 2, over 0
 Validator: 1,874 files, 0 issues. dup.py: median 0.35, pages over 0.6: 2, over 0.5: 56 (unchanged, cap holds).
 
 **Next:** Gold Reef City and Warner Bros Movie World quality pass.
+
+## 18 Nov 2026 (central daily SEO run): Gold Reef City re-verification (Fiesta Texas treatment)
+
+**Why:** backlog item from 16 and 17 Nov (Gold Reef City and Warner Bros Movie World next). The 16 Nov search pattern file lists Gold Reef City as a Google-visit winner (3 of 45 search visits in the 7 days to 16 Nov), so this batch gives it the same official re-check already done for Fiesta Texas, Six Flags Over Texas and SeaWorld San Antonio.
+
+**Change:** re-fetched the five official Gold Reef City ride pages on tsogosun.com on 18 Nov 2026 (each ride now has its own page, linked from the park's main page). All five stored rules matched the "Height Restriction" line on each page: Golden Loop, Anaconda, Jozi Express, Tower of Terror and Run A Way Mine Train (listed as "Runaway Train") are all "1.3m and above" (130 cm). RCDB (https://rcdb.com/4957.htm) still lists the same 6 operating coasters. The park's `checked` is now 18 Nov 2026 (park page + 5 coaster pages with a height rule; Shongololo has none, see below), so the sitemap lastmod for those 7 URLs moves to 2026-11-18.
+- **Found but not added:** Shongololo's official page gives a companion rule, not a ride-alone minimum ("Kids under 1m must be accompanied by an adult"), with no stated lower height for riding with a companion. The site's height model needs both a ride-alone minimum and a companion floor to show a companion range, and inventing the missing floor would not be a verified fact, so Shongololo is left with no height rule, same as before.
+- **Tried and skipped:** Warner Bros Movie World (the other half of this backlog item) returned HTTP 403 again today; not bypassed, matching the known block in the README. SeaWorld Orlando and SeaWorld San Antonio's own re-check queue item were also tried (same United Parks & Resorts chain, Florida/Texas search traffic) but seaworld.com and buschgardens.com both served a Cloudflare "Just a moment..." challenge page today; left for a day the challenge is not showing.
+
+Validator: 1,874 files, 0 issues. dup.py/seo.py were not available in this environment (no `/workspace/audit/` present); no coaster-page prose changed (only "checked"/date tokens), so the duplicate-content profile from batch 19 (2 pairs over 0.6, 56 over 0.5) is unaffected.
+
+**Next:** Warner Bros Movie World, SeaWorld Orlando and the SeaWorld San Antonio/Busch Gardens Williamsburg re-checks once those sites stop challenge-walling automated requests.

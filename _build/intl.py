@@ -1385,7 +1385,7 @@ HP_B13f = {
 HP_INTL.update(HP_B13f)
 INTL_PARKS += [
  dict(slug="rainbows-end", name="Rainbow's End", short="Rainbow's End", loc="Auckland, New Zealand", state="Auckland", country="NZ", official="https://rainbowsend.co.nz/", group="Rainbow's End", checked=_C),
- dict(slug="gold-reef-city", name="Gold Reef City", short="Gold Reef City", loc="Johannesburg, South Africa", state="Gauteng", country="ZA", official="https://www.tsogosun.com/casino/gold-reef-city-theme-park/", group="Tsogo Sun", checked=_C),
+ dict(slug="gold-reef-city", name="Gold Reef City", short="Gold Reef City", loc="Johannesburg, South Africa", state="Gauteng", country="ZA", official="https://www.tsogosun.com/casino/gold-reef-city-theme-park/", group="Tsogo Sun", checked="18 Nov 2026"),
  dict(slug="parque-de-la-costa", name="Parque de la Costa", short="Parque de la Costa", loc="Tigre, Argentina", state="Buenos Aires", country="AR", official="https://www.parquedelacosta.com.ar/", group="Parque de la Costa", checked=_C),
  dict(slug="star-city", name="Star City", short="Star City", loc="Pasay, Philippines", state="Metro Manila", country="PH", official="https://starcity.com.ph/", group="Star City", checked=_C),
 ]
