@@ -10,58 +10,110 @@ def mphk(v): return f"{mph(v)} ({kmh(v)})" if v else "n/a"
 def byline(d=None): return f'<p class="byline">By the {BRAND} editorial team · Last verified {d or CHECKED} · <a href="/methodology/">How we verify</a></p>'
 def clink(c, park=True): return f'<a href="{coaster_path(c)}">{E(c["name"])}</a>' + (f' <span class="muted">({E(pk(c)["name"])})</span>' if park else "")
 def hreq(c): return hs(c["hr"]) if c["hr"] else "not verified"
-def article_ld(path, title, desc):
-    return {"@context": "https://schema.org", "@type": "Article", "headline": title.split(" | ")[0], "description": desc, "url": url(path), "dateModified": TODAY,
+def article_ld(path, title, desc, published=None, modified=None):
+    pub = published or TODAY; mod = modified or pub
+    return {"@context": "https://schema.org", "@type": "Article", "headline": title.split(" | ")[0], "description": desc, "url": url(path),
+            "datePublished": pub, "dateModified": mod,
             "author": {"@type": "Organization", "name": f"{BRAND} editorial team", "url": url("/about/")}, "publisher": {"@type": "Organization", "name": BRAND, "url": BASE_URL, "logo": {"@type": "ImageObject", "url": url("/logo.png")}}}
 def itemlist_ld(name, cs):
     return {"@context": "https://schema.org", "@type": "ItemList", "name": name, "numberOfItems": len(cs),
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": url(coaster_path(c)), "name": c["name"]} for i, c in enumerate(cs)]}
-def guide(path, title, desc, h1, body_html, faqs, group, blurb, cs_for_list=None, related=()):
+def guide(path, title, desc, h1, body_html, faqs, group, blurb, cs_for_list=None, related=(), modified=None, published=None):
     if len(title) > 70: raise SystemExit("title too long: " + title)
-    rel = "".join(f'<li><a href="{u}">{E(t)}</a></li>' for u, t in related)
+    mod = modified or TODAY; pub = published or TODAY
+    rel_items = []
+    for item in related:
+        u, t = item[0], item[1]
+        lab = item[2] if len(item) > 2 else None
+        rel_items.append((u, t, lab) if lab else (u, t))
     body = (f'<article class="guide"><h1>{E(h1)}</h1>{byline()}{body_html}{faq_html(faqs)}'
-            + (f'<section aria-labelledby="rel-h"><h2 id="rel-h">Related guides</h2><ul class="cols">{rel}</ul></section>' if rel else "")
+            + (related_reads(rel_items, heading="Related guides", hid="rel-h") if rel_items else "")
             + f'<section class="sources"><h2>How this guide is built</h2><p>Everything on this page is generated from the facts on Coaster Map: height requirements from each park\'s official page and ride statistics from the <a href="https://rcdb.com/" rel="nofollow noopener" target="_blank">Roller Coaster DataBase</a>, last verified {CHECKED}. It covers the {len(PARKS)} parks we document, not every coaster in the world. Each coaster page links its sources. See <a href="/methodology/">sources and methods</a>.</p></section></article>')
-    ld = [article_ld(path, title, desc), faq_ld(faqs)] + ([itemlist_ld(h1, cs_for_list)] if cs_for_list else [])
-    write(path, page(path, title, desc, body, ld, [("/", "Home"), ("/guides/", "Guides"), (path, h1)]))
+    ld = [article_ld(path, title, desc, published=pub, modified=mod), faq_ld(faqs)] + ([itemlist_ld(h1, cs_for_list)] if cs_for_list else [])
+    write(path, page(path, title, desc, body, ld, [("/", "Home"), ("/guides/", "Guides"), (path, h1)], modified=mod))
     GUIDES.append((path, h1, blurb, group))
 
 # ---------- height guides ----------
 HEIGHTS = (36, 42, 48, 54)
-GUIDE_HEIGHTS = (36, 40, 42, 48, 54)  # 40 in guide added in batch 16; HEIGHTS (park bands, coaster pages) unchanged
+GUIDE_HEIGHTS = (36, 40, 42, 44, 48, 54)  # 44 in added 19 Nov 2026 (Disney/Six Flags threshold); HEIGHTS (park bands) unchanged
+def _alone_at(H):
+    return [c for c in ALL if c["hr"] and hin(c["hr"]) <= H + 1e-9 and not (c["hr"].get("max") and hin(c["hr"], "max") < H)]
 def height_guides():
     for H in GUIDE_HEIGHTS:
         path = f"/guides/roller-coasters-for-{H}-inch-kids/"
-        alone = [c for c in ALL if c["hr"] and hin(c["hr"]) <= H + 1e-9 and not (c["hr"].get("max") and hin(c["hr"], "max") < H)]
+        alone = _alone_at(H)
         comp = [c for c in ALL if c["hr"] and c["hr"].get("acc_min") and hin(c["hr"], "acc_min") <= H + 1e-9 < hin(c["hr"]) + 1e-9 and hin(c["hr"]) > H + 1e-9]
         soon = sorted([c for c in ALL if c["hr"] and H + 1e-9 < hin(c["hr"]) <= H + 2 + 1e-9 and c not in comp], key=lambda c: hin(c["hr"]))
         byp = {}
         for c in alone: byp.setdefault(c["park"], []).append(c)
+        park_rows = sorted(((p, byp[p["slug"]]) for p in PARKS if p["slug"] in byp), key=lambda x: (-len(x[1]), x[0]["name"]))
+        top_tbl = "".join(f'<tr><th scope="row"><a href="/parks/{p["slug"]}/">{E(p["name"])}</a></th><td>{len(cs)}</td></tr>' for p, cs in park_rows[:20])
         sec = ""
-        for p in PARKS:
-            cs = sorted(byp.get(p["slug"], []), key=lambda c: -(c["height"] or 0))
-            if cs: sec += f'<h3><a href="/parks/{p["slug"]}/">{E(p["name"])}</a> ({len(cs)})</h3><ul>' + "".join(f'<li>{clink(c, False)}: minimum {hshort(c["hr"])}' + (f' (maximum {hshort(c["hr"], "max")})' if c["hr"].get("max") else "") + '</li>' for c in cs) + "</ul>"
+        for p, cs in ((p, sorted(cs, key=lambda c: -(c["height"] or 0))) for p, cs in park_rows):
+            sec += f'<h3><a href="/parks/{p["slug"]}/">{E(p["name"])}</a> ({len(cs)})</h3><ul>' + "".join(f'<li>{clink(c, False)}: minimum {hshort(c["hr"])}' + (f' (maximum {hshort(c["hr"], "max")})' if c["hr"].get("max") else "") + '</li>' for c in cs) + "</ul>"
         compl = "".join(f'<li>{clink(c)}: {rngs(c["hr"])} with a companion, {hs(c["hr"])} alone</li>' for c in sorted(comp, key=lambda c: (pk(c)["name"], c["name"])))
         soonl = "".join(f'<li>{clink(c)}: {hs(c["hr"])}</li>' for c in soon[:30])
         biggest = max(alone, key=lambda c: c["height"] or 0, default=None)
         fastest = max(alone, key=lambda c: c["speed"] or 0, default=None)
         parks_n = len(byp)
         cmH = round(H * 2.54)
-        intro = f'''<p class="answer">A child who is <strong>{H} inches ({cmH} cm)</strong> tall meets the ride-alone height on <strong>{len(alone)} of the {sum(1 for c in ALL if c["hr"])} coasters</strong> with a verified height rule on Coaster Map, across {parks_n} parks. A further {len(comp)} can be ridden with a companion. The lists below are grouped by park.</p>
+        nrule = sum(1 for c in ALL if c["hr"])
+        # Compare steps that matter next to this height (always include 46 when framing 44)
+        compare_hs = sorted(set([x for x in GUIDE_HEIGHTS if abs(x - H) <= 6] + ([46] if H == 44 else [])))
+        cmp_rows = ""
+        prev = None
+        for x in compare_hs:
+            n = len(_alone_at(x))
+            gained = "" if prev is None else f"+{n - prev} from {compare_hs[compare_hs.index(x) - 1]} in"
+            cmp_rows += f'<tr><th scope="row">{x} in ({round(x * 2.54)} cm)</th><td>{n}</td><td>{E(gained) if gained else "this page" if x == H else ""}</td></tr>'
+            prev = n
+        intro = f'''<p class="answer">A child who is <strong>{H} inches ({cmH} cm)</strong> tall meets the ride-alone height on <strong>{len(alone)} of the {nrule} coasters</strong> with a verified height rule on Coaster Map, across {parks_n} parks. A further {len(comp)} can be ridden with a companion. The lists below are grouped by park.</p>
 <p>Height rules are set by each park and the ride's manufacturer, based on how the restraint fits and the forces on the ride, not on age or bravery. A child exactly at the posted minimum can ride; a child even slightly under it will be turned away at the measuring post, so it is worth measuring at home in the shoes they will wear. Parks outside North America publish their rules in centimetres. We compare against the official centimetre figure, which is why a ride listed at 107 cm does not appear on the 42-inch list (42 inches is 106.7 cm).</p>'''
         if biggest: intro += f'<p>At {H} inches the tallest coaster on the list is {clink(biggest)} at {ftm(biggest["height"])}' + (f', and the fastest is {clink(fastest)} at {mphk(fastest["speed"])}.' if fastest and fastest is not biggest else '.') + '</p>'
-        body = intro + f'<section aria-labelledby="alone-h"><h2 id="alone-h">Coasters a {H}-inch rider can ride alone</h2>{sec or "<p>None of the coasters we cover allow riders this short to ride alone.</p>"}</section>'
+        if H == 44:
+            exact44 = [c for c in alone if c["hr"] and not metric(c["hr"]) and c["hr"]["min"] == 44]
+            disney44 = [c for c in exact44 if "Disney" in pk(c)["group"] or pk(c)["slug"] in ("magic-kingdom", "disneys-animal-kingdom", "epcot", "disneys-hollywood-studios", "disneyland", "disney-california-adventure", "hong-kong-disneyland", "tokyo-disneyland", "tokyo-disneysea", "disneyland-paris", "walt-disney-studios-park")]
+            intro += ('<p>Forty-four inches is a common official ride-alone line in its own right, not just a midpoint between the 42 and 48 inch guides. '
+                      f'On Coaster Map, {len(exact44)} coasters publish an exact 44 in minimum'
+                      + (f', including {andlist(clink(c) for c in disney44[:4])}' if disney44 else "")
+                      + '. A 42-inch rider is still short of those posts; a 44-inch rider clears them.</p>')
+        mid_rel = related_reads([
+            (f"/guides/roller-coasters-for-{x}-inch-kids/", f"Coasters for {x}-inch kids", f'{x}"')
+            for x in GUIDE_HEIGHTS if x != H
+        ][:2] + [
+            ("/height-checker/", "Ride height checker", "Check"),
+            ("/guides/roller-coasters-kids-can-ride-with-an-adult/", "Ride with a companion", "With"),
+        ], heading="Compare nearby heights", hid=f"mid-{H}-h")
+        body = intro + check_another_box(current=H) + mid_rel
+        body += (f'<section aria-labelledby="cmp-h"><h2 id="cmp-h">How the list grows from nearby heights</h2>'
+                 f'<p>Ride-alone counts on Coaster Map at heights around {H} inches (official centimetre rules converted for comparison):</p>'
+                 f'<div class="tablewrap"><table class="list"><thead><tr><th scope="col">Rider height</th><th scope="col">Ride-alone coasters</th><th scope="col">Change</th></tr></thead><tbody>{cmp_rows}</tbody></table></div></section>')
+        if H == 44:
+            n46 = len(_alone_at(46)); n48 = len(_alone_at(48))
+            body += (f'<section aria-labelledby="next-h"><h2 id="next-h">What changes at 46 and 48 inches</h2>'
+                     f'<p>Growing two more inches to 46 in unlocks {n46 - len(alone)} further ride-alone coasters on our list (family woodies and mid-size steel rides such as several Woodstock Express clones and Texas Stingray). '
+                     f'Reaching the common 48 in (122 cm) line is the bigger jump: {n48 - len(alone)} more ride-alone coasters than at 44 in, because many thrill coasters set their alone minimum at 48 in or 122 cm. '
+                     f'See the <a href="/guides/roller-coasters-for-48-inch-kids/">48-inch guide</a> for that full park-by-park list, or use the <a href="/height-checker/">height checker</a> for an exact height.</p></section>')
+        if top_tbl:
+            body += f'<section aria-labelledby="park-h"><h2 id="park-h">Parks with the most ride-alone options at {H} inches</h2><div class="tablewrap"><table class="list"><thead><tr><th scope="col">Park</th><th scope="col">Ride-alone coasters</th></tr></thead><tbody>{top_tbl}</tbody></table></div></section>'
+        body += f'<section aria-labelledby="alone-h"><h2 id="alone-h">Coasters a {H}-inch rider can ride alone</h2>{sec or "<p>None of the coasters we cover allow riders this short to ride alone.</p>"}</section>'
         if compl: body += f'<section aria-labelledby="comp-h"><h2 id="comp-h">Coasters a {H}-inch rider can ride with a companion</h2><p>These rides let shorter children ride if an older companion rides with them. The companion\'s minimum age differs by park and is given on each coaster page.</p><ul>{compl}</ul></section>'
         if soonl: body += f'<section aria-labelledby="soon-h"><h2 id="soon-h">Just out of reach: up to 2 inches more</h2><p>Coasters whose ride-alone minimum is just above {H} inches (up to {H + 2} in, about {round((H + 2) * 2.54)} cm):</p><ul>{soonl}</ul></section>'
-        body += '<p>For a personal list by exact height, park and unit, use the <a href="/height-checker/">ride height checker</a>.</p>'
+        body += f'<p>For a personal list by exact height, park and unit, use the <a href="/height-checker/">ride height checker</a>, or download the <a href="{HEIGHTS_CSV}">official heights CSV</a>.</p>'
         faqs = [(f"How many roller coasters can a {H}-inch child ride?", f"On Coaster Map, a {H}-inch ({cmH} cm) rider meets the ride-alone minimum on {len(alone)} coasters and can ride {len(comp)} more with a companion, based on official park rules last verified {CHECKED}."),
                 ("Do kids get measured with shoes on?", "Yes, parks measure guests as they arrive at the ride, normally in the shoes they are wearing. Thick soles or hairstyles that add height may be checked, and staff have the final say."),
                 ("Can a child ride if they are just under the height?", "No. The posted minimum is a safety limit tied to how the restraint fits, so ride staff do not make exceptions. Some family coasters offer a lower limit when riding with a companion; those are listed separately above.")]
+        if H == 44:
+            faqs.append(("Is 44 inches different from 42 or 48 inches for roller coasters?", f"Yes. A 44-inch rider clears {len(alone) - len(_alone_at(42))} more ride-alone coasters on Coaster Map than at 42 inches, including rides whose official minimum is exactly 44 in, but is still short of the {len(_alone_at(48)) - len(alone)} further coasters that open at the common 48 in line."))
         if biggest: faqs.append((f"What is the biggest coaster a {H}-inch child can ride?", f"By height, {biggest['name']} at {pk(biggest)['name']}, which is {ft(biggest['height'])} tall (RCDB) with a ride-alone minimum of {hshort(biggest['hr'])}."))
         title = f"Roller Coasters a {H}-Inch ({cmH} cm) Child Can Ride | {BRAND}"
         desc = f"Every coaster a {H}-inch ({cmH} cm) child can ride alone or with a companion at {parks_n} theme parks, from official height rules."
-        rel = [(f"/guides/roller-coasters-for-{x}-inch-kids/", f"Coasters for {x}-inch kids") for x in GUIDE_HEIGHTS if x != H] + [("/guides/roller-coasters-kids-can-ride-with-an-adult/", "Coasters kids can ride with an adult"), ("/guides/best-first-roller-coasters/", "Best first roller coasters")]
-        guide(path, title, desc, f"Roller coasters a {H}-inch ({cmH} cm) child can ride", body, faqs, "By height", f"What a {H}-inch ({cmH} cm) rider can ride, park by park.", alone[:100] if len(alone) <= 100 else None, rel)
+        rel = [(f"/guides/roller-coasters-for-{x}-inch-kids/", f"Coasters for {x}-inch kids", f'{x}"') for x in GUIDE_HEIGHTS if x != H][:3]
+        rel += [("/guides/roller-coasters-kids-can-ride-with-an-adult/", "Coasters kids can ride with an adult", "With"),
+                ("/height-checker/", "Ride height checker", "Check"),
+                ("/guides/best-first-roller-coasters/", "Best first roller coasters", "1st")]
+        pub = BATCH if H == 44 else TODAY
+        guide(path, title, desc, f"Roller coasters a {H}-inch ({cmH} cm) child can ride", body, faqs, "By height", f"What a {H}-inch ({cmH} cm) rider can ride, park by park.", alone[:100] if len(alone) <= 100 else None, rel, modified=BATCH, published=pub)
 
 # ---------- record rankings ----------
 RANK = [
@@ -345,7 +397,7 @@ def companion_guide():
     guide("/guides/roller-coasters-kids-can-ride-with-an-adult/", f"Roller Coasters Kids Can Ride With an Adult | {BRAND}",
           f"All {len(cs)} roller coasters where a shorter child can ride with a companion, with the companion and ride-alone heights from official park rules.",
           "Roller coasters shorter kids can ride with an adult", body, faqs, "By height", "Companion height rules at every park.", None,
-          [("/guides/roller-coasters-for-36-inch-kids/", "Coasters for 36-inch kids"), ("/guides/roller-coasters-for-40-inch-kids/", "Coasters for 40-inch kids"), ("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids"), ("/guides/roller-coaster-height-requirements-explained/", "Height requirements explained"), ("/guides/best-first-roller-coasters/", "Best first roller coasters")])
+          [("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids", "42\""), ("/guides/roller-coasters-for-44-inch-kids/", "Coasters for 44-inch kids", "44\""), ("/guides/roller-coaster-height-requirements-explained/", "Height requirements explained", "How"), ("/height-checker/", "Ride height checker", "Check"), ("/guides/best-first-roller-coasters/", "Best first roller coasters", "1st")])
 
 def build_guides():
     height_guides(); companion_guide(); ranking_guides(); intense_guide(); first_timer_guide(); region_guides(); most_coasters_guide(); type_guides(); types_hub(); build_explainers(); guides_hub()

@@ -6,6 +6,7 @@ Not affiliated with any park. Ride rules change; confirm with the park.
 
 ## Tools
 - [Ride height checker](https://coastermap.com/height-checker/)
+- [Official height requirements CSV](https://coastermap.com/assets/official-coaster-height-requirements.csv)
 - [Coaster map](https://coastermap.com/map/)
 - [Which coaster should you ride? quiz](https://coastermap.com/quiz/)
 - [All coasters](https://coastermap.com/coasters/)

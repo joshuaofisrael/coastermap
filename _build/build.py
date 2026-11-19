@@ -7,6 +7,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_URL = "https://coastermap.com/"
 BRAND = "Coaster Map"
 TODAY = "2026-11-10"
+BATCH = "2026-11-19"  # sitemap lastmod for pages materially changed in today's SEO batch
 INDEXNOW_KEY = "fe204aafdcd4bf6d890c7776842749c0"
 CF_BEACON_TOKEN = "eac63f2b5dbc4539a2d95249baab6472"  # shared JI Ventures Analytics 2 token, requestHost match (both CF accounts at site limit)
 GSC_TOKEN = ""  # Search Console HTML tag content, optional (Domain property via DNS TXT preferred)
@@ -80,7 +81,7 @@ def page(path, title, desc, body, jsonld=None, crumbs=None, extra_head="", modif
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{canon}">
 <meta name="robots" content="{"noindex" if noindex else "index, follow, max-image-preview:large"}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="{BRAND}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{url('/og.png')}"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css?v=2">{gsc}{extra_head}{ldhtml}{ADSENSE_HEAD}{GA4_HEAD}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css?v=3">{gsc}{extra_head}{ldhtml}{ADSENSE_HEAD}{GA4_HEAD}
 </head><body><a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="wrap"><a class="brand" href="/">{LOGO}<span>{BRAND}</span></a><nav class="main" aria-label="Main">{nav}</nav></div></header>
 <main id="main" class="wrap">{bc}{body}<!-- ad-slot: below-content (reserved for future use; no ad code) -->{signup_box()}</main>
@@ -88,10 +89,77 @@ def page(path, title, desc, body, jsonld=None, crumbs=None, extra_head="", modif
 <section class="contact-us" aria-labelledby="contact-us"><h2 id="contact-us">Contact us</h2><p>Corrections, questions or a park you want next? Use our <a href="/contact/">contact form</a>.</p></section>
 <p class="flinks"><a href="/about/">About</a> | <a href="/methodology/">Sources and methods</a> | <a href="/terms/">Terms of use</a> | <a href="/privacy/">Privacy</a> | <a href="/disclaimer/">Disclaimer</a> | <a href="/image-policy/">Image policy</a> | <a href="/ad-disclosure/">Advertising disclosure</a> | <a href="/copyright/">Copyright and DMCA</a> | <a href="/credits/">Credits</a> | <a href="/contact/">Contact</a></p>
 {f'<p class="legal-line">{LEGAL_LINE}</p>' if legal else ''}</div></footer>
-<script src="/assets/site.js?v=2" defer></script>{beacon}
+<script src="/assets/site.js?v=3" defer></script>{beacon}
 </body></html>'''
 
 # ---------- helpers ----------
+HEIGHTS_CSV = "/assets/official-coaster-height-requirements.csv"
+def rel_thumb(label):
+    """Original SVG tile (not a photo) for related next-reads; site image policy forbids ride photos."""
+    lab = E((label or "?")[:6])
+    return (f'<span class="rel-thumb" aria-hidden="true">'
+            f'<svg viewBox="0 0 96 64" width="96" height="64" focusable="false">'
+            f'<rect width="96" height="64" rx="10" fill="#14213d"/>'
+            f'<path d="M10 46 C22 14, 34 14, 42 36 S58 58, 68 26 S82 20, 86 34" fill="none" stroke="#fca311" stroke-width="4" stroke-linecap="round"/>'
+            f'<circle cx="68" cy="26" r="4" fill="#b3001b"/>'
+            f'</svg><span class="rel-label">{lab}</span></span>')
+def related_reads(links, heading="Keep reading", hid="nr-h"):
+    """3-4 next-read links with brand SVG thumbnails (no photos)."""
+    links = list(links)[:4]
+    if not links: return ""
+    items = ""
+    for item in links:
+        u, t = item[0], item[1]
+        lab = item[2] if len(item) > 2 else (re.sub(r"[^A-Za-z0-9\"]+", "", t.split()[0])[:5] if t else "?")
+        items += f'<li><a href="{u}">{rel_thumb(lab)}<span class="rel-text">{E(t)}</span></a></li>'
+    return f'<section class="next-reads" aria-labelledby="{hid}"><h2 id="{hid}">{E(heading)}</h2><ul class="next-reads-list">{items}</ul></section>'
+def check_another_box(current=None, extra=()):
+    """Compare / check-another box for height lookup pages."""
+    heights = globals().get("GUIDE_HEIGHTS") or (36, 40, 42, 44, 48, 54)
+    opts = []
+    for H in heights:
+        label = f"{H}-inch kids"
+        href = f"/guides/roller-coasters-for-{H}-inch-kids/"
+        if current == H: opts.append(f'<strong aria-current="page">{E(label)}</strong>')
+        else: opts.append(f'<a href="{href}">{E(label)}</a>')
+    opts.append('<a href="/height-checker/">Exact height checker</a>')
+    for u, t in extra: opts.append(f'<a href="{u}">{E(t)}</a>')
+    return ('<aside class="check-another" aria-labelledby="ca-h"><h2 id="ca-h">Check another height</h2>'
+            '<p>Compare nearby lists, or enter an exact height in the checker:</p>'
+            f'<p class="ca-links">{" · ".join(opts)}</p></aside>')
+def cite_dataset_box():
+    return (f'<aside class="cite-box" aria-labelledby="cite-h"><h2 id="cite-h">Cite this dataset</h2>'
+            f'<p>Coaster Map editorial team. &ldquo;Official roller coaster height requirements.&rdquo; '
+            f'{BRAND}, compiled from each park&rsquo;s official ride pages, last verified {CHECKED}. '
+            f'<a href="{url("/height-checker/")}">{url("/height-checker/")}</a>. '
+            f'Download: <a href="{HEIGHTS_CSV}">CSV of every verified ride-alone and companion rule</a> '
+            f'(park, ride, heights, official source URL, last verified).</p>'
+            f'<p class="note">Please link the height checker or this CSV when you reuse the figures. Rules change; confirm with the park before you travel.</p></aside>')
+def write_heights_csv():
+    import csv
+    fp = os.path.join(ROOT, HEIGHTS_CSV.lstrip("/"))
+    os.makedirs(os.path.dirname(fp), exist_ok=True)
+    rows = []
+    for c in ALL:
+        h = c["hr"]
+        if not h: continue
+        unit = "cm" if metric(h) else "in"
+        src = h["src"][1] if h.get("src") else ""
+        p = park_of(c)
+        rows.append([
+            p["name"], c["name"],
+            h["min"], unit,
+            h["acc_min"] if h.get("acc_min") is not None else "",
+            h["acc_max"] if h.get("acc_max") is not None else "",
+            unit if h.get("acc_min") is not None else "",
+            src, c.get("checked") or p.get("checked") or CHECKED,
+        ])
+    rows.sort(key=lambda r: (r[0].lower(), r[1].lower()))
+    with open(fp, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["park", "ride", "ride_alone_height", "ride_alone_unit", "companion_min", "companion_max", "companion_unit", "official_source_url", "last_verified"])
+        w.writerows(rows)
+    return len(rows)
 def ft(v): return f"{v:,} ft" if isinstance(v, int) else (f"{v} ft" if v is not None else None)
 def mph(v): return f"{v} mph" if v is not None else None
 def cm(inches): return round(inches * 2.54)
@@ -456,21 +524,37 @@ def tool_data():
 
 def height_checker():
     opts = "".join(f'<option value="{p["slug"]}">{E(p["name"])}</option>' for p in PARKS)
+    mid = related_reads([
+        ("/guides/roller-coasters-for-44-inch-kids/", "Coasters a 44-inch child can ride", "44\""),
+        ("/guides/roller-coasters-for-48-inch-kids/", "Coasters a 48-inch child can ride", "48\""),
+        ("/guides/roller-coaster-height-requirements-explained/", "Height requirements explained", "How"),
+        ("/guides/roller-coasters-kids-can-ride-with-an-adult/", "Ride with a companion rules", "With"),
+    ], heading="Useful next reads", hid="hc-mid-h")
+    end = related_reads([
+        ("/guides/roller-coasters-for-42-inch-kids/", "Coasters a 42-inch child can ride", "42\""),
+        ("/guides/best-first-roller-coasters/", "Best first roller coasters", "1st"),
+        ("/guides/can-you-be-too-tall-for-a-roller-coaster/", "Can you be too tall?", "Max"),
+        ("/quiz/", "Which coaster should you ride?", "Quiz"),
+    ], heading="Keep exploring", hid="hc-end-h")
     body = f'''<h1>Ride height checker: which coasters can my child ride?</h1>
-<p class="answer">Enter your child's height and pick a park. We'll list every coaster they are tall enough for, the ones they can ride with a companion, and the ones to save for next year. Height rules come from official park pages, checked {CHECKED}.</p>
+<p class="answer">Enter your child's height and pick a park. We'll list every coaster they are tall enough for, the ones they can ride with a companion, and the ones to save for next year. Height rules come from official park pages, checked {CHECKED}. The same official figures are also available as a <a href="{HEIGHTS_CSV}">downloadable CSV</a> for citation.</p>
 <form id="hc" class="tool" onsubmit="return false"><div class="row"><label for="hc-h">Height</label><input id="hc-h" type="number" inputmode="decimal" min="20" max="250" step="0.5" required>
 <label for="hc-u" class="vh">Unit</label><select id="hc-u"><option value="in">inches</option><option value="cm">cm</option></select></div>
 <div class="row"><label for="hc-p">Park</label><select id="hc-p"><option value="">All parks</option>{opts}</select></div><button class="btn" type="submit">Check rides</button></form>
 <div id="hc-out" aria-live="polite"></div>
 <p class="note"><strong>Always confirm at the ride.</strong> Parks measure at the entrance, rules change, and a ride can refuse anyone for safety reasons. Coasters with no verified requirement are listed separately so you can ask the park.</p>
-<h2>How height requirements work</h2><p>Each coaster has a minimum height set by the park and the ride maker. Some family coasters let shorter children ride with a companion (an adult or older rider), and a few kiddie coasters also have a maximum height. Our checker uses only those official numbers.</p>
+{check_another_box()}
+{mid}
+<h2>How height requirements work</h2><p>Each coaster has a minimum height set by the park and the ride maker. Some family coasters let shorter children ride with a companion (an adult or older rider), and a few kiddie coasters also have a maximum height. Our checker uses only those official numbers. For the measuring rules and companion wording, see <a href="/guides/roller-coaster-height-requirements-explained/">height requirements explained</a>.</p>
+{cite_dataset_box()}
 <script type="application/json" id="coaster-data">{tool_data()}</script>'''
     faqs = [("Where is height checked?", "At the ride entrance, by the park's ride team. Rules on footwear and re-measuring vary by park, so ask the ride team if your child is close to the line."),
             ("Where do these height requirements come from?", f"From each park's official ride pages, ride guides or FAQs (for Universal Orlando parks, Visit Orlando's official coaster guide), all checked {CHECKED}. Each coaster page links its exact source, and our sources and methods page lists them all."),
             ("Does the checker work in centimetres?", "Yes. Choose cm or inches. Parks in Europe and Asia publish rules in centimetres, and the checker compares your child's height against that official centimetre figure, so a rider exactly at the line is shown as able to ride in either unit."),
-            ("What does ride with a companion mean?", "Some family coasters let a shorter child ride if an adult or older rider sits with them. The checker lists these separately, with the companion height range the park gives. Who counts as a companion (age or height) is set by each park.")]
-    body += faq_html(faqs)
-    write("/height-checker/", page("/height-checker/", f"Ride Height Checker: Coasters Your Child Can Ride | {BRAND}", "Enter your child's height in inches or cm and see which roller coasters they can ride at Disney, Universal, Six Flags, Cedar Point, Kings Island, SeaWorld, Busch Gardens, Hersheypark, Dollywood, Knott's and more.", body, [faq_ld(faqs), {"@context": "https://schema.org", "@type": "WebApplication", "name": "Coaster Map ride height checker", "applicationCategory": "TravelApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": url("/height-checker/")}], [("/", "Home"), ("/height-checker/", "Height checker")]))
+            ("What does ride with a companion mean?", "Some family coasters let a shorter child ride if an adult or older rider sits with them. The checker lists these separately, with the companion height range the park gives. Who counts as a companion (age or height) is set by each park."),
+            ("Can I download the height data?", f"Yes. The official height requirements CSV at {url(HEIGHTS_CSV)} lists every coaster we cover with a verified rule: park, ride, ride-alone height, companion range, official source URL and last verified date.")]
+    body += faq_html(faqs) + end
+    write("/height-checker/", page("/height-checker/", f"Ride Height Checker: Coasters Your Child Can Ride | {BRAND}", "Enter your child's height in inches or cm and see which roller coasters they can ride at Disney, Universal, Six Flags, Cedar Point, Kings Island, SeaWorld, Busch Gardens, Hersheypark, Dollywood, Knott's and more.", body, [faq_ld(faqs), {"@context": "https://schema.org", "@type": "WebApplication", "name": "Coaster Map ride height checker", "applicationCategory": "TravelApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": url("/height-checker/")}], [("/", "Home"), ("/height-checker/", "Height checker")], modified=BATCH))
 
 def quiz():
     opts = "".join(f'<option value="{p["slug"]}">{E(p["name"])}</option>' for p in PARKS)
@@ -512,9 +596,9 @@ def home():
 <div class="grid3"><section><h2>Tallest coasters</h2><ol>{li(tallest, lambda c: ft(c["height"]))}</ol></section>
 <section><h2>Fastest coasters</h2><ol>{li(fastest, lambda c: mph(c["speed"]))}</ol></section>
 <section><h2>Lowest height requirements</h2><ol>{li(kid, lambda c: hshort(c["hr"]))}</ol></section></div>
-<section><h2>Popular guides</h2><ul class="cols"><li><a href="/guides/roller-coasters-for-42-inch-kids/">Coasters for 42-inch kids</a></li><li><a href="/guides/roller-coasters-for-48-inch-kids/">Coasters for 48-inch kids</a></li><li><a href="/guides/best-first-roller-coasters/">Best first roller coasters</a></li><li><a href="/guides/tallest-roller-coasters/">Tallest roller coasters</a></li><li><a href="/guides/fastest-roller-coasters/">Fastest roller coasters</a></li><li><a href="/guides/most-intense-roller-coasters/">Most intense roller coasters</a></li><li><a href="/guides/roller-coaster-types/">Roller coaster types explained</a></li><li><a href="/guides/how-to-not-be-scared-of-roller-coasters/">How to not be scared of roller coasters</a></li><li><a href="/guides/best-seat-on-a-roller-coaster/">Best seat on a roller coaster</a></li><li><a href="/guides/world-record-roller-coasters/">World record roller coasters</a></li><li><a href="/guides/roller-coaster-manufacturers/">Roller coaster manufacturers</a></li><li><a href="/guides/roller-coaster-glossary/">Roller coaster glossary</a></li><li><a href="/guides/theme-parks-with-the-most-roller-coasters/">Theme parks with the most coasters</a></li><li><a href="/guides/">All guides</a></li></ul></section>
+<section><h2>Popular guides</h2><ul class="cols"><li><a href="/guides/roller-coasters-for-42-inch-kids/">Coasters for 42-inch kids</a></li><li><a href="/guides/roller-coasters-for-44-inch-kids/">Coasters for 44-inch kids</a></li><li><a href="/guides/roller-coasters-for-48-inch-kids/">Coasters for 48-inch kids</a></li><li><a href="/height-checker/">Ride height checker + CSV dataset</a></li><li><a href="/guides/best-first-roller-coasters/">Best first roller coasters</a></li><li><a href="/guides/tallest-roller-coasters/">Tallest roller coasters</a></li><li><a href="/guides/fastest-roller-coasters/">Fastest roller coasters</a></li><li><a href="/guides/most-intense-roller-coasters/">Most intense roller coasters</a></li><li><a href="/guides/roller-coaster-types/">Roller coaster types explained</a></li><li><a href="/guides/how-to-not-be-scared-of-roller-coasters/">How to not be scared of roller coasters</a></li><li><a href="/guides/best-seat-on-a-roller-coaster/">Best seat on a roller coaster</a></li><li><a href="/guides/world-record-roller-coasters/">World record roller coasters</a></li><li><a href="/guides/roller-coaster-manufacturers/">Roller coaster manufacturers</a></li><li><a href="/guides/roller-coaster-glossary/">Roller coaster glossary</a></li><li><a href="/guides/theme-parks-with-the-most-roller-coasters/">Theme parks with the most coasters</a></li><li><a href="/guides/">All guides</a></li></ul></section>
 <section><h2>How we check facts</h2><p>Every height requirement links to the park page it came from, and every stat links to its RCDB entry. If we can't verify a number, we leave it out rather than guess. Read our <a href="/methodology/">sources and methods</a>.</p></section>'''
-    write("/", page("/", f"{BRAND}: Roller Coaster Height Requirements, Stats & Maps", f"Height requirements, stats, intensity and best seats for {len(ALL)} roller coasters at Disney, Universal, Six Flags, Cedar Point, Kings Island, SeaWorld, Busch Gardens, Hersheypark, Dollywood, Knott's and more, with interactive park maps.", body))
+    write("/", page("/", f"{BRAND}: Roller Coaster Height Requirements, Stats & Maps", f"Height requirements, stats, intensity and best seats for {len(ALL)} roller coasters at Disney, Universal, Six Flags, Cedar Point, Kings Island, SeaWorld, Busch Gardens, Hersheypark, Dollywood, Knott's and more, with interactive park maps.", body, modified=BATCH))
 
 def simple(path, title, desc, h1, inner, crumbs_name=None, legal=False, noindex=False):
     body = f'<article class="prose"><h1>{E(h1)}</h1>{inner}' + (f'<p class="legal-line">{LEGAL_LINE}</p>' if legal else "") + "</article>"
@@ -633,7 +717,7 @@ def extras():
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{url(p)}</loc><lastmod>{m}</lastmod></url>\n" for p, m in PAGES) + "</urlset>\n"
     open(os.path.join(ROOT, "sitemap.xml"), "w").write(sm)
     llms = [f"# {BRAND}", "", f"> Coaster Map (coastermap.com) maps and describes the roller coasters at major theme parks: height requirements (from official park pages), stats (from RCDB), intensity, who each ride suits and seat guidance. {len(ALL)} coasters at {len(PARKS)} parks as of {CHECKED}.", "",
-            "Not affiliated with any park. Ride rules change; confirm with the park.", "", "## Tools", f"- [Ride height checker]({url('/height-checker/')})", f"- [Coaster map]({url('/map/')})", f"- [Which coaster should you ride? quiz]({url('/quiz/')})", f"- [All coasters]({url('/coasters/')})", f"- [Sources and methods]({url('/methodology/')})", "", "## Parks"]
+            "Not affiliated with any park. Ride rules change; confirm with the park.", "", "## Tools", f"- [Ride height checker]({url('/height-checker/')})", f"- [Official height requirements CSV]({url(HEIGHTS_CSV)})", f"- [Coaster map]({url('/map/')})", f"- [Which coaster should you ride? quiz]({url('/quiz/')})", f"- [All coasters]({url('/coasters/')})", f"- [Sources and methods]({url('/methodology/')})", "", "## Parks"]
     for p in PARKS:
         llms.append(f"- [{p['name']}]({url('/parks/' + p['slug'] + '/')}): {len(p['coasters'])} coasters")
         for c in p["coasters"]:
@@ -648,9 +732,10 @@ exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "coas
 exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "specs.py")).read(), "specs.py", "exec"))
 
 if __name__ == "__main__":
+    ncsv = write_heights_csv()
     build_guides()
     for p in PARKS:
         for c in p["coasters"]: coaster_page(c)
         park_page(p)
     parks_index(); all_coasters(); map_page(); height_checker(); quiz(); home(); about_legal(); not_found(); extras()
-    print(len(PAGES), "pages")
+    print(len(PAGES), "pages;", ncsv, "height CSV rows")
