@@ -16,6 +16,14 @@ LEGAL_LINE = "© 2026 Joshua Israel Ventures LLC. All rights reserved. Coaster M
 ADS_UPDATED = "2026-11-16"
 IMAGE_POLICY_ADDED = "2026-11-18"
 ADSENSE_HEAD = '<meta name="google-adsense-account" content="ca-pub-5681559774142917"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5681559774142917" crossorigin="anonymous"></script>'
+GA4_HEAD = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWQBJQ6YZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CWQBJQ6YZY');
+</script>"""
 E = html.escape
 PARKS = load()
 ALL = [c for p in PARKS for c in p["coasters"]]
@@ -72,7 +80,7 @@ def page(path, title, desc, body, jsonld=None, crumbs=None, extra_head="", modif
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{canon}">
 <meta name="robots" content="{"noindex" if noindex else "index, follow, max-image-preview:large"}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="{BRAND}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{url('/og.png')}"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css?v=2">{gsc}{extra_head}{ldhtml}{ADSENSE_HEAD}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css?v=2">{gsc}{extra_head}{ldhtml}{ADSENSE_HEAD}{GA4_HEAD}
 </head><body><a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="wrap"><a class="brand" href="/">{LOGO}<span>{BRAND}</span></a><nav class="main" aria-label="Main">{nav}</nav></div></header>
 <main id="main" class="wrap">{bc}{body}<!-- ad-slot: below-content (reserved for future use; no ad code) -->{signup_box()}</main>
