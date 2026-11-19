@@ -19,17 +19,23 @@ def clk(name, park=None, label=None):
     c = by_name(name, park); t = E(label or (c["name"] if c else name))
     return f'<a href="{coaster_path(c)}">{t}</a>' if c else t
 
-def qpage(slug, title, desc, h1, answer, body, faqs, blurb, sources=(), related=(), group="Questions", items=None):
+def qpage(slug, title, desc, h1, answer, body, faqs, blurb, sources=(), related=(), group="Questions", items=None, modified=None, published=None, mid_related=(), verified=None):
     path = f"/guides/{slug}/"
     if len(title) > 70: raise SystemExit("title too long: " + title)
-    rel = "".join(f'<li><a href="{u}">{E(t)}</a></li>' for u, t in related)
+    mod = modified or TODAY; pub = published or TODAY
+    rel_items = []
+    for item in related:
+        u, t = item[0], item[1]
+        lab = item[2] if len(item) > 2 else None
+        rel_items.append((u, t, lab) if lab else (u, t))
+    mid = related_reads(mid_related, heading="Keep reading", hid=f"mid-{slug}-h") if mid_related else ""
     src = "".join(f"<li>{src_link(s)}</li>" for s in sources)
-    html_ = (f'<article class="guide"><h1>{E(h1)}</h1>{byline()}<div class="answer" role="note"><p><strong>Quick answer:</strong> {answer}</p></div>{body}{faq_html(faqs)}'
-             + (f'<section aria-labelledby="rel-h"><h2 id="rel-h">Related guides</h2><ul class="cols">{rel}</ul></section>' if rel else "")
+    html_ = (f'<article class="guide"><h1>{E(h1)}</h1>{byline(verified)}<div class="answer" role="note"><p><strong>Quick answer:</strong> {answer}</p></div>{mid}{body}{faq_html(faqs)}'
+             + (related_reads(rel_items, heading="Related guides", hid="rel-h") if rel_items else "")
              + f'<section class="sources"><h2>Sources and how this page is built</h2><p>Coaster statistics come from the <a href="https://rcdb.com/" rel="nofollow noopener" target="_blank">Roller Coaster DataBase</a> and height rules from each park\'s official pages, as listed on each coaster page, last verified {CHECKED}. Explanations of how rides work are general engineering background written by the {BRAND} editorial team, not advice from any park or manufacturer. Always follow the signs at each ride and the instructions of ride staff.</p>'
              + (f"<ul>{src}</ul>" if src else "") + '<p>See <a href="/methodology/">sources and methods</a>.</p></section></article>')
-    ld = [article_ld(path, title, desc)] + ([faq_ld(faqs)] if faqs else []) + ([itemlist_ld(h1, items)] if items else [])
-    write(path, page(path, title, desc, html_, ld, [("/", "Home"), ("/guides/", "Guides"), (path, h1)]))
+    ld = [article_ld(path, title, desc, published=pub, modified=mod)] + ([faq_ld(faqs)] if faqs else []) + ([itemlist_ld(h1, items)] if items else [])
+    write(path, page(path, title, desc, html_, ld, [("/", "Home"), ("/guides/", "Guides"), (path, h1)], modified=mod))
     GUIDES.append((path, h1, blurb, group))
 
 def _hr_coasters(): return [c for c in ALL if c["hr"]]
@@ -224,14 +230,18 @@ def heights_explained_page():
 <h2>Ride-alone minimum vs companion range</h2><p>Many rides have two numbers. The ride-alone minimum is the height to ride without an adult; the lower companion range means the child can ride only with a supervising companion. Universal Orlando defines a Supervising Companion as "someone who is 14 years of age or older and meets all other attraction ridership requirements", for children under its 48 in (122 cm) ride-alone height. Of the {len(hr)} coasters on {BRAND} with a verified height rule, {acc} publish a companion range. Companion rules differ by park, so check each ride's page.</p>
 <h2>Why height requirements exist</h2><p>A rider has to be tall enough for the restraint to hold them properly and for their body to be braced against the ride's forces. Universal Orlando's guide says that for most rides you "must be able to independently maintain an upright position, and brace and support your torso, neck, and head while absorbing sudden and dramatic movements". That is why the number is fixed per ride, and why some rides also have a maximum height. See <a href="/guides/can-you-be-too-tall-for-a-roller-coaster/">can you be too tall for a roller coaster?</a></p>
 <h2>The most common height requirements</h2><p>Across the coasters we cover, the most common ride-alone minimums at parks that publish inches are {", ".join(f"{h} in ({n} coasters)" for h, n in inch)}. At parks that publish centimetres they are {", ".join(f"{h} cm ({n} coasters)" for h, n in cmc)}.</p>
-<h2>Height guides</h2><ul><li><a href="/guides/roller-coasters-for-36-inch-kids/">Coasters for 36-inch kids</a></li><li><a href="/guides/roller-coasters-for-40-inch-kids/">Coasters for 40-inch kids</a></li><li><a href="/guides/roller-coasters-for-42-inch-kids/">Coasters for 42-inch kids</a></li><li><a href="/guides/roller-coasters-for-48-inch-kids/">Coasters for 48-inch kids</a></li><li><a href="/guides/roller-coasters-for-54-inch-kids/">Coasters for 54-inch kids</a></li></ul>'''
+<h2>Height guides</h2><ul><li><a href="/guides/roller-coasters-for-36-inch-kids/">Coasters for 36-inch kids</a></li><li><a href="/guides/roller-coasters-for-40-inch-kids/">Coasters for 40-inch kids</a></li><li><a href="/guides/roller-coasters-for-42-inch-kids/">Coasters for 42-inch kids</a></li><li><a href="/guides/roller-coasters-for-44-inch-kids/">Coasters for 44-inch kids</a></li><li><a href="/guides/roller-coasters-for-48-inch-kids/">Coasters for 48-inch kids</a></li><li><a href="/guides/roller-coasters-for-54-inch-kids/">Coasters for 54-inch kids</a></li></ul>
+{cite_dataset_box()}
+{check_another_box(extra=[("/guides/roller-coasters-kids-can-ride-with-an-adult/", "Companion rules")])}'''
     faqs = [("How do theme parks measure height for rides?", "At each ride entrance with a measuring stick, and sometimes again before boarding. Walt Disney World's official planDisney panel says Cast Members at rides with height restrictions have measuring sticks at the entrances."),
             ("Do kids get measured with shoes on?", "Plan on it. Universal Orlando's official rider guide says shoes must be worn at all times, so children wear shoes both when measured and when riding. Measure at home in the same shoes."),
             ("Can my child ride if they are half an inch short?", "No. Walt Disney World's planDisney panel says height restrictions are strictly enforced even for a tiny difference, and other parks apply their posted minimums too."),
             ("What is a supervising companion?", "At Universal Orlando, someone 14 or older who meets all other ride requirements and rides with a child under the 48 in ride-alone height. Other parks set their own rules.")]
     qpage("roller-coaster-height-requirements-explained", f"Roller Coaster Height Requirements Explained | {BRAND}", "How theme parks measure riders, shoes, what to do if your child is near the line, companion rules and the most common coaster height requirements.",
           "Roller coaster height requirements explained", "parks measure riders at each ride entrance with a measuring stick and enforce the posted number strictly, even for a fraction of an inch. Many rides also have a lower height range that can ride with a supervising companion.",
-          body, faqs, "How parks measure, and what to do near the line.", sources=[PLANDISNEY, PLANDISNEY2, UOR_GUIDE, UOR_HEIGHTS], related=[("/height-checker/", "Ride height checker"), ("/guides/can-you-be-too-tall-for-a-roller-coaster/", "Can you be too tall?"), ("/guides/best-first-roller-coasters/", "Best first roller coasters"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids")])
+          body, faqs, "How parks measure, and what to do near the line.", sources=[PLANDISNEY, PLANDISNEY2, UOR_GUIDE, UOR_HEIGHTS],
+          related=[("/height-checker/", "Ride height checker", "Check"), ("/guides/roller-coasters-for-44-inch-kids/", "Coasters for 44-inch kids", "44\""), ("/guides/can-you-be-too-tall-for-a-roller-coaster/", "Can you be too tall?", "Max"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids", "48\"")],
+          modified=BATCH, mid_related=[("/height-checker/", "Ride height checker + CSV", "Check"), ("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids", "42\""), ("/guides/roller-coasters-for-44-inch-kids/", "Coasters for 44-inch kids", "44\""), ("/guides/best-first-roller-coasters/", "Best first roller coasters", "1st")])
 
 def fti(inches): f, i = divmod(round(inches), 12); return f"{f} ft {i} in" if i else f"{f} ft"
 def too_tall_page():
@@ -314,7 +324,8 @@ def records_page():
     def table(rows, unit):
         return '<div class="tablewrap"><table class="list"><thead><tr><th scope="col">RCDB rank</th><th scope="col">Coaster</th><th scope="col">Park</th><th scope="col">Country</th><th scope="col">' + unit + '</th></tr></thead><tbody>' + "".join(
             f'<tr><td>{r}</td><th scope="row">{nm(l)}</th><td>{E(p)}</td><td>{E(co)}</td><td>{(f"{v:g} mph ({round(v * 1.609)} km/h)" if unit == "Top speed" else f"{v:g} ft ({round(v * 0.3048)} m)")}</td></tr>' for r, l, p, co, v in rows) + "</tbody></table></div>"
-    body = f'''<p>These tables copy RCDB's Record Holders rankings for operating roller coasters, last verified {CHECKED}. RCDB does not assign ranks to coasters that are not operating, so closed rides and rides not yet open are left out. Records change when new rides open, so check the date above. Where we cover a coaster, its name links to our page with its height requirement.</p>
+    REC_CHECKED = "19 Nov 2026"  # re-checked against https://rcdb.com/rhr.htm; operating top 10 speed/height unchanged
+    body = f'''<p>These tables copy RCDB's Record Holders rankings for operating roller coasters, last verified {REC_CHECKED}. RCDB does not assign ranks to coasters that are not operating, so closed rides and rides not yet open are left out (Formula Rossa remains listed with an asterisk on RCDB's speed table and is not assigned a rank while it is not operating). Records change when new rides open, so check the date above. Where we cover a coaster, its name links to our page with its height requirement.</p>
 <h2>Fastest roller coasters in the world</h2>{table(REC_SPEED, "Top speed")}
 <h2>Tallest roller coasters in the world</h2>{table(REC_HEIGHT, "Height")}
 <h2>Other world records on RCDB</h2><ul><li><strong>Longest:</strong> Falcons Flight at Six Flags Qiddiya City, 13,943.6 ft (4,250 m), ahead of Steel Dragon 2000 at 8,133.2 ft and {clk("Beast", "kings-island")} at Kings Island at 7,361 ft.</li>
@@ -323,13 +334,16 @@ def records_page():
 <li><strong>Steepest:</strong> TMNT Shellraiser at Nickelodeon Universe in New Jersey, 121.5 degrees, then {clk("Takabisha")} at Fuji-Q Highland at 121 degrees and {clk("Green Lantern Coaster")} at Warner Bros. Movie World at 120.5 degrees.</li></ul>
 <h2>Records among the coasters we cover</h2><p>Our ranking guides list the leaders among the {len(ALL)} coasters on {BRAND}, each with its height requirement: <a href="/guides/fastest-roller-coasters/">fastest</a>, <a href="/guides/tallest-roller-coasters/">tallest</a>, <a href="/guides/longest-roller-coasters/">longest</a>, <a href="/guides/steepest-roller-coasters/">steepest</a> and <a href="/guides/roller-coasters-with-the-most-inversions/">most inversions</a>.</p>
 <h2>Height classes</h2><p>Coasters 200 ft or taller are called hypercoasters, 300 ft or taller giga coasters, and 400 ft or taller strata coasters. See <a href="/guides/what-is-a-hypercoaster/">what is a hypercoaster?</a></p>'''
-    faqs = [("What is the fastest roller coaster in the world?", f"Falcons Flight at Six Flags Qiddiya City in Saudi Arabia, at 155.3 mph (250 km/h), according to RCDB's record holders list for operating coasters, last verified {CHECKED}."),
-            ("What is the tallest roller coaster in the world?", f"Falcons Flight at Six Flags Qiddiya City, at 534.8 ft (163 m), according to RCDB, last verified {CHECKED}. Top Thrill 2 at Cedar Point is second at 420 ft."),
-            ("What is the fastest roller coaster in the US?", f"Top Thrill 2 at Cedar Point, Ohio, at 120 mph, according to RCDB's record holders list, last verified {CHECKED}."),
-            ("Which roller coaster has the most inversions?", f"The Smiler at Alton Towers, with 14, according to RCDB, last verified {CHECKED}.")]
+    faqs = [("What is the fastest roller coaster in the world?", f"Falcons Flight at Six Flags Qiddiya City in Saudi Arabia, at 155.3 mph (250 km/h), according to RCDB's record holders list for operating coasters, last verified {REC_CHECKED}."),
+            ("What is the tallest roller coaster in the world?", f"Falcons Flight at Six Flags Qiddiya City, at 534.8 ft (163 m), according to RCDB, last verified {REC_CHECKED}. Top Thrill 2 at Cedar Point is second at 420 ft."),
+            ("What is the fastest roller coaster in the US?", f"Top Thrill 2 at Cedar Point, Ohio, at 120 mph, according to RCDB's record holders list, last verified {REC_CHECKED}."),
+            ("Which roller coaster has the most inversions?", f"The Smiler at Alton Towers, with 14, according to RCDB, last verified {REC_CHECKED}.")]
     qpage("world-record-roller-coasters", f"World Record Roller Coasters: Fastest, Tallest & More | {BRAND}", "The fastest, tallest, longest and steepest roller coasters in the world and the most inversions, from RCDB's record holders, with a last verified date.",
-          "World record roller coasters", f"the fastest and tallest roller coaster in the world is Falcons Flight at Six Flags Qiddiya City in Saudi Arabia: 155.3 mph and 534.8 ft, according to RCDB (last verified {CHECKED}). In the US, Top Thrill 2 at Cedar Point leads at 120 mph and 420 ft.",
-          body, faqs, "Fastest, tallest, longest and steepest, from RCDB.", sources=[RCDB_REC], group="Records", related=[("/guides/fastest-roller-coasters/", "Fastest roller coasters we cover"), ("/guides/tallest-roller-coasters/", "Tallest roller coasters we cover"), ("/guides/what-is-a-hypercoaster/", "What is a hypercoaster?"), ("/guides/how-do-roller-coaster-launches-work/", "How launches work")])
+          "World record roller coasters", f"the fastest and tallest roller coaster in the world is Falcons Flight at Six Flags Qiddiya City in Saudi Arabia: 155.3 mph and 534.8 ft, according to RCDB (last verified {REC_CHECKED}). In the US, Top Thrill 2 at Cedar Point leads at 120 mph and 420 ft.",
+          body, faqs, "Fastest, tallest, longest and steepest, from RCDB.", sources=[RCDB_REC], group="Records",
+          related=[("/guides/fastest-roller-coasters/", "Fastest roller coasters we cover", "mph"), ("/guides/tallest-roller-coasters/", "Tallest roller coasters we cover", "ft"), ("/guides/what-is-a-hypercoaster/", "What is a hypercoaster?", "Hyper"), ("/guides/how-do-roller-coaster-launches-work/", "How launches work", "Launch")],
+          modified=BATCH, verified=REC_CHECKED,
+          mid_related=[("/guides/tallest-roller-coasters/", "Tallest on Coaster Map", "Tall"), ("/guides/fastest-roller-coasters/", "Fastest on Coaster Map", "Fast"), ("/guides/longest-roller-coasters/", "Longest on Coaster Map", "Long"), ("/guides/roller-coasters-with-the-most-inversions/", "Most inversions on Coaster Map", "Inv")])
 
 GLOSSARY = [
  ("Airtime", "The moment you lift out of your seat, held in by your restraint, when forces drop below zero g.", "/guides/what-is-airtime-on-a-roller-coaster/"),

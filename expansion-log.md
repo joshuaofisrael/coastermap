@@ -1049,3 +1049,22 @@ Validator: 1,874 files, 0 issues. dup.py/seo.py were not available in this envir
 Coaster Map had no image policy page (404). Added `/image-policy/`, stating plainly that the site currently uses no photographs or AI-generated images at all (only the original logo, favicon and Leaflet/OpenStreetMap maps, as the credits page already said), and that any future photo-style image will be labelled and will link its caption's Source to this page. It uses the same `page()` template as every other page (self-canonical, Cloudflare beacon, no GA4, matching how every existing Coaster Map page is built), carries the required legal line, and is linked in the site-wide footer between Disclaimer and Advertising disclosure. `_build/check.py`'s `LEGAL` set now includes `image-policy`.
 
 Validator: 1,875 files, 0 issues.
+
+## 19 Nov 2026 (batched daily SEO): 44-inch guide, height CSV link asset, engagement fixes, records re-check
+
+**Why:** priority move on the height-question / Fiesta Texas-style cluster already getting Google visits; first link asset for the site; compliance gaps (related-link thumbnails, compare/check-another); refresh of world-record page.
+
+**1. New guide `/guides/roller-coasters-for-44-inch-kids/`**
+Added 44 to `GUIDE_HEIGHTS`. Distinct from the 42 and 48 inch siblings: 241 ride-alone coasters vs 178 at 42 in and 824 at 48 in; 63 newly unlocked between 42 and 44; several official exact-44 in minima (including Magic Kingdom Space Mountain and Disney's Animal Kingdom Expedition Everest). Page includes per-park counts, a nearby-height growth table, and an explicit "what changes at 46 and 48 in" section. Lists built only from stored official heights (ride-alone vs companion kept separate).
+
+**2. Link asset: official heights CSV**
+Build now writes `/assets/official-coaster-height-requirements.csv` (1,373 rows: park, ride, ride-alone height/unit, companion min/max/unit, official source URL, last verified). Cite-this-dataset box added on `/height-checker/` and `/guides/roller-coaster-height-requirements-explained/`. Height checker promoted as the citable tool + download.
+
+**3. Engagement / AdSense prep gaps**
+Related next-reads now use brand SVG thumbnail tiles (not photos; image policy still forbids ride photos) mid-article and at the end on the new/changed pages. Compare/check-another height box on height guides, height checker and the height-requirements-explained page.
+
+**4. Refresh `/guides/world-record-roller-coasters/`**
+Re-fetched https://rcdb.com/rhr.htm (speed, height, length, drop, inversions, angle). Operating top 10 speed and height match stored `REC_SPEED` / `REC_HEIGHT`; longest/drop/inversions/steepest prose unchanged. Last verified set to 19 Nov 2026; engagement next-reads added. lastmod bumped for the engagement upgrade (record values themselves did not change).
+
+**Checks:** `python3 _build/build.py` then `python3 _build/check.py`: 1,876 files, 0 issues. No photos added. Analytics (Cloudflare beacon + GA4) kept on every page.
+
