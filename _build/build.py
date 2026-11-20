@@ -351,7 +351,15 @@ def map_block(points, height=380, id="map"):
 LEAFLET_HEAD = '<link rel="stylesheet" href="/assets/leaflet.css"><script src="/assets/leaflet.js" defer></script>'
 
 # ---------- coaster pages ----------
-def related_html(c=None, p=None):
+def _tile_lab(title):
+    m = re.search(r"(\d+)\s*-?\s*inch", title, re.I)
+    if m: return m.group(1) + '"'
+    skip = {"how", "what", "the", "a", "an", "coasters", "coaster", "roller", "for", "on", "of", "to", "and", "is", "do", "your", "with"}
+    for w in re.findall(r"[A-Za-z0-9']+", title):
+        if w.lower() not in skip: return w[:6]
+    return (title or "?")[:4]
+def related_links(c=None, p=None):
+    """Ordered next-reads for a coaster or park page. Guides only, plus the height checker."""
     gp = {u for u, *_ in GUIDES}
     links = []
     park = p or park_of(c)
@@ -360,7 +368,9 @@ def related_html(c=None, p=None):
         h = c["hr"]
         if h:
             for H in HEIGHTS:
-                if hin(h) <= H + 1e-9: links.append((f"/guides/roller-coasters-for-{H}-inch-kids/", f"Coasters for {H}-inch kids")); break
+                if hin(h) <= H + 1e-9:
+                    links.append((f"/guides/roller-coasters-for-{H}-inch-kids/", f"Coasters for {H}-inch kids"))
+                    break
     for u, t, b, g in GUIDES:
         if g == "By place" and park["slug"] in REGION_PARKS.get(u, ()): links.append((u, t))
     if c:
@@ -376,12 +386,39 @@ def related_html(c=None, p=None):
         if (c.get("height") or 0) >= 100: links.append(("/guides/why-your-stomach-drops-on-a-roller-coaster/", "Why your stomach drops"))
         if (c.get("speed") or 0) >= 55 or (c.get("inversions") or 0) >= 3: links.append(("/guides/roller-coasters-and-health-conditions/", "Coasters and health conditions"))
         if launched(c) or (c.get("speed") or 0) >= 60: links.append(("/guides/how-do-roller-coaster-brakes-work/", "How coaster brakes work"))
-    if p: links += [("/guides/roller-coaster-height-requirements-explained/", "Height requirements explained"), ("/guides/how-to-not-be-scared-of-roller-coasters/", "How to not be scared of coasters")]
-    if p: links += [("/guides/best-first-roller-coasters/", "Best first roller coasters"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids"), ("/guides/tallest-roller-coasters/", "Tallest roller coasters")]
-    if p: links += [("/guides/roller-coaster-glossary/", "Roller coaster glossary"), ("/guides/what-happens-if-a-roller-coaster-gets-stuck/", "What happens if a coaster gets stuck"), ("/guides/world-record-roller-coasters/", "World record roller coasters"), ("/guides/theme-parks-with-the-most-roller-coasters/", "Theme parks with the most roller coasters")]
-    links = [(u, t) for u, t in dict.fromkeys(links) if u in gp]
-    if not links: return ""
-    return '<section aria-labelledby="rg-h"><h2 id="rg-h">Related guides</h2><ul class="cols">' + "".join(f'<li><a href="{u}">{E(t)}</a></li>' for u, t in links) + "</ul></section>"
+    if p:
+        links += [("/guides/roller-coaster-height-requirements-explained/", "Height requirements explained"),
+                  ("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids"),
+                  ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids"),
+                  ("/guides/roller-coasters-for-54-inch-kids/", "Coasters for 54-inch kids")]
+        links += [("/guides/best-first-roller-coasters/", "Best first roller coasters"),
+                  ("/guides/roller-coasters-kids-can-ride-with-an-adult/", "Coasters kids can ride with an adult"),
+                  ("/height-checker/", "Ride height checker"),
+                  ("/guides/how-to-not-be-scared-of-roller-coasters/", "How to not be scared of coasters")]
+    links += [("/guides/roller-coaster-glossary/", "Roller coaster glossary")]
+    out, seen = [], set()
+    for u, t in links:
+        if u in seen: continue
+        if u not in gp and u != "/height-checker/": continue
+        seen.add(u); out.append((u, t))
+    return out
+def _split_reads(links):
+    links = list(links)[:8]
+    n = len(links)
+    if n >= 7: return links[:4], links[4:8]
+    if n >= 5: return links[:3], links[3:]
+    if n >= 2:
+        h = max(1, n // 2)
+        return links[:h], links[h:]
+    return links, []
+def related_html(c=None, p=None, part="end"):
+    """3-4 next-reads with brand SVG tiles. part is 'mid' or 'end' (no ride photos)."""
+    mid, end = _split_reads(related_links(c=c, p=p))
+    chunk = mid if part == "mid" else end
+    if not chunk: return ""
+    hid = "mid-rg-h" if part == "mid" else "rg-h"
+    heading = "Keep reading" if part == "mid" else "Related guides"
+    return related_reads([(u, t, _tile_lab(t)) for u, t in chunk], heading=heading, hid=hid)
 
 def coaster_page(c):
     p = park_of(c)
@@ -422,9 +459,10 @@ def coaster_page(c):
 {mp}
 <section aria-labelledby="tips-h"><h2 id="tips-h">Before you ride {E(c["name"])}</h2><ul>{before_ride(c)}</ul>
 <p>Planning for a child? The <a href="/height-checker/">ride height checker</a> shows every coaster they can ride at {E(p["short"])}.</p></section>
+{related_html(c=c, part="mid")}
 {faq_html(faqs)}
 <section aria-labelledby="more-h"><h2 id="more-h">More coasters at {E(p["name"]) if siblings else E(p["group"])}</h2>{(f'<p>Sorted by ride-alone height, with the lowest height allowed with {E(p.get("companion") or "a companion")} and any maximum from the official rules.</p>' if any(x["hr"] for x in siblings) else "") + f'<ul class="cols">{sib}</ul>' if siblings else '<ul class="cols">' + "".join(f'<li><a href="{coaster_path(x)}">{E(x["name"])}</a> <span class="muted">({E(x["park_name"])}{", " + hshort(x["hr"]) if x["hr"] else ""})</span></li>' for x in ALL if park_of(x)["group"] == p["group"] and x is not c) + '</ul>'}<p><a href="/parks/{p["slug"]}/">See the full {E(p["name"])} coaster guide and map</a></p></section>
-{related_html(c=c)}<section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ul>{srcs and "".join(srcs)}</ul><p class="note">Last checked {c["checked"]}. Found an error? <a href="/contact/">Tell us</a>.</p></section></article>'''
+{related_html(c=c, part="end")}<section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ul>{srcs and "".join(srcs)}</ul><p class="note">Last checked {c["checked"]}. Found an error? <a href="/contact/">Tell us</a>.</p></section></article>'''
     dparts = [x for x in [h and f'height requirement {hshort(h)}', mph(c["speed"]) and "top speed " + mph(c["speed"]), ft(c["height"]) and ft(c["height"]) + " tall"] if x]
     desc = f'{c["name"]} at {p["name"]}' + (": " + ", ".join(dparts) if dparts else "") + ". How intense it is, best seat and who it suits."
     if h and h.get("acc_min") and dparts:

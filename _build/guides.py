@@ -290,10 +290,21 @@ def type_guides():
 
 def types_hub():
     items = [(u, t, b) for u, t, b, g in GUIDES if g == "Coaster types"]
-    body = '<p class="answer">Roller coasters are grouped by what the track is made of, how the train gets its speed, and how riders sit. This page links our plain-English explainer for each type, with every example we cover and its height requirement.</p><h2>Track material</h2><p>Wooden coasters run on laminated wood track and feel loose and lively; steel coasters run on tubular or box steel track and allow smooth inversions; hybrids mix the two.</p><h2>How the ride starts</h2><p>Most coasters use a chain or cable lift hill. Launch coasters fire the train along the track instead, and shuttle coasters run the course forwards and then backwards.</p><h2>How you sit</h2><p>Sit-down coasters are the most common. On inverted coasters you hang below the track, on wing coasters you sit beside it, on flying coasters you lie face down, and on spinning coasters your car rotates.</p><h2>Explainers</h2><ul>' + "".join(f'<li><a href="{u}">{E(t)}</a>: {E(b)}</li>' for u, t, b in items) + "</ul>"
+    mid = related_reads([
+        ("/guides/what-is-a-wooden-roller-coaster/", "What is a wooden roller coaster?", "Wood"),
+        ("/guides/what-is-a-launch-coaster/", "What is a launch coaster?", "Launch"),
+        ("/guides/what-is-an-inverted-roller-coaster/", "What is an inverted roller coaster?", "Invert"),
+        ("/guides/what-is-a-hypercoaster/", "What is a hypercoaster?", "Hyper"),
+    ], heading="Keep reading", hid="mid-types-h")
+    body = '<p class="answer">Roller coasters are grouped by what the track is made of, how the train gets its speed, and how riders sit. This page links our plain-English explainer for each type, with every example we cover and its height requirement.</p>' + mid + '<h2>Track material</h2><p>Wooden coasters run on laminated wood track and feel loose and lively; steel coasters run on tubular or box steel track and allow smooth inversions; hybrids mix the two.</p><h2>How the ride starts</h2><p>Most coasters use a chain or cable lift hill. Launch coasters fire the train along the track instead, and shuttle coasters run the course forwards and then backwards.</p><h2>How you sit</h2><p>Sit-down coasters are the most common. On inverted coasters you hang below the track, on wing coasters you sit beside it, on flying coasters you lie face down, and on spinning coasters your car rotates.</p><h2>Explainers</h2><ul>' + "".join(f'<li><a href="{u}">{E(t)}</a>: {E(b)}</li>' for u, t, b in items) + "</ul>"
     faqs = [("What are the main types of roller coaster?", "By material: wooden, steel and hybrid. By how they start: lift hill, launch or shuttle. By seating: sit-down, inverted, wing, flying, floorless, stand-up, dive and spinning. Size classes include hyper (200 ft or more), giga (300 ft or more) and strata (400 ft or more) coasters."),
             ("Which type of roller coaster is the least intense?", "Family coasters and mine trains, which usually have no inversions and low height requirements.")]
-    guide("/guides/roller-coaster-types/", f"Roller Coaster Types Explained: A Plain-English Guide | {BRAND}", "Wooden, hybrid, launch, hyper, inverted, wing, flying, dive, spinning, wild mouse, family and shuttle coasters explained, with examples.", "Roller coaster types explained", body, faqs, "Coaster types hub", "Every type, explained.", None, [])
+    guide("/guides/roller-coaster-types/", f"Roller Coaster Types Explained: A Plain-English Guide | {BRAND}", "Wooden, hybrid, launch, hyper, inverted, wing, flying, dive, spinning, wild mouse, family and shuttle coasters explained, with examples.", "Roller coaster types explained", body, faqs, "Coaster types hub", "Every type, explained.", None, [
+        ("/guides/what-is-a-flying-roller-coaster/", "What is a flying roller coaster?", "Fly"),
+        ("/guides/what-is-a-spinning-roller-coaster/", "What is a spinning roller coaster?", "Spin"),
+        ("/guides/roller-coaster-glossary/", "Roller coaster glossary", "Terms"),
+        ("/guides/roller-coaster-manufacturers/", "Roller coaster manufacturers", "Makers"),
+    ], modified="2026-11-20")
 
 def guides_hub():
     order = ["Questions", "By height", "For families", "Records", "By place", "Coaster types hub", "Coaster types", "Manufacturers"]
