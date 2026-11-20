@@ -35,7 +35,7 @@ PARKS = [
  dict(slug="kings-island", name="Kings Island", short="Kings Island", loc="Mason, Ohio", state="OH", country="US", official="https://www.sixflags.com/kingsisland", group="Six Flags (formerly Cedar Fair)"),
  dict(slug="busch-gardens-williamsburg", name="Busch Gardens Williamsburg", short="Busch Gardens Williamsburg", loc="Williamsburg, Virginia", state="VA", country="US", official="https://buschgardens.com/williamsburg/", group="United Parks & Resorts"),
  dict(slug="hersheypark", name="Hersheypark", short="Hersheypark", loc="Hershey, Pennsylvania", state="PA", country="US", official="https://www.hersheypark.com/", group="Hershey Entertainment & Resorts"),
- dict(slug="knotts-berry-farm", name="Knott's Berry Farm", short="Knott's", loc="Buena Park, California", state="CA", country="US", official="https://www.sixflags.com/knotts", group="Six Flags (formerly Cedar Fair)"),
+ dict(slug="knotts-berry-farm", name="Knott's Berry Farm", short="Knott's", loc="Buena Park, California", state="CA", country="US", official="https://www.sixflags.com/knotts", group="Six Flags (formerly Cedar Fair)", checked="20 Nov 2026"),
  dict(slug="dollywood", name="Dollywood", short="Dollywood", loc="Pigeon Forge, Tennessee", state="TN", country="US", official="https://www.dollywood.com/themepark/", group="Herschend Family Entertainment"),
  dict(slug="six-flags-great-adventure", name="Six Flags Great Adventure", short="Six Flags Great Adventure", loc="Jackson, New Jersey", state="NJ", country="US", official="https://www.sixflags.com/greatadventure", group="Six Flags"),
  # Added 10 Nov 2026 (expansion batch 2)

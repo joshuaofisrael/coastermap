@@ -217,6 +217,8 @@ def park_page(p):
 {ana_html}
 <section aria-labelledby="hr-h"><h2 id="hr-h">{PN} height requirements for every coaster</h2>{htable}</section>
 {f'<section aria-labelledby="hb-h"><h2 id="hb-h">What can my child ride at {PN}? By height</h2>{bands}<p>For a personal list, try the <a href="/height-checker/">ride height checker</a>.</p></section>' if bands else ""}
+{check_another_box()}
+{related_html(p=p, part="mid")}
 {comp}
 {rank_html if n > 1 else ""}
 {ft_html}
@@ -225,7 +227,7 @@ def park_page(p):
 <h2>Every coaster at {PN}: full stats</h2>{coaster_table(sorted(cs, key=lambda c: -(c["height"] or 0)))}
 {group_html(p)}
 {faq_html(faqs)}
-{related_html(p=p)}<section class="sources"><h2>Sources</h2><ul><li><a href="{p["rcdb_url"]}" rel="nofollow noopener" target="_blank">RCDB: {PN}</a>: operating coaster list, stats and map positions.</li>{"".join(f"<li>{src_link(s)}: height requirement" + ("s" if len(srcn[s]) > 1 else "") + " for " + andlist(E(x) for x in srcn[s]) + f" (checked {p["checked"]}).</li>" for s in srcset)}<li><a href="{p["official"]}" rel="nofollow noopener" target="_blank">{PN} official site</a>: hours and ride status.</li></ul><p class="note">Intensity labels, rankings and first-timer picks are {BRAND} editorial guidance built from the facts above, not park rules. Last checked {p["checked"]}.</p></section>'''
+{related_html(p=p, part="end")}<section class="sources"><h2>Sources</h2><ul><li><a href="{p["rcdb_url"]}" rel="nofollow noopener" target="_blank">RCDB: {PN}</a>: operating coaster list, stats and map positions.</li>{"".join(f"<li>{src_link(s)}: height requirement" + ("s" if len(srcn[s]) > 1 else "") + " for " + andlist(E(x) for x in srcn[s]) + f" (checked {p["checked"]}).</li>" for s in srcset)}<li><a href="{p["official"]}" rel="nofollow noopener" target="_blank">{PN} official site</a>: hours and ride status.</li></ul><p class="note">Intensity labels, rankings and first-timer picks are {BRAND} editorial guidance built from the facts above, not park rules. Last checked {p["checked"]}.</p></section>'''
     old_ld = PARK_LD(p)
     ld = [*old_ld, {"@context": "https://schema.org", "@type": "ItemList", "name": f'{p["name"]} roller coasters ranked by intensity', "numberOfItems": n, "itemListOrder": "https://schema.org/ItemListOrderDescending",
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": url(coaster_path(c)), "name": c["name"]} for i, c in enumerate(ranked)]}, faq_ld(faqs)]

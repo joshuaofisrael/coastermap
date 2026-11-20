@@ -440,19 +440,37 @@ def maker_pages():
         hrs = [c for c in cs if c["hr"]]; lo = min(hrs, key=lambda c: hin(c["hr"]), default=None)
         yrs = sorted(int(year(c)) for c in cs if year(c))
         rcdb_line = f"RCDB lists {label} as based in {hq}" + (f", operating from {since} to {until}" if until else f", in business since {since}") + "."
-        body = (f'<h2>About {E(label)}</h2><p>{E(blurb)} {E(rcdb_line)}</p><h2>{E(label)} coasters by the numbers</h2><ul><li><strong>{len(cs)}</strong> coasters on {BRAND} at <strong>{len(parks)}</strong> parks.</li>'
+        extra_p = ""
+        page_kw = {}
+        if slug == "arrow-dynamics":
+            # RCDB company page https://rcdb.com/6835.htm re-read 20 Nov 2026: defunct, Clearfield UT, operated Nov 1945 to 2002, 98 built, 65 extant.
+            extra_p = (f'<p>The <a href="https://rcdb.com{rid}" rel="nofollow noopener" target="_blank">RCDB company page</a>, re-read on 20 Nov 2026, still lists Arrow Dynamics as defunct in Clearfield, Utah, operating from November 1945 to 2002. '
+                       f'RCDB counts 98 roller coasters built by the company and 65 still standing. This page covers the {len(cs)} that operate at parks on {BRAND}. '
+                       f'Height rules on each ride come from that park\'s official page, linked from the coaster, not from RCDB.</p>')
+            page_kw = dict(modified="2026-11-20", verified="20 Nov 2026", mid_related=[
+                ("/guides/roller-coaster-manufacturers/", "All roller coaster manufacturers", "Makers"),
+                ("/guides/vekoma-roller-coasters/", "Vekoma roller coasters", "Vekoma"),
+                ("/guides/what-is-a-wooden-roller-coaster/", "What is a wooden roller coaster?", "Wood"),
+                ("/guides/best-first-roller-coasters/", "Best first roller coasters", "First"),
+            ], related=[
+                ("/guides/intamin-roller-coasters/", "Intamin roller coasters", "Intamin"),
+                ("/guides/mack-rides-roller-coasters/", "Mack Rides roller coasters", "Mack"),
+                ("/guides/premier-rides-roller-coasters/", "Premier Rides roller coasters", "Premier"),
+                ("/guides/rocky-mountain-construction-roller-coasters/", "RMC roller coasters", "RMC"),
+            ])
+        body = (f'<h2>About {E(label)}</h2><p>{E(blurb)} {E(rcdb_line)}</p>{extra_p}<h2>{E(label)} coasters by the numbers</h2><ul><li><strong>{len(cs)}</strong> coasters on {BRAND} at <strong>{len(parks)}</strong> parks.</li>'
                 + (f'<li>Opened between {yrs[0]} and {yrs[-1]}.</li>' if yrs else "") + (f'<li>Tallest: {clink(tall)}, {ftm(tall["height"])}.</li>' if tall else "") + (f'<li>Fastest: {clink(fast)}, {mphk(fast["speed"])}.</li>' if fast else "")
                 + (f'<li>Most inversions: {clink(inv)}, {inv["inversions"]}.</li>' if inv else "") + (f'<li>Lowest height requirement: {clink(lo)}, {hs(lo["hr"])}.</li>' if lo else "") + "</ul>"
                 + ('<h2>Most common models</h2><ul>' + "".join(f"<li>{E(m)}: {n}</li>" for m, n in models) + "</ul>" if models else "")
                 + f'<h2>Every {E(label)} coaster on {BRAND}</h2>{coaster_table(cs, show_park=True)}<p>Manufacturer, model and statistics come from each coaster\'s RCDB entry; see the <a href="https://rcdb.com{rid}" rel="nofollow noopener" target="_blank">RCDB page for {E(label)}</a> for its full worldwide list.</p>')
-        faqs = [(f"Who is {label}?", f"{blurb} {rcdb_line}"), (f"How many {label} roller coasters are on Coaster Map?", f"{len(cs)}, at {len(parks)} parks, as of {CHECKED}.")]
+        faqs = [(f"Who is {label}?", f"{blurb} {rcdb_line}"), (f"How many {label} roller coasters are on Coaster Map?", f"{len(cs)}, at {len(parks)} parks, as of {CHECKED}." if slug != "arrow-dynamics" else f"{len(cs)} at parks on Coaster Map, as of 20 Nov 2026. RCDB's own company page, re-read that day, counts 98 built and 65 still standing.")]
         if tall: faqs.append((f"What is the tallest {label} roller coaster on Coaster Map?", f"{tall['name']} at {pk(tall)['name']}, {ftm(tall['height'])} according to RCDB."))
         title = f"{label} Roller Coasters: Every Ride & Height Rule | {BRAND}"
         if len(title) > 70: title = f"{label} Roller Coasters | {BRAND}"
         qpage(f"{slug}-roller-coasters", title, f"Who {label} is and all {len(cs)} {label} roller coasters on Coaster Map, with height requirements, stats, models and the tallest and fastest.",
               f"{label} roller coasters", f"{E(label)} is a coaster manufacturer based in {E(hq)}. {BRAND} covers <strong>{len(cs)} {E(label)} coasters</strong> at {len(parks)} parks" + (f", the tallest being {clink(tall)} at {ftm(tall['height'])}" if tall else "") + ".",
               body, faqs, f"{len(cs)} coasters at {len(parks)} parks.", sources=[(f"RCDB: {label}", "https://rcdb.com" + rid)], group="Manufacturers",
-              related=[("/guides/roller-coaster-manufacturers/", "All roller coaster manufacturers")] + [(f"/guides/{s}-roller-coasters/", f"{l} roller coasters") for m, s, l, *_ in MAKERS if s != slug][:5], items=cs[:50])
+              related=page_kw.pop("related", [("/guides/roller-coaster-manufacturers/", "All roller coaster manufacturers", "Makers")] + [(f"/guides/{s}-roller-coasters/", f"{l} roller coasters", l.split()[0][:6]) for m, s, l, *_ in MAKERS if s != slug][:3]), items=cs[:50], **page_kw)
         hub.append((slug, label, hq, since, until, len(cs), len(parks), tall))
     allc = Counter(c["make"] for c in ALL if c["make"])
     rows = "".join(f'<tr><th scope="row"><a href="/guides/{s}-roller-coasters/">{E(l)}</a></th><td>{E(h)}</td><td>{si}{"" if not u else f" to {u}"}</td><td>{n}</td><td>{np_}</td><td>{clink(t, False) if t else ""}</td></tr>' for s, l, h, si, u, n, np_, t in hub)

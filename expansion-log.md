@@ -1068,3 +1068,23 @@ Re-fetched https://rcdb.com/rhr.htm (speed, height, length, drop, inversions, an
 
 **Checks:** `python3 _build/build.py` then `python3 _build/check.py`: 1,876 files, 0 issues. No photos added. Analytics (Cloudflare beacon + GA4) kept on every page.
 
+## 20 Nov 2026 (batched daily SEO): Knott's Berry Farm re-verification, related-link tiles, Arrow Dynamics refresh
+
+**Why:** priority move on the park cluster already getting search landings (Fiesta Texas treatment). Gold Reef City, Six Flags Over Texas, SeaWorld San Antonio, Fiesta Texas and Phantasialand were already re-checked. Dollywood's official site returned HTTP 403 today and was not bypassed. Knott's Berry Farm is in the same Cloudflare landing-page spread (7 to 14 Nov notes) and sixflags.com ride pages loaded, so this batch re-checks Knott's. Evergreen gap: park and coaster related links were still plain text. Refresh target: Arrow Dynamics manufacturer guide (lastmod 2026-11-10).
+
+**1. Knott's Berry Farm (`/parks/knotts-berry-farm/`), checked 20 Nov 2026**
+Re-fetched all 10 official sixflags.com/knotts attraction pages. Every stored rule matched: Jaguar 48 in (thrill 4); MonteZOOMa 48 in, max 79 (thrill 5); GhostRider 48 (thrill 5); Xcelerator 52 (thrill 5); Silver Bullet 54 (thrill 5); Sierra Sidewinder 48 alone, 42 with a companion (thrill 4); Pony Express 48 (thrill 4); Coast Rider 54 alone, 44 with a companion (thrill 4); HangTime 48, max 77 (thrill 5); Snoopy's Tenderpaw Twister Coaster 42 alone, 36 with a companion (thrill 4). RCDB https://rcdb.com/4546.htm still lists 10 operating coasters. No rule values changed. Park `checked` is 20 Nov 2026, so the park page and its 10 coaster pages, and those 10 CSV rows, move to that date. Sitemap lastmod for those 11 URLs is 2026-11-20. The page already had the Fiesta Texas table (ride-alone, companion, maximum), the 42/48/54 counts (1, 7 and 10 ride-alone; one more at 42 in with a companion) and links to the height guides.
+
+**2. Related next-reads**
+Park pages and coaster pages now use the existing brand SVG tiles (no photos; image policy unchanged) for 3 to 4 next-reads mid-article and 3 to 4 at the end, including the 42, 48 and 54 inch guides, the state list where one exists, and the height checker. Park pages also get the compare/check-another height box. `/guides/roller-coaster-types/` was the one guide with no next-read tiles; it now has a mid set and an end set. Other guides already had end tiles from 19 Nov. Park and coaster sitemap lastmod stays on each park's last-checked date (site rule), except Knott's.
+
+**3. Refresh `/guides/arrow-dynamics-roller-coasters/`**
+Re-read https://rcdb.com/6835.htm on 20 Nov 2026. Still defunct, Clearfield, Utah, operating November 1945 to 2002. Added the RCDB counts from that page: 98 roller coasters built, 65 still standing, against the 56 at parks on Coaster Map. Height rules were not re-opened one by one; the page says they still come from each park's official source. Last verified on the guide is 20 Nov 2026. datePublished stays 2026-11-10; dateModified and sitemap lastmod are 2026-11-20. Mid and end SVG next-reads added.
+
+**4. Link asset**
+CSV still 1,373 rows, one per stored height rule. Every row has a last-verified date and an official source URL. The 10 Knott's rows now say 20 Nov 2026. No other heights changed.
+
+**Tried and skipped:** Dollywood official ride pages returned HTTP 403. Busch Gardens Williamsburg (DarKoaster) returned HTTP 403. Neither was bypassed.
+
+**Checks:** `python3 _build/build.py` (1,874 sitemap URLs; 1,373 CSV rows) then `python3 _build/check.py`: 1,876 files, 0 issues. dup.py was not in this environment. No photos. GA4, Cloudflare beacon, AdSense head tag and ads.txt unchanged.
+
