@@ -18,7 +18,7 @@ def article_ld(path, title, desc, published=None, modified=None):
 def itemlist_ld(name, cs):
     return {"@context": "https://schema.org", "@type": "ItemList", "name": name, "numberOfItems": len(cs),
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": url(coaster_path(c)), "name": c["name"]} for i, c in enumerate(cs)]}
-def guide(path, title, desc, h1, body_html, faqs, group, blurb, cs_for_list=None, related=(), modified=None, published=None):
+def guide(path, title, desc, h1, body_html, faqs, group, blurb, cs_for_list=None, related=(), modified=None, published=None, verified=None):
     if len(title) > 70: raise SystemExit("title too long: " + title)
     mod = modified or TODAY; pub = published or TODAY
     rel_items = []
@@ -26,16 +26,16 @@ def guide(path, title, desc, h1, body_html, faqs, group, blurb, cs_for_list=None
         u, t = item[0], item[1]
         lab = item[2] if len(item) > 2 else None
         rel_items.append((u, t, lab) if lab else (u, t))
-    body = (f'<article class="guide"><h1>{E(h1)}</h1>{byline()}{body_html}{faq_html(faqs)}'
+    body = (f'<article class="guide"><h1>{E(h1)}</h1>{byline(verified)}{body_html}{faq_html(faqs)}'
             + (related_reads(rel_items, heading="Related guides", hid="rel-h") if rel_items else "")
-            + f'<section class="sources"><h2>How this guide is built</h2><p>Everything on this page is generated from the facts on Coaster Map: height requirements from each park\'s official page and ride statistics from the <a href="https://rcdb.com/" rel="nofollow noopener" target="_blank">Roller Coaster DataBase</a>, last verified {CHECKED}. It covers the {len(PARKS)} parks we document, not every coaster in the world. Each coaster page links its sources. See <a href="/methodology/">sources and methods</a>.</p></section></article>')
+            + f'<section class="sources"><h2>How this guide is built</h2><p>Everything on this page is generated from the facts on Coaster Map: height requirements from each park\'s official page and ride statistics from the <a href="https://rcdb.com/" rel="nofollow noopener" target="_blank">Roller Coaster DataBase</a>, last verified {verified or CHECKED}. It covers the {len(PARKS)} parks we document, not every coaster in the world. Each coaster page links its sources. See <a href="/methodology/">sources and methods</a>.</p></section></article>')
     ld = [article_ld(path, title, desc, published=pub, modified=mod), faq_ld(faqs)] + ([itemlist_ld(h1, cs_for_list)] if cs_for_list else [])
     write(path, page(path, title, desc, body, ld, [("/", "Home"), ("/guides/", "Guides"), (path, h1)], modified=mod))
     GUIDES.append((path, h1, blurb, group))
 
 # ---------- height guides ----------
 HEIGHTS = (36, 42, 48, 54)
-GUIDE_HEIGHTS = (36, 40, 42, 44, 48, 54)  # 44 in added 19 Nov 2026 (Disney/Six Flags threshold); HEIGHTS (park bands) unchanged
+GUIDE_HEIGHTS = (36, 40, 42, 44, 46, 48, 54)  # 44 in added 19 Nov 2026; 46 in added 21 Nov 2026. HEIGHTS (park bands) unchanged
 def _alone_at(H):
     return [c for c in ALL if c["hr"] and hin(c["hr"]) <= H + 1e-9 and not (c["hr"].get("max") and hin(c["hr"], "max") < H)]
 def height_guides():
@@ -58,8 +58,8 @@ def height_guides():
         parks_n = len(byp)
         cmH = round(H * 2.54)
         nrule = sum(1 for c in ALL if c["hr"])
-        # Compare steps that matter next to this height (always include 46 when framing 44)
-        compare_hs = sorted(set([x for x in GUIDE_HEIGHTS if abs(x - H) <= 6] + ([46] if H == 44 else [])))
+        # Compare steps that matter next to this height
+        compare_hs = sorted(x for x in GUIDE_HEIGHTS if abs(x - H) <= 6)
         cmp_rows = ""
         prev = None
         for x in compare_hs:
@@ -70,16 +70,48 @@ def height_guides():
         intro = f'''<p class="answer">A child who is <strong>{H} inches ({cmH} cm)</strong> tall meets the ride-alone height on <strong>{len(alone)} of the {nrule} coasters</strong> with a verified height rule on Coaster Map, across {parks_n} parks. A further {len(comp)} can be ridden with a companion. The lists below are grouped by park.</p>
 <p>Height rules are set by each park and the ride's manufacturer, based on how the restraint fits and the forces on the ride, not on age or bravery. A child exactly at the posted minimum can ride; a child even slightly under it will be turned away at the measuring post, so it is worth measuring at home in the shoes they will wear. Parks outside North America publish their rules in centimetres. We compare against the official centimetre figure, which is why a ride listed at 107 cm does not appear on the 42-inch list (42 inches is 106.7 cm).</p>'''
         if biggest: intro += f'<p>At {H} inches the tallest coaster on the list is {clink(biggest)} at {ftm(biggest["height"])}' + (f', and the fastest is {clink(fastest)} at {mphk(fastest["speed"])}.' if fastest and fastest is not biggest else '.') + '</p>'
+        exact_in = [c for c in alone if c["hr"] and not metric(c["hr"]) and c["hr"]["min"] == H]
         if H == 44:
-            exact44 = [c for c in alone if c["hr"] and not metric(c["hr"]) and c["hr"]["min"] == 44]
-            disney44 = [c for c in exact44 if "Disney" in pk(c)["group"] or pk(c)["slug"] in ("magic-kingdom", "disneys-animal-kingdom", "epcot", "disneys-hollywood-studios", "disneyland", "disney-california-adventure", "hong-kong-disneyland", "tokyo-disneyland", "tokyo-disneysea", "disneyland-paris", "walt-disney-studios-park")]
+            disney44 = [c for c in exact_in if "Disney" in pk(c)["group"] or pk(c)["slug"] in ("magic-kingdom", "disneys-animal-kingdom", "epcot", "disneys-hollywood-studios", "disneyland", "disney-california-adventure", "hong-kong-disneyland", "tokyo-disneyland", "tokyo-disneysea", "disneyland-paris", "walt-disney-studios-park")]
             intro += ('<p>Forty-four inches is a common official ride-alone line in its own right, not just a midpoint between the 42 and 48 inch guides. '
-                      f'On Coaster Map, {len(exact44)} coasters publish an exact 44 in minimum'
+                      f'On Coaster Map, {len(exact_in)} coasters publish an exact 44 in minimum'
                       + (f', including {andlist(clink(c) for c in disney44[:4])}' if disney44 else "")
                       + '. A 42-inch rider is still short of those posts; a 44-inch rider clears them.</p>')
+        if H == 46:
+            wood = sorted([c for c in exact_in if c["name"] == "Woodstock Express"], key=lambda c: pk(c)["name"])
+            wdates = sorted({c["checked"] for c in wood})
+            wwhen = wdates[0] if len(wdates) == 1 else "the date on each coaster page"
+            sting = next((c for c in exact_in if c["name"] == "Texas Stingray"), None)
+            cedar = next((c for c in ALL if c["park"] == "cedar-point" and c["name"] == "Woodstock Express" and c["hr"]), None)
+            cleared = sorted([c for c in alone if metric(c["hr"]) and hin(c["hr"]) > 44 + 1e-9], key=lambda c: (c["hr"]["min"], pk(c)["name"], c["name"]))
+            short117 = sorted([c for c in ALL if c["hr"] and metric(c["hr"]) and c["hr"]["min"] == 117], key=lambda c: (pk(c)["name"], c["name"]))
+            banded = [c for c in exact_in if c["hr"].get("acc_min") is not None]
+            floors = {}
+            for c in banded: floors.setdefault(c["hr"]["acc_min"], []).append(c)
+            floor_bits = andlist(f'{len(floors[k])} with a floor of {k} in' for k in sorted(floors))
+            sting_bits = []
+            if sting and sting["height"]: sting_bits.append(f'{ftm(sting["height"])} tall')
+            if sting and sting["speed"]: sting_bits.append(mphk(sting["speed"]))
+            intro += ('<p>Forty-six inches is a posted ride-alone line, not a rounded guess between the '
+                      '<a href="/guides/roller-coasters-for-44-inch-kids/">44-inch guide</a> and the '
+                      '<a href="/guides/roller-coasters-for-48-inch-kids/">48-inch guide</a>. '
+                      f'On Coaster Map, {len(exact_in)} coasters publish an exact 46 in minimum. '
+                      + (f'They include {andlist(clink(c) for c in wood)}, from the parks\' official ride pages, checked {wwhen}. ' if wood else "")
+                      + (f'The tallest of that exact-46 set with a listed height is {clink(sting, False)} at {E(pk(sting)["name"])}'
+                         + (f', {", ".join(sting_bits)} on RCDB' if sting_bits else "")
+                         + f'. Its 46 in minimum is from the SeaWorld San Antonio rides page, checked {sting["checked"]}. ' if sting else "")
+                      + (f'The same name is not the same rule: {clink(cedar)} is posted at {hshort(cedar["hr"])} (checked {cedar["checked"]}), so it is not on this list. ' if cedar and hin(cedar["hr"]) > 46 else "")
+                      + '</p>')
+            intro += (f'<p>The heading rounds 46 inches to {cmH} cm. Forty-six times 2.54 is 116.84 cm, so a child who is exactly 46.0 inches is about 116.8 cm. '
+                      f'That child clears a park line of 112 cm or 115 cm. '
+                      + (f'{andlist(clink(c) for c in cleared)} {"is" if len(cleared) == 1 else "are"} on this list for that reason. ' if cleared else "")
+                      + (f'The same child does not clear a line posted as 117 cm, so {andlist(clink(c) for c in short117)} {"stays" if len(short117) == 1 else "stay"} just out of reach. ' if short117 else "")
+                      + f'The <a href="/height-checker/">height checker</a> compares each park\'s own unit, which matters if your child is between 46 and 48 inches. '
+                      + (f'{len(banded)} of the exact 46 in coasters also publish a companion range below that line ({floor_bits}). At 46 in the companion is no longer required. Under it, the child still needs one. See <a href="/guides/roller-coasters-kids-can-ride-with-an-adult/">coasters kids can ride with an adult</a>.</p>' if banded else '</p>'))
+        near = sorted((x for x in GUIDE_HEIGHTS if x != H), key=lambda x: (abs(x - H), x)) if H == 46 else [x for x in GUIDE_HEIGHTS if x != H]
         mid_rel = related_reads([
             (f"/guides/roller-coasters-for-{x}-inch-kids/", f"Coasters for {x}-inch kids", f'{x}"')
-            for x in GUIDE_HEIGHTS if x != H
+            for x in near
         ][:2] + [
             ("/height-checker/", "Ride height checker", "Check"),
             ("/guides/roller-coasters-kids-can-ride-with-an-adult/", "Ride with a companion", "With"),
@@ -92,8 +124,16 @@ def height_guides():
             n46 = len(_alone_at(46)); n48 = len(_alone_at(48))
             body += (f'<section aria-labelledby="next-h"><h2 id="next-h">What changes at 46 and 48 inches</h2>'
                      f'<p>Growing two more inches to 46 in unlocks {n46 - len(alone)} further ride-alone coasters on our list (family woodies and mid-size steel rides such as several Woodstock Express clones and Texas Stingray). '
+                     f'That set is written out, park by park, on the <a href="/guides/roller-coasters-for-46-inch-kids/">46-inch guide</a>. '
                      f'Reaching the common 48 in (122 cm) line is the bigger jump: {n48 - len(alone)} more ride-alone coasters than at 44 in, because many thrill coasters set their alone minimum at 48 in or 122 cm. '
                      f'See the <a href="/guides/roller-coasters-for-48-inch-kids/">48-inch guide</a> for that full park-by-park list, or use the <a href="/height-checker/">height checker</a> for an exact height.</p></section>')
+        if H == 46:
+            n44 = len(_alone_at(44)); n48 = len(_alone_at(48))
+            body += (f'<section aria-labelledby="next-h"><h2 id="next-h">What changes from 44 inches, and what waits for 48</h2>'
+                     f'<p>The step from the <a href="/guides/roller-coasters-for-44-inch-kids/">44-inch guide</a> to this one adds {len(alone) - n44} ride-alone coasters. '
+                     f'The step from here to 48 in (122 cm) adds {n48 - len(alone)}, because a large share of thrill coasters are posted at 48 in or at 120 or 122 cm. '
+                     f'A 46-inch child is tall enough for the exact 46 in wood and family rides above, and still short of that 48 in group. '
+                     f'The <a href="/guides/roller-coasters-for-48-inch-kids/">48-inch guide</a> lists them. For a height that is not one of these steps, use the <a href="/height-checker/">height checker</a>.</p></section>')
         if top_tbl:
             body += f'<section aria-labelledby="park-h"><h2 id="park-h">Parks with the most ride-alone options at {H} inches</h2><div class="tablewrap"><table class="list"><thead><tr><th scope="col">Park</th><th scope="col">Ride-alone coasters</th></tr></thead><tbody>{top_tbl}</tbody></table></div></section>'
         body += f'<section aria-labelledby="alone-h"><h2 id="alone-h">Coasters a {H}-inch rider can ride alone</h2>{sec or "<p>None of the coasters we cover allow riders this short to ride alone.</p>"}</section>'
@@ -105,15 +145,25 @@ def height_guides():
                 ("Can a child ride if they are just under the height?", "No. The posted minimum is a safety limit tied to how the restraint fits, so ride staff do not make exceptions. Some family coasters offer a lower limit when riding with a companion; those are listed separately above.")]
         if H == 44:
             faqs.append(("Is 44 inches different from 42 or 48 inches for roller coasters?", f"Yes. A 44-inch rider clears {len(alone) - len(_alone_at(42))} more ride-alone coasters on Coaster Map than at 42 inches, including rides whose official minimum is exactly 44 in, but is still short of the {len(_alone_at(48)) - len(alone)} further coasters that open at the common 48 in line."))
+        if H == 46:
+            faqs.append(("Is 46 inches a real roller coaster height, or just between 44 and 48?", f"It is a real posted minimum. {len(exact_in)} coasters on Coaster Map set the ride-alone line at exactly 46 inches. A 46-inch rider can ride {len(alone) - len(_alone_at(44))} more coasters alone than at 44 inches, and is still short of the {len(_alone_at(48)) - len(alone)} further coasters that open at 48 inches or the matching centimetre line."))
+            faqs.append(("Does 46 inches equal 117 cm at the measuring post?", "The series label rounds 46 times 2.54 (116.84 cm) to 117 cm. A child who is exactly 46.0 inches is about 116.8 cm, so a park that posts 117 cm can still turn them away. The lists follow each park's own figure."))
         if biggest: faqs.append((f"What is the biggest coaster a {H}-inch child can ride?", f"By height, {biggest['name']} at {pk(biggest)['name']}, which is {ft(biggest['height'])} tall (RCDB) with a ride-alone minimum of {hshort(biggest['hr'])}."))
         title = f"Roller Coasters a {H}-Inch ({cmH} cm) Child Can Ride | {BRAND}"
         desc = f"Every coaster a {H}-inch ({cmH} cm) child can ride alone or with a companion at {parks_n} theme parks, from official height rules."
-        rel = [(f"/guides/roller-coasters-for-{x}-inch-kids/", f"Coasters for {x}-inch kids", f'{x}"') for x in GUIDE_HEIGHTS if x != H][:3]
-        rel += [("/guides/roller-coasters-kids-can-ride-with-an-adult/", "Coasters kids can ride with an adult", "With"),
-                ("/height-checker/", "Ride height checker", "Check"),
-                ("/guides/best-first-roller-coasters/", "Best first roller coasters", "1st")]
-        pub = BATCH if H == 44 else TODAY
-        guide(path, title, desc, f"Roller coasters a {H}-inch ({cmH} cm) child can ride", body, faqs, "By height", f"What a {H}-inch ({cmH} cm) rider can ride, park by park.", alone[:100] if len(alone) <= 100 else None, rel, modified=BATCH, published=pub)
+        if H == 46:
+            rel = [(f"/guides/roller-coasters-for-{x}-inch-kids/", f"Coasters for {x}-inch kids", f'{x}"') for x in near[2:4]]
+            rel += [("/guides/best-first-roller-coasters/", "Best first roller coasters", "1st"),
+                    ("/guides/roller-coaster-height-requirements-explained/", "Height requirements explained", "How")]
+        else:
+            rel = [(f"/guides/roller-coasters-for-{x}-inch-kids/", f"Coasters for {x}-inch kids", f'{x}"') for x in near][:3]
+            rel += [("/guides/roller-coasters-kids-can-ride-with-an-adult/", "Coasters kids can ride with an adult", "With"),
+                    ("/height-checker/", "Ride height checker", "Check"),
+                    ("/guides/best-first-roller-coasters/", "Best first roller coasters", "1st")]
+        pub = "2026-11-21" if H == 46 else (BATCH if H == 44 else TODAY)
+        # Nearby comparison tables change where 46 in falls inside the window. A new series link alone does not move lastmod.
+        mod = "2026-11-21" if H in (40, 42, 44, 46, 48) else BATCH
+        guide(path, title, desc, f"Roller coasters a {H}-inch ({cmH} cm) child can ride", body, faqs, "By height", f"What a {H}-inch ({cmH} cm) rider can ride, park by park.", alone[:100] if len(alone) <= 100 else None, rel, modified=mod, published=pub)
 
 # ---------- record rankings ----------
 RANK = [
@@ -165,26 +215,58 @@ def intense_guide():
     guide("/guides/most-intense-roller-coasters/", f"Most Intense Roller Coasters by G-Force | {BRAND}", f"The most intense roller coasters at {len(PARKS)} major theme parks, ranked by peak g-force from RCDB, with beyond-vertical drops and height rules.", "Most intense roller coasters", body, faqs, "Records", "Ranked by peak g-force, plus beyond-vertical drops.", cs, [("/guides/tallest-roller-coasters/", "Tallest roller coasters"), ("/guides/fastest-roller-coasters/", "Fastest roller coasters"), ("/guides/steepest-roller-coasters/", "Steepest roller coasters"), ("/guides/best-first-roller-coasters/", "Best first roller coasters")])
 
 def first_timer_guide():
-    sec = ""; picks_all = []
+    sec = ""; picks_all = []; no_pick = []; fallback = []
     for p in PARKS:
         cands = [c for c in p["coasters"] if c["hr"] and c["inversions"] == 0 and c["scale"] in ("Kiddie", "Family")]
         cands.sort(key=lambda c: (hin(c["hr"]), c["speed"] or 0))
         picks = cands[:2]
+        kind = "family"
         if not picks:
             cands = [c for c in p["coasters"] if c["hr"] and c["inversions"] == 0]
             cands.sort(key=lambda c: (c["speed"] or 99, hin(c["hr"])))
             picks = cands[:1]
+            kind = "fallback"
         if picks:
             picks_all += picks
+            if kind == "fallback": fallback.append((p, picks[0]))
             sec += f'<h3><a href="/parks/{p["slug"]}/">{E(p["name"])}</a></h3><ul>' + "".join(f'<li>{clink(c, False)}: {hshort(c["hr"])} minimum, ' + (f'{mphk(c["speed"])}, ' if c["speed"] else "") + 'no inversions</li>' for c in picks) + "</ul>"
-    body = f'''<p class="answer">The best first roller coaster is a family coaster with <strong>no inversions, a low height requirement and a modest top speed</strong>. Below we pick up to two at each of the {len(PARKS)} parks we cover, chosen only from verified facts: no inversions on RCDB, RCDB's kiddie or family class where available, then the lowest official height requirement.</p>
-<h2>What makes a good first coaster</h2><p>First-time and nervous riders usually do best on rides that build confidence: a short lift, gentle curves and small drops, a lap bar rather than an over-the-shoulder restraint, and no inversions. Mine train and family coasters are designed for exactly this. Watching the ride from the queue for a few cycles helps, as does picking a ride with a short queue so the wait does not build anticipation.</p>
-<h2>Tips for nervous riders</h2><ul><li>Sit in the middle of the train, where drops and airtime feel softest.</li><li>Keep your head back against the headrest and hold the lap bar or grab handles, and breathe out on the drops.</li><li>Ride during the day; dark sections and night rides feel faster.</li><li>Step up gradually: a family coaster, then one with a single smooth inversion, then bigger rides.</li><li>If you change your mind in the queue, tell a team member; many coasters have an exit before the boarding platform.</li></ul>
+        else:
+            no_pick.append(p)
+    def n_at(H):
+        return sum(1 for c in picks_all if c["hr"] and hin(c["hr"]) <= H + 1e-9 and not (c["hr"].get("max") and hin(c["hr"], "max") < H))
+    band_rows = "".join(f'<tr><th scope="row"><a href="/guides/roller-coasters-for-{H}-inch-kids/">{H} in ({round(H * 2.54)} cm)</a></th><td>{n_at(H)} of {len(picks_all)}</td></tr>' for H in (36, 42, 44, 46, 48))
+    steep = sorted(fallback, key=lambda t: (-hin(t[1]["hr"]), t[0]["name"]))[:3]
+    steep_txt = andlist(f'{clink(c)} at {hshort(c["hr"])} ({E(c["scale"] or "unclassed")} on RCDB)' for _, c in steep) if steep else ""
+    missing = andlist(f'<a href="/parks/{p["slug"]}/">{E(p["name"])}</a>' for p in no_pick) if no_pick else ""
+    mid = related_reads([
+        ("/guides/roller-coasters-for-46-inch-kids/", "Coasters for 46-inch kids", "46\""),
+        ("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids", "42\""),
+        ("/guides/how-to-not-be-scared-of-roller-coasters/", "How to not be scared", "Nerves"),
+        ("/height-checker/", "Ride height checker", "Check"),
+    ], heading="Compare a height or a next step", hid="mid-first-h")
+    body = f'''<p class="answer">The best first roller coaster is a family coaster with <strong>no inversions, a low height requirement and a modest top speed</strong>. Below we pick up to two at each park, chosen only from stored facts: no inversions on RCDB, RCDB's kiddie or family class where one exists, then the lowest official height requirement. The list was rebuilt on 21 Nov 2026 from those stored facts. It names {len(picks_all)} rides at {len(PARKS) - len(no_pick)} of the {len(PARKS)} parks. {n_at(46)} of the picks can be ridden alone at 46 inches (117 cm).</p>
+<p>Each coaster page still shows the date its own height rule was read from the park. Rebuilding this list did not re-fetch every park page. Heights that were re-checked on a later day, such as SeaWorld San Antonio on 17 Nov 2026 and Knott's Berry Farm on 20 Nov 2026, already carry that date on the ride page.</p>
+<h2>What makes a good first coaster</h2><p>First-time and nervous riders usually do best on rides that build confidence: a short lift, gentle curves and small drops, a lap bar rather than an over-the-shoulder restraint, and no inversions. Mine train and family coasters are designed for exactly this. Watching the ride from the queue for a few cycles helps, as does picking a ride with a short queue so the wait does not build anticipation. The <a href="/guides/what-is-a-family-roller-coaster/">family roller coaster</a> explainer says what that class means, and <a href="/guides/how-to-not-be-scared-of-roller-coasters/">how to not be scared of roller coasters</a> is the longer version of the tips below.</p>
+<h2>Tips for nervous riders</h2><ul><li>Sit in the middle of the train, where drops and airtime feel softest. The <a href="/guides/best-seat-on-a-roller-coaster/">best seat guide</a> explains why.</li><li>Keep your head back against the headrest and hold the lap bar or grab handles, and breathe out on the drops.</li><li>Ride during the day; dark sections and night rides feel faster.</li><li>Step up gradually: a family coaster, then one with a single smooth inversion, then bigger rides.</li><li>If you change your mind in the queue, tell a team member; many coasters have an exit before the boarding platform.</li></ul>
+{check_another_box()}
+{mid}
+<section aria-labelledby="fit-h"><h2 id="fit-h">How many of these picks a child can ride alone</h2><p>Counts below are this starter list only, not every coaster on Coaster Map. A ride is counted when its official ride-alone minimum is at or under the height, and any maximum is not under it. The full lists, including thrill coasters, are the height guides.</p>
+<div class="tablewrap"><table class="list"><thead><tr><th scope="col">Rider height</th><th scope="col">Starter picks they can ride alone</th></tr></thead><tbody>{band_rows}</tbody></table></div>
+<p>The step from 46 to 48 inches is the large one on this list, because many family coasters are posted at 48 in or 122 cm. For every coaster at 46 inches, not just the gentle ones, use the <a href="/guides/roller-coasters-for-46-inch-kids/">46-inch guide</a>.</p></section>
+<section aria-labelledby="limit-h"><h2 id="limit-h">Parks with no gentle starter</h2><p>{len(fallback)} parks have no kiddie or family coaster that both has a verified height and no inversions. For those, the pick is the no-inversion coaster with the lowest RCDB top speed, then the lowest official height. A ride with no speed figure is sorted as 99 mph, so any listed speed under that is preferred. The highest ride-alone minimums in that fallback group include {steep_txt}. They are honest starters for that park, not gentle rides.</p>
+<p>{len(no_pick)} {"park has" if len(no_pick) == 1 else "parks have"} no coaster that both has a verified height rule and no inversions, so {"it is" if len(no_pick) == 1 else "they are"} left off this list rather than guessed: {missing}.</p></section>
 <section aria-labelledby="picks-h"><h2 id="picks-h">First coaster picks at each park</h2>{sec}</section>'''
     faqs = [("What is a good first roller coaster for a child?", "A family coaster with no inversions and a height requirement your child clearly meets. Each park's pick above meets those criteria, using official height rules."),
             ("Are roller coasters with no inversions less scary?", "Usually, yes. Going upside down is the step many first-timers fear most, though a coaster can still be intense through height, speed or airtime without any inversions."),
-            ("Which seat is least scary?", "The middle of the train. The front gives a full view of the drop and the back is whipped over hills fastest, so the middle feels the gentlest on most coasters.")]
-    guide("/guides/best-first-roller-coasters/", f"Best First Roller Coasters for Kids and Nervous Riders | {BRAND}"[:200], f"Gentle first roller coasters at {len(PARKS)} theme parks: no inversions, low height rules and modest speeds, from verified data.", "Best first roller coasters for kids and nervous riders", body, faqs, "For families", "Gentle starter coasters at every park, plus tips.", None, [("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids"), ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids"), ("/guides/what-is-a-family-roller-coaster/", "What is a family roller coaster?"), ("/guides/most-intense-roller-coasters/", "Most intense roller coasters")])
+            ("Which seat is least scary?", "The middle of the train. The front gives a full view of the drop and the back is whipped over hills fastest, so the middle feels the gentlest on most coasters."),
+            ("Can a 46-inch child ride these first coasters?", f"{n_at(46)} of the {len(picks_all)} starter picks have a ride-alone minimum of 46 inches or lower. The rest need more height. The 46-inch guide lists every coaster on Coaster Map at that height, not only these starters.")]
+    desc = f"Gentle first roller coasters at {len(PARKS)} parks: no inversions, official height rules and RCDB speeds. {n_at(46)} starter picks fit a 46-inch child."
+    guide("/guides/best-first-roller-coasters/", f"Best First Roller Coasters for Kids and Nervous Riders | {BRAND}"[:200], desc, "Best first roller coasters for kids and nervous riders", body, faqs, "For families", "Gentle starter coasters at every park, plus tips.", None, [
+        ("/guides/roller-coasters-for-48-inch-kids/", "Coasters for 48-inch kids", "48\""),
+        ("/guides/what-is-a-family-roller-coaster/", "What is a family roller coaster?", "Family"),
+        ("/guides/roller-coasters-kids-can-ride-with-an-adult/", "Ride with a companion", "With"),
+        ("/guides/most-intense-roller-coasters/", "Most intense roller coasters", "Intense"),
+    ], modified="2026-11-21", published=TODAY, verified="21 Nov 2026")
 
 # ---------- regions ----------
 STATES = {"FL": "Florida", "CA": "California", "PA": "Pennsylvania", "TX": "Texas", "MO": "Missouri", "OH": "Ohio", "VA": "Virginia", "NY": "New York", "GA": "Georgia", "IN": "Indiana", "NJ": "New Jersey", "MN": "Minnesota", "IA": "Iowa", "CT": "Connecticut", "IL": "Illinois", "CO": "Colorado", "KY": "Kentucky"}
@@ -314,7 +396,7 @@ def guides_hub():
         items = [x for x in GUIDES if x[3] == g]
         if items: sec += f'<section><h2>{names[g]}</h2><ul>' + "".join(f'<li><a href="{u}">{E(t)}</a>: {E(b)}</li>' for u, t, b, _ in items) + "</ul></section>"
     body = f'<h1>Roller coaster guides</h1>{byline()}<p class="answer">Answers to the questions people ask before a park day: what a child of a given height can ride, which coasters are the tallest, fastest and most intense, where to start if you are nervous, and what each type of coaster is like. Every guide is built from the official height rules and RCDB statistics on Coaster Map, so each fact links back to its source.</p>{sec}'
-    write("/guides/", page("/guides/", f"Roller Coaster Guides: Heights, Records & Types | {BRAND}", "Evergreen roller coaster guides: height requirements by child height, tallest and fastest coasters, first-timer picks, coasters by state, coaster types, how coasters work and who builds them.", body, None, [("/", "Home"), ("/guides/", "Guides")]))
+    write("/guides/", page("/guides/", f"Roller Coaster Guides: Heights, Records & Types | {BRAND}", "Evergreen roller coaster guides: height requirements by child height, tallest and fastest coasters, first-timer picks, coasters by state, coaster types, how coasters work and who builds them.", body, None, [("/", "Home"), ("/guides/", "Guides")], modified="2026-11-21"))
 
 def type_links(c):
     out = []
@@ -390,6 +472,13 @@ def companion_guide():
         pc = sorted(byp.get(p["slug"], []), key=lambda c: (hin(c["hr"], "acc_min"), c["name"]))
         if pc: sec += f'<h3><a href="/parks/{p["slug"]}/">{E(p["name"])}</a> ({len(pc)})</h3><ul>' + "".join(f'<li>{clink(c, False)}: {rngs(c["hr"])} with a companion, {hshort(c["hr"])} alone</li>' for c in pc) + "</ul>"
     g0 = gap[0]; l0 = low[0]
+    edge46 = [c for c in cs if not metric(c["hr"]) and c["hr"].get("acc_max") == 46 and c["hr"]["min"] <= 46]
+    mid = related_reads([
+        ("/guides/roller-coasters-for-46-inch-kids/", "Coasters for 46-inch kids", "46\""),
+        ("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids", "42\""),
+        ("/height-checker/", "Ride height checker", "Check"),
+        ("/guides/best-first-roller-coasters/", "Best first roller coasters", "1st"),
+    ], heading="Compare a height", hid="mid-comp-h")
     body = (f'<p class="answer"><strong>{len(cs)} of the {nrule} coasters</strong> with a verified height rule on Coaster Map let a shorter child ride if a companion rides with them, at {len(byp)} of the {len(PARKS)} parks we cover. '
             f'The lowest companion minimum is <strong>{E(accs(l0["hr"]))}</strong>, on {clink(l0)}. Each listing below shows the companion range and the height needed to ride alone, straight from the park\'s official rule.</p>'
             '<p>A companion rule means two heights apply to one ride: a ride-alone minimum, and a lower minimum for a child who rides next to an older companion. Below the lower figure a child cannot ride at all. '
@@ -399,8 +488,10 @@ def companion_guide():
             + (f' The tallest coaster with a companion option is {clink(tall)} at {ftm(tall["height"])}' if tall else "")
             + (f', and the fastest is {clink(fast)} at {mphk(fast["speed"])}.' if fast and fast is not tall else ".")
             + f' {len(inv)} of these coasters go upside down.</p>'
-            f'<section aria-labelledby="low-h"><h2 id="low-h">Lowest companion minimums</h2><div class="tablewrap"><table class="list"><thead><tr><th scope="col">Rank</th><th scope="col">Coaster</th><th scope="col">Park</th><th scope="col">With a companion from</th><th scope="col">Alone from</th></tr></thead><tbody>{rows}</tbody></table></div><p class="note">Ranked by the companion minimum converted to inches; a park\'s rule is always applied in its own unit.</p></section>'
-            f'<section aria-labelledby="park-h"><h2 id="park-h">Every coaster with a companion option, by park</h2>{sec}</section>'
+            + (f'<p>On {len(edge46)} of these rides the companion range ends at 46 in and the ride-alone minimum is 46 in or lower, so a child of exactly 46 inches rides alone. Under that line they still need the companion. Those rides are also on the <a href="/guides/roller-coasters-for-46-inch-kids/">46-inch guide</a>.</p>' if edge46 else "")
+            + check_another_box() + mid
+            + f'<section aria-labelledby="low-h"><h2 id="low-h">Lowest companion minimums</h2><div class="tablewrap"><table class="list"><thead><tr><th scope="col">Rank</th><th scope="col">Coaster</th><th scope="col">Park</th><th scope="col">With a companion from</th><th scope="col">Alone from</th></tr></thead><tbody>{rows}</tbody></table></div><p class="note">Ranked by the companion minimum converted to inches; a park\'s rule is always applied in its own unit.</p></section>'
+            + f'<section aria-labelledby="park-h"><h2 id="park-h">Every coaster with a companion option, by park</h2>{sec}</section>'
             '<p>To see what a particular child can ride, alone or with you, enter their height in the <a href="/height-checker/">ride height checker</a>.</p>')
     faqs = [("Can a child ride a roller coaster with an adult if they are under the height requirement?", f"Only where the park publishes a companion rule. On Coaster Map {len(cs)} coasters have one; on the rest, the posted minimum applies to every rider and a companion makes no difference."),
             ("What is the lowest height to ride a roller coaster with an adult?", f"Among the coasters we cover, {l0['name']} at {pk(l0)['name']} has the lowest companion minimum, {accs(l0['hr'])}, according to the park's official rule."),
@@ -408,7 +499,7 @@ def companion_guide():
     guide("/guides/roller-coasters-kids-can-ride-with-an-adult/", f"Roller Coasters Kids Can Ride With an Adult | {BRAND}",
           f"All {len(cs)} roller coasters where a shorter child can ride with a companion, with the companion and ride-alone heights from official park rules.",
           "Roller coasters shorter kids can ride with an adult", body, faqs, "By height", "Companion height rules at every park.", None,
-          [("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids", "42\""), ("/guides/roller-coasters-for-44-inch-kids/", "Coasters for 44-inch kids", "44\""), ("/guides/roller-coaster-height-requirements-explained/", "Height requirements explained", "How"), ("/height-checker/", "Ride height checker", "Check"), ("/guides/best-first-roller-coasters/", "Best first roller coasters", "1st")])
+          [("/guides/roller-coasters-for-42-inch-kids/", "Coasters for 42-inch kids", "42\""), ("/guides/roller-coasters-for-46-inch-kids/", "Coasters for 46-inch kids", "46\""), ("/guides/roller-coaster-height-requirements-explained/", "Height requirements explained", "How"), ("/height-checker/", "Ride height checker", "Check")], modified="2026-11-21", published=TODAY)
 
 def build_guides():
     height_guides(); companion_guide(); ranking_guides(); intense_guide(); first_timer_guide(); region_guides(); most_coasters_guide(); type_guides(); types_hub(); build_explainers(); guides_hub()
