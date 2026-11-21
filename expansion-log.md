@@ -1088,3 +1088,25 @@ CSV still 1,373 rows, one per stored height rule. Every row has a last-verified 
 
 **Checks:** `python3 _build/build.py` (1,874 sitemap URLs; 1,373 CSV rows) then `python3 _build/check.py`: 1,876 files, 0 issues. dup.py was not in this environment. No photos. GA4, Cloudflare beacon, AdSense head tag and ads.txt unchanged.
 
+## 21 Nov 2026 (batched daily SEO): 46-inch height guide, first-coaster refresh, engagement
+
+**Why:** the height-question series is the evergreen format already getting Google visits. The live sitemap had 36, 40, 42, 44, 48 and 54 inch guides and no 46-inch page. Refresh target: `/guides/best-first-roller-coasters/` (lastmod was 2026-11-10). No open image PR to finish. No photos: the image policy still forbids ride photos, and today's brief keeps that rule. Related links stay brand SVG tiles.
+
+**1. New guide `/guides/roller-coasters-for-46-inch-kids/`**
+Added 46 to `GUIDE_HEIGHTS` (park height bands in `HEIGHTS` unchanged). Built only from stored official heights. A 46-inch rider meets the ride-alone minimum on 261 of 1,373 coasters with a verified rule, at 157 parks, and 392 more with a companion. Seventeen coasters publish an exact 46 in minimum, including Woodstock Express at California's Great America, Carowinds, Kings Dominion and Kings Island (official ride pages, checked 10 Nov 2026) and Texas Stingray at SeaWorld San Antonio (rides page, checked 17 Nov 2026; 96 ft and 55 mph are RCDB, not the park page). Cedar Point's Woodstock Express stays off the list because it is posted at 48 in. The page says 46 in is 116.84 cm, so the "117 cm" label does not clear a park line of 117 cm (Nickelodeon Streak and Raging Spirits). It does clear 112 cm and 115 cm (Big Grizzly Mountain, Hundeprutten, GO-ON). Eleven of the exact-46 rides also have a companion floor (nine at 40 in, two at 36 in). datePublished and sitemap lastmod are 2026-11-21. The byline stays "Last verified 10 Nov 2026" because the stored height rules were not re-fetched today.
+
+**2. Refresh `/guides/best-first-roller-coasters/`**
+The pick list was rebuilt on 21 Nov 2026 from the same stored official heights and RCDB class, inversion and speed fields. 430 starter picks at 274 parks. Two parks have no coaster that both has a verified height and no inversions, so they stay off the list: IMG Worlds of Adventure and Lost Island Theme Park. 190 of the 430 picks can be ridden alone at 46 in. The page says individual height check dates remain on each coaster page (the rebuild did not re-fetch park sites). Guide byline "Last verified 21 Nov 2026" means that rebuild. datePublished stays 2026-11-10. dateModified and sitemap lastmod are 2026-11-21. Mid SVG next-reads and a check-another height box added.
+
+**3. Engagement**
+The 46-inch guide, the first-coaster guide and the companion guide have a check-another box plus 3 to 4 SVG next-reads mid-article and at the end. The fear-tips page gains mid SVG next-reads and in-text links to the first-coaster guide, the 46-inch guide and the height checker. The height-requirements guide, the height checker, the guides hub, the homepage and every park page's series line now include 46 inches. Park and coaster sitemap lastmod stays on each park's last-checked date. 36-inch and 54-inch guide lastmod stays 2026-11-19 (the comparison tables did not gain a 46 in row). 40, 42, 44 and 48 inch guides did, so their lastmod is 2026-11-21. `llms.txt` now lists the guides, including the new URL.
+
+**4. Link asset**
+CSV unchanged: 1,373 rows. No height values changed.
+
+**Checks:** `python3 _build/build.py` (1,875 sitemap URLs; 1,373 CSV rows) then `python3 _build/check.py`: 1,877 files, 0 issues. dup.py was not in this environment. No photos. GA4, Cloudflare beacon, AdSense head tag and ads.txt unchanged.
+
+## Covered 2026-11-21
+- https://coastermap.com/guides/roller-coasters-for-46-inch-kids/ | Roller Coasters a 46-Inch (117 cm) Child Can Ride | PR pending | gate pending | 200 pending | IndexNow pending
+- https://coastermap.com/guides/best-first-roller-coasters/ | Best First Roller Coasters for Kids and Nervous Riders | refresh, same PR
+
