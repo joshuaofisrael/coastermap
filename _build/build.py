@@ -16,7 +16,7 @@ FORM_ENDPOINT = "https://formsubmit.co/4497ee41a1200e746e967998473d21da"
 LEGAL_LINE = "© 2026 Joshua Israel Ventures LLC. All rights reserved. Coaster Map is a trade name of Joshua Israel Ventures LLC, a Florida limited liability company."
 ADS_UPDATED = "2026-11-16"
 IMAGE_POLICY_ADDED = "2026-11-18"
-ADSENSE_HEAD = '<meta name="google-adsense-account" content="ca-pub-5681559774142917"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5681559774142917" crossorigin="anonymous"></script>'
+ADSENSE_HEAD = ''
 GA4_HEAD = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWQBJQ6YZY"></script>
 <script>
@@ -748,7 +748,7 @@ def not_found():
 
 def extras():
     open(os.path.join(ROOT, "CNAME"), "w").write("coastermap.com\n")
-    open(os.path.join(ROOT, "ads.txt"), "w").write("google.com, pub-5681559774142917, DIRECT, f08c47fec0942fa0\n")
+    open(os.path.join(ROOT, "ads.txt"), "w").write("")  # AdSense detached 21 Nov 2026 until the account is approved (see seo-central/site-seo-rules.md). Do not re-add.
     open(os.path.join(ROOT, f"{INDEXNOW_KEY}.txt"), "w").write(INDEXNOW_KEY)
     bots = ["*", "Googlebot", "Bingbot", "Mediapartners-Google", "OAI-SearchBot", "ChatGPT-User", "GPTBot", "PerplexityBot", "Perplexity-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "Google-Extended", "Applebot", "Applebot-Extended", "DuckAssistBot", "Amazonbot", "CCBot"]
     open(os.path.join(ROOT, "robots.txt"), "w").write("".join(f"User-agent: {b}\nAllow: /\n\n" for b in bots) + f"Sitemap: {BASE_URL}sitemap.xml\n")
